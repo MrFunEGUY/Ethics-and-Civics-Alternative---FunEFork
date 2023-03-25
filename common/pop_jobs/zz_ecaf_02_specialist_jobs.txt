@@ -216,14 +216,7 @@ priest = {
 		produces = {
 			trigger = {
 				exists = owner
-				owner = {
-					OR = {
-						has_valid_civic = civic_exalted_priesthood
-						has_valid_civic = civic_imperial_cult
-						has_valid_civic = civic_divine_council
-						has_valid_civic = civic_spiritual_democracy
-					}
-				}
+				owner = { is_theocracy = yes }
 			}
 			unity = 1
 		}
@@ -283,14 +276,7 @@ priest = {
 		modifier = {
 			factor = 2
 			exists = owner
-			owner = {
-				or = {
-					has_valid_civic = civic_exalted_priesthood
-					has_valid_civic = civic_imperial_cult
-					has_valid_civic = civic_divine_council
-					has_valid_civic = civic_spiritual_democracy
-				}
-			}
+			owner = { is_theocracy = yes }
 		}
 		modifier = {
 			factor = 2
@@ -339,14 +325,7 @@ death_priest = {
 		produces = {
 			trigger = {
 				exists = owner
-				owner = {
-					OR = {
-						has_valid_civic = civic_exalted_priesthood
-						has_valid_civic = civic_imperial_cult
-						has_valid_civic = civic_divine_council
-						has_valid_civic = civic_spiritual_democracy
-					}
-				}
+				owner = { is_theocracy = yes }
 			}
 			unity = 1
 		}
@@ -413,14 +392,7 @@ death_priest = {
 		modifier = {
 			factor = 2
 			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_exalted_priesthood
-					has_valid_civic = civic_imperial_cult
-					has_valid_civic = civic_divine_council
-					has_valid_civic = civic_spiritual_democracy
-				}
-			}
+			owner = { is_theocracy = yes }
 		}
 		modifier = {
 			factor = 2

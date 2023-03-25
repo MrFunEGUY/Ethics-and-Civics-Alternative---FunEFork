@@ -103,19 +103,19 @@ civic_imperial_cult = {
 		ethics = {
 			value = ethic_fanatic_spiritualist
 		}
-		civics = {
-			NOR = {
-				value = civic_philosopher_king
-				value = civic_military_dictatorship
-				value = civic_aristocratic_elite
-				value = civic_merchant_guilds
-				value = civic_state_monopoly
-				value = civic_exalted_priesthood
-				value = civic_technocracy
-				value = civic_bureaucracy
-				value = civic_stratocracy
-			}
-		}
+		# civics = {
+		# 	NOR = {
+		# 		value = civic_philosopher_king
+		# 		value = civic_military_dictatorship
+		# 		value = civic_aristocratic_elite
+		# 		value = civic_merchant_guilds
+		# 		value = civic_state_monopoly
+		# 		value = civic_exalted_priesthood
+		# 		value = civic_technocracy
+		# 		value = civic_bureaucracy
+		# 		value = civic_stratocracy
+		# 	}
+		# }
 	}
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = { 
@@ -243,19 +243,19 @@ civic_exalted_priesthood = {
 		civics = {
 			NOR = {
 				value = civic_merchant_guilds
-				value = civic_state_monopoly
+				# value = civic_state_monopoly
 				value = civic_aristocratic_elite
 				value = civic_stratocracy
 				value = civic_bureaucracy
-				value = civic_imperial_cult
-				value = civic_divine_council
-				value = civic_spiritual_democracy
-				value = civic_military_dictatorship
-				value = civic_military_junta
-				value = civic_citizen_service
-				value = civic_executive_committee
-				value = civic_philosopher_king
-				value = civic_peaceful_republic
+				# value = civic_imperial_cult
+				# value = civic_divine_council
+				# value = civic_spiritual_democracy
+				# value = civic_military_dictatorship
+				# value = civic_military_junta
+				# value = civic_citizen_service
+				# value = civic_executive_committee
+				# value = civic_philosopher_king
+				# value = civic_peaceful_republic
 			}
 		}
 	}
@@ -313,19 +313,19 @@ civic_philosopher_king = {
 			text = civic_tooltip_dic_imp_NEW
 			inline_script = civics/authorities/auth_imp_dict
 		}
-		civics = {
-			NOR = {
-				value = civic_imperial_cult
-				value = civic_cyber_dictatorship
-				value = civic_merchant_guilds
-				value = civic_state_monopoly
-				value = civic_aristocratic_elite
-				value = civic_exalted_priesthood
-				value = civic_technocracy
-				value = civic_bureaucracy
-				value = civic_stratocracy
-			}
-		}
+		# civics = {
+		# 	NOR = {
+		# 		value = civic_imperial_cult
+		# 		value = civic_cyber_dictatorship
+		# 		value = civic_merchant_guilds
+		# 		value = civic_state_monopoly
+		# 		value = civic_aristocratic_elite
+		# 		value = civic_exalted_priesthood
+		# 		value = civic_technocracy
+		# 		value = civic_bureaucracy
+		# 		value = civic_stratocracy
+		# 	}
+		# }
 	}
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = { 
@@ -448,20 +448,20 @@ civic_citizen_service = {
 			text = civic_tooltip_dem_oli_NEW
 			inline_script = civics/authorities/auth_dem_oli
 		}
-		civics = {
-			NOR = {
-				value = civic_reanimated_armies
-				value = civic_spiritual_democracy
-				value = civic_cyber_demos_cratos
-				value = civic_aristocratic_elite
-				value = civic_merchant_guilds
-				value = civic_state_monopoly
-				value = civic_exalted_priesthood
-				value = civic_technocracy
-				value = civic_bureaucracy
-				value = civic_stratocracy
-			}
-		}
+		# civics = {
+		# 	NOR = {
+		# 		value = civic_reanimated_armies
+		# 		value = civic_spiritual_democracy
+		# 		value = civic_cyber_demos_cratos
+		# 		value = civic_aristocratic_elite
+		# 		value = civic_merchant_guilds
+		# 		value = civic_state_monopoly
+		# 		value = civic_exalted_priesthood
+		# 		value = civic_technocracy
+		# 		value = civic_bureaucracy
+		# 		value = civic_stratocracy
+		# 	}
+		# }
 	}
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = { 
@@ -520,19 +520,19 @@ civic_technocracy = {
 		civics = {
 			NOR = {
 				value = civic_merchant_guilds
-				value = civic_state_monopoly
+				# value = civic_state_monopoly
 				value = civic_aristocratic_elite
 				value = civic_stratocracy
 				value = civic_bureaucracy
-				value = civic_cyber_dictatorship
-				value = civic_science_directorate
-				value = civic_cyber_demos_cratos
-				value = civic_military_dictatorship
-				value = civic_military_junta
-				value = civic_citizen_service
-				value = civic_executive_committee
-				value = civic_philosopher_king
-				value = civic_peaceful_republic
+				# value = civic_cyber_dictatorship
+				# value = civic_science_directorate
+				# value = civic_cyber_demos_cratos
+				# value = civic_military_dictatorship
+				# value = civic_military_junta
+				# value = civic_citizen_service
+				# value = civic_executive_committee
+				# value = civic_philosopher_king
+				# value = civic_peaceful_republic
 			}
 		}
 	}
@@ -1674,21 +1674,22 @@ civic_aristocratic_elite = {
 		}
 		civics = {
 			NOR = {
+				value = civic_political_pluralism
 				value = civic_merchant_guilds
 				value = civic_meritocracy
-				value = civic_state_monopoly
-				value = civic_imperial_cult
-				value = civic_divine_council
-				value = civic_spiritual_democracy
-				value = civic_cyber_dictatorship
-				value = civic_science_directorate
-				value = civic_cyber_demos_cratos
-				value = civic_military_dictatorship
-				value = civic_military_junta
-				value = civic_citizen_service
-				value = civic_executive_committee
-				value = civic_philosopher_king
-				value = civic_peaceful_republic
+				# value = civic_state_monopoly
+				# value = civic_imperial_cult
+				# value = civic_divine_council
+				# value = civic_spiritual_democracy
+				# value = civic_cyber_dictatorship
+				# value = civic_science_directorate
+				# value = civic_cyber_demos_cratos
+				# value = civic_military_dictatorship
+				# value = civic_military_junta
+				# value = civic_citizen_service
+				# value = civic_executive_committee
+				# value = civic_philosopher_king
+				# value = civic_peaceful_republic
 				value = civic_exalted_priesthood
 				value = civic_technocracy
 				value = civic_bureaucracy
@@ -2032,21 +2033,22 @@ civic_merchant_guilds = {
 	possible = {
 		civics = {
 			NOR = {
-				value = civic_state_monopoly
+				# value = civic_state_monopoly
+				value = civic_political_pluralism
 				value = civic_aristocratic_elite
-				value = civic_welfare_state
-				value = civic_imperial_cult
-				value = civic_divine_council
-				value = civic_spiritual_democracy
-				value = civic_cyber_dictatorship
-				value = civic_science_directorate
-				value = civic_cyber_demos_cratos
-				value = civic_military_dictatorship
-				value = civic_military_junta
-				value = civic_citizen_service
-				value = civic_executive_committee
-				value = civic_philosopher_king
-				value = civic_peaceful_republic
+				# value = civic_welfare_state
+				# value = civic_imperial_cult
+				# value = civic_divine_council
+				# value = civic_spiritual_democracy
+				# value = civic_cyber_dictatorship
+				# value = civic_science_directorate
+				# value = civic_cyber_demos_cratos
+				# value = civic_military_dictatorship
+				# value = civic_military_junta
+				# value = civic_citizen_service
+				# value = civic_executive_committee
+				# value = civic_philosopher_king
+				# value = civic_peaceful_republic
 				value = civic_exalted_priesthood
 				value = civic_technocracy
 				value = civic_bureaucracy

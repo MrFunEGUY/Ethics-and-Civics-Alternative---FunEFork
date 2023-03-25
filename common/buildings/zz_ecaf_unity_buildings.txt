@@ -394,14 +394,7 @@ building_sacred_nexus = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_imperial_cult
-					has_valid_civic = civic_divine_council
-					has_valid_civic = civic_spiritual_democracy
-					has_valid_civic = civic_exalted_priesthood
-				}
-			}
+			owner = { is_theocracy = yes }
 		}
 		modifier = {
 			job_high_priest_add = 2
@@ -413,10 +406,7 @@ building_sacred_nexus = {
 			exists = owner
 			owner = {
 				OR = {
-					has_valid_civic = civic_imperial_cult
-					has_valid_civic = civic_divine_council
-					has_valid_civic = civic_spiritual_democracy
-					has_valid_civic = civic_exalted_priesthood
+					is_theocracy = yes
 					AND = {
 						exists = federation
 						federation = { has_federation_perk = all_the_priests_2 }
@@ -440,8 +430,7 @@ building_sacred_nexus = {
 				has_make_spiritualist_perk = yes
 			}
 		}
-	}
-	
+	}	
 }
 
 ##################
@@ -573,14 +562,7 @@ building_citadel_of_faith = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_imperial_cult
-					has_valid_civic = civic_divine_council
-					has_valid_civic = civic_spiritual_democracy
-					has_valid_civic = civic_exalted_priesthood
-				}
-			}
+			owner = { is_theocracy = yes }
 		}
 		modifier = {
 			job_high_priest_add = 1

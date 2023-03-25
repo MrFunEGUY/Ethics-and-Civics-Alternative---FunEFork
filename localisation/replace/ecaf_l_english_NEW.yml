@@ -12,3 +12,4 @@ civic_tooltip_dic_imp_oli:0 "Has a §YDictatorial§!, §YImperial§!, or §YOlig
 auth_corporate_fiefdom: "Corporate Fiefdom"
 auth_bugged_corporate_imperial:0 "Dynastic Enterprise"
 auth_tec_patrocorporate:0 "Patrimonial Corporate"
+auth_direct_democratic:0 "Direct Democratic"

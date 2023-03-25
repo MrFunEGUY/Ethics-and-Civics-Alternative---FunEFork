@@ -248,14 +248,7 @@ templar = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				or = {
-					has_valid_civic = civic_imperial_cult
-					has_valid_civic = civic_divine_council
-					has_valid_civic = civic_spiritual_democracy
-					has_valid_civic = civic_exalted_priesthood
-				}
-			}
+			owner = { is_theocracy = yes }
 		}
 		modifier = {
 			planet_stability_add = 1
@@ -292,14 +285,7 @@ templar = {
 		modifier = {
 			factor = 2
 			exists = owner
-			owner = {
-				or = {
-					has_valid_civic = civic_imperial_cult
-					has_valid_civic = civic_divine_council
-					has_valid_civic = civic_spiritual_democracy
-					has_valid_civic = civic_exalted_priesthood
-				}
-			}
+			owner = { is_theocracy = yes }
 		}
 		modifier = {
 			factor = 1.5
@@ -882,14 +868,7 @@ druid = {
 		produces = {
 			trigger = {
 				exists = owner
-				owner = {
-					or = {
-						has_valid_civic = civic_imperial_cult
-						has_valid_civic = civic_divine_council
-						has_valid_civic = civic_spiritual_democracy
-						has_valid_civic = civic_exalted_priesthood
-					}
-				}
+				owner = { is_theocracy = yes }
 			}
 			unity = 1
 		}
@@ -929,14 +908,7 @@ druid = {
 		modifier = {
 			factor = 2
 			exists = owner
-			owner = {
-				or = {
-					has_valid_civic = civic_imperial_cult
-					has_valid_civic = civic_divine_council
-					has_valid_civic = civic_spiritual_democracy
-					has_valid_civic = civic_exalted_priesthood
-				}
-			}
+			owner = { is_theocracy = yes }
 		}
 		modifier = {
 			factor = 1.5
@@ -1428,14 +1400,7 @@ techno_priest = {
 		produces = {
 			trigger = {
 				exists = owner
-				owner = {
-					or = {
-						has_valid_civic = civic_imperial_cult
-						has_valid_civic = civic_divine_council
-						has_valid_civic = civic_spiritual_democracy
-						has_valid_civic = civic_exalted_priesthood
-					}
-				}
+				owner = { is_theocracy = yes }
 			}
 			unity = 1
 			engineering_research = 1
@@ -1478,9 +1443,7 @@ techno_priest = {
 		}
 		modifier = {
 			factor = 2
-			owner = {
-				has_valid_civic = civic_machine_cult
-			}
+			owner = { has_valid_civic = civic_machine_cult }
 		}
 		modifier = {
 			factor = 1.5
