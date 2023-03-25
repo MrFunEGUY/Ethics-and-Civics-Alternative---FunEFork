@@ -1,0 +1,6 @@
+OR = {
+	text = civic_tooltip_dem_oli_NEW
+	value = auth_democratic
+	value = auth_strict_democratic
+	value = auth_oligarchic
+}

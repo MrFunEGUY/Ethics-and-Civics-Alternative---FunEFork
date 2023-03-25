@@ -1,0 +1,30 @@
+
+#######################################
+### We Require Borders by MrFunEGUY ###
+#######################################
+
+get_border_test = {
+	if = {
+		limit = { has_global_flag = we_require_borders }
+		if = { limit = { has_country_flag = shares_borders_with_@from } }
+		else = {
+			custom_tooltip = {
+				fail_text = no_shared_borders
+				always = no
+			}
+		}
+	}
+}
+
+get_border_test_defense = {
+	if = {
+		limit = { has_global_flag = we_require_borders }
+		if = { limit = { has_country_flag = shares_defense_borders_with_@from } }
+		else = {
+			custom_tooltip = {
+				fail_text = no_shared_borders
+				always = no
+			}
+		}
+	}
+}

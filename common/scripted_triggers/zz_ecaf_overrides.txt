@@ -1,0 +1,158 @@
+can_think = {
+	NOR = {
+		has_trait = trait_nerve_stapled
+		has_trait = trait_zombie
+		has_trait = trait_slave_gene
+	}
+}
+
+is_capitalist = {
+	OR = {
+		is_capitalism = yes
+		has_civic = civic_corporate_dominion
+		has_civic = civic_merchant_guilds
+	}
+}
+
+is_nuked_planet = {
+	is_planet_class = pc_nuked
+}
+
+is_toxic_planet = {
+	is_planet_class = pc_toxic
+}
+
+is_barren_planet = {
+	is_planet_class = pc_barren
+}
+
+is_fanatic = {
+	OR = {
+		has_ethic = ethic_fanatic_authoritarian
+		has_ethic = ethic_fanatic_egalitarian
+		has_ethic = ethic_fanatic_materialist
+		has_ethic = ethic_fanatic_militarist
+		has_ethic = ethic_fanatic_pacifist
+		has_ethic = ethic_fanatic_spiritualist
+		has_ethic = ethic_fanatic_xenophile
+		has_ethic = ethic_fanatic_xenophobe
+		has_ethic = ethic_fanatic_capitalism
+		has_ethic = ethic_fanatic_socialism
+	}
+}
+
+has_opposing_ethics = {
+	OR = {
+		AND = {
+			$COUNTRY1$ = { is_pacifist = yes }
+			$COUNTRY2$ = { is_militarist = yes }
+		}
+		AND = {
+			$COUNTRY1$ = { is_militarist = yes }
+			$COUNTRY2$ = { is_pacifist = yes }
+		}
+		AND = {
+			$COUNTRY1$ = { is_xenophobe = yes }
+			$COUNTRY2$ = { is_xenophile = yes }
+		}
+		AND = {
+			$COUNTRY1$ = { is_xenophile = yes }
+			$COUNTRY2$ = { is_xenophobe = yes }
+		}
+		AND = {
+			$COUNTRY1$ = { is_egalitarian = yes }
+			$COUNTRY2$ = { is_authoritarian = yes }
+		}
+		AND = {
+			$COUNTRY1$ = { is_authoritarian = yes }
+			$COUNTRY2$ = { is_egalitarian = yes }
+		}
+		AND = {
+			$COUNTRY1$ = { is_spiritualist = yes }
+			$COUNTRY2$ = { is_materialist = yes }
+		}
+		AND = {
+			$COUNTRY1$ = { is_materialist = yes }
+			$COUNTRY2$ = { is_spiritualist = yes }
+		}
+		AND = {
+			$COUNTRY1$ = { is_socialism = yes }
+			$COUNTRY2$ = { is_capitalism = yes }
+		}
+		AND = {
+			$COUNTRY1$ = { is_capitalism = yes }
+			$COUNTRY2$ = { is_socialism = yes }
+		}
+	}
+}
+
+is_slaver = {
+	OR = {
+		has_valid_civic = civic_barbaric_despoilers
+		has_ascension_perk = ap_nihilistic_acquisition
+		has_valid_civic = civic_slaver_guilds
+		has_valid_civic = civic_reeducated_labor
+		has_valid_civic = civic_indentured_assets
+		
+	}
+}
+
+is_owner_ethic_pop_faction = {
+	switch = {
+		trigger = is_pop_faction_type
+		bankers = {
+			owner = { is_capitalism = yes }
+		}
+		socialists = {
+			owner = { is_socialism = yes }
+		}
+		prosperity = {
+			owner = { is_pacifist = yes }
+		}
+		progressive = {
+			owner = { is_egalitarian = yes }
+		}
+		imperialist = {
+			owner = { is_militarist = yes }
+		}
+		isolationist = {
+			owner = { is_xenophobe = yes }
+		}
+		supremacist = {
+			owner = { is_xenophobe = yes }
+		}
+		technologist = {
+			owner = { is_materialist = yes }
+		}
+		totalitarian = {
+			owner = { is_authoritarian = yes }
+		}
+		traditionalist = {
+			owner = { is_spiritualist = yes }
+		}
+		xenoist = {
+			owner = { is_xenophile = yes }
+		}
+		default = {
+			always = yes
+		}
+	}
+}
+
+has_encountered_other_species = {
+	OR = {
+		has_origin = origin_syncretic_evolution
+		has_origin = origin_necrophage
+		has_origin = origin_payback
+		has_valid_civic = civic_machine_servitor
+		has_valid_civic = civic_symbiotic_race
+		has_valid_civic = civic_slave_race
+		num_communications > 0
+		any_owned_species = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				is_same_species = prev
+			}
+		}
+	}
+}

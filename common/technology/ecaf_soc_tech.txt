@@ -1,0 +1,327 @@
+# Free Market
+tech_free_market = {
+	cost = @tier3cost1
+	area = society
+	tier = 3
+	category = {
+		good_trading
+	}
+	prerequisites = {
+		"tech_interstellar_economics"
+	}
+	weight = @tier3weight1
+	potential = {
+		is_gestalt = no
+	}
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_good_trading"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_prosperity_adopt
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_prosperity_adopt
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				is_capitalism = yes
+				has_valid_civic = civic_ultimate_collective
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_good_trading"
+			}
+		}
+	}
+}
+
+# Planned Economy
+tech_planned_economy = {
+	cost = @tier3cost1
+	area = society
+	tier = 3
+	category = {
+		good_trading
+	}
+	prerequisites = {
+		"tech_interstellar_economics"
+	}
+	weight = @tier3weight1
+	potential = {
+		is_gestalt = no
+	}
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_good_trading"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_prosperity_adopt
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				is_socialism = yes
+				has_valid_civic = civic_beacon_of_liberty
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_good_trading"
+			}
+		}
+	}
+}
+
+# Economic Paradigm: Innovation & Progress
+tech_innovations = {
+	cost = @tier3cost1
+	area = society
+	tier = 2
+	category = {
+		good_trading
+	}
+	prerequisites = {
+		"tech_space_trading"
+	}
+	weight = @tier3weight1
+	potential = {
+		is_gestalt = no
+	}
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_good_trading"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_prosperity_adopt
+		}
+		modifier = {
+			factor = 2
+			has_valid_civic = civic_innovative_economy
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_valid_civic = civic_ultimate_collective
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_good_trading"
+			}
+		}
+	}
+}
+
+tech_agri_consortium = {
+	cost = @tier3cost1
+	area = society
+	tier = 2
+	category = {
+		good_trading
+	}
+	prerequisites = {
+		"tech_space_trading"
+	}
+	weight = @tier3weight1
+	potential = {
+		is_gestalt = no
+	}
+	modifier = {
+		planet_farmers_food_produces_mult = 0.15
+	}
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_good_trading"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_prosperity_adopt
+		}
+		modifier = {
+			factor = 2
+			has_valid_civic = civic_agrarian_idyll
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_good_trading"
+			}
+		}
+	}
+}
+
+tech_mining_consortium = {
+	cost = @tier3cost1
+	area = society
+	tier = 2
+	category = {
+		good_trading
+	}
+	prerequisites = {
+		"tech_space_trading"
+	}
+	weight = @tier3weight1
+	potential = {
+		is_gestalt = no
+	}
+	modifier = {
+		station_gatherers_produces_mult = 0.15
+	}
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_good_trading"
+			}
+		}
+		modifier = {
+			factor = 2
+			has_valid_civic = civic_mining_guilds
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_prosperity_adopt
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_good_trading"
+			}
+		}
+	}
+}
+
+tech_centralized_state = {
+	cost = @tier3cost1
+	area = society
+	tier = 3
+	category = {
+		statecraft
+	}
+	prerequisites = {
+		"tech_galactic_administration"
+	}
+	weight = @tier3weight1
+	weight_modifier = {
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				is_authoritarian = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_ethic = ethic_fanatic_egalitarian
+				has_valid_civic = civic_beacon_of_liberty
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+}
+
+tech_federal_state = {
+	cost = @tier3cost1
+	area = society
+	tier = 3
+	category = {
+		statecraft
+	}
+	prerequisites = {
+		"tech_galactic_administration"
+	}
+	weight = @tier3weight1
+	weight_modifier = {
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				is_egalitarian = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_ethic = ethic_fanatic_authoritarian
+				has_valid_civic = civic_ultimate_collective
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+}

@@ -1,0 +1,118 @@
+## Possible Deposit Variables ##
+# resources, resource and amount
+# Potential trigger (planet scope)
+# blocked_modifier - applied to planet
+# planet_modifier - applied to planet always
+# station = station class in orbit to gather
+@high = 16
+@med = 8
+@low = 4
+
+@high_rare = 2
+@med_rare = 1
+@low_rare = 0.5
+
+d_migrating_forests = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_huge_tree
+
+	planet_modifier = {
+		district_mining_max = -1
+		district_farming_max = -1
+		district_generator_max = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_keepers_harmony }
+		}
+		modifier = {
+			planet_housing_add = 1
+			job_druid_add = 1
+			biological_pop_happiness = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_terraforming }
+		}
+		modifier = {
+			planet_housing_add = 2
+			job_xenobiologist_add = 2
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_migrating_forest_reserve = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	icon = d_huge_tree
+
+	planet_modifier = {
+		planet_jobs_society_research_produces_mult = 0.2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_researcher_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_keepers_harmony }
+		}
+		modifier = {
+			biological_pop_happiness = 0.05
+			job_druid_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_terraforming }
+		}
+		modifier = {
+			job_xenobiologist_add = 2
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}

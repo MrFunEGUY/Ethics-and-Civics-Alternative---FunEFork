@@ -1,0 +1,68 @@
+# Triggers when the game starts.
+on_game_start = {
+	events = {
+		starter_tech.1
+		cultural_overhaul_flag.1
+		cultural_overhaul_flag.2
+		ethic_rebuid_civic_fix.1
+		ethic_rebuid_government_fix.1
+	}
+}
+
+# No scope, like on_game_start
+# Does not run when loading MP saves due to OOS concerns.
+on_single_player_save_game_load = {
+	events = {
+		ethic_rebuid_civic_fix.1
+		ethic_rebuid_government_fix.1
+	}
+}
+
+# No scope, like on_game_start
+on_yearly_pulse = {
+	events = {
+		ethic_rebuid_civic_fix.1
+		ethic_rebuid_government_fix.1
+	}
+}
+
+on_uplift_completion = {
+	events = {
+		unity_patrons.1
+	}
+}
+
+on_blocker_cleared = {
+	events = {
+		# ethic_rebuild_clear_blocker.1
+	}
+}
+
+# this = owner of fleet 1 (combatant)
+# from = owner of fleet 2 (destroyed)
+# fromfrom = fleet 1
+# fromfromfrom = fleet 2
+on_fleet_destroyed_perp = {
+	events = {
+		glorious_fleet.0
+	}
+}
+
+# this = owner of fleet 1 (destroyed)
+# from = owner of fleet 2 (combatant)
+# fromfrom = fleet 1
+# fromfromfrom = fleet 2
+on_fleet_destroyed_victim = {
+	events = {
+		glorious_fleet.1
+	}
+}
+
+# Scope = planet_event
+# this = planet scope
+# from = uplifted species (pre-modification)
+on_uplift_completion = {
+	events = {
+		unity_patrons.1
+	}
+}

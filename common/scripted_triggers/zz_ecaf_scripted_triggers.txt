@@ -1,0 +1,26 @@
+
+has_ethics_overhaul = {
+	always = yes
+}
+
+has_ecaf_overhaul = {
+	always = yes
+}
+
+is_socialism = {
+	OR = {
+		has_ethic = ethic_fanatic_socialism
+		has_ethic = ethic_socialism
+	}
+}
+
+is_socialist = {
+	is_socialism = yes
+}
+
+is_capitalism = {
+	OR = {
+		has_ethic = ethic_fanatic_capitalism
+		has_ethic = ethic_capitalism
+	}
+}

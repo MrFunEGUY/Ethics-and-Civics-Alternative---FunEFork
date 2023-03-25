@@ -1,0 +1,136 @@
+namespace = observation
+# Societal Shift towards Individualist
+country_event = {
+	id = observation.3154
+	hide_window = yes
+	trigger = {
+		is_country_type = primitive
+		NOR = {
+			has_ethic = ethic_fanatic_capitalism
+			has_country_flag = indoctrination_cooldown
+		}
+		capital_scope = {
+			has_observation_outpost = yes
+			observation_outpost = {
+				has_mission = native_indoctrination
+			}
+			observation_outpost_owner = {
+				is_capitalism = yes
+			}
+			any_owned_pop = {
+				has_ethic = ethic_capitalism
+			}
+			OR = {
+				root = {
+					NOT = {
+						has_ethic = ethic_capitalism
+					}
+				}
+				count_owned_pop = {
+					limit = {
+						has_ethic = ethic_capitalism
+					}
+					count > 1
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	immediate = {
+		set_timed_country_flag = {
+			flag = indoctrination_cooldown
+			days = 540
+		}
+		shift_ethic = "ethic_capitalism"
+		capital_scope = {
+			observation_outpost_owner = {
+				country_event = {
+					id = observation.3155
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = observation.3155
+	title = "observation.3139.name"
+	desc = "observation.3155.desc"
+	picture = GFX_evt_medieval_alien_civilization
+	show_sound = event_pre_ftl_civilization
+	location = from
+	is_triggered_only = yes
+	option = {
+		name = "observation.3139.a"
+	}
+}
+
+# Societal Shift towards Collectivism
+country_event = {
+	id = observation.3156
+	hide_window = yes
+	trigger = {
+		is_country_type = primitive
+		NOR = {
+			has_ethic = ethic_fanatic_socialism
+			has_country_flag = indoctrination_cooldown
+		}
+		capital_scope = {
+			has_observation_outpost = yes
+			observation_outpost = {
+				has_mission = native_indoctrination
+			}
+			observation_outpost_owner = {
+				is_socialism = yes
+			}
+			any_owned_pop = {
+				has_ethic = ethic_socialism
+			}
+			OR = {
+				root = {
+					NOT = {
+						has_ethic = ethic_socialism
+					}
+				}
+				count_owned_pop = {
+					limit = {
+						has_ethic = ethic_socialism
+					}
+					count > 1
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	immediate = {
+		set_timed_country_flag = {
+			flag = indoctrination_cooldown
+			days = 540
+		}
+		shift_ethic = "ethic_socialism"
+		capital_scope = {
+			observation_outpost_owner = {
+				country_event = {
+					id = observation.3157
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = observation.3157
+	title = "observation.3139.name"
+	desc = "observation.3157.desc"
+	picture = GFX_evt_medieval_alien_civilization
+	show_sound = event_pre_ftl_civilization
+	location = from
+	is_triggered_only = yes
+	option = {
+		name = "observation.3139.a"
+	}
+}

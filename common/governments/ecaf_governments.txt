@@ -1,0 +1,709 @@
+#gov_example = {
+#  possible = {}              # Determines if a government name can be chosen. AND trigger, scope: country; valid triggers: has_ethic, has_authority, has_valid_civic; everything else is undefined behavior!
+#  weight = {                # scriptable value, scope: country; the (possible) government type with the biggest weight is assigned to the country
+#    base = 100
+#  }
+#
+#  ruler_title = RT_KING          # translation tag for male ruler's title
+#  ruler_title_female = RT_QUEEN      # translation tag for female ruler's title
+#  heir_title = HT_CROWN_PRINCE      # translation tag for male heir's title
+#  heir_title_female = HT_CROWN_PRINCESS  # translation tag for female heir's title
+#  use_regnal_names = yes / no        # default: no
+#  dynastic_last_names = yes / no      # default: no
+#  should_force_rename = yes / no      # default: no - if set to yes, empires changing to or from this government will be renamed even if authority type does not change
+#
+#  election_candidates = {          # scriptable value to weight election candidates for oligarchic elections, scope: leader
+#    modifier = {
+#      add = 100
+#      leader_class = ruler
+#    }
+#  }
+#}
+
+# WEIGHTS
+# Generic = 1
+# Civic Specific = 1000
+# General = 5
+
+################################
+## Administrative Governments ##
+################################
+
+gov_aristocratic_monarchy = {
+	ruler_title = RT_KING
+	ruler_title_female = RT_QUEEN
+	heir_title = HT_PRINCE
+	heir_title_female = HT_PRINCESS
+	use_regnal_names = yes
+	dynastic_last_names = yes
+	should_force_rename = yes
+	possible = {
+		has_authority = auth_imperial
+		has_valid_civic = civic_aristocratic_elite
+	}
+	weight = {
+		base = 300
+	}
+}
+
+gov_aristocratic_republic = {
+	ruler_title = RT_PRESIDENT
+	ruler_title_female = RT_PRESIDENT
+	should_force_rename = yes
+	possible = {
+		has_valid_civic = civic_aristocratic_elite
+		Or = {
+			has_authority = auth_democratic
+			has_authority = auth_strict_democratic
+			has_authority = auth_democratic_dictatorship
+		}
+	}
+	weight = {
+		base = 300
+		modifier = {
+			factor = 20
+			has_valid_civic = civic_political_pluralism
+		}
+	}
+}
+
+gov_great_houses = {
+	ruler_title = RT_WARDEN
+	ruler_title_female = RT_WARDEN
+	should_force_rename = yes
+	possible = {
+		NOT = {
+			has_ethic = ethic_egalitarian
+		}
+		has_authority = auth_oligarchic
+		has_ethic = ethic_authoritarian
+		has_valid_civic = civic_meritocracy
+	}
+	weight = {
+		base = 3000
+	}
+}
+
+gov_noble_aristocracy = {
+	ruler_title = RT_REGENT
+	ruler_title_female = RT_REGENT
+	should_force_rename = yes
+	possible = {
+		NOR = {
+			is_socialism = yes
+			has_ethic = ethic_egalitarian
+		}
+		has_valid_civic = civic_aristocratic_elite
+		has_authority = auth_oligarchic
+	}
+	weight = {
+		base = 500
+	}
+}
+
+################################
+### Spiritualist Governments ###
+################################
+
+gov_anarchy_communism = {
+	ruler_title = RT_GENERALISSIMO
+	ruler_title_female = RT_GENERALISSIMO
+	possible = {
+		OR = {
+			has_authority = auth_dictatorial
+			has_authority = auth_oligarchic
+			has_authority = auth_democratic_dictatorship
+		}
+		has_ethic = ethic_fanatic_socialism
+		is_authoritarian = yes
+		is_militarist = yes
+	}
+	should_force_rename = yes
+	election_candidates = {
+		modifier = {
+			add = 100
+			OR = {
+				leader_class = general
+				leader_class = admiral
+				leader_class = ruler
+				leader_class = governor
+			}
+		}
+	}
+	weight = {
+		base = 5000
+		modifier = {
+			factor = 100
+			OR = {
+				has_valid_civic = civic_military_dictatorship
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+}
+
+gov_jingoism = {
+	ruler_title = RT_DICTATOR
+	ruler_title_female = RT_DICTATOR
+	possible = {
+		OR = {
+			has_authority = auth_dictatorial
+			has_authority = auth_democratic_dictatorship
+			has_authority = auth_oligarchic
+		}
+		is_xenophobe = yes
+		is_militarist = yes
+		is_egalitarian = no
+		is_socialism = no
+	}
+	should_force_rename = yes
+	election_candidates = {
+		modifier = {
+			add = 100
+			OR = {
+				leader_class = general
+				leader_class = admiral
+				leader_class = ruler
+			}
+		}
+	}
+	weight = {
+		base = 2000
+		modifier = {
+			factor = 100
+			OR = {
+				has_valid_civic = civic_military_dictatorship
+				has_valid_civic = civic_military_junta
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+}
+
+gov_military_corp = {
+	ruler_title = RT_HCOM
+	ruler_title_female = RT_HCOM
+	election_candidates = {
+		modifier = {
+			add = 100
+			leader_class = ruler
+		}
+		modifier = {
+			add = 10
+			OR = {
+				leader_class = admiral
+				leader_class = general
+				leader_class = governor
+			}
+		}
+		modifier = {
+			factor = 0
+			leader_class = scientist
+		}
+	}
+	possible = {
+		has_ethic = ethic_fanatic_militarist
+		OR = {
+			has_valid_civic = civic_military_industry
+			has_valid_civic = civic_private_militaries
+			has_valid_civic = civic_naval_contractors
+		}
+		is_megacorp = yes
+	}
+	should_force_rename = yes
+	weight = {
+		base = 5000
+	}
+}
+
+# Fanatic Purifier Governments
+
+# gov_dread_brotherhood = {
+# 	ruler_title = RT_BROTHER
+# 	ruler_title_female = RT_SISTER
+# 	election_candidates = {
+# 	}
+# 	should_force_rename = yes
+# 	possible = {
+# 		has_valid_civic = civic_fanatic_purifiers
+# 		has_authority = auth_direct_democratic
+# 	}
+# 	weight = {
+# 		base = 10000
+# 	}
+# }
+
+### Competitive Governments
+gov_anarch_capitalism = {
+	ruler_title = RT_CEO
+	ruler_title_female = RT_CEO_FEMALE
+	possible = {
+		has_ethic = ethic_fanatic_capitalism
+		is_megacorp = yes
+		is_egalitarian = yes
+	}
+	weight = {
+		base = 5000
+		modifier = {
+			factor = 5
+			OR = {
+				has_valid_civic = civic_beacon_of_liberty
+				has_valid_civic = civic_corporate_dominion
+			}
+		}
+	}
+}
+
+gov_cor_dictatorship = {
+	ruler_title = RT_EXECUTOR
+	ruler_title_female = RT_EXECUTOR
+	should_force_rename = yes
+	possible = {
+		OR = {
+			has_valid_civic = civic_merchant_guilds
+			has_valid_civic = civic_state_monopoly
+		}
+		OR = {
+			has_authority = auth_oligarchic
+			has_authority = auth_dictatorial
+			has_authority = auth_imperial
+		}
+	}
+	weight = {
+		base = 10000
+	}
+}
+
+gov_minarchy = {
+	ruler_title = RT_PRIME_MINISTER
+	ruler_title_female = RT_PRIME_MINISTER
+	possible = {
+		has_ethic = ethic_fanatic_capitalism
+		is_egalitarian = yes
+		NOT = {
+			is_megacorp = yes
+		}
+	}
+	weight = {
+		base = 500
+		modifier = {
+			factor = 5
+			OR = {
+				has_valid_civic = civic_beacon_of_liberty
+				has_valid_civic = civic_corporate_dominion
+			}
+		}
+	}
+}
+
+gov_timocracy = {
+	ruler_title = RT_ARCHON
+	ruler_title_female = RT_ARCHON
+	possible = {
+		has_ethic = ethic_fanatic_capitalism
+		NOT = {
+			has_ethic = ethic_fanatic_egalitarian
+		}
+		OR = {
+			has_authority = auth_democratic
+			has_authority = auth_strict_democratic
+			has_authority = auth_democratic_dictatorship
+		}
+	}
+	should_force_rename = yes
+	weight = {
+		base = 300
+	}
+}
+
+############################
+### Imperial Governments ###
+############################
+gov_absolute_monarchy = {
+	ruler_title = RT_HIGH_KING
+	ruler_title_female = RT_HIGH_QUEEN
+	heir_title = HT_CROWN_PRINCE
+	heir_title_female = HT_CROWN_PRINCESS
+	use_regnal_names = yes
+	dynastic_last_names = yes
+	should_force_rename = yes
+	possible = {
+		has_authority = auth_imperial
+		has_ethic = ethic_fanatic_authoritarian
+		NOT = {
+			has_valid_civic = civic_feudal_realm
+		}
+	}
+	weight = {
+		base = 500
+	}
+}
+
+gov_par_monarchy = {
+	ruler_title = RT_KING
+	ruler_title_female = RT_QUEEN
+	heir_title = HT_CROWN_PRINCE
+	heir_title_female = HT_CROWN_PRINCESS
+	dynastic_last_names = yes
+	should_force_rename = yes
+	possible = {
+		has_authority = auth_imperial
+		has_valid_civic = civic_political_pluralism
+	}
+	weight = {
+		base = 5000
+	}
+}
+
+###############################
+### Dictatorial Governments ###
+###############################
+gov_communist_dictatorship = {
+	ruler_title = RT_CHAIRMAN
+	ruler_title_female = RT_CHAIRWOMAN
+	possible = {
+		OR = {
+			has_authority = auth_dictatorial
+			has_authority = auth_democratic_dictatorship
+		}
+		has_ethic = ethic_fanatic_socialism
+		is_authoritarian = yes
+		is_xenophobe = no
+	}
+	should_force_rename = yes
+	weight = {
+		base = 2000
+		modifier = {
+			factor = 10
+			has_ethic = ethic_fanatic_authoritarian
+		}
+	}
+}
+
+gov_enlighted_socialism = {
+	ruler_title = RT_SAGE
+	ruler_title_female = RT_SAGE
+	heir_title = HT_PROSELYTE
+	heir_title_female = HT_PROSELYTE
+	should_force_rename = yes
+	possible = {
+		OR = {
+			has_authority = auth_dictatorial
+			has_authority = auth_imperial
+			has_authority = auth_democratic_dictatorship
+		}
+		has_ethic = ethic_fanatic_socialism
+		is_authoritarian = no
+	}
+	weight = {
+		base = 1000
+		modifier = {
+			factor = 5
+			has_valid_civic = civic_welfare_state
+		}
+	}
+}
+
+gov_national_socialism = {
+	ruler_title = RT_DUCE
+	ruler_title_female = RT_DUCE
+	possible = {
+		has_ethic = ethic_fanatic_authoritarian
+		has_ethic = ethic_capitalism
+		has_authority = auth_dictatorial
+		has_valid_civic = civic_police_state
+		is_xenophile = no
+		is_pacifist = no
+	}
+	should_force_rename = yes
+	election_candidates = {
+		modifier = {
+			add = 100
+			leader_class = ruler
+		}
+	}
+	weight = {
+		base = 10000
+	}
+}
+
+gov_peoples_republic = {
+	ruler_title = RT_CHAIRMAN
+	ruler_title_female = RT_CHAIRWOMAN
+	should_force_rename = yes
+	possible = {
+		OR = {
+			has_authority = auth_dictatorial
+			has_authority = auth_democratic_dictatorship
+		}
+		is_capitalism = no
+	}
+	weight = {
+		base = 200
+		modifier = {
+			factor = 5
+			has_valid_civic = civic_political_pluralism
+		}
+		modifier = {
+			factor = 5
+			has_valid_civic = civic_socialistic
+		}
+	}
+}
+
+gov_republican_dictatorship = {
+	ruler_title = RT_DICTATOR
+	ruler_title_female = RT_DICTATOR
+	possible = {
+		OR = {
+			has_authority = auth_dictatorial
+			has_authority = auth_democratic_dictatorship
+		}
+		has_valid_civic = civic_political_pluralism
+		is_authoritarian = no
+	}
+	should_force_rename = yes
+	weight = {
+		base = 700
+	}
+}
+
+##############################
+### Oligarchic Governments ###
+##############################
+gov_bur_collectivism = {
+	ruler_title = RT_CHAIRMAN
+	ruler_title_female = RT_CHAIRWOMAN
+	should_force_rename = yes
+	possible = {
+		has_authority = auth_oligarchic
+		has_valid_civic = civic_byzantine_bureaucracy
+		NOT = {
+			has_ethic = ethic_egalitarian
+		}
+		is_socialism = yes
+	}
+	weight = {
+		base = 8000
+	}
+}
+
+gov_genuine_aristocracy = {
+	ruler_title = RT_PRINCEPS
+	ruler_title_female = RT_PRINCEPS
+	should_force_rename = yes
+	possible = {
+		has_ethic = ethic_egalitarian
+		has_valid_civic = civic_meritocracy
+		has_authority = auth_oligarchic
+		is_capitalism = no
+	}
+	weight = {
+		base = 3000
+		modifier = {
+			factor = 10
+			has_ethic = ethic_egalitarian
+		}
+	}
+}
+
+gov_oligarchic_republic = {
+	ruler_title = RT_CONSUL
+	ruler_title_female = RT_CONSUL
+	should_force_rename = yes
+	possible = {
+		has_ethic = ethic_egalitarian
+		has_authority = auth_oligarchic
+	}
+	weight = {
+		base = 100
+		modifier = {
+			factor = 50
+			has_valid_civic = civic_political_pluralism
+		}
+	}
+}
+
+gov_peoples_commissariat = {
+	ruler_title = RT_DEPUTY
+	ruler_title_female = RT_DEPUTY
+	should_force_rename = yes
+	possible = {
+		has_ethic = ethic_fanatic_socialism
+		has_authority = auth_oligarchic
+	}
+	weight = {
+		base = 1000
+		modifier = {
+			factor = 10
+			has_valid_civic = civic_socialistic
+		}
+	}
+}
+
+##############################
+### Democratic Governments ###
+##############################
+# gov_anarchy_state = {
+# 	ruler_title = RT_DEMOS_CRATOS
+# 	should_force_rename = yes
+# 	possible = {
+# 		has_authority = auth_direct_democratic
+# 		has_ethic = ethic_fanatic_socialism
+# 		has_valid_civic = civic_socialistic
+# 	}
+# 	weight = {
+# 		base = 500
+# 		modifier = {
+# 			factor = 100
+# 			has_valid_civic = civic_shared_burden
+# 		}
+# 	}
+# }
+
+gov_congress_republic = {
+	ruler_title = RT_PRIME_MINISTER
+	ruler_title_female = RT_PRIME_MINISTER
+	should_force_rename = yes
+	possible = {
+		has_valid_civic = civic_political_pluralism
+		OR = {
+			has_authority = auth_democratic
+			has_authority = auth_strict_democratic
+			has_authority = auth_democratic_dictatorship
+		}
+	}
+	weight = {
+		base = 400
+	}
+}
+
+# gov_demos_cratos = {
+# 	ruler_title = RT_DEMOS_CRATOS
+# 	should_force_rename = yes
+# 	possible = {
+# 		has_authority = auth_direct_democratic
+# 	}
+# 	weight = {
+# 		base = 10
+# 		modifier = {
+# 			factor = 100
+# 			has_valid_civic = civic_political_pluralism
+# 		}
+# 	}
+# }
+
+gov_liberal_democracy = {
+	ruler_title = RT_PRESIDENT
+	ruler_title_female = RT_PRESIDENT_FEMALE
+	possible = {
+		OR = {
+			has_authority = auth_democratic
+			has_authority = auth_strict_democratic
+		}
+		is_capitalism = yes
+		is_egalitarian = yes
+	}
+	should_force_rename = yes
+	weight = {
+		base = 100
+	}
+}
+
+gov_slaver_republic = {
+	ruler_title = RT_CONSUL
+	ruler_title_female = RT_CONSUL_FEMALE
+	should_force_rename = yes
+	possible = {
+		has_valid_civic = civic_slaver_guilds
+		OR = {
+			has_authority = auth_democratic
+			has_authority = auth_strict_democratic
+			has_authority = auth_democratic_dictatorship
+		}
+	}
+	weight = {
+		base = 10000
+	}
+}
+
+gov_social_democracy = {
+	ruler_title = RT_PRESIDENT
+	ruler_title_female = RT_PRESIDENT
+	possible = {
+		NOT = {
+			has_ethic = ethic_fanatic_socialism
+		}
+		has_valid_civic = civic_welfare_state
+		OR = {
+			has_authority = auth_strict_democratic
+			has_authority = auth_democratic
+		}
+	}
+	should_force_rename = yes
+	weight = {
+		base = 1000
+	}
+}
+
+gov_soviet_republic = {
+	ruler_title = RT_GENSEK
+	ruler_title_female = RT_GENSEK
+	should_force_rename = yes
+	possible = {
+		has_valid_civic = civic_shared_burden
+		OR = {
+			has_authority = auth_democratic
+			has_authority = auth_strict_democratic
+			has_authority = auth_democratic_dictatorship
+		}
+	}
+	weight = {
+		base = 1000
+		modifier = {
+			factor = 100
+			has_valid_civic = civic_shared_burden
+		}
+	}
+}
+
+gov_xenophile_democracy = {
+	ruler_title = RT_CHAIRMAN
+	ruler_title_female = RT_CHAIRMAN
+	possible = {
+		has_valid_civic = civic_symbiotic_race
+		OR = {
+			has_authority = auth_democratic
+			has_authority = auth_strict_democratic
+			has_authority = auth_democratic_dictatorship
+		}
+	}
+	should_force_rename = yes
+	weight = {
+		base = 5000
+	}
+}
+
+##################################
+### Civic-specific Governments ###
+##################################
+
+gov_strasserism = {
+	ruler_title = RT_GENSEK
+	ruler_title_female = RT_GENSEK
+	possible = {
+		has_valid_civic = civic_in_perfect
+		is_xenophobe = yes
+		is_authoritarian = yes
+		is_socialism = yes
+		OR = {
+			has_authority = auth_dictatorial
+			has_authority = auth_oligarchic
+			has_authority = auth_democratic_dictatorship
+		}
+	}
+	should_force_rename = yes
+	weight = {
+		base = 15000
+	}
+}

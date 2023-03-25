@@ -1,0 +1,5 @@
+OR = {
+	text = civic_tooltip_corporate
+	value = auth_corporate
+	value = auth_corporate_imperial
+}

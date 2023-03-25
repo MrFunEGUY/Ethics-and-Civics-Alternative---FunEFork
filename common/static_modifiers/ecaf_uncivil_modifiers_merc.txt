@@ -1,0 +1,136 @@
+
+##
+#	Empire modifiers
+##
+
+uncivil_defence_contractor_mod_1 = {
+	
+	trade_value_mult = 0.05
+	pop_ethic_militarist_attraction_mult = 0.05
+	
+	ships_upkeep_mult = -0.05
+	armies_upkeep_mult = -0.05
+	
+	icon = "gfx/interface/icons/modifiers/jingoist_joy_mod.dds"
+}
+
+uncivil_defence_contractor_mod_2 = {
+	
+	trade_value_mult = 0.10
+	pop_ethic_militarist_attraction_mult = 0.10
+	
+	ships_upkeep_mult = -0.10
+	armies_upkeep_mult = -0.10
+	
+	icon = "gfx/interface/icons/modifiers/jingoist_joy_mod.dds"
+}
+
+uncivil_defence_contractor_mod_3 = {
+	
+	trade_value_mult = 0.15
+	pop_ethic_militarist_attraction_mult = 0.15
+	
+	ships_upkeep_mult = -0.15
+	armies_upkeep_mult = -0.15
+	
+	icon = "gfx/interface/icons/modifiers/jingoist_joy_mod.dds"
+}
+
+uncivil_defence_contractor_mod_4 = {
+	
+	trade_value_mult = 0.20
+	pop_ethic_militarist_attraction_mult = 0.20
+	
+	ships_upkeep_mult = -0.20
+	armies_upkeep_mult = -0.20
+	
+	icon = "gfx/interface/icons/modifiers/jingoist_joy_mod.dds"
+}
+
+uncivil_defence_contractor_mod_5 = {
+	
+	trade_value_mult = 0.25
+	pop_ethic_militarist_attraction_mult = 0.25
+	
+	ships_upkeep_mult = -0.25
+	armies_upkeep_mult = -0.25
+	
+	icon = "gfx/interface/icons/modifiers/jingoist_joy_mod.dds"
+}
+
+uncivil_defence_contractor_mod_6 = {
+	
+	trade_value_mult = 0.05
+	pop_ethic_militarist_attraction_mult = 0.05
+	
+	ships_upkeep_mult = -0.05
+	armies_upkeep_mult = -0.05
+	
+	icon = "gfx/interface/icons/modifiers/jingoist_joy_mod.dds"
+}
+
+uncivil_defence_contractor_mod_7 = {
+	
+	trade_value_mult = 0.10
+	pop_ethic_militarist_attraction_mult = 0.10
+	
+	ships_upkeep_mult = -0.10
+	armies_upkeep_mult = -0.10
+	
+	icon = "gfx/interface/icons/modifiers/jingoist_joy_mod.dds"
+}
+
+uncivil_mercenary_company_mod_1 = {
+	
+	trade_value_mult = 0.10
+	pop_ethic_militarist_attraction_mult = 0.10
+	
+	ships_upkeep_mult = -0.10
+	armies_upkeep_mult = -0.10
+	
+	icon = "gfx/interface/icons/modifiers/jingoist_joy_mod.dds"
+}
+
+uncivil_mercenary_company_mod_2 = {
+	
+	trade_value_mult = 0.20
+	pop_ethic_militarist_attraction_mult = 0.20
+	
+	ships_upkeep_mult = -0.20
+	armies_upkeep_mult = -0.20
+	
+	icon = "gfx/interface/icons/modifiers/jingoist_joy_mod.dds"
+}
+
+uncivil_mercenary_company_mod_3 = {
+	
+	trade_value_mult = 0.30
+	pop_ethic_militarist_attraction_mult = 0.30
+	
+	ships_upkeep_mult = -0.30
+	armies_upkeep_mult = -0.30
+	
+	icon = "gfx/interface/icons/modifiers/jingoist_joy_mod.dds"
+}
+
+uncivil_mercenary_company_mod_4 = {
+	
+	trade_value_mult = 0.40
+	pop_ethic_militarist_attraction_mult = 0.40
+	
+	ships_upkeep_mult = -0.40
+	armies_upkeep_mult = -0.40
+	
+	icon = "gfx/interface/icons/modifiers/jingoist_joy_mod.dds"
+}
+
+uncivil_mercenary_company_mod_5 = {
+	
+	trade_value_mult = 0.50
+	pop_ethic_militarist_attraction_mult = 0.50
+	
+	ships_upkeep_mult = -0.50
+	armies_upkeep_mult = -0.50
+	
+	icon = "gfx/interface/icons/modifiers/jingoist_joy_mod.dds"
+}

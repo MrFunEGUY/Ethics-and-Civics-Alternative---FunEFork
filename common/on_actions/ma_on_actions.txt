@@ -1,0 +1,37 @@
+# Triggers when the game starts
+on_game_start = {
+	events = {
+		moreauthorities.1			# Set mod Global Flag
+	}
+}
+
+on_game_start_country = {
+	events = {
+		moreauthorities.10			# To get ride of mandate for Dem Autocracies.
+	}
+}
+
+# Called when an election starts
+# scope: country
+on_election_started = {
+	events = {
+		moreauthorities.2			# Single Term Authority is up
+		moreauthorities.20			# Democratic Autocracy - Kill ruler on election (to simulate retirement)
+	}
+}
+
+# Called when an election ends
+# scope: country
+on_election_ended = {
+	events = {
+		moreauthorities.10			# Clear Mandate
+	}
+}
+
+# The Merger of Rules
+
+on_game_start = {
+	events = {
+		moreauthstart.1 			# Set Global Flag
+	}
+}

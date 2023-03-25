@@ -1,0 +1,60 @@
+ap_imperial_prerogative = {
+	modifier = {
+		empire_size_colonies_mult = -0.50
+	}
+
+	potential = {
+		NOT = { has_ascension_perk = ap_imperial_prerogative }
+		is_megacorp = no
+	}
+
+	ai_weight = {
+		factor = 15
+	}
+
+	on_enabled = {
+		run_ai_strategic_data = yes
+	}
+}
+
+
+#################
+# OVERLORD ASCENSION PERKS
+#################
+
+ap_lord_of_war = {
+	potential = {
+		host_has_dlc = "Overlord"
+		NOR = {
+			has_ascension_perk = ap_lord_of_war
+			is_gestalt = yes
+			has_valid_civic = civic_fanatic_purifiers
+		}
+	}
+
+	on_enabled = {
+		custom_tooltip = ap_lord_of_war_tooltip
+	}
+
+	modifier = {
+		country_enclave_capacity_add = 1
+		diplo_weight_naval_mult = 0.25
+		#Bonus to dividends frequency handled in the dividends situation.
+	}
+
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 2
+			is_megacorp = yes
+		}
+	}
+}
