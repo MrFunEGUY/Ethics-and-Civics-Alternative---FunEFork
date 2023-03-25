@@ -1,8 +1,0 @@
-OR = {
-	text = civic_tooltip_heir
-	value = auth_imperial
-	value = auth_corporate_imperial
-	value = auth_corporate_fiefdom
-	value = auth_tec_patrocorporate
-	value = auth_bugged_corporate_imperial
-}

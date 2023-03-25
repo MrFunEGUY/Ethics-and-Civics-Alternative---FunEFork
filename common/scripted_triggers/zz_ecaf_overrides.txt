@@ -156,3 +156,35 @@ has_encountered_other_species = {
 		}
 	}
 }
+
+ai_should_build_habitats = {
+	is_country_type = default
+	OR = {
+		is_at_war = no
+		mid_game_years_passed > 0
+	}
+	has_technology = tech_habitat_1
+	if = {  #VDs should build habitats even if there are other planets available
+		limit = { NOT = { has_origin = origin_void_dwellers } }
+		ai_colonize_plans <= 0
+		OR = {
+			NOT = { has_trait = trait_aquatic }
+			has_ascension_perk = ap_hydrocentric
+		}
+	}
+	OR = { # FUNE
+		has_origin = origin_void_dwellers
+		has_ascension_perk = ap_voidborn
+		count_owned_planet = {
+			count < 3
+			limit = { habitable_structure = yes }
+		}
+	}
+	NOT = {
+		any_planet_within_border = {
+			is_planet_class = pc_habitat
+			is_colony = no
+		}
+	}
+	NOT = { any_neighbor_country = { is_crisis_faction = yes } }
+}

@@ -1,5 +1,0 @@
-OR = {
-	text = civic_tooltip_dictatorship
-	value = auth_dictatorial
-	value = auth_democratic_dictatorship
-}

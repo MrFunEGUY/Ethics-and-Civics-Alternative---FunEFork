@@ -4,6 +4,7 @@ origin_syncretic_evolution = {
 	picture = GFX_origin_syncretic_evolution
 
 	playable = {
+		does_not_have_extra_origins = no
 		host_has_dlc = "Utopia"
 	}
 
@@ -44,6 +45,7 @@ origin_life_seeded = {
 	preferred_planet_class_neighbor = no
 
 	playable = {
+		does_not_have_extra_origins = no
 		host_has_dlc = "Apocalypse"
 	}
 

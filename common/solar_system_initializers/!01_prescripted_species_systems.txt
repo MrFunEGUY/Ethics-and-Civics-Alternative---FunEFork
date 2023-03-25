@@ -28,7 +28,8 @@ une_deneb_system = {
 		modifier = {
 			any_country = {
 				has_country_flag = human_1
-				species_portrait = human
+				is_human_species = yes
+                NOT = { has_origin = origin_broken_shackles }
 			}
 			NOT = {
 				any_system = {
@@ -110,6 +111,9 @@ une_deneb_system = {
 			entity = "continental_planet_01_entity"
 			deposit_blockers = none
 			modifiers = none
+			flags = {
+                planet_unity
+            }
 			init_effect = {
 				prevent_anomaly = yes
 				random_country = {

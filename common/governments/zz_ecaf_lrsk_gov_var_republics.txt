@@ -1,0 +1,45 @@
+# Government Variety Pack
+# Governments - Republics and Democracies
+# Author: littleraskol
+
+# Whig Commonwealth
+lrsk_gov_var_gov_whig_commonwealth = {
+	ruler_title = LRSK_GOV_VAR_RT_EXEC_CHANCELLOR
+
+	possible = {
+		GVP_TRIGGER = yes
+		has_valid_civic = civic_shadow_council
+		OR = {
+			has_valid_civic = civic_idealistic_foundation
+			has_valid_civic = civic_beacon_of_liberty
+			AND = {
+				has_valid_civic = civic_meritocracy
+				OR = {
+				 is_egalitarian = yes
+				}
+			}
+		}
+		OR = {
+			has_authority = auth_democratic
+			has_authority = auth_strict_democratic
+			has_authority = auth_democratic_dictatorship
+		}
+	}
+
+	election_candidates = {
+		modifier = {
+			add = 100
+			leader_class = ruler
+		}
+		modifier = {
+			add = 10
+			leader_class = governor
+		}
+	}
+	
+	leader_class = governor
+
+	weight = {
+		base = 1000
+	}
+}

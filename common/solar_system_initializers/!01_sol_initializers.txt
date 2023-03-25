@@ -25,7 +25,7 @@ com_sol_system = {
 		modifier = {
 			any_country = {
 				has_country_flag = human_2
-				species_portrait = human
+				is_human_species = yes
 			}
 			NOR = {
 				any_country = {
@@ -36,6 +36,8 @@ com_sol_system = {
 				}
 				has_star_flag = empire_cluster
 			}
+			is_fe_cluster = no
+            is_marauder_cluster = no
 			add = 99999
 		}
 	}
@@ -87,6 +89,7 @@ com_sol_system = {
 			planet_earth
 		}
 		init_effect = {
+			save_global_event_target_as = sol_system_earth
 			prevent_anomaly = yes
 			random_country = {
 				limit = {
@@ -209,6 +212,7 @@ com_sol_system = {
 		init_effect = {
 			add_modifier = {
 				modifier = "terraforming_candidate"
+				days = -1
 			}
 		}
 	}

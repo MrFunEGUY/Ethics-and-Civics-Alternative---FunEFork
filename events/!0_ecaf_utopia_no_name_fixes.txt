@@ -6,15 +6,14 @@ country_event = {
 	desc = "utopia.3400.desc"
 	picture = GFX_evt_psionics
 	show_sound = event_mystic_reveal
+
 	trigger = {
 		is_country_type = default
-		NOT = {
-			has_country_flag = chosen_one_ruler_event
-		}
+		NOT = { has_country_flag = chosen_one_ruler_event }
 		OR = {
-			has_authority = auth_democratic
+			is_democracy = yes
 			has_authority = auth_oligarchic
-			has_authority = auth_dictatorial
+			is_dictatorial = yes
 		}
 		any_owned_leader = {
 			OR = {
@@ -23,12 +22,30 @@ country_event = {
 				has_trait = leader_trait_governor_chosen
 				has_trait = leader_trait_scientist_chosen
 				has_trait = leader_trait_ruler_chosen
+				has_trait = leader_trait_general_composer_chosen
+				has_trait = leader_trait_governor_composer_chosen
+				has_trait = leader_trait_ruler_composer_chosen
+				has_trait = leader_trait_scientist_composer_chosen
+				has_trait = leader_trait_admiral_eater_chosen
+				has_trait = leader_trait_general_eater_chosen
+				has_trait = leader_trait_governor_eater_chosen
+				has_trait = leader_trait_ruler_eater_chosen
+				has_trait = leader_trait_admiral_instrument_chosen
+				has_trait = leader_trait_governor_instrument_chosen
+				has_trait = leader_trait_ruler_instrument_chosen
+				has_trait = leader_trait_scientist_instrument_chosen
+				has_trait = leader_trait_admiral_whisperers_chosen
+				has_trait = leader_trait_general_whisperers_chosen
+				has_trait = leader_trait_ruler_whisperers_chosen
+				has_trait = leader_trait_scientist_whisperers_chosen
 			}
 		}
 	}
+
 	mean_time_to_happen = {
 		months = 120
 	}
+
 	immediate = {
 		set_country_flag = chosen_one_ruler_event
 		random_owned_leader = {
@@ -39,14 +56,29 @@ country_event = {
 					has_trait = leader_trait_governor_chosen
 					has_trait = leader_trait_scientist_chosen
 					has_trait = leader_trait_ruler_chosen
+					has_trait = leader_trait_general_composer_chosen
+					has_trait = leader_trait_governor_composer_chosen
+					has_trait = leader_trait_ruler_composer_chosen
+					has_trait = leader_trait_scientist_composer_chosen
+					has_trait = leader_trait_admiral_eater_chosen
+					has_trait = leader_trait_general_eater_chosen
+					has_trait = leader_trait_governor_eater_chosen
+					has_trait = leader_trait_ruler_eater_chosen
+					has_trait = leader_trait_admiral_instrument_chosen
+					has_trait = leader_trait_governor_instrument_chosen
+					has_trait = leader_trait_ruler_instrument_chosen
+					has_trait = leader_trait_scientist_instrument_chosen
+					has_trait = leader_trait_admiral_whisperers_chosen
+					has_trait = leader_trait_general_whisperers_chosen
+					has_trait = leader_trait_ruler_whisperers_chosen
+					has_trait = leader_trait_scientist_whisperers_chosen
 				}
 			}
 			save_event_target_as = chosen_one
-			species = {
-				save_event_target_as = chosen_one_species
-			}
+			species = { save_event_target_as = chosen_one_species }
 		}
 	}
+
 	option = {
 		name = "utopia.3400.a"
 		ai_chance = {
@@ -55,7 +87,7 @@ country_event = {
 				factor = 40
 				has_ethic = ethic_egalitarian
 			}
-			modifier = {
+				modifier = {
 				factor = 80
 				has_ethic = ethic_fanatic_egalitarian
 			}
@@ -70,7 +102,7 @@ country_event = {
 				factor = 40
 				has_ethic = ethic_authoritarian
 			}
-			modifier = {
+				modifier = {
 				factor = 80
 				has_ethic = ethic_fanatic_authoritarian
 			}
@@ -79,31 +111,25 @@ country_event = {
 		shift_ethic = "ethic_spiritualist"
 		change_government = {
 			authority = auth_imperial
-			civics = {
-				civic = civic_imperial_cult
-				civic = civic_aristocratic_elite
-				civic = civic_divine_order
-			}
+			cooldown = no
+			remove_invalid_civics = yes
+		}
+		force_add_civic = civic_psionic_sovereign
+		set_government_cooldown = no
+		ruler = {
+			exile_leader_as = destituted_ruler_chosen_one
 		}
 		set_leader = event_target:chosen_one
 		hidden_effect = {
-			every_playable_country = {
+			every_country = {
 				limit = {
 					is_ai = no
-					NOT = {
-						is_same_value = root
-					}
+					NOT = { is_same_value = root }
 					has_communications = root
 				}
-				country_event = {
-					id = utopia.3401
-					days = 4
-				}
+				country_event = { id = utopia.3401 days = 4 }
 			}
-			country_event = {
-				id = utopia.3402
-				days = 5
-			}
+			country_event = { id = utopia.3402 days = 5 }
 		}
 	}
 }

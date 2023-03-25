@@ -118,7 +118,7 @@ trade_federation = {
 		set_federation_law = treaties_separate_yes
 		set_federation_flag = enable_federation_cooldowns
 		every_member = {
-			limit = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			limit = { is_gestalt = no }
 			set_policy = {
 				policy = trade_policy
 				option = trade_policy_trade_league

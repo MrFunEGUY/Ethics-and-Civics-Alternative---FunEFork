@@ -1012,9 +1012,7 @@ xenophobic_isolationists = {
 	allow = {
 		is_country_type = default
 		is_pacifist = yes
-		OR = {
-			is_xenophobe = yes
-		}
+		is_xenophobe = yes
 	}
 
 	weight_modifier = {

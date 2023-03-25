@@ -24,6 +24,15 @@ country_event = {
 			limit = { has_star_flag = swarm_invasion_target_1 }
 			save_event_target_as = prethoryn_invasion_system
 		}
+		if = {
+            limit = {
+                any_planet_within_border = {
+                    has_planet_flag = fotd_seperatist_planet@root
+                    owner = { has_country_flag = fotd_seperatist_country@root }
+                }
+            }
+            country_event = { id = origin.6125 days = 5 random = 2 }
+        }
 	}
 
 	option = {

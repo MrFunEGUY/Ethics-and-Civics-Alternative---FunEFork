@@ -1,0 +1,262 @@
+# Utopian Despotism
+lrsk_gov_var_gov_utopian_despotism_dic = {
+	ruler_title = LRSK_GOV_VAR_RT_GRAND_PHILANTHROPIST_D
+
+	possible = {
+		GVP_TRIGGER = yes
+		has_valid_civic = lrsk_gov_var_civic_institutionalized_collectivism
+		has_valid_civic = lrsk_gov_var_civic_automated_indolence
+		OR = {
+			has_authority = auth_dictatorial
+			has_authority = auth_democratic_dictatorship
+		}
+	}
+
+	election_candidates = {
+		modifier = {
+			add = 100
+			leader_class = ruler
+		}
+		modifier = {
+			add = 30
+			leader_class = governor
+		}
+		modifier = {
+			add = 50
+			leader_class = scientist
+		}
+	}
+
+	weight = {
+		base = 1100
+	}
+}
+
+# Utopian Socialism
+lrsk_gov_var_gov_utopian_socialism = {
+	ruler_title = LRSK_GOV_VAR_RT_PHILANTHROPY_DIRECTOR
+
+	possible = {
+		GVP_TRIGGER = yes
+		has_valid_civic = lrsk_gov_var_civic_institutionalized_collectivism
+		has_valid_civic = lrsk_gov_var_civic_automated_indolence
+		OR = {
+			has_authority = auth_oligarchic
+			has_authority = auth_democratic
+			has_authority = auth_strict_democratic
+			has_authority = auth_democratic_dictatorship
+		}
+	}
+
+	election_candidates = {
+		modifier = {
+			add = 100
+			leader_class = ruler
+		}
+		modifier = {
+			add = 30
+			leader_class = governor
+		}
+		modifier = {
+			add = 50
+			leader_class = scientist
+		}
+	}
+
+	leader_class = governor
+
+	weight = {
+		base = 1100
+	}
+}
+
+# Social Imperialism
+lrsk_gov_var_gov_social_imperialism = {
+	ruler_title = LRSK_GOV_VAR_RT_INTERPLANETARY_CHAIRMAN
+	ruler_title_female = LRSK_GOV_VAR_RT_INTERPLANETARY_CHAIRWOMAN
+
+	possible = {
+		GVP_TRIGGER = yes
+		OR = {
+			has_authority = auth_dictatorial
+			has_authority = auth_democratic_dictatorship
+		}
+		
+		has_valid_civic = lrsk_gov_var_civic_imperial_economy
+		has_valid_civic = lrsk_gov_var_civic_institutionalized_collectivism
+	}
+
+	election_candidates = {
+		modifier = {
+			add = 100
+			leader_class = ruler
+		}
+		modifier = {
+			add = 30
+			leader_class = governor
+		}
+		modifier = {
+			add = 10
+			leader_class = admiral
+		}
+		modifier = {
+			add = 10
+			leader_class = general
+		}
+	}
+
+	weight = {
+		base = 1100
+	}
+}
+
+# Rural Commune Collective
+lrsk_gov_var_gov_peasant_commune_collective = {
+	ruler_title = LRSK_GOV_VAR_RT_COMMUNAL_REPRESENTATIVE
+
+	possible = {
+		has_valid_civic = civic_agrarian_idyll
+		has_valid_civic = lrsk_gov_var_civic_workers_councils
+		is_socialist = yes
+	}
+
+	election_candidates = {
+		modifier = {
+			add = 100
+			leader_class = ruler
+		}
+		modifier = {
+			add = 30
+			leader_class = governor
+		}
+		modifier = {
+			add = 10
+			leader_class = scientist
+		}
+	}
+	
+	leader_class = governor
+
+	weight = {
+		base = 1100
+	}
+}
+
+# Peasant Dictatorship
+lrsk_gov_var_gov_peasant_dictatorship = {
+	ruler_title = LRSK_GOV_VAR_RT_COLLECTIVE_DIRECTOR
+
+	possible = {
+		GVP_TRIGGER = yes
+		OR = {
+			has_authority = auth_dictatorial
+			has_authority = auth_democratic_dictatorship
+		}
+		is_socialist = yes
+		has_valid_civic = civic_agrarian_idyll
+		has_valid_civic = lrsk_gov_var_civic_institutionalized_collectivism
+	}
+
+	election_candidates = {
+		modifier = {
+			add = 100
+			leader_class = ruler
+		}
+		modifier = {
+			add = 30
+			leader_class = governor
+		}
+		modifier = {
+			add = 10
+			leader_class = scientist
+		}
+	}
+
+	weight = {
+		base = 1100
+	}
+}
+
+# Rogue Freehold
+lrsk_gov_var_gov_rogue_freehold = {
+	ruler_title = LRSK_GOV_VAR_RT_HEAD_JUDGE
+
+	possible = {
+		GVP_TRIGGER = yes
+		OR = {
+			has_authority = auth_democratic
+			has_authority = auth_strict_democratic
+			has_authority = auth_democratic_dictatorship
+		}
+		has_valid_civic = lrsk_gov_var_civic_enlightened_liberalism
+		has_valid_civic = civic_barbaric_despoilers
+		is_capitalism = yes
+	}
+
+	election_candidates = {
+		modifier = {
+			add = 100
+			leader_class = ruler
+		}
+		modifier = {
+			add = 10
+			leader_class = governor
+		}
+		modifier = {
+			add = 30
+			leader_class = admiral
+		}
+		modifier = {
+			add = 30
+			leader_class = general
+		}
+	}
+	
+	leader_class = admiral
+
+	weight = {
+		base = 11000
+	}
+}
+
+# Corporate Banditry
+lrsk_gov_var_gov_corporate_banditry = {
+	ruler_title = LRSK_GOV_VAR_RT_CHIEFCORPSEC
+
+	possible = {
+		GVP_TRIGGER = yes
+		OR = {
+			has_authority = auth_dictatorial
+			has_authority = auth_oligarchic
+			has_authority = auth_democratic_dictatorship
+		}
+		has_valid_civic = lrsk_gov_var_civic_enlightened_liberalism
+		has_valid_civic = civic_barbaric_despoilers
+		is_capitalism = yes
+	}
+
+	election_candidates = {
+		modifier = {
+			add = 100
+			leader_class = ruler
+		}
+		modifier = {
+			add = 10
+			leader_class = governor
+		}
+		modifier = {
+			add = 30
+			leader_class = admiral
+		}
+		modifier = {
+			add = 30
+			leader_class = general
+		}
+	}
+	
+	leader_class = admiral
+
+	weight = {
+		base = 11000
+	}
+}

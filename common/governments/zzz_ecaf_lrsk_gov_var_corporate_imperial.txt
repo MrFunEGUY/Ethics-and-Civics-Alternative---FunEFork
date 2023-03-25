@@ -1,0 +1,342 @@
+##############
+# Capitalist #
+##############
+
+# Cosmic Cartel (CD + CoI / MC, RC + BL) ##################
+lrsk_gov_var_gov_galactic_cartel_fam = {
+	ruler_title = LRSK_GOV_VAR_RT_COSEO
+
+	heir_title = HT_STELLAR_EXEC
+	heir_title_female = HT_STELLAR_EXEC
+
+	should_force_rename = yes
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	possible = {
+		GVP_TRIGGER = yes
+		OR = {
+			AND = {
+				has_valid_civic = civic_corporate_dominion
+				OR = {
+					has_valid_civic = civic_cutthroat_politics
+					has_valid_civic = civic_shadow_council
+				}
+			}
+			AND = {
+				has_authority = auth_corporate_imperial
+				has_valid_civic = civic_ruthless_competition
+				has_valid_civic = civic_brand_loyalty
+			}
+		}
+		OR = {
+			has_ethic = ethic_fanatic_militarist
+			has_ethic = ethic_militarist
+		}
+	}
+
+	weight = {
+		base = 1000
+	}
+}
+
+# Rationalist Managerial Firm
+lrsk_gov_var_gov_rationalist_managerial_firm_fam = {
+	ruler_title = LRSK_GOV_VAR_RT_PROC_EFF_DIRECTOR
+
+	heir_title = HT_OPERATIONS_MANAGER
+	heir_title_female = HT_OPERATIONS_MANAGER
+
+	should_force_rename = yes
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	possible = {
+		GVP_TRIGGER = yes		
+		OR = {
+			AND = {
+				has_valid_civic = civic_corporate_dominion
+				has_valid_civic = civic_technocracy
+			}
+			AND = {
+				has_authority = auth_corporate_imperial
+				has_valid_civic = lrsk_gov_var_civic_mc_sci_mgnt
+			}
+		}		
+	}
+
+	weight = {
+		base = 1000
+		modifier = {
+			add = 100
+			has_ethic = ethic_authoritarian
+		}
+	}
+}
+
+### Also Warlike
+# Private Intelligence Agency
+lrsk_gov_var_gov_private_intel_agency_fam = {
+	ruler_title = LRSK_GOV_VAR_RT_CE_DIRECTOR
+
+	heir_title = HT_VICE_EXEC
+	heir_title_female = HT_VICE_EXEC
+
+	should_force_rename = yes
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	possible = {
+		GVP_TRIGGER = yes		
+		has_authority = auth_corporate_imperial
+		has_valid_civic = lrsk_gov_var_civic_mc_police_state
+	}
+
+	weight = {
+		base = 1000
+		modifier = {
+			factor = 0.8
+			has_valid_civic = civic_gospel_of_the_masses
+		}
+	}
+}
+
+# Protection Racket
+lrsk_gov_var_gov_protection_racket_fam = {
+	ruler_title = LRSK_GOV_VAR_RT_CHIEF_ENFORCER
+
+	heir_title = HT_VICE_OFFICER
+	heir_title_female = HT_VICE_OFFICER
+
+	should_force_rename = yes
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	possible = {
+		GVP_TRIGGER = yes		
+		has_authority = auth_corporate_imperial
+		has_valid_civic = lrsk_gov_var_civic_mc_police_state
+		has_valid_civic = civic_criminal_heritage
+	}
+
+	weight = {
+		base = 1750
+	}
+}
+
+##################
+# Garlic Pudding #
+##################
+
+# Crusading Company (FanMil or FanSpi, Corp, GoM & PMC/NC)
+lrsk_gov_var_gov_crusading_company_fam = {
+	ruler_title = LRSK_GOV_VAR_RT_CHAPLAINMARTIAL
+	ruler_title_female = LRSK_GOV_VAR_RT_CHAPLAINMARTIAL
+
+	heir_title = HT_DEPUTY_CHAPLAIN
+	heir_title_female = HT_DEPUTY_CHAPLAIN
+
+	should_force_rename = yes
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	possible = {
+		GVP_TRIGGER = yes
+		#OR = {
+		#	has_ethic = ethic_fanatic_militarist
+		#	has_ethic = ethic_fanatic_spiritualist
+		#}
+		OR = {
+			AND = {
+				# Pretty much only going to show up in rare cases but eh
+				has_valid_civic = civic_corporate_dominion
+				has_valid_civic = civic_exalted_priesthood
+				has_valid_civic = civic_citizen_service
+			}
+			AND = {
+				has_authority = auth_corporate_imperial
+				has_valid_civic = civic_gospel_of_the_masses
+				OR = {
+					has_valid_civic = civic_naval_contractors
+					has_valid_civic = civic_private_military_companies
+				}
+			}
+		}
+	}
+
+	weight = {
+		base = 1500
+	}
+}
+
+#########
+# Other #
+#########
+
+lrsk_gov_var_gov_colonial_viceroyalty_cmp_fam = {
+	ruler_title = LRSK_GOV_VAR_RT_COL_EXEC
+
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	possible = {
+		GVP_TRIGGER = yes
+		has_authority = auth_corporate_imperial
+		has_origin = lrsk_gov_var_origin_colonial_venture
+	}
+
+	weight = {
+		base = 110000
+	}
+}
+
+#############
+# Religious #
+#############
+
+# Evangelical Franchise (Corporate Dominion + Exalted Priesthood) (internal string is legacy)
+lrsk_gov_var_gov_evangelical_franchise_fam = {
+	ruler_title = LRSK_GOV_VAR_RT_CHIEF_MINISTERIAL_OFFICER
+
+	heir_title = HT_DEPUTY_MINISTER
+	heir_title_female = HT_DEPUTY_MINISTER
+
+	should_force_rename = yes
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	possible = {
+		GVP_TRIGGER = yes
+		OR = {
+			AND = {
+				has_valid_civic = civic_corporate_dominion
+				has_valid_civic = civic_exalted_priesthood
+			}
+			AND = {
+				has_authority = auth_corporate_imperial
+				has_valid_civic = civic_gospel_of_the_masses
+			}
+		}
+		has_ethic = ethic_pacifist
+		has_ethic = ethic_egalitarian
+	}
+
+	weight = {
+		base = 1300
+	}
+}
+
+# Occult Cartel (As above, but Authoritarian/Fanatic Spiritualist) (internal string is legacy)
+lrsk_gov_var_gov_occult_franchise_fam = {
+	ruler_title = LRSK_GOV_VAR_RT_GRAND_EXECUTIVE_SAGE
+
+	heir_title = HT_HIGH_MYSTIC
+	heir_title_female = HT_HIGH_MYSTIC
+
+	should_force_rename = yes
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	possible = {
+		GVP_TRIGGER = yes
+		OR = {
+			AND = {
+				has_valid_civic = civic_corporate_dominion
+				has_valid_civic = civic_exalted_priesthood
+			}
+			AND = {
+				has_authority = auth_corporate_imperial
+				has_valid_civic = civic_gospel_of_the_masses
+			}
+		}
+		has_ethic = ethic_authoritarian
+		has_ethic = ethic_fanatic_spiritualist
+	}
+
+	weight = {
+		base = 1300
+	}
+}
+
+##############
+# Scientific #
+##############
+
+# Innovation Initiative
+lrsk_gov_var_gov_innovation_initiative_fam = {
+	ruler_title = LRSK_GOV_VAR_RT_EXEC_DEAN
+
+	heir_title = HT_VICE_DEAN
+	heir_title_female = HT_VICE_DEAN
+
+	should_force_rename = yes
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	possible = {
+		GVP_TRIGGER = yes
+		OR = {
+			AND = {
+				has_valid_civic = civic_corporate_dominion
+				has_valid_civic = lrsk_gov_var_civic_enlightened_liberalism
+			}
+			AND = {
+				has_authority = auth_corporate_imperial
+				has_valid_civic = lrsk_gov_var_civic_mc_edu_corp
+				has_valid_civic = lrsk_gov_var_civic_mc_sci_mgnt
+			}
+		}
+		
+	}
+
+	weight = {
+		base = 1001
+		modifier = {
+			add = 100
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			add = 1000
+			has_ethic = ethic_fanatic_materialist
+		}
+	}
+}
+
+###########
+# Warlike #
+###########
+
+# Private Military Contractor
+lrsk_gov_var_gov_private_military_contractor_fam = {
+	ruler_title = LRSK_GOV_VAR_RT_CAPTAIN_DIRECTOR
+
+	heir_title = HT_FIRST_CAPTAIN
+	heir_title_female = HT_FIRST_CAPTAIN
+
+	should_force_rename = yes
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	possible = {
+		GVP_TRIGGER = yes
+		OR = {
+			AND = {
+				has_valid_civic = civic_corporate_dominion
+				has_valid_civic = civic_citizen_service
+			}
+			AND = {
+				has_authority = auth_corporate_imperial
+				AND = {
+					has_valid_civic = civic_private_military_companies
+					has_valid_civic = civic_naval_contractors
+				}
+			}
+		}
+	}
+	
+	leader_class = admiral
+
+	weight = {
+		base = 1000
+	}
+}

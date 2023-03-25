@@ -138,7 +138,6 @@ building_stronghold = {
 	exempt_from_ai_planet_specialization = no
 
 	potential = {
-		buildings_simple_allow = yes
 	}
 
 	destroy_trigger = {

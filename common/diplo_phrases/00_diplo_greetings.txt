@@ -12,7 +12,7 @@ greetings = {
 	01_HOSTILE_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_xenophile = yes
 				is_xenophobe = yes
 				is_same_species = FROM
@@ -30,7 +30,7 @@ greetings = {
 	02_HOSTILE_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_xenophile = yes
 				is_xenophobe = yes
 				is_same_species = FROM
@@ -48,7 +48,7 @@ greetings = {
 	03_HOSTILE_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_xenophile = yes
 					is_xenophobe = yes
 					is_megacorp = yes
@@ -68,7 +68,7 @@ greetings = {
 	04_HOSTILE_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_xenophile = yes
 					is_xenophobe = yes
 					is_megacorp = yes
@@ -86,7 +86,7 @@ greetings = {
 	05_HOSTILE_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_pacifist = yes
@@ -103,7 +103,7 @@ greetings = {
 	06_HOSTILE_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_pacifist = yes
@@ -121,7 +121,7 @@ greetings = {
 	07_HOSTILE_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_militarist = yes
@@ -138,7 +138,7 @@ greetings = {
 	08_HOSTILE_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_militarist = yes
@@ -156,7 +156,7 @@ greetings = {
 	09_HOSTILE_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_spiritualist = yes
@@ -173,7 +173,7 @@ greetings = {
 	10_HOSTILE_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_spiritualist = yes
@@ -191,7 +191,7 @@ greetings = {
 	11_HOSTILE_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_materialist = yes
@@ -208,7 +208,7 @@ greetings = {
 	12_HOSTILE_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_materialist = yes
@@ -226,7 +226,7 @@ greetings = {
 	13_HOSTILE_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_egalitarian = yes
@@ -243,7 +243,7 @@ greetings = {
 	14_HOSTILE_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_egalitarian = yes
@@ -261,7 +261,7 @@ greetings = {
 	15_HOSTILE_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_authoritarian = yes
@@ -278,7 +278,7 @@ greetings = {
 	16_HOSTILE_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_authoritarian = yes
@@ -296,7 +296,7 @@ greetings = {
 	17_HOSTILE_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_xenophobe = yes
@@ -319,7 +319,7 @@ greetings = {
 	18_HOSTILE_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_xenophobe = yes
@@ -336,7 +336,7 @@ greetings = {
 	19_HOSTILE_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_xenophobe = yes
@@ -353,7 +353,7 @@ greetings = {
 	20_HOSTILE_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_xenophobe = yes
@@ -370,7 +370,7 @@ greetings = {
 	21_HOSTILE_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_xenophile = yes
@@ -381,14 +381,14 @@ greetings = {
 				is_domineering_to = FROM
 				is_unfriendly_to = FROM
 			}
-			FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			FROM = { NOT = { is_gestalt = yes } }
 		}
 	}
 	# Hostile Xenophile 2
 	22_HOSTILE_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_xenophile = yes
@@ -405,7 +405,7 @@ greetings = {
 	23_HOSTILE_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_xenophile = yes
@@ -416,14 +416,14 @@ greetings = {
 				is_domineering_to = FROM
 				is_unfriendly_to = FROM
 			}
-			FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			FROM = { NOT = { is_gestalt = yes } }
 		}
 	}
 	# Hostile Xenophile Same Species
 	24_HOSTILE_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_xenophile = yes
@@ -440,7 +440,7 @@ greetings = {
 	25_HOSTILE_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_xenophobe = yes
@@ -458,7 +458,7 @@ greetings = {
 	26_HOSTILE_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_xenophobe = yes
@@ -511,7 +511,7 @@ greetings = {
 	01_NEUTRAL_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 				is_xenophile = yes
 				is_xenophobe = yes
@@ -528,7 +528,7 @@ greetings = {
 	02_NEUTRAL_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 				is_xenophile = yes
 				is_xenophobe = yes
@@ -545,7 +545,7 @@ greetings = {
 	03_NEUTRAL_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 				is_xenophile = yes
 				is_xenophobe = yes
@@ -562,7 +562,7 @@ greetings = {
 	04_NEUTRAL_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 				is_xenophile = yes
 				is_xenophobe = yes
@@ -579,7 +579,7 @@ greetings = {
 	05_NEUTRAL_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_pacifist = yes
@@ -595,7 +595,7 @@ greetings = {
 	06_NEUTRAL_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_pacifist = yes
@@ -612,7 +612,7 @@ greetings = {
 	07_NEUTRAL_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_militarist = yes
@@ -628,7 +628,7 @@ greetings = {
 	08_NEUTRAL_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_militarist = yes
@@ -645,7 +645,7 @@ greetings = {
 	09_NEUTRAL_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_spiritualist = yes
@@ -661,7 +661,7 @@ greetings = {
 	10_NEUTRAL_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_spiritualist = yes
@@ -678,7 +678,7 @@ greetings = {
 	11_NEUTRAL_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_materialist = yes
@@ -694,7 +694,7 @@ greetings = {
 	12_NEUTRAL_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_materialist = yes
@@ -711,7 +711,7 @@ greetings = {
 	13_NEUTRAL_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_egalitarian = yes
@@ -727,7 +727,7 @@ greetings = {
 	14_NEUTRAL_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_egalitarian = yes
@@ -744,7 +744,7 @@ greetings = {
 	15_NEUTRAL_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_authoritarian = yes
@@ -760,7 +760,7 @@ greetings = {
 	16_NEUTRAL_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_authoritarian = yes
@@ -777,7 +777,7 @@ greetings = {
 	17_NEUTRAL_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_xenophobe = yes
@@ -793,7 +793,7 @@ greetings = {
 	18_NEUTRAL_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_xenophobe = yes
@@ -809,7 +809,7 @@ greetings = {
 	19_NEUTRAL_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_xenophobe = yes
@@ -825,7 +825,7 @@ greetings = {
 	20_NEUTRAL_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_xenophobe = yes
@@ -841,7 +841,7 @@ greetings = {
 	21_NEUTRAL_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_xenophile = yes
@@ -857,7 +857,7 @@ greetings = {
 	22_NEUTRAL_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_xenophile = yes
@@ -873,7 +873,7 @@ greetings = {
 	23_NEUTRAL_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_xenophile = yes
@@ -889,7 +889,7 @@ greetings = {
 	24_NEUTRAL_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_xenophile = yes
@@ -938,7 +938,7 @@ greetings = {
 	01_FRIENDLY_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_xenophile = yes
 				is_xenophobe = yes
 				is_megacorp = yes
@@ -956,7 +956,7 @@ greetings = {
 	02_FRIENDLY_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_xenophile = yes
 				is_xenophobe = yes
 				is_megacorp = yes
@@ -974,7 +974,7 @@ greetings = {
 	03_FRIENDLY_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_xenophile = yes
 				is_xenophobe = yes
 				is_megacorp = yes
@@ -992,7 +992,7 @@ greetings = {
 	04_FRIENDLY_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_xenophile = yes
 				is_xenophobe = yes
 				is_megacorp = yes
@@ -1009,7 +1009,7 @@ greetings = {
 	# Friendly Pacifist
 	05_FRIENDLY_GREETING = {
 		trigger = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			NOT = { is_gestalt = yes }
 			is_pacifist = yes
 			NOT = { is_same_species = FROM }
 			NOT = { is_at_war_with = FROM }
@@ -1024,7 +1024,7 @@ greetings = {
 	06_FRIENDLY_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_pacifist = yes
@@ -1042,7 +1042,7 @@ greetings = {
 	07_FRIENDLY_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_militarist = yes
@@ -1059,7 +1059,7 @@ greetings = {
 	08_FRIENDLY_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_militarist = yes
@@ -1077,7 +1077,7 @@ greetings = {
 	09_FRIENDLY_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_spiritualist = yes
@@ -1094,7 +1094,7 @@ greetings = {
 	10_FRIENDLY_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_spiritualist = yes
@@ -1112,7 +1112,7 @@ greetings = {
 	11_FRIENDLY_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_materialist = yes
@@ -1129,7 +1129,7 @@ greetings = {
 	12_FRIENDLY_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_materialist = yes
@@ -1147,7 +1147,7 @@ greetings = {
 	13_FRIENDLY_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_egalitarian = yes
@@ -1164,7 +1164,7 @@ greetings = {
 	14_FRIENDLY_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_egalitarian = yes
@@ -1182,7 +1182,7 @@ greetings = {
 	15_FRIENDLY_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_authoritarian = yes
@@ -1199,7 +1199,7 @@ greetings = {
 	16_FRIENDLY_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_authoritarian = yes
@@ -1217,7 +1217,7 @@ greetings = {
 	17_FRIENDLY_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_xenophobe = yes
@@ -1234,7 +1234,7 @@ greetings = {
 	18_FRIENDLY_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_xenophobe = yes
@@ -1251,7 +1251,7 @@ greetings = {
 	19_FRIENDLY_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_xenophobe = yes
@@ -1268,7 +1268,7 @@ greetings = {
 	20_FRIENDLY_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_xenophobe = yes
@@ -1285,7 +1285,7 @@ greetings = {
 	21_FRIENDLY_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_xenophile = yes
@@ -1302,7 +1302,7 @@ greetings = {
 	22_FRIENDLY_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_xenophile = yes
@@ -1319,7 +1319,7 @@ greetings = {
 	23_FRIENDLY_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_xenophile = yes
@@ -1336,7 +1336,7 @@ greetings = {
 	24_FRIENDLY_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 			}
 			is_xenophile = yes
@@ -1387,7 +1387,7 @@ greetings = {
 	01_WAR_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_fallen_empire = yes
 				is_xenophile = yes
 				is_xenophobe = yes
@@ -1401,7 +1401,7 @@ greetings = {
 	02_WAR_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_fallen_empire = yes
 				is_xenophile = yes
 				is_xenophobe = yes
@@ -1415,7 +1415,7 @@ greetings = {
 	03_WAR_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_fallen_empire = yes
 				is_xenophile = yes
 				is_xenophobe = yes
@@ -1429,7 +1429,7 @@ greetings = {
 	04_WAR_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_fallen_empire = yes
 				is_xenophile = yes
 				is_xenophobe = yes
@@ -1443,7 +1443,7 @@ greetings = {
 	05_WAR_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 				is_fallen_empire = yes
 			}
@@ -1456,7 +1456,7 @@ greetings = {
 	06_WAR_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 				is_fallen_empire = yes
 			}
@@ -1469,7 +1469,7 @@ greetings = {
 	07_WAR_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 				is_fallen_empire = yes
 			}
@@ -1482,7 +1482,7 @@ greetings = {
 	08_WAR_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 				is_fallen_empire = yes
 			}
@@ -1495,7 +1495,7 @@ greetings = {
 	09_WAR_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 				is_fallen_empire = yes
 			}
@@ -1508,7 +1508,7 @@ greetings = {
 	10_WAR_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 				is_fallen_empire = yes
 			}
@@ -1521,7 +1521,7 @@ greetings = {
 	11_WAR_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 				is_fallen_empire = yes
 			}
@@ -1540,7 +1540,7 @@ greetings = {
 	12_WAR_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 				is_fallen_empire = yes
 			}
@@ -1553,7 +1553,7 @@ greetings = {
 	13_WAR_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 				is_fallen_empire = yes
 			}
@@ -1566,7 +1566,7 @@ greetings = {
 	14_WAR_GREETING = {
 		trigger = {
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_megacorp = yes
 				is_fallen_empire = yes
 			}
@@ -2594,7 +2594,7 @@ greetings = {
 			NOT = { is_disloyal_to = FROM }
 			FROM = {
 				NOT = {
-					has_ethic = ethic_gestalt_consciousness
+					is_gestalt = yes
 				}
 			}
 		}
@@ -3205,7 +3205,7 @@ greetings = {
 			NOT = { is_disloyal_to = FROM }
 			FROM = {
 				NOT = {
-					has_ethic = ethic_gestalt_consciousness
+					is_gestalt = yes
 				}
 			}
 		}
@@ -3277,7 +3277,7 @@ greetings = {
 			OR = {
 				is_domineering_to = FROM
 			}
-			FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			FROM = { NOT = { is_gestalt = yes } }
 		}
 	}
 	FB_NEUTRAL_GREETING_01 = {
@@ -3354,7 +3354,7 @@ greetings = {
 				is_cordial_to = FROM
 				is_protective_to = FROM
 			}
-			FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			FROM = { NOT = { is_gestalt = yes } }
 		}
 	}
 	FB_FRIENDLY_GREETING_02 = {
@@ -3426,7 +3426,7 @@ greetings = {
 				has_federation = yes
 			}
 			is_at_war_with = FROM
-			FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			FROM = { NOT = { is_gestalt = yes } }
 		}
 	}
 	FB_WAR_GREETING_03 = {
@@ -3702,7 +3702,7 @@ greetings = {
 			overlord = { is_same_value = FROM }
 			NOT = { is_at_war_with = FROM }
 			NOT = { is_disloyal_to = FROM }
-			FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			FROM = { NOT = { is_gestalt = yes } }
 		}
 	}
 	XI_VASSAL_GREETING_DISLOYAL_01 = {
@@ -3892,7 +3892,7 @@ greetings = {
 		trigger = {
 			has_ai_personality = hive_mind
 			is_at_war_with = FROM
-			FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			FROM = { NOT = { is_gestalt = yes } }
 		}
 	}
 	HM_WAR_GREETING_02 = {
@@ -3968,7 +3968,7 @@ greetings = {
 				is_hostile_to = FROM
 				is_unfriendly_to = FROM
 			}
-			FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			FROM = { NOT = { is_gestalt = yes } }
 		}
 	}
 	MF_HOSTILE_GREETING_02 = {
@@ -3987,7 +3987,7 @@ greetings = {
 			}
 			FROM = {
 				NOT = {
-					has_ethic = ethic_gestalt_consciousness
+					is_gestalt = yes
 					is_species_class = ROBOT
 				}
 			}
@@ -4083,7 +4083,7 @@ greetings = {
 			}
 			FROM = {
 				NOT = {
-					has_ethic = ethic_gestalt_consciousness
+					is_gestalt = yes
 					is_species_class = ROBOT
 				}
 			}
@@ -4106,7 +4106,7 @@ greetings = {
 			}
 			FROM = {
 				NOT = {
-					has_ethic = ethic_gestalt_consciousness
+					is_gestalt = yes
 					is_species_class = ROBOT
 				}
 			}
@@ -4197,7 +4197,7 @@ greetings = {
 			overlord = { is_same_value = FROM }
 			NOT = { is_at_war_with = FROM }
 			is_disloyal_to = FROM
-			FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			FROM = { NOT = { is_gestalt = yes } }
 		}
 	}
 	# Evangelizing Zealots
@@ -4466,7 +4466,7 @@ greetings = {
 			overlord = { is_same_value = FROM }
 			NOT = { is_at_war_with = FROM }
 			is_disloyal_to = FROM
-			FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			FROM = { NOT = { is_gestalt = yes } }
 		}
 	}
 	# Devouring Swarm
@@ -5222,7 +5222,7 @@ greetings = {
 			}
 			FROM = {
 				NOT = {
-					has_ethic = ethic_gestalt_consciousness
+					is_gestalt = yes
 				}
 			}
 		}
@@ -5240,7 +5240,7 @@ greetings = {
 			}
 			FROM = {
 				NOT = {
-					has_ethic = ethic_gestalt_consciousness
+					is_gestalt = yes
 				}
 			}
 		}
@@ -5259,7 +5259,7 @@ greetings = {
 			}
 			FROM = {
 				NOT = {
-					has_ethic = ethic_gestalt_consciousness
+					is_gestalt = yes
 				}
 			}
 		}
@@ -5276,7 +5276,7 @@ greetings = {
 				is_hostile_to = FROM
 				is_unfriendly_to = FROM
 			}
-			FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			FROM = { NOT = { is_gestalt = yes } }
 		}
 	}
 	DC_HOSTILE_GREETING_05 = {
@@ -5287,7 +5287,7 @@ greetings = {
 			has_ai_personality = democratic_crusaders
 			FROM = {
 				is_species_class = AVI
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				NOT = { is_gestalt = yes }
 			}
 			NOT = { is_at_war_with = FROM }
 			OR = {
@@ -5321,7 +5321,7 @@ greetings = {
 			}
 			FROM = {
 				NOT = {
-					has_ethic = ethic_gestalt_consciousness
+					is_gestalt = yes
 				}
 			}
 		}
@@ -5335,7 +5335,7 @@ greetings = {
 			is_domineering_to = FROM
 			NOT = { is_at_war_with = FROM }
 			FROM = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 			}
 		}
 	}
@@ -5347,7 +5347,7 @@ greetings = {
 			has_ai_personality = democratic_crusaders
 			NOT = { is_at_war_with = FROM }
 			is_neutral_to = FROM
-			FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			FROM = { NOT = { is_gestalt = yes } }
 		}
 	}
 	DC_NEUTRAL_GREETING_02 = {
@@ -5359,7 +5359,7 @@ greetings = {
 			NOT = { is_at_war_with = FROM }
 			is_neutral_to = FROM
 			FROM = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				NOT = { is_gestalt = yes }
 			}
 		}
 	}
@@ -5372,7 +5372,7 @@ greetings = {
 			FROM = { has_election_type = democratic }
 			NOT = { is_at_war_with = FROM }
 			is_neutral_to = FROM
-			FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			FROM = { NOT = { is_gestalt = yes } }
 		}
 	}
 	DC_NEUTRAL_GREETING_04 = {
@@ -5384,7 +5384,7 @@ greetings = {
 			FROM = { NOT = { has_election_type = democratic } }
 			NOT = { is_at_war_with = FROM }
 			is_neutral_to = FROM
-			FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			FROM = { NOT = { is_gestalt = yes } }
 		}
 	}
 	DC_NEUTRAL_GREETING_05 = {
@@ -5393,7 +5393,7 @@ greetings = {
 		}
 		trigger = {
 			has_ai_personality = democratic_crusaders
-			FROM = { has_ethic = ethic_gestalt_consciousness }
+			FROM = { is_gestalt = yes }
 			NOT = { is_at_war_with = FROM }
 			is_neutral_to = FROM
 		}
@@ -5416,7 +5416,7 @@ greetings = {
 			has_ai_personality = democratic_crusaders
 			NOT = { is_at_war_with = FROM }
 			is_threatened_to = FROM
-			FROM = { has_ethic = ethic_gestalt_consciousness }
+			FROM = { is_gestalt = yes }
 		}
 	}
 	DC_FRIENDLY_GREETING_01 = {
@@ -5462,7 +5462,7 @@ greetings = {
 				is_cordial_to = FROM
 				is_protective_to = FROM
 			}
-			FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			FROM = { NOT = { is_gestalt = yes } }
 		}
 	}
 	DC_FRIENDLY_GREETING_04 = {
@@ -5477,7 +5477,7 @@ greetings = {
 				is_cordial_to = FROM
 				is_protective_to = FROM
 			}
-			FROM = { has_ethic = ethic_gestalt_consciousness }
+			FROM = { is_gestalt = yes }
 		}
 	}
 	DC_WAR_GREETING_01 = {
@@ -5488,7 +5488,7 @@ greetings = {
 			has_ai_personality = democratic_crusaders
 			NOT = { is_same_species = FROM }
 			is_at_war_with = FROM
-			FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			FROM = { NOT = { is_gestalt = yes } }
 		}
 	}
 	DC_WAR_GREETING_02 = {
@@ -5521,7 +5521,7 @@ greetings = {
 			FROM = { NOT = { has_election_type = democratic } }
 			NOT = { is_same_species = FROM }
 			is_at_war_with = FROM
-			FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			FROM = { NOT = { is_gestalt = yes } }
 		}
 	}
 	DC_WAR_GREETING_05 = {
@@ -5532,7 +5532,7 @@ greetings = {
 			has_ai_personality = democratic_crusaders
 			NOT = { is_same_species = FROM }
 			is_at_war_with = FROM
-			FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			FROM = { NOT = { is_gestalt = yes } }
 		}
 	}
 	DC_VASSAL_GREETING_01 = {
@@ -5689,7 +5689,7 @@ greetings = {
 				is_protective_to = FROM
 			}
 			FROM = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
+				NOT = { is_gestalt = yes }
 			}
 		}
 	}
@@ -5724,7 +5724,7 @@ greetings = {
 				is_cordial_to = FROM
 				is_protective_to = FROM
 			}
-			FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			FROM = { NOT = { is_gestalt = yes } }
 		}
 	}
 	SD_FRIENDLY_GREETING_04 = {
@@ -5750,7 +5750,7 @@ greetings = {
 			has_ai_personality = slaving_despots
 			NOT = { is_same_species = FROM }
 			is_at_war_with = FROM
-			FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			FROM = { NOT = { is_gestalt = yes } }
 		}
 	}
 	SD_WAR_GREETING_02 = {
@@ -5821,7 +5821,7 @@ greetings = {
 				is_hostile_to = FROM
 				is_unfriendly_to = FROM
 			}
-			FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			FROM = { NOT = { is_gestalt = yes } }
 		}
 	}
 	DH_DOMINEERING_GREETING_01 = {
@@ -5944,7 +5944,7 @@ greetings = {
 		trigger = {
 			has_ai_personality = decadent_hierarchy
 			is_at_war_with = FROM
-			FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			FROM = { NOT = { is_gestalt = yes } }
 		}
 	}
 	DH_WAR_GREETING_02 = {
@@ -6509,7 +6509,7 @@ greetings = {
 				is_hostile_to = FROM
 				is_unfriendly_to = FROM
 			}
-			FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			FROM = { NOT = { is_gestalt = yes } }
 		}
 	}
 	HC_HOSTILE_GREETING_02 = {
@@ -6532,7 +6532,7 @@ greetings = {
 		trigger = {
 			has_ai_personality = harmonious_hierarchy
 			FROM = { NOT = { has_election_type = democratic } }
-			FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			FROM = { NOT = { is_gestalt = yes } }
 			NOT = { is_at_war_with = FROM }
 			OR = {
 				is_hostile_to = FROM
@@ -6590,7 +6590,7 @@ greetings = {
 			is_neutral_to = FROM
 			FROM = {
 				NOT = {
-					has_ethic = ethic_gestalt_consciousness
+					is_gestalt = yes
 				}
 			}
 		}
@@ -7017,7 +7017,7 @@ greetings = {
 			overlord = { is_same_value = FROM }
 			NOT = { is_at_war_with = FROM }
 			is_disloyal_to = FROM
-			FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			FROM = { NOT = { is_gestalt = yes } }
 		}
 	}
 	# Enigmatic Observers
@@ -11348,7 +11348,7 @@ greetings = {
 				is_unfriendly_to = from
 			}
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_species_class = ROBOT
 				is_spiritualist = yes
 				is_egalitarian = yes
@@ -11611,7 +11611,7 @@ greetings = {
 		trigger = {
 			is_domineering_to = from
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_species_class = ROBOT
 				is_spiritualist = yes
 				is_at_war_with = FROM
@@ -11633,7 +11633,7 @@ greetings = {
 		trigger = {
 			is_domineering_to = from
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_species_class = ROBOT
 				is_spiritualist = yes
 				is_at_war_with = FROM
@@ -11678,7 +11678,7 @@ greetings = {
 		trigger = {
 			is_domineering_to = from
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_species_class = ROBOT
 				is_spiritualist = yes
 				is_at_war_with = FROM
@@ -11839,7 +11839,7 @@ greetings = {
 			is_neutral_to = from
 			NOR = {
 				is_species_class = ROBOT
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_spiritualist = yes
 				is_authoritarian = yes
 				is_xenophobe = yes
@@ -12197,7 +12197,7 @@ greetings = {
 		trigger = {
 			is_at_war_with = from
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_species_class = ROBOT
 				is_spiritualist = yes
 				has_ethic = ethic_fanatic_egalitarian
@@ -12234,7 +12234,7 @@ greetings = {
 		trigger = {
 			is_at_war_with = from
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_species_class = ROBOT
 				is_spiritualist = yes
 			}
@@ -12251,7 +12251,7 @@ greetings = {
 		trigger = {
 			is_at_war_with = from
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_species_class = ROBOT
 				is_spiritualist = yes
 			}
@@ -12986,7 +12986,7 @@ greetings = {
 		trigger = {
 			any_controlled_ship = { is_ship_size = colossus }
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				has_valid_civic = civic_fanatic_purifiers
 				is_at_war_with = FROM
 				is_pacifist = yes
@@ -13003,7 +13003,7 @@ greetings = {
 		trigger = {
 			any_controlled_ship = { is_ship_size = colossus }
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				has_valid_civic = civic_fanatic_purifiers
 				is_at_war_with = FROM
 				is_pacifist = yes
@@ -13023,7 +13023,7 @@ greetings = {
 			}
 			NOR = {
 				any_controlled_ship = { is_ship_size = colossus }
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				has_valid_civic = civic_fanatic_purifiers
 				is_at_war_with = FROM
 				is_pacifist = yes
@@ -13043,7 +13043,7 @@ greetings = {
 			}
 			NOR = {
 				any_controlled_ship = { is_ship_size = colossus }
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				has_valid_civic = civic_fanatic_purifiers
 				is_at_war_with = FROM
 				is_pacifist = yes
@@ -13060,7 +13060,7 @@ greetings = {
 		trigger = {
 			any_controlled_ship = { is_ship_size = colossus }
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				has_valid_civic = civic_fanatic_purifiers
 				is_at_war_with = FROM
 				is_pacifist = yes
@@ -13076,7 +13076,7 @@ greetings = {
 		trigger = {
 			any_controlled_ship = { is_ship_size = colossus }
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				has_valid_civic = civic_fanatic_purifiers
 				is_at_war_with = FROM
 				is_pacifist = yes
@@ -13095,7 +13095,7 @@ greetings = {
 			}
 			NOR = {
 				any_controlled_ship = { is_ship_size = colossus }
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				has_valid_civic = civic_fanatic_purifiers
 				is_at_war_with = FROM
 				is_pacifist = yes
@@ -13114,7 +13114,7 @@ greetings = {
 			}
 			NOR = {
 				any_controlled_ship = { is_ship_size = colossus }
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				has_valid_civic = civic_fanatic_purifiers
 				is_at_war_with = FROM
 				is_pacifist = yes
@@ -13130,7 +13130,7 @@ greetings = {
 		trigger = {
 			any_controlled_ship = { is_ship_size = colossus }
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				has_valid_civic = civic_fanatic_purifiers
 				is_at_war_with = FROM
 				is_pacifist = yes
@@ -13147,7 +13147,7 @@ greetings = {
 		trigger = {
 			any_controlled_ship = { is_ship_size = colossus }
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				has_valid_civic = civic_fanatic_purifiers
 				is_at_war_with = FROM
 				is_pacifist = yes
@@ -13167,7 +13167,7 @@ greetings = {
 			}
 			NOR = {
 				any_controlled_ship = { is_ship_size = colossus }
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				has_valid_civic = civic_fanatic_purifiers
 				is_at_war_with = FROM
 				is_pacifist = yes
@@ -13187,7 +13187,7 @@ greetings = {
 			}
 			NOR = {
 				any_controlled_ship = { is_ship_size = colossus }
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				has_valid_civic = civic_fanatic_purifiers
 				is_at_war_with = FROM
 				is_pacifist = yes
@@ -13204,7 +13204,7 @@ greetings = {
 		trigger = {
 			any_controlled_ship = { is_ship_size = colossus }
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				has_valid_civic = civic_fanatic_purifiers
 				is_at_war_with = FROM
 			}
@@ -13216,7 +13216,7 @@ greetings = {
 		trigger = {
 			any_controlled_ship = { is_ship_size = colossus }
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				has_valid_civic = civic_fanatic_purifiers
 				is_at_war_with = FROM
 			}
@@ -13228,7 +13228,7 @@ greetings = {
 		trigger = {
 			any_controlled_ship = { is_ship_size = colossus }
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				has_valid_civic = civic_fanatic_purifiers
 				is_at_war_with = FROM
 			}
@@ -13262,7 +13262,7 @@ greetings = {
 			any_controlled_ship = { is_ship_size = colossus }
 			is_at_war_with = FROM
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				has_valid_civic = civic_fanatic_purifiers
 				is_pacifist = yes
 			}
@@ -13274,7 +13274,7 @@ greetings = {
 			any_controlled_ship = { is_ship_size = colossus }
 			is_at_war_with = FROM
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				has_valid_civic = civic_fanatic_purifiers
 				is_pacifist = yes
 			}
@@ -15951,7 +15951,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_belligerent
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -15970,7 +15970,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_belligerent
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -15989,7 +15989,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_belligerent
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16008,7 +16008,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_belligerent
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16027,7 +16027,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_belligerent
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16046,7 +16046,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_belligerent
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16065,7 +16065,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_belligerent
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16082,7 +16082,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_belligerent
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16099,7 +16099,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_belligerent
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16116,7 +16116,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_belligerent
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16133,7 +16133,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_belligerent
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16150,7 +16150,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_belligerent
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16249,7 +16249,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_cooperative
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16268,7 +16268,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_cooperative
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16287,7 +16287,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_cooperative
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16306,7 +16306,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_cooperative
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16325,7 +16325,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_cooperative
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16344,7 +16344,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_cooperative
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16363,7 +16363,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_cooperative
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16380,7 +16380,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_cooperative
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16397,7 +16397,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_cooperative
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16414,7 +16414,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_cooperative
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16431,7 +16431,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_cooperative
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16448,7 +16448,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_cooperative
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16547,7 +16547,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_isolationist
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16566,7 +16566,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_isolationist
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16585,7 +16585,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_isolationist
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16604,7 +16604,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_isolationist
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16623,7 +16623,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_isolationist
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16642,7 +16642,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_isolationist
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16661,7 +16661,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_isolationist
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16678,7 +16678,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_isolationist
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16695,7 +16695,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_isolationist
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16712,7 +16712,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_isolationist
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16729,7 +16729,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_isolationist
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16746,7 +16746,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_isolationist
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16845,7 +16845,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_expansionist
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16864,7 +16864,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_expansionist
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16883,7 +16883,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_expansionist
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16902,7 +16902,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_expansionist
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16921,7 +16921,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_expansionist
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16940,7 +16940,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_expansionist
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16959,7 +16959,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_expansionist
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16976,7 +16976,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_expansionist
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -16993,7 +16993,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_expansionist
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -17010,7 +17010,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_expansionist
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -17027,7 +17027,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_expansionist
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {
@@ -17044,7 +17044,7 @@ greetings = {
 		trigger = {
 			has_policy_flag = diplo_stance_expansionist
 			NOR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_at_war_with = FROM
 			}
 			OR = {

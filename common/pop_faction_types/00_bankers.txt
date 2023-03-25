@@ -9,21 +9,28 @@ bankers = {
 	resources = {
 		category = pop_factions
 		produces = {
-			unity = 0.5
-		}
+            trigger = {
+                owner = {
+                	OR = {
+                		years_passed > 10
+                		AND = {
+                			days_passed > 30
+                			has_valid_civic = civic_parliamentary_system
+                		}
+                		AND = {
+                			days_passed > 350
+                			has_origin = origin_broken_shackles
+                		}
+                	}
+                }
+            }
+            unity = 0.5
+        }
 	}
 	is_potential = {
 		years_passed > 10
 		has_encountered_other_species = yes
-		NOT = {
-			has_ethic = ethic_gestalt_consciousness
-		}
-		# count_owned_pop = { # Note: define POP_FACTION_MIN_POTENTIAL_MEMBERS does this now!
-		#  count >= 5
-		#  limit = {
-		#	has_ethic = ethic_capitalism
-		#  }
-		#}
+		is_gestalt = no
 	}
 	parameters = {
 		empire = {
@@ -39,10 +46,7 @@ bankers = {
 	}
 	can_join_faction = {
 		is_shackled_robot = no
-		NOR = {
-			has_trait = trait_nerve_stapled
-			has_trait = trait_zombie
-		}
+		can_think = yes
 	}
 	attraction = {
 		base = 150
@@ -66,14 +70,15 @@ bankers = {
 			}
 		}
 		modifier = {
-			factor = 1.5
-			is_capitalism = yes
-		}
-		modifier = {
 			factor = 0.25
 			NOT = {
 				is_same_species = owner_species
 			}
+		}
+
+		modifier = {
+			factor = 0
+			planet = { has_modifier = planet_culture_shock }
 		}
 	}
 	leader = {
@@ -653,6 +658,7 @@ bankers = {
 				parameter:empire = {
 					add_modifier = {
 						modifier = promoted_capitalism
+						days = -1
 					}
 				}
 			}
@@ -693,10 +699,12 @@ bankers = {
 			effect = {
 				add_modifier = {
 					modifier = suppressed_faction
+					days = -1
 				}
 				parameter:empire = {
 					add_modifier = {
 						modifier = suppressed_capitalism
+						days = -1
 					}
 				}
 			}

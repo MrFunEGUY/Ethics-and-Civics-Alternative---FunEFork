@@ -9,21 +9,28 @@ socialists = {
 	resources = {
 		category = pop_factions
 		produces = {
-			unity = 0.5
-		}
+            trigger = {
+                owner = {
+                	OR = {
+                		years_passed > 10
+                		AND = {
+                			days_passed > 30
+                			has_valid_civic = civic_parliamentary_system
+                		}
+                		AND = {
+                			days_passed > 350
+                			has_origin = origin_broken_shackles
+                		}
+                	}
+                }
+            }
+            unity = 0.5
+        }
 	}
 	is_potential = {
 		years_passed > 10
 		has_encountered_other_species = yes
-		NOT = {
-			has_authority = auth_hive_mind
-		}
-		# count_owned_pop = {
-		#  count >= 5
-		#  limit = {
-		#	has_ethic = ethic_socialism
-		#  }
-		#}
+		is_gestalt = no
 	}
 	parameters = {
 		empire = {
@@ -39,10 +46,7 @@ socialists = {
 	}
 	can_join_faction = {
 		is_shackled_robot = no
-		NOR = {
-			has_trait = trait_nerve_stapled
-			has_trait = trait_zombie
-		}
+		can_think = yes
 	}
 	attraction = {
 		base = 150
@@ -64,6 +68,11 @@ socialists = {
 					exists = leader
 				}
 			}
+		}
+
+		modifier = {
+			factor = 0
+			planet = { has_modifier = planet_culture_shock }
 		}
 	}
 	leader = {
@@ -505,6 +514,7 @@ socialists = {
 				parameter:empire = {
 					add_modifier = {
 						modifier = promoted_socialism
+						days = -1
 					}
 				}
 			}
@@ -545,10 +555,12 @@ socialists = {
 			effect = {
 				add_modifier = {
 					modifier = suppressed_faction
+					days = -1
 				}
 				parameter:empire = {
 					add_modifier = {
 						modifier = suppressed_socialism
+						days = -1
 					}
 				}
 			}

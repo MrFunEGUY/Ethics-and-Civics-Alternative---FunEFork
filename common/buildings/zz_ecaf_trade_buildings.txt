@@ -13,10 +13,6 @@ building_commercial_zone = {
 		NOT = { has_building = building_low_tech_capital }
 	}
 
-	allow = {
-		buildings_simple_allow = yes
-	}
-
 	destroy_trigger = {
 		exists = owner
 		OR = {

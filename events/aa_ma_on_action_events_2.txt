@@ -20,16 +20,13 @@ country_event = {
 	}
 	picture = GFX_evt_financial_instruments
 	show_sound = event_galactic_market
-
 	is_triggered_only = yes
-
-	fire_only_once = yes # failsafe
 
 	immediate = {
 		set_global_flag = ongoing_market_nomination
 		set_country_flag = market_nomination_eligible
 		event_target:global_event_country = {
-			country_event = { id = action.98 days = 1800 }
+			country_event = { id = action.98 days = @galactic_market_nomination_period }
 		}
 		begin_event_chain = {
 			event_chain = market_founding_chain
@@ -40,22 +37,7 @@ country_event = {
 				NOT = { is_same_value = root }
 				is_galactic_community_member = yes
 			}
-			begin_event_chain = {
-				event_chain = market_founding_chain
-				target = this
-			}
-			country_event = { id = action.97 }
-		}
-	}
-
-	after = {
-		custom_tooltip = enable_decision_market_nomination
-		# Notification
-		tooltip = {
-			begin_event_chain = {
-				event_chain = market_founding_chain
-				target = this
-			}
+			country_event = { id = action.97 } # inform all other concerned countries
 		}
 	}
 
@@ -67,6 +49,17 @@ country_event = {
 	option = {
 		name = action.96.b
 		trigger = { is_megacorp = no }
+	}
+
+	after = {
+		custom_tooltip = enable_decision_market_nomination
+		# Notification
+		tooltip = {
+			begin_event_chain = {
+				event_chain = market_founding_chain
+				target = this
+			}
+		}
 	}
 }
 
@@ -153,14 +146,14 @@ country_event = {
 					}
 				}
 			}
-			# transfer to contact
+			# Destroy old Galactic Market
 			event_target:galactic_market_station = {
 				destroy_ambient_object = this
 			}
 			clear_global_event_target = galactic_market_station
 			clear_global_event_target = market_founder_planet
 			remove_modifier = galactic_market_founder
-
+			# Transfer to a contact
 			random_playable_country = {
 				limit = {
 					is_homicidal = no
@@ -171,7 +164,8 @@ country_event = {
 					modifier = {
 						factor = 999
 						has_communications = root
-						has_country_flag = market_nomination_eligible
+						has_country_flag = has_market_access
+						has_country_flag = market_nomination_eligible # NOTE: this flag is set never removed, even if the contact leaves GalCom
 					}
 					modifier = {
 						factor = 20
@@ -232,14 +226,18 @@ country_event = {
 				}
 			}
 		}
-		else_if = { # lost to valid empire without market access (somehow)
+		# System has a new owner who somehow lacks access to the Market
+		else_if = {
 			limit = {
 				exists = fromfrom
 				fromfrom = {
-					is_country_type_with_subjects = yes
+					is_country_type = default
 					NOT = { has_country_flag = has_market_access }
 				}
 			}
+			# Remove empire modifier
+			remove_modifier = galactic_market_founder
+			# Enable Market access (and host status) for the new owner
 			fromfrom = {
 				set_country_flag = has_market_access
 				enable_galactic_market = yes
@@ -249,12 +247,12 @@ country_event = {
 				}
 				set_market_leader = yes
 			}
-			remove_modifier = galactic_market_founder
+			# Notification
 			create_message = {
 				type = MESSAGE_TYPE_LOST_MARKET_STATION
 				localization = MESSAGE_LOST_MARKET_STATION
 				days = 30
-				target = root.from # the Go To
+				target = root.from # Sets location marker
 				variable = {
 					type = name
 					localization = SYSTEM
@@ -262,6 +260,7 @@ country_event = {
 				}
 			}
 		}
+		# System has a new owner (non-homicidal, member of GalCom) who can take control of the Galactic Market
 		else = {
 			remove_modifier = galactic_market_founder
 			fromfrom = {
@@ -271,11 +270,12 @@ country_event = {
 				}
 				set_market_leader = yes
 			}
+			# Notification
 			create_message = {
 				type = MESSAGE_TYPE_LOST_MARKET_STATION
 				localization = MESSAGE_LOST_MARKET_STATION
 				days = 30
-				target = root.from # the Go To
+				target = root.from # Sets location marker
 				variable = {
 					type = name
 					localization = SYSTEM

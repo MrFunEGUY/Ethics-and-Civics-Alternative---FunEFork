@@ -1,0 +1,5 @@
+OR = {
+	value = auth_imperial
+	value = auth_dictatorial
+	value = auth_democratic_dictatorship
+}

@@ -10,14 +10,6 @@
 
 has_more_authorities_triggers = { always = yes }
 
-is_capitalist = {
-	OR = {
-		is_megacorp = yes
-		has_civic = civic_corporate_dominion
-		has_civic = civic_merchant_guilds
-	}
-}
-
 is_megacorp = {
 	OR = {
 		has_authority = auth_corporate

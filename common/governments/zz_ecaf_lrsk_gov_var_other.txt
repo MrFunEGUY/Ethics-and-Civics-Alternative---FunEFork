@@ -1,0 +1,36 @@
+# Government Variety Pack
+# Governments - Other
+# Author: littleraskol
+
+lrsk_gov_var_gov_colonial_viceroyalty_dem = {
+	ruler_title = LRSK_GOV_VAR_RT_COL_GOVERNOR
+
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	possible = {
+		GVP_TRIGGER = yes
+		OR = {
+			has_authority = auth_democratic
+			has_authority = auth_strict_democratic
+		}
+		has_origin = lrsk_gov_var_origin_colonial_venture
+	}
+
+	election_candidates = {
+		modifier = {
+			add = 100
+			leader_class = ruler
+		}
+		modifier = {
+			add = 10
+			leader_class = governor
+		}
+	}
+
+	leader_class = governor
+
+	weight = {
+		base = 110000
+	}
+}

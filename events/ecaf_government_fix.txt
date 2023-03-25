@@ -21,20 +21,16 @@ event = {
 			if = {
 				limit = {
 					is_fallen_empire = yes
-					NOR = {
-						has_ethic = ethic_gestalt_consciousness
-						has_ethic = ethic_focused
-					}
+					is_gestalt = no
+					NOT = { has_ethic = ethic_focused }
 				}
 				country_add_ethic = ethic_focused
 			}
 			if = {
 				limit = {
 					is_fallen_empire = yes
-					NOR = {
-						has_ethic = ethic_gestalt_consciousness
-						has_authority = auth_imperial
-					}
+					is_gestalt = no
+					NOT = { has_authority = auth_imperial }
 				}
 				change_government = {
 					authority = auth_imperial
@@ -46,7 +42,7 @@ event = {
 				limit = {
 					is_fallen_empire = yes
 					OR = {
-						has_ethic = ethic_gestalt_consciousness
+						is_gestalt = yes
 						has_authority = auth_machine_intelligence
 					}
 					has_ethic = ethic_focused

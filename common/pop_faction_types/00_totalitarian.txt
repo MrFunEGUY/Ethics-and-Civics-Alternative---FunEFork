@@ -1,31 +1,40 @@
 ##############################
 # Totalitarian Faction
 ##############################
+
 totalitarian = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_authoritarian
+
 	unique = yes
 	support_multiplier = 1
+
 	resources = {
 		category = pop_factions
 		produces = {
-			influence = 2
-		}
+            trigger = {
+                owner = {
+                	OR = {
+                		years_passed > 10
+                		AND = {
+                			days_passed > 30
+                			has_valid_civic = civic_parliamentary_system
+                		}
+                		AND = {
+                			days_passed > 350
+                			has_origin = origin_broken_shackles
+                		}
+                	}
+                }
+            }
+            unity = 0.5
+        }
 	}
+
 	is_potential = {
-		years_passed > 10
-		has_encountered_other_species = yes
-		NOR = {
-			has_ethic = ethic_gestalt_consciousness
-			has_country_flag = suppress_vanilla_factions
-		}
-		#count_owned_pop = {
-		#  count >= 5
-		#  limit = {
-		#    has_ethic = ethic_authoritarian
-		#  }
-		#}
+		is_faction_allowed = yes
 	}
+
 	parameters = {
 		empire = {
 			type = country
@@ -34,112 +43,167 @@ totalitarian = {
 			}
 		}
 	}
+
 	can_join_faction = {
 		is_enslaved = no
 		is_shackled_robot = no
 		is_being_purged = no
-		NOT = {
-			has_trait = trait_nerve_stapled
-		}
+		can_think = yes
 	}
+
 	attraction = {
 		base = 150
+
 		modifier = {
 			factor = 1.25
 			exists = from
 			from = {
 				exists = leader
-				leader = {
-					leader_class = ruler
-				}
+				leader = { leader_class = ruler }
 			}
 		}
+
 		modifier = {
 			factor = 0.75
 			exists = from
 			from = {
-				NOT = {
-					exists = leader
-				}
+				NOT = { exists = leader }
 			}
 		}
+
 		# Should really check for citizenship instead
 		modifier = {
 			factor = 0.25
-			NOT = {
-				is_same_species = owner_species
-			}
+			NOT = { is_same_species = owner_species }
 		}
-	}
-	leader = {
-		base = 100
+
 		modifier = {
 			factor = 0
+			planet = { has_modifier = planet_culture_shock }
+		}
+	}
+
+	leader = {
+		base = 100
+
+		modifier = {
+			factor = 0.0
 			is_event_leader = yes
 		}
 	}
-	demand = {
-		title = "FACTION_OUTRAGED_GC"
-		unfulfilled_title = "FACTION_OUTRAGED_GC"
-		desc = "FACTION_OUTRAGED_GC_DESC"
-		fulfilled_effect = -20
-		unfulfilled_effect = -0.001
-		potential = {
-			exists = owner
-			owner = {
-				has_country_flag = faction_authoritarian_outraged_gc
-			}
-		}
-		trigger = {
-			owner = {
-				has_country_flag = faction_authoritarian_outraged_gc
-			}
-		}
+
+	# DEMAND: Faction Outraged (by a GalCom Resolution)
+	inline_script = {
+		script = pop_faction_types/demand_faction_outraged
+		FLAG = galcom_resolution_passed_anti_totalitarian
 	}
+
+	# DEMAND: Faction Pleased (by a GalCom Resolution)
+	inline_script = {
+		script = pop_faction_types/demand_faction_pleased
+		FLAG = galcom_resolution_passed_pro_totalitarian
+	}
+
 	demand = {
 		title = "TOTALITARIAN_AUTOCRACY"
 		unfulfilled_title = "TOTALITARIAN_NO_AUTOCRACY"
 		desc = "TOTALITARIAN_AUTOCRACY_DESC"
+
 		fulfilled_effect = 10
 		unfulfilled_effect = -0.001
+
 		potential = {
 			exists = owner
-			owner = {
-				NOT = {
-					is_democracy = yes
-				}
-			}
+			owner = { is_democracy = no }
 		}
+
 		trigger = {
-			owner = {
-				NOT = {
-					is_autocracy = yes
-				}
-			}
+			owner = { is_imp_or_dict = yes }
 		}
 	}
+
 	demand = {
 		title = "TOTALITARIAN_DEMOCRACY"
 		unfulfilled_title = "TOTALITARIAN_NO_DEMOCRACY"
 		desc = "TOTALITARIAN_DEMOCRACY_DESC"
+
 		unfulfilled_effect = -25
 		fulfilled_effect = 0.001
+
 		potential = {
 			exists = owner
-			owner = {
-				NOT = {
-					is_autocracy = yes
-				}
-			}
+			owner = { is_imp_or_dict = no }
 		}
+
+		trigger = {
+			owner = { is_democracy = no }
+		}
+	}
+
+	demand = {
+		title = "TOTALITARIAN_STRATIFICATION"
+		unfulfilled_title = "TOTALITARIAN_NO_STRATIFICATION"
+		desc = "TOTALITARIAN_STRATIFICATION_DESC"
+
+		fulfilled_effect = 10
+		unfulfilled_effect = -20
+
+		potential = {
+			exists = owner
+		}
+
 		trigger = {
 			owner = {
-				NOT = {
-					is_democracy = yes
+				OR = {
+					NOT = {
+						any_owned_species = {
+							NOR = {
+								has_living_standard = { type = living_standard_stratified country = prev }
+								has_living_standard = { type = living_standard_academic_privilege country = prev }
+							}
+						}
+					}
+					any_owned_species = {
+						OR = {
+							has_citizenship_type = { type = citizenship_slavery country = prev }
+							has_citizenship_type = { type = citizenship_purge country = prev }
+							has_citizenship_type = { type = citizenship_robot_servitude country = prev }
+						}
+					}
+					has_civic = civic_slaver_guilds
 				}
 			}
 		}
 	}
+
+	demand = {
+		title = "TOTALITARIAN_ELITISM"
+		unfulfilled_title = "TOTALITARIAN_NO_ELITISM"
+		desc = "TOTALITARIAN_ELITISM_DESC"
+
+		fulfilled_effect = 5
+		unfulfilled_effect = -5
+
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_technology = tech_selected_lineages
+					has_technology = tech_capacity_boosters
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				OR = {
+					has_policy_flag = leader_enhancement_selected_lineages
+					has_policy_flag = leader_enhancement_capacity_boosters
+				}
+			}
+		}
+	}
+
 	demand = {
 		title = "TOTALITARIAN_PERSONALITY_CULT"
 		unfulfilled_title = "TOTALITARIAN_NO_PERSONALITY_CULT"
@@ -148,7 +212,7 @@ totalitarian = {
 		potential = {
 			exists = owner
 			owner = {
-				or = {
+				OR = {
 					has_valid_civic = civic_military_dictatorship
 					has_valid_civic = civic_imperial_cult
 					has_valid_civic = civic_philosopher_king
@@ -157,7 +221,7 @@ totalitarian = {
 		}
 		trigger = {
 			owner = {
-				or = {
+				OR = {
 					has_valid_civic = civic_military_dictatorship
 					has_valid_civic = civic_imperial_cult
 					has_valid_civic = civic_philosopher_king
@@ -172,16 +236,10 @@ totalitarian = {
 		fulfilled_effect = 5
 		potential = {
 			exists = owner
-			owner = {
-				or = {
-					has_valid_civic = civic_aristocratic_elite
-				}
-			}
+			owner = { has_valid_civic = civic_aristocratic_elite }
 		}
 		trigger = {
-			owner = {
-				has_valid_civic = civic_aristocratic_elite
-			}
+			owner = { has_valid_civic = civic_aristocratic_elite }
 		}
 	}
 	demand = {
@@ -191,16 +249,10 @@ totalitarian = {
 		fulfilled_effect = 5
 		potential = {
 			exists = owner
-			owner = {
-				or = {
-					has_valid_civic = civic_divine_order
-				}
-			}
+			owner = { has_valid_civic = civic_divine_order }
 		}
 		trigger = {
-			owner = {
-				has_valid_civic = civic_divine_order
-			}
+			owner = { has_valid_civic = civic_divine_order }
 		}
 	}
 	demand = {
@@ -211,7 +263,7 @@ totalitarian = {
 		potential = {
 			exists = owner
 			owner = {
-				or = {
+				OR = {
 					has_valid_civic = civic_slaver_guilds
 					has_valid_civic = civic_reeducated_labor
 				}
@@ -219,7 +271,7 @@ totalitarian = {
 		}
 		trigger = {
 			owner = {
-				or = {
+				OR = {
 					has_valid_civic = civic_slaver_guilds
 					has_valid_civic = civic_reeducated_labor
 				}
@@ -258,9 +310,7 @@ totalitarian = {
 			exists = owner
 		}
 		trigger = {
-			owner = {
-				has_policy_flag = gun_rights_limited
-			}
+			owner = { has_policy_flag = gun_rights_limited }
 		}
 	}
 	demand = {
@@ -270,18 +320,10 @@ totalitarian = {
 		unfulfilled_effect = -10
 		potential = {
 			exists = owner
-			owner = {
-				OR = {
-					has_policy_flag = free_media
-				}
-			}
+			owner = { has_policy_flag = free_media }
 		}
 		trigger = {
-			owner = {
-				NOT = {
-					has_policy_flag = free_media
-				}
-			}
+			owner = { has_policy_flag = free_media }
 		}
 	}
 	demand = {
@@ -292,61 +334,130 @@ totalitarian = {
 		unfulfilled_effect = -5
 		potential = {
 			exists = owner
-			owner = {
-				OR = {
-					has_technology = tech_centralized_state
-				}
-			}
+			owner = { has_technology = tech_centralized_state }
 		}
 		trigger = {
-			owner = {
-				OR = {
-					has_policy_flag = centralized_state
-				}
-			}
+			owner = { has_policy_flag = centralized_state }
 		}
 	}
+
 	demand = {
 		title = "TOTALITARIAN_EXTRANATIONAL_AUTHORITY"
 		unfulfilled_title = "TOTALITARIAN_NO_EXTRANATIONAL_AUTHORITY"
 		desc = "TOTALITARIAN_EXTRANATIONAL_AUTHORITY_DESC"
+
 		fulfilled_effect = 10
 		unfulfilled_effect = -0.001
+
 		potential = {
 			exists = owner
 			owner = {
 				num_communications > 2
 			}
 		}
+
 		trigger = {
 			owner = {
 				is_overlord = yes
 			}
 		}
 	}
+
 	demand = {
 		title = "TOTALITARIAN_UNDERLING"
 		unfulfilled_title = "TOTALITARIAN_NOT_UNDERLING"
 		desc = "TOTALITARIAN_UNDERLING_DESC"
+
 		unfulfilled_effect = -10
 		fulfilled_effect = 0.001
+
 		potential = {
 			exists = owner
 			owner = {
 				is_subject = yes
 			}
 		}
+
 		trigger = {
 			owner = {
-				is_subject = yes
+				is_subject = no
 			}
 		}
 	}
-	on_create = {
-		pop_faction_event = {
-			id = factions.1
+
+	demand = {
+		title = "TOTALITARIAN_BENEVOLENT_SUBJUGATION_POLICY"
+		unfulfilled_title = "TOTALITARIAN_NO_BENEVOLENT_SUBJUGATION_POLICY"
+		desc = "TOTALITARIAN_BENEVOLENT_SUBJUGATION_POLICY_DESC"
+
+		unfulfilled_effect = -10
+		fulfilled_effect = 0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				is_subject = no
+				has_policy_flag = benevolent_terms
+			}
+		}
+
+		trigger = {
+			owner = {
+				NOT = { has_policy_flag = benevolent_terms }
+			}
 		}
 	}
+
+	demand = {
+		title = "TOTALITARIAN_OPPRESSIVE_SUBJUGATION_POLICY"
+		unfulfilled_title = "TOTALITARIAN_ADOPT_OPPRESSIVE_SUBJUGATION_POLICY"
+		desc = "TOTALITARIAN_OPPRESSIVE_SUBJUGATION_POLICY_DESC"
+
+		fulfilled_effect = 10
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				is_subject = no
+				NOT = { has_policy_flag = benevolent_terms }
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_policy_flag = oppressive_terms
+			}
+		}
+	}
+
+	demand = {
+		title = TOTALITARIAN_FEDERATION
+		unfulfilled_title = TOTALITARIAN_FEDERATION_NOT_HEGEMONY
+		desc = TOTALITARIAN_FEDERATION_DESC
+
+		fulfilled_effect = 5
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner.federation
+			has_federations_dlc = yes
+		}
+
+		trigger = {
+			owner.federation = {
+				OR = {
+					has_federation_type = vf_ef_federation
+					has_federation_type = hegemony_federation
+				}
+			}
+		}
+	}
+
+	on_create = {
+		pop_faction_event = { id = factions.1 }
+	}
+
 	on_destroy = {
 		if = {
 			limit = {
@@ -361,62 +472,48 @@ totalitarian = {
 			remove_modifier = suppressed_authoritarian
 		}
 	}
+
 	actions = {
 		embrace_faction = {
 			title = "EMBRACE_FACTION"
 			description = "EMBRACE_FACTION_DESC"
+
 			cost = {
-				influence = 500
+				unity = 5000
 			}
+
 			potential = {
 				exists = owner
 				owner = {
 					OR = {
 						is_subject = no
-						NOT = {
-							is_subject_type = dominion
-						}
+						NOT = { any_agreement = { agreement_preset = preset_dominion } }
 					}
 				}
 			}
+
 			valid = {
 				custom_tooltip = {
 					fail_text = EMBRACE_FACTION_COOLDOWN
 					parameter:empire = {
-						NOT = {
-							has_modifier = embraced_faction_timer
-						}
+						NOT = { has_modifier = embraced_faction_timer }
 					}
 				}
-				support > 0.2
+				support > 0.20
 				parameter:empire = {
-					NOT = {
-						has_ethic = "ethic_fanatic_authoritarian"
-					}
+					NOT = { has_ethic = "ethic_fanatic_authoritarian" }
 				}
 			}
+
 			effect = {
-				add_modifier = {
-					modifier = embraced_faction
-					days = 3600
-				}
+				add_modifier = { modifier = embraced_faction days = 3600 }
 				parameter:empire = {
 					shift_ethic = ethic_authoritarian
 					hidden_effect = {
-						add_modifier = {
-							modifier = embraced_faction_timer
-							days = 3600
-						}
+						add_modifier = { modifier = embraced_faction_timer days = 3600 }
 						every_pop_faction = {
-							limit = {
-								NOT = {
-									is_same_value = root
-								}
-							}
-							add_modifier = {
-								modifier = embraced_another_faction
-								days = 3600
-							}
+							limit = { NOT = { is_same_value = root } }
+							add_modifier = { modifier = embraced_another_faction days = 3600 }
 						}
 					}
 				}
@@ -426,7 +523,7 @@ totalitarian = {
 						every_relation = {
 							limit = {
 								is_ai = no
-								is_country_type_with_subjects = yes
+								is_country_type = default
 								has_communications = prev
 								has_intel_level = {
 									who = prev
@@ -434,27 +531,24 @@ totalitarian = {
 									level >= 1
 								}
 							}
-							country_event = {
-								id = factions.2000
-							}
+							country_event = { id = factions.2000 }
 						}
 					}
 				}
 			}
+
 			ai_weight = {
 				base = 1
 				modifier = {
 					factor = 0
-					support < 0.5
+					support < 0.50
 					owner = {
 						has_ethic = ethic_authoritarian
 					}
 				}
 				modifier = {
 					factor = 0
-					owner = {
-						has_valid_civic = civic_fanatic_purifiers
-					}
+					owner = { has_valid_civic = civic_fanatic_purifiers }
 				}
 				modifier = {
 					factor = 0
@@ -480,6 +574,7 @@ totalitarian = {
 		promote_faction = {
 			title = "PROMOTE_FACTION"
 			description = "PROMOTE_FACTION_DESC"
+
 			potential = {
 				exists = owner
 				parameter:empire = {
@@ -489,14 +584,13 @@ totalitarian = {
 					}
 				}
 			}
+
 			effect = {
 				parameter:empire = {
-					add_modifier = {
-						modifier = promoted_authoritarian
-						days = -1
-					}
+					add_modifier = { modifier = promoted_authoritarian days = -1 }
 				}
 			}
+
 			ai_weight = {
 				base = 0
 			}
@@ -504,17 +598,20 @@ totalitarian = {
 		cancel_promote_faction = {
 			title = "CANCEL_PROMOTE_FACTION"
 			description = "CANCEL_PROMOTE_FACTION_DESC"
+
 			potential = {
 				exists = owner
 				parameter:empire = {
 					has_modifier = promoted_authoritarian
 				}
 			}
+
 			effect = {
 				parameter:empire = {
 					remove_modifier = promoted_authoritarian
 				}
 			}
+
 			ai_weight = {
 				base = 0
 			}
@@ -522,6 +619,7 @@ totalitarian = {
 		suppress_faction = {
 			title = "SUPPRESS_FACTION"
 			description = "SUPPRESS_FACTION_DESC"
+
 			potential = {
 				exists = owner
 				parameter:empire = {
@@ -531,18 +629,14 @@ totalitarian = {
 					}
 				}
 			}
+
 			effect = {
-				add_modifier = {
-					modifier = suppressed_faction
-					days = -1
-				}
+				add_modifier = { modifier = suppressed_faction days = -1 }
 				parameter:empire = {
-					add_modifier = {
-						modifier = suppressed_authoritarian
-						days = -1
-					}
+					add_modifier = { modifier = suppressed_authoritarian days = -1 }
 				}
 			}
+
 			ai_weight = {
 				base = 0
 			}
@@ -550,18 +644,21 @@ totalitarian = {
 		cancel_suppress_faction = {
 			title = "CANCEL_SUPPRESS_FACTION"
 			description = "CANCEL_SUPPRESS_FACTION_DESC"
+
 			potential = {
 				exists = owner
 				parameter:empire = {
 					has_modifier = suppressed_authoritarian
 				}
 			}
+
 			effect = {
 				remove_modifier = suppressed_faction
 				parameter:empire = {
 					remove_modifier = suppressed_authoritarian
 				}
 			}
+
 			ai_weight = {
 				base = 0
 			}

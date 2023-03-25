@@ -1,6 +1,2 @@
-
-# Venture Politics
-civic_bancorp = { playable = { always = no } potential = { always = no } }
-civic_science_syndicate = { playable = { always = no } potential = { always = no } }
-civic_maniac_monopoly = { playable = { always = no } potential = { always = no } }
+# Irony this is a placeholder file please ignore it
 

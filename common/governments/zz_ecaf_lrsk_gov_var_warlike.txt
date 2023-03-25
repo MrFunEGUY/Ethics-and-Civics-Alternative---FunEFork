@@ -1,0 +1,95 @@
+# Government Variety Pack
+# Governments - Warlike
+# Author: littleraskol
+
+# Cosmic Dominion (Dictatorship + US/IE)
+lrsk_gov_var_gov_galactic_dominion = {
+	ruler_title = LRSK_GOV_VAR_RT_COS_AUTARCH
+
+	possible = {
+		GVP_TRIGGER = yes
+		OR = {
+			has_authority = auth_dictatorial
+			has_authority = auth_democratic_dictatorship
+		}
+		has_valid_civic = lrsk_gov_var_civic_universal_sovereignty
+		has_valid_civic = lrsk_gov_var_civic_imperial_economy
+		is_militarist = yes
+	}
+
+	election_candidates = {
+		modifier = {
+			add = 100
+			OR = {
+				leader_class = admiral
+				leader_class = general
+			}
+		}
+		modifier = {
+			add = 10
+			OR = {
+				leader_class = governor
+			}
+		}
+		modifier = {
+			factor = 0
+			leader_class = scientist
+		}
+	}
+
+	weight = {
+		base = 1000
+	}
+}
+
+# Folkish Commonwealth (Dem + SD)
+lrsk_gov_var_gov_folkish_commonwealth = {
+	ruler_title = LRSK_GOV_VAR_RT_FOLKSPRESIDENT
+
+	possible = {
+		GVP_TRIGGER = yes
+		OR = {
+			has_authority = auth_democratic
+			has_authority = auth_strict_democratic
+			has_authority = auth_democratic_dictatorship
+		}
+		has_valid_civic = lrsk_gov_var_civic_supremacist_demagoguery
+		OR = {
+			is_xenophobe = yes
+			is_militarist = yes
+		}
+		NOR = {
+			has_valid_civic = civic_citizen_service
+			has_valid_civic = civic_fanatic_purifiers
+		}
+	}
+
+	election_candidates = {
+		modifier = {
+			add = 100
+			leader_class = ruler
+		}
+		modifier = {
+			add = 10
+			leader_class = governor
+		}
+		modifier = {
+			factor = 0
+			leader_class = scientist
+		}
+		modifier = {
+			add = 40
+			leader_class = admiral
+		}
+		modifier = {
+			add = 40
+			leader_class = general
+		}
+	}
+	
+	leader_class = admiral
+
+	weight = {
+		base = 1000
+	}
+}

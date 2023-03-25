@@ -1,0 +1,99 @@
+# Government Variety Pack
+# Governments - French Revolution Inspired
+# Author: littleraskol
+
+### FRENCH REVOLUTION NERD STUFF GOES HERE
+
+# Kingdom of the Sun
+lrsk_gov_var_gov_solar_monarchy = {
+	ruler_title = LRSK_GOV_VAR_RT_SOLAR_KING
+	ruler_title_female = LRSK_GOV_VAR_RT_SOLAR_QUEEN
+	heir_title = LRSK_GOV_VAR_HT_DAWN_PRINCE
+	heir_title_female = LRSK_GOV_VAR_HT_DAWN_PRINCESS
+
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	possible = {
+		GVP_TRIGGER = yes
+		has_authority = auth_imperial
+		has_valid_civic = lrsk_gov_var_civic_royal_absolutism
+		has_valid_civic = lrsk_gov_var_civic_universal_sovereignty
+		NOR = {
+			is_pacifist = yes
+			is_materialist = yes
+		}
+	}
+
+	weight = {
+		base = 1010
+	}
+}
+
+# Constitutional Monarchy (TBD: Remake with Dynastic authority, then respec to "Liberal Monarchy"?)
+lrsk_gov_var_gov_constitutional_monarchy = {
+	ruler_title = LRSK_GOV_VAR_RT_PEP_KING
+	ruler_title_female = LRSK_GOV_VAR_RT_PEP_QUEEN
+	heir_title = LRSK_GOV_VAR_HT_PEP_PRINCE
+	heir_title_female = LRSK_GOV_VAR_HT_PEP_PRINCESS
+
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	possible = {
+		GVP_TRIGGER = yes
+		has_authority = auth_imperial
+		has_valid_civic = lrsk_gov_var_civic_enlightened_liberalism
+		NOR = {
+			has_valid_civic = lrsk_gov_var_civic_royal_absolutism
+		}
+	}
+
+	weight = {
+		base = 1000
+	}
+}
+
+# Room to grow: Democratic version?
+
+# Republican Protectorate
+lrsk_gov_var_gov_republican_protectorate = {
+	ruler_title = LRSK_GOV_VAR_RT_FIRST_CONSUL
+
+	possible = {
+		GVP_TRIGGER = yes
+		OR = {
+			has_authority = auth_dictatorial
+			has_authority = auth_democratic_dictatorship
+		}
+		has_valid_civic = lrsk_gov_var_civic_enlightened_liberalism
+		OR = {
+			has_valid_civic = civic_nationalistic_zeal
+			has_valid_civic = lrsk_gov_var_civic_imperial_economy
+		}
+		is_militarist = yes
+	}
+
+	election_candidates = {
+		modifier = {
+			add = 100
+			leader_class = ruler
+		}
+		modifier = {
+			add = 50
+			leader_class = governor
+		}
+		modifier = {
+			add = 10
+			leader_class = admiral
+		}
+		modifier = {
+			add = 10
+			leader_class = general
+		}
+	}
+
+	weight = {
+		base = 1000
+	}
+}

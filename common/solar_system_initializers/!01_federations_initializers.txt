@@ -10,65 +10,57 @@
 # Scion Fallen Empire (if they were turned off in options)
 scion_fallen_1 = {
 	class = "rl_standard_stars"
-	flags = {
-		scion_fe_system
-	}
+	flags = { scion_fe_system }
 	asteroid_belt = {
 		type = rocky_asteroid_belt
 		radius = 50
 	}
+
 	planet = {
 		count = 1
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
-		size = {
-			min = 20
-			max = 30
-		}
+		size = { min = 20 max = 30 }
 		has_ring = no
 	}
+
 	change_orbit = 50
+
 	planet = {
-		count = {
-			min = 1
-			max = 3
-		}
+		count = { min = 1 max = 3 }
 		class = pc_asteroid
 		orbit_distance = 0
-		orbit_angle = {
-			min = 40
-			max = 100
-		}
+		orbit_angle = { min = 40 max = 100 }
 	}
+
 	planet = {
 		name = "NAME_Great_Nexus"
 		orbit_distance = 15
 		class = pc_city
-		orbit_angle = {
-			min = 90
-			max = 270
-		}
+		orbit_angle = { min = 90 max = 270 }
 		size = 20
 		deposit_blockers = none
 		modifiers = none
 		has_ring = no
+
 		change_orbit = @base_moon_distance
+
 		moon = {
-			count = {
-				min = 1
-				max = 1
-			}
+			count = { min = 1 max = 1 }
 			name = "NAME_Wanderer"
 			class = pc_barren
 			size = 8
-			orbit_angle = {
-				min = 90
-				max = 270
-			}
+			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 		}
+
 		init_effect = {
+			create_cluster = {
+				id = scion_fe1_cluster
+				radius = 120
+				center = this.solar_system
+			}
 			create_species = {
 				name = random
 				class = random_non_machine
@@ -95,6 +87,7 @@ scion_fallen_1 = {
 				origin = "origin_fallen_empire"
 				effect = {
 					set_country_flag = fallen_empire_1
+					set_graphical_culture = fallen_empire_02
 					save_event_target_as = scion_fe
 					add_resource = {
 						minerals = 10000
@@ -102,7 +95,7 @@ scion_fallen_1 = {
 						food = 1000
 						influence = 500
 					}
-					# Must initialize global designs here.
+					# must initialize global designs here
 					add_global_ship_design = "NAME_Enforcer"
 					add_global_ship_design = "NAME_Savant"
 					add_global_ship_design = "NAME_Scholar"
@@ -118,6 +111,7 @@ scion_fallen_1 = {
 			set_owner = event_target:scion_fe
 			set_controller = event_target:scion_fe
 			set_capital = yes
+
 			add_building = building_ancient_palace
 			add_building = building_fe_stronghold
 			add_building = building_fe_stronghold
@@ -165,34 +159,22 @@ scion_fallen_1 = {
 					who = event_target:scion_vassal
 					modifier = opinion_scion
 				}
-				country_event = {
-					id = origin.20
-					days = 9000
-					random = 9000
-				}
+				country_event = { id = origin.20 days = 9000 random = 9000 }
 				event_target:scion_vassal = {
 					establish_communications_no_message = event_target:scion_fe
 					set_subject_of = {
 						who = event_target:scion_fe
-						subject_type = scion
+						preset = preset_scion
 					}
 					add_opinion_modifier = {
 						who = event_target:scion_fe
 						modifier = opinion_scion
 					}
-					country_event = {
-						id = origin.10
-						days = 3
-					}
-					create_scion_wormhole_link = yes
+					country_event = { id = origin.10 days = 3 }
 				}
 			}
-			event_target:scion_fe = {
-				create_fe_servant_robots = yes
-			}
-			last_created_species = {
-				save_event_target_as = fe_servants
-			}
+			event_target:scion_fe = { create_fe_servant_robots = yes }
+			last_created_species = { save_event_target_as = fe_servants }
 			while = {
 				count = 94
 				create_pop = {
@@ -211,70 +193,58 @@ scion_fallen_1 = {
 			}
 		}
 	}
+
+
 	planet = {
-		count = {
-			min = 1
-			max = 1
-		}
+		count = { min = 1 max = 1 }
 		orbit_distance = 25
 		class = pc_gas_giant
-		orbit_angle = {
-			min = 90
-			max = 270
-		}
+		orbit_angle = { min = 90 max = 270 }
+
 		change_orbit = @base_moon_distance
+
 		moon = {
-			count = {
-				min = 1
-				max = 3
-			}
+			count = { min = 1 max = 3 }
 			class = random_non_colonizable
-			orbit_angle = {
-				min = 90
-				max = 270
-			}
+			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 10
 		}
 	}
+
+
 	planet = {
-		count = {
-			min = 1
-			max = 1
-		}
+		count = { min = 1 max = 1 }
 		orbit_distance = 35
 		class = pc_gas_giant
-		orbit_angle = {
-			min = 90
-			max = 270
-		}
+		orbit_angle = { min = 90 max = 270 }
+
 		change_orbit = @base_moon_distance
+
 		moon = {
-			count = {
-				min = 0
-				max = 2
-			}
+			count = { min = 0 max = 2 }
 			class = random_non_colonizable
-			orbit_angle = {
-				min = 90
-				max = 270
-			}
+			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 10
 		}
 	}
+
 	init_effect = {
 		create_starbase = {
 			size = "starbase_citadel"
 			owner = event_target:scion_fe
+
 			module = "shipyard"
 			module = "shipyard"
 			module = "shipyard"
 			module = "hangar_bay"
 			module = "gun_battery"
 			module = "gun_battery"
+
 			building = "target_uplink_computer"
 			building = "defense_grid"
 			building = "colossus_yards"
 			building = "titan_yards"
+
 			effect = {
 				while = {
 					count = 10
@@ -287,74 +257,61 @@ scion_fallen_1 = {
 
 scion_fallen_2 = {
 	class = "rl_standard_stars"
-	flags = {
-		scion_fe_system
-	}
+	flags = { scion_fe_system }
 	asteroid_belt = {
 		type = rocky_asteroid_belt
 		radius = 50
 	}
+
 	planet = {
 		count = 1
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
-		size = {
-			min = 20
-			max = 30
-		}
+		size = { min = 20 max = 30 }
 		has_ring = no
 	}
+
 	change_orbit = 50
+
 	planet = {
-		count = {
-			min = 1
-			max = 3
-		}
+		count = { min = 1 max = 3 }
 		class = pc_asteroid
 		orbit_distance = 0
-		orbit_angle = {
-			min = 40
-			max = 100
-		}
+		orbit_angle = { min = 40 max = 100 }
 	}
+
 	planet = {
-		count = {
-			min = 0
-			max = 2
-		}
+		count = { min = 0 max = 2 }
 		orbit_distance = 20
 		class = random_non_colonizable
-		orbit_angle = {
-			min = 90
-			max = 270
-		}
+		orbit_angle = { min = 90 max = 270 }
+
 		change_orbit = @base_moon_distance
+
 		moon = {
-			count = {
-				min = 0
-				max = 1
-			}
+			count = { min = 0 max = 1 }
 			class = random_non_colonizable
-			orbit_angle = {
-				min = 90
-				max = 270
-			}
+			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 		}
 	}
+
 	planet = {
 		name = "NAME_Celestial_Throne"
 		orbit_distance = 20
 		class = pc_gaia
-		orbit_angle = {
-			min = 90
-			max = 270
-		}
+		orbit_angle = { min = 90 max = 270 }
 		size = 30
 		deposit_blockers = none
 		modifiers = none
+
 		init_effect = {
+			create_cluster = {
+				id = scion_fe2_cluster
+				radius = 140
+				center = this.solar_system
+			}
 			create_species = {
 				name = random
 				class = random_non_machine
@@ -381,6 +338,7 @@ scion_fallen_2 = {
 				origin = "origin_fallen_empire"
 				effect = {
 					set_country_flag = fallen_empire_2
+					set_graphical_culture = fallen_empire_01
 					save_event_target_as = scion_fe
 					add_resource = {
 						minerals = 10000
@@ -388,7 +346,7 @@ scion_fallen_2 = {
 						food = 1000
 						influence = 500
 					}
-					# Must initialize global designs here.
+					# must initialize global designs here
 					add_global_ship_design = "NAME_Cleanser"
 					add_global_ship_design = "NAME_Eternal"
 					add_global_ship_design = "NAME_Avatar"
@@ -399,11 +357,14 @@ scion_fallen_2 = {
 					add_global_ship_design = "NAME_FE_Starbase"
 				}
 			}
+
+
 			set_planet_flag = fallen_empire_world
 			prevent_anomaly = yes
 			set_owner = event_target:scion_fe
 			set_controller = event_target:scion_fe
 			set_capital = yes
+
 			add_building = building_ancient_palace
 			add_building = building_fe_dome
 			add_building = building_fe_dome
@@ -459,60 +420,50 @@ scion_fallen_2 = {
 					who = event_target:scion_vassal
 					modifier = opinion_scion
 				}
-				country_event = {
-					id = origin.20
-					days = 9000
-					random = 9000
-				}
+				country_event = { id = origin.20 days = 9000 random = 9000 }
 			}
 			event_target:scion_vassal = {
 				establish_communications_no_message = event_target:scion_fe
 				set_subject_of = {
 					who = event_target:scion_fe
-					subject_type = scion
+					preset = preset_scion
 				}
 				add_opinion_modifier = {
 					who = event_target:scion_fe
 					modifier = opinion_scion
 				}
-				country_event = {
-					id = origin.10
-					days = 3
-				}
-				create_scion_wormhole_link = yes
+				country_event = { id = origin.10 days = 3 }
 			}
 		}
+
 		change_orbit = @base_moon_distance
+
 		moon = {
 			name = "NAME_The_Mistake"
 			class = "pc_broken"
-			orbit_angle = {
-				min = 90
-				max = 270
-			}
+			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 			modifiers = none
-			init_effect = {
-				prevent_anomaly = yes
-			}
+
+			init_effect = { prevent_anomaly = yes }
 		}
 	}
+
 	planet = {
 		name = "NAME_Sky_Temple"
 		orbit_distance = 30
 		class = pc_gaia
-		orbit_angle = {
-			min = 90
-			max = 270
-		}
+		orbit_angle = { min = 90 max = 270 }
 		size = 22
 		deposit_blockers = none
 		modifiers = none
+
 		init_effect = {
 			set_planet_flag = fallen_empire_world
 			prevent_anomaly = yes
 			set_owner = event_target:scion_fe
 			set_controller = event_target:scion_fe
+
 			add_building = building_ancient_palace
 			add_building = building_empyrean_shrine
 			add_building = building_fe_dome
@@ -545,70 +496,56 @@ scion_fallen_2 = {
 			}
 		}
 	}
+
 	planet = {
-		count = {
-			min = 2
-			max = 4
-		}
+		count = { min = 2 max = 4 }
 		orbit_distance = 20
 		class = random_non_colonizable
-		orbit_angle = {
-			min = 90
-			max = 270
-		}
+		orbit_angle = { min = 90 max = 270 }
+
 		change_orbit = @base_moon_distance
+
 		moon = {
-			count = {
-				min = 0
-				max = 1
-			}
+			count = { min = 0 max = 1 }
 			class = random_non_colonizable
-			orbit_angle = {
-				min = 90
-				max = 270
-			}
+			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 		}
 	}
+
 	planet = {
-		count = {
-			min = 1
-			max = 2
-		}
+		count = { min = 1 max = 2 }
 		orbit_distance = 20
 		class = pc_gas_giant
-		orbit_angle = {
-			min = 90
-			max = 270
-		}
+		orbit_angle = { min = 90 max = 270 }
+
 		change_orbit = @base_moon_distance
+
 		moon = {
-			count = {
-				min = 0
-				max = 3
-			}
+			count = { min = 0 max = 3 }
 			class = random_non_colonizable
-			orbit_angle = {
-				min = 90
-				max = 270
-			}
+			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 		}
 	}
+
 	init_effect = {
 		create_starbase = {
 			size = "starbase_citadel"
 			owner = event_target:scion_fe
+
 			module = "shipyard"
 			module = "shipyard"
 			module = "shipyard"
 			module = "hangar_bay"
 			module = "gun_battery"
 			module = "gun_battery"
+
 			building = "target_uplink_computer"
 			building = "defense_grid"
 			building = "colossus_yards"
 			building = "titan_yards"
+
 			effect = {
 				while = {
 					count = 10

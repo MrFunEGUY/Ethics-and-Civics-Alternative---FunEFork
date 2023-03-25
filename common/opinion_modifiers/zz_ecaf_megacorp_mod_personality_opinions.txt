@@ -1,0 +1,43 @@
+##########################################################################
+# HARD FIXED STATE - DO NOT REMOVE OR RENAME ANY OF THESE
+##########################################################################
+opinion_maniac_monopoly = {
+	trigger = {
+		VENTURE_POLITICS_TRIGGER = yes
+		is_megacorp = yes
+		#NOT = { has_valid_civic = civic_criminal_heritage }
+		FROM = { has_valid_civic = civic_maniac_monopoly }
+	}
+	
+	opinion = {
+		base = -1000	
+	}
+}
+
+opinion_maniac_monopoly_vs_megacorp = {
+	trigger = {
+		VENTURE_POLITICS_TRIGGER = yes
+		is_megacorp = yes
+		has_valid_civic = civic_maniac_monopoly
+		FROM = {
+			is_megacorp = yes
+			#NOT = { has_valid_civic = civic_criminal_heritage }
+		}
+	}
+	
+	opinion = {
+		base = -1000	
+	}
+}
+
+opinion_maniac_monopoly_noncorp = {
+	trigger = {
+		VENTURE_POLITICS_TRIGGER = yes
+		is_megacorp = no
+		FROM = { has_valid_civic = civic_maniac_monopoly }
+	}
+	
+	opinion = {
+		base = -10	
+	}
+}

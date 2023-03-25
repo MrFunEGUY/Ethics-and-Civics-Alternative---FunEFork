@@ -1,0 +1,36 @@
+# Government Variety Pack
+# Governments - Based on the ideas of Steam user Garlic Pudding, posted here: https://steamcommunity.com/workshop/filedetails/discussion/901988941/1318835718938058107/
+# Author: littleraskol
+
+# Merchant Principality (Dic/Imp, PK & MG)
+lrsk_gov_var_gov_merchant_principality_d = {
+	ruler_title = LRSK_GOV_VAR_RT_MERCHANT_PRINCE
+	ruler_title_female = LRSK_GOV_VAR_RT_MERCHANT_PRINCESS
+
+	#should_force_rename = yes
+
+	election_candidates = {
+		modifier = {
+			add = 50
+			leader_class = governor
+		}
+		modifier = {
+			add = 10
+			leader_class = scientist
+		}
+	}
+
+	possible = {
+		GVP_TRIGGER = yes
+		OR = {
+			has_authority = auth_dictatorial
+			has_authority = auth_democratic_dictatorship
+		}
+		has_valid_civic = civic_philosopher_king
+		has_valid_civic = civic_merchant_guilds
+	}
+
+	weight = {
+		base = 1800
+	}
+}

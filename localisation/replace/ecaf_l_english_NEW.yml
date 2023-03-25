@@ -7,3 +7,8 @@ civic_tooltip_oli_dict:0 "Has a §YDictatorial§! or §YOligarchic§! Authority"
 civic_tooltip_dem_oli_NEW:0 "Has a §YDemocratic§! or §YOligarchic§! Authority"
 civic_tooltip_dic_imp_NEW:0 "Has a §YDictatorial§! or §YImperial§! Authority"
 civic_tooltip_dic_imp_oli:0 "Has a §YDictatorial§!, §YImperial§!, or §YOligarchic§! Authority"
+
+# Compat
+auth_corporate_fiefdom: "Corporate Fiefdom"
+auth_bugged_corporate_imperial:0 "Dynastic Enterprise"
+auth_tec_patrocorporate:0 "Patrimonial Corporate"

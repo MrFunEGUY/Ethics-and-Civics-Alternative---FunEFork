@@ -1,0 +1,169 @@
+# Government Variety Pack
+# Governments - Capitalistic
+# Author: littleraskol
+
+#pacifism for next two
+# Libertarian Freehold (Democracy + Mer/CoI)
+lrsk_gov_var_gov_libertarian_freehold = {
+	ruler_title = LRSK_GOV_VAR_RT_CHIEF_JUSTICE
+
+	possible = {
+		GVP_TRIGGER = yes
+		OR = {
+			has_authority = auth_democratic
+			has_authority = auth_strict_democratic
+			has_authority = auth_democratic_dictatorship
+		}
+		has_valid_civic = civic_meritocracy
+		has_valid_civic = lrsk_gov_var_civic_enlightened_liberalism
+		is_militarist = no
+		is_capitalist = yes
+	}
+
+	election_candidates = {
+		modifier = {
+			add = 100
+			leader_class = ruler
+		}
+		modifier = {
+			add = 10
+			leader_class = governor
+		}
+	}
+	
+	leader_class = governor
+
+	weight = {
+		base = 1000
+	}
+}
+
+# Anarcho-Capitalism (Oligarchy + Mer/CoI)
+lrsk_gov_var_gov_anarcho_capitalism = {
+	ruler_title = LRSK_GOV_VAR_RT_CHIEF_INSPECTOR
+
+	possible = {
+		has_authority = auth_oligarchic
+		has_valid_civic = civic_meritocracy
+		has_valid_civic = lrsk_gov_var_civic_enlightened_liberalism
+		is_militarist = no
+		is_capitalist = yes
+	}
+
+
+	election_candidates = {
+		modifier = {
+			add = 100
+			leader_class = ruler
+		}
+		modifier = {
+			add = 10
+			leader_class = governor
+		}
+	}
+	
+	leader_class = governor
+
+	weight = {
+		base = 1000
+	}
+}
+
+# Enterprise Society
+lrsk_gov_var_gov_enterprise_society = {
+	ruler_title = LRSK_GOV_VAR_RT_FRANCHISE_MINISTER
+
+	possible = {
+		GVP_TRIGGER = yes
+		OR = {
+			has_authority = auth_democratic
+			has_authority = auth_strict_democratic
+			has_authority = auth_democratic_dictatorship
+		}
+		has_valid_civic = civic_police_state
+		has_valid_civic = lrsk_gov_var_civic_enlightened_liberalism
+	}
+
+	election_candidates = {
+		modifier = {
+			add = 100
+			leader_class = ruler
+		}
+		modifier = {
+			add = 10
+			leader_class = governor
+		}
+	}
+
+	leader_class = governor
+
+	weight = {
+		base = 1000
+	}
+}
+
+# Enterprise Authority
+lrsk_gov_var_gov_enterprise_authority = {
+	ruler_title = LRSK_GOV_VAR_RT_EXEC_MARSHAL
+
+	possible = {
+		GVP_TRIGGER = yes
+		OR = {
+			has_authority = auth_dictatorial
+			has_authority = auth_democratic_dictatorship
+		}
+		has_valid_civic = lrsk_gov_var_civic_enlightened_liberalism
+		has_valid_civic = civic_police_state
+	}
+
+	election_candidates = {
+		modifier = {
+			add = 100
+			leader_class = ruler
+		}
+		modifier = {
+			add = 10
+			leader_class = governor
+		}
+		modifier = {
+			add = 10
+			leader_class = admiral
+		}
+		modifier = {
+			add = 10
+			leader_class = general
+		}
+	}
+
+	weight = {
+		base = 2000
+	}
+}
+
+# Entrepreneurial Council (Mer/AE)
+lrsk_gov_var_gov_entrepreneurial_council = {
+	ruler_title = LRSK_GOV_VAR_RT_ENTERPRISE_COM
+
+	possible = {
+		has_valid_civic = civic_meritocracy
+		has_valid_civic = civic_aristocratic_elite
+		is_socialist = no
+	}
+
+	election_candidates = {
+		modifier = {
+			add = 100
+			leader_class = ruler
+		}
+		modifier = {
+			add = 10
+			leader_class = governor
+		}
+	}
+	
+	leader_class = governor
+
+	weight = {
+		base = 1000
+	}
+}
