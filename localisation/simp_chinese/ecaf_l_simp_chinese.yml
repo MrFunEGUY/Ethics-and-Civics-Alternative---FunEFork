@@ -1,4 +1,13 @@
-﻿l_simp_chinese:
+﻿# l_english:
+# l_spanish:
+# l_german:
+# l_french:
+# l_polish:
+# l_russian:
+# l_braz_por:
+l_simp_chinese:
+# l_japanese:
+# l_korean:
 
  INSULT_PROPOSE_COL_IND: "[Root.GetName]到底是一个真正的国家，抑或只是一群成天叫嚷着无政府主义的乌合之众？请原谅，但是你们的政治制度，实在是让人不忍直视。"
  02_INSULT_PROPOSE_COL_IND: "那么今天又是谁在统治你那可笑的弹丸之地呢？ 真是个古怪的国家，居然'投票'来选掌权者！毫无疑问，你们这么做是自取灭亡。"
@@ -1632,21 +1641,21 @@
  civic_consumerism: "奢侈消费主义"
  civic_consumerism_desc: "该社会保持着鼓励购买日益增长的商品、服务的社会与经济意识形态。\n\n§Y职员§!岗位提供额外的§Y0.25§! £trade_value£和§Y0.5§! £amenities£ \n\n§Y商业区§!，§Y超级商业复合区§!建筑和§Y城市区划§!提供额外的£job_clerk£ §Y职员§!岗位\n\n§Y企业家§!派系会因§Y加强环境监管§政策不悦，对§Y消费者利益§!贸易政策感到愉悦。"
  civic_military_dictatorship: "战争领主"
- civic_military_dictatorship_desc: "该社会中的统治者传统上是军队的现役总司令。\n\n£building£ §Y首都建筑§!将一些£job_politician£ §Y$job_politician$§!岗位替换为£job_commandante£ §Y$job_commandante_plural$§!，提高帝国的§Y海军容量§!，产生§Y防御部队§!，提高星球§Y稳定度§!，并降低§Y轨道轰炸§!伤害。"
+ civic_military_dictatorship_desc: "该社会中的统治者传统上是军队的现役总司令。"
  civic_military_junta: "战争委员会"
- civic_military_junta_desc: "该政府是由最有权势的战争指挥官组成的联盟。\n\n£building£ §Y首都建筑§!将一些£job_politician£ §Y$job_politician$§!岗位替换为£job_commandante£ §Y$job_commandante_plural$§!，提高帝国的§Y海军容量§!，产生§Y防御部队§!，提高星球§Y稳定度§!，并降低§Y轨道轰炸§!伤害。\n\n禁止设置§Y生产重点§!政策为§Y民用§!。"
+ civic_military_junta_desc: "该政府是由最有权势的战争指挥官组成的联盟。\n\n禁止设置§Y生产重点§!政策为§Y民用§!。"
  civic_peaceful_republic: "民主乌托邦"
- civic_peaceful_republic_desc: "和平主义形式的共和国，在那里公民被国家的理念统一，为每个人的自由，和平和繁荣的生活。\n\n£building£ §Y首都建筑§!将一些£job_politician£ §Y$job_politician$§!岗位替换为£job_supervisor£ §Y$job_supervisor_plural$§!，产出£society£ §Y社会学研究§!，提高£mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!，并且大幅地$mod_planet_jobs_unity_produces_mult$和§Y贸易值§! \n\n禁止设置§Y生产重点§!政策为§Y军事§!。"
+ civic_peaceful_republic_desc: "和平主义形式的共和国，在那里公民被国家的理念统一，为每个人的自由，和平和繁荣的生活。"
  civic_cyber_demos_cratos: "网络民主"
- civic_cyber_demos_cratos_desc: "将信息技术和大众传播的高科技成果融合到民主治理中，创造出最高效的官僚体制。但是这种技术依赖可能会导致偶尔爆发网络犯罪。 \n\n£building£ §Y首都建筑§!将一些£job_politician£ §Y$job_politician$§!岗位替换为£job_head_researcher£ §Y$job_head_researcher_plural$§!\n§Y$job_researcher_plural$§!同时产出 §Y1§! £unity£凝聚力"
+ civic_cyber_demos_cratos_desc: "将信息技术和大众传播的高科技成果融合到民主治理中，创造出最高效的官僚体制。但是这种技术依赖可能会导致偶尔爆发网络犯罪。"
  civic_divine_council: "神圣理事会"
- civic_divine_council_desc: "政府又帝国最具影响力的宗教领袖组成的委员会监管。 \n\n£building£ §Y首都建筑§!将一些£job_politician£ §Y$job_politician$§!岗位替换为£job_high_priest §Y$job_high_priest_plural$§!，§Y神圣中枢§!和§Y信念堡垒§!建筑提供额外的§YHigh Priest§!岗位。\n£job_priest£ §Y$job_priest_plural$§!产出§Y1§!额外£unity£凝聚力"
+ civic_divine_council_desc: "政府又帝国最具影响力的宗教领袖组成的委员会监管。\n£job_priest£ §Y$job_priest_plural$§!产出§Y1§!额外£unity£凝聚力"
  civic_science_directorate: "科学理事会"
- civic_science_directorate_desc: "政府受一个由最受尊敬也最负盛名的帝国科学家组成的委员会强烈影响。\n\n£building£ §Y首都建筑§!将一些£job_politician£ §Y$job_politician$§!岗位替换为£job_head_researcher£ §Y$job_head_researcher_plural$§!\n§Y$job_researcher_plural$§!同时产出§Y1§! £unity£凝聚力"
+ civic_science_directorate_desc: "政府受一个由最受尊敬也最负盛名的帝国科学家组成的委员会强烈影响。\n§Y$job_researcher_plural$§!同时产出§Y1§! £unity£凝聚力"
  civic_executive_committee: "执行委员会"
- civic_executive_committee_desc: "帝国的国家机器由统治阶级中最聪明、最尊贵的代表组成的委员会监督，其管理效率令人瞩目。 \n\n£building£ §Y首都建筑§!将一些£job_politician£ §Y$job_politician$§!岗位替换为£job_supervisor£ §Y$job_supervisor_plural$§!，产出£society£ §YSociety Research§!，提高£mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!，并且大幅地$mod_planet_jobs_unity_produces_mult$和§Y贸易值§!"
+ civic_executive_committee_desc: "帝国的国家机器由统治阶级中最聪明、最尊贵的代表组成的委员会监督，其管理效率令人瞩目。"
  civic_cyber_dictatorship: "网络专制"
- civic_cyber_dictatorship_desc: "技术独裁形式的政府，国家严重依赖超级计算机来处理安全和管理事务，但由于大量权力交由人工智能，普通人对政务的影响力甚小。 \n\n£building£ §Y首都建筑§!将一些£job_politician£ §Y$job_politician$§!岗位替换为£job_head_researcher£ §Y$job_head_researcher_plural$§!\n§Y$job_researcher_plural$§!同时产出§Y1§! £unity£凝聚力 \n\n开始时拥有 §Y人工智能管理§! 科技。"
+ civic_cyber_dictatorship_desc: "政府代表了一种技术官僚独裁的形式，国家严重依赖超级计算机来处理安全和行政事务。但由于如此多的权力被外包给了人工智能，普通人对治理过程的影响就更小了。\n\n从行政AI技术开始。"
  civic_centralized_state: "中央集权"
  civic_centralized_state_desc: " "
  civic_welfare_state: "福利国家"
@@ -1656,7 +1665,7 @@
  civic_exalted_priesthood: "神权政治"
  civic_exalted_priesthood_desc: "为防止社会出现异端邪说，宗教领袖会预先占据行政职位。\n\n开始时拥有§Y全息投影§!科技。\n§Y神圣中枢§!建筑和§Y信念堡垒§!提供额外的§Y大祭司§!岗位。 \n结合§Y机械崇拜§!国民理念，§Y大祭司§!额外大幅提高星球的§Y机器人产出§!和§Y工程学研究§!，且§Y科技牧师§!产出额外§Y凝聚力§!和§Y工程学研究§!。"
  civic_citizen_service: "军阀共和国"
- civic_citizen_service_desc: "仅限为军队服役的人才拥有完整的公民权和随之而来的政治责任。服役保证公民权和选举、从政的权利。 \n\n£building£ §Y首都建筑§!将一些£job_politician£ §Y$job_politician$§!岗位替换为£job_commandante£ §Y$job_commandante_plural$§!，提高帝国的§Y海军容量§!，生成§Y防御部队§!，提高星球的§Y稳定度§!并降低§Y轨道轰炸§!伤害  \n\n£job_commandante£ §Y$job_commandante_plural$§!提供额外的 £unity£ §Y凝聚力§!和£amenities£ §Y舒适度§! \n\n允许颁布特殊国家法令：§Y爱国号令§!"
+ civic_citizen_service_desc: "仅限为军队服役的人才拥有完整的公民权和随之而来的政治责任。服役保证公民权和选举、从政的权利。\n\n允许进行特殊的国家敕令： §Y爱国呼声§!"
  civic_idealistic_foundation: "无政府理想"
  civic_idealistic_foundation_desc: "该社会建立在自由与平等的理想主义基础之上，其特征是中央政府权力的削弱。 \n§Y进步§!和§Y工党§!派系要求§Y直接民主§!。"
  civic_hierarchy: "阶级固化"
@@ -1941,7 +1950,7 @@
  tech_budget_incentives: "治理：预算激励"
  tech_budget_incentives_desc: "允许使用§Y预算重点§!政策。"
  civic_agrarian_idyll_desc: "简单的生活往往饱含深意。这个农业社会在很大程度上避免了大规模的城市化。 \n§Y发电§!、§Y采矿§!和§Y农业区划§!额外提供§G1§! £housing£ §Y住房§!\n§Y城市区划§!减少§R1§! £housing£ §Y住房§!\n£job_farmer£ §Y$job_farmer_plural$§!同时产出§G2§! £amenities£ §Y舒适度§!"
- civic_aristocratic_elite_desc: "该社会中种根深蒂固的贵族阶级占据着社会上层。 \n£building£ §Y首都建筑§!将一些£job_politician£ §Y$job_politician$§!岗位替换为£job_noble£ §Y$job_noble_plural$§!\n可以建造 £building£ §Y$building_noble_estates$§!建筑，提供额外£job_noble£ §Y$job_noble$§!岗位"
+ civic_aristocratic_elite_desc: "该社会中种根深蒂固的贵族阶级占据着社会上层。\n可以建造 £building£ §Y$building_noble_estates$§!建筑，提供额外£job_noble£ §Y$job_noble$§!岗位"
  policy_industrial: "环境监管"
  policy_industrial_desc: " "
  mixed_industrial: "适中"
@@ -1979,7 +1988,7 @@
  civic_naval_traditions: "海军传统"
  civic_naval_traditions_desc: "这个社会有着根植于心的荣耀舰队传统。"
  civic_spiritual_democracy: "神圣共和国"
- civic_spiritual_democracy_desc: "公民被基于强烈的道德价值观和伦理要求的宗教传统所束缚的共和国。\n\n£building£ §Y首都建筑§!将一些£job_politician£ §Y$job_politician$§!岗位替换为£job_high_priest §Y$job_high_priest_plural$§!，§Y神圣中枢§!和§Y信念堡垒§!建筑 提供额外§Y大祭司§!岗位。\n£job_priest£ §Y$job_priest_plural$§!产出§Y1§!额外 £unity£ 凝聚力 \n\n禁止§Y奴役§!本种族人。不允许§Y毒品§!和§Y人口控制§!。\n\n£job_high_priest£ §Y$job_high_priest_plural$§!提供额外£society£ §Y社会学研究§!和£amenities£ §Y舒适度§!"
+ civic_spiritual_democracy_desc: "公民被基于强烈的道德价值观和伦理要求的宗教传统所束缚的共和国。\n£job_priest£ §Y$job_priest_plural$§!产出§Y1§!额外 £unity£ 凝聚力 \n\n禁止§Y奴役§!本种族人。不允许§Y毒品§!和§Y人口控制§!。\n\n£job_high_priest£ §Y$job_high_priest_plural$§!提供额外£society£ §Y社会学研究§!和£amenities£ §Y舒适度§!"
  edict_patriotic_call: "爱国号令"
  edict_patriotic_call_desc: "武装起来！值此黑暗时刻，祖国需要你们！"
  glorious_fleet: "荣耀胜利！"
@@ -1998,9 +2007,9 @@
  mod_job_supervisor_per_pop: "每$VALUE$口 §G+1§! $job_supervisor$"
  mod_job_supervisor_per_pop_short: "\n每$VALUE$ £pop£ §G+1§! £mod_job_supervisor_add£"
  civic_stratocracy: "秩序军政"
- civic_stratocracy_desc: "在军事专政中，国家和军队在本质上和宪法上是相同的。行政职位通常由现役或光荣退役的军事首长担任。 \n£建筑§Y首都建筑§!将一些£job_politician£ §Y$job_politician$§!岗位替换为£job_commandante£ §Y$job_commander_plural$§!，增加帝国的§Y海军容量§!，生成§Y防御部队§!，增加行星§Y稳定度§!，减少§Y轨道轰炸§!伤害。"
+ civic_stratocracy_desc: "在军事专政中，国家和军队在本质上和宪法上是相同的。行政职位通常由现役或光荣退役的军事首长担任。"
  civic_bureaucracy: "开明官僚主义"
- civic_bureaucracy_desc: "在该社会中，政府传统上由哲学家和思想家领导，这些人被认为是理想的统治者，通常兼具智慧、可靠和对和平繁荣生活的意愿。\n\n£building£ §Y首都建筑§!将一些£job_politician£ §Y$job_politician$§!岗位替换为£job_supervisor£ §Y$job_supervisor_plural$§!，产出 £society£ §Y社会学研究§!，提高£mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!，并大幅增加$mod_planet_jobs_unity_produces_mult$和§Y贸易值§!。"
+ civic_bureaucracy_desc: "在该社会中，政府传统上由哲学家和思想家领导，这些人被认为是理想的统治者，通常兼具智慧、可靠和对和平繁荣生活的意愿。"
  ethic_elitist: "精英主义"
  ethic_elitist_desc: "在伟大的文明之舞中，我们必须接受每个人各司其职的事实。对许多人来说，辛苦劳作是我们社会的基石，这样其他人才有机会将其才能用于社会公益事业。勿要使他人误以为我们的特权是休闲，我们和我们的仆人一样都是保管者，我们的任务同样卑微和重要。"
  ethic_fanatic_elitist: "极端精英主义"
@@ -2130,7 +2139,7 @@
  gov_anarch_capitalism: "无政府资本主义"
  gov_anarch_capitalism_desc: "一种社会形态，国家机构的规模和权威被削减到最低限度，自由市场提供所有公共产品和服务，包括法律和秩序。"
  civic_philosopher_king: "圣人王"
- civic_philosopher_king_desc: "仅仅统治是不够的。国家的航船必须由一个拥有足够智慧和知识的国王来掌舵。 \n\n£building£ §Y首都建筑§!将一些£job_politician£ §Y$job_politician$§!岗位替换为£job_supervisor£ §Y$job_supervisor_plural$§!，产出£society£ §Y社会学研究§!，增加£mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!，并大幅增加$mod_planet_jobs_unity_produces_mult$和§Y贸易额§!"
+ civic_philosopher_king_desc: "仅仅统治是不够的。国家的航船必须由一个拥有足够智慧和知识的国王来掌舵。"
  gov_minarchy: "君主制"
  gov_minarchy_desc: "这是一种最低限度的'守夜人'国家，不负责公民的教育、保健、就业或交通，也不使用其领土内的任何自然资源。所有这些都是私下或公开进行的，但绝不受国家、其法律或其任何代表的干涉。"
  XENOIST_UNIVERSALISM: "银河普遍主义"
@@ -2173,7 +2182,7 @@
  trait_ruler_immortal_desc: "§L这个人受了神永恒王权的祝福。§!\n"
  edict_immortal_ruler: "声明统治者不朽"
  edict_immortal_ruler_desc: "使用该法令可宣称我们现任统治者为不朽。"
- civic_imperial_cult_desc: "该社会有一个占统治地位的国教，统治者被当作现世神来崇拜。 \n\n£building£ §Y首都建筑§!将一些£job_politician£ §Y$job_politician$§!岗位替换为£job_high_priest §Y$job_high_priest_plural$§!，§Y神圣中枢§!和§Y信念堡垒§!建筑提供额外的§Y大祭司§!岗位。\n£job_priest£ §Y$job_priest_plural$§!产出§Y1§!额外 £unity£ 凝聚力。 \n\n允许特殊法令——§Y声明统治者不朽§!，能使当前的统治者不朽。\n\n野望§Y科学革命§!不可用。"
+ civic_imperial_cult_desc: "该社会有一个占统治地位的国教，统治者被当作现世神来崇拜。\n£job_priest£ §Y$job_priest_plural$§!产出§Y1§!额外 £unity£ 凝聚力。 \n\n允许特殊法令——§Y声明统治者不朽§!，能使当前的统治者不朽。\n\n野望§Y科学革命§!不可用。"
  mod_pop_ethic_capitalism_attraction_mult: "个人主义思潮吸引力"
  mod_pop_ethic_socialism_attraction_mult: "集体主义思潮吸引力"
  COLLECT_ETHIC_ALLOWS_UTOPIA: "§E结合§H集体主义§!允许§H乌托邦§!生活标准§!"
@@ -2255,8 +2264,8 @@
  opinion_vs_ecologist_industrialist: "厌恶自然者"
  civic_shared_burden: "社会主义理想"
  civic_shared_burden_desc: "这个社会传统上保留着社会主义理想，表现在生产资料公有制和资源公平分配，以确保人人享有社会、政治和经济上的平等。 \n\n§Y城市区划§!提供§G+1§! £housing£ §Y住房§!，§Y官员§!提供§G+2§! £amenities£ §Y舒适度§!。 \n\n必须设置§Y社会平等§!生活水平，§Y公共医疗§!和§Y公共教育§!政策。\n\n允许选择特殊飞升——§Y社会主义乌托邦§!  \n\n§Y社会主义派系§!提供更多影响力"
- civic_reeducated_labor: "奴役暴君"
- civic_reeducated_labor_desc: "该社会的经济被一些强大而冷酷的奴隶贸易公司老板所控制。对奴隶劳动力的严重依赖可能导致普通公民就业机会减少。 \n\n必须设置§Y阶层经济§!或更低生活标准\n\n§Y奴隶监工§!岗位产出额外£unity£ §Y凝聚力§! \n\n非Y极端和平主义§!可以建造特殊建筑——§Y新竞技场§!，增加£job_gladiator£ §Y角斗士§!岗位，产出一定的£trade_value£ §Y贸易值§!并提高当地§Y陆军伤害§!"
+ civic_slaving_despots: "奴役暴君"
+ civic_slaving_despots_desc: "该社会的经济被一些强大而冷酷的奴隶贸易公司老板所控制。对奴隶劳动力的严重依赖可能导致普通公民就业机会减少。 \n\n必须设置§Y阶层经济§!或更低生活标准\n\n§Y奴隶监工§!岗位产出额外£unity£ §Y凝聚力§! \n\n非Y极端和平主义§!可以建造特殊建筑——§Y新竞技场§!，增加£job_gladiator£ §Y角斗士§!岗位，产出一定的£trade_value£ §Y贸易值§!并提高当地§Y陆军伤害§!"
  job_gladiator: "角斗士"
  job_gladiator_plural: "角斗士"
  job_gladiator_desc: "通常是被奴役者，作为全副武装的战士在竞技场上供人们娱乐。战争期间参了军。"
@@ -2379,7 +2388,25 @@
  personality_evangelising_zealots_machine_desc: "狂热传道者试图将他们的信仰传播到整个银河系，且不惜使用武力来强迫别人接受他们的信仰。"
  personality_spiritual_seekers_machine: "精神探求者"
  personality_spiritual_seekers_machine_desc: "精神探求者相信所有的生命都是通过某种高等力量联系起来的，而这种力量可以通过创造它而理解它。他们将寻求与其他帝国的和平合作，希望研究他们与神的联系。"
- civic_merchant_guilds: "Financial Elite"
- civic_merchant_guilds_desc: "In this society 'wealth' equals 'power'. Upper echelons of society are occupied by the rich, while working class people are being systematically oppressed. \n\n§YCapital Buildings§! replace some £job_politician£ §YAdministrators§! with £job_mogul£ §Y$job_mogul$§! Ruler Jobs, which increase §YAmenities§! and produce §YTrade Value§!. \n\nBuilding §YGalactic Stock Exchange§! additionally provides £job_mogul£ §Y$job_mogul$§! Job and multiplies planetary §YTrade Value§! by §G+5%§! \n\nStarts with the §Y$tech_power_hub_1$§! technology already unlocked \n\nCan't use §YPublic Healthcare§! or §YPublic Education§! policies \n\n§YCorporate Lobbying:§! §YEntrepreneurs§! faction provides additional approval"
- civic_state_monopoly: "State Monopoly"
- civic_state_monopoly_desc: "In this society the most essential economic sectors are ruled by oligarchs, which monopolies are under direct protection of the State.  \n\nAn advanced version of §YFinancial Elite§! civic  \n\n§YCapital Buildings§! replace some £job_politician£ §YAdministrators§! with £job_mogul£ §Y$job_mogul$§! Ruler Jobs \nBuilding §YGalactic Stock Exchange§! additionally provides §G+1§! £job_mogul£ §Y$job_mogul$§! Job and multiplies planetary §YTrade Value§! by §G+5%§! \n§YCorporate Lobbying:§! §YEntrepreneurs§! faction provides additional approval \nStarts with the §Y$tech_power_hub_1$§! technology \n\nCan't use §YPublic Healthcare§! or §YPublic Education§! policies \nCan't use §YFree Market§! policy"
+ civic_merchant_guilds： "金融精英"
+ civic_merchant_guilds_desc: "在这个社会，'财富'等于'权力'。社会的上层被富人占据，而工人阶级却被系统地压迫！工作和乘以行星 §YTrade Value§! 由 §G+5%§! \n开始于 §Y$tech_power_hub_1$§! 已经解锁的技术 §YPublic Healthcare§! or §YPublic Education§! §YEntrepreneurs§!派别提供额外的批准"
+ civic_state_monopoly："国家垄断"
+ civic_state_monopoly_desc: "在这个社会中，最基本的经济部门由寡头统治，这些垄断企业受到国家的直接保护。 \n构建银河系股票交易所的高级版本，还提供了 §G+1§! 的服务！£job_mogul£ §Y$job_mogul$§! 工作，并使行星上的§Y贸易价值乘以§G+5%§! \n公司游说: §! §YEntrepreneurs§!派别提供额外的批准 §Y$tech_power_hub_1$§!技术 §N不能使用§YPublic Healthcare§!或§YPublic Education§!政策 §N不能使用§YFree Market§!政策"
+ 
+ ###############
+ ## ECAF NEW ###
+ ###############
+
+ civic_tooltip_corporate: "Has a §YCorporate§! Authority"
+ civic_tooltip_democratic:0 "Has a §YDemocratic§! Authority"
+ civic_tooltip_dictatorship:0 "Has a §YDictatorial§! Authority"
+ civic_tooltip_oli_dict:0 "Has a §YDictatorial§! or §YOligarchic§! Authority"
+ civic_tooltip_dem_oli_NEW:0 "Has a §YDemocratic§! or §YOligarchic§! Authority"
+ civic_tooltip_dic_imp_NEW:0 "Has a §YDictatorial§! or §YImperial§! Authority"
+ civic_tooltip_dic_imp_oli:0 "Has a §YDictatorial§!, §YImperial§!, or §YOligarchic§! Authority"
+
+ # Compat
+ auth_corporate_fiefdom: "Corporate Fiefdom"
+ auth_bugged_corporate_imperial:0 "Dynastic Enterprise"
+ auth_tec_patrocorporate:0 "Patrimonial Corporate"
+ auth_direct_democratic:0 "Direct Democratic"

@@ -81,6 +81,7 @@ civic_corvee_system = {
 	}
 	modifier = {
 		pop_growth_from_immigration = 0.15
+		pop_political_power = -0.05
 	}
 }
 
@@ -538,6 +539,7 @@ civic_technocracy = {
 	}
 	modifier = {
 		num_tech_alternatives_add = 1
+		planet_researchers_produces_mult = 0.05
 	}
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = { 
@@ -632,6 +634,13 @@ civic_police_state = {
 				value = ethic_fanatic_egalitarian
 			}
 		}
+		civics = {
+			NOR = {
+				value = civic_idealistic_foundation
+				value = civic_ultimate_collective
+				value = civic_divine_council
+			}
+		}
 	}
 	modifier = {
 		planet_stability_add = 5
@@ -691,6 +700,13 @@ civic_idealistic_foundation = {
 				text = civic_tooltip_egalitarian
 				value = ethic_egalitarian
 				value = ethic_fanatic_egalitarian
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_police_state
+				value = civic_ultimate_collective
+				value = civic_divine_council
 			}
 		}
 	}
@@ -827,7 +843,7 @@ civic_slaver_guilds = {
 		civics = {
 			NOR = {
 				value = civic_pleasure_seekers
-				value = civic_reeducated_labor
+				value = civic_slaving_despots
 			}
 		}
 	}
@@ -1190,6 +1206,7 @@ civic_cutthroat_politics = {
 	modifier = {
 		edicts_upkeep_mult = -0.20
 		intel_decryption_add = 1
+		leader_skill_levels = 3
 	}
 }
 
@@ -1743,10 +1760,10 @@ civic_shared_burden = {
 		}
 	}
 	possible = {
-		authority = {
-			text = civic_tooltip_democratic
-			inline_script = civics/authorities/auth_democratic
-		}
+		# authority = {
+		# 	text = civic_tooltip_democratic
+		# 	inline_script = civics/authorities/auth_democratic
+		# }
 		ethics = {
 			value = ethic_fanatic_socialism
 			NOR = {
@@ -1761,7 +1778,6 @@ civic_shared_burden = {
 				value = civic_pleasure_seekers
 				value = civic_welfare_state
 			}
-
 		}
 	}
 	modifier = {

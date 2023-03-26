@@ -213,6 +213,8 @@ ethic_authoritarian = {
 	}
 }
 
+####
+
 ethic_fanatic_egalitarian = {
 	cost = 2
 	category = "col"
@@ -479,6 +481,8 @@ ethic_egalitarian = {
 		}
 	}
 }
+
+####
 
 ethic_fanatic_xenophobe = {
 	cost = 2
@@ -909,6 +913,8 @@ ethic_xenophobe = {
 	}
 }
 
+####
+
 ethic_fanatic_xenophile = {
 	cost = 2
 	category = "xen"
@@ -1266,6 +1272,8 @@ ethic_xenophile = {
 	}
 }
 
+####
+
 ethic_fanatic_militarist = {
 	cost = 2
 	category = "mil"
@@ -1612,6 +1620,8 @@ ethic_militarist = {
 	}
 }
 
+####
+
 ethic_fanatic_pacifist = {
 	cost = 2
 	category = "mil"
@@ -1873,6 +1883,8 @@ ethic_pacifist = {
 	}
 }
 
+####
+
 ethic_fanatic_spiritualist = {
 	cost = 2
 	category = "spi"
@@ -1888,7 +1900,6 @@ ethic_fanatic_spiritualist = {
 		edicts_upkeep_mult = -0.2
 		edicts_cost_mult = -0.2
 		pop_government_ethic_attraction = 0.2
-		pop_amenities_usage_mult = -0.2
 		country_physics_tech_research_speed = -0.1
 	}
 	random_weight = {
@@ -1910,7 +1921,6 @@ ethic_spiritualist = {
 		edicts_upkeep_mult = -0.1
 		edicts_cost_mult = -0.1
 		pop_government_ethic_attraction = 0.1
-		pop_amenities_usage_mult = -0.1
 	}
 	random_weight = {
 		base = 100
@@ -2127,6 +2137,8 @@ ethic_spiritualist = {
 		}
 	}
 }
+
+####
 
 ethic_fanatic_materialist = {
 	cost = 2
@@ -2387,52 +2399,7 @@ ethic_materialist = {
 	}
 }
 
-ethic_gestalt_consciousness = {
-	playable = {
-		OR = {
-			host_has_dlc = "Utopia"
-			host_has_dlc = "Synthetic Dawn Story Pack"
-		}
-	}
-	cost = 5
-	category = "hive"
-	category_value = 0
-	use_for_pops = no
-	country_modifier = {
-		country_war_exhaustion_mult = -0.2
-		country_ethic_influence_produces_add = 1
-		intel_encryption_add = 2
-	}
-	tags = {
-		ETHIC_GESTALT_CONSCIOUSNESS_NO_TUTORIAL
-		ETHIC_GESTALT_CONSCIOUSNESS_AUTHORITY
-		ETHIC_GESTALT_CONSCIOUSNESS_IMMORTAL_RULER
-		ETHIC_GESTALT_CONSCIOUSNESS_NO_FACTIONS
-		ETHIC_GESTALT_CONSCIOUSNESS_DOMESTIC_POP_SURVIVAL
-		ETHIC_ALLOW_NO_RETREAT
-	}
-	random_weight = {
-		base = 100
-		modifier = {
-			factor = 0
-			OR = {
-				NOR = {
-					host_has_dlc = "Utopia"
-					host_has_dlc = "Synthetic Dawn Story Pack"
-				}
-				has_global_flag = game_started				# Additional traits (trait_hive_mind, trait_machine_unit) are only assigned and verified for empire designs, no effect after game start.
-			}
-		}
-		modifier = {
-			factor = 2
-			host_has_dlc = "Synthetic Dawn Story Pack"
-			host_has_dlc = "Utopia"
-			NOT = {
-				has_global_flag = game_started
-			}
-		}
-	}
-}
+####
 
 ethic_fanatic_socialism = {
 	cost = 2
@@ -2445,8 +2412,8 @@ ethic_fanatic_socialism = {
 		PROHIBITS_DECENT
 	}
 	country_modifier = {
-		pop_cat_worker_happiness = 0.1
-		planet_stability_add = 5
+		pop_citizen_happiness = 0.15
+		pop_amenities_usage_mult = -0.2
 		country_society_tech_research_speed = 0.1
 		pop_cat_worker_political_power = 2
 		trade_value_mult = -0.1
@@ -2464,10 +2431,11 @@ ethic_socialism = {
 	tags = {
 	}
 	country_modifier = {
-		pop_cat_worker_happiness = 0.05
-		planet_stability_add = 2
+		pop_citizen_happiness = 0.1
+		pop_amenities_usage_mult = -0.1
 		country_society_tech_research_speed = 0.05
 		pop_cat_worker_political_power = 1
+		trade_value_mult = -0.05
 	}
 	random_weight = {
 		base = 100
@@ -2681,6 +2649,8 @@ ethic_socialism = {
 		}
 	}
 }
+
+####
 
 ethic_fanatic_capitalism = {
 	cost = 2
@@ -2940,6 +2910,55 @@ ethic_capitalism = {
 				has_living_standard = {
 					type = living_standard_shared_burden
 				}
+			}
+		}
+	}
+}
+
+####
+
+ethic_gestalt_consciousness = {
+	playable = {
+		OR = {
+			host_has_dlc = "Utopia"
+			host_has_dlc = "Synthetic Dawn Story Pack"
+		}
+	}
+	cost = 5
+	category = "hive"
+	category_value = 0
+	use_for_pops = no
+	country_modifier = {
+		country_war_exhaustion_mult = -0.2
+		country_ethic_influence_produces_add = 1
+		intel_encryption_add = 2
+	}
+	tags = {
+		ETHIC_GESTALT_CONSCIOUSNESS_NO_TUTORIAL
+		ETHIC_GESTALT_CONSCIOUSNESS_AUTHORITY
+		ETHIC_GESTALT_CONSCIOUSNESS_IMMORTAL_RULER
+		ETHIC_GESTALT_CONSCIOUSNESS_NO_FACTIONS
+		ETHIC_GESTALT_CONSCIOUSNESS_DOMESTIC_POP_SURVIVAL
+		ETHIC_ALLOW_NO_RETREAT
+	}
+	random_weight = {
+		base = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = {
+					host_has_dlc = "Utopia"
+					host_has_dlc = "Synthetic Dawn Story Pack"
+				}
+				has_global_flag = game_started				# Additional traits (trait_hive_mind, trait_machine_unit) are only assigned and verified for empire designs, no effect after game start.
+			}
+		}
+		modifier = {
+			factor = 2
+			host_has_dlc = "Synthetic Dawn Story Pack"
+			host_has_dlc = "Utopia"
+			NOT = {
+				has_global_flag = game_started
 			}
 		}
 	}

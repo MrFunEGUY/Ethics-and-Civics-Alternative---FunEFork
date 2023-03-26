@@ -624,7 +624,7 @@ slaving_despots = {
 		is_country_type = default
 		OR = {
 			has_valid_civic = civic_slaver_guilds
-			has_valid_civic = civic_reeducated_labor
+			has_valid_civic = civic_slaving_despots
 		}
 		OR = {
 			is_authoritarian = yes

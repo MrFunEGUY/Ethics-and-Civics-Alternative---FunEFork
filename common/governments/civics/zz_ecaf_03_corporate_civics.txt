@@ -513,7 +513,7 @@ civic_indentured_assets = {
 				value = civic_slaver_guilds
 				value = civic_pleasure_seekers
 				value = civic_private_militaries
-				value = civic_reeducated_labor
+				value = civic_slaving_despots
 			}
 		}
 	}

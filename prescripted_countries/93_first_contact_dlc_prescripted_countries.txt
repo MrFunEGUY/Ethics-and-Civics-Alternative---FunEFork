@@ -35,12 +35,15 @@ resistance = {
 	civics = {
 		"civic_nationalistic_zeal"
 		"civic_citizen_service"
+		"civic_welfare_state"
 	}
 	government="gov_military_commissariat"
 	origin = "origin_payback"
 
 	ethic="ethic_fanatic_egalitarian"
+	ethic="ethic_socialism"
 	ethic="ethic_militarist"
+	ethic="ethic_xenophobe"
 
 	graphical_culture = "avian_01"
 	city_graphical_culture = "avian_01"
@@ -109,12 +112,14 @@ broken_shackles = {
 	civics = {
 		"civic_beacon_of_liberty"
 		"civic_free_haven"
+		"civic_xeno_militarist"
 	}
 	government = "gov_moral_democracy"
 	origin = "origin_broken_shackles"
 
-	ethic = "ethic_egalitarian"
+	ethic = "ethic_militarist"
 	ethic = "ethic_fanatic_xenophile"
+	ethic = "ethic_fanatic_egalitarian"
 
 	graphical_culture = "reptilian_01"
 	city_graphical_culture = "mammalian_01"

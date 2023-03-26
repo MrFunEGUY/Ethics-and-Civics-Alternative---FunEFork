@@ -26,6 +26,12 @@ socialists = {
             }
             unity = 0.5
         }
+        produces = {
+			trigger = { 
+				FROM = { has_valid_civic = civic_shared_burden }
+			}
+			unity = 0.5
+		}
 	}
 	is_potential = {
 		years_passed > 10
@@ -243,23 +249,6 @@ socialists = {
 		trigger = {
 			owner = {
 				has_edict = education_campaign
-			}
-		}
-	}
-	demand = {
-		title = "LABOUR_POWER"
-		unfulfilled_title = "NO_LABOUR_POWER"
-		desc = "LABOUR_POWER_DESC"
-		fulfilled_effect = 10
-		potential = {
-			exists = owner
-			owner = {
-				has_valid_civic = civic_shared_burden
-			}
-		}
-		trigger = {
-			owner = {
-				has_valid_civic = civic_shared_burden
 			}
 		}
 	}

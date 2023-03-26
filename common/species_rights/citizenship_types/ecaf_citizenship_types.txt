@@ -109,7 +109,7 @@ citizenship_slavery = {
 					is_gestalt = yes
 					has_valid_civic = civic_slaver_guilds
 					has_valid_civic = civic_indentured_assets
-					has_valid_civic = civic_reeducated_labor
+					has_valid_civic = civic_slaving_despots
 				}
 			}
 		}

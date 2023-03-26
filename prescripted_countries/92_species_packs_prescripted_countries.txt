@@ -310,8 +310,6 @@ sathyrel = {
 	}
 }
 
-##### FUNE: Need to do Below
-
 # Gorthikan Alliance
 gorthikan = {
 	name = EMPIRE_DESIGN_gorthikan
@@ -371,7 +369,8 @@ gorthikan = {
 	room = "toxoids_room"
 	spawn_enabled = yes
 	ethic = "ethic_fanatic_egalitarian"
-	ethic = "ethic_materialist"
+	ethic = "ethic_fanatic_materialist"
+	ethic = "ethic_socialism"
 	civics = {
 		"civic_scavengers"
 		"civic_toxic_baths"
@@ -440,11 +439,12 @@ knights = {
 	room = "personality_honorbound_warriors_room"
 	spawn_enabled = yes
 	ethic = "ethic_authoritarian"
-	ethic = "ethic_militarist"
-	ethic = "ethic_spiritualist"
+	ethic = "ethic_fanatic_militarist"
+	ethic = "ethic_fanatic_spiritualist"
 	civics = {
 		"civic_feudal_realm"
 		"civic_aristocratic_elite"
+		"civic_martial_brotherhood"
 	}
 	origin = "origin_toxic_knights"
 }

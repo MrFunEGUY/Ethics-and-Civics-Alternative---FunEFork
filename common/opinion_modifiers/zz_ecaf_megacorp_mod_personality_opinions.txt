@@ -3,7 +3,7 @@
 ##########################################################################
 opinion_maniac_monopoly = {
 	trigger = {
-		VENTURE_POLITICS_TRIGGER = yes
+		has_megacorp_mod_active = yes
 		is_megacorp = yes
 		#NOT = { has_valid_civic = civic_criminal_heritage }
 		FROM = { has_valid_civic = civic_maniac_monopoly }
@@ -16,7 +16,7 @@ opinion_maniac_monopoly = {
 
 opinion_maniac_monopoly_vs_megacorp = {
 	trigger = {
-		VENTURE_POLITICS_TRIGGER = yes
+		has_megacorp_mod_active = yes
 		is_megacorp = yes
 		has_valid_civic = civic_maniac_monopoly
 		FROM = {
@@ -32,7 +32,7 @@ opinion_maniac_monopoly_vs_megacorp = {
 
 opinion_maniac_monopoly_noncorp = {
 	trigger = {
-		VENTURE_POLITICS_TRIGGER = yes
+		has_megacorp_mod_active = yes
 		is_megacorp = no
 		FROM = { has_valid_civic = civic_maniac_monopoly }
 	}

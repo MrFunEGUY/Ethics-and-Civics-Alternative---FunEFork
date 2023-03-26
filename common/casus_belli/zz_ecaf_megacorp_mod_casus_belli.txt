@@ -12,7 +12,7 @@ cb_maniac_monopoly = {
 	show_in_diplomacy = no
 	show_notification = no
 	potential = {
-		VENTURE_POLITICS_TRIGGER = yes
+		has_megacorp_mod_active = yes
 		has_valid_civic = civic_maniac_monopoly
 	}
 	is_valid = {
@@ -32,7 +32,7 @@ cb_trustbust = {
 	show_notification = no
 	
 	potential = {
-		VENTURE_POLITICS_TRIGGER = yes
+		has_megacorp_mod_active = yes
 		is_megacorp = yes
 	}
 	is_valid = {

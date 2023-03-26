@@ -142,8 +142,6 @@ create_MSI_effect = {
 		}
 	}
 
-	
-
 	create_colony = {
 		owner = event_target:MSI_country
 	}
@@ -269,39 +267,6 @@ create_fear_of_the_dark_country = {
 						set_friendly = yes
 					}
 				}
-			}
-		}
-	}
-	create_country = {
-		name = {
-			key = "NAME_fotd_seperatists"
-			variable_string = "\\[fotd_country.GetSpeciesName\\]"
-		}
-		authority = auth_democratic
-		civics = {
-			civic = civic_idealistic_foundation
-			civic = civic_environmentalist
-		}
-		species = event_target:fotd_country.species
-		ethos = {
-			ethic = ethic_fanatic_xenophobe
-			ethic = ethic_egalitarian
-		}
-
-		flag = random
-		origin = "origin_fear_of_the_dark" # Should only be visible if they become spacefaring
-		type = primitive
-		effect = {
-			set_country_flag = early_space_age
-			set_country_flag = fotd_seperatist_country@event_target:fotd_country
-			set_country_flag = fotd_seperatist_country
-			save_event_target_as = fotd_seperatist_country
-			establish_communications_no_message = event_target:fotd_country
-			set_faction_hostility = {
-				target = event_target:fotd_country
-				set_hostile = no
-				set_neutral = no
-				set_friendly = yes
 			}
 		}
 	}

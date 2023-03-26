@@ -18,7 +18,7 @@ am_civics_is_active = {
 	always = no
 }
 
-VENTURE_POLITICS_TRIGGER = {
+has_megacorp_mod_active = {
 	optimize_memory
 	always = no
 }

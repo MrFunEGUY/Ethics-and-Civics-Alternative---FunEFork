@@ -6,7 +6,7 @@
 #automated workforce
 civic_automated_workforce = {
 	playable = {
-		VENTURE_POLITICS_TRIGGER = yes
+		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
 	potential = {
@@ -43,7 +43,7 @@ civic_automated_workforce = {
 #thought auditing
 civic_thought_auditing = {
 	playable = {
-		VENTURE_POLITICS_TRIGGER = yes
+		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
 	potential = {
@@ -77,7 +77,7 @@ civic_thought_auditing = {
 #needs unique building added
 civic_employee_ownership = { 
 	playable = {
-		VENTURE_POLITICS_TRIGGER = yes
+		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
 	potential = {
@@ -126,7 +126,7 @@ civic_employee_ownership = {
 #refining_consortium
 civic_refining_consortium = {
 	playable = {
-		VENTURE_POLITICS_TRIGGER = yes
+		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
 	potential = {
@@ -163,7 +163,7 @@ civic_refining_consortium = {
 #consumer markets
 civic_consumer_culture = {
 	playable = {
-		VENTURE_POLITICS_TRIGGER = yes
+		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
 	potential = {
@@ -198,7 +198,7 @@ civic_consumer_culture = {
 #executive_worship
 civic_executive_worship = {
 	playable = {
-		VENTURE_POLITICS_TRIGGER = yes
+		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
 	potential = {
@@ -231,7 +231,7 @@ civic_executive_worship = {
 #Urban Idyll
 civic_urban_idyll = {
 	playable = {
-		VENTURE_POLITICS_TRIGGER = yes
+		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
 	potential = {
@@ -267,7 +267,7 @@ civic_urban_idyll = {
 #founder ceo cult
 civic_founder_cult = {
 	playable = {
-		VENTURE_POLITICS_TRIGGER = yes
+		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
 	potential = {
@@ -301,7 +301,7 @@ civic_founder_cult = {
 #integrated trading fleet
 civic_trading_fleet = {
 	playable = {
-		VENTURE_POLITICS_TRIGGER = yes
+		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
 	potential = {
@@ -334,7 +334,7 @@ civic_trading_fleet = {
 #Bancorp
 civic_bancorp = {
 	playable = {
-		VENTURE_POLITICS_TRIGGER = yes
+		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
 	potential = {
@@ -369,7 +369,7 @@ civic_bancorp = {
 #boys club
 civic_membership = {
 	playable = {
-		VENTURE_POLITICS_TRIGGER = yes
+		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
 	potential = {
@@ -407,7 +407,7 @@ civic_membership = {
 #forge works
 civic_manufactory = {
 	playable = {
-		VENTURE_POLITICS_TRIGGER = yes
+		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
 	potential = {
@@ -442,7 +442,7 @@ civic_manufactory = {
 #boost to terraforming, possibly also pop CG usage
 civic_reclamation = {
 	playable = {
-		VENTURE_POLITICS_TRIGGER = yes
+		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
 	potential = {
@@ -476,7 +476,7 @@ civic_reclamation = {
 
 civic_efficiency_expert = {
 	playable = {
-		VENTURE_POLITICS_TRIGGER = yes
+		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
 	potential = {
@@ -499,7 +499,7 @@ civic_efficiency_expert = {
 
 civic_science_syndicate = {
 	playable = {
-		VENTURE_POLITICS_TRIGGER = yes
+		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
 	potential = {
@@ -529,7 +529,7 @@ civic_science_syndicate = {
 
 civic_maniac_monopoly = {
 	playable = {
-		VENTURE_POLITICS_TRIGGER = yes
+		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
 	potential = {

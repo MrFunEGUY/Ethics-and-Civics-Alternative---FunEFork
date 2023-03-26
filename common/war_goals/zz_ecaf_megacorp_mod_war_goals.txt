@@ -57,7 +57,7 @@ wg_liquidation = {
 	surrender_acceptance = -1000
 
 	potential = {
-		VENTURE_POLITICS_TRIGGER = yes
+		has_megacorp_mod_active = yes
 		has_valid_civic = civic_maniac_monopoly
 		from = { is_megacorp = yes }
 	}
@@ -80,7 +80,7 @@ wg_end_threat_monopoly = {
 	surrender_acceptance = -1000
 
 	potential = {
-		VENTURE_POLITICS_TRIGGER = yes
+		has_megacorp_mod_active = yes
 		is_megacorp = yes
 		from = { has_valid_civic = civic_maniac_monopoly }
 	}

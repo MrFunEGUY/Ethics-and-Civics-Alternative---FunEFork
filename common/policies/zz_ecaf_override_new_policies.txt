@@ -1782,6 +1782,98 @@ economic_stance = {
 	}
 }
 
+slavery_percent = {
+	potential = {
+		OR = {
+			has_valid_civic = civic_slaver_guilds
+			has_valid_civic = civic_slaving_despots
+			has_valid_civic = civic_indentured_assets
+		}
+	}
+	option = {
+		name = policy_slavery_60
+		valid = {
+			has_valid_civic = civic_slaving_despots
+		}
+		modifier = {
+			country_pop_enslaved_mult = 0.6
+		}
+		ai_weight = {
+			factor = 300
+		}
+	}
+	option = {
+		name = policy_slavery_50
+		valid = {
+			has_valid_civic = civic_slaving_despots
+		}
+		modifier = {
+			country_pop_enslaved_mult = 0.5
+		}
+		ai_weight = {
+			factor = 350
+		}
+	}
+	option = {
+		name = policy_slavery_40
+		valid = {
+			has_valid_civic = civic_slaving_despots
+		}
+		modifier = {
+			country_pop_enslaved_mult = 0.4
+		}
+		ai_weight = {
+			factor = 400
+		}
+	}
+	option = {
+		name = policy_slavery_30
+		valid = {
+			OR = {
+				has_valid_civic = civic_slaving_despots
+				has_valid_civic = civic_slaver_guilds
+				has_valid_civic = civic_indentured_assets
+			}
+		}
+		modifier = {
+			country_pop_enslaved_mult = 0.3
+		}
+		ai_weight = {
+			factor = 200
+		}
+	}
+	option = {
+		name = policy_slavery_20
+		valid = {
+			OR = {
+				has_valid_civic = civic_slaver_guilds
+				has_valid_civic = civic_indentured_assets
+			}
+		}
+		modifier = {
+			country_pop_enslaved_mult = 0.2
+		}
+		ai_weight = {
+			factor = 200
+		}
+	}
+	option = {
+		name = policy_slavery_10
+		valid = {
+			OR = {
+				has_valid_civic = civic_slaver_guilds
+				has_valid_civic = civic_indentured_assets
+			}
+		}
+		modifier = {
+			country_pop_enslaved_mult = 0.1
+		}
+		ai_weight = {
+			factor = 100
+		}
+	}
+}
+
 bureaucracy = {
 	potential = {
 	}
@@ -2700,7 +2792,7 @@ slavery = {
 			NOR = {
 				has_valid_civic = civic_slaver_guilds
 				has_valid_civic = civic_indentured_assets
-				has_valid_civic = civic_reeducated_labor
+				has_valid_civic = civic_slaving_despots
 				has_valid_civic = civic_divine_order
 			}
 		}

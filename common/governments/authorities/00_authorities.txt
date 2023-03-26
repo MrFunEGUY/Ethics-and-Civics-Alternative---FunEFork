@@ -278,7 +278,7 @@ auth_democratic_dictatorship = {
 		empire_size_penalty_mult = -0.05
 		pop_cat_worker_political_power = 3
 		pop_cat_specialist_political_power = 5
-		pop_cat_ruler_political_power = 9
+		pop_cat_ruler_political_power = 9.5
 	}
 
 	tags = {
@@ -449,5 +449,57 @@ auth_ancient_machine_intelligence = {
 	potential = { country_type = { value = ai_empire } }
 }
 
+#################
+#################
 
+# Placeholders - Same file because weirdness
 
+auth_corporate_fiefdom = {
+	playable = { always = no }
+	possible = { always = no }
+}
+
+auth_corporate_democratic = {
+	playable = { always = no }
+	possible = { always = no }
+}
+
+auth_cooperative = {
+    playable = { always = no }
+	possible = { always = no }
+}
+
+auth_direct_democratic = {
+	playable = { always = no }
+	possible = { always = no }
+}
+
+auth_bugged_direct_democratic = {
+    playable = { always = no }
+	possible = { always = no }
+}
+
+auth_bugged_corporate_democratic = {
+    playable = { always = no }
+	possible = { always = no }
+}
+
+auth_bugged_corporate_imperial = {
+    playable = { always = no }
+	possible = { always = no }
+}
+
+auth_tec_patrocorporate = {
+	playable = { always = no }
+	possible = { always = no }
+}
+
+auth_tec_ai_corporate = {
+	playable = { always = no }
+	possible = { always = no }
+}
+
+auth_private = {
+	playable = { always = no }
+	possible = { always = no }
+}

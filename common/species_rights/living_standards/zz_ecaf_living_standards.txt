@@ -271,7 +271,7 @@ living_standard_academic_privilege = {
 		from = {
 			is_gestalt = no
 			NOR = {
-				has_valid_civic = civic_reeducated_labor
+				has_valid_civic = civic_slaving_despots
 				has_valid_civic = civic_welfare_state
 				has_valid_civic = civic_shared_burden
 				has_valid_civic = civic_employee_ownership # Venture Politics
@@ -563,7 +563,7 @@ living_standard_normal = {
 			NOR = {
 				has_valid_civic = civic_shared_burden
 				has_valid_civic = civic_employee_ownership # Venture Politics
-				has_valid_civic = civic_reeducated_labor
+				has_valid_civic = civic_slaving_despots
 				has_valid_civic = civic_welfare_state
 				has_ethic = ethic_fanatic_socialism
 			}
