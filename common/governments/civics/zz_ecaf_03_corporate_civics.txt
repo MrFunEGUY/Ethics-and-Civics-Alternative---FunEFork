@@ -23,12 +23,7 @@
 # Corporate
 
 civic_franchising = {
-	potential = {
-		OR = {
-			authority = { inline_script = civics/authorities/auth_corporate }
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = { 
 		base = @ai_civic_default_base_weight 
@@ -58,12 +53,7 @@ civic_franchising = {
 }
 
 civic_trading_posts = {
-	potential = {
-		OR = {
-			authority = { inline_script = civics/authorities/auth_corporate }
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = { 
 		base = @ai_civic_default_base_weight 
@@ -89,12 +79,7 @@ civic_trading_posts = {
 }
 
 civic_media_conglomerate = {
-	potential = {
-		OR = {
-			authority = { inline_script = civics/authorities/auth_corporate }
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {
 		civics = { NOT = { value = civic_idealistic_foundation } }
 	}
@@ -120,12 +105,7 @@ civic_media_conglomerate = {
 }
 
 civic_naval_contractors = {
-	potential = {
-		OR = {
-			authority = { inline_script = civics/authorities/auth_corporate }
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = { 
 		base = @ai_civic_default_base_weight 
@@ -182,12 +162,7 @@ civic_naval_contractors = {
 }
 
 civic_free_traders = {
-	potential = {
-		OR = {
-			authority = { inline_script = civics/authorities/auth_corporate }
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = { 
 		base = @ai_civic_default_base_weight 
@@ -226,12 +201,7 @@ civic_free_traders = {
 }
 
 civic_private_prospectors = {
-	potential = {
-		OR = {
-			authority = { inline_script = civics/authorities/auth_corporate }
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = { 
 		base = @ai_civic_default_base_weight 
@@ -270,12 +240,7 @@ civic_private_prospectors = {
 }
 
 civic_gospel_of_the_masses = {
-	potential = {
-		OR = {
-			authority = { inline_script = civics/authorities/auth_corporate }
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = { 
 		base = @ai_civic_default_base_weight 
@@ -320,12 +285,7 @@ civic_gospel_of_the_masses = {
 }
 
 civic_ruthless_competition = {
-	potential = {
-		OR = {
-			authority = { inline_script = civics/authorities/auth_corporate }
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {
 		ethics = {
 			value = ethic_fanatic_capitalism
@@ -373,12 +333,7 @@ civic_ruthless_competition = {
 
 civic_criminal_heritage = {
 	modification = no
-	potential = {
-		OR = {
-			authority = { inline_script = civics/authorities/auth_corporate }
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = @civic_default_random_weight }
 	modifier = {
 		spy_network_daily_value_mult = 0.20
@@ -400,12 +355,7 @@ civic_criminal_heritage = {
 }
 
 civic_private_military_companies = {
-	potential = {
-		OR = {
-			authority = { inline_script = civics/authorities/auth_corporate }
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = { 
 		base = @ai_civic_default_base_weight 
@@ -464,12 +414,7 @@ civic_private_military_companies = {
 }
 
 civic_indentured_assets = {
-	potential = {
-		OR = {
-			authority = { inline_script = civics/authorities/auth_corporate }
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = { 
 		base = @ai_civic_default_base_weight 
@@ -525,12 +470,7 @@ civic_indentured_assets = {
 }
 
 civic_brand_loyalty = {
-	potential = {
-		OR = {
-			authority = { inline_script = civics/authorities/auth_corporate }
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {
 		civics = { NOT = { value = civic_beacon_of_liberty } }
 	}
@@ -566,12 +506,7 @@ civic_brand_loyalty = {
 
 civic_public_relations_specialists = {
 	playable = { host_has_dlc = "Federations" }
-	potential = {
-		OR = {
-			authority = { inline_script = civics/authorities/auth_corporate }
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {
 		civics = { NOT = { value = civic_diplomatic_corps } }
 	}
@@ -613,12 +548,7 @@ civic_public_relations_specialists = {
 civic_death_cult_corporate = {
 	playable = { host_has_dlc = "Necroids Species Pack" }
 	description = "civic_tooltip_death_cult_effects"
-	potential = {
-		OR = {
-			authority = { inline_script = civics/authorities/auth_corporate }
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = { 
 		base = @ai_civic_default_base_weight 
@@ -670,12 +600,7 @@ civic_corporate_catalytic_processing = {
 	playable = { host_has_dlc = "Plantoids Species Pack" }
 	ai_playable = { host_has_dlc = "Plantoids Species Pack" }
 	description = "civic_tooltip_catalytic_processing_corporate_effects"
-	potential = {
-		OR = {
-			authority = { inline_script = civics/authorities/auth_corporate }
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {
 		origin = {
 			NOT = {
@@ -698,13 +623,7 @@ civic_corporate_hedonism = {
 	playable = { host_has_dlc = "Humanoids Species Pack" }
 	ai_playable = { host_has_dlc = "Humanoids Species Pack" }
 	description = "civic_tooltip_corporate_hedonism_effects"
-	potential = {
-		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		OR = {
-			authority = { inline_script = civics/authorities/auth_corporate }
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {
 		civics = {
 			NOR = {
@@ -746,12 +665,7 @@ civic_corporate_anglers = {
 	playable = { has_aquatics = yes }
 	ai_playable = { has_aquatics = yes }
 	description = "civic_tooltip_anglers_effects"
-	potential = {
-		OR = {
-			authority = { inline_script = civics/authorities/auth_corporate }
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {
 		origin = {
 			NOR = {
@@ -779,12 +693,7 @@ civic_corporate_crafters = {
 	playable = { host_has_dlc = "Humanoids Species Pack" }
 	ai_playable = { host_has_dlc = "Humanoids Species Pack" }
 	description = "civic_tooltip_crafters_effects"
-	potential = {
-		OR = {
-			authority = { inline_script = civics/authorities/auth_corporate }
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {
 		civics = { NOT = { value = civic_crafters }	}
 	}
@@ -824,12 +733,7 @@ civic_permanent_employment = {
 	playable = { host_has_dlc = "Necroids Species Pack" }
 	ai_playable = { host_has_dlc = "Necroids Species Pack" }
 	description = "civic_tooltip_permanent_employment_effects"
-	potential = {
-		OR = {
-			authority = { inline_script = civics/authorities/auth_corporate }
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {
 		ethics = {
 			NOR = {
@@ -880,12 +784,7 @@ civic_corporate_relentless_industrialists = {
 	playable = { has_toxoids = yes }
 	ai_playable = { has_toxoids = yes }
 	description = "civic_tooltip_relentless_industrialists_effects"
-	potential = {
-		OR = {
-			authority = { inline_script = civics/authorities/auth_corporate }
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {
 		ethics = {
 			OR = {
@@ -946,12 +845,7 @@ civic_corporate_toxic_baths = {
 	playable = { has_toxoids = yes }
 	ai_playable = { has_toxoids = yes }
 	description = "civic_tooltip_toxic_baths_effects"
-	potential = {
-		OR = {
-			authority = { inline_script = civics/authorities/auth_corporate }
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {
 		origin = { NOT = { value = origin_life_seeded } }
 		civics = { NOT = { value = civic_toxic_baths } }
@@ -998,12 +892,7 @@ civic_corporate_scavengers = {
 	playable = { has_toxoids = yes }
 	ai_playable = { has_toxoids = yes }
 	description = "civic_scavengers_effects"
-	potential = {
-		OR = {
-			authority = { inline_script = civics/authorities/auth_corporate }
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {
 		civics = {
 			NOT = {
@@ -1047,12 +936,7 @@ civic_corporate_scavengers = {
 civic_corporate_ascensionists = {
 	playable = { host_has_dlc = "Utopia" }
 	ai_playable = { host_has_dlc = "Utopia" }
-	potential = {
-		OR = {
-			authority = { inline_script = civics/authorities/auth_corporate }
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {
 		ethics = {
 			OR = {
@@ -1103,17 +987,7 @@ civic_privatized_exploration = {
 
 	description = "civic_privatized_exploration_effects"
 	
-	potential = {
-		OR = {
-			authority = { inline_script = civics/authorities/auth_corporate }
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	modification = no
 	possible = {
 		origin = {

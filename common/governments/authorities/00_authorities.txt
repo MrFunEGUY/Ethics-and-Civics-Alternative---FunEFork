@@ -40,6 +40,7 @@ auth_democratic = {
 		ethics = {
 			NOR = {
 				value = ethic_gestalt_consciousness
+				text = civic_tooltip_authoritarian
 				value = ethic_authoritarian
 				value = ethic_fanatic_authoritarian
 			}
@@ -73,6 +74,7 @@ auth_dictatorial = {
 		ethics = {
 			NOR = {
 				value = ethic_gestalt_consciousness
+				text = civic_tooltip_egalitarian
 				value = ethic_egalitarian
 				value = ethic_fanatic_egalitarian
 			}
@@ -106,6 +108,7 @@ auth_imperial = {
 		ethics = {
 			NOT = { value = ethic_gestalt_consciousness }
 			OR = {
+				text = civic_tooltip_authoritarian
 				value = ethic_authoritarian
 				value = ethic_fanatic_authoritarian
 				value = ethic_focused
@@ -226,6 +229,7 @@ auth_strict_democratic = {
                 value = ethic_gestalt_consciousness
             }
             OR = {
+            	text = civic_tooltip_egalitarian
                 value = ethic_egalitarian
                 value = ethic_fanatic_egalitarian
             }
@@ -250,7 +254,7 @@ auth_strict_democratic = {
 	}
 }
 
-auth_democratic_dictatorship = {
+auth_dict_democratic = {
 	election_type = democratic
 	can_have_emergency_elections = yes
 	emergency_election_cost = 150
@@ -309,20 +313,27 @@ auth_corporate_imperial = {
 	possible = {
 		ethics = {
 			OR = {
+				text = civic_tooltip_authoritarian
 				value = ethic_authoritarian
 				value = ethic_fanatic_authoritarian
 			}
 			OR = {
+				text = civic_tooltip_capitalism
 				value = ethic_capitalism
 				value = ethic_fanatic_capitalism
+			}
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
 			}
 			NOT = { value = ethic_gestalt_consciousness }
 		}
 	}
 
 	country_modifier = {
-		edict_length_mult = 0.05
-		empire_size_penalty_mult = 0.3
+		country_power_projection_influence_produces_add = 0.5
+		empire_size_penalty_mult = 0.2
 		pop_cat_worker_political_power = 2
 		pop_cat_specialist_political_power = 3
 		pop_cat_ruler_political_power = 9
@@ -347,7 +358,13 @@ auth_corporate = {
 	}
 	possible = {
 		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
 			OR = {
+				text = civic_tooltip_capitalism
 				value = ethic_capitalism
 				value = ethic_fanatic_capitalism
 			}
@@ -356,6 +373,7 @@ auth_corporate = {
 				value = ethic_fanatic_egalitarian
 				value = ethic_fanatic_authoritarian
 			}
+			
 		}
 	}
 	random_weight = {
@@ -500,6 +518,11 @@ auth_tec_ai_corporate = {
 }
 
 auth_private = {
+	playable = { always = no }
+	possible = { always = no }
+}
+
+auth_warshipgirls = {
 	playable = { always = no }
 	possible = { always = no }
 }

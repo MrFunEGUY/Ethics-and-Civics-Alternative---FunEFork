@@ -24,7 +24,7 @@ country_event = {
 
 	trigger = {
 		exists = ruler
-		NOT = { has_authority = auth_democratic_dictatorship }
+		NOT = { has_authority = auth_dict_democratic }
 		ruler = {
 			has_mandate = yes
 		}
@@ -46,7 +46,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		NOT = { has_authority = auth_democratic_dictatorship }
+		NOT = { has_authority = auth_dict_democratic }
 		OR = {
 			has_event_chain = mandate_separatist_chain
 			has_event_chain = mandate_emancipation_chain
@@ -157,7 +157,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		NOT = { has_authority = auth_democratic_dictatorship }
+		NOT = { has_authority = auth_dict_democratic }
 		from = { is_same_value = root.ruler }
 	}
 

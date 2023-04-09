@@ -223,7 +223,7 @@ country_event = {
 					count = 1
 					limit = {
 						any_war_participant = {
-							is_country = root
+							is_same_empire = root
 							is_war_leader = no
 						}
 					}
@@ -238,7 +238,7 @@ country_event = {
 					count = 2
 					limit = {
 						any_war_participant = {
-							is_country = root
+							is_same_empire = root
 							is_war_leader = no
 						}
 					}
@@ -253,7 +253,7 @@ country_event = {
 					count = 3
 					limit = {
 						any_war_participant = {
-							is_country = root
+							is_same_empire = root
 							is_war_leader = no
 						}
 					}
@@ -268,7 +268,7 @@ country_event = {
 					count = 4
 					limit = {
 						any_war_participant = {
-							is_country = root
+							is_same_empire = root
 							is_war_leader = no
 						}
 					}
@@ -283,7 +283,7 @@ country_event = {
 					count >= 5
 					limit = {
 						any_war_participant = {
-							is_country = root
+							is_same_empire = root
 							is_war_leader = no
 						}
 					}

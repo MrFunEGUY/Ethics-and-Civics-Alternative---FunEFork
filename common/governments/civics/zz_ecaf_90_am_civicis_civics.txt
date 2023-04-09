@@ -1,34 +1,14 @@
 
 civic_am_civics_off_world_investors = {
 	playable = { am_civics_is_active = yes }
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = 5 }
 	description = "tooltip_civic_am_civics_off_world_investors_effects"
 }
 
 civic_am_civics_stellar_travel_agency = {
 	playable = { am_civics_is_active = yes }
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = 5 }
 	description = "tooltip_civic_am_civics_stellar_travel_agency_effects"
 	playable = { am_civics_is_active = yes }
@@ -36,51 +16,21 @@ civic_am_civics_stellar_travel_agency = {
 
 civic_am_civics_social_media_giant = {
 	playable = { am_civics_is_active = yes }
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = 5 }
 	description = "tooltip_civic_am_civics_social_media_giant_effects"
 }
 
 civic_am_civics_knowledge_is_profit = {
 	playable = { am_civics_is_active = yes }
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = 5 }
 	description = "tooltip_civic_am_civics_knowledge_merchants_effects"
 }
 
 civic_am_civics_urban_parcification_tools = {
 	playable = { am_civics_is_active = yes }
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {
 		civics = {
 			NOR = {
@@ -98,34 +48,14 @@ civic_am_civics_urban_parcification_tools = {
 
 civic_am_civics_corporate_growth = {
 	playable = { am_civics_is_active = yes }
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = 5 }
 	description = "tooltip_civic_am_civics_corporate_growth_effects"
 }
 
 civic_am_civics_charitable_efforts = {
 	playable = { am_civics_is_active = yes }
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = { 
 		civics = { 
 			NOT = {	value = civic_criminal_heritage } 
@@ -145,19 +75,12 @@ civic_am_civics_charitable_efforts = {
 
 origin_am_civics_locust_capitalism = {
 	playable = { am_civics_is_active = yes }
+	potential = { inline_script = governments/conditions/is_corporate }
 	is_origin = yes
 	random_weight = { base = 0 }
 	icon = "gfx/interface/icons/origins/origins_am_civics_locust_capitalism.dds"
 	picture = GFX_origin_am_civics_locust_capitalism
 	description = "tooltip_origin_am_civics_locust_capitalism_effects"
-	possible = { 
-		authority = {
-			OR = {
-      			value = auth_corporate
-     			value = auth_corporate_imperial
-    		}
-    	}	
-	}
 	
 	modifier = {
 		country_claim_influence_cost_mult = -0.50
@@ -173,17 +96,7 @@ origin_am_civics_locust_capitalism = {
 
 civic_am_civics_military_industrial_complex = {
 	playable = { am_civics_is_active = yes }
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = { 
 		ethics = {
 			NOR = {
@@ -200,34 +113,14 @@ civic_am_civics_military_industrial_complex = {
 
 civic_am_civics_banking_giant = {
 	playable = { am_civics_is_active = yes }
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = 5 }
 	description = "tooltip_civic_am_civics_banking_giant_effects"
 }
 
 civic_am_civics_mining_consortium = {
 	playable = { am_civics_is_active = yes }
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = 5 }
 	
 	modifier = {
@@ -239,17 +132,7 @@ civic_am_civics_mining_consortium = {
 
 civic_am_civics_guild_of_engineers = {
 	playable = { am_civics_is_active = yes }
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = 5 }
 	
 	modifier = {
@@ -261,17 +144,7 @@ civic_am_civics_guild_of_engineers = {
 civic_am_civics_criminal_connections = {
 	playable = { am_civics_is_active = yes }
 	modification = no
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}	
+	potential = { inline_script = governments/conditions/is_corporate }	
 	possible = {
 		civics = { NOT = { value = civic_criminal_heritage } NOT = { value = civic_am_civics_urban_parcification_tools } }
 	}	

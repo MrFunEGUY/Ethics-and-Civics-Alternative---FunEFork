@@ -1,7 +1,11 @@
-does_not_have_extra_origins = {
-	optimize_memory
-	always = yes
+is_exile_country = {
+	OR = {
+		is_country_type = exile_country
+		is_country_type = enclave_exiled_gov
+	}
 }
+
+##########
 
 has_civic_organic_zealots_active = {
 	optimize_memory
@@ -23,7 +27,19 @@ has_megacorp_mod_active = {
 	always = no
 }
 
-GVP_TRIGGER = {
+lrsk_gvp_is_active = {
 	optimize_memory
 	always = no
+}
+
+has_planetary_diversity = {
+	optimize_memory
+	always = no
+}
+
+#####
+
+does_not_have_extra_origins = {
+	optimize_memory
+	always = yes
 }

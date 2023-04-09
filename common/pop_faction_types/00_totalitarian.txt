@@ -229,6 +229,7 @@ totalitarian = {
 			}
 		}
 	}
+	
 	demand = {
 		title = "TOTALITARIAN_ARISTOCRACY"
 		unfulfilled_title = "TOTALITARIAN_NO_ARISTOCRACY"
@@ -242,6 +243,7 @@ totalitarian = {
 			owner = { has_valid_civic = civic_aristocratic_elite }
 		}
 	}
+
 	demand = {
 		title = "TOTALITARIAN_CASTE"
 		unfulfilled_title = "TOTALITARIAN_NO_CASTE"
@@ -255,6 +257,7 @@ totalitarian = {
 			owner = { has_valid_civic = civic_divine_order }
 		}
 	}
+
 	demand = {
 		title = "TOTALITARIAN_SLAVERY"
 		unfulfilled_title = "TOTALITARIAN_NO_SLAVERY"
@@ -278,6 +281,7 @@ totalitarian = {
 			}
 		}
 	}
+
 	demand = {
 		title = "TOTALITARIAN_POLICE_CONTROL"
 		unfulfilled_title = "TOTALITARIAN_NO_POLICE_CONTROL"
@@ -301,6 +305,7 @@ totalitarian = {
 			}
 		}
 	}
+
 	demand = {
 		title = "TOTALITARIAN_GUN_RIGHTS"
 		unfulfilled_title = "TOTALITARIAN_NO_GUN_RIGHTS"
@@ -313,6 +318,7 @@ totalitarian = {
 			owner = { has_policy_flag = gun_rights_limited }
 		}
 	}
+
 	demand = {
 		title = "NO_FREE_MEDIA"
 		unfulfilled_title = "NO_FREE_MEDIA"
@@ -326,9 +332,10 @@ totalitarian = {
 			owner = { has_policy_flag = free_media }
 		}
 	}
+
 	demand = {
 		title = "CENTRALIZED_STATE"
-		unfulfilled_title = "NO_CENTRALIZED STATE"
+		unfulfilled_title = "NO_CENTRALIZED_STATE"
 		desc = "CENTRALIZED_STATE_DESC"
 		fulfilled_effect = 5
 		unfulfilled_effect = -5

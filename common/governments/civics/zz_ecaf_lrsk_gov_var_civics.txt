@@ -6,15 +6,10 @@
 lrsk_gov_var_civic_elected_clergy = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 
-	playable = { GVP_TRIGGER = yes }
+	playable = { lrsk_gvp_is_active = yes }
 
 	description = "civic_tooltip_lrsk_gov_var_civic_elected_clergy_effects"
 	#icon = "gfx/interface/icons/governments/civics/lrsk_gov_var_civic_elected_clergy.dds"
@@ -22,10 +17,8 @@ lrsk_gov_var_civic_elected_clergy = {
 	possible = {
 		authority = {
 			OR = {
-				value = auth_democratic
-				value = auth_direct_democratic
-				value = auth_strict_democratic
-				value = auth_democratic_dictatorship
+				text = civic_tooltip_democratic
+				inline_script = governments/conditions/auth_democratic
 			}
 		}
 		ethics = {
@@ -49,15 +42,10 @@ lrsk_gov_var_civic_elected_clergy = {
 lrsk_gov_var_civic_ascetic_virtues = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 
-	playable = { GVP_TRIGGER = yes }
+	playable = { lrsk_gvp_is_active = yes }
 
 	#icon = "gfx/interface/icons/governments/civics/civic_inwards_perfection.dds"
 
@@ -83,64 +71,19 @@ lrsk_gov_var_civic_ascetic_virtues = {
 lrsk_gov_var_civic_republicanism = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = { NOR = {
-			value = auth_corporate
-			value = auth_corporate_imperial
-			value = auth_oligarchic
-		} }
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 
-	playable = { GVP_TRIGGER = yes }
+	playable = { lrsk_gvp_is_active = yes }
 
 	#icon = "gfx/interface/icons/governments/civics/civic_beacon_of_liberty.dds"
 
 	possible = {
 		authority = {
 			OR = {
-				value = auth_democratic
-				value = auth_direct_democratic
-				value = auth_strict_democratic
-				value = auth_democratic_dictatorship
-			}
-		}
-	}
-
-	random_weight = { base = 5 }
-
-	modifier = {
-		leaders_cost_mult = -0.3
-		job_politician_per_pop = 0.04
-	}
-}
-
-# Oligarchic variant, not sure if I will use it....
-lrsk_gov_var_civic_republicanism_oli = {
-	potential = {
-		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = { NOR = {
-			value = auth_corporate
-			value = auth_corporate_imperial
-			value = auth_democratic
-			value = auth_direct_democratic
-			value = auth_strict_democratic
-			value = auth_democratic_dictatorship
-		} }
-		#civics = { value = lrsk_gov_var_civic_republicanism_oli } # not in use, just a possibility...
-	}
-
-	playable = { GVP_TRIGGER = yes }
-
-	icon = "gfx/interface/icons/governments/civics/lrsk_gov_var_civic_republicanism.dds"
-
-	possible = {
-		authority = {
-			value = auth_oligarchic
-		}
-		ethics = {
-			OR = {
-				text = civic_tooltip_egalitarian
-				value = ethic_egalitarian
-				value = ethic_fanatic_egalitarian
+				# text = civic_tooltip_democratic
+				inline_script = governments/conditions/auth_democratic
+				ethics = { value = ethic_egalitarian }
 			}
 		}
 	}
@@ -157,15 +100,10 @@ lrsk_gov_var_civic_republicanism_oli = {
 lrsk_gov_var_civic_utilitarian_planning = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 
-	playable = { GVP_TRIGGER = yes }
+	playable = { lrsk_gvp_is_active = yes }
 
 	description = "civic_tooltip_lrsk_gov_var_civic_utilitarian_planning_effects"
 	#icon = "gfx/interface/icons/governments/civics/civic_idealistic_foundation.dds"
@@ -189,8 +127,8 @@ lrsk_gov_var_civic_utilitarian_planning = {
 
 	modifier = {
 		planet_pops_organics_food_upkeep_mult = -0.05
-		ships_upkeep_mult = -0.025
-		planet_structures_upkeep_mult = -0.025
+		ships_upkeep_mult = -0.5
+		planet_structures_upkeep_mult = -0.1
 	}
 }
 
@@ -223,15 +161,10 @@ lrsk_gov_var_civic_siege_mentality = {
 	#description = "lrsk_gov_var_civic_tooltip_grandiosity_effect"
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 
-	playable = { GVP_TRIGGER = yes }
+	playable = { lrsk_gvp_is_active = yes }
 
 	icon = "gfx/interface/icons/governments/civics/lrsk_gov_var_civic_grandiosity.dds"
 
@@ -263,25 +196,19 @@ lrsk_gov_var_civic_siege_mentality = {
 lrsk_gov_var_civic_cult_of_personality = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 
-	playable = { GVP_TRIGGER = yes }
+	playable = { lrsk_gvp_is_active = yes }
 
 	#icon = "gfx/interface/icons/governments/civics/civic_imperial_cult.dds"
 
 	possible = {
 		authority = {
 			OR = {
-				text = civic_tooltip_dic_imp
-				value = auth_dictatorial
-				value = auth_democratic_dictatorship
-				value = auth_imperial
+				text = civic_tooltip_dic_imp_NEW
+				inline_script = governments/conditions/auth_imperial
+				inline_script = governments/conditions/auth_dictatorial
 			}
 		}
 		ethics = {
@@ -311,15 +238,10 @@ lrsk_gov_var_civic_cult_of_personality = {
 lrsk_gov_var_civic_universal_sovereignty = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 
-	playable = { GVP_TRIGGER = yes }
+	playable = { lrsk_gvp_is_active = yes }
 
 	description = "civic_tooltip_lrsk_gov_var_civic_universal_sovereignty_effects"
 	#icon = "gfx/interface/icons/governments/civics/civic_efficient_bureaucracy.dds"
@@ -327,10 +249,9 @@ lrsk_gov_var_civic_universal_sovereignty = {
 	possible = {
 		authority = {
 			OR = {
-				text = civic_tooltip_dic_imp
-				value = auth_dictatorial
-				value = auth_democratic_dictatorship
-				value = auth_imperial
+				text = civic_tooltip_dic_imp_NEW
+				inline_script = governments/conditions/auth_imperial
+				inline_script = governments/conditions/auth_dictatorial
 			}
 		}
 		ethics = {
@@ -361,29 +282,19 @@ lrsk_gov_var_civic_universal_sovereignty = {
 lrsk_gov_var_civic_workers_councils = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 
-	playable = { GVP_TRIGGER = yes }
+	playable = { lrsk_gvp_is_active = yes }
 
 	description = "civic_tooltip_lrsk_gov_var_civic_workers_councils_effects"
 
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_egalitarian
-				value = ethic_egalitarian
-				value = ethic_fanatic_egalitarian
-			}
-			NOR = {
-				text = civic_tooltip_not_capitalism
-				value = ethic_capitalism
-				value = ethic_fanatic_capitalism
+				text = civic_tooltip_socialism
+				value = ethic_socialism
+				value = ethic_fanatic_socialism
 			}
 		}
 		civics = {
@@ -411,15 +322,10 @@ lrsk_gov_var_civic_workers_councils = {
 lrsk_gov_var_civic_supremacist_demagoguery = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 
-	playable = { GVP_TRIGGER = yes }
+	playable = { lrsk_gvp_is_active = yes }
 
 	#icon = "gfx/interface/icons/governments/civics/civic_citizen_service.dds"
 
@@ -433,12 +339,10 @@ lrsk_gov_var_civic_supremacist_demagoguery = {
 		#}
 		ethics = {
 			NOR = {
-			  text = civic_tooltip_not_xenophile
+				text = civic_tooltip_not_xenophile
 			  value = ethic_xenophile
 			  value = ethic_fanatic_xenophile
-			}
-			NOR = {
-			  text = civic_tooltip_not_egalitarian
+				text = civic_tooltip_not_egalitarian
 			  value = ethic_egalitarian
 			  value = ethic_fanatic_egalitarian
 			}
@@ -464,15 +368,10 @@ lrsk_gov_var_civic_supremacist_demagoguery = {
 lrsk_gov_var_civic_enlightened_liberalism = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 
-	playable = { GVP_TRIGGER = yes }
+	playable = { lrsk_gvp_is_active = yes }
 
 	#icon = "gfx/interface/icons/governments/civics/civic_technocracy.dds"
 
@@ -489,8 +388,8 @@ lrsk_gov_var_civic_enlightened_liberalism = {
 				text = civic_tooltip_not_spiritualist
 				value = ethic_spiritualist
 				value = ethic_fanatic_spiritualist
+				value = ethic_fanatic_authoritarian
 			}
-			NOT = { value = ethic_fanatic_authoritarian }
 			NOR = {
 				text = civic_tooltip_not_socialism
 				value = ethic_socialism
@@ -511,15 +410,10 @@ lrsk_gov_var_civic_enlightened_liberalism = {
 lrsk_gov_var_civic_business_lobby  = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 
-	playable = { GVP_TRIGGER = yes }
+	playable = { lrsk_gvp_is_active = yes }
 
 	#icon = "gfx/interface/icons/governments/civics/civic_aristocratic_elite.dds"
 
@@ -534,9 +428,9 @@ lrsk_gov_var_civic_business_lobby  = {
 	random_weight = { base = 5 }
 
 	modifier = {
-		country_energy_produces_mult = 0.05
-		country_minerals_produces_mult = 0.05
-		country_trade_fee = -0.05
+		country_energy_produces_mult = 0.1
+		country_minerals_produces_mult = 0.1
+		country_trade_fee = -0.1
 	}
 }
 
@@ -546,14 +440,13 @@ lrsk_gov_var_civic_chivalry = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 		authority = {
 			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-				value = auth_oligarchic
+				inline_script = governments/conditions/auth_corporate
+				inline_script = governments/conditions/auth_oligarchic
 			}
 		}
 	}
 
-	playable = { GVP_TRIGGER = yes }
+	playable = { lrsk_gvp_is_active = yes }
 
 	description = "civic_tooltip_lrsk_gov_var_civic_chivalry_effects"
 	#icon = "gfx/interface/icons/governments/civics/civic_warrior_culture.dds"
@@ -561,46 +454,10 @@ lrsk_gov_var_civic_chivalry = {
 	possible = {
 		authority = {
 			OR = {
-				value = auth_imperial
-				value = auth_corporate_imperial
+				# text = civic_tooltip_heir
+				inline_script = governments/conditions/auth_imperial
+				civics = { value = civic_aristocratic_elite }
 			}
-		}
-		ethics = {
-			OR = {
-				text = civic_tooltip_militarist
-				value = ethic_militarist
-				value = ethic_fanatic_militarist
-			}
-		}
-	}
-
-	random_weight = { base = 5 }
-
-	modifier = {
-		admiral_skill_levels = 1
-		general_skill_levels = 1
-	}
-}
-lrsk_gov_var_civic_chivalry_aristo = {
-	potential = {
-		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-				value = auth_imperial
-			}
-		}
-	}
-
-	playable = { GVP_TRIGGER = yes }
-
-	description = "civic_tooltip_lrsk_gov_var_civic_chivalry_effects"
-	icon = "gfx/interface/icons/governments/civics/lrsk_gov_var_civic_chivalry.dds"
-
-	possible = {
-		civics ={
-			value = civic_aristocratic_elite
 		}
 		ethics = {
 			OR = {
@@ -623,15 +480,10 @@ lrsk_gov_var_civic_chivalry_aristo = {
 lrsk_gov_var_civic_lifelong_learning = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 
-	playable = { GVP_TRIGGER = yes }
+	playable = { lrsk_gvp_is_active = yes }
 
 	description = "civic_tooltip_lrsk_gov_var_civic_lifelong_learning_effects"
 	#icon = "gfx/interface/icons/governments/civics/civic_meritocracy.dds"
@@ -639,10 +491,8 @@ lrsk_gov_var_civic_lifelong_learning = {
 	possible = {
 		authority = {
 			OR = {
-				value = auth_democratic
-				value = auth_direct_democratic
-				value = auth_strict_democratic
-				value = auth_democratic_dictatorship
+				text = civic_tooltip_democratic
+				inline_script = governments/conditions/auth_democratic
 			}
 		}
 		ethics = {
@@ -667,15 +517,10 @@ lrsk_gov_var_civic_lifelong_learning = {
 lrsk_gov_var_civic_institutionalized_collectivism = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 
-	playable = { GVP_TRIGGER = yes }
+	playable = { lrsk_gvp_is_active = yes }
 
 	#icon = "gfx/interface/icons/governments/civics/civic_mining_guilds.dds"
 
@@ -685,13 +530,13 @@ lrsk_gov_var_civic_institutionalized_collectivism = {
 		#    value = auth_democratic
 		#  }
 		#}
-		#ethics = {
-		#  OR = {
-		#    text = civic_tooltip_materialist
-		#    value = ethic_materialist
-		#    value = ethic_fanatic_materialist
-		#  }
-		#}
+		ethics = {
+		 OR = {
+		   text = civic_tooltip_socialism
+		   value = ethic_socialism
+		   value = ethic_fanatic_socialism
+		 }
+		}
 		civics = {
 			NOR = {
 				value = lrsk_gov_var_civic_enlightened_liberalism
@@ -718,15 +563,10 @@ lrsk_gov_var_civic_institutionalized_collectivism = {
 lrsk_gov_var_civic_direct_revelation  = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 
-	playable = { GVP_TRIGGER = yes }
+	playable = { lrsk_gvp_is_active = yes }
 
 	description = "civic_tooltip_lrsk_gov_var_civic_direct_revelation_effects"
 	#icon = "gfx/interface/icons/governments/civics/lrsk_gov_var_civic_direct_revelation.dds"
@@ -792,15 +632,10 @@ lrsk_gov_var_civic_direct_revelation  = {
 lrsk_gov_var_civic_royal_absolutism = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 
-	playable = { GVP_TRIGGER = yes }
+	playable = { lrsk_gvp_is_active = yes }
 
 	description = "civic_tooltip_lrsk_gov_var_civic_royal_absolutism_effects"
 	#icon = "gfx/interface/icons/governments/civics/civic_philosopher_king.dds"
@@ -808,7 +643,8 @@ lrsk_gov_var_civic_royal_absolutism = {
 	possible = {
 		authority = {
 			OR = {
-				value = auth_imperial
+				text = civic_tooltip_heir
+				inline_script = governments/conditions/auth_imperial
 			}
 		}
 		ethics = {
@@ -825,7 +661,7 @@ lrsk_gov_var_civic_royal_absolutism = {
 	modifier = {
 		pop_ethics_shift_speed_mult = -0.5
 		edicts_upkeep_mult = -0.1
-		country_edict_fund_add = 30
+		country_edict_fund_add = 40
 	}
 }
 
@@ -833,15 +669,10 @@ lrsk_gov_var_civic_royal_absolutism = {
 lrsk_gov_var_civic_public_works = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 
-	playable = { GVP_TRIGGER = yes }
+	playable = { lrsk_gvp_is_active = yes }
 
 	#icon = "gfx/interface/icons/governments/civics/civic_functional_architecture.dds"
 
@@ -857,15 +688,10 @@ lrsk_gov_var_civic_public_works = {
 lrsk_gov_var_civic_imperial_economy = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 
-	playable = { GVP_TRIGGER = yes }
+	playable = { lrsk_gvp_is_active = yes }
 
 	description = "civic_tooltip_lrsk_gov_var_civic_imperial_economy_effects"
 
@@ -874,11 +700,9 @@ lrsk_gov_var_civic_imperial_economy = {
 	possible = {
 		authority = {
 			OR = {
-				text = civic_tooltip_dic_imp
-				value = auth_dictatorial
-				value = auth_democratic_dictatorship
-				value = auth_imperial
-				value = auth_corporate_imperial
+				text = civic_tooltip_dic_imp_NEW
+				inline_script = governments/conditions/auth_imperial
+				inline_script = governments/conditions/auth_dictatorial
 			}
 		}
 		ethics = {
@@ -909,15 +733,10 @@ lrsk_gov_var_civic_imperial_economy = {
 lrsk_gov_var_civic_colonial_fiefs = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 
-	playable = { GVP_TRIGGER = yes }
+	playable = { lrsk_gvp_is_active = yes }
 
 	description = "civic_tooltip_lrsk_gov_var_civic_colonial_fiefs_effects"
 
@@ -926,8 +745,8 @@ lrsk_gov_var_civic_colonial_fiefs = {
 	possible = {
 		authority = {
 			OR = {
-				value = auth_imperial
-				value = auth_corporate_imperial
+				text = civic_tooltip_heir
+				inline_script = governments/conditions/auth_imperial
 			}
 		}
 		ethics = {
@@ -951,15 +770,10 @@ lrsk_gov_var_civic_colonial_fiefs = {
 lrsk_gov_var_civic_automated_indolence = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 
-	playable = { GVP_TRIGGER = yes }
+	playable = { lrsk_gvp_is_active = yes }
 
 	#icon = "gfx/interface/icons/governments/civics/civic_distinguished_admiralty.dds"
 

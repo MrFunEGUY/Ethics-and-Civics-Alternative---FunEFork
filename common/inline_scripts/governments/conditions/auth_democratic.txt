@@ -1,0 +1,4 @@
+value = auth_democratic
+value = auth_strict_democratic
+value = auth_dict_democratic
+value = auth_direct_democratic

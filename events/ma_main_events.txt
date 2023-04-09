@@ -156,7 +156,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_authority = auth_democratic_dictatorship
+		has_authority = auth_dict_democratic
 		OR = {
 			has_event_chain = mandate_separatist_chain
 			has_event_chain = mandate_emancipation_chain
@@ -288,7 +288,7 @@ country_event = {
 # 	is_triggered_only = yes
 
 # 	trigger = {
-# 		has_authority = auth_democratic_dictatorship
+# 		has_authority = auth_dict_democratic
 # 		exists = ruler
 # 	}
 	

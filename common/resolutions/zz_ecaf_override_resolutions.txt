@@ -859,6 +859,12 @@ resolution_ecology_paradise_initiative = {
 	ai_weight = {
 		base = @resolution_weight_disliked
 
+		modifier = { # Ariphaos
+			factor = 0
+			in_breach_of = resolution_ecology_environmental_control_board
+			desc = gal_com_in_breach_of_proposed_resolution
+		}
+
 		modifier = {
 			factor = 2
 			OR = {
@@ -1069,8 +1075,7 @@ resolution_commerce_repeal_2 = {
 
 		modifier = { # Ariphaos
             factor = 0.5
-            any_country = {
-                is_country_type = default
+            any_playable_country = {
                 has_commercial_pact = prev
             }
             desc = ariphaos_patch_gal_com_have_commercial_pacts

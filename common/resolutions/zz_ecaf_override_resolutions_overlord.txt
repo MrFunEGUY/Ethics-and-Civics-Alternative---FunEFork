@@ -98,6 +98,28 @@ resolution_defenseprivatization_defense_contracts = {
 			desc = ethic_socialism
 		}
 
+		modifier = { # Ariphaos
+			factor = 0
+			OR = {
+				has_valid_civic = civic_free_traders
+				has_valid_civic = civic_trading_posts
+				has_valid_civic = civic_merchant_guilds
+			}
+			desc = gal_com_trade_civic
+		}
+
+		modifier = { # Ariphaos
+			factor = 0
+			has_civic = civic_private_military_companies
+			desc = civic_private_military_companies
+		}
+
+		modifier = { # Ariphaos
+			factor = 0
+			has_ascension_perk = ap_lord_of_war
+			desc = ap_lord_of_war
+		}
+
 		modifier = {
 			factor = 0.8
 			is_gestalt = yes
@@ -186,6 +208,29 @@ resolution_defenseprivatization_private_support_troops = {
 			factor = 0
 			is_socialism = yes # ECAF
 			desc = ethic_socialism
+		}
+
+		modifier = { # Ariphaos
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_free_traders
+				has_valid_civic = civic_trading_posts
+				has_valid_civic = civic_merchant_guilds
+			}
+			desc = gal_com_trade_civic
+		}
+
+		modifier = { # Ariphaos
+			factor = 2
+			has_civic = civic_private_military_companies
+			desc = civic_private_military_companies
+		}
+
+		modifier = { # Ariphaos
+			factor = 3
+
+			has_ascension_perk = ap_lord_of_war
+			desc = ap_lord_of_war
 		}
 
 		modifier = {

@@ -227,7 +227,7 @@ ethic_fanatic_egalitarian = {
 	}
 	country_modifier = {
 		pop_factions_produces_mult = 0.5
-		country_admin_cap_mult = 0.2
+		empire_size_penalty_mult = -0.2
 		pop_ethics_shift_speed_mult = 0.2
 		planet_stability_add = -5
 	}
@@ -2419,7 +2419,7 @@ ethic_fanatic_socialism = {
 		trade_value_mult = -0.1
 	}
 	random_weight = {
-		base = 150
+		base = 125
 	}
 }
 
@@ -2431,14 +2431,14 @@ ethic_socialism = {
 	tags = {
 	}
 	country_modifier = {
-		pop_citizen_happiness = 0.1
+		pop_citizen_happiness = 0.05
 		pop_amenities_usage_mult = -0.1
 		country_society_tech_research_speed = 0.05
 		pop_cat_worker_political_power = 1
 		trade_value_mult = -0.05
 	}
 	random_weight = {
-		base = 100
+		base = 85
 	}
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_SOCIALISM_POS

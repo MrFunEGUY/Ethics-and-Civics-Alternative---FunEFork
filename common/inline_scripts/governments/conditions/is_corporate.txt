@@ -1,0 +1,9 @@
+OR = {
+	authority = {
+		OR = {
+			value = auth_corporate
+			value = auth_corporate_imperial
+		}
+	}
+	civics = { value = civic_galactic_sovereign_megacorp }
+}

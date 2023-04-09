@@ -260,7 +260,6 @@ empire_name_format = {
 				# has_government = "gov_social_nationalism"
 				has_government = "gov_peoples_republic"
 				has_government = "gov_national_socialism"
-				has_government = "gov_republican_dictatorship"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -286,7 +285,6 @@ empire_name_format = {
 				# has_government = "gov_enlightened_dictatorship"
 				has_government = "gov_peoples_republic"
 				has_government = "gov_national_socialism"
-				has_government = "gov_republican_dictatorship"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -312,7 +310,6 @@ empire_name_format = {
 				# has_government = "gov_enlightened_dictatorship"
 				has_government = "gov_peoples_republic"
 				has_government = "gov_national_socialism"
-				has_government = "gov_republican_dictatorship"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -337,7 +334,6 @@ empire_name_format = {
 				####
 				# has_government = "gov_enlightened_dictatorship"
 				has_government = "gov_peoples_republic"
-				has_government = "gov_republican_dictatorship"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -373,6 +369,7 @@ empire_name_format = {
 				has_government = "gov_noble_aristocracy"
 				has_government = "gov_oligarchic_republic"
 				has_government = "gov_minarchy"
+				has_government = "gov_benevolent_aristocracy"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -407,6 +404,7 @@ empire_name_format = {
 				has_government = "gov_noble_aristocracy"
 				has_government = "gov_oligarchic_republic"
 				has_government = "gov_minarchy"
+				has_government = "gov_benevolent_aristocracy"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -440,6 +438,7 @@ empire_name_format = {
 				has_government = "gov_noble_aristocracy"
 				has_government = "gov_oligarchic_republic"
 				has_government = "gov_minarchy"
+				has_government = "gov_benevolent_aristocracy"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -472,6 +471,7 @@ empire_name_format = {
 				has_government = "gov_noble_aristocracy"
 				has_government = "gov_oligarchic_republic"
 				has_government = "gov_minarchy"
+				has_government = "gov_benevolent_aristocracy"
 			}
 			is_pirate = no
 			is_primitive = no

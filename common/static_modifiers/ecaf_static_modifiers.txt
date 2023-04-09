@@ -70,3 +70,15 @@ promoted_socialism = {
   pop_ethic_socialism_attraction_mult = 1
   country_base_influence_produces_add = -2
 }
+
+espionage_pre_ftl_indoctrination_socialism = {
+  icon = "gfx/interface/icons/planet_modifiers/pm_politics.dds"
+  icon_frame = 2 # yellow
+  pop_ethic_socialism_attraction_mult = 0.3
+}
+
+espionage_pre_ftl_indoctrination_capitalism = {
+  icon = "gfx/interface/icons/planet_modifiers/pm_politics.dds"
+  icon_frame = 2 # yellow
+  pop_ethic_capitalism_attraction_mult = 0.3
+}

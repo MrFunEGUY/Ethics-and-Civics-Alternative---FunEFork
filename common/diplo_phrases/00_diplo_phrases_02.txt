@@ -1300,7 +1300,7 @@ action_invite_to_federation = {
 	#propose_vote = {
 	#	01_ITOA_VOTE_PROPOSE = {
 	#		trigger = {
-	#			NOT = { is_gestalt = yes }
+	#			is_gestalt = no
 	#		}
 	#	}
 	#	HM_ITOA_VOTE_PROPOSE = {
@@ -3349,8 +3349,6 @@ action_demand_subjugation = {
 					has_ai_personality = fanatic_purifiers
 					is_xenophobe = yes
 					is_megacorp = yes
-				}
-				NOT = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
 					is_protective_to = FROM
@@ -3674,8 +3672,6 @@ action_demand_subjugation = {
 					has_ai_personality = fanatic_purifiers
 					is_xenophobe = yes
 					is_megacorp = yes
-				}
-				NOT = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
 					is_protective_to = FROM

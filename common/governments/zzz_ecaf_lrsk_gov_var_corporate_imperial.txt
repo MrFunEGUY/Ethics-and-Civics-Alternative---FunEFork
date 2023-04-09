@@ -14,7 +14,7 @@ lrsk_gov_var_gov_galactic_cartel_fam = {
 	dynastic_last_names = yes
 
 	possible = {
-		GVP_TRIGGER = yes
+		lrsk_gvp_is_active = yes
 		OR = {
 			AND = {
 				has_valid_civic = civic_corporate_dominion
@@ -29,14 +29,11 @@ lrsk_gov_var_gov_galactic_cartel_fam = {
 				has_valid_civic = civic_brand_loyalty
 			}
 		}
-		OR = {
-			has_ethic = ethic_fanatic_militarist
-			has_ethic = ethic_militarist
-		}
+		is_militarist = yes
 	}
 
 	weight = {
-		base = 1000
+		base = 2000
 	}
 }
 
@@ -52,7 +49,7 @@ lrsk_gov_var_gov_rationalist_managerial_firm_fam = {
 	dynastic_last_names = yes
 
 	possible = {
-		GVP_TRIGGER = yes		
+		lrsk_gvp_is_active = yes		
 		OR = {
 			AND = {
 				has_valid_civic = civic_corporate_dominion
@@ -66,7 +63,7 @@ lrsk_gov_var_gov_rationalist_managerial_firm_fam = {
 	}
 
 	weight = {
-		base = 1000
+		base = 2000
 		modifier = {
 			add = 100
 			has_ethic = ethic_authoritarian
@@ -87,13 +84,13 @@ lrsk_gov_var_gov_private_intel_agency_fam = {
 	dynastic_last_names = yes
 
 	possible = {
-		GVP_TRIGGER = yes		
+		lrsk_gvp_is_active = yes		
 		has_authority = auth_corporate_imperial
 		has_valid_civic = lrsk_gov_var_civic_mc_police_state
 	}
 
 	weight = {
-		base = 1000
+		base = 2000
 		modifier = {
 			factor = 0.8
 			has_valid_civic = civic_gospel_of_the_masses
@@ -113,14 +110,14 @@ lrsk_gov_var_gov_protection_racket_fam = {
 	dynastic_last_names = yes
 
 	possible = {
-		GVP_TRIGGER = yes		
+		lrsk_gvp_is_active = yes		
 		has_authority = auth_corporate_imperial
 		has_valid_civic = lrsk_gov_var_civic_mc_police_state
 		has_valid_civic = civic_criminal_heritage
 	}
 
 	weight = {
-		base = 1750
+		base = 2750
 	}
 }
 
@@ -141,7 +138,7 @@ lrsk_gov_var_gov_crusading_company_fam = {
 	dynastic_last_names = yes
 
 	possible = {
-		GVP_TRIGGER = yes
+		lrsk_gvp_is_active = yes
 		#OR = {
 		#	has_ethic = ethic_fanatic_militarist
 		#	has_ethic = ethic_fanatic_spiritualist
@@ -165,7 +162,7 @@ lrsk_gov_var_gov_crusading_company_fam = {
 	}
 
 	weight = {
-		base = 1500
+		base = 2500
 	}
 }
 
@@ -180,13 +177,13 @@ lrsk_gov_var_gov_colonial_viceroyalty_cmp_fam = {
 	dynastic_last_names = yes
 
 	possible = {
-		GVP_TRIGGER = yes
+		lrsk_gvp_is_active = yes
 		has_authority = auth_corporate_imperial
 		has_origin = lrsk_gov_var_origin_colonial_venture
 	}
 
 	weight = {
-		base = 110000
+		base = 120000
 	}
 }
 
@@ -206,7 +203,7 @@ lrsk_gov_var_gov_evangelical_franchise_fam = {
 	dynastic_last_names = yes
 
 	possible = {
-		GVP_TRIGGER = yes
+		lrsk_gvp_is_active = yes
 		OR = {
 			AND = {
 				has_valid_civic = civic_corporate_dominion
@@ -222,7 +219,7 @@ lrsk_gov_var_gov_evangelical_franchise_fam = {
 	}
 
 	weight = {
-		base = 1300
+		base = 1400
 	}
 }
 
@@ -238,7 +235,7 @@ lrsk_gov_var_gov_occult_franchise_fam = {
 	dynastic_last_names = yes
 
 	possible = {
-		GVP_TRIGGER = yes
+		lrsk_gvp_is_active = yes
 		OR = {
 			AND = {
 				has_valid_civic = civic_corporate_dominion
@@ -254,7 +251,7 @@ lrsk_gov_var_gov_occult_franchise_fam = {
 	}
 
 	weight = {
-		base = 1300
+		base = 1500
 	}
 }
 
@@ -274,7 +271,7 @@ lrsk_gov_var_gov_innovation_initiative_fam = {
 	dynastic_last_names = yes
 
 	possible = {
-		GVP_TRIGGER = yes
+		lrsk_gvp_is_active = yes
 		OR = {
 			AND = {
 				has_valid_civic = civic_corporate_dominion
@@ -290,7 +287,7 @@ lrsk_gov_var_gov_innovation_initiative_fam = {
 	}
 
 	weight = {
-		base = 1001
+		base = 3000
 		modifier = {
 			add = 100
 			has_ethic = ethic_materialist
@@ -318,7 +315,7 @@ lrsk_gov_var_gov_private_military_contractor_fam = {
 	dynastic_last_names = yes
 
 	possible = {
-		GVP_TRIGGER = yes
+		lrsk_gvp_is_active = yes
 		OR = {
 			AND = {
 				has_valid_civic = civic_corporate_dominion
@@ -337,6 +334,6 @@ lrsk_gov_var_gov_private_military_contractor_fam = {
 	leader_class = admiral
 
 	weight = {
-		base = 1000
+		base = 2000
 	}
 }

@@ -10,17 +10,12 @@ lrsk_gov_var_origin_tradeways_mc = {
 	max_once_global = yes
 
 	playable = {
-		GVP_TRIGGER = yes
+		lrsk_gvp_is_active = yes
 		host_has_dlc = "Federations"
 	}
 
 	possible = {
-		authority = {
-        	OR = {
-         		value = auth_corporate
-          		value = auth_corporate_imperial
-        	}
-      	}
+		authority = { OR = { inline_script = governments/conditions/auth_corporate } }
 		ethics = {
 			NOR = {
 				value = ethic_xenophobe

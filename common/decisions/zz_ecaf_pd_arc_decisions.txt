@@ -73,8 +73,10 @@ decision_capital_arc = {
 						NOT = { owner_main_species = { has_trait = trait_pc_pd_hycean_preference } }
 					}
 					planet = {
-						NOT = { has_deposit = d_pd_necro_arc }
-						NOT = { has_deposit = d_pd_shroud_arc }
+						NOR = {
+							has_deposit = d_pd_necro_arc
+							has_deposit = d_pd_shroud_arc
+						}
 					}
 				}
 				set_planet_entity = {
@@ -158,8 +160,10 @@ decision_capital_arc = {
 						NOT = { owner_main_species = { has_trait = trait_pc_pd_hycean_preference } }
 					}
 					planet = {
-						NOT = { has_deposit = d_pd_necro_arc }
-						NOT = { has_deposit = d_pd_shroud_arc }
+						NOR = {
+							has_deposit = d_pd_necro_arc
+							has_deposit = d_pd_shroud_arc
+						}
 					}
 				}
 				set_planet_entity = { picture = pc_milarccapital entity = milarc_planet_01_entity }
@@ -240,8 +244,10 @@ decision_capital_arc = {
 						NOT = { owner_main_species = { has_trait = trait_pc_pd_hycean_preference } }
 					}
 					planet = {
-						NOT = { has_deposit = d_pd_necro_arc }
-						NOT = { has_deposit = d_pd_shroud_arc }
+						NOR = {
+							has_deposit = d_pd_necro_arc
+							has_deposit = d_pd_shroud_arc
+						}
 					}
 				}
 				set_planet_entity = { picture = pc_ecocapital entity = ecocity_planet_entity }
@@ -353,8 +359,10 @@ decision_capital_arc = {
 						NOT = { owner_main_species = { has_trait = trait_pc_pd_hycean_preference } }
 					}
 					planet = {
-						NOT = { has_deposit = d_pd_necro_arc }
-						NOT = { has_deposit = d_pd_shroud_arc }
+						NOR = {
+							has_deposit = d_pd_necro_arc
+							has_deposit = d_pd_shroud_arc
+						}
 					}
 				}
 				set_planet_entity = { picture = pc_ringworldcapital }
@@ -446,8 +454,7 @@ decision_palace_arc = {
 			is_planet_class = pc_city
 			is_planet_class = pc_ecocity
 			is_planet_class = pc_milarc
-			is_planet_class = pc_ringworld_habitable
-			is_planet_class = pc_habitat
+			is_artificial = yes
 			is_planet_class = pc_pd_techno_arc
 		}
 		exists = owner
@@ -496,8 +503,10 @@ decision_palace_arc = {
 						NOT = { owner_main_species = { has_trait = trait_pc_pd_hycean_preference } }
 					}
 					planet = {
-						NOT = { has_deposit = d_pd_necro_arc }
-						NOT = { has_deposit = d_pd_shroud_arc }
+						NOR = {
+							has_deposit = d_pd_necro_arc
+							has_deposit = d_pd_shroud_arc
+						}
 					}
 				}
 				set_planet_entity = {
@@ -581,8 +590,10 @@ decision_palace_arc = {
 						NOT = { owner_main_species = { has_trait = trait_pc_pd_hycean_preference } }
 					}
 					planet = {
-						NOT = { has_deposit = d_pd_necro_arc }
-						NOT = { has_deposit = d_pd_shroud_arc }
+						NOR = {
+							has_deposit = d_pd_necro_arc
+							has_deposit = d_pd_shroud_arc
+						}
 					}
 				}
 				set_planet_entity = { picture = pc_milarcpalace entity = milarc_planet_01_entity }
@@ -663,8 +674,10 @@ decision_palace_arc = {
 						NOT = { owner_main_species = { has_trait = trait_pc_pd_hycean_preference } }
 					}
 					planet = {
-						NOT = { has_deposit = d_pd_necro_arc }
-						NOT = { has_deposit = d_pd_shroud_arc }
+						NOR = {
+							has_deposit = d_pd_necro_arc
+							has_deposit = d_pd_shroud_arc
+						}
 					}
 				}
 				set_planet_entity = { picture = pc_ecopalace entity = ecocity_planet_entity }
@@ -776,8 +789,10 @@ decision_palace_arc = {
 						NOT = { owner_main_species = { has_trait = trait_pc_pd_hycean_preference } }
 					}
 					planet = {
-						NOT = { has_deposit = d_pd_necro_arc }
-						NOT = { has_deposit = d_pd_shroud_arc }
+						NOR = {
+							has_deposit = d_pd_necro_arc
+							has_deposit = d_pd_shroud_arc
+						}
 					}
 				}
 				set_planet_entity = { picture = pc_ringworldpalace }

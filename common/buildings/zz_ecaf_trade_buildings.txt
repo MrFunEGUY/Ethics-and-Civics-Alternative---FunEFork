@@ -188,8 +188,10 @@ building_galactic_stock_exchange = {
 	category = trade
 
 	potential = {
-		NOT = { has_modifier = resort_colony }
-		NOT = { has_modifier = slave_colony }
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
 	}
 
 	allow = {

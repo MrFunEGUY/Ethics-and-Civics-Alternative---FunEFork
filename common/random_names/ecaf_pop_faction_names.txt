@@ -47,7 +47,7 @@ pop_faction_name_format = {
 			is_pop_faction_type = "socialists"
 		}
 	}
-	format = "<socialists_names_1> <socialists_names_2>"
+	format = "{<socialists_names_1> {<socialists_names_2>}}"
 }
 
 ## Capitalists
@@ -96,5 +96,5 @@ pop_faction_name_format = {
 			is_pop_faction_type = "bankers"
 		}
 	}
-	format = "<bankers_names_1> <bankers_names_2>"
+	format = "{<bankers_names_1> {<bankers_names_2>}}"
 }

@@ -1,0 +1,48 @@
+# # My mods that use these triggers, ie this file.
+# ################################################
+# # Civil Wars
+# # Fatherland: Colonial Empires
+# # More Authorites
+# # Useful Heirs
+# # Vassals Expanded and Reworked
+# # Viable Feudalism
+# # We Require Borders
+
+# has_imperial_government = {
+# 	OR = {
+# 		# Vanilla
+# 		has_government = "gov_despotic_empire"
+# 		has_government = "gov_theocratic_monarchy"
+# 		has_government = "gov_divine_empire"
+# 		has_government = "gov_star_empire"
+# 		has_government = "gov_martial_empire"
+# 		has_government = "gov_irenic_monarchy"
+# 		has_government = "gov_divine_empire"
+# 		has_government = "gov_divine_empire"
+# 		has_government = "gov_divine_empire"
+# 	}
+# }
+
+# has_dictatorial_government = {
+# 	OR = {
+		
+# 	}
+# }
+
+# has_democratic_government = {
+# 	OR = {
+		
+# 	}
+# }
+
+# has_oligarchic_government = {
+# 	OR = {
+		
+# 	}
+# }
+
+# has_imperial_government = {
+# 	OR = {
+		
+# 	}
+# }

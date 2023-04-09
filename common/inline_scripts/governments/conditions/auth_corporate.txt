@@ -1,0 +1,6 @@
+value = auth_corporate
+value = auth_corporate_imperial
+value = auth_cooperative		# More Corporate Authorities
+value = auth_corporate_fiefdom	# More Corporate Authorities
+value = auth_tec_patrocorporate	# Stellaris Evolved
+value = auth_tec_ai_corporate	# Stellaris Evolved

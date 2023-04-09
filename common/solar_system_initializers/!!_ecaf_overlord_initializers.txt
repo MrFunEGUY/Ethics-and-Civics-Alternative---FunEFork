@@ -177,8 +177,9 @@ overlord_system_init = { # Aix - Empire Capital
 				}
 				ethos = {
 					ethic = ethic_xenophile
-					ethic = ethic_fanatic_militarist
-					ethic = ethic_fanatic_materialist
+					ethic = ethic_militarist
+					ethic = ethic_materialist
+					ethic = ethic_fanatic_authoritarian
 				}
 				origin = "origin_imperial_vassal_overlord"
 
@@ -954,7 +955,7 @@ overlord_system_5_init = { # Second vassal
 							key = "NAME_Imperial_Origin_Empire_3"
 							variable_string = "[origin_imperial_species_3.GetNamePlural]"
 						}
-						authority = auth_democratic_dictatorship
+						authority = auth_dict_democratic
 						species = last_created_species
 						civics = {
 							civic = civic_warrior_culture
@@ -1348,7 +1349,7 @@ overlord_system_6_init = { # Third vassal
 							key = "NAME_Imperial_Origin_Empire_4"
 							variable_string = "[origin_imperial_species_4.GetNamePlural]"
 						}
-						authority = auth_democratic_dictatorship
+						authority = auth_dict_democratic
 						species = last_created_species
 						civics = {
 							civic = civic_philosopher_king

@@ -37,13 +37,7 @@ civic_corvee_system = {
 	description = "civic_corvee_system_effects"
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		ethics = {
@@ -88,18 +82,14 @@ civic_corvee_system = {
 civic_imperial_cult = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		authority = {
-			text = civic_tooltip_heir
-			inline_script = civics/authorities/auth_imperial
+			OR = {
+				text = civic_tooltip_heir
+				inline_script = governments/conditions/auth_imperial
+			}
 		}
 		ethics = {
 			value = ethic_fanatic_spiritualist
@@ -148,18 +138,14 @@ civic_imperial_cult = {
 civic_beacon_of_liberty = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		authority = {
-			text = civic_tooltip_democratic
-			inline_script = civics/authorities/auth_democratic
+			OR = {
+				text = civic_tooltip_democratic
+				inline_script = governments/conditions/auth_democratic
+			}
 		}
 		ethics = {
 			OR = {
@@ -221,18 +207,16 @@ civic_exalted_priesthood = {
 	description = "civic_tooltip_exalted_priesthood_effects"
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		authority = {
-			text = civic_tooltip_dic_imp_oli
-			inline_script = civics/authorities/auth_imp_dict_oli
+			OR = {
+				text = civic_tooltip_dic_imp_oli
+				inline_script = governments/conditions/auth_imperial
+				inline_script = governments/conditions/auth_dictatorial
+				inline_script = governments/conditions/auth_oligarchic
+			}
 		}
 		ethics = {
 			OR = {
@@ -298,21 +282,18 @@ civic_philosopher_king = {
 	description = "civic_tooltip_philosopher_king_effects"
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		ethics = {
 			value = ethic_fanatic_pacifist
 		}
 		authority = {
-			text = civic_tooltip_dic_imp_NEW
-			inline_script = civics/authorities/auth_imp_dict
+			OR = {
+				text = civic_tooltip_dic_imp_NEW
+				inline_script = governments/conditions/auth_imperial
+				inline_script = governments/conditions/auth_dictatorial
+			}
 		}
 		# civics = {
 		# 	NOR = {
@@ -365,13 +346,7 @@ civic_philosopher_king = {
 civic_meritocracy = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		ethics = {
@@ -384,6 +359,7 @@ civic_meritocracy = {
 				value = civic_aristocratic_elite
 				value = civic_divine_order
 				value = civic_state_monopoly
+				value = civic_ultimate_collective
 			}
 		}
 	}
@@ -425,13 +401,7 @@ civic_meritocracy = {
 civic_citizen_service = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		ethics = {
@@ -446,8 +416,11 @@ civic_citizen_service = {
 			}
 		}
 		authority = {
-			text = civic_tooltip_dem_oli_NEW
-			inline_script = civics/authorities/auth_dem_oli
+			OR = {
+				text = civic_tooltip_dem_oli_NEW
+				inline_script = governments/conditions/auth_democratic
+				inline_script = governments/conditions/auth_oligarchic
+			}
 		}
 		# civics = {
 		# 	NOR = {
@@ -506,13 +479,7 @@ civic_technocracy = {
 	description = civic_tooltip_technocracy_effects
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		ethics = {
@@ -566,18 +533,14 @@ civic_technocracy = {
 civic_feudal_realm = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		authority = {
-			text = civic_tooltip_heir
-			inline_script = civics/authorities/auth_imperial
+			OR = {
+				text = civic_tooltip_heir
+				inline_script = governments/conditions/auth_imperial
+			}
 		}
 	}
 	random_weight = { base = @civic_default_random_weight }
@@ -611,7 +574,7 @@ civic_feudal_realm = {
 	modifier = {
 		leaders_cost_mult = -0.5
 		job_noble_per_pop = 0.05
-		country_admin_cap_mult = 0.15
+		empire_size_penalty_mult = -0.2
 		country_produces_mult = -0.1
 	}
 	description = "civic_tooltip_feudal_realm_effects"
@@ -620,13 +583,7 @@ civic_feudal_realm = {
 civic_police_state = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		ethics = {
@@ -686,13 +643,7 @@ civic_police_state = {
 civic_idealistic_foundation = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		ethics = {
@@ -752,13 +703,7 @@ civic_idealistic_foundation = {
 civic_environmentalist = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		ethics = {
@@ -819,13 +764,7 @@ civic_environmentalist = {
 civic_slaver_guilds = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		origin = { NOT = { value = origin_infiltrators } } # Added - Extra Origins
@@ -876,7 +815,7 @@ civic_slaver_guilds = {
 	}
 	modifier = {
 		planet_jobs_slave_produces_mult = 0.10
-		country_pop_enslaved_mult = 0.35
+		# country_pop_enslaved_mult = 0.35 # Now has policy
 	}
 }
 
@@ -885,13 +824,7 @@ civic_inwards_perfection = {
 	description = "civic_tooltip_inward_perfection_effects"
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		ethics = {
@@ -969,13 +902,7 @@ civic_inwards_perfection = {
 civic_warrior_culture = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		ethics = {
@@ -1044,13 +971,7 @@ civic_distinguished_admiralty = {
 	description = civic_tooltip_distinguished_admiralty_effects
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		ethics = {
@@ -1100,13 +1021,7 @@ civic_distinguished_admiralty = {
 civic_free_haven = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		ethics = {
@@ -1165,13 +1080,7 @@ civic_free_haven = {
 civic_cutthroat_politics = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = { 
@@ -1216,17 +1125,11 @@ civic_corporate_dominion = {
 	ai_playable = { NOT = { host_has_dlc = "Megacorp" } }
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		authority = {
-			value = auth_oligarchic
+			inline_script = governments/conditions/auth_oligarchic
 		}
 		ethics = {
 			NOR = {
@@ -1289,13 +1192,7 @@ civic_agrarian_idyll = {
 	description = "civic_tooltip_agrarian_idyll_effects"
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		ethics = {
@@ -1363,18 +1260,16 @@ civic_agrarian_idyll = {
 civic_shadow_council = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		authority = {
-			text = civic_tooltip_dem_oli_dic
-			inline_script = civics/authorities/auth_dem_oli_dict
+			OR {
+				text = civic_tooltip_dem_oli_dic
+				inline_script = governments/conditions/auth_democratic
+				inline_script = governments/conditions/auth_oligarchic
+				inline_script = governments/conditions/auth_dictatorial
+			}
 		}
 	}
 	ai_weight = { 
@@ -1413,13 +1308,7 @@ civic_shadow_council = {
 civic_mining_guilds = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = { 
@@ -1452,18 +1341,14 @@ civic_mining_guilds = {
 civic_parliamentary_system = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		authority = {
-			text = civic_tooltip_democratic
-			inline_script = civics/authorities/auth_democratic
+			OR = {
+				text = civic_tooltip_democratic
+				inline_script = governments/conditions/auth_democratic
+			}
 		}
 	}
 	random_weight = { base = @civic_default_random_weight }
@@ -1507,13 +1392,7 @@ civic_parliamentary_system = {
 civic_efficient_bureaucracy = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		civics = { NOT = { value = civic_byzantine_bureaucracy } }
@@ -1549,7 +1428,7 @@ civic_efficient_bureaucracy = {
 	description = "civic_tooltip_efficient_bureaucracy_effects"
 	modifier = {
 		planet_administrators_upkeep_mult = -0.15
-		country_admin_cap_mult = 0.1
+		empire_size_penalty_mult = -0.1
 		starbases_upkeep_mult = -0.1
 		decisions_cost_mult = -0.1
 		planet_bureaucrats_upkeep_mult = 0.1
@@ -1559,13 +1438,7 @@ civic_efficient_bureaucracy = {
 civic_nationalistic_zeal = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		ethics = {
@@ -1625,13 +1498,7 @@ civic_functional_architecture = {
 	description = "civic_tooltip_functional_architecture_effects"
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = { 
@@ -1664,13 +1531,7 @@ civic_aristocratic_elite = {
 	description = "civic_tooltip_aristocratic_elite_effects"
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	modifier = {
 		governor_skill_levels = 3
@@ -1679,8 +1540,12 @@ civic_aristocratic_elite = {
 	}
 	possible = {
 		authority = {
-			text = civic_tooltip_dic_imp_oli
-			inline_script = civics/authorities/auth_imp_dict_oli
+			OR = {
+				text = civic_tooltip_dic_imp_oli
+				inline_script = governments/conditions/auth_imperial
+				inline_script = governments/conditions/auth_dictatorial
+				inline_script = governments/conditions/auth_oligarchic
+			}
 		}
 		ethics = {
 			NOR = {
@@ -1691,7 +1556,7 @@ civic_aristocratic_elite = {
 		}
 		civics = {
 			NOR = {
-				value = civic_political_pluralism
+				# value = civic_political_pluralism
 				value = civic_merchant_guilds
 				value = civic_meritocracy
 				# value = civic_state_monopoly
@@ -1711,6 +1576,7 @@ civic_aristocratic_elite = {
 				value = civic_technocracy
 				value = civic_bureaucracy
 				value = civic_stratocracy
+				value = civic_shared_burden
 			}
 		}
 	}
@@ -1751,32 +1617,27 @@ civic_shared_burden = {
 	ai_playable = { host_has_dlc = "Megacorp" }
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		# authority = {
 		# 	text = civic_tooltip_democratic
-		# 	inline_script = civics/authorities/auth_democratic
+		# 	inline_script = governments/conditions/auth_democratic
 		# }
 		ethics = {
 			value = ethic_fanatic_socialism
-			NOR = {
-				text = civic_tooltip_not_xenophobe
-				value = ethic_xenophobe
-				value = ethic_fanatic_xenophobe
-			}
+			# NOR = {
+			# 	text = civic_tooltip_not_xenophobe
+			# 	value = ethic_xenophobe
+			# 	value = ethic_fanatic_xenophobe
+			# }
 		}
 		civics = {
-			NOT = {
+			NOR = {
 				value = civic_technocracy
 				value = civic_pleasure_seekers
 				value = civic_welfare_state
+				value = civic_aristocratic_elite
 			}
 		}
 	}
@@ -1829,27 +1690,20 @@ civic_fanatic_purifiers = {
 	ai_playable = { host_has_dlc = "Utopia" }
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		ethics = {
 			value = ethic_fanatic_xenophobe
 			OR = {
+				text = civic_tooltip_militarist
 				value = ethic_militarist
 				value = ethic_fanatic_militarist
+			}
+			OR = {
+				text = civic_tooltip_spiritualist
 				value = ethic_spiritualist
 				value = ethic_fanatic_spiritualist
-			}
-			NOR = {
-				text = civic_tooltip_not_pacifist
-				value = ethic_pacifist
-				value = ethic_fanatic_pacifist
 			}
 		}
 		civics = {
@@ -1906,13 +1760,7 @@ civic_barbaric_despoilers = {
 	}
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 		origin = {
 			NOT = {
 				value = origin_slavers
@@ -1933,13 +1781,20 @@ civic_barbaric_despoilers = {
 				value = ethic_xenophobe
 			}
 			NOR = {
+				text = civic_tooltip_not_xenophile
 				value = ethic_xenophile
 				value = ethic_fanatic_xenophile
+			}
+			NOR = {
+				text = civic_tooltip_not_socialism
+				value = ethic_socialism
+				value = ethic_fanatic_socialism
 			}
 		}
 		civics = {
 			NOR = {
 				value = civic_fanatic_purifiers
+				value = civic_shared_burden
 			}
 		}
 		origin = {
@@ -1981,13 +1836,7 @@ civic_byzantine_bureaucracy = {
 	ai_playable = { host_has_dlc = "Megacorp" }
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		ethics = {
@@ -2038,13 +1887,7 @@ civic_merchant_guilds = {
 	ai_playable = { host_has_dlc = "Megacorp" }
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		civics = {
@@ -2116,13 +1959,7 @@ civic_reanimated_armies = {
 	ai_playable = { host_has_dlc = "Necroids Species Pack" }
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		ethics = {
@@ -2182,13 +2019,7 @@ civic_diplomatic_corps = {
 	ai_playable = { host_has_dlc = "Federations" }
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		civics = {
@@ -2245,13 +2076,7 @@ civic_death_cult = {
 	description = "civic_tooltip_death_cult_effects"
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		} #Corps get their own version
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } } #Corps get their own version
 	}
 	possible = {
 		origin = {
@@ -2313,13 +2138,7 @@ civic_memorialist = {
 	description = "civic_tooltip_memorialist_effects"
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } } #Gestalts get their own versions
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		civics = {
@@ -2370,13 +2189,7 @@ civic_catalytic_processing = {
 	description = "civic_tooltip_catalytic_processing_effects"
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } } #Gestalts get their own versions
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		origin = {
@@ -2402,13 +2215,7 @@ civic_crafters = {
 	description = "civic_tooltip_crafters_effects"
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		always = yes
@@ -2448,13 +2255,7 @@ civic_pleasure_seekers = {
 	description = "civic_tooltip_pleasure_seekers_effects"
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		civics = {
@@ -2502,13 +2303,7 @@ civic_idyllic_bloom = {
 	description = "civic_tooltip_idyllic_bloom_effects"
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		species_class = {
@@ -2538,13 +2333,7 @@ civic_anglers = {
 	description = "civic_tooltip_anglers_effects"
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		origin = {
@@ -2574,13 +2363,7 @@ civic_pompous_purists = {
 	description = "civic_tooltip_pompous_purists_effects"
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		ethics = {
@@ -2646,13 +2429,7 @@ civic_toxic_baths = {
 	description = "civic_tooltip_toxic_baths_effects"
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		origin = { NOT = { value = origin_life_seeded } }
@@ -2686,13 +2463,7 @@ civic_relentless_industrialists = {
 	description = "civic_tooltip_relentless_industrialists_effects"
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		ethics = {
@@ -2756,13 +2527,7 @@ civic_scavengers = {
 	description = "civic_scavengers_effects"
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		civics = {
@@ -2809,13 +2574,7 @@ civic_ascensionists = {
 	ai_playable = { host_has_dlc = "Utopia" }
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
 		ethics = {
@@ -2871,13 +2630,7 @@ civic_eager_explorers = {
 	modification = no
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		# authority = { NOT = { inline_script = civics/authorities/auth_corporate } }
-		authority = {
-			NOR = {
-				value = auth_corporate
-				value = auth_corporate_imperial
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 
 	possible = {

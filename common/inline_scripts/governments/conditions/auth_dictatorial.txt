@@ -1,0 +1,3 @@
+value = auth_dictatorial
+value = auth_dict_democratic
+value = auth_tec_theocracy		# Stellaris Evolved

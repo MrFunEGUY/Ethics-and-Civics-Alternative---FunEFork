@@ -43,33 +43,6 @@ nutritional_plenitude = {
 	}
 }
 
-# Immortal Ruler
-immortal_ruler = {
-	length = 0
-	icon = "GFX_edict_type_time"
-	resources = {
-		category = edicts
-		cost = {
-			unity = @Edict3Cost
-			multiplier = value:edict_size_effect
-		}
-	}
-	potential = {
-		has_valid_civic = civic_imperial_cult
-		NOT = {
-			has_country_flag = flag_immortal_ruler
-		}
-	}
-	effect = {
-		country_event = {
-			id = immortal_ruler.1
-		}
-	}
-	ai_weight = {
-		weight = 1
-	}
-}
-
 # Patriotic Call
 patriotic_call = {
 	length = @EdictPerpetual

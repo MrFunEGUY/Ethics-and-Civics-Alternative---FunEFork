@@ -1,6 +1,7 @@
 ###################
 # Fancy Jobs
 ###################
+
 # Deep Core Miner
 deep_miner = {
 	category = specialist
@@ -1121,260 +1122,6 @@ xenobiologist = {
 	}
 }
 
-commandante = {
-	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	building_icon = building_stronghold
-	clothes_texture_index = 1
-	possible_pre_triggers = {
-		has_owner = yes
-		is_enslaved = no
-		is_being_purged = no
-		is_being_assimilated = no
-		is_sapient = yes
-	}
-	possible_precalc = can_fill_ruler_job
-	country_modifier = {
-		country_naval_cap_add = 3
-	}
-	resources = {
-		category = planet_politicians
-		produces = {
-			trigger = {
-				owner = {
-					has_valid_civic = civic_citizen_service
-				}
-			}
-			unity = 2
-		}
-	}
-	planet_modifier = {
-		planet_orbital_bombardment_damage = -0.15
-		planet_stability_add = 3
-		planet_amenities_add = 3
-	}
-	pop_modifier = {
-		pop_defense_armies_add = 2
-	}
-	triggered_planet_modifier = {
-		potential = {
-			has_trait = trait_repugnant
-		}
-		modifier = {
-			planet_amenities_add = -1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			owner = {
-				has_valid_civic = civic_citizen_service
-			}
-		}
-		modifier = {
-			planet_amenities_add = 3
-		}
-	}
-	weight = {
-		weight = @ruler_job_weight
-		modifier = {
-			factor = 2
-			OR = {
-				has_trait = trait_very_strong
-			}
-		}
-		modifier = {
-			factor = 1.5
-			OR = {
-				has_trait = trait_strong
-			}
-		}
-		modifier = {
-			factor = 0.5
-			has_trait = trait_repugnant
-		}
-		modifier = {
-			factor = 5
-			has_job = commandante
-		}
-		modifier = {
-			factor = 1.2
-			is_unemployed = yes
-			is_pop_category = ruler
-		}
-	}
-}
-
-#thinker
-supervisor = {
-	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	building_icon = building_capital
-	clothes_texture_index = 1
-	possible_pre_triggers = {
-		has_owner = yes
-		is_enslaved = no
-		is_being_purged = no
-		is_being_assimilated = no
-		is_sapient = yes
-	}
-	possible_precalc = can_fill_ruler_job
-	resources = {
-		category = planet_politicians
-		produces = {
-			unity = 4
-		}
-	}
-	country_modifier = {
-		country_admin_cap_add = 5
-	}
-	planet_modifier = {
-		planet_amenities_add = 6
-		planet_jobs_society_research_produces_mult = 0.05
-	}
-	triggered_planet_modifier = {
-		potential = {
-			has_trait = trait_repugnant
-		}
-		modifier = {
-			planet_amenities_add = -1
-		}
-	}
-	weight = {
-		weight = @ruler_job_weight
-		modifier = {
-			factor = 2
-			OR = {
-				has_trait = trait_talented
-			}
-		}
-		modifier = {
-			factor = 1.5
-			OR = {
-				has_trait = trait_charismatic
-			}
-		}
-		modifier = {
-			factor = 0.5
-			has_trait = trait_repugnant
-		}
-		modifier = {
-			factor = 5
-			has_job = supervisor
-		}
-		modifier = {
-			factor = 1.2
-			is_unemployed = yes
-			is_pop_category = ruler
-		}
-	}
-}
-
-#Mogul
-mogul = {
-	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	building_icon = building_galactic_stock_exchange
-	clothes_texture_index = 1
-	possible_pre_triggers = {
-		has_owner = yes
-		is_enslaved = no
-		is_being_purged = no
-		is_being_assimilated = no
-		is_sapient = yes
-	}
-	possible_precalc = can_fill_ruler_job
-	possible = {
-		NOT = {
-			owner = {
-				has_valid_civic = civic_distributism
-			}
-		}
-	}
-	planet_modifier = {
-		planet_amenities_add = 7
-		trade_value_add = 8
-	}
-	# planet_jobs_energy_produces_mult
-	triggered_planet_modifier = {
-		potential = {
-			has_trait = trait_thrifty
-		}
-		modifier = {
-			trade_value_add = 2
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			has_trait = trait_nuumismatic_administration
-		}
-		modifier = {
-			trade_value_add = 2
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			OR = {
-				owner = {
-					has_valid_civic = civic_merchant_guilds
-				}
-			}
-		}
-		modifier = {
-			planet_technician_produces_mult = 0.04
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			OR = {
-				owner = {
-					has_valid_civic = civic_state_monopoly
-				}
-			}
-		}
-		modifier = {
-			planet_technician_produces_mult = 0.05
-			planet_miners_produces_mult = 0.05
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			has_trait = trait_repugnant
-		}
-		modifier = {
-			planet_amenities_add = -1
-		}
-	}
-	weight = {
-		weight = @ruler_job_weight
-		modifier = {
-			factor = 2
-			OR = {
-				has_trait = trait_thrifty
-				has_trait = trait_nuumismatic_administration
-			}
-		}
-		modifier = {
-			factor = 1.5
-			OR = {
-				has_trait = trait_robot_domestic_protocols
-				has_trait = trait_charismatic
-			}
-		}
-		modifier = {
-			factor = 0.5
-			has_trait = trait_repugnant
-		}
-		modifier = {
-			factor = 5
-			has_job = mogul
-		}
-		modifier = {
-			factor = 1.5
-			is_capitalism = yes
-		}
-	}
-}
-
 techno_priest = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
@@ -1481,6 +1228,394 @@ techno_priest = {
 			factor = 1.2
 			is_unemployed = yes
 			is_pop_category = specialist
+		}
+	}
+}
+
+#### Ruler Jobs
+
+# Commandante - Militarist
+commandante = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	building_icon = building_stronghold
+	clothes_texture_index = 1
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_ruler_job
+	country_modifier = {
+		country_naval_cap_add = 3
+	}
+	resources = {
+		category = planet_politicians
+		produces = {
+			trigger = {
+				owner = {
+					has_valid_civic = civic_citizen_service
+				}
+			}
+			unity = 2
+		}
+	}
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -0.15
+		planet_stability_add = 3
+		planet_amenities_add = 3
+	}
+	pop_modifier = {
+		pop_defense_armies_add = 2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			planet_amenities_add = -1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				has_valid_civic = civic_citizen_service
+			}
+		}
+		modifier = {
+			planet_amenities_add = 3
+		}
+	}
+	weight = {
+		weight = @ruler_job_weight
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = trait_very_strong
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_strong
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			factor = 5
+			has_job = commandante
+		}
+		modifier = {
+			factor = 1.2
+			is_unemployed = yes
+			is_pop_category = ruler
+		}
+	}
+}
+
+# Philosopher - Pacifist
+supervisor = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	building_icon = building_capital
+	clothes_texture_index = 1
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_ruler_job
+	resources = {
+		category = planet_politicians
+		produces = {
+			unity = 4
+		}
+	}
+	country_modifier = {
+		country_admin_cap_add = 5
+	}
+	planet_modifier = {
+		planet_amenities_add = 6
+		planet_jobs_society_research_produces_mult = 0.05
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			planet_amenities_add = -1
+		}
+	}
+	weight = {
+		weight = @ruler_job_weight
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = trait_talented
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_charismatic
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			factor = 5
+			has_job = supervisor
+		}
+		modifier = {
+			factor = 1.2
+			is_unemployed = yes
+			is_pop_category = ruler
+		}
+	}
+}
+
+# Mogul - Capitalist
+mogul = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	building_icon = building_galactic_stock_exchange
+	clothes_texture_index = 1
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_ruler_job
+	possible = {
+		NOT = {
+			owner = {
+				has_valid_civic = civic_distributism
+			}
+		}
+	}
+	planet_modifier = {
+		planet_amenities_add = 7
+		trade_value_add = 8
+	}
+	# planet_jobs_energy_produces_mult
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_thrifty
+		}
+		modifier = {
+			trade_value_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_nuumismatic_administration
+		}
+		modifier = {
+			trade_value_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				owner = {
+					has_valid_civic = civic_merchant_guilds
+				}
+			}
+		}
+		modifier = {
+			planet_technician_produces_mult = 0.04
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				owner = {
+					has_valid_civic = civic_state_monopoly
+				}
+			}
+		}
+		modifier = {
+			planet_technician_produces_mult = 0.05
+			planet_miners_produces_mult = 0.05
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			planet_amenities_add = -1
+		}
+	}
+	weight = {
+		weight = @ruler_job_weight
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_nuumismatic_administration
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_robot_domestic_protocols
+				has_trait = trait_charismatic
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			factor = 5
+			has_job = mogul
+		}
+		modifier = {
+			factor = 1.5
+			is_capitalism = yes
+		}
+	}
+}
+
+# Commisar - Socialist
+commisar = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	building_icon = building_stronghold
+	clothes_texture_index = 1
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_ruler_job
+	country_modifier = {
+		country_unity_produces_mult = 0.005
+	}
+	resources = {
+		category = planet_politicians
+		produces = {
+			unity = 4
+		}
+	}
+	planet_modifier = {
+		pop_government_ethic_attraction = 0.05
+		pop_ethics_shift_speed_mult = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			planet_amenities_add = -1
+		}
+	}
+	weight = {
+		weight = @ruler_job_weight
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = trait_talented
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_charismatic
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			factor = 5
+			has_job = supervisor
+		}
+		modifier = {
+			factor = 1.2
+			is_unemployed = yes
+			is_pop_category = ruler
+		}
+	}
+}
+
+# Ambassador - Xenophile
+ambassador = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	building_icon = building_stronghold
+	clothes_texture_index = 1
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_ruler_job
+	country_modifier = {
+		country_trust_cap_add = 5
+		diplo_weight_pops_mult = 0.0025
+	}
+	resources = {
+		category = planet_politicians
+		produces = {
+			unity = 4
+		}
+	}
+	planet_modifier = {
+		pop_happiness = 0.05
+		planet_amenities_add = 3
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			planet_amenities_add = -1
+		}
+	}
+	weight = {
+		weight = @ruler_job_weight
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = trait_talented
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_charismatic
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			factor = 5
+			has_job = supervisor
+		}
+		modifier = {
+			factor = 1.2
+			is_unemployed = yes
+			is_pop_category = ruler
 		}
 	}
 }

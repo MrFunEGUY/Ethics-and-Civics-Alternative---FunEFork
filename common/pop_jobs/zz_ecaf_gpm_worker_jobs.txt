@@ -68,7 +68,7 @@ gpm_bunker_army = {
 		weight = @specialist_job_weight
 
 		modifier = {
-			mult = value:job_weights_modifier|JOB|gpm_bunker_army|RESOURCE|unity|FACTOR|0.25|
+			factor = value:job_weights_modifier|JOB|gpm_bunker_army|RESOURCE|unity|FACTOR|0.25|
 			owner = { has_active_tradition = tr_domination_judgment_corps }
 		}
 

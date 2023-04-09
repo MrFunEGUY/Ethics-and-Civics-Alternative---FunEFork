@@ -1,4 +1,0 @@
-OR = {
-	value = auth_dictatorial
-	value = auth_democratic_dictatorship
-}

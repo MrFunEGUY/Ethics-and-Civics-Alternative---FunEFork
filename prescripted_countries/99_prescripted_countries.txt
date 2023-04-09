@@ -307,7 +307,7 @@ jehetma = {
 
 	room = "personality_harmonious_hierarchy_room"
 
-	authority = "auth_democratic_dictatorship"
+	authority = "auth_dict_democratic"
 	civics = {
 		"civic_meritocracy"
 		"civic_philosopher_king"

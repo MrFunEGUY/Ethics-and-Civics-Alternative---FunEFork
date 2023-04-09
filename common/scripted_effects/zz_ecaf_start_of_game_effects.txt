@@ -9,8 +9,9 @@ generate_start_pops = {
 					has_origin = origin_necrophage
 					has_valid_civic = civic_machine_servitor
 					has_valid_civic = civic_machine_assimilator
-					has_valid_civic = civic_symbiotic_race # ECAF
 					has_valid_civic = civic_slave_race # ECAF
+					has_valid_civic = civic_symbiotic_race # ECAF
+					has_valid_civic = civic_hostile_occupation # Distant Origin
 				}
 			}
 		}
@@ -30,8 +31,9 @@ generate_start_pops = {
 					OR = {
 						has_origin = origin_syncretic_evolution
 						has_origin = origin_necrophage
-						has_valid_civic = civic_symbiotic_race # ECAF
 						has_valid_civic = civic_slave_race # ECAF
+						has_valid_civic = civic_symbiotic_race # ECAF
+						has_valid_civic = civic_hostile_occupation # Distant Origin
 					}
 				}
 			}
@@ -448,7 +450,7 @@ generate_start_pops = {
 			count = 10
 			random_owned_pop = {
 				limit = {
-					is_same_species = root.owner.species
+					is_same_species = root.owner_species
 				}
 				kill_pop = yes
 			}

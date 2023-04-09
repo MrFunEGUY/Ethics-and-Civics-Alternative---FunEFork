@@ -1,0 +1,273 @@
+############################################
+#
+# First Contact Espionage Events
+# Written by Giada Zavarise, Gemma Thomson,
+# Niamh Calderwood & Victor Haeggman
+#
+############################################
+
+namespace = preftl_operation
+
+# Number of days before a single event should (ideally) stand a chance of coming up again. See also @RandomPreFTLOperationEventTimer for 'regular' Espionage.
+@RandomPreFTLOperationEventTimer = 600
+@RandomPreFTLOperationEventTimerLong = 1000
+
+# Pre-Industrialization Finalé (standard)
+# Note the the post-industrial version of this event inherits everything from this event except its 'desc' texts
+country_event = {
+	id = preftl_operation.1016
+	title = preftl_operation.1016.name
+	desc = {
+		trigger = {
+			switch = {
+				trigger = has_country_flag
+				shifting_pre_ftl_ethic_to_authoritarian =	{ text = preftl_operation.1016.autho.desc }
+				shifting_pre_ftl_ethic_to_egalitarian =		{ text = preftl_operation.1016.egali.desc }
+				shifting_pre_ftl_ethic_to_materialist =		{ text = preftl_operation.1016.mater.desc }
+				shifting_pre_ftl_ethic_to_militarist =		{ text = preftl_operation.1016.milit.desc }
+				shifting_pre_ftl_ethic_to_pacifist =		{ text = preftl_operation.1016.pacif.desc }
+				shifting_pre_ftl_ethic_to_xenophile =		{ text = preftl_operation.1016.phile.desc }
+				shifting_pre_ftl_ethic_to_xenophobe =		{ text = preftl_operation.1016.phobe.desc }
+				shifting_pre_ftl_ethic_to_spiritualist =	{ text = preftl_operation.1016.spiri.desc }
+				#####
+				shifting_pre_ftl_ethic_to_socialism =		{ text = preftl_operation.1016.social.desc }
+				shifting_pre_ftl_ethic_to_capitalism =		{ text = preftl_operation.1016.capital.desc }
+				default = { text = preftl_operation.1016.mater.desc }
+			}
+		}
+	}
+	picture = GFX_evt_friendly_infiltration
+	show_sound = event_espionage_concluded
+	location = from.target.capital_scope
+	is_triggered_only = yes
+
+	immediate = {
+		pre_ftl_indoctrinate_operation_result = { BONUS = 0 } # see scripted value 'pre_ftl_pops_shifting_ethic'
+	}
+
+	option = {
+		name = GOOD
+		from = {
+			spynetwork = {
+				add_spy_network_level_on_success_effect = { VALUE = -15 }
+			}
+			destroy_espionage_operation = this
+		}
+	}
+}
+# Pre-Industrialization Finalé (good or excellent)
+# Note the the post-industrial version of this event inherits everything from this event except its 'desc' texts
+country_event = {
+	id = preftl_operation.1017
+	title = preftl_operation.1016.name
+	desc = {
+		trigger = {
+			switch = {
+				trigger = has_country_flag
+				shifting_pre_ftl_ethic_to_authoritarian =	{ text = preftl_operation.1017.autho.desc }
+				shifting_pre_ftl_ethic_to_egalitarian =		{ text = preftl_operation.1017.egali.desc }
+				shifting_pre_ftl_ethic_to_materialist =		{ text = preftl_operation.1017.mater.desc }
+				shifting_pre_ftl_ethic_to_militarist =		{ text = preftl_operation.1017.milit.desc }
+				shifting_pre_ftl_ethic_to_pacifist =		{ text = preftl_operation.1017.pacif.desc }
+				shifting_pre_ftl_ethic_to_xenophile =		{ text = preftl_operation.1017.phile.desc }
+				shifting_pre_ftl_ethic_to_xenophobe =		{ text = preftl_operation.1017.phobe.desc }
+				shifting_pre_ftl_ethic_to_spiritualist =	{ text = preftl_operation.1017.spiri.desc }
+				#####
+				shifting_pre_ftl_ethic_to_socialism =		{ text = preftl_operation.1017.social.desc }
+				shifting_pre_ftl_ethic_to_capitalism =		{ text = preftl_operation.1017.capital.desc }
+				default = { text = preftl_operation.1017.mater.desc }
+			}
+		}
+	}
+	picture = GFX_evt_friendly_infiltration
+	show_sound = event_espionage_concluded
+	location = from.target.capital_scope
+	is_triggered_only = yes
+
+	immediate = {
+		pre_ftl_indoctrinate_operation_result = { BONUS = 3 }
+	}
+
+	option = {
+		name = EXCELLENT
+		from = {
+			spynetwork = {
+				add_spy_network_level_on_success_effect = { VALUE = -5 }
+			}
+			destroy_espionage_operation = this
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				event_target:target_nation = {
+					has_country_flag = fotd_hunter@root.owner
+					is_xenophobe = no
+				}
+			}
+			owner = { country_event = { id = origin.6275 scopes = { from = event_target:target_nation } } }
+		}
+	}
+}
+# Pre-Industrialization Finalé (poor)
+# Note the the post-industrial version of this event inherits everything from this event except its 'desc' texts
+country_event = {
+	id = preftl_operation.1018
+	title = preftl_operation.1016.name
+	desc = {
+		trigger = {
+			switch = {
+				trigger = has_country_flag
+				shifting_pre_ftl_ethic_to_authoritarian =	{ text = preftl_operation.1018.autho.desc }
+				shifting_pre_ftl_ethic_to_egalitarian =		{ text = preftl_operation.1018.egali.desc }
+				shifting_pre_ftl_ethic_to_materialist =		{ text = preftl_operation.1018.mater.desc }
+				shifting_pre_ftl_ethic_to_militarist =		{ text = preftl_operation.1018.milit.desc }
+				shifting_pre_ftl_ethic_to_pacifist =		{ text = preftl_operation.1018.pacif.desc }
+				shifting_pre_ftl_ethic_to_xenophile =		{ text = preftl_operation.1018.phile.desc }
+				shifting_pre_ftl_ethic_to_xenophobe =		{ text = preftl_operation.1018.phobe.desc }
+				shifting_pre_ftl_ethic_to_spiritualist =	{ text = preftl_operation.1018.spiri.desc }
+				#####
+				shifting_pre_ftl_ethic_to_socialism =		{ text = preftl_operation.1018.social.desc }
+				shifting_pre_ftl_ethic_to_capitalism =		{ text = preftl_operation.1018.capital.desc }
+				default = { text = preftl_operation.1018.mater.desc }
+			}
+		}
+	}
+	picture = GFX_evt_friendly_infiltration
+	show_sound = event_espionage_concluded
+	location = from.target.capital_scope
+	is_triggered_only = yes
+
+	immediate = {
+		pre_ftl_indoctrinate_operation_result = { BONUS = -4 }
+	}
+
+	option = {
+		name = EXCELLENT
+		from = {
+			spynetwork = {
+				add_spy_network_level_on_success_effect = { VALUE = -5 }
+			}
+			destroy_espionage_operation = this
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				event_target:target_nation = {
+					has_country_flag = fotd_hunter@root.owner
+					is_xenophobe = no
+				}
+			}
+			owner = { country_event = { id = origin.6275 scopes = { from = event_target:target_nation } } }
+		}
+	}
+}
+# Post-Industrial Finalé (standard)
+country_event = {
+	id = preftl_operation.1019
+	base = preftl_operation.1016
+	desc_clear = yes
+	desc = {
+		trigger = {
+			switch = {
+				trigger = has_country_flag
+				shifting_pre_ftl_ethic_to_authoritarian =	{ text = preftl_operation.1019.autho.desc }
+				shifting_pre_ftl_ethic_to_egalitarian =		{ text = preftl_operation.1019.egali.desc }
+				shifting_pre_ftl_ethic_to_materialist =		{ text = preftl_operation.1019.mater.desc }
+				shifting_pre_ftl_ethic_to_militarist =		{ text = preftl_operation.1019.milit.desc }
+				shifting_pre_ftl_ethic_to_pacifist =		{ text = preftl_operation.1019.pacif.desc }
+				shifting_pre_ftl_ethic_to_xenophile =		{ text = preftl_operation.1019.phile.desc }
+				shifting_pre_ftl_ethic_to_xenophobe =		{ text = preftl_operation.1019.phobe.desc }
+				shifting_pre_ftl_ethic_to_spiritualist =	{ text = preftl_operation.1019.spiri.desc }
+				#####
+				shifting_pre_ftl_ethic_to_socialism =		{ text = preftl_operation.1019.social.desc }
+				shifting_pre_ftl_ethic_to_capitalism =		{ text = preftl_operation.1019.capital.desc }
+				default = { text = preftl_operation.1019.mater.desc }
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				event_target:target_nation = {
+					has_country_flag = fotd_hunter@root.owner
+					is_xenophobe = no
+				}
+			}
+			owner = { country_event = { id = origin.6275 scopes = { from = event_target:target_nation } } }
+		}
+	}
+}
+# Post-Industrial Finalé (good or excellent)
+country_event = {
+	id = preftl_operation.1020
+	base = preftl_operation.1017
+	desc_clear = yes
+	desc = {
+		trigger = {
+			switch = {
+				trigger = has_country_flag
+				shifting_pre_ftl_ethic_to_authoritarian =	{ text = preftl_operation.1020.autho.desc }
+				shifting_pre_ftl_ethic_to_egalitarian =		{ text = preftl_operation.1020.egali.desc }
+				shifting_pre_ftl_ethic_to_materialist =		{ text = preftl_operation.1020.mater.desc }
+				shifting_pre_ftl_ethic_to_militarist =		{ text = preftl_operation.1020.milit.desc }
+				shifting_pre_ftl_ethic_to_pacifist =		{ text = preftl_operation.1020.pacif.desc }
+				shifting_pre_ftl_ethic_to_xenophile =		{ text = preftl_operation.1020.phile.desc }
+				shifting_pre_ftl_ethic_to_xenophobe =		{ text = preftl_operation.1020.phobe.desc }
+				shifting_pre_ftl_ethic_to_spiritualist =	{ text = preftl_operation.1020.spiri.desc }
+				#####
+				shifting_pre_ftl_ethic_to_socialism =		{ text = preftl_operation.1020.social.desc }
+				shifting_pre_ftl_ethic_to_capitalism =		{ text = preftl_operation.1020.capital.desc }
+				default = { text = preftl_operation.1020.mater.desc }
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				event_target:target_nation = {
+					has_country_flag = fotd_hunter@root.owner
+					is_xenophobe = no
+				}
+			}
+			owner = { country_event = { id = origin.6275 scopes = { from = event_target:target_nation } } }
+		}
+	}
+}
+# Post-Industrial Finalé (standard)
+country_event = {
+	id = preftl_operation.1021
+	base = preftl_operation.1018
+	desc_clear = yes
+	desc = {
+		trigger = {
+			switch = {
+				trigger = has_country_flag
+				shifting_pre_ftl_ethic_to_authoritarian =	{ text = preftl_operation.1021.autho.desc }
+				shifting_pre_ftl_ethic_to_egalitarian =		{ text = preftl_operation.1021.egali.desc }
+				shifting_pre_ftl_ethic_to_materialist =		{ text = preftl_operation.1021.mater.desc }
+				shifting_pre_ftl_ethic_to_militarist =		{ text = preftl_operation.1021.milit.desc }
+				shifting_pre_ftl_ethic_to_pacifist =		{ text = preftl_operation.1021.pacif.desc }
+				shifting_pre_ftl_ethic_to_xenophile =		{ text = preftl_operation.1021.phile.desc }
+				shifting_pre_ftl_ethic_to_xenophobe =		{ text = preftl_operation.1021.phobe.desc }
+				shifting_pre_ftl_ethic_to_spiritualist =	{ text = preftl_operation.1021.spiri.desc }
+				#####
+				shifting_pre_ftl_ethic_to_socialism =		{ text = preftl_operation.1021.social.desc }
+				shifting_pre_ftl_ethic_to_capitalism =		{ text = preftl_operation.1021.capital.desc }
+				default = { text = preftl_operation.1021.mater.desc }
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				event_target:target_nation = {
+					has_country_flag = fotd_hunter@root.owner
+					is_xenophobe = no
+				}
+			}
+			owner = { country_event = { id = origin.6275 scopes = { from = event_target:target_nation } } }
+		}
+	}
+}

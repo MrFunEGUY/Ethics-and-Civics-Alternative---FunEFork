@@ -1,0 +1,5 @@
+value = auth_imperial
+value = auth_corporate_imperial
+value = auth_corporate_fiefdom			# More Corporate Authorities
+value = auth_tec_patrocorporate 		# Stellaris Evolved
+value = auth_bugged_corporate_imperial	# Bug Branch

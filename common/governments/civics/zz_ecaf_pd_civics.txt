@@ -1,0 +1,16 @@
+civic_pdinquisition = {
+	description = "civic_tooltip_pdinquisition_effects"
+	playable = { has_planetary_diversity = yes }
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
+	}
+	possible = {
+		civics = { value = civic_imperial_cult }
+	}
+	modifier = {
+		country_unity_produces_mult = 0.15
+		pop_government_ethic_attraction = 0.1
+		planet_stability_add = 5
+	}
+}

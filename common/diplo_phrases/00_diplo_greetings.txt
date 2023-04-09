@@ -52,8 +52,6 @@ greetings = {
 				is_xenophile = yes
 					is_xenophobe = yes
 					is_megacorp = yes
-			}
-			NOR = {
 				is_same_species = FROM
 				is_at_war_with = FROM
 			}
@@ -381,7 +379,7 @@ greetings = {
 				is_domineering_to = FROM
 				is_unfriendly_to = FROM
 			}
-			FROM = { NOT = { is_gestalt = yes } }
+			FROM = { is_gestalt = no }
 		}
 	}
 	# Hostile Xenophile 2
@@ -416,7 +414,7 @@ greetings = {
 				is_domineering_to = FROM
 				is_unfriendly_to = FROM
 			}
-			FROM = { NOT = { is_gestalt = yes } }
+			FROM = { is_gestalt = no }
 		}
 	}
 	# Hostile Xenophile Same Species
@@ -1009,10 +1007,12 @@ greetings = {
 	# Friendly Pacifist
 	05_FRIENDLY_GREETING = {
 		trigger = {
-			NOT = { is_gestalt = yes }
+			is_gestalt = no
 			is_pacifist = yes
-			NOT = { is_same_species = FROM }
-			NOT = { is_at_war_with = FROM }
+			NOR = {
+				is_same_species = FROM
+				is_at_war_with = FROM
+			}
 			OR = {
 				is_friendly_to = FROM
 				is_cordial_to = FROM
@@ -1392,8 +1392,8 @@ greetings = {
 				is_xenophile = yes
 				is_xenophobe = yes
 				is_megacorp = yes
+				is_same_species = FROM
 			}
-			NOT = { is_same_species = FROM }
 			is_at_war_with = FROM
 		}
 	}
@@ -1406,8 +1406,8 @@ greetings = {
 				is_xenophile = yes
 				is_xenophobe = yes
 				is_megacorp = yes
+				is_same_species = FROM
 			}
-			NOT = { is_same_species = FROM }
 			is_at_war_with = FROM
 		}
 	}
@@ -1420,8 +1420,8 @@ greetings = {
 				is_xenophile = yes
 				is_xenophobe = yes
 				is_megacorp = yes
+				is_same_species = FROM
 			}
-			NOT = { is_same_species = FROM }
 			is_at_war_with = FROM
 		}
 	}
@@ -3277,7 +3277,7 @@ greetings = {
 			OR = {
 				is_domineering_to = FROM
 			}
-			FROM = { NOT = { is_gestalt = yes } }
+			FROM = { is_gestalt = no }
 		}
 	}
 	FB_NEUTRAL_GREETING_01 = {
@@ -3354,7 +3354,7 @@ greetings = {
 				is_cordial_to = FROM
 				is_protective_to = FROM
 			}
-			FROM = { NOT = { is_gestalt = yes } }
+			FROM = { is_gestalt = no }
 		}
 	}
 	FB_FRIENDLY_GREETING_02 = {
@@ -3426,7 +3426,7 @@ greetings = {
 				has_federation = yes
 			}
 			is_at_war_with = FROM
-			FROM = { NOT = { is_gestalt = yes } }
+			FROM = { is_gestalt = no }
 		}
 	}
 	FB_WAR_GREETING_03 = {
@@ -3702,7 +3702,7 @@ greetings = {
 			overlord = { is_same_value = FROM }
 			NOT = { is_at_war_with = FROM }
 			NOT = { is_disloyal_to = FROM }
-			FROM = { NOT = { is_gestalt = yes } }
+			FROM = { is_gestalt = no }
 		}
 	}
 	XI_VASSAL_GREETING_DISLOYAL_01 = {
@@ -3892,7 +3892,7 @@ greetings = {
 		trigger = {
 			has_ai_personality = hive_mind
 			is_at_war_with = FROM
-			FROM = { NOT = { is_gestalt = yes } }
+			FROM = { is_gestalt = no }
 		}
 	}
 	HM_WAR_GREETING_02 = {
@@ -3968,7 +3968,7 @@ greetings = {
 				is_hostile_to = FROM
 				is_unfriendly_to = FROM
 			}
-			FROM = { NOT = { is_gestalt = yes } }
+			FROM = { is_gestalt = no }
 		}
 	}
 	MF_HOSTILE_GREETING_02 = {
@@ -4197,7 +4197,7 @@ greetings = {
 			overlord = { is_same_value = FROM }
 			NOT = { is_at_war_with = FROM }
 			is_disloyal_to = FROM
-			FROM = { NOT = { is_gestalt = yes } }
+			FROM = { is_gestalt = no }
 		}
 	}
 	# Evangelizing Zealots
@@ -4466,7 +4466,7 @@ greetings = {
 			overlord = { is_same_value = FROM }
 			NOT = { is_at_war_with = FROM }
 			is_disloyal_to = FROM
-			FROM = { NOT = { is_gestalt = yes } }
+			FROM = { is_gestalt = no }
 		}
 	}
 	# Devouring Swarm
@@ -5276,7 +5276,7 @@ greetings = {
 				is_hostile_to = FROM
 				is_unfriendly_to = FROM
 			}
-			FROM = { NOT = { is_gestalt = yes } }
+			FROM = { is_gestalt = no }
 		}
 	}
 	DC_HOSTILE_GREETING_05 = {
@@ -5287,7 +5287,7 @@ greetings = {
 			has_ai_personality = democratic_crusaders
 			FROM = {
 				is_species_class = AVI
-				NOT = { is_gestalt = yes }
+				is_gestalt = no
 			}
 			NOT = { is_at_war_with = FROM }
 			OR = {
@@ -5347,7 +5347,7 @@ greetings = {
 			has_ai_personality = democratic_crusaders
 			NOT = { is_at_war_with = FROM }
 			is_neutral_to = FROM
-			FROM = { NOT = { is_gestalt = yes } }
+			FROM = { is_gestalt = no }
 		}
 	}
 	DC_NEUTRAL_GREETING_02 = {
@@ -5359,7 +5359,7 @@ greetings = {
 			NOT = { is_at_war_with = FROM }
 			is_neutral_to = FROM
 			FROM = {
-				NOT = { is_gestalt = yes }
+				is_gestalt = no
 			}
 		}
 	}
@@ -5372,7 +5372,7 @@ greetings = {
 			FROM = { has_election_type = democratic }
 			NOT = { is_at_war_with = FROM }
 			is_neutral_to = FROM
-			FROM = { NOT = { is_gestalt = yes } }
+			FROM = { is_gestalt = no }
 		}
 	}
 	DC_NEUTRAL_GREETING_04 = {
@@ -5384,7 +5384,7 @@ greetings = {
 			FROM = { NOT = { has_election_type = democratic } }
 			NOT = { is_at_war_with = FROM }
 			is_neutral_to = FROM
-			FROM = { NOT = { is_gestalt = yes } }
+			FROM = { is_gestalt = no }
 		}
 	}
 	DC_NEUTRAL_GREETING_05 = {
@@ -5462,7 +5462,7 @@ greetings = {
 				is_cordial_to = FROM
 				is_protective_to = FROM
 			}
-			FROM = { NOT = { is_gestalt = yes } }
+			FROM = { is_gestalt = no }
 		}
 	}
 	DC_FRIENDLY_GREETING_04 = {
@@ -5488,7 +5488,7 @@ greetings = {
 			has_ai_personality = democratic_crusaders
 			NOT = { is_same_species = FROM }
 			is_at_war_with = FROM
-			FROM = { NOT = { is_gestalt = yes } }
+			FROM = { is_gestalt = no }
 		}
 	}
 	DC_WAR_GREETING_02 = {
@@ -5521,7 +5521,7 @@ greetings = {
 			FROM = { NOT = { has_election_type = democratic } }
 			NOT = { is_same_species = FROM }
 			is_at_war_with = FROM
-			FROM = { NOT = { is_gestalt = yes } }
+			FROM = { is_gestalt = no }
 		}
 	}
 	DC_WAR_GREETING_05 = {
@@ -5532,7 +5532,7 @@ greetings = {
 			has_ai_personality = democratic_crusaders
 			NOT = { is_same_species = FROM }
 			is_at_war_with = FROM
-			FROM = { NOT = { is_gestalt = yes } }
+			FROM = { is_gestalt = no }
 		}
 	}
 	DC_VASSAL_GREETING_01 = {
@@ -5689,7 +5689,7 @@ greetings = {
 				is_protective_to = FROM
 			}
 			FROM = {
-				NOT = { is_gestalt = yes }
+				is_gestalt = no
 			}
 		}
 	}
@@ -5724,7 +5724,7 @@ greetings = {
 				is_cordial_to = FROM
 				is_protective_to = FROM
 			}
-			FROM = { NOT = { is_gestalt = yes } }
+			FROM = { is_gestalt = no }
 		}
 	}
 	SD_FRIENDLY_GREETING_04 = {
@@ -5750,7 +5750,7 @@ greetings = {
 			has_ai_personality = slaving_despots
 			NOT = { is_same_species = FROM }
 			is_at_war_with = FROM
-			FROM = { NOT = { is_gestalt = yes } }
+			FROM = { is_gestalt = no }
 		}
 	}
 	SD_WAR_GREETING_02 = {
@@ -5821,7 +5821,7 @@ greetings = {
 				is_hostile_to = FROM
 				is_unfriendly_to = FROM
 			}
-			FROM = { NOT = { is_gestalt = yes } }
+			FROM = { is_gestalt = no }
 		}
 	}
 	DH_DOMINEERING_GREETING_01 = {
@@ -5944,7 +5944,7 @@ greetings = {
 		trigger = {
 			has_ai_personality = decadent_hierarchy
 			is_at_war_with = FROM
-			FROM = { NOT = { is_gestalt = yes } }
+			FROM = { is_gestalt = no }
 		}
 	}
 	DH_WAR_GREETING_02 = {
@@ -6509,7 +6509,7 @@ greetings = {
 				is_hostile_to = FROM
 				is_unfriendly_to = FROM
 			}
-			FROM = { NOT = { is_gestalt = yes } }
+			FROM = { is_gestalt = no }
 		}
 	}
 	HC_HOSTILE_GREETING_02 = {
@@ -6532,7 +6532,7 @@ greetings = {
 		trigger = {
 			has_ai_personality = harmonious_hierarchy
 			FROM = { NOT = { has_election_type = democratic } }
-			FROM = { NOT = { is_gestalt = yes } }
+			FROM = { is_gestalt = no }
 			NOT = { is_at_war_with = FROM }
 			OR = {
 				is_hostile_to = FROM
@@ -7017,7 +7017,7 @@ greetings = {
 			overlord = { is_same_value = FROM }
 			NOT = { is_at_war_with = FROM }
 			is_disloyal_to = FROM
-			FROM = { NOT = { is_gestalt = yes } }
+			FROM = { is_gestalt = no }
 		}
 	}
 	# Enigmatic Observers

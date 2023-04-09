@@ -9,17 +9,7 @@ civic_automated_workforce = {
 		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		} 
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {
 		ethics = {
 			OR = {
@@ -48,15 +38,7 @@ civic_thought_auditing = {
 	}
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
+		inline_script = governments/conditions/is_corporate
 	}
 	modifier = {
 		#stability and unity is handled at bureaucrat job level in pop_jobs/specialists
@@ -80,17 +62,7 @@ civic_employee_ownership = {
 		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {
 		ethics = {
 			OR = {
@@ -129,17 +101,7 @@ civic_refining_consortium = {
 		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {
 		civics = {
 			NOT = {
@@ -166,17 +128,7 @@ civic_consumer_culture = {
 		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {	
 		ethics = {
 			OR = {
@@ -201,17 +153,7 @@ civic_executive_worship = {
 		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {
 		ethics = {
 			NOR = {
@@ -234,17 +176,7 @@ civic_urban_idyll = {
 		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {
 		ethics = {
 			OR = {
@@ -270,17 +202,7 @@ civic_founder_cult = {
 		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {
 		ethics = {
 			OR = {
@@ -304,17 +226,7 @@ civic_trading_fleet = {
 		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {
 		ethics = {
 			OR = {
@@ -337,17 +249,7 @@ civic_bancorp = {
 		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {
 		ethics = {
 			OR = {
@@ -372,17 +274,7 @@ civic_membership = {
 		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {
 		ethics = {
 			NOR = {
@@ -410,17 +302,7 @@ civic_manufactory = {
 		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {
 		civics = {
 			NOT = {
@@ -445,17 +327,7 @@ civic_reclamation = {
 		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {
 		civics = {
 			NOR = {
@@ -479,17 +351,7 @@ civic_efficiency_expert = {
 		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = 5 }
 	modifier = {
 		#changes to managers added in /pop_jobs/specialists
@@ -502,17 +364,7 @@ civic_science_syndicate = {
 		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {	
 		ethics = {
 			value = ethic_fanatic_materialist
@@ -532,17 +384,7 @@ civic_maniac_monopoly = {
 		has_megacorp_mod_active = yes
 		host_has_dlc = "Megacorp"
 	}
-	potential = {
-		OR = {
-			authority = {
-				OR = {
-          			value = auth_corporate
-         			value = auth_corporate_imperial
-        		}
-        	}
-			civics = { value = civic_galactic_sovereign_megacorp }
-		}
-	}
+	potential = { inline_script = governments/conditions/is_corporate }
 	possible = {
 		ethics = {
 			OR = {
