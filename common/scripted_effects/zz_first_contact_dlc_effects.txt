@@ -324,56 +324,56 @@ pre_ftl_indoctrinate_operation_result = {
 			1 = {
 				shift_pre_ftl_pop_ethic = { ETHIC = spiritualist BONUS = $BONUS$ }
 				modifier = {
-					factor = 0
+					mult = 0
 					is_spiritualist = no
 				}
 			}
 			1 = {
 				shift_pre_ftl_pop_ethic = { ETHIC = militarist BONUS = $BONUS$ }
 				modifier = {
-					factor = 0
+					mult = 0
 					is_militarist = no
 				}
 			}
 			1 = {
 				shift_pre_ftl_pop_ethic = { ETHIC = xenophobe BONUS = $BONUS$ }
 				modifier = {
-					factor = 0
+					mult = 0
 					is_xenophobe = no
 				}
 			}
 			1 = {
 				shift_pre_ftl_pop_ethic = { ETHIC = egalitarian BONUS = $BONUS$ }
 				modifier = {
-					factor = 0
+					mult = 0
 					is_egalitarian = no
 				}
 			}
 			1 = {
 				shift_pre_ftl_pop_ethic = { ETHIC = materialist BONUS = $BONUS$ }
 				modifier = {
-					factor = 0
+					mult = 0
 					is_materialist = no
 				}
 			}
 			1 = {
 				shift_pre_ftl_pop_ethic = { ETHIC = pacifist BONUS = $BONUS$ }
 				modifier = {
-					factor = 0
+					mult = 0
 					is_pacifist = no
 				}
 			}
 			1 = {
 				shift_pre_ftl_pop_ethic = { ETHIC = xenophile BONUS = $BONUS$ }
 				modifier = {
-					factor = 0
+					mult = 0
 					is_xenophile = no
 				}
 			}
 			1 = {
 				shift_pre_ftl_pop_ethic = { ETHIC = authoritarian BONUS = $BONUS$ }
 				modifier = {
-					factor = 0
+					mult = 0
 					is_authoritarian = no
 				}
 			}
@@ -381,14 +381,14 @@ pre_ftl_indoctrinate_operation_result = {
 			1 = {
 				shift_pre_ftl_pop_ethic = { ETHIC = socialism BONUS = $BONUS$ }
 				modifier = {
-					factor = 0
+					mult = 0
 					is_socialism = no
 				}
 			}
 			1 = {
 				shift_pre_ftl_pop_ethic = { ETHIC = capitalism BONUS = $BONUS$ }
 				modifier = {
-					factor = 0
+					mult = 0
 					is_capitalism = no
 				}
 			}

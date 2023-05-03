@@ -342,7 +342,6 @@ building_factory_3 = {
 
 	allow = {
 		has_major_upgraded_capital = yes
-		buildings_upgrade_allow = yes
 	}
 
 	potential = {

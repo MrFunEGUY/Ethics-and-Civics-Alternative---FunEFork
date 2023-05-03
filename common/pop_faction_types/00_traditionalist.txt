@@ -117,6 +117,7 @@ traditionalist = {
 
 		potential = {
 			exists = owner
+			owner = { NOT = { has_valid_civic = civic_machine_cult } }
 		}
 
 		trigger = {
@@ -138,7 +139,10 @@ traditionalist = {
 			exists = owner
 			owner = {
 				can_set_ai_policy = yes
-				NOT = { has_policy_flag = ai_full_rights }
+				NAND = {
+					has_policy_flag = ai_full_rights
+					has_valid_civic = civic_machine_cult
+				}
 			}
 		}
 
@@ -161,7 +165,10 @@ traditionalist = {
 			exists = owner
 			owner = {
 				can_set_ai_policy = yes
-				has_policy_flag = ai_full_rights
+				OR = {
+					has_policy_flag = ai_full_rights
+					has_valid_civic = civic_machine_cult
+				}
 			}
 		}
 
@@ -202,11 +209,18 @@ traditionalist = {
 		potential = {
 			exists = owner
 			owner = {
-				has_surveyed_class = pc_nuked
+				OR = {
+					has_surveyed_class = pc_nuked
+					has_surveyed_class = pc_nuked_relic
+					has_surveyed_class = pc_nuked_tl
+					has_surveyed_class = pc_nuked_superhab
+					has_surveyed_class = pc_nuked_cave
+				}
 				NOR = {
 					has_origin = origin_post_apocalyptic
 					has_country_flag = worm_tomb_ending
 					has_valid_civic = civic_memorialist
+					has_trait = trait_pc_irradiated_preference
 				}
 			}
 		}
@@ -215,10 +229,16 @@ traditionalist = {
 			owner = {
 				NOR = {
 					any_owned_planet = {
-						is_planet_class = pc_nuked
+						OR = {
+							is_pd_radiotrophic_world = yes
+							is_pd_nuked = yes
+						}
 					}
 					any_planet_within_border = {
-						is_planet_class = pc_nuked
+						OR = {
+							is_pd_radiotrophic_world = yes
+							is_pd_nuked = yes
+						}
 						is_terraforming = yes
 					}
 				}
@@ -237,7 +257,14 @@ traditionalist = {
 		potential = {
 			exists = owner
 			owner = {
-				has_surveyed_class = pc_gaia
+				OR = {
+					has_surveyed_class = pc_gaia
+					has_surveyed_class = pc_hot_gaia
+					has_surveyed_class = pc_cold_gaia
+					has_surveyed_class = pc_gaia_cave
+					has_surveyed_class = pc_gaia_superhab
+					has_surveyed_class = pc_tidallygaia
+				}
 				has_ascension_perk = ap_consecrated_worlds
 			}
 		}
@@ -245,7 +272,7 @@ traditionalist = {
 		trigger = {
 			owner = {
 				any_planet_within_border = {
-					is_planet_class = pc_gaia
+					is_pd_gaia = yes
 					is_colony = no
 					OR = {
 						has_modifier = consecrated_quality_1
@@ -326,7 +353,10 @@ traditionalist = {
 			host_has_dlc = "Utopia"
 			exists = owner
 			owner = {
-				NOT = { has_origin = origin_shroudwalker_apprentice }
+				NOR = {
+                    has_origin = origin_shroudwalker_apprentice
+                    has_origin = origin_pd_shroud
+                }
 				OR = {
 					num_ascension_perks > 0
 					num_ascension_perk_slots > 0
@@ -352,7 +382,10 @@ traditionalist = {
 		potential = {
 			exists = owner
 			owner = {
-				has_origin = origin_shroudwalker_apprentice
+				OR = {
+                    has_origin = origin_shroudwalker_apprentice
+                    has_origin = origin_pd_shroud
+                }
 			}
 		}
 
@@ -375,6 +408,7 @@ traditionalist = {
 			exists = owner
 			owner = {
 				has_ascension_perk = ap_the_flesh_is_weak
+				NOT = { has_valid_civic = civic_machine_cult }
 			}
 		}
 

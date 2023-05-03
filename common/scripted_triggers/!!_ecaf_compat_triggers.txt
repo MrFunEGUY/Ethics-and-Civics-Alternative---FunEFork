@@ -7,6 +7,20 @@ is_exile_country = {
 
 ##########
 
+is_pd_nuked = {
+	is_planet_class = pc_nuked
+}
+
+is_pd_radiotrophic_world = {
+	is_planet_class = pc_irradiated
+}
+
+is_pd_gaia = {
+ 	is_planet_class = pc_gaia
+}
+
+##########
+
 has_civic_organic_zealots_active = {
 	optimize_memory
 	always = no

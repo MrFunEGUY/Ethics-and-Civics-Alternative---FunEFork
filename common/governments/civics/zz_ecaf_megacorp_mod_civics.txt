@@ -27,7 +27,6 @@ civic_automated_workforce = {
 		}
 	}
 	modifier = { planet_jobs_robotic_produces_mult = 0.10 }
-
 }
 
 #thought auditing

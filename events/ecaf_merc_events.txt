@@ -7,11 +7,197 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		has_valid_civic = civic_uncivil_defence_contractor
+	}
+	
+	immediate = {
+
+		
+
+		if = {
+			limit = { has_federation = no }
+			export_trigger_value_to_variable = {
+				trigger = num_guarantees
+				variable = total_def_obligations
+			}
+
+			export_trigger_value_to_variable = {
+				trigger = num_defensive_pacts
+				variable = contractor_num_def_pacts
+			}
+
+			change_variable = { which = total_def_obligations value = contractor_num_def_pacts }
+
+			if = {
+				limit = {
+					has_modifier = uncivil_defence_contractor_mod_1
+					check_variable = { which = total_def_obligations value != 1 }
+				}
+				remove_modifier = uncivil_defence_contractor_mod_1
+			}
+			if = {
+				limit = {
+					has_modifier = uncivil_defence_contractor_mod_2
+					check_variable = { which = total_def_obligations value != 2 }
+				}
+				remove_modifier = uncivil_defence_contractor_mod_2
+			}
+			if = {
+				limit = {
+					has_modifier = uncivil_defence_contractor_mod_3
+					check_variable = { which = total_def_obligations value != 3 }
+				}
+				remove_modifier = uncivil_defence_contractor_mod_3
+			}
+			if = {
+				limit = {
+					has_modifier = uncivil_defence_contractor_mod_4
+					check_variable = { which = total_def_obligations value != 4 }
+				}
+				remove_modifier = uncivil_defence_contractor_mod_4
+			}
+			if = {
+				limit = {
+					has_modifier = uncivil_defence_contractor_mod_5
+					check_variable = { which = total_def_obligations value != 5 }
+				}
+				remove_modifier = uncivil_defence_contractor_mod_5
+			}
+				
+			
+			if = {
+				limit = {
+					check_variable = { which = total_def_obligations value = 1 }
+					NOT = { has_modifier = uncivil_defence_contractor_mod_1 }
+				}
+				add_modifier = { modifier = "uncivil_defence_contractor_mod_1" days = -1 }
+			}
+			else_if = {
+				limit = { 
+					check_variable = { which = total_def_obligations value = 2 }
+					NOT = { has_modifier = uncivil_defence_contractor_mod_2 }
+				}
+				add_modifier = { modifier = "uncivil_defence_contractor_mod_2" days = -1 }
+			}
+			else_if = {
+				limit = { 
+					check_variable = { which = total_def_obligations value = 3 }
+					NOT = { has_modifier = uncivil_defence_contractor_mod_3 }
+				}
+				add_modifier = { modifier = "uncivil_defence_contractor_mod_3" days = -1 }
+			}
+			else_if = {
+				limit = { 
+					check_variable = { which = total_def_obligations value = 4 }
+					NOT = { has_modifier = uncivil_defence_contractor_mod_4 }
+				}
+				add_modifier = { modifier = "uncivil_defence_contractor_mod_4" days = -1 }
+			}
+			else_if = {
+				limit = { 
+					check_variable = { which = total_def_obligations value = 5 }
+					NOT = { has_modifier = uncivil_defence_contractor_mod_5 }
+				}
+				add_modifier = { modifier = "uncivil_defence_contractor_mod_5" days = -1 }
+			}
+
+			clear_variable = total_def_obligations
+			clear_variable = contractor_num_def_pacts
+		}
+		else = {
+			if = {
+				limit = {
+					count_federation_ally = { count != 1 }
+					has_modifier = uncivil_defence_contractor_mod_1
+				}
+				remove_modifier = uncivil_defence_contractor_mod_1
+			}
+
+			if = {
+				limit = {
+					count_federation_ally = { count != 2 }
+					has_modifier = uncivil_defence_contractor_mod_2
+				}
+				remove_modifier = uncivil_defence_contractor_mod_2
+			}
+
+			if = {
+				limit = {
+					count_federation_ally = { count != 3 }
+					has_modifier = uncivil_defence_contractor_mod_3
+				}
+				remove_modifier = uncivil_defence_contractor_mod_3
+			}
+
+			if = {
+				limit = {
+					count_federation_ally = { count != 4 }
+					has_modifier = uncivil_defence_contractor_mod_4
+				}
+				remove_modifier = uncivil_defence_contractor_mod_4
+			}
+
+			if = {
+				limit = {
+					count_federation_ally = { count != 5 }
+					has_modifier = uncivil_defence_contractor_mod_5
+				}
+				remove_modifier = uncivil_defence_contractor_mod_5
+			}
+
+			if = {
+				limit = {
+					count_federation_ally = { count = 1 }
+					NOT = { has_modifier = uncivil_defence_contractor_mod_1 }
+				}
+				add_modifier = { modifier = "uncivil_defence_contractor_mod_1" days = -1 }
+			}
+			
+			else_if = {
+				limit = {
+					count_federation_ally = { count = 2 }
+					NOT = { has_modifier = uncivil_defence_contractor_mod_2 }
+				}
+				add_modifier = { modifier = "uncivil_defence_contractor_mod_2" days = -1 }
+			}
+			
+			else_if = {
+				limit = {
+					count_federation_ally = { count = 3 }
+					NOT = { has_modifier = uncivil_defence_contractor_mod_3 }
+				}
+				add_modifier = { modifier = "uncivil_defence_contractor_mod_3" days = -1 }
+			}
+			
+			else_if = {
+				limit = {
+					count_federation_ally = { count = 4 }
+					NOT = { has_modifier = uncivil_defence_contractor_mod_4 }
+				}
+				add_modifier = { modifier = "uncivil_defence_contractor_mod_4" days = -1 }
+			}
+			
+			else_if = {
+				limit = {
+					count_federation_ally = { count >= 5 }
+					NOT = { has_modifier = uncivil_defence_contractor_mod_5 }
+				}
+				add_modifier = { modifier = "uncivil_defence_contractor_mod_5" days = -1 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uncivil_civics_events.9	 #Defence Contractor 2	// Removes modifiers before gov change
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
 		has_civic = civic_uncivil_defence_contractor
 	}
 	
-	immediate = { #This is awful. This is so fucking laggy but I can't be bothered to optimize it. Fuck you. Maybe I'll do it later.
-		
+	immediate = {
 		if = {
 			limit = { has_modifier = uncivil_defence_contractor_mod_1 }
 			remove_modifier = uncivil_defence_contractor_mod_1
@@ -32,170 +218,7 @@ country_event = {
 			limit = { has_modifier = uncivil_defence_contractor_mod_5 }
 			remove_modifier = uncivil_defence_contractor_mod_5
 		}
-		if = {
-			limit = { has_modifier = uncivil_defence_contractor_mod_6 }
-			remove_modifier = uncivil_defence_contractor_mod_6
-		}
-		if = {
-			limit = { has_modifier = uncivil_defence_contractor_mod_7 }
-			remove_modifier = uncivil_defence_contractor_mod_7
-		}
-			
-		
-		if = {
-			limit = { 
-				has_valid_civic = civic_uncivil_defence_contractor
-				num_defensive_pacts = 1
-			}
-			add_modifier = { modifier = "uncivil_defence_contractor_mod_1" days = -1 }
-		}
-		
-		if = {
-			limit = { 
-				has_valid_civic = civic_uncivil_defence_contractor
-				num_defensive_pacts = 2
-			}
-			add_modifier = { modifier = "uncivil_defence_contractor_mod_2" days = -1 }
-		}
-		
-		if = {
-			limit = { 
-				has_valid_civic = civic_uncivil_defence_contractor
-				num_defensive_pacts = 3
-			}
-			add_modifier = { modifier = "uncivil_defence_contractor_mod_3" days = -1 }
-		}
-		
-		if = {
-			limit = { 
-				has_valid_civic = civic_uncivil_defence_contractor
-				num_defensive_pacts = 4
-			}
-			add_modifier = { modifier = "uncivil_defence_contractor_mod_4" days = -1 }
-		}
-		
-		if = {
-			limit = { 
-				has_valid_civic = civic_uncivil_defence_contractor
-				num_defensive_pacts >= 5
-			}
-			add_modifier = { modifier = "uncivil_defence_contractor_mod_5" days = -1 }
-		}
-		
-		if = {
-			limit = { 
-				has_valid_civic = civic_uncivil_defence_contractor
-				num_defensive_pacts <= 4
-				num_guarantees = 1
-			}
-			add_modifier = { modifier = "uncivil_defence_contractor_mod_6" days = -1 }
-		}
-		
-		if = {
-			limit = { 
-				has_valid_civic = civic_uncivil_defence_contractor
-				num_defensive_pacts <= 3
-				num_guarantees = 2
-			}
-			add_modifier = { modifier = "uncivil_defence_contractor_mod_7" days = -1 }
-		}
-		
-		if = {
-			limit = { 
-				has_valid_civic = civic_uncivil_defence_contractor
-				num_defensive_pacts <= 2
-				num_guarantees = 3
-			}
-			add_modifier = { modifier = "uncivil_defence_contractor_mod_3" days = -1 }
-		}
-		
-		if = {
-			limit = { 
-				has_valid_civic = civic_uncivil_defence_contractor
-				num_defensive_pacts <= 1
-				num_guarantees = 4
-			}
-			add_modifier = { modifier = "uncivil_defence_contractor_mod_4" days = -1 }
-		}
-		
-		if = {
-			limit = { 
-				has_valid_civic = civic_uncivil_defence_contractor
-				num_defensive_pacts = 0
-				num_guarantees >= 5
-			}
-			add_modifier = { modifier = "uncivil_defence_contractor_mod_5" days = -1 }
-		}
-		
-		if = {
-			limit = { 
-				has_valid_civic = civic_uncivil_defence_contractor
-				num_defensive_pacts = 1
-			}
-			add_modifier = { modifier = "uncivil_defence_contractor_mod_1" days = -1 }
-		}
-		
-		if = {
-			limit = { 
-				has_valid_civic = civic_uncivil_defence_contractor
-				count_federation_ally = { count = 1 }
-			}
-			add_modifier = { modifier = "uncivil_defence_contractor_mod_1" days = -1 }
-		}
-		
-		if = {
-			limit = { 
-				has_valid_civic = civic_uncivil_defence_contractor
-				count_federation_ally = { count = 2 }
-			}
-			add_modifier = { modifier = "uncivil_defence_contractor_mod_2" days = -1 }
-		}
-		
-		if = {
-			limit = { 
-				has_valid_civic = civic_uncivil_defence_contractor
-				count_federation_ally = { count = 3 }
-			}
-			add_modifier = { modifier = "uncivil_defence_contractor_mod_3" days = -1 }
-		}
-		
-		if = {
-			limit = { 
-				has_valid_civic = civic_uncivil_defence_contractor
-				count_federation_ally = { count = 4 }
-			}
-			add_modifier = { modifier = "uncivil_defence_contractor_mod_4" days = -1 }
-		}
-		
-		if = {
-			limit = { 
-				has_valid_civic = civic_uncivil_defence_contractor
-				count_federation_ally >= { count = 5 }
-			}
-			add_modifier = { modifier = "uncivil_defence_contractor_mod_5" days = -1 }
-		}
 	}
-}
-
-country_event = {
-	id = uncivil_civics_events.9	 #Defence Contractor 2	// Removes modifiers before gov change
-	hide_window = yes
-	is_triggered_only = yes
-	
-	trigger = {
-		has_civic = civic_uncivil_defence_contractor
-	}
-	
-	immediate = {
-		remove_modifier = uncivil_defence_contractor_mod_1
-		remove_modifier = uncivil_defence_contractor_mod_2
-		remove_modifier = uncivil_defence_contractor_mod_3
-		remove_modifier = uncivil_defence_contractor_mod_4
-		remove_modifier = uncivil_defence_contractor_mod_5
-		remove_modifier = uncivil_defence_contractor_mod_6
-		remove_modifier = uncivil_defence_contractor_mod_7
-	}
-
 }
 
 
@@ -210,12 +233,27 @@ country_event = {
 	}
 	
 	immediate = {
-		
-		remove_modifier = uncivil_mercenary_company_mod_1
-		remove_modifier = uncivil_mercenary_company_mod_2
-		remove_modifier = uncivil_mercenary_company_mod_3
-		remove_modifier = uncivil_mercenary_company_mod_4
-		remove_modifier = uncivil_mercenary_company_mod_5
+
+		if = {
+			limit = { has_modifier = uncivil_mercenary_company_mod_1 }
+			remove_modifier = uncivil_mercenary_company_mod_1
+		}
+		if = {
+			limit = { has_modifier = uncivil_mercenary_company_mod_2 }
+			remove_modifier = uncivil_mercenary_company_mod_2
+		}
+		if = {
+			limit = { has_modifier = uncivil_mercenary_company_mod_3 }
+			remove_modifier = uncivil_mercenary_company_mod_3
+		}
+		if = {
+			limit = { has_modifier = uncivil_mercenary_company_mod_4 }
+			remove_modifier = uncivil_mercenary_company_mod_4
+		}
+		if = {
+			limit = { has_modifier = uncivil_mercenary_company_mod_5 }
+			remove_modifier = uncivil_mercenary_company_mod_5
+		}
 			
 		if = {
 			limit = { 
@@ -310,18 +348,9 @@ country_event = {
 						is_war_leader = no
 						has_civic = civic_uncivil_mercenary_company
 					}
-					country_event = {
-						id = uncivil_civics_events.10
-					}
+					country_event = { id = uncivil_civics_events.10 }
 				}	
 			}
 		}
 	}
-
-}
-
-country_event = {
-	id = uncivil_civics_events.666 #debug
-	hide_window = no
-	is_triggered_only = yes
 }

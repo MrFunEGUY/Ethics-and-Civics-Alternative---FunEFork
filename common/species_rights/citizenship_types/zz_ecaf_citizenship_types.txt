@@ -112,8 +112,8 @@ citizenship_limited = {
 		exists = from
 		from = {
 			NOR = {
-				has_authority = auth_hive_mind
-				has_authority = auth_machine_intelligence
+				is_hive_empire = yes
+				is_machine_empire = yes
 			}
 		}
 		NOR = {
@@ -138,14 +138,14 @@ citizenship_limited = {
 		custom_tooltip = {
 			fail_text = "HIVE_MIND_SPECIES_CITIZENS_ONLY"
 			OR = {
-				NOT = { from = { has_authority = auth_hive_mind } }
+				from = { is_hive_empire = no }
 				has_trait = trait_hive_mind
 			}
 		}
 		custom_tooltip = {
 			fail_text = "HIVE_MIND_MAIN_SPECIES_ALWAYS_CITIZEN"
 			NAND = {
-				from = { has_authority = auth_hive_mind }
+				from = { is_hive_empire = yes }
 				has_trait = trait_hive_mind
 			}
 		}
@@ -264,7 +264,7 @@ citizenship_slavery = {
 		custom_tooltip = {
 			fail_text = "HIVE_MIND_MAIN_SPECIES_ALWAYS_CITIZEN"
 			NAND = {
-				from = { has_authority = auth_hive_mind }
+				from = { is_hive_empire = yes }
 				has_trait = trait_hive_mind
 			}
 		}

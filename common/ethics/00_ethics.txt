@@ -247,7 +247,7 @@ ethic_egalitarian = {
 	}
 	country_modifier = {
 		pop_factions_produces_mult = 0.25
-		country_admin_cap_mult = 0.1
+		empire_size_penalty_mult = -0.1
 		pop_ethics_shift_speed_mult = 0.1
 	}
 	random_weight = {

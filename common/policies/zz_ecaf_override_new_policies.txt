@@ -1322,6 +1322,7 @@ border_policy = {
 			modifier = {
 				factor = 0
 				is_megacorp = yes
+				NOT = { has_crisis_level = crisis_level_5 } # Ariphaos
 			}
 			modifier = {
 				factor = 0
@@ -1329,12 +1330,14 @@ border_policy = {
 				NOR = {
 					has_ai_personality_behaviour = isolationist
 					has_ai_personality_behaviour = attack_neutrals
+					has_crisis_level = crisis_level_5 # Ariphaos
 				}
 			}
 			modifier = {
 				factor = 0
 				has_valid_ai_personality = no
 				is_xenophobe = no
+				NOT = { has_crisis_level = crisis_level_5 } # Ariphaos
 			}
 			modifier = {
 				factor = 10

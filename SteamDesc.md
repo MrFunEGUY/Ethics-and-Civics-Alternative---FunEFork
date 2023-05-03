@@ -1,25 +1,70 @@
 [h1]Short Description:[/h1]
 
-- This is a fork of [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2387799348]Ethics and Civics Alternative - Redux[/url], which is a fork of the original [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1790861374]Ethics and Civics Alternative mod by Petruxa[/url].
+- This is a fork of [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2387799348]Ethics and Civics Alternative - Redux by LordofLA[/url], which is a fork of the original [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1790861374]Ethics and Civics Alternative mod by Petruxa[/url]. Credit to both of them for the vast majority of the base code.
 
-- In addition, I've merged my other mod [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2158334880]More Authorities[/url] into this, so don't use that mod with this one.
+- In addition, I've merged 2 other mods into this one. My other mod [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2158334880]More Authorities[/url], and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2462721212]Relytor's Empire Governance - Redux by LordofLA[/url], which is a fork of the original [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1790861374]Relytor's Empire Governance mod by relytor[/url].
 
 
 [hr][/hr]
+[h1]New Authorities:[/h1]
+
+[b]Democratic Autocracy:[/b]
+
+- This system of government democratically elects a dictator for life. When your ruler  dies, a new one will be elected the same as in democracies, with faction support mattering and whatnot.
+
+----
+
+[b]Term Limited:[/b]
+
+- This government form elects a ruler for a single 15-year term. After their term, leaders will go back to whatever job they had before (scientist, governor, admiral, general). However, their portrait may be changed. This is still an issue in 3.6, and may yet be resolved in the future.
+
+----
+
+[b]Private Corporate:[/b]
+
+- This government is a megacorp that has a monarchy. It's a megacorp, but with Rulers for life and Heirs, just like Imperial authority.
 
 
-[h1]Important:[/h1]
+[hr][/hr]
+[h1]Native Compatibility:[/h1]
 
-- This is basically an alpha where I want people to report bugs for me to fix. I've done a lot already to update the code to 3.7 and make it workable.
+This mod should go below any of the mods listed below.
 
+- All of my mods
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=1960052542]- Amazing Civics - Megacorp by Ryika[/url]
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2920668465]- Civic: Organic Zealots by corsairmarks[/url]
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2028670202]- Extra Origins by G_S_Palmer[/url]
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2806903835]- Government Variety Pack by LittleRaskol[/url]
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=727000451]- More Events Mod by Malthus[/url]
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2029348400]- Venture Politics by hanson825[/url]
+
+
+[hr][/hr]
+[h1]Patches:[/h1]
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2464185035]- Expanded Mandates[/url]
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=1923444292]- UI Overhaul Dynamic + Ethics and Civics Alternative[/url]
+
+
+[hr][/hr]
+[h1]Credits:[/h1]
+
+- [url=https://steamcommunity.com/id/Juhius]Juhius[/url] - For [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2662166848]Mercenary Megacorps[/url], which has been integrated into this mod.
+
+- The thumbnail image uses [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1769029620]Colored Ethics Alternate[/url]
 
 [hr][/hr]
 
 [h1]Some Other Mods I've Made/Updated:[/h1]
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2434790082]- Civil Wars[/url]
-
-[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2158334880]- More Authorities[/url]
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2114559224]- Viable Feudalism and Imperialism - Empire Federation[/url]
 
@@ -33,11 +78,10 @@
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2732567565]- No More Exclaves[/url]
 
-[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2946180532]- Expanded Stellaris Traditions - 3.7 [/url]
-
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2183551683]- Vassals Expanded and Reworked - FunEFork[/url]
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2177145527]- Intervene: Help Friendly Nations - FunEFork[/url]
+
 
 [hr][/hr]
 

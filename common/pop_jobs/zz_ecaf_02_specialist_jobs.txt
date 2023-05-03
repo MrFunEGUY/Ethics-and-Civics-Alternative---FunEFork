@@ -492,7 +492,7 @@ enforcer = {
 		weight = @specialist_job_weight
 
 		modifier = {
-			factor = value:job_weights_modifier|JOB|enforcer|RESOURCE|unity|FACTOR|0.25|
+			mult = value:job_weights_modifier|JOB|enforcer|RESOURCE|unity|FACTOR|0.25|
 			owner = { has_active_tradition = tr_domination_judgment_corps }
 		}
 
@@ -507,7 +507,7 @@ enforcer = {
 		}
 		modifier = {
 			factor = 0.01
-			planet = { planet_crime <= 15}
+			planet = { planet_crime <= 10} # Changed from 15, Ariphaos
 			NOT = { has_job = enforcer }
 		}
 

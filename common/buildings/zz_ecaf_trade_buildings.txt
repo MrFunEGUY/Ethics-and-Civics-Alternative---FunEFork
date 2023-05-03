@@ -33,7 +33,6 @@ building_commercial_zone = {
 
 	planet_modifier = {
 		job_clerk_add = 3
-		job_merchant_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -92,10 +91,6 @@ building_commercial_megaplex = {
 		has_building = building_commercial_zone
 	}
 
-	allow = {
-		buildings_upgrade_allow = yes
-	}
-
 	destroy_trigger = {
 		exists = owner
 		OR = {
@@ -119,7 +114,7 @@ building_commercial_megaplex = {
 
 	planet_modifier = {
 		job_clerk_add = 5
-		job_merchant_add = 2
+		job_merchant_add = 1
 	}
 
 	triggered_planet_modifier = {
