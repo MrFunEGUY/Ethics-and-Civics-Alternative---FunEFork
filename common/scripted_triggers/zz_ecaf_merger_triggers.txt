@@ -1,0 +1,7 @@
+# Irony this is a placeholder file please ignore it
+
+has_corporate_imperial_auth = { has_authority = auth_corporate_imperial }
+
+has_strict_democratic_auth = { has_authority = auth_strict_democratic }
+
+has_dict_democratic_auth = { has_authority = auth_dict_democratic }
