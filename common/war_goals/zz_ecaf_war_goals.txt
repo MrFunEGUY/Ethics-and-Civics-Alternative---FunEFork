@@ -516,7 +516,7 @@ wg_megacorp_subjugate = {
 					switch = {
 						trigger = has_policy_flag
 						oppressive_terms = {
-							FROM = {
+							PREV = {
 								set_subject_of = {
 									who = ROOT
 									preset = preset_subsidiary_oppressive
@@ -670,6 +670,15 @@ wg_force_ideology = {
 					amount = 0.10
 				}
 			}
+			if = {
+				limit = {
+					has_valid_civic = civic_crusader_spirit
+				}
+				change_variable = {
+					which = we_bring_peace_achievement_count
+					value = 1
+				}
+			}
 		}
 	}
 	on_accept = {
@@ -758,6 +767,15 @@ wg_force_ideology = {
 			}
 			from = {
 				leave_alliance = { override_requirements = yes }
+			}
+			if = {
+				limit = {
+					has_valid_civic = civic_crusader_spirit
+				}
+				change_variable = {
+					which = we_bring_peace_achievement_count
+					value = 1
+				}
 			}
 		}
 	}

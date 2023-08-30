@@ -27,7 +27,7 @@ xenoist = {
                 	}
                 }
             }
-            unity = 0.5
+            unity = @faction_base_unity
         }
 	}
 
@@ -62,7 +62,7 @@ xenoist = {
 			exists = from
 			from = {
 				exists = leader
-				leader = { leader_class = ruler }
+				leader = { is_ruler = yes }
 			}
 		}
 
@@ -686,6 +686,14 @@ xenoist = {
 			}
 		}
 	}
+
+	# Global Faction Demands.
+	inline_script = {
+		script = "paragon/global_faction_demands"
+		ETHIC = ethic_xenophile
+		ETHIC_FANATIC = ethic_fanatic_xenophile
+		ETHIC_OPPOSED = ethic_xenophobe
+	} 
 
 	demand = { # Alien Zoo (for conservation)
 		title = "XENOIST_XENOLOGICAL_CONSERVATION"

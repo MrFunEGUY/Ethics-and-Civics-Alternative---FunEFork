@@ -40,7 +40,7 @@ prosperity = {
                 	}
                 }
             }
-            unity = 0.5
+            unity = @faction_base_unity
         }
 	}
 
@@ -62,7 +62,7 @@ prosperity = {
 			exists = from
 			from = {
 				exists = leader
-				leader = { leader_class = ruler }
+				leader = { is_ruler = yes }
 			}
 		}
 
@@ -79,10 +79,9 @@ prosperity = {
 			is_pacifist = yes
 		}
 
-		# Should really check for citizenship instead
 		modifier = {
 			factor = 1.25
-			NOT = { is_same_species = owner_species }
+			has_citizenship_rights = no
 		}
 
 		modifier = {
@@ -364,6 +363,14 @@ prosperity = {
 				}
 			}
 		}
+	}
+
+	# Faction Demands for Ruler and Council positions.
+	inline_script = {
+		script = "paragon/global_faction_demands"
+		ETHIC = ethic_pacifist
+		ETHIC_FANATIC = ethic_fanatic_pacifist
+		ETHIC_OPPOSED = ethic_militarist
 	}
 
 	on_create = {

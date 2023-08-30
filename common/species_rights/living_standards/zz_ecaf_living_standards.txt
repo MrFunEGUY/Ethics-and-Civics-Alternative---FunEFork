@@ -134,7 +134,10 @@ living_standard_utopian = {
 
 	potential = {
 		exists = from
-		from = { is_gestalt = no }
+		from = {
+			is_gestalt = no
+			NOT = { has_valid_civic = civic_dystopian_society }
+		}
 		NOR = {
 			has_trait = trait_hive_mind
 			has_trait = trait_machine_unit
@@ -245,8 +248,8 @@ living_standard_academic_privilege = {
 		pop_category_rulers_consumer_goods_upkeep_add = @living_standard_luxuries_very_high
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_very_high
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_normal
-		pop_cat_ruler_political_power = 9
-		pop_cat_specialist_political_power = 4
+		# pop_cat_ruler_political_power = 9
+		# pop_cat_specialist_political_power = 4
 	}
 
 	potential = {
@@ -254,9 +257,10 @@ living_standard_academic_privilege = {
 		from = {
 			is_gestalt = no
 			NOR = {
+				has_valid_civic = civic_shared_burden
+				has_valid_civic = civic_dystopian_society
 				has_valid_civic = civic_slaving_despots
 				has_valid_civic = civic_welfare_state
-				has_valid_civic = civic_shared_burden
 				has_valid_civic = civic_employee_ownership # Venture Politics
 			}
 		}
@@ -389,9 +393,9 @@ living_standard_good = {
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_high
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_high
 		pop_category_slave_consumer_goods_upkeep_add = @living_standard_luxuries_low
-		pop_cat_ruler_political_power = 4
-		pop_cat_specialist_political_power = 1
-		pop_cat_worker_political_power = 0.5
+		# pop_cat_ruler_political_power = 4
+		# pop_cat_specialist_political_power = 1
+		# pop_cat_worker_political_power = 0.5
 	}
 
 	potential = {
@@ -400,6 +404,7 @@ living_standard_good = {
 			is_gestalt = no
 			NOR = {
 				has_valid_civic = civic_shared_burden
+				has_valid_civic = civic_dystopian_society
 				has_valid_civic = civic_employee_ownership # Venture Politics
 				has_valid_civic = civic_beacon_of_liberty
 				has_ethic = ethic_fanatic_capitalism
@@ -534,8 +539,8 @@ living_standard_normal = {
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_high
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_normal
 		pop_category_slave_consumer_goods_upkeep_add = @living_standard_luxuries_very_low
-		pop_cat_ruler_political_power = 7
-		pop_cat_specialist_political_power = 1
+		# pop_cat_ruler_political_power = 7
+		# pop_cat_specialist_political_power = 1
 	}
 
 	potential = {
@@ -544,6 +549,7 @@ living_standard_normal = {
 			is_gestalt = no
 			NOR = {
 				has_valid_civic = civic_shared_burden
+				has_valid_civic = civic_dystopian_society
 				has_valid_civic = civic_employee_ownership # Venture Politics
 				has_valid_civic = civic_slaving_despots
 				has_valid_civic = civic_welfare_state
@@ -647,9 +653,9 @@ living_standard_stratified = {
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_high
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_low
 		pop_category_slave_consumer_goods_upkeep_add = @living_standard_luxuries_none
-		pop_cat_ruler_political_power = 9
-		pop_cat_specialist_political_power = 1
-		pop_cat_worker_political_power = -0.25
+		# pop_cat_ruler_political_power = 9
+		# pop_cat_specialist_political_power = 1
+		# pop_cat_worker_political_power = -0.25
 	}
 
 	potential = {
@@ -658,6 +664,7 @@ living_standard_stratified = {
 			is_gestalt = no
 			NOR = {
 				has_valid_civic = civic_shared_burden
+				has_valid_civic = civic_dystopian_society
 				has_valid_civic = civic_employee_ownership # Venture Politics
 			}
 		}
@@ -747,9 +754,9 @@ living_standard_subsistence = {
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_normal
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_very_low
 
-		pop_cat_ruler_political_power = 4
-		pop_cat_specialist_political_power = -0.25
-		pop_cat_worker_political_power = -0.5
+		# pop_cat_ruler_political_power = 4
+		# pop_cat_specialist_political_power = -0.25
+		# pop_cat_worker_political_power = -0.5
 	}
 
 	in_breach_of = {
@@ -778,9 +785,12 @@ living_standard_subsistence = {
 
 	potential = {
 		exists = from
-		NOR = { 
-			from = { has_valid_civic = civic_shared_burden } 
-			from = { has_valid_civic = civic_employee_ownership }	
+		from = {
+			NOR = {
+				has_valid_civic = civic_shared_burden
+				has_valid_civic = civic_dystopian_society
+				has_valid_civic = civic_employee_ownership # Venture Politics
+			}
 		}
 		OR = {
 			from = { is_gestalt = no }

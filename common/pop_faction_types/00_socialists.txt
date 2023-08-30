@@ -6,6 +6,7 @@ socialists = {
 	guiding_ethic = ethic_socialism
 	unique = yes
 	support_multiplier = 1
+
 	resources = {
 		category = pop_factions
 		produces = {
@@ -24,7 +25,7 @@ socialists = {
                 	}
                 }
             }
-            unity = 0.5
+            unity = @faction_base_unity
         }
         produces = {
 			trigger = { 
@@ -33,11 +34,13 @@ socialists = {
 			unity = 0.5
 		}
 	}
+
 	is_potential = {
 		years_passed > 10
 		has_encountered_other_species = yes
 		is_gestalt = no
 	}
+
 	parameters = {
 		empire = {
 			type = country
@@ -46,14 +49,17 @@ socialists = {
 			}
 		}
 	}
+
 	can_join_pre_triggers = {
 		is_enslaved = no
 		is_being_purged = no
 	}
+
 	can_join_faction = {
 		is_shackled_robot = no
 		can_think = yes
 	}
+
 	attraction = {
 		base = 150
 		modifier = {
@@ -61,18 +67,14 @@ socialists = {
 			exists = from
 			from = {
 				exists = leader
-				leader = {
-					leader_class = ruler
-				}
+				leader = { is_ruler = yes }
 			}
 		}
 		modifier = {
 			factor = 0.75
 			exists = from
 			from = {
-				NOT = {
-					exists = leader
-				}
+				NOT = { exists = leader }
 			}
 		}
 
@@ -81,6 +83,7 @@ socialists = {
 			planet = { has_modifier = planet_culture_shock }
 		}
 	}
+
 	leader = {
 		base = 100
 		modifier = {
@@ -88,6 +91,7 @@ socialists = {
 			is_event_leader = yes
 		}
 	}
+
 	demand = {
 		title = "FACTION_OUTRAGED_GC"
 		unfulfilled_title = "FACTION_OUTRAGED_GC"
@@ -106,6 +110,7 @@ socialists = {
 			}
 		}
 	}
+
 	demand = {
 		title = "REGULATED_TRADE"
 		unfulfilled_title = "REGULATED_TRADE"
@@ -123,6 +128,7 @@ socialists = {
 			}
 		}
 	}
+
 	demand = {
 		title = "INDUSTRIAL_EFFICIENCY"
 		unfulfilled_title = "NO_INDUSTRIAL_EFFICIENCY"
@@ -145,6 +151,7 @@ socialists = {
 			}
 		}
 	}
+
 	demand = {
 		title = "SOCIAL_WELFARE"
 		unfulfilled_title = "NO_SOCIAL_WELFARE"
@@ -174,6 +181,7 @@ socialists = {
 			}
 		}
 	}
+
 	demand = {
 		title = "SOCIAL_SECURITY"
 		unfulfilled_title = "NO_SOCIAL_SECURITY"
@@ -200,6 +208,7 @@ socialists = {
 			}
 		}
 	}
+
 	demand = {
 		title = "PROGRESSIVE_NO_ELITISM"
 		unfulfilled_title = "PROGRESSIVE_ELITISM"
@@ -224,6 +233,7 @@ socialists = {
 			}
 		}
 	}
+
 	demand = {
 		title = "HEALTHCARE_CAMPAIGN"
 		unfulfilled_title = "NO_HEALTHCARE_CAMPAIGN"
@@ -238,6 +248,7 @@ socialists = {
 			}
 		}
 	}
+
 	demand = {
 		title = "EDUCATION_CAMPAIGN"
 		unfulfilled_title = "NO_EDUCATION_CAMPAIGN"
@@ -252,6 +263,7 @@ socialists = {
 			}
 		}
 	}
+
 	demand = {
 		title = "PUBLIC_EDUCATION"
 		unfulfilled_title = "NO_PUBLIC_EDUCATION"
@@ -266,6 +278,7 @@ socialists = {
 			}
 		}
 	}
+
 	demand = {
 		title = "NO_PRIVATE_EDUCATION"
 		unfulfilled_title = "PRIVATE_EDUCATION"
@@ -285,6 +298,7 @@ socialists = {
 			}
 		}
 	}
+
 	demand = {
 		title = "NO_FREE_MARKET"
 		unfulfilled_title = "FREE_MARKET"
@@ -304,6 +318,7 @@ socialists = {
 			}
 		}
 	}
+
 	demand = {
 		title = "PLANNED_ECONOMY"
 		unfulfilled_title = "NO_PLANNED_ECONOMY"
@@ -324,6 +339,7 @@ socialists = {
 			}
 		}
 	}
+
 	demand = {
 		title = "PUBLIC_MEDICINE"
 		unfulfilled_title = "NO_PUBLIC_MEDICINE"
@@ -339,6 +355,7 @@ socialists = {
 			}
 		}
 	}
+
 	demand = {
 		title = "NO_PRIVATE_MEDICINE"
 		unfulfilled_title = "PRIVATE_MEDICINE"
@@ -358,11 +375,21 @@ socialists = {
 			}
 		}
 	}
+
+	# Faction Demands for Ruler and Council positions.
+	inline_script = {
+		script = "paragon/global_faction_demands"
+		ETHIC = ethic_socialism
+		ETHIC_FANATIC = ethic_fanatic_socialism
+		ETHIC_OPPOSED = ethic_capitalism
+	}
+
 	on_create = {
 		pop_faction_event = {
 			id = factions.1
 		}
 	}
+
 	on_destroy = {
 		if = {
 			limit = {
@@ -377,6 +404,7 @@ socialists = {
 			remove_modifier = suppressed_socialism
 		}
 	}
+
 	actions = {
 		embrace_faction = {
 			title = "EMBRACE_FACTION"

@@ -27,7 +27,7 @@ progressive = {
                 	}
                 }
             }
-            unity = 0.5
+            unity = @faction_base_unity
         }
 	}
 
@@ -62,7 +62,7 @@ progressive = {
 			exists = from
 			from = {
 				exists = leader
-				leader = { leader_class = ruler }
+				leader = { is_ruler = yes }
 			}
 		}
 
@@ -74,10 +74,9 @@ progressive = {
 			}
 		}
 
-		# Should really check for citizenship instead
 		modifier = {
 			factor = 0.25
-			NOT = { is_same_species = owner_species }
+			has_citizenship_rights = no
 		}
 
 		modifier = {
@@ -381,6 +380,14 @@ progressive = {
 			}
 		}
 	}
+
+	# Faction Demands for Ruler and Council positions.
+	inline_script = {
+		script = "paragon/global_faction_demands"
+		ETHIC = ethic_egalitarian
+		ETHIC_FANATIC = ethic_fanatic_egalitarian
+		ETHIC_OPPOSED = ethic_authoritarian
+	} 
 
 	on_create = {
 		pop_faction_event = { id = factions.1 }

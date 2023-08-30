@@ -246,35 +246,6 @@ espionage_smear_campaign_xenophile = {
 		set_country_flag = smear_campaign_deceived@root.owner
 	}
 }
-
-#Operation scope | root = operation; target = operation target
-espionage_smear_campaign_spiritualist = {
-	if = {
-		limit = {
-			root.target = {
-				OR = {
-					is_democracy = yes
-					has_authority = auth_oligarchic
-					has_authority = auth_imperial
-				}
-			}
-		}
-		set_country_flag = smear_spiritualist_ridic@root.target
-		set_country_flag = smear_campaign_insulted@root.owner
-	}
-	else_if = {
-		limit = {
-			root.target = { has_authority = auth_corporate }
-		}
-		set_country_flag = smear_spiritualist_merch@root.target
-		set_country_flag = smear_campaign_insulted@root.owner
-	}
-	else = {
-		set_country_flag = smear_spiritualist_deity@root.target
-		set_country_flag = smear_campaign_espionage@root.owner
-	}
-}
-
 #Operation scope | root = operation; target = operation target
 espionage_smear_campaign_authoritarian = {
 	if = {
@@ -310,3 +281,59 @@ espionage_smear_campaign_authoritarian = {
 		set_country_flag = smear_campaign_espionage@root.owner
 	}
 }
+
+# #Operation scope | root = operation; target = operation target
+# espionage_smear_campaign_capitalist = {
+# 	if = {
+# 		limit = {
+# 			root.target = {
+# 				OR = {
+# 					is_democracy = yes
+# 					has_authority = auth_oligarchic
+# 					has_authority = auth_imperial
+# 				}
+# 			}
+# 		}
+# 		set_country_flag = smear_spiritualist_ridic@root.target
+# 		set_country_flag = smear_campaign_insulted@root.owner
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			root.target = { has_authority = auth_corporate }
+# 		}
+# 		set_country_flag = smear_spiritualist_merch@root.target
+# 		set_country_flag = smear_campaign_insulted@root.owner
+# 	}
+# 	else = {
+# 		set_country_flag = smear_spiritualist_deity@root.target
+# 		set_country_flag = smear_campaign_espionage@root.owner
+# 	}
+# }
+
+# #Operation scope | root = operation; target = operation target
+# espionage_smear_campaign_socialist = {
+# 	if = {
+# 		limit = {
+# 			root.target = {
+# 				OR = {
+# 					is_democracy = yes
+# 					has_authority = auth_oligarchic
+# 					has_authority = auth_imperial
+# 				}
+# 			}
+# 		}
+# 		set_country_flag = smear_spiritualist_ridic@root.target
+# 		set_country_flag = smear_campaign_insulted@root.owner
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			root.target = { has_authority = auth_corporate }
+# 		}
+# 		set_country_flag = smear_spiritualist_merch@root.target
+# 		set_country_flag = smear_campaign_insulted@root.owner
+# 	}
+# 	else = {
+# 		set_country_flag = smear_spiritualist_deity@root.target
+# 		set_country_flag = smear_campaign_espionage@root.owner
+# 	}
+# }

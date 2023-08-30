@@ -1,0 +1,44 @@
+##########################################################################
+# Empire edicts
+##########################################################################
+@Edict1Cost = 10
+@Edict2Cost = 20
+@Edict3Cost = 30
+@EdictPerpetual = -1
+#################
+# Toggle Edicts
+#################
+nutritional_plenitude = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	resources = {
+		category = edicts
+		upkeep = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+	modifier = {
+		pop_growth_speed = 0.1
+		biological_pop_happiness = 0.05
+		lithoid_pop_happiness = 0.05
+		empire_size_pops_mult = 0.1
+		planet_pops_organics_food_upkeep_mult = 0.25
+		planet_pops_organics_minerals_upkeep_mult = 0.25
+	}
+	potential = {
+		is_gestalt = no
+		NOT = {
+			has_ethic = ethic_fanatic_capitalism
+		}
+	}
+	prerequisites = {
+		"tech_gene_crops"
+	}
+	show_tech_unlock_if = {
+		is_gestalt = no
+	}
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}

@@ -6,6 +6,7 @@ bankers = {
 	guiding_ethic = ethic_capitalism	# only pops of this ethic can join the faction
 	unique = yes
 	support_multiplier = 1
+
 	resources = {
 		category = pop_factions
 		produces = {
@@ -24,14 +25,16 @@ bankers = {
                 	}
                 }
             }
-            unity = 0.5
+            unity = @faction_base_unity
         }
 	}
+
 	is_potential = {
 		years_passed > 10
 		has_encountered_other_species = yes
 		is_gestalt = no
 	}
+
 	parameters = {
 		empire = {
 			type = country
@@ -40,14 +43,17 @@ bankers = {
 			}
 		}
 	}
+
 	can_join_pre_triggers = {
 		is_enslaved = no
 		is_being_purged = no
 	}
+
 	can_join_faction = {
 		is_shackled_robot = no
 		can_think = yes
 	}
+
 	attraction = {
 		base = 150
 		modifier = {
@@ -55,25 +61,19 @@ bankers = {
 			exists = from
 			from = {
 				exists = leader
-				leader = {
-					leader_class = ruler
-				}
+				leader = { is_ruler = yes }
 			}
 		}
 		modifier = {
 			factor = 0.75
 			exists = from
 			from = {
-				NOT = {
-					exists = leader
-				}
+				NOT = { exists = leader }
 			}
 		}
 		modifier = {
 			factor = 0.25
-			NOT = {
-				is_same_species = owner_species
-			}
+			NOT = { is_same_species = owner_species }
 		}
 
 		modifier = {
@@ -81,6 +81,7 @@ bankers = {
 			planet = { has_modifier = planet_culture_shock }
 		}
 	}
+
 	leader = {
 		base = 100
 		modifier = {
@@ -88,6 +89,7 @@ bankers = {
 			is_event_leader = yes
 		}
 	}
+
 	demand = {
 		title = "FACTION_OUTRAGED_GC"
 		unfulfilled_title = "FACTION_OUTRAGED_GC"
@@ -106,6 +108,7 @@ bankers = {
 			}
 		}
 	}
+
 	demand = {
 		title = "TRADE_LEAGUE"
 		unfulfilled_title = "TRADE_LEAGUE"
@@ -125,6 +128,7 @@ bankers = {
 			}
 		}
 	}
+
 	demand = {
 		title = "MERCANTILE_DIPLO_STANCE"
 		unfulfilled_title = "MERCANTILE_DIPLO_STANCE"
@@ -147,6 +151,7 @@ bankers = {
 			}
 		}
 	}
+
 	demand = {
 		title = "TRADE_FEDERATION_DEMAND"
 		unfulfilled_title = "TRADE_FEDERATION_DEMAND"
@@ -169,6 +174,7 @@ bankers = {
 			}
 		}
 	}
+
 	demand = {
 		title = "CONSUMER_MARKETS"
 		unfulfilled_title = "CONSUMER_MARKETS"
@@ -186,6 +192,7 @@ bankers = {
 			}
 		}
 	}
+
 	demand = {
 		title = "INDUSTRIAL_PRODUCTIVISM"
 		unfulfilled_title = "NO_INDUSTRIAL_PRODUCTIVISM"
@@ -204,6 +211,7 @@ bankers = {
 			}
 		}
 	}
+
 	demand = {
 		title = "NO_EFFICIENCY"
 		unfulfilled_title = "NO_EFFICIENCY_NO"
@@ -224,6 +232,7 @@ bankers = {
 			}
 		}
 	}
+
 	demand = {
 		title = "TOTALITARIAN_STRATIFICATION"
 		unfulfilled_title = "TOTALITARIAN_NO_STRATIFICATION"
@@ -301,6 +310,7 @@ bankers = {
 			}
 		}
 	}
+
 	demand = {
 		title = "PROGRESSIVE_NO_WELFARE"
 		unfulfilled_title = "NO_PROGRESSIVE_NO_WELFARE"
@@ -331,6 +341,7 @@ bankers = {
 			}
 		}
 	}
+
 	demand = {
 		title = "TOTALITARIAN_ELITISM"
 		unfulfilled_title = "TOTALITARIAN_NO_ELITISM"
@@ -355,6 +366,7 @@ bankers = {
 			}
 		}
 	}
+
 	demand = {
 		title = "ALLOWED_LOBBY"
 		unfulfilled_title = "NO_ALLOWED_LOBBY"
@@ -372,6 +384,7 @@ bankers = {
 			}
 		}
 	}
+
 	demand = {
 		title = "PRIVATE_EDUCATION"
 		unfulfilled_title = "NO_PRIVATE_EDUCATION"
@@ -387,6 +400,7 @@ bankers = {
 			}
 		}
 	}
+
 	demand = {
 		title = "NO_PUBLIC_EDUCATION"
 		unfulfilled_title = "PUBLIC_EDUCATION"
@@ -406,6 +420,7 @@ bankers = {
 			}
 		}
 	}
+
 	demand = {
 		title = "FREE_MARKET_ECONOMY"
 		unfulfilled_title = "NO_FREE_MARKET_ECONOMY"
@@ -426,6 +441,7 @@ bankers = {
 			}
 		}
 	}
+
 	demand = {
 		title = "NO_PLANNED_ECONOMY"
 		unfulfilled_title = "PLANNED_ECONOMY"
@@ -445,6 +461,7 @@ bankers = {
 			}
 		}
 	}
+
 	demand = {
 		title = "PRIVATE_MEDICINE"
 		unfulfilled_title = "NO_PRIVATE_MEDICINE"
@@ -460,6 +477,7 @@ bankers = {
 			}
 		}
 	}
+
 	demand = {
 		title = "NO_PUBLIC_MEDICINE"
 		unfulfilled_title = "PUBLIC_MEDICINE"
@@ -479,6 +497,7 @@ bankers = {
 			}
 		}
 	}
+
 	demand = {
 		title = "COMMERCIAL_PACTS"
 		unfulfilled_title = "NO_COMMERCIAL_PACTS"
@@ -513,11 +532,21 @@ bankers = {
 			}
 		}
 	}
+
+	# Faction Demands for Ruler and Council positions.
+	inline_script = {
+		script = "paragon/global_faction_demands"
+		ETHIC = ethic_capitalism
+		ETHIC_FANATIC = ethic_fanatic_capitalism
+		ETHIC_OPPOSED = ethic_socialism
+	}
+
 	on_create = {
 		pop_faction_event = {
 			id = factions.1
 		}
 	}
+
 	on_destroy = {
 		if = {
 			limit = {
@@ -532,6 +561,7 @@ bankers = {
 			remove_modifier = suppressed_capitalism
 		}
 	}
+
 	actions = {
 		embrace_faction = {
 			title = "EMBRACE_FACTION"

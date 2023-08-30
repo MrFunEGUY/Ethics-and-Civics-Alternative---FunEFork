@@ -27,7 +27,7 @@ supremacist = {
                 	}
                 }
             }
-            unity = 0.5
+            unity = @faction_base_unity
         }
 	}
 
@@ -66,7 +66,7 @@ supremacist = {
 			exists = from
 			from = {
 				exists = leader
-				leader = { leader_class = ruler }
+				leader = { is_ruler = yes }
 			}
 		}
 
@@ -501,6 +501,14 @@ supremacist = {
 			}
 		}
 	}
+
+	# Faction Demands for Ruler and Council positions.
+	inline_script = {
+		script = "paragon/global_faction_demands"
+		ETHIC = ethic_xenophobe
+		ETHIC_FANATIC = ethic_fanatic_xenophobe
+		ETHIC_OPPOSED = ethic_xenophile
+	} 
 
 	on_create = {
 		pop_faction_event = { id = factions.1 }

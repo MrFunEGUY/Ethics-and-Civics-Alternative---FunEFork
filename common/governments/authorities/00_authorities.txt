@@ -36,22 +36,32 @@ auth_democratic = {
 
 	uses_mandates = yes
 
+	ruler_council_position = councilor_ruler_democratic
+
 	possible = {
-		ethics = {
+		origin = {
 			NOR = {
-				value = ethic_gestalt_consciousness
-				text = civic_tooltip_authoritarian
-				value = ethic_authoritarian
-				value = ethic_fanatic_authoritarian
+				text = origin_legendary_leader_no_gov_change
+				value = origin_legendary_leader_dictatorial
+				value = origin_legendary_leader_imperial
 			}
+		}
+		ethics = {
+			NOT = { value = ethic_gestalt_consciousness }
+            NOR = {
+            	text = civic_tooltip_not_authoritarian
+                value = ethic_authoritarian
+                value = ethic_fanatic_authoritarian
+            }
 		}
 	}
 
 	country_modifier = {
-		planet_resettlement_unemployed_mult = 0.50
+		faction_approval = 0.10
 		pop_cat_worker_political_power = 3
 		pop_cat_specialist_political_power = 4
 		pop_cat_ruler_political_power = 7
+		custom_tooltip = auth_democratic_tt
 	}
 
 	random_weight = {
@@ -70,11 +80,19 @@ auth_dictatorial = {
 
 	has_agendas = yes
 
+	ruler_council_position = councilor_ruler_dictatorial
+	
 	possible = {
+		origin = {
+			NOT = {
+				text = origin_legendary_leader_no_gov_change
+				value = origin_legendary_leader_imperial
+			}
+		}
 		ethics = {
+			NOT = { value = ethic_gestalt_consciousness }
 			NOR = {
-				value = ethic_gestalt_consciousness
-				text = civic_tooltip_egalitarian
+				text = civic_tooltip_not_egalitarian
 				value = ethic_egalitarian
 				value = ethic_fanatic_egalitarian
 			}
@@ -82,7 +100,7 @@ auth_dictatorial = {
 	}
 
 	country_modifier = {
-		empire_size_penalty_mult = -0.10
+		# Other modifiers are on "councilor_ruler_dictatorial".
 		pop_cat_worker_political_power = 2
 		pop_cat_specialist_political_power = 4
 		pop_cat_ruler_political_power = 9
@@ -104,7 +122,15 @@ auth_imperial = {
 
 	has_agendas = yes
 
+	ruler_council_position = councilor_ruler_imperial
+
 	possible = {
+		origin = {
+			NOT = {
+				text = origin_legendary_leader_no_gov_change
+				value = origin_legendary_leader_dictatorial
+			}
+		}
 		ethics = {
 			NOT = { value = ethic_gestalt_consciousness }
 			OR = {
@@ -117,7 +143,7 @@ auth_imperial = {
 	}
 
 	country_modifier = {
-		country_power_projection_influence_produces_add = 1
+		# Country modifier is on Capital buildings.
 		pop_cat_worker_political_power = 2
 		pop_cat_specialist_political_power = 3
 		pop_cat_ruler_political_power = 9
@@ -142,7 +168,16 @@ auth_oligarchic = {
 
 	has_agendas = yes
 
+	ruler_council_position = councilor_ruler_oligarchic
+
 	possible = {
+		origin = {
+			NOR = {
+				text = origin_legendary_leader_no_gov_change
+				value = origin_legendary_leader_dictatorial
+				value = origin_legendary_leader_imperial
+			}
+		}
 		ethics = {
 			NOR = {
 				value = ethic_gestalt_consciousness
@@ -153,7 +188,7 @@ auth_oligarchic = {
 	}
 
 	country_modifier = {
-		pop_factions_produces_mult = 0.15
+		councilor_skill_add = 2
 		pop_cat_worker_political_power = 3
 		pop_cat_specialist_political_power = 4
 		pop_cat_ruler_political_power = 7
@@ -179,6 +214,10 @@ auth_hive_mind = {
 
 	valid_for_released_vassal = yes
 
+	ruler_council_position = councilor_ruler_hive_mind
+
+	ruler_council_position = councilor_ruler_hive_mind
+	
 	playable = { host_has_dlc = "Utopia" }
 	possible = {
 		ethics = {
@@ -223,11 +262,11 @@ auth_strict_democratic = {
 
 	uses_mandates = yes
 
+	ruler_council_position = councilor_ruler_strict_democratic
+
 	possible = {
 		ethics = {
-			NOT = {
-                value = ethic_gestalt_consciousness
-            }
+			NOT = { value = ethic_gestalt_consciousness }
             OR = {
             	text = civic_tooltip_egalitarian
                 value = ethic_egalitarian
@@ -243,7 +282,7 @@ auth_strict_democratic = {
 	}
 
 	country_modifier = {
-		planet_stability_add = 10
+		# Stability modifier are on "councilor_ruler_strict_democratic".
 		pop_cat_worker_political_power = 3
 		pop_cat_specialist_political_power = 4
 		pop_cat_ruler_political_power = 7
@@ -260,6 +299,8 @@ auth_dict_democratic = {
 	emergency_election_cost = 150
 	uses_mandates = yes
 	has_agendas = yes
+
+	ruler_council_position = councilor_ruler_dict_democratic
 
 	possible = {
 		ethics = {
@@ -278,8 +319,6 @@ auth_dict_democratic = {
 	}
 
 	country_modifier = {
-		planet_resettlement_unemployed_mult = 0.25
-		empire_size_penalty_mult = -0.05
 		pop_cat_worker_political_power = 3
 		pop_cat_specialist_political_power = 5
 		pop_cat_ruler_political_power = 9.5
@@ -295,6 +334,8 @@ auth_corporate_imperial = {
 	has_heir = yes
 
 	has_agendas = yes
+
+	ruler_council_position = councilor_ruler_imperial
 
 	playable = {
 		host_has_dlc = "Megacorp"
@@ -312,6 +353,7 @@ auth_corporate_imperial = {
 
 	possible = {
 		ethics = {
+			NOT = { value = ethic_gestalt_consciousness }
 			OR = {
 				text = civic_tooltip_authoritarian
 				value = ethic_authoritarian
@@ -327,7 +369,6 @@ auth_corporate_imperial = {
 				value = ethic_xenophobe
 				value = ethic_fanatic_xenophobe
 			}
-			NOT = { value = ethic_gestalt_consciousness }
 		}
 	}
 
@@ -353,27 +394,28 @@ auth_corporate = {
 
 	has_agendas = yes
 
+	ruler_council_position = councilor_ruler_corporate
+
 	playable = {
 		host_has_dlc = "Megacorp"
 	}
 	possible = {
 		ethics = {
-			NOR = {
-				text = civic_tooltip_not_xenophobe
-				value = ethic_xenophobe
-				value = ethic_fanatic_xenophobe
-			}
 			OR = {
 				text = civic_tooltip_capitalism
 				value = ethic_capitalism
 				value = ethic_fanatic_capitalism
 			}
 			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+			NOR = {
 				value = ethic_gestalt_consciousness
 				value = ethic_fanatic_egalitarian
 				value = ethic_fanatic_authoritarian
 			}
-			
 		}
 	}
 	random_weight = {
@@ -410,6 +452,8 @@ auth_machine_intelligence = {
 
 	valid_for_released_vassal = no
 
+	ruler_council_position = councilor_ruler_machine_intelligence
+	
 	playable = {
 		host_has_dlc = "Synthetic Dawn Story Pack"
 	}

@@ -11,7 +11,7 @@ action_form_migration_pact = {
 		02_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -33,7 +33,7 @@ action_form_migration_pact = {
 		03_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -54,7 +54,7 @@ action_form_migration_pact = {
 		04_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -159,7 +159,7 @@ action_form_migration_pact = {
 						NOT = { is_same_empire = event_target:ratling_country }
 					}
 				}
-				is_megacorp = no
+				NOT = { is_megacorp = yes }
 			}
 		}
 	}
@@ -187,7 +187,7 @@ action_form_migration_pact = {
 						NOT = { is_same_empire = event_target:ratling_country }
 					}
 				}
-				is_megacorp = no
+				NOT = { is_megacorp = yes }
 			}
 		}
 	}
@@ -201,7 +201,7 @@ action_form_migration_pact = {
 						NOT = { is_same_empire = event_target:ratling_country }
 					}
 				}
-				is_megacorp = no
+				NOT = { is_megacorp = yes }
 			}
 		}
 	}
@@ -289,7 +289,7 @@ action_break_migration_pact = {
 						NOT = { is_same_empire = event_target:ratling_country }
 					}
 				}
-				is_megacorp = no
+				NOT = { is_megacorp = yes }
 			}
 		}
 	}
@@ -317,7 +317,7 @@ action_break_migration_pact = {
 						NOT = { is_same_empire = event_target:ratling_country }
 					}
 				}
-				is_megacorp = no
+				NOT = { is_megacorp = yes }
 			}
 		}
 	}
@@ -609,7 +609,7 @@ action_invite_to_federation = {
 		02_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -631,7 +631,7 @@ action_invite_to_federation = {
 		03_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -652,7 +652,7 @@ action_invite_to_federation = {
 		04_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -746,11 +746,9 @@ action_invite_to_federation = {
 	select = {
 		01_ITOA_SELECT = {
 			trigger = {
-				NOR = {
-					is_gestalt = yes
-					has_ai_personality = fanatic_purifiers
-				}
-				is_megacorp = no
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				NOT = { has_ai_personality = fanatic_purifiers }
+				NOT = { is_megacorp = yes }
 				FROM = {
 					has_federation = yes
 				}
@@ -758,11 +756,9 @@ action_invite_to_federation = {
 		}
 		02_ITOA_SELECT = {
 			trigger = {
-				NOR = {
-					is_gestalt = yes
-					has_ai_personality = fanatic_purifiers
-				}
-				is_megacorp = no
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				NOT = { has_ai_personality = fanatic_purifiers }
+				NOT = { is_megacorp = yes }
 				FROM = {
 					has_federation = no
 				}
@@ -841,7 +837,7 @@ action_invite_to_federation = {
 				from = {
 					has_federation = no
 					NOR = {
-						is_gestalt = yes
+						has_ethic = ethic_gestalt_consciousness
 						is_megacorp = yes
 					}
 				}
@@ -852,7 +848,7 @@ action_invite_to_federation = {
 				from = {
 					has_federation = yes
 					NOR = {
-						is_gestalt = yes
+						has_ethic = ethic_gestalt_consciousness
 						is_megacorp = yes
 					}
 				}
@@ -999,7 +995,7 @@ action_invite_to_federation = {
 		01_ITOA_ACCEPT = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				FROM = {
@@ -1010,7 +1006,7 @@ action_invite_to_federation = {
 		02_ITOA_ACCEPT = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				FROM = {
@@ -1131,11 +1127,9 @@ action_invite_to_federation = {
 	refuse = {
 		01_ITOA_REFUSE = {
 			trigger = {
-				NOR = {
-					is_gestalt = yes
-					has_ai_personality = fanatic_purifiers
-				}
-				is_megacorp = no
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				NOT = { has_ai_personality = fanatic_purifiers }
+				NOT = { is_megacorp = yes }
 			}
 		}
 		HM_ITOA_REFUSE = {
@@ -1300,7 +1294,7 @@ action_invite_to_federation = {
 	#propose_vote = {
 	#	01_ITOA_VOTE_PROPOSE = {
 	#		trigger = {
-	#			is_gestalt = no
+	#			NOT = { has_ethic = ethic_gestalt_consciousness }
 	#		}
 	#	}
 	#	HM_ITOA_VOTE_PROPOSE = {
@@ -1333,7 +1327,7 @@ action_ask_to_join_federation = {
 		02_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -1355,7 +1349,7 @@ action_ask_to_join_federation = {
 		03_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -1376,7 +1370,7 @@ action_ask_to_join_federation = {
 		04_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -1483,17 +1477,15 @@ action_ask_to_join_federation = {
 	select = {
 		01_ASK_JOIN_A_SELECT = {
 			trigger = {
-				NOR = {
-					is_gestalt = yes
-					is_same_species_class = FROM
-				}
-				is_megacorp = no
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				NOT = { is_same_species_class = FROM }
+				NOT = { is_megacorp = yes }
 			}
 		}
 		02_ASK_JOIN_A_SELECT = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				is_same_species_class = FROM
@@ -1563,7 +1555,7 @@ action_ask_to_join_federation = {
 			trigger = {
 				from = {
 					NOR = {
-						is_gestalt = yes
+						has_ethic = ethic_gestalt_consciousness
 						is_megacorp = yes
 					}
 				}
@@ -1656,7 +1648,7 @@ action_ask_to_join_federation = {
 		01_ASK_JOIN_A_ACCEPT = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 			}
@@ -1743,7 +1735,7 @@ action_ask_to_join_federation = {
 		01_ASK_JOIN_A_REFUSE = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 			}
@@ -1819,7 +1811,7 @@ action_leave_federation = {
 		01_LEAVE_A_SELECT = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 			}
@@ -1889,7 +1881,7 @@ action_leave_federation = {
 			trigger = {
 				from = {
 					NOR = {
-						is_gestalt = yes
+						has_ethic = ethic_gestalt_consciousness
 						is_megacorp = yes
 					}
 				}
@@ -1970,7 +1962,7 @@ action_leave_federation = {
 		01_LEAVE_A_ACCEPT = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 			}
@@ -2153,7 +2145,7 @@ action_offer_federation_association_status = {
 		02_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -2175,7 +2167,7 @@ action_offer_federation_association_status = {
 		03_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -2196,7 +2188,7 @@ action_offer_federation_association_status = {
 		04_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -2565,7 +2557,7 @@ action_ask_for_federation_association_status = {
 		02_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -2587,7 +2579,7 @@ action_ask_for_federation_association_status = {
 		03_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -2608,7 +2600,7 @@ action_ask_for_federation_association_status = {
 		04_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -2965,7 +2957,7 @@ action_ask_to_leave_federation = {
 		01_ASK_TO_LEAVE_SELECT = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 			}
@@ -3019,7 +3011,7 @@ action_ask_to_leave_federation = {
 		01_ASK_TO_LEAVE_PROPOSE = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 			}
@@ -3073,7 +3065,7 @@ action_ask_to_leave_federation = {
 		01_ASK_TO_LEAVE_ACCEPT = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 			}
@@ -3127,7 +3119,7 @@ action_ask_to_leave_federation = {
 		01_ASK_TO_LEAVE_REFUSE = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 			}
@@ -3185,7 +3177,7 @@ action_demand_subjugation = {
 		02_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -3207,7 +3199,7 @@ action_demand_subjugation = {
 		03_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -3228,7 +3220,7 @@ action_demand_subjugation = {
 		04_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -3328,9 +3320,9 @@ action_demand_subjugation = {
 		# Vassalization Select
 		01_DEMAND_VASS_SELECT = {
 			trigger = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				NOR = {
-					is_gestalt = yes
-					has_ai_personality = fanatic_purifiers
 					is_xenophobe = yes
 					is_megacorp = yes
 				}
@@ -3344,11 +3336,13 @@ action_demand_subjugation = {
 		# Vassalization Select (Hostile)
 		02_DEMAND_VASS_SELECT = {
 			trigger = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				NOR = {
-					is_gestalt = yes
-					has_ai_personality = fanatic_purifiers
 					is_xenophobe = yes
 					is_megacorp = yes
+				}
+				NOT = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
 					is_protective_to = FROM
@@ -3358,11 +3352,9 @@ action_demand_subjugation = {
 		# Vassalization Select Xenophobe
 		03_DEMAND_VASS_SELECT = {
 			trigger = {
-				NOR = {
-					is_gestalt = yes
-					has_ai_personality = fanatic_purifiers
-				}
-				is_megacorp = no
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				NOT = { has_ai_personality = fanatic_purifiers }
+				NOT = { is_megacorp = yes }
 				is_xenophobe = yes
 				OR = {
 					is_friendly_to = FROM
@@ -3374,11 +3366,9 @@ action_demand_subjugation = {
 		# Vassalization Select Hostile Xenophobe
 		04_DEMAND_VASS_SELECT = {
 			trigger = {
-				NOR = {
-					is_gestalt = yes
-					has_ai_personality = fanatic_purifiers
-				}
-				is_megacorp = no
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				NOT = { has_ai_personality = fanatic_purifiers }
+				NOT = { is_megacorp = yes }
 				is_xenophobe = yes
 				NOT = {
 					is_friendly_to = FROM
@@ -3459,11 +3449,9 @@ action_demand_subjugation = {
 		01_DEMAND_VASS_PROPOSE = {
 			trigger = {
 				from = {
-					NOR = {
-						is_gestalt = yes
-						has_ai_personality = fanatic_purifiers
-					}
-					is_megacorp = no
+					NOT = { has_ethic = ethic_gestalt_consciousness }
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { is_megacorp = yes }
 					OR = {
 						is_friendly_to = ROOT
 						is_cordial_to = ROOT
@@ -3475,11 +3463,9 @@ action_demand_subjugation = {
 		02_DEMAND_VASS_PROPOSE = {
 			trigger = {
 				from = {
-					NOR = {
-						is_gestalt = yes
-						has_ai_personality = fanatic_purifiers
-					}
-					is_megacorp = no
+					NOT = { has_ethic = ethic_gestalt_consciousness }
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { is_megacorp = yes }
 					NOR = {
 						is_friendly_to = ROOT
 						is_cordial_to = ROOT
@@ -3556,8 +3542,8 @@ action_demand_subjugation = {
 		# Accept
 		01_DEMAND_VASS_ACCEPT = {
 			trigger = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
 				NOR = {
-					is_gestalt = yes
 					is_xenophobe = yes
 					is_megacorp = yes
 				}
@@ -3567,7 +3553,7 @@ action_demand_subjugation = {
 		02_DEMAND_VASS_ACCEPT = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				is_xenophobe = yes
@@ -3651,9 +3637,9 @@ action_demand_subjugation = {
 		# Refuse
 		01_DEMAND_VASS_REFUSE = {
 			trigger = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				NOR = {
-					is_gestalt = yes
-					has_ai_personality = fanatic_purifiers
 					is_xenophobe = yes
 					is_megacorp = yes
 				}
@@ -3667,11 +3653,13 @@ action_demand_subjugation = {
 		# Refuse Hostile
 		02_DEMAND_VASS_REFUSE = {
 			trigger = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				NOR = {
-					is_gestalt = yes
-					has_ai_personality = fanatic_purifiers
 					is_xenophobe = yes
 					is_megacorp = yes
+				}
+				NOT = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
 					is_protective_to = FROM
@@ -3688,7 +3676,7 @@ action_demand_subjugation = {
 					}
 				}
 				NOT = { has_ai_personality = fanatic_purifiers }
-				is_megacorp = no
+				NOT = { is_megacorp = yes }
 				is_xenophobe = yes
 				OR = {
 					is_friendly_to = FROM
@@ -3707,7 +3695,7 @@ action_demand_subjugation = {
 					}
 				}
 				NOT = { has_ai_personality = fanatic_purifiers }
-				is_megacorp = no
+				NOT = { is_megacorp = yes }
 				is_xenophobe = yes
 				NOT = {
 					is_friendly_to = FROM
@@ -3787,7 +3775,7 @@ action_ask_to_become_subjugated = {
 		02_CONSIDER = {
 			trigger = {
 				NOT = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 				}
 				OR = {
 					has_authority = auth_dictatorial
@@ -3808,7 +3796,7 @@ action_ask_to_become_subjugated = {
 		03_CONSIDER = {
 			trigger = {
 				NOT = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 				}
 				OR = {
 					has_authority = auth_oligarchic
@@ -3828,7 +3816,7 @@ action_ask_to_become_subjugated = {
 		04_CONSIDER = {
 			trigger = {
 				NOT = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 				}
 				OR = {
 					has_authority = auth_democratic
@@ -3921,7 +3909,7 @@ action_ask_to_become_subjugated = {
 		01_ASK_FOR_VASS_SELECT = {
 			trigger = {
 				NOT = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 				}
 			}
 		}
@@ -3991,7 +3979,7 @@ action_ask_to_become_subjugated = {
 			trigger = {
 				FROM = {
 					NOR = {
-						is_gestalt = yes
+						has_ethic = ethic_gestalt_consciousness
 						is_megacorp = yes
 					}
 				}
@@ -4071,7 +4059,7 @@ action_ask_to_become_subjugated = {
 		01_ASK_FOR_VASS_ACCEPT = {
 			trigger = {
 				NOT = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 				}
 			}
 		}
@@ -4129,7 +4117,7 @@ action_ask_to_become_subjugated = {
 		01_ASK_FOR_VASS_REFUSE = {
 			trigger = {
 				NOT = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 				}
 				OR = {
 					NOT = { exists = event_target:ratling_country }
@@ -4205,7 +4193,7 @@ action_demand_subsidiary = {
 		01_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 			}
@@ -4284,7 +4272,7 @@ action_demand_subsidiary = {
 		# NON-CORP
 		DEMAND_SUBS_SELECT_01 = {
 			trigger = {
-				FROM = { is_megacorp = no }
+				FROM = { NOT = { is_megacorp = yes } }
 			}
 		}
 	}
@@ -4310,7 +4298,7 @@ action_demand_subsidiary = {
 		# NON-CORP
 		DEMAND_SUBS_ACCEPT_01 = {
 			trigger = {
-				is_megacorp = no
+				NOT = { is_megacorp = yes }
 			}
 		}
 	}
@@ -4324,7 +4312,7 @@ action_demand_subsidiary = {
 		# NON-CORP
 		DEMAND_SUBS_REFUSE_01 = {
 			trigger = {
-				is_megacorp = no
+				NOT = { is_megacorp = yes }
 			}
 		}
 	}
@@ -4356,7 +4344,7 @@ action_ask_to_become_subsidiary = {
 		# NON-CORP
 		ASK_FOR_SUBS_PROPOSE_01 = {
 			trigger = {
-				is_megacorp = no
+				NOT = { is_megacorp = yes }
 			}
 		}
 	}
@@ -4385,11 +4373,9 @@ action_release_subject = {
 	select = {
 		01_RELEASE_SUBJECT_SELECT = {
 			trigger = {
-				NOR = {
-					is_gestalt = yes
-					has_ai_personality = fanatic_purifiers
-				}
-				is_megacorp = no
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				NOT = { has_ai_personality = fanatic_purifiers }
+				NOT = { is_megacorp = yes }
 			}
 		}
 		HM_RELEASE_SUBJECT_SELECT = {
@@ -4473,7 +4459,7 @@ action_release_subject = {
 			trigger = {
 				from = {
 					NOR = {
-						is_gestalt = yes
+						has_ethic = ethic_gestalt_consciousness
 						is_megacorp = yes
 					}
 				}
@@ -4555,11 +4541,9 @@ action_release_subject = {
 	accept = {
 		01_RELEASE_SUBJECT_ACCEPT = {
 			trigger = {
-				NOR = {
-					is_gestalt = yes
-					has_ai_personality = fanatic_purifiers
-				}
-				is_megacorp = no
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				NOT = { has_ai_personality = fanatic_purifiers }
+				NOT = { is_megacorp = yes }
 			}
 		}
 		HM_RELEASE_SUBJECT_ACCEPT = {
@@ -4633,7 +4617,7 @@ action_ask_to_be_released_subject = {
 		01_ASK_TO_BE_RELEASED_SUBJECT_SELECT = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 			}
@@ -4701,11 +4685,9 @@ action_ask_to_be_released_subject = {
 		01_ASK_TO_BE_RELEASED_SUBJECT_PROPOSE = {
 			trigger = {
 				from = {
-					NOR = {
-						is_gestalt = yes
-						has_ai_personality = fanatic_purifiers
-					}
-					is_megacorp = no
+					NOT = { has_ethic = ethic_gestalt_consciousness }
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { is_megacorp = yes }
 				}
 			}
 		}
@@ -4802,7 +4784,7 @@ action_ask_to_be_released_subject = {
 		01_ASK_TO_BE_RELEASED_SUBJECT_ACCEPT = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 			}
@@ -4912,7 +4894,7 @@ action_ask_to_be_released_subject = {
 		01_ASK_TO_BE_RELEASED_SUBJECT_REFUSE = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 			}
@@ -4999,7 +4981,7 @@ action_ask_to_be_released_subject = {
 		01_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 			}
@@ -5073,7 +5055,7 @@ action_demand_tributary = {
 		02_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -5095,7 +5077,7 @@ action_demand_tributary = {
 		03_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -5116,7 +5098,7 @@ action_demand_tributary = {
 		04_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -5363,7 +5345,7 @@ action_ask_to_become_tributary = {
 		01_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 			}
@@ -5557,7 +5539,7 @@ action_demand_thrall = {
 		01_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 			}
@@ -5674,7 +5656,7 @@ action_ask_to_become_thrall = {
 		01_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 			}
@@ -5738,7 +5720,7 @@ action_demand_dominion = {
 		01_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 			}
@@ -5855,7 +5837,7 @@ action_ask_to_become_dominion = {
 		01_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 			}
@@ -5916,7 +5898,7 @@ action_demand_signatory = {
 		01_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 			}
@@ -6015,7 +5997,7 @@ action_ask_to_become_signatory = {
 		01_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 			}
@@ -6076,7 +6058,7 @@ action_demand_satellite = {
 		01_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 			}
@@ -6175,7 +6157,7 @@ action_ask_to_become_satellite = {
 		01_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 			}
@@ -6230,7 +6212,7 @@ action_form_commercial_pact = {
 		02_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -6252,7 +6234,7 @@ action_form_commercial_pact = {
 		03_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -6273,7 +6255,7 @@ action_form_commercial_pact = {
 		04_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -6475,7 +6457,7 @@ action_form_research_agreement = {
 		02_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -6487,7 +6469,7 @@ action_form_research_agreement = {
 		03_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -6498,7 +6480,7 @@ action_form_research_agreement = {
 		04_CONSIDER = {
 			trigger = {
 				NOR = {
-					is_gestalt = yes
+					has_ethic = ethic_gestalt_consciousness
 					is_megacorp = yes
 				}
 				OR = {
@@ -6690,10 +6672,8 @@ action_embassy = {
 	select = {
 		01_EMBASSY_FRIENDLY = {
 			trigger = {
-				NOR = {
-					has_ai_personality = hive_mind
-					has_ai_personality = fanatic_purifiers
-				}
+				NOT = { has_ai_personality = hive_mind }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				OR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
@@ -6703,10 +6683,8 @@ action_embassy = {
 		}
 		02_EMBASSY_FRIENDLY = {
 			trigger = {
-				NOR = {
-					has_ai_personality = hive_mind
-					has_ai_personality = fanatic_purifiers
-				}
+				NOT = { has_ai_personality = hive_mind }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				OR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
@@ -6716,10 +6694,8 @@ action_embassy = {
 		}
 		03_EMBASSY_FRIENDLY = {
 			trigger = {
-				NOR = {
-					has_ai_personality = hive_mind
-					has_ai_personality = fanatic_purifiers
-				}
+				NOT = { has_ai_personality = hive_mind }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				OR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
@@ -6729,10 +6705,8 @@ action_embassy = {
 		}
 		04_EMBASSY_FRIENDLY = {
 			trigger = {
-				NOR = {
-					has_ai_personality = hive_mind
-					has_ai_personality = fanatic_purifiers
-				}
+				NOT = { has_ai_personality = hive_mind }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				OR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
@@ -6742,10 +6716,8 @@ action_embassy = {
 		}
 		01_EMBASSY_NEUTRAL = {
 			trigger = {
-				NOR = {
-					has_ai_personality = hive_mind
-					has_ai_personality = fanatic_purifiers
-				}
+				NOT = { has_ai_personality = hive_mind }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				OR = {
 					is_neutral_to = FROM
 					is_threatened_to = FROM
@@ -6754,10 +6726,8 @@ action_embassy = {
 		}
 		02_EMBASSY_NEUTRAL = {
 			trigger = {
-				NOR = {
-					has_ai_personality = hive_mind
-					has_ai_personality = fanatic_purifiers
-				}
+				NOT = { has_ai_personality = hive_mind }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				OR = {
 					is_neutral_to = FROM
 					is_threatened_to = FROM
@@ -6766,10 +6736,8 @@ action_embassy = {
 		}
 		03_EMBASSY_NEUTRAL = {
 			trigger = {
-				NOR = {
-					has_ai_personality = hive_mind
-					has_ai_personality = fanatic_purifiers
-				}
+				NOT = { has_ai_personality = hive_mind }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				OR = {
 					is_neutral_to = FROM
 					is_threatened_to = FROM
@@ -6778,10 +6746,8 @@ action_embassy = {
 		}
 		04_EMBASSY_NEUTRAL = {
 			trigger = {
-				NOR = {
-					has_ai_personality = hive_mind
-					has_ai_personality = fanatic_purifiers
-				}
+				NOT = { has_ai_personality = hive_mind }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				OR = {
 					is_neutral_to = FROM
 					is_threatened_to = FROM
@@ -6790,10 +6756,8 @@ action_embassy = {
 		}
 		01_EMBASSY_HOSTILE = {
 			trigger = {
-				NOR = {
-					has_ai_personality = hive_mind
-					has_ai_personality = fanatic_purifiers
-				}
+				NOT = { has_ai_personality = hive_mind }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				OR = {
 					is_hostile_to = FROM
 					is_domineering_to = FROM
@@ -6803,10 +6767,8 @@ action_embassy = {
 		}
 		02_EMBASSY_HOSTILE = {
 			trigger = {
-				NOR = {
-					has_ai_personality = hive_mind
-					has_ai_personality = fanatic_purifiers
-				}
+				NOT = { has_ai_personality = hive_mind }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				OR = {
 					is_hostile_to = FROM
 					is_domineering_to = FROM
@@ -6816,10 +6778,8 @@ action_embassy = {
 		}
 		03_EMBASSY_HOSTILE = {
 			trigger = {
-				NOR = {
-					has_ai_personality = hive_mind
-					has_ai_personality = fanatic_purifiers
-				}
+				NOT = { has_ai_personality = hive_mind }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				OR = {
 					is_hostile_to = FROM
 					is_domineering_to = FROM
@@ -6829,10 +6789,8 @@ action_embassy = {
 		}
 		04_EMBASSY_HOSTILE = {
 			trigger = {
-				NOR = {
-					has_ai_personality = hive_mind
-					has_ai_personality = fanatic_purifiers
-				}
+				NOT = { has_ai_personality = hive_mind }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				OR = {
 					is_hostile_to = FROM
 					is_domineering_to = FROM
@@ -6901,10 +6859,8 @@ action_embassy = {
 	accept = {
 		01_EMBASSY_ACCEPT_FRIENDLY = {
 			trigger = {
-				NOR = {
-					has_ai_personality = hive_mind
-					has_ai_personality = fanatic_purifiers
-				}
+				NOT = { has_ai_personality = hive_mind }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				OR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
@@ -6914,10 +6870,8 @@ action_embassy = {
 		}
 		02_EMBASSY_ACCEPT_FRIENDLY = {
 			trigger = {
-				NOR = {
-					has_ai_personality = hive_mind
-					has_ai_personality = fanatic_purifiers
-				}
+				NOT = { has_ai_personality = hive_mind }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				OR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
@@ -6927,10 +6881,8 @@ action_embassy = {
 		}
 		03_EMBASSY_ACCEPT_FRIENDLY = {
 			trigger = {
-				NOR = {
-					has_ai_personality = hive_mind
-					has_ai_personality = fanatic_purifiers
-				}
+				NOT = { has_ai_personality = hive_mind }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				OR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
@@ -6940,10 +6892,8 @@ action_embassy = {
 		}
 		04_EMBASSY_ACCEPT_FRIENDLY = {
 			trigger = {
-				NOR = {
-					has_ai_personality = hive_mind
-					has_ai_personality = fanatic_purifiers
-				}
+				NOT = { has_ai_personality = hive_mind }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				OR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
@@ -6953,10 +6903,8 @@ action_embassy = {
 		}
 		01_EMBASSY_ACCEPT_NEUTRAL = {
 			trigger = {
-				NOR = {
-					has_ai_personality = hive_mind
-					has_ai_personality = fanatic_purifiers
-				}
+				NOT = { has_ai_personality = hive_mind }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				OR = {
 					is_neutral_to = FROM
 					is_threatened_to = FROM
@@ -6965,10 +6913,8 @@ action_embassy = {
 		}
 		02_EMBASSY_ACCEPT_NEUTRAL = {
 			trigger = {
-				NOR = {
-					has_ai_personality = hive_mind
-					has_ai_personality = fanatic_purifiers
-				}
+				NOT = { has_ai_personality = hive_mind }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				OR = {
 					is_neutral_to = FROM
 					is_threatened_to = FROM
@@ -6977,10 +6923,8 @@ action_embassy = {
 		}
 		03_EMBASSY_ACCEPT_NEUTRAL = {
 			trigger = {
-				NOR = {
-					has_ai_personality = hive_mind
-					has_ai_personality = fanatic_purifiers
-				}
+				NOT = { has_ai_personality = hive_mind }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				OR = {
 					is_neutral_to = FROM
 					is_threatened_to = FROM
@@ -6989,10 +6933,8 @@ action_embassy = {
 		}
 		04_EMBASSY_ACCEPT_NEUTRAL = {
 			trigger = {
-				NOR = {
-					has_ai_personality = hive_mind
-					has_ai_personality = fanatic_purifiers
-				}
+				NOT = { has_ai_personality = hive_mind }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				OR = {
 					is_neutral_to = FROM
 					is_threatened_to = FROM
@@ -7001,10 +6943,8 @@ action_embassy = {
 		}
 		01_EMBASSY_ACCEPT_HOSTILE = {
 			trigger = {
-				NOR = {
-					has_ai_personality = hive_mind
-					has_ai_personality = fanatic_purifiers
-				}
+				NOT = { has_ai_personality = hive_mind }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				OR = {
 					is_hostile_to = FROM
 					is_domineering_to = FROM
@@ -7014,10 +6954,8 @@ action_embassy = {
 		}
 		02_EMBASSY_ACCEPT_HOSTILE = {
 			trigger = {
-				NOR = {
-					has_ai_personality = hive_mind
-					has_ai_personality = fanatic_purifiers
-				}
+				NOT = { has_ai_personality = hive_mind }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				OR = {
 					is_hostile_to = FROM
 					is_domineering_to = FROM
@@ -7027,10 +6965,8 @@ action_embassy = {
 		}
 		03_EMBASSY_ACCEPT_HOSTILE = {
 			trigger = {
-				NOR = {
-					has_ai_personality = hive_mind
-					has_ai_personality = fanatic_purifiers
-				}
+				NOT = { has_ai_personality = hive_mind }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				OR = {
 					is_hostile_to = FROM
 					is_domineering_to = FROM
@@ -7040,10 +6976,8 @@ action_embassy = {
 		}
 		04_EMBASSY_ACCEPT_HOSTILE = {
 			trigger = {
-				NOR = {
-					has_ai_personality = hive_mind
-					has_ai_personality = fanatic_purifiers
-				}
+				NOT = { has_ai_personality = hive_mind }
+				NOT = { has_ai_personality = fanatic_purifiers }
 				OR = {
 					is_hostile_to = FROM
 					is_domineering_to = FROM
@@ -7288,10 +7222,8 @@ action_recall_embassy = {
 	propose = {
 		01_RECALL_EMBASSY_PROPOSE = {
 			trigger = {
-				NOR = {
-					has_ai_personality = hive_mind
-					has_ai_personality = fanatic_purifiers
-				}
+				NOT = { has_ai_personality = hive_mind }
+				NOT = { has_ai_personality = fanatic_purifiers }
 			}
 		}
 		HM_RECALL_EMBASSY_PROPOSE = {
@@ -8031,6 +7963,8 @@ action_pledge_secret_fealty = {
 					is_megacorp = yes
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
+				}
+				NOR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
 					is_protective_to = FROM
@@ -8047,6 +7981,8 @@ action_pledge_secret_fealty = {
 					is_megacorp = yes
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
+				}
+				NOR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
 					is_protective_to = FROM
@@ -8179,6 +8115,8 @@ action_pledge_secret_fealty = {
 					is_megacorp = yes
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
+				}
+				NOR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
 					is_protective_to = FROM
@@ -8195,6 +8133,8 @@ action_pledge_secret_fealty = {
 					is_megacorp = yes
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
+				}
+				NOR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
 					is_protective_to = FROM
@@ -8296,6 +8236,8 @@ action_propose_secret_fealty = {
 					is_megacorp = yes
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
+				}
+				NOR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
 					is_protective_to = FROM
@@ -8312,6 +8254,8 @@ action_propose_secret_fealty = {
 					is_megacorp = yes
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
+				}
+				NOR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
 					is_protective_to = FROM
@@ -8444,6 +8388,8 @@ action_propose_secret_fealty = {
 					is_megacorp = yes
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
+				}
+				NOR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
 					is_protective_to = FROM
@@ -8460,6 +8406,8 @@ action_propose_secret_fealty = {
 					is_megacorp = yes
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
+				}
+				NOR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
 					is_protective_to = FROM
@@ -8558,6 +8506,8 @@ action_propose_secret_fealty = {
 					is_megacorp = yes
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
+				}
+				NOR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
 					is_protective_to = FROM
@@ -8574,6 +8524,8 @@ action_propose_secret_fealty = {
 					is_megacorp = yes
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
+				}
+				NOR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
 					is_protective_to = FROM
@@ -8675,6 +8627,8 @@ action_propose_to_break_secret_fealty = {
 					is_megacorp = yes
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
+				}
+				NOR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
 					is_protective_to = FROM
@@ -8691,6 +8645,8 @@ action_propose_to_break_secret_fealty = {
 					is_megacorp = yes
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
+				}
+				NOR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
 					is_protective_to = FROM
@@ -8823,6 +8779,8 @@ action_propose_to_break_secret_fealty = {
 					is_megacorp = yes
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
+				}
+				NOR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
 					is_protective_to = FROM
@@ -8839,6 +8797,8 @@ action_propose_to_break_secret_fealty = {
 					is_megacorp = yes
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
+				}
+				NOR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
 					is_protective_to = FROM
@@ -8940,6 +8900,8 @@ action_break_secret_fealty = {
 					is_megacorp = yes
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
+				}
+				NOR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
 					is_protective_to = FROM
@@ -8956,6 +8918,8 @@ action_break_secret_fealty = {
 					is_megacorp = yes
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
+				}
+				NOR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
 					is_protective_to = FROM
@@ -9088,6 +9052,8 @@ action_break_secret_fealty = {
 					is_megacorp = yes
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
+				}
+				NOR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
 					is_protective_to = FROM
@@ -9104,6 +9070,8 @@ action_break_secret_fealty = {
 					is_megacorp = yes
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
+				}
+				NOR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
 					is_protective_to = FROM
@@ -9202,6 +9170,8 @@ action_break_secret_fealty = {
 					is_megacorp = yes
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
+				}
+				NOR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
 					is_protective_to = FROM
@@ -9218,6 +9188,8 @@ action_break_secret_fealty = {
 					is_megacorp = yes
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
+				}
+				NOR = {
 					is_friendly_to = FROM
 					is_cordial_to = FROM
 					is_protective_to = FROM

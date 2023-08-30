@@ -7,6 +7,7 @@
 namespace = action
 
 # Market Founder event
+# via resolution_galactic_market_form = {} | this = Resolution proposer country
 country_event = {
 	id = action.96
 	title = action.96.name
@@ -64,6 +65,7 @@ country_event = {
 }
 
 # Market Nomination started notification event
+# this = every GalCom member except the resolution proposer
 country_event = {
 	id = action.97
 	title = action.97.name
@@ -91,14 +93,9 @@ country_event = {
 
 	immediate = {
 		set_country_flag = market_nomination_eligible
-	}
-
-	after = {
-		tooltip = {
-			begin_event_chain = {
-				event_chain = market_founding_chain
-				target = this
-			}
+		begin_event_chain = {
+			event_chain = market_founding_chain
+			target = this
 		}
 	}
 
@@ -113,9 +110,19 @@ country_event = {
 		trigger = { is_megacorp = no }
 		custom_tooltip = enable_decision_market_nomination
 	}
+
+	after = {
+		tooltip = {
+			begin_event_chain = {
+				event_chain = market_founding_chain
+				target = this
+			}
+		}
+	}
 }
 
 # Market station lost, is conquered or moved
+# via on_system_lost | this = system's former owner; from = system; fromfrom = new system owner
 country_event = {
 	id = action.102
 	hide_window = yes
@@ -131,7 +138,8 @@ country_event = {
 	}
 
 	immediate = {
-		if = { # no new owner or homicidal empire
+		# System either has no new owner, or an owner who's homicidal or not a GalCom member
+		if = {
 			limit = {
 				OR = {
 					NOT = { exists = fromfrom }
@@ -140,7 +148,7 @@ country_event = {
 						fromfrom = {
 							OR = {
 								is_homicidal = yes
-								is_galactic_community_member = yes
+								is_galactic_community_member = no
 							}
 						}
 					}

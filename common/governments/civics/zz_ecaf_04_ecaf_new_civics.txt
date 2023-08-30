@@ -496,7 +496,7 @@ civic_slave_race = {
 	}
 }
 
-#Slaving Despots - Slave Overseer produce unity, Gladiator jobs - ???
+#Slaving Despots - Slave Overseer produce unity, Gladiator jobs - ??? -- No Councillor
 civic_slaving_despots = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
@@ -832,7 +832,7 @@ civic_political_pluralism = {
 	}
 }
 
-#Drone Brotherhood
+#Industrial Democracy
 civic_socialistic = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }

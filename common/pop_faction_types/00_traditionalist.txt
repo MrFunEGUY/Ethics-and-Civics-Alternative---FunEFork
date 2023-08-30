@@ -27,7 +27,7 @@ traditionalist = {
                 	}
                 }
             }
-            unity = 0.5
+            unity = @faction_base_unity
         }
 	}
 
@@ -62,7 +62,7 @@ traditionalist = {
 			exists = from
 			from = {
 				exists = leader
-				leader = { leader_class = ruler }
+				leader = { is_ruler = yes }
 			}
 		}
 
@@ -538,6 +538,14 @@ traditionalist = {
 		trigger = {
 			owner.federation = { has_federation_type = spiritualist_federation }
 		}
+	}
+
+	# Faction Demands for Ruler and Council positions.
+	inline_script = {
+		script = "paragon/global_faction_demands"
+		ETHIC = ethic_spiritualist
+		ETHIC_FANATIC = ethic_fanatic_spiritualist
+		ETHIC_OPPOSED = ethic_materialist
 	}
 
 	on_create = {

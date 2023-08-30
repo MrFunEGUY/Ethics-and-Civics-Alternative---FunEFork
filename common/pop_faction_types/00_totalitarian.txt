@@ -27,7 +27,7 @@ totalitarian = {
                 	}
                 }
             }
-            unity = 0.5
+            unity = @faction_base_unity
         }
 	}
 
@@ -59,7 +59,7 @@ totalitarian = {
 			exists = from
 			from = {
 				exists = leader
-				leader = { leader_class = ruler }
+				leader = { is_ruler = yes }
 			}
 		}
 
@@ -71,10 +71,9 @@ totalitarian = {
 			}
 		}
 
-		# Should really check for citizenship instead
 		modifier = {
 			factor = 0.25
-			NOT = { is_same_species = owner_species }
+			has_citizenship_rights = no
 		}
 
 		modifier = {
@@ -459,6 +458,14 @@ totalitarian = {
 				}
 			}
 		}
+	}
+
+	# Faction Demands for Ruler and Council positions.
+	inline_script = {
+		script = "paragon/global_faction_demands"
+		ETHIC = ethic_authoritarian
+		ETHIC_FANATIC = ethic_fanatic_authoritarian
+		ETHIC_OPPOSED = ethic_egalitarian
 	}
 
 	on_create = {

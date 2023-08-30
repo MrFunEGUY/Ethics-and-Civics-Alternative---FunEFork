@@ -450,7 +450,7 @@ generate_start_pops = {
 			count = 10
 			random_owned_pop = {
 				limit = {
-					is_same_species = root.owner_species
+					is_same_species = root.owner.species
 				}
 				kill_pop = yes
 			}

@@ -6,6 +6,10 @@
 @buildings_t3 = 3
 @buildings_t4 = 4
 
+@tier_2_capital_defense_armies = 4
+@tier_3_capital_defense_armies = 8
+@tier_4_capital_defense_armies = 16
+
 # Planetary Administration
 building_capital = {
 	base_buildtime = @b2_time
@@ -60,6 +64,11 @@ building_capital = {
 		planet_amenities_add = 5
 		planet_max_buildings_add = @buildings_t2
 		planet_max_branch_office_buildings_add = 1
+		defense_armies_add = @tier_2_capital_defense_armies
+	}
+
+	inline_script = {
+		script = buildings/on_all_capital_buildings
 	}
 
 	triggered_planet_modifier = {
@@ -229,6 +238,17 @@ building_capital = {
 			growing_species = { has_trait = trait_cybernetic }
 		}
 		pop_growth_speed = 0.10
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			is_capital = yes
+			owner = {
+				has_councilor = { COUNCILOR = "councilor_feudal_realm" } 
+			}
+		}
+		country_naval_cap_add = 1
+		mult = value:naval_cap_vassals_councilor_feudal_realm
 	}
 
 	resources = {
@@ -414,6 +434,11 @@ building_major_capital = {
 		planet_amenities_add = 8
 		planet_max_buildings_add = @buildings_t3
 		planet_max_branch_office_buildings_add = 2
+		defense_armies_add = @tier_3_capital_defense_armies
+	}
+
+	inline_script = {
+		script = buildings/on_all_capital_buildings
 	}
 	
 	triggered_planet_modifier = {
@@ -630,6 +655,17 @@ building_major_capital = {
 		pop_growth_speed = 0.10
 	}
 
+	triggered_country_modifier = {
+		potential = {
+			is_capital = yes
+			owner = {
+				has_councilor = { COUNCILOR = "councilor_feudal_realm" } 
+			}
+		}
+		country_naval_cap_add = 1
+		mult = value:naval_cap_vassals_councilor_feudal_realm
+	}
+
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -824,6 +860,11 @@ building_system_capital = {
 		planet_amenities_add = 12
 		planet_max_buildings_add = @buildings_t4
 		planet_max_branch_office_buildings_add = 4
+		defense_armies_add = @tier_4_capital_defense_armies
+	}
+
+	inline_script = {
+		script = buildings/on_all_capital_buildings
 	}
 	
 	triggered_planet_modifier = {
@@ -1035,6 +1076,17 @@ building_system_capital = {
 		pop_growth_speed = 0.10
 	}
 
+	triggered_country_modifier = {
+		potential = {
+			is_capital = yes
+			owner = {
+				has_councilor = { COUNCILOR = "councilor_feudal_realm" } 
+			}
+		}
+		country_naval_cap_add = 1
+		mult = value:naval_cap_vassals_councilor_feudal_realm
+	}
+
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -1224,6 +1276,10 @@ building_hab_capital = {
 		planet_max_buildings_add = @buildings_t1
 	}
 
+	inline_script = {
+		script = buildings/on_all_capital_buildings
+	}
+
 	triggered_planet_modifier = {
 		modifier = { planet_stability_add = 1 }
 		mult = modifier:habitat_stability_add
@@ -1300,6 +1356,16 @@ building_hab_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_civic = civic_dystopian_society }
+		}
+		modifier = {
+			job_enforcer_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { has_ascension_perk = ap_voidborn }
 		}
 		modifier = {
@@ -1348,6 +1414,17 @@ building_hab_capital = {
 			growing_species = { has_trait = trait_cybernetic }
 		}
 		pop_growth_speed = 0.10
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				has_valid_civic = civic_dystopian_society
+			}
+		}
+		text = job_enforcer_effect_desc
 	}
 
 	triggered_desc = {
@@ -1477,6 +1554,11 @@ building_hab_major_capital = {
 		planet_amenities_add = 5
 		planet_max_buildings_add = @buildings_t2
 		planet_max_branch_office_buildings_add = 1
+		defense_armies_add = @tier_2_capital_defense_armies
+	}
+
+	inline_script = {
+		script = buildings/on_all_capital_buildings
 	}
 
 	triggered_planet_modifier = {
@@ -1556,6 +1638,10 @@ building_hab_major_capital = {
 	triggered_planet_modifier = { # ECAF
 		potential = {
 			has_administrators = yes
+			OR = {
+				NOT = { has_planet_flag = toxic_knights_habitat }
+				NOT = { owner = { has_origin = origin_toxic_knights } }
+			}
 		}
 		modifier = {
 			job_politician_add = 1
@@ -1565,14 +1651,33 @@ building_hab_major_capital = {
 	triggered_planet_modifier = { # ECAF
 		potential = {
 			has_regular_administrators = yes
+			OR = {
+				NOT = { has_planet_flag = toxic_knights_habitat }
+				NOT = { owner = { has_origin = origin_toxic_knights } }
+			}
 		}
 		modifier = {
 			job_politician_add = 1
 		}
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			has_planet_flag = toxic_knights_habitat
+			exists = owner
+			owner = {
+				has_origin = origin_toxic_knights
+			}
+		}
+		modifier = {
+			job_knight_commander_add = 1
+			job_knight_add = 1
+		}
+	}
+
 	triggered_planet_modifier = { # ECAF
 		potential = {
+			NOT = { has_planet_flag = toxic_knights_habitat }
 			has_executives = yes
 		}
 		modifier = {
@@ -1582,6 +1687,7 @@ building_hab_major_capital = {
 
 	triggered_planet_modifier = { # ECAF
 		potential = {
+			NOT = { has_planet_flag = toxic_knights_habitat }
 			has_regular_executives = yes
 		}
 		modifier = {
@@ -1592,6 +1698,10 @@ building_hab_major_capital = {
 	triggered_planet_modifier = { # ECAF
 		potential = {
 			is_theocracy = yes
+			OR = {
+				NOT = { has_planet_flag = toxic_knights_habitat }
+				NOT = { owner = { has_origin = origin_toxic_knights } }
+			}
 		}
 		modifier = {
 			job_high_priest_add = 1
@@ -1601,6 +1711,10 @@ building_hab_major_capital = {
 	triggered_planet_modifier = { # ECAF
 		potential = {
 			is_aristocracy = yes
+			OR = {
+				NOT = { has_planet_flag = toxic_knights_habitat }
+				NOT = { owner = { has_origin = origin_toxic_knights } }
+			}
 		}
 		modifier = {
 			job_noble_add = 1
@@ -1610,6 +1724,10 @@ building_hab_major_capital = {
 	triggered_planet_modifier = { # ECAF
 		potential = {
 			is_technocracy = yes
+			OR = {
+				NOT = { has_planet_flag = toxic_knights_habitat }
+				NOT = { owner = { has_origin = origin_toxic_knights } }
+			}
 		}
 		modifier = {
 			job_head_researcher_add = 1
@@ -1619,6 +1737,10 @@ building_hab_major_capital = {
 	triggered_planet_modifier = { # ECAF
 		potential = {
 			is_plutocracy = yes
+			OR = {
+				NOT = { has_planet_flag = toxic_knights_habitat }
+				NOT = { owner = { has_origin = origin_toxic_knights } }
+			}
 		}
 		modifier = {
 			job_mogul_add = 1
@@ -1628,6 +1750,10 @@ building_hab_major_capital = {
 	triggered_planet_modifier = { # ECAF
 		potential = {
 			is_stratocracy = yes
+			OR = {
+				NOT = { has_planet_flag = toxic_knights_habitat }
+				NOT = { owner = { has_origin = origin_toxic_knights } }
+			}
 		}
 		modifier = {
 			job_commandante_add = 1
@@ -1637,6 +1763,10 @@ building_hab_major_capital = {
 	triggered_planet_modifier = { # ECAF
 		potential = {
 			is_bureaucracy = yes
+			OR = {
+				NOT = { has_planet_flag = toxic_knights_habitat }
+				NOT = { owner = { has_origin = origin_toxic_knights } }
+			}
 		}
 		modifier = {
 			job_supervisor_add = 1
@@ -1646,6 +1776,10 @@ building_hab_major_capital = {
 	triggered_planet_modifier = { # ECAF
 		potential = {
 			is_isocracy = yes
+			OR = {
+				NOT = { has_planet_flag = toxic_knights_habitat }
+				NOT = { owner = { has_origin = origin_toxic_knights } }
+			}
 		}
 		modifier = {
 			job_commisar_add = 1
@@ -1655,6 +1789,10 @@ building_hab_major_capital = {
 	triggered_planet_modifier = { # ECAF
 		potential = {
 			is_diplocracy = yes
+			OR = {
+				NOT = { has_planet_flag = toxic_knights_habitat }
+				NOT = { owner = { has_origin = origin_toxic_knights } }
+			}
 		}
 		modifier = {
 			job_ambassador_add = 1
@@ -2473,6 +2611,11 @@ building_imperial_capital = {
 		planet_amenities_add = 18
 		planet_max_buildings_add = 11
 		planet_max_branch_office_buildings_add = 4
+		defense_armies_add = @tier_4_capital_defense_armies
+	}
+
+	inline_script = {
+		script = buildings/on_all_capital_buildings
 	}
 	
 	triggered_planet_modifier = {
@@ -2700,6 +2843,17 @@ building_imperial_capital = {
 			growing_species = { has_trait = trait_cybernetic }
 		}
 		pop_growth_speed = 0.10
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			is_capital = yes
+			owner = {
+				has_councilor = { COUNCILOR = "councilor_feudal_realm" } 
+			}
+		}
+		country_naval_cap_add = 1
+		mult = value:naval_cap_vassals_councilor_feudal_realm
 	}
 
 	resources = {
