@@ -33,9 +33,7 @@ country_event = {
 	option = {
 		name = "fircon.1445.a"
 		trigger = {
-			OR = {
-				is_egalitarian = yes 
-			}
+			is_egalitarian = yes 
 		}
 		add_monthly_resource_mult = {
 			resource = unity
@@ -46,7 +44,7 @@ country_event = {
 		
 		add_observation_insight_effect = {
 			VALUE = 10
-			OUTPOST = event_target:pre_ftl_planet.observation_outpost 
+			OUTPOST = event_target:pre_ftl_planet.observation_outpost
 		}
 		hidden_effect = {
 			country_event = { id = fircon.1450 days = 100 }
@@ -65,13 +63,16 @@ country_event = {
 			min = @tier2researchmin
 			max = @tier2researchmax
 		}
-		hidden_effect = { 
+		hidden_effect = {
 			country_event = { id = fircon.1451 days = 100 }
 		}
 	}
 	option = {
 		name = "fircon.1445.c"
-		trigger = { is_megacorp = yes }
+		trigger = {
+			is_megacorp = yes
+			is_worker_coop_empire = no # limited instead to the Egalitarian response
+		}
 		random_list = {
 			80 = {
 				country_event = { id = fircon.1452 days = 100 }

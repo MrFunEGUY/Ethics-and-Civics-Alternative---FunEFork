@@ -31,19 +31,18 @@ resistance = {
 
 	room = "pre_ftl_modern_room"
 
-	authority="auth_democratic"
+	authority="auth_strict_democratic"
 	civics = {
 		"civic_nationalistic_zeal"
 		"civic_citizen_service"
-		"civic_welfare_state"
+		"civic_naval_traditions"
 	}
 	government="gov_military_commissariat"
 	origin = "origin_payback"
 
-	ethic="ethic_fanatic_egalitarian"
-	ethic="ethic_socialism"
-	ethic="ethic_militarist"
-	ethic="ethic_xenophobe"
+	ethic = ethic_fanatic_egalitarian
+	ethic = ethic_fanatic_militarist
+	ethic = ethic_xenophobe
 
 	graphical_culture = "avian_01"
 	city_graphical_culture = "avian_01"
@@ -73,7 +72,8 @@ resistance = {
 		attachment = 0
 		clothes = 0
 		ruler_title = "PRESCRIPTED_ruler_title_resistance"
-		leader_class = ruler
+		leader_class = admiral
+		trait = "leader_trait_fleet_organizer"
 	}
 }
 
@@ -112,14 +112,14 @@ broken_shackles = {
 	civics = {
 		"civic_beacon_of_liberty"
 		"civic_free_haven"
-		"civic_xeno_militarist"
+		"civic_globalism"
 	}
 	government = "gov_moral_democracy"
 	origin = "origin_broken_shackles"
 
-	ethic = "ethic_militarist"
-	ethic = "ethic_fanatic_xenophile"
-	ethic = "ethic_fanatic_egalitarian"
+	ethic = ethic_fanatic_xenophile
+	ethic = ethic_fanatic_egalitarian
+	ethic = ethic_capitalism
 
 	graphical_culture = "reptilian_01"
 	city_graphical_culture = "mammalian_01"
@@ -148,6 +148,7 @@ broken_shackles = {
 		texture = 1
 		attachment = 0
 		clothes = 1
-		leader_class = ruler
+		leader_class = governor
+		trait = "leader_trait_principled"
 	}
 }

@@ -5,6 +5,7 @@
 prosperity = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_pacifist
+	visual_ethic = "prosperity_visual_ethics"
 
 	unique = yes
 	support_multiplier = 1
@@ -468,17 +469,6 @@ prosperity = {
 				modifier = {
 					factor = 0
 					owner = { has_valid_civic = civic_fanatic_purifiers }
-				}
-				modifier = {
-					factor = 0
-					NOT = {
-						owner = {
-							exists = ruler
-							ruler = {
-								leader_of_faction = prosperity
-							}
-						}
-					}
 				}
 				modifier = {
 					factor = 0

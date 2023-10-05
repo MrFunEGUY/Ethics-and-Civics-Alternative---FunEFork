@@ -2880,6 +2880,10 @@
  espionage_pre_ftl_indoctrination_capitalism:0 "$espionage_pre_ftl_indoctrination$"
  espionage_pre_ftl_indoctrination_capitalism_desc:0 "$espionage_pre_ftl_indoctrination_desc$"
 
+ # Faction Visuals
+ socialists_visual_ethic:0 "£socialism£"
+ bankers_visual_ethic:0 "£capitalism£"
+
  # Unused
  gov_corporate_nationalism_desc: " "
  gov_corporate_nationalism: "Corporate Nationalism"

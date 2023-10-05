@@ -222,11 +222,12 @@ country_event = {
 
 				country_event = { id = action.103 }
 			}
+			# Notification
 			create_message = {
 				type = MESSAGE_TYPE_LOST_MARKET_STATION
 				localization = MESSAGE_LOST_MARKET_STATION
 				days = 30
-				target = root.from # the Go To
+				target = root.from # Sets location marker
 				variable = {
 					type = name
 					localization = SYSTEM

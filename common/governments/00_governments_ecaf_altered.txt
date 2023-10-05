@@ -15,7 +15,7 @@
 #	election_candidates = {					# scriptable value to weight election candidates for oligarchic elections, scope: leader
 #		modifier = {
 #			add = 100
-#			leader_class = ruler
+#			leader_class = governor
 #		}
 #	}
 #}
@@ -31,10 +31,6 @@ gov_theocratic_dictatorship = {
 	ruler_title_female = RT_MATRIARCH
 
 	election_candidates = {
-		modifier = {
-			add = 100
-			leader_class = ruler
-		}
 		modifier = {
 			add = 10
 			leader_class = governor
@@ -83,10 +79,6 @@ gov_holy_tribunal = {
 
 	election_candidates = {
 		modifier = {
-			add = 100
-			leader_class = ruler
-		}
-		modifier = {
 			add = 10
 			leader_class = governor
 		}
@@ -119,10 +111,6 @@ gov_military_dictatorship = {
 	ruler_title_female = RT_GRAND_MARSHAL_FEMALE
 
 	election_candidates = {
-		modifier = {
-			add = 100
-			leader_class = ruler
-		}
 		modifier = {
 			add = 10
 			OR = {
@@ -162,10 +150,6 @@ gov_military_commissariat = {
 	ruler_title_female = RT_COMMISSARY_GENERAL_FEMALE
 
 	election_candidates = {
-		modifier = {
-			add = 100
-			leader_class = ruler
-		}
 		modifier = {
 			add = 10
 			OR = {
@@ -216,10 +200,6 @@ gov_martial_dictatorship = {
 
 	election_candidates = {
 		modifier = {
-			add = 100
-			leader_class = ruler
-		}
-		modifier = {
 			add = 10
 			OR = {
 				leader_class = admiral
@@ -251,10 +231,6 @@ gov_assembly_of_clans = {
 	leader_class = admiral	# Initial ruler will become this if elected out of office
 
 	election_candidates = {
-		modifier = {
-			add = 100
-			leader_class = ruler
-		}
 		modifier = {
 			add = 10
 			OR = {
@@ -289,10 +265,6 @@ gov_citizen_stratocracy = {
 
 	election_candidates = {
 		modifier = {
-			add = 100
-			leader_class = ruler
-		}
-		modifier = {
 			add = 10
 			OR = {
 				leader_class = admiral
@@ -319,10 +291,6 @@ gov_citizen_republic = {
 	should_force_rename = yes
 
 	election_candidates = {
-		modifier = {
-			add = 100
-			leader_class = ruler
-		}
 		modifier = {
 			add = 10
 			OR = {
@@ -359,10 +327,6 @@ gov_irenic_dictatorship = {
 	ruler_title_female = RT_SERENE_PROTECTOR_FEMALE
 
 	election_candidates = {
-		modifier = {
-			add = 100
-			leader_class = ruler
-		}
 		modifier = {
 			add = 10
 			OR = {
@@ -404,10 +368,6 @@ gov_moral_democracy = {
 	ruler_title_female = RT_PRIME_MINISTER_FEMALE
 
 	election_candidates = {
-		modifier = {
-			add = 100
-			leader_class = ruler
-		}
 		modifier = {
 			add = 10
 			OR = {
@@ -483,7 +443,7 @@ gov_direct_democracy = {
 	}
 
 	weight = {
-		base = 5
+		base = 250
 		modifier = {
 			factor = 2
 			has_ethic = ethic_fanatic_materialist
@@ -505,10 +465,6 @@ gov_technocratic_dictatorship = {
 	leader_class = scientist	# Initial ruler will become this if elected out of office
 
 	election_candidates = {
-		modifier = {
-			add = 100
-			leader_class = ruler
-		}
 		modifier = {
 			add = 10
 			leader_class = scientist
@@ -539,10 +495,6 @@ gov_science_directorate = {
 
 	election_candidates = {
 		modifier = {
-			add = 100
-			leader_class = ruler
-		}
-		modifier = {
 			add = 10
 			leader_class = scientist
 		}
@@ -568,10 +520,6 @@ gov_rational_consensus = {
 
 	election_candidates = {
 		modifier = {
-			add = 100
-			leader_class = ruler
-		}
-		modifier = {
 			add = 10
 			leader_class = scientist
 		}
@@ -587,7 +535,7 @@ gov_rational_consensus = {
 	}
 
 	weight = {
-		base = 900
+		base = 450
 	}
 }
 
@@ -647,10 +595,6 @@ gov_megacorporation = {
 	should_force_rename = yes
 
 	election_candidates = {
-		modifier = {
-			add = 100
-			leader_class = ruler
-		}
 		modifier = {
 			add = 10
 			leader_class = governor

@@ -60,7 +60,7 @@ create_MSI_effect = {
 							NOT = { has_country_flag = slavers_assigned }
 						}
 						set_country_flag = slavers_assigned
-						event_target:MSI_country = { 
+						event_target:MSI_country = {
 							set_country_flag = slavers_of_@prev
 							set_country_flag = special_intro_for@prev
 							add_opinion_modifier = {

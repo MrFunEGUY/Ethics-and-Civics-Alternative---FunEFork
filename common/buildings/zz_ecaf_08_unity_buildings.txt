@@ -78,7 +78,10 @@ building_temple = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_megacorp = yes }
+			owner = {
+				is_megacorp = yes
+				is_worker_coop_empire = no
+			}
 		}
 		modifier = {
 			job_manager_add = 1
@@ -91,6 +94,30 @@ building_temple = {
 			owner = { is_megacorp = yes }
 		}
 		text = job_manager_effect_desc
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_worker_coop_empire = yes
+			}
+		}
+		modifier = {
+			job_steward_add = 1
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_worker_coop_empire = yes
+			}
+		}
+		text = job_steward_effect_desc
 	}
 	
 	triggered_planet_modifier = {
@@ -234,7 +261,10 @@ building_holotemple = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_megacorp = yes }
+			owner = {
+				is_megacorp = yes
+				is_worker_coop_empire = no
+			}
 		}
 		modifier = {
 			job_manager_add = 2
@@ -247,6 +277,30 @@ building_holotemple = {
 			owner = { is_megacorp = yes }
 		}
 		text = job_manager_effect_desc
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_worker_coop_empire = yes
+			}
+		}
+		modifier = {
+			job_steward_add = 2
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_worker_coop_empire = yes
+			}
+		}
+		text = job_steward_effect_desc
 	}
 
 	upgrades = {
@@ -376,7 +430,10 @@ building_sacred_nexus = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_megacorp = yes }
+			owner = {
+				is_megacorp = yes
+				is_worker_coop_empire = no
+			}
 		}
 		modifier = {
 			job_manager_add = 3
@@ -389,6 +446,30 @@ building_sacred_nexus = {
 			owner = { is_megacorp = yes }
 		}
 		text = job_manager_effect_desc
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_worker_coop_empire = yes
+			}
+		}
+		modifier = {
+			job_steward_add = 3
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_worker_coop_empire = yes
+			}
+		}
+		text = job_steward_effect_desc
 	}
 
 	triggered_planet_modifier = {

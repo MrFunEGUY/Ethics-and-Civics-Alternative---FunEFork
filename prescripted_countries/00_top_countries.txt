@@ -71,7 +71,8 @@ humans1 = {
 		texture = 0
 		attachment = 1
 		clothes = 0
-		leader_class = ruler
+		trait = "trait_ruler_eye_for_talent"
+		leader_class = governor
 	}
 }
 
@@ -101,16 +102,15 @@ humans2 = {
 
 	authority = "auth_dictatorial"
 	civics = {
-		"civic_nationalistic_zeal"
 		"civic_military_dictatorship"
-		"civic_police_state"
+		"civic_nationalistic_zeal"
+		"civic_distinguished_admiralty"
 	}
 	government = gov_military_dictatorship
 
 	ethic = "ethic_fanatic_militarist"
-	ethic = "ethic_authoritarian"
+	ethic = "ethic_fanatic_authoritarian"
 	ethic = "ethic_xenophobe"
-	ethic = "ethic_capitalism"
 	
 	origin = "origin_lost_colony"
 
@@ -147,6 +147,7 @@ humans2 = {
 		texture = 0
 		attachment = 6
 		clothes = 4
-		leader_class = ruler
+		trait = "trait_ruler_warlike"
+		leader_class = admiral
 	}
 }

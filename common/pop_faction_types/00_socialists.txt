@@ -6,6 +6,7 @@ socialists = {
 	guiding_ethic = ethic_socialism
 	unique = yes
 	support_multiplier = 1
+	visual_ethic = "socialists_visual_ethic"
 
 	resources = {
 		category = pop_factions
@@ -36,9 +37,7 @@ socialists = {
 	}
 
 	is_potential = {
-		years_passed > 10
-		has_encountered_other_species = yes
-		is_gestalt = no
+		is_faction_allowed = yes
 	}
 
 	parameters = {
@@ -492,17 +491,6 @@ socialists = {
 					support < 0.5
 					owner = {
 						has_ethic = ethic_socialism
-					}
-				}
-				modifier = {
-					factor = 0
-					NOT = {
-						owner = {
-							exists = ruler
-							ruler = {
-								leader_of_faction = socialists
-							}
-						}
 					}
 				}
 				modifier = {

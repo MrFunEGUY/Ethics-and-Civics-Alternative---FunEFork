@@ -15,7 +15,7 @@
 #  election_candidates = {          # scriptable value to weight election candidates for oligarchic elections, scope: leader
 #    modifier = {
 #      add = 100
-#      leader_class = ruler
+#      leader_class = governor
 #    }
 #  }
 #}
@@ -125,7 +125,6 @@ gov_anarchy_communism = {
 			OR = {
 				leader_class = general
 				leader_class = admiral
-				leader_class = ruler
 				leader_class = governor
 			}
 		}
@@ -163,7 +162,6 @@ gov_jingoism = {
 			OR = {
 				leader_class = general
 				leader_class = admiral
-				leader_class = ruler
 			}
 		}
 	}
@@ -184,10 +182,6 @@ gov_military_corp = {
 	ruler_title = RT_HCOM
 	ruler_title_female = RT_HCOM
 	election_candidates = {
-		modifier = {
-			add = 100
-			leader_class = ruler
-		}
 		modifier = {
 			add = 10
 			OR = {
@@ -417,12 +411,6 @@ gov_national_socialism = {
 		is_pacifist = no
 	}
 	should_force_rename = yes
-	election_candidates = {
-		modifier = {
-			add = 100
-			leader_class = ruler
-		}
-	}
 	weight = {
 		base = 10000
 	}
@@ -1121,10 +1109,6 @@ lrsk_gov_var_gov_galactic_cartel_fam = {
 
 	election_candidates = {
 		modifier = {
-			add = 100
-			leader_class = ruler
-		}
-		modifier = {
 			add = 10
 			leader_class = governor
 		}
@@ -1165,10 +1149,6 @@ lrsk_gov_var_gov_rationalist_managerial_firm_fam = {
 		modifier = {
 			add = 1000
 			leader_class = scientist
-		}
-		modifier = {
-			add = 500
-			leader_class = ruler
 		}
 		modifier = {
 			add = 100
@@ -1212,10 +1192,6 @@ lrsk_gov_var_gov_private_intel_agency_fam = {
 		modifier = {
 			add = 100
 			leader_class = scientist
-		}
-		modifier = {
-			add = 500
-			leader_class = ruler
 		}
 		modifier = {
 			add = 250
@@ -1262,10 +1238,6 @@ lrsk_gov_var_gov_protection_racket_fam = {
 			leader_class = scientist
 		}
 		modifier = {
-			add = 500
-			leader_class = ruler
-		}
-		modifier = {
 			add = 250
 			OR = {
 				leader_class = governor
@@ -1296,10 +1268,6 @@ lrsk_gov_var_gov_crusading_company_fam = {
 	dynastic_last_names = yes
 
 	election_candidates = {
-		modifier = {
-			add = 500
-			leader_class = ruler
-		}
 		modifier = {
 			add = 150
 			leader_class = governor
@@ -1365,10 +1333,6 @@ lrsk_gov_var_gov_colonial_charter_board_fam = {
 	dynastic_last_names = yes
 
 	election_candidates = {
-		modifier = {
-			add = 100
-			leader_class = ruler
-		}
 		modifier = {
 			add = 10
 			leader_class = governor
@@ -1479,10 +1443,6 @@ lrsk_gov_var_gov_innovation_initiative_fam = {
 			leader_class = scientist
 		}
 		modifier = {
-			add = 500
-			leader_class = ruler
-		}
-		modifier = {
 			add = 100
 			OR = {
 				leader_class = governor
@@ -1540,10 +1500,6 @@ lrsk_gov_var_gov_private_military_contractor_fam = {
 			add = 1000
 			leader_class = admiral
 			leader_class = general
-		}
-		modifier = {
-			add = 500
-			leader_class = ruler
 		}
 		modifier = {
 			add = 100

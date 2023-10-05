@@ -755,8 +755,8 @@ resolution_ecology_environmental_control_board = {
 	}
 
 	breach = {
-		has_country_flag = resolution_breached_terraformed
 		NOT = { has_country_flag = constitutional_immunity }
+		has_country_flag = resolution_breached_terraformed
 	}
 
 	ai_weight = {
@@ -854,6 +854,11 @@ resolution_ecology_paradise_initiative = {
 
 	allow = {
 		is_active_resolution = "resolution_ecology_environmental_control_board"
+	}
+
+	breach = {
+		NOT = { has_country_flag = constitutional_immunity }
+		has_country_flag = resolution_breached_terraformed
 	}
 
 	ai_weight = {
@@ -3436,6 +3441,7 @@ resolution_greatergood_workers_rights = {
 		modifier = {
 			factor = 0.5
 			is_megacorp = yes
+			is_worker_coop_empire = no
 			desc = gov_megacorporation
 		}
 
@@ -3445,6 +3451,7 @@ resolution_greatergood_workers_rights = {
 				has_valid_civic = civic_shared_burden
 				has_valid_civic = civic_machine_servitor
 				has_valid_civic = civic_machine_exploration_protocol
+				is_worker_coop_empire = yes
 			}
 			desc = gal_com_supporting_civics
 		}
@@ -3537,12 +3544,12 @@ resolution_greatergood_five_year_plans = {
 	}
 
 	breach = {
+		NOT = { has_country_flag = constitutional_immunity }
 		is_gestalt = no
 		any_owned_species = {
 			is_sapient = yes
 			has_living_standard = { type = living_standard_subsistence country = prev }
 		}
-		NOT = { has_country_flag = constitutional_immunity }
 	}
 
 	ai_weight = {
@@ -3575,6 +3582,7 @@ resolution_greatergood_five_year_plans = {
 		modifier = {
 			factor = 0.5
 			is_megacorp = yes
+			is_worker_coop_empire = no
 			desc = gov_megacorporation
 		}
 
@@ -3584,6 +3592,7 @@ resolution_greatergood_five_year_plans = {
 				has_valid_civic = civic_shared_burden
 				has_valid_civic = civic_machine_servitor
 				has_valid_civic = civic_machine_exploration_protocol
+				is_worker_coop_empire = yes
 			}
 			desc = gal_com_supporting_civics
 		}
@@ -3721,6 +3730,7 @@ resolution_greatergood_greater_than_ourselves = {
 	}
 
 	breach = {
+		NOT = { has_country_flag = constitutional_immunity }
 		OR = {
 			any_enslaved_species = {
 				is_sapient = yes
@@ -3741,7 +3751,6 @@ resolution_greatergood_greater_than_ourselves = {
 				}
 			}
 		}
-		NOT = { has_country_flag = constitutional_immunity }
 	}
 
 	ai_weight = {
@@ -3774,6 +3783,7 @@ resolution_greatergood_greater_than_ourselves = {
 		modifier = {
 			factor = 0.5
 			is_megacorp = yes
+			is_worker_coop_empire = no
 			desc = gov_megacorporation
 		}
 
@@ -3783,6 +3793,7 @@ resolution_greatergood_greater_than_ourselves = {
 				has_valid_civic = civic_shared_burden
 				has_valid_civic = civic_machine_servitor
 				has_valid_civic = civic_machine_exploration_protocol
+				is_worker_coop_empire = yes
 			}
 			desc = gal_com_supporting_civics
 		}
@@ -3929,6 +3940,7 @@ resolution_greatergood_balance_in_the_middle = {
 	}
 
 	breach = {
+		NOT = { has_country_flag = constitutional_immunity }
 		OR = {
 			has_valid_civic = civic_indentured_assets
 			has_valid_civic = civic_slaver_guilds
@@ -3949,7 +3961,6 @@ resolution_greatergood_balance_in_the_middle = {
 				}
 			}
 		}
-		NOT = { has_country_flag = constitutional_immunity }
 	}
 
 	ai_weight = {
@@ -3982,6 +3993,7 @@ resolution_greatergood_balance_in_the_middle = {
 		modifier = {
 			factor = 0.5
 			is_megacorp = yes
+			is_worker_coop_empire = no
 			desc = gov_megacorporation
 		}
 
@@ -3991,6 +4003,7 @@ resolution_greatergood_balance_in_the_middle = {
 				has_valid_civic = civic_shared_burden
 				has_valid_civic = civic_machine_servitor
 				has_valid_civic = civic_machine_exploration_protocol
+				is_worker_coop_empire = yes
 			}
 			desc = gal_com_supporting_civics
 		}
@@ -4140,6 +4153,7 @@ resolution_greatergood_universal_prosperity_mandate = {
 	}
 
 	breach = {
+		NOT = { has_country_flag = constitutional_immunity }
 		OR = {
 			has_valid_civic = civic_indentured_assets
 			has_valid_civic = civic_slaver_guilds
@@ -4174,7 +4188,6 @@ resolution_greatergood_universal_prosperity_mandate = {
 				}
 			}
 		}
-		NOT = { has_country_flag = constitutional_immunity }
 	}
 
 	ai_weight = {
@@ -4207,6 +4220,7 @@ resolution_greatergood_universal_prosperity_mandate = {
 		modifier = {
 			factor = 0.5
 			is_megacorp = yes
+			is_worker_coop_empire = no
 			desc = gov_megacorporation
 		}
 

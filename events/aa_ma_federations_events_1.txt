@@ -10,15 +10,11 @@ namespace = federations
 
 country_event = {
 	id = federations.10401
-	title = "federations.10400.title"
-
-	desc = {
-		text = "federations.10400.desc"
-	}
+	title = federations.10400.title
+	desc = federations.10400.desc
 
 	picture = GFX_evt_signing
 	show_sound = event_factions
-
 	is_triggered_only = yes
 
 	trigger = {
@@ -30,7 +26,7 @@ country_event = {
 	immediate = {
 		if = {
 			limit = {
-				is_active_resolution = "resolution_divinity_a_defined_purpose"
+				is_active_resolution = resolution_divinity_a_defined_purpose
 			}
 			random_playable_country = {
 				limit = {
@@ -62,19 +58,20 @@ country_event = {
 		}
 	}
 
+	# Refuse to comply
 	option = {
 		name = federations.10400.refuse
 
-		custom_tooltip = "FED_WE_WILL_BE_IN_BREACH"
+		custom_tooltip = FED_WE_WILL_BE_IN_BREACH
 	}
 
+	# Agree to comply
 	option = {
-		name = "federations.10400.comply"
+		name = federations.10400.comply
 
 		allow = {
 			custom_tooltip = {
 				fail_text = federations.10400.comply_fail_ethics
-
 				NOT = {
 					AND = {
 						in_breach_of = resolution_galacticstudies_ethical_guideline_refactoring
@@ -99,8 +96,8 @@ country_event = {
 						has_valid_civic = civic_machine_assimilator
 
 						OR = {
-							is_active_resolution = "resolution_divinity_a_defined_purpose"
-							is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+							is_active_resolution = resolution_divinity_a_defined_purpose
+							is_active_resolution = resolution_greatergood_universal_prosperity_mandate
 						}
 					}
 				}
@@ -108,8 +105,8 @@ country_event = {
 				NOT = {
 					AND = {
 						OR = {
-							is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
-							is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+							is_active_resolution = resolution_greatergood_universal_prosperity_mandate
+							is_active_resolution = resolution_greatergood_balance_in_the_middle
 						}
 						OR = {
 							in_breach_of = resolution_greatergood_universal_prosperity_mandate
@@ -127,7 +124,7 @@ country_event = {
 
 				NOT = {
 					AND = {
-						is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+						is_active_resolution = resolution_greatergood_universal_prosperity_mandate
 
 						is_egalitarian = no
 						is_gestalt = no
@@ -141,7 +138,7 @@ country_event = {
 
 				NAND = {
 					is_synthetic_empire = yes
-					is_active_resolution = "resolution_divinity_a_defined_purpose"
+					is_active_resolution = resolution_divinity_a_defined_purpose
 				}
 			}
 		}
@@ -152,16 +149,16 @@ country_event = {
 		# The Greater Good is way too complicated. We can go from the most extreme down.
 		if = {
 			limit = {
-				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+				is_active_resolution = resolution_greatergood_universal_prosperity_mandate
 				in_breach_of = resolution_greatergood_universal_prosperity_mandate
 				is_egalitarian = yes
 			}
 			breach_fix_resolution_greatergood_universal_prosperity_mandate_utopian = yes
 		} else_if = {
 			limit = {
-				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+				is_active_resolution = resolution_greatergood_universal_prosperity_mandate
 				in_breach_of = resolution_greatergood_universal_prosperity_mandate
-				has_technology = "tech_subdermal_stimulation"
+				has_technology = tech_subdermal_stimulation
 				is_gestalt = no
 			}
 			breach_fix_resolution_greatergood_universal_prosperity_mandate_chemical = yes
@@ -170,13 +167,13 @@ country_event = {
 				is_gestalt = yes
 				OR = {
 					AND = {
-						is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+						is_active_resolution = resolution_greatergood_balance_in_the_middle
 						in_breach_of = resolution_greatergood_balance_in_the_middle
 					}
 					AND = {
-						is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+						is_active_resolution = resolution_greatergood_universal_prosperity_mandate
 						in_breach_of = resolution_greatergood_universal_prosperity_mandate
-						NOT = { has_civic = "civic_machine_assimilator" }
+						NOT = { has_civic = civic_machine_assimilator }
 					}
 				}
 			}
@@ -184,13 +181,13 @@ country_event = {
 		} else_if = {
 			limit = {
 				is_gestalt = no
-				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+				is_active_resolution = resolution_greatergood_balance_in_the_middle
 				in_breach_of = resolution_greatergood_balance_in_the_middle
 			}
 			breach_fix_resolution_greatergood_balance_in_the_middle = yes
 		} else_if = {
 			limit = {
-				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+				is_active_resolution = resolution_greatergood_greater_than_ourselves
 				in_breach_of = resolution_greatergood_greater_than_ourselves
 				is_militarist = yes
 				host_has_dlc = "Utopia"
@@ -199,7 +196,7 @@ country_event = {
 			breach_fix_resolution_greatergood_greater_than_ourselves_thralls = yes
 		} else_if = {
 			limit = {
-				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+				is_active_resolution = resolution_greatergood_greater_than_ourselves
 				in_breach_of = resolution_greatergood_greater_than_ourselves
 				host_has_dlc = "Utopia"
 			}
@@ -207,7 +204,7 @@ country_event = {
 			breach_fix_resolution_greatergood_greater_than_ourselves_servants = yes
 		} else_if = {
 			limit = {
-				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+				is_active_resolution = resolution_greatergood_greater_than_ourselves
 				in_breach_of = resolution_greatergood_greater_than_ourselves
 				NOT = { host_has_dlc = "Utopia" }
 			}
@@ -215,20 +212,20 @@ country_event = {
 			breach_fix_resolution_greatergood_greater_than_ourselves_no_utopia = yes
 		} else_if = {
 			limit = {
-				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+				is_active_resolution = resolution_greatergood_greater_than_ourselves
 				in_breach_of = resolution_greatergood_greater_than_ourselves
 			}
 			breach_fix_resolution_greatergood_greater_than_ourselves_living_standards = yes
 		} else_if = {
 			limit = {
-				is_active_resolution = "resolution_greatergood_five_year_plans"
+				is_active_resolution = resolution_greatergood_five_year_plans
 				in_breach_of = resolution_greatergood_five_year_plans
 				is_authoritarian = yes
 			}
 			breach_fix_resolution_greatergood_five_year_plans_stratified = yes
 		} else_if = {
 			limit = {
-				is_active_resolution = "resolution_greatergood_five_year_plans"
+				is_active_resolution = resolution_greatergood_five_year_plans
 				in_breach_of = resolution_greatergood_five_year_plans
 				is_authoritarian = no
 			}
@@ -248,11 +245,12 @@ country_event = {
 		}
 	}
 
+	# Discard and permanently ignore this
 	option = {
 		name = federations.10400.refuse_2
 
-		custom_tooltip = "FED_WE_WILL_BE_IN_BREACH"
-		custom_tooltip = "federations.10400.refuse_2_tooltip"
+		custom_tooltip = FED_WE_WILL_BE_IN_BREACH
+		custom_tooltip = federations.10400.refuse_2_tooltip
 
 		hidden_effect = {
 			set_country_flag = fed_10400_ignore
@@ -263,8 +261,9 @@ country_event = {
 		}
 	}
 
+	# Execute the Envoys
 	option = {
-		name = "federations.10400.execute"
+		name = federations.10400.execute
 
 		trigger = {
 			OR = {
@@ -295,9 +294,9 @@ country_event = {
 			NOT = { has_valid_civic = civic_hive_empath }
 		}
 
-		custom_tooltip = "FED_WE_WILL_BE_IN_BREACH"
-		custom_tooltip = "federations.10400.refuse_2_tooltip"
-		custom_tooltip = "federations.10400.execute_tooltip"
+		custom_tooltip = FED_WE_WILL_BE_IN_BREACH
+		custom_tooltip = federations.10400.refuse_2_tooltip
+		custom_tooltip = federations.10400.execute_tooltip
 
 		add_monthly_resource_mult = {
 			resource = unity
@@ -320,7 +319,6 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = fed_10400_ignore
 			set_country_flag = executed_galcom_envoys
-
 			every_playable_country = {
 				limit = {
 					is_galactic_community_member = yes
@@ -458,8 +456,9 @@ country_event = {
 		}
 	}
 
+	# Eat the Envoys
 	option = {
-		name = "federations.10400.eat"
+		name = federations.10400.eat
 
 		trigger = {
 			OR = {
@@ -485,9 +484,9 @@ country_event = {
 			NOT = { has_valid_civic = civic_hive_empath }
 		}
 
-		custom_tooltip = "FED_WE_WILL_BE_IN_BREACH"
-		custom_tooltip = "federations.10400.refuse_2_tooltip"
-		custom_tooltip = "federations.10400.execute_tooltip"
+		custom_tooltip = FED_WE_WILL_BE_IN_BREACH
+		custom_tooltip = federations.10400.refuse_2_tooltip
+		custom_tooltip = federations.10400.execute_tooltip
 
 		add_monthly_resource_mult = {
 			resource = unity
@@ -517,7 +516,6 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = fed_10400_ignore
 			set_country_flag = executed_galcom_envoys
-
 			every_playable_country = {
 				limit = {
 					is_galactic_community_member = yes

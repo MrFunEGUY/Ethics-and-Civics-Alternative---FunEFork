@@ -23,7 +23,7 @@ high_priest = {
 	resources = {
 		category = planet_priests
 		produces = {
-			unity = 7
+			unity = 8
 		}
 		produces = {
 			trigger = {
@@ -67,7 +67,7 @@ high_priest = {
 			}
 		}
 		modifier = {
-			planet_amenities_add = 2
+			planet_amenities_add = 3
 		}
 	}
 

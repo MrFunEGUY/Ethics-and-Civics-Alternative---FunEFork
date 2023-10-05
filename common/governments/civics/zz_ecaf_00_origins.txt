@@ -19,7 +19,7 @@ origin_syncretic_evolution = {
 		}
 	}
 
-	description = civic_tooltip_syncretic_evolution_effects
+	description = origin_tooltip_syncretic_evolution_effects
 
 	has_secondary_species = {
 		title = civic_syncretic_evolution_secondary_species
@@ -65,7 +65,8 @@ origin_life_seeded = {
 		}
 	}
 
-	description = "civic_tooltip_life_seeded_effects"
+	description = "origin_tooltip_life_seeded_effects"
+	negative_description = "origin_tooltip_life_seeded_negative_effects"
 
 	random_weight = {
 		base = 5

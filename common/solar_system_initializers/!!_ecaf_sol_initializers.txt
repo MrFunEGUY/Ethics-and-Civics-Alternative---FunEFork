@@ -23,7 +23,7 @@ com_sol_system = {
 	usage_odds = {
 		base = 0
 		modifier = {
-			any_country = {
+			any_playable_country = {
 				has_country_flag = human_2
 				is_human_species = yes
 			}
@@ -92,9 +92,8 @@ com_sol_system = {
 			save_global_event_target_as = sol_system_earth
 			prevent_anomaly = yes
 			random_country = {
-				limit = {
-					has_country_flag = human_2
-				}
+				limit = { has_country_flag = human_2 }
+				set_country_flag = parent_system_spawned
 				save_event_target_as = commonwealth
 				owner_species = {
 					save_event_target_as = human_species
@@ -270,7 +269,7 @@ com_sol_system = {
 			class = "pc_frozen"
 			size = 6
 			orbit_distance = 2.5
-			orbit_angle = 10
+			orbit_angle = 190
 			has_ring = no
 		}
 		moon = {
@@ -375,7 +374,7 @@ com_sol_system = {
 			owner = event_target:npc_UNoE
 			effect = {
 				set_starbase_module = {
-					slot = 1
+					slot = 2
 					module = trading_hub
 				}
 			}

@@ -13,6 +13,10 @@ nutritional_plenitude = {
 	icon = "GFX_edict_type_policy"
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:edict_size_effect

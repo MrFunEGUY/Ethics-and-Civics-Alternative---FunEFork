@@ -15,6 +15,10 @@ education_campaign = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = campaigns
+		cost = {
+			energy = @campaignCost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			energy = @campaignCost
 			multiplier = value:edict_size_effect
@@ -42,6 +46,10 @@ recycling_campaign = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = campaigns
+		cost = {
+			energy = @campaignCost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			energy = @campaignCost
 			multiplier = value:edict_size_effect

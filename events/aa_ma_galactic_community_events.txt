@@ -77,12 +77,22 @@ country_event = {
 
 	option = {
 		name = action.96.a
-		trigger = { is_megacorp = yes }
+		trigger = {
+			is_megacorp = yes
+			is_worker_coop_empire = no
+		}
 	}
 
 	option = {
 		name = action.96.b
 		trigger = { is_megacorp = no }
+	}
+
+	option = {
+		name = action.96.c
+		trigger = {
+			is_worker_coop_empire = yes
+		}
 	}
 
 	after = {
