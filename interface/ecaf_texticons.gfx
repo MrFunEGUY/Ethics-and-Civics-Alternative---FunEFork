@@ -1,0 +1,11 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_text_socialism"
+		texturefile = "gfx/interface/icons/ethics/ethic_socialism.dds"
+	}
+	spriteType = {
+		name = "GFX_text_capitalism"
+		texturefile = "gfx/interface/icons/ethics/ethic_capitalism.dds"
+	}
+}

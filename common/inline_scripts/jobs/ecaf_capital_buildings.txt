@@ -1,0 +1,85 @@
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { has_ethic = ethic_authoritarian }
+	}
+	modifier = {
+		job_enforcer_add = 1
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { has_ethic = ethic_fanatic_authoritarian }
+	}
+	modifier = {
+		job_enforcer_add = 2
+	}
+}
+
+# Normal Empires
+################
+triggered_planet_modifier = {
+	potential = { has_administrators = yes }
+	modifier = { job_politician_add = $AMOUNT$ }
+}
+
+triggered_planet_modifier = {
+	potential = { has_regular_administrators = yes }
+	modifier = { job_politician_add = $AMOUNT$ }
+}
+
+# Megacorps
+################
+triggered_planet_modifier = {
+	potential = { has_executives = yes }
+	modifier = { job_executive_add = $AMOUNT$ }
+}
+
+triggered_planet_modifier = {
+	potential = { has_regular_executives = yes }
+	modifier = { job_executive_add = $AMOUNT$ }
+}
+
+# Special Types
+################
+triggered_planet_modifier = {
+	potential = { is_theocracy = yes }
+	modifier = { job_high_priest_add = $AMOUNT$ }
+}
+
+triggered_planet_modifier = {
+	potential = { is_aristocracy = yes }
+	modifier = { job_noble_add = $AMOUNT$ }
+}
+
+triggered_planet_modifier = {
+	potential = { is_technocracy = yes }
+	modifier = { job_head_researcher_add = $AMOUNT$ }
+}
+
+triggered_planet_modifier = {
+	potential = { is_plutocracy = yes }
+	modifier = { job_merchant_add = $AMOUNT$ }
+}
+
+triggered_planet_modifier = {
+	potential = { is_stratocracy = yes }
+	modifier = { job_commandante_add = $AMOUNT$ }
+}
+
+triggered_planet_modifier = {
+	potential = { is_bureaucracy = yes }
+	modifier = { job_supervisor_add = $AMOUNT$ }
+}
+
+triggered_planet_modifier = {
+	potential = { is_isocracy = yes }
+	modifier = { job_commisar_add = $AMOUNT$ }
+}
+
+triggered_planet_modifier = {
+	potential = { is_diplocracy = yes }
+	modifier = { job_ambassador_add = $AMOUNT$ }
+}
