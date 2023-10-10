@@ -156,8 +156,6 @@ decision_environment_fix = {
 decision_market_nomination = {
 	owned_planets_only = yes
 
-	# instant
-
 	resources = {
 		category = decisions
 		cost = {
@@ -172,7 +170,16 @@ decision_market_nomination = {
 			has_global_flag = ongoing_market_relocation_nomination
 		}
 		#from = { has_communications = event_target:50percentcomms } # should include self
-		from = { has_country_flag = market_nomination_eligible }
+		# Ariphaos
+		exists = from
+        from = {
+            has_country_flag = market_nomination_eligible
+            NOT = { has_valid_civic = civic_inwards_perfection }
+            OR = {
+                is_ai = no
+                NOT = { has_ethic = ethic_fanatic_xenophobe }
+            }
+        }
 	}
 
 	allow = {
@@ -334,6 +341,12 @@ decision_market_nomination = {
 				has_system_trade_value < 30
 			}
 		}
+		modifier = {
+            factor = 2
+            from = {
+                has_valid_civic = civic_globalism
+            }
+        }
 	}
 }
 

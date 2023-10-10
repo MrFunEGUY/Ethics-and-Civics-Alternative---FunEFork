@@ -20,19 +20,9 @@ building_precinct_house = {
 					NOT = { has_forbidden_jobs = enforcer }
 					NOT = { has_available_jobs = enforcer }
 				}
-				AND = {
-					planet_crime > 15
-					NOR = {
-						AND = {
-							has_building = building_precinct_house
-							owner = { has_technology = tech_colonial_centralization }
-						}
-						has_building = building_hall_judgment
-						num_buildings = { type = building_precinct_house value = 3 }
-					}
-				}
 			}
 		}
+		is_occupied_flag = no # Ariphaos
 	}
 
 	destroy_trigger = {
@@ -99,6 +89,10 @@ building_hall_judgment = {
 			NOT = { has_forbidden_jobs = enforcer }
 			NOT = { has_available_jobs = enforcer }
 		}
+	}
+
+	allow = {
+		is_occupied_flag = no # Ariphaos
 	}
 
 	destroy_trigger = {

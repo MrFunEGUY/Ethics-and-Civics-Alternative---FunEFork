@@ -16,6 +16,7 @@ high_priest = {
 	}
 
 	possible_precalc = can_fill_ruler_job
+
 	possible = {
 		NOT = { has_ethic = ethic_materialist }
 	}
@@ -318,6 +319,15 @@ merchant = {
 		planet_amenities_add = 3
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
+
+	triggered_planet_modifier = {	########################################## megacorp_mod start
+		potential = {
+			has_councilor = { COUNCILOR = "councilor_bancorp" }
+		}
+
+		trade_value_add = 0.4
+		mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_trade_mult|TYPE|councilor_bancorp|
+	}							########################################## megacorp_mod end
 
 	weight = {
 		weight = @ruler_job_weight

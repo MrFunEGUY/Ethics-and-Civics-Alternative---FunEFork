@@ -11,13 +11,7 @@
 living_standard_shared_burden = {
 	potential = {
 		exists = from
-		from = {
-			OR = {
-				is_socialist = yes
-				has_valid_civic = civic_shared_burden
-				has_valid_civic = civic_employee_ownership # Venture Politics
-			}
-		}
+		from = { is_socialist = yes }
 	}
 
 	triggered_pop_modifier = {
@@ -268,8 +262,6 @@ living_standard_academic_privilege = {
 		pop_category_rulers_consumer_goods_upkeep_add = @living_standard_luxuries_very_high
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_very_high
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_normal
-		# pop_cat_ruler_political_power = 9
-		# pop_cat_specialist_political_power = 4
 	}
 
 	potential = {
@@ -282,7 +274,6 @@ living_standard_academic_privilege = {
 				has_valid_civic = civic_dystopian_society
 				has_valid_civic = civic_slaving_despots
 				has_valid_civic = civic_welfare_state
-				has_valid_civic = civic_employee_ownership # Venture Politics
 			}
 		}
 		NOR = {
@@ -423,9 +414,6 @@ living_standard_good = {
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_high
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_high
 		pop_category_slave_consumer_goods_upkeep_add = @living_standard_luxuries_low
-		# pop_cat_ruler_political_power = 4
-		# pop_cat_specialist_political_power = 1
-		# pop_cat_worker_political_power = 0.5
 	}
 
 	potential = {
@@ -436,7 +424,6 @@ living_standard_good = {
 				has_valid_civic = civic_shared_burden
 				is_worker_coop_empire = yes
 				has_valid_civic = civic_dystopian_society
-				has_valid_civic = civic_employee_ownership # Venture Politics
 				has_valid_civic = civic_beacon_of_liberty
 				has_ethic = ethic_fanatic_capitalism
 			}
@@ -580,8 +567,6 @@ living_standard_normal = {
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_high
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_normal
 		pop_category_slave_consumer_goods_upkeep_add = @living_standard_luxuries_very_low
-		# pop_cat_ruler_political_power = 7
-		# pop_cat_specialist_political_power = 1
 	}
 
 	potential = {
@@ -592,7 +577,6 @@ living_standard_normal = {
 				has_valid_civic = civic_shared_burden
 				is_worker_coop_empire = yes
 				has_valid_civic = civic_dystopian_society
-				has_valid_civic = civic_employee_ownership # Venture Politics
 				has_valid_civic = civic_slaving_despots
 				has_valid_civic = civic_welfare_state
 				has_ethic = ethic_fanatic_socialism
@@ -698,9 +682,6 @@ living_standard_stratified = {
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_high
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_low
 		pop_category_slave_consumer_goods_upkeep_add = @living_standard_luxuries_none
-		# pop_cat_ruler_political_power = 9
-		# pop_cat_specialist_political_power = 1
-		# pop_cat_worker_political_power = -0.25
 	}
 
 	potential = {
@@ -711,7 +692,6 @@ living_standard_stratified = {
 				has_valid_civic = civic_shared_burden
 				is_worker_coop_empire = yes
 				has_valid_civic = civic_dystopian_society
-				has_valid_civic = civic_employee_ownership # Venture Politics
 			}
 		}
 		NOR = {
@@ -803,10 +783,6 @@ living_standard_subsistence = {
 		pop_category_rulers_consumer_goods_upkeep_add = @living_standard_luxuries_high
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_normal
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_very_low
-
-		# pop_cat_ruler_political_power = 4
-		# pop_cat_specialist_political_power = -0.25
-		# pop_cat_worker_political_power = -0.5
 	}
 
 	in_breach_of = {
@@ -838,8 +814,8 @@ living_standard_subsistence = {
 		from = {
 			NOR = {
 				has_valid_civic = civic_shared_burden
+				is_worker_coop_empire = yes
 				has_valid_civic = civic_dystopian_society
-				has_valid_civic = civic_employee_ownership # Venture Politics
 			}
 		}
 		OR = {
@@ -865,7 +841,10 @@ living_standard_subsistence = {
 						has_citizenship_type = { country = from type = citizenship_purge_machine }
 						has_citizenship_type = { country = from type = citizenship_purge }
 					}
-					has_purge_type = { country = from type = purge_displacement }
+					OR = {
+						has_purge_type = { country = from type = purge_neutering } # Ariphaos
+						has_purge_type = { country = from type = purge_displacement }
+					}
 				}
 			}
 		}

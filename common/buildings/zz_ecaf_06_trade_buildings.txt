@@ -3,7 +3,7 @@
 #############
 building_commercial_zone = {
 	base_buildtime = @b1_time
-
+	exempt_from_ai_planet_specialization = no
 	category = trade
 
 	potential = {
@@ -11,6 +11,10 @@ building_commercial_zone = {
 		owner = { is_regular_empire = yes }
 		NOT = { has_modifier = slave_colony }
 		NOT = { has_building = building_low_tech_capital }
+	}
+
+	allow = {
+		is_occupied_flag = no # Ariphaos
 	}
 
 	destroy_trigger = {
@@ -42,7 +46,7 @@ building_commercial_zone = {
 			owner = { has_valid_civic = civic_consumerism }
 		}
 		modifier = {
-			job_clerk_add = 1
+			job_trader_add = 1
 		}
 	}
 
@@ -92,12 +96,15 @@ building_commercial_megaplex = {
 		has_building = building_commercial_zone
 	}
 
+	allow = {
+		is_occupied_flag = no # Ariphaos
+	}
+
 	destroy_trigger = {
 		exists = owner
 		OR = {
 			owner = { is_regular_empire = no }
 			has_modifier = slave_colony
-			buildings_no_crystals = yes
 		}
 	}
 
@@ -124,7 +131,7 @@ building_commercial_megaplex = {
 			owner = { has_valid_civic = civic_consumerism }
 		}
 		modifier = {
-			job_clerk_add = 2
+			job_trader_add = 2
 		}
 	}
 
@@ -192,6 +199,7 @@ building_galactic_stock_exchange = {
 
 	allow = {
 		has_major_upgraded_capital = yes
+		is_occupied_flag = no # Ariphaos
 		if = {
 			limit = {
 				exists = orbital_defence
@@ -218,7 +226,7 @@ building_galactic_stock_exchange = {
 	}
 
 	planet_modifier = {
-		job_mogul_add = 1
+		job_merchant_add = 1
 		trade_value_mult = 0.2
 	}
 
@@ -245,7 +253,7 @@ building_galactic_stock_exchange = {
 			}
 		}
 		modifier = {
-			job_mogul_add = 1
+			job_merchant_add = 1
 			trade_value_mult = 0.05
 		}
 	}

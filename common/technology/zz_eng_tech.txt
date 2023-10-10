@@ -38,14 +38,6 @@ tech_droid_workers = {
 			factor = 2
 			has_origin = origin_mechanists
 		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_industry"
-				has_level > 2
-			}
-		}
 	}
 
 	ai_weight = {
@@ -64,13 +56,6 @@ tech_droid_workers = {
 		modifier = {
 			factor = 2
 			has_origin = origin_mechanists
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_industry"
-			}
 		}
 	}
 }
@@ -134,28 +119,15 @@ tech_synthetic_workers = {
 			has_origin = origin_mechanists
 		}
 		modifier = {
-			factor = 4
-			has_ascension_perk = ap_the_flesh_is_weak
-		}
-		modifier = {
 			factor = 0.20
 			NOR = {
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_maniacal"
-				}
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_spark_of_genius"
-				}
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_curator"
-				}
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_expertise_industry"
-				}
+				has_trait_in_council = { TRAIT = leader_trait_maniacal }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_3 }
+				has_trait_in_council = { TRAIT = leader_trait_spark_of_genius }
+				has_trait_in_council = { TRAIT = leader_trait_spark_of_genius_2 }
+				has_trait_in_council = { TRAIT = leader_trait_curator }
+				has_trait_in_council = { TRAIT = leader_trait_expertise_industry }
 			}
 		}
 	}
@@ -176,13 +148,6 @@ tech_synthetic_workers = {
 		modifier = {
 			factor = 2
 			has_origin = origin_mechanists
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_industry"
-			}
 		}
 	}
 }

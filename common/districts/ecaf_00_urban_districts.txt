@@ -104,16 +104,6 @@ district_crashed_slaver_ship = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_mercantile_trickle_up_economics }
-		}
-		modifier = {
-			job_clerk_add = 1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
 			owner = { has_country_flag = origin_broken_shackles_crashed_slaver_ship_depleted }
 		}
 		modifier = {
@@ -127,7 +117,7 @@ district_crashed_slaver_ship = {
 			owner = { has_valid_civic = civic_consumerism }
 		}
 		modifier = {
-			job_clerk_add = 1
+			job_trader_add = 1
 		}
 	}
 
@@ -160,10 +150,7 @@ district_crashed_slaver_ship = {
 		trigger = {
 			exists = owner
 			owner = {
-				OR = {
-					has_active_tradition = tr_mercantile_trickle_up_economics
-					has_country_flag = origin_broken_shackles_crashed_slaver_ship_depleted
-				}
+				has_country_flag = origin_broken_shackles_crashed_slaver_ship_depleted
 			}
 		}
 		text = job_clerk_effect_desc
@@ -306,20 +293,10 @@ district_city = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_mercantile_trickle_up_economics }
-		}
-		modifier = {
-			job_clerk_add = 1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
 			owner = { has_valid_civic = civic_consumerism }
 		}
 		modifier = {
-			job_clerk_add = 1
+			job_trader_add = 1
 		}
 	}
 
@@ -876,7 +853,7 @@ district_srw_commercial = {
 			owner = { is_fallen_empire_spiritualist = no }
 		}
 		modifier = {
-			job_clerk_add = 1
+			job_trader_add = 1
 		}
 	}
 

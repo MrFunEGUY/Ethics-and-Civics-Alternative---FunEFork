@@ -329,10 +329,19 @@ civic_ruthless_competition = {
 		}
 	}
 	modifier = {
-		leader_skill_levels = 1
 		species_leader_exp_gain = 0.1
 		intel_decryption_add = 1
 		pop_demotion_time_mult = -0.1
+	}
+
+	swap_type = {
+		trigger = {
+			has_paragon_dlc = yes
+		}
+
+		modifier = {
+			leader_trait_selection_options_add = 1
+		}
 	}
 }
 
@@ -347,9 +356,9 @@ civic_criminal_heritage = {
 		}
 	}
 	modifier = {
+		planet_branch_offices_cost_mult = -0.20
 		spy_network_daily_value_mult = 0.20
 		intel_decryption_add = 1
-		planet_branch_offices_cost_mult = -0.15
 	}
 
 	description = "civic_tooltip_criminal_heritage_effects"
@@ -699,6 +708,9 @@ civic_corporate_anglers = {
 		base = @civic_default_random_weight
 	}
 }
+
+#### Should Check
+##################
 
 civic_corporate_crafters = {
 	playable = { host_has_dlc = "Humanoids Species Pack" }

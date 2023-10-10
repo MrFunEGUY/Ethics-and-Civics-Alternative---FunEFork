@@ -11,19 +11,26 @@ building_paradise_dome = {
 	potential = {
 		has_building = building_luxury_residence
 		OR = {
-			NOT = { is_planet_class = pc_habitat }
+			NOT = {
+				OR = {
+                    is_planet_class = pc_habitat
+                    is_pd_habitat = yes # PD
+                }
+			}
 			AND = {
 				exists = owner
 				owner = {
 					is_void_dweller_empire = yes
 				}
 			}
+			has_modifier = resort_colony_pd_hab # PD
 		}
 	}
 
 	allow = {
 		has_upgraded_capital = yes
 		owner = { is_ai = no }
+		is_occupied_flag = no # Ariphaos
 	}
 
 	destroy_trigger = {
@@ -134,6 +141,10 @@ building_clinic = {
 				}
 			}
 		}
+	}
+
+	allow = {
+		is_occupied_flag = no # Ariphaos
 	}
 
 	destroy_trigger = {
@@ -281,6 +292,7 @@ building_hospital = {
 
 	allow = {
 		has_upgraded_capital = yes
+		is_occupied_flag = no # Ariphaos
 		OR = {
 			owner = {
 				OR = {

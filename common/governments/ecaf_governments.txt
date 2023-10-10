@@ -11,13 +11,6 @@
 #  use_regnal_names = yes / no        # default: no
 #  dynastic_last_names = yes / no      # default: no
 #  should_force_rename = yes / no      # default: no - if set to yes, empires changing to or from this government will be renamed even if authority type does not change
-#
-#  election_candidates = {          # scriptable value to weight election candidates for oligarchic elections, scope: leader
-#    modifier = {
-#      add = 100
-#      leader_class = governor
-#    }
-#  }
 #}
 
 # WEIGHTS
@@ -119,16 +112,6 @@ gov_anarchy_communism = {
 		is_militarist = yes
 	}
 	should_force_rename = yes
-	election_candidates = {
-		modifier = {
-			add = 100
-			OR = {
-				leader_class = general
-				leader_class = admiral
-				leader_class = governor
-			}
-		}
-	}
 	weight = {
 		base = 5000
 		modifier = {
@@ -156,15 +139,6 @@ gov_jingoism = {
 		is_socialism = no
 	}
 	should_force_rename = yes
-	election_candidates = {
-		modifier = {
-			add = 100
-			OR = {
-				leader_class = general
-				leader_class = admiral
-			}
-		}
-	}
 	weight = {
 		base = 2000
 		modifier = {
@@ -181,20 +155,6 @@ gov_jingoism = {
 gov_military_corp = {
 	ruler_title = RT_HCOM
 	ruler_title_female = RT_HCOM
-	election_candidates = {
-		modifier = {
-			add = 10
-			OR = {
-				leader_class = admiral
-				leader_class = general
-				leader_class = governor
-			}
-		}
-		modifier = {
-			factor = 0
-			leader_class = scientist
-		}
-	}
 	possible = {
 		has_ethic = ethic_fanatic_militarist
 		OR = {
@@ -215,8 +175,6 @@ gov_military_corp = {
 # gov_dread_brotherhood = {
 # 	ruler_title = RT_BROTHER
 # 	ruler_title_female = RT_SISTER
-# 	election_candidates = {
-# 	}
 # 	should_force_rename = yes
 # 	possible = {
 # 		has_valid_civic = civic_fanatic_purifiers
@@ -840,14 +798,33 @@ gov_criminal_syndicate_fam = {
 	dynastic_last_names = yes
 
 	possible = {
-		OR = {
-			has_authority = auth_corporate_imperial
-		}
+		has_authority = auth_corporate_imperial
 		has_valid_civic = civic_criminal_heritage
 	}
 
 	weight = {
 		base = 1800
+	}
+}
+
+# Pirate Haven Fam
+gov_pirate_haven = {
+	ruler_title = RT_OLIGARCH
+	heir_title = HT_UNDER
+	heir_title_female = HT_UNDER
+
+	should_force_rename = yes
+
+	possible = {
+		has_authority = auth_corporate_imperial
+		AND = {
+			has_valid_civic = civic_crusader_spirit_corporate
+			has_valid_civic = civic_criminal_heritage
+		}
+	}
+
+	weight = {
+		base = 2000
 	}
 }
 
@@ -891,9 +868,7 @@ gov_subversive_cult_fam = {
 	dynastic_last_names = yes
 
 	possible = {
-		OR = {
-			has_authority = auth_corporate_imperial
-		}
+		has_authority = auth_corporate_imperial
 		has_valid_civic = civic_criminal_heritage
 		has_valid_civic = civic_gospel_of_the_masses
 	}
@@ -1107,12 +1082,6 @@ lrsk_gov_var_gov_galactic_cartel_fam = {
 		is_militarist = yes
 	}
 
-	election_candidates = {
-		modifier = {
-			add = 10
-			leader_class = governor
-		}
-	}
 
 	leader_class = governor
 
@@ -1145,24 +1114,6 @@ lrsk_gov_var_gov_rationalist_managerial_firm_fam = {
 		}		
 	}
 
-	election_candidates = {
-		modifier = {
-			add = 1000
-			leader_class = scientist
-		}
-		modifier = {
-			add = 100
-			OR = {
-				leader_class = governor
-			}
-		}
-		modifier = {
-			factor = 0
-			leader_class = admiral
-			leader_class = general
-		}
-	}
-
 	weight = {
 		base = 1000
 		modifier = {
@@ -1186,24 +1137,6 @@ lrsk_gov_var_gov_private_intel_agency_fam = {
 	possible = {		
 		has_authority = auth_corporate_imperial
 		has_valid_civic = lrsk_gov_var_civic_mc_police_state
-	}
-
-	election_candidates = {
-		modifier = {
-			add = 100
-			leader_class = scientist
-		}
-		modifier = {
-			add = 250
-			OR = {
-				leader_class = governor
-			}
-		}
-		modifier = {
-			add = 250
-			leader_class = admiral
-			leader_class = general
-		}
 	}
 
 	weight = {
@@ -1232,24 +1165,6 @@ lrsk_gov_var_gov_protection_racket_fam = {
 		has_valid_civic = civic_criminal_heritage
 	}
 
-	election_candidates = {
-		modifier = {
-			add = 100
-			leader_class = scientist
-		}
-		modifier = {
-			add = 250
-			OR = {
-				leader_class = governor
-			}
-		}
-		modifier = {
-			add = 250
-			leader_class = admiral
-			leader_class = general
-		}
-	}
-
 	weight = {
 		base = 1750
 	}
@@ -1266,25 +1181,6 @@ lrsk_gov_var_gov_crusading_company_fam = {
 	should_force_rename = yes
 	use_regnal_names = yes
 	dynastic_last_names = yes
-
-	election_candidates = {
-		modifier = {
-			add = 150
-			leader_class = governor
-		}
-		modifier = {
-			add = 50
-			leader_class = scientist
-		}
-		modifier = {
-			add = 250
-			leader_class = admiral
-		}
-		modifier = {
-			add = 250
-			leader_class = general
-		}
-	}
 
 	possible = {
 		OR = {
@@ -1331,13 +1227,6 @@ lrsk_gov_var_gov_colonial_charter_board_fam = {
 	# should_force_rename = yes
 	use_regnal_names = yes
 	dynastic_last_names = yes
-
-	election_candidates = {
-		modifier = {
-			add = 10
-			leader_class = governor
-		}
-	}
 
 	possible = {
 		has_authority = auth_corporate_imperial
@@ -1437,24 +1326,6 @@ lrsk_gov_var_gov_innovation_initiative_fam = {
 		
 	}
 
-	election_candidates = {
-		modifier = {
-			add = 1000
-			leader_class = scientist
-		}
-		modifier = {
-			add = 100
-			OR = {
-				leader_class = governor
-			}
-		}
-		modifier = {
-			factor = 0
-			leader_class = admiral
-			leader_class = general
-		}
-	}
-
 	weight = {
 		base = 1001
 		modifier = {
@@ -1492,24 +1363,6 @@ lrsk_gov_var_gov_private_military_contractor_fam = {
 					has_valid_civic = civic_naval_contractors
 				}
 			}
-		}
-	}
-
-	election_candidates = {
-		modifier = {
-			add = 1000
-			leader_class = admiral
-			leader_class = general
-		}
-		modifier = {
-			add = 100
-			OR = {
-				leader_class = governor
-			}
-		}
-		modifier = {
-			factor = 0
-			leader_class = scientist
 		}
 	}
 

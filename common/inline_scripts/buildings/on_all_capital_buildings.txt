@@ -2,24 +2,11 @@ triggered_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = {
-			has_authority = auth_imperial
+			is_imperial = yes
 			capital_scope.solar_system = {
 				is_same_value = ROOT.solar_system
 			}
 		}
 	}
 	planet_jobs_produces_mult = 0.1
-}
-
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = {
-			has_authority = auth_corporate_imperial
-			capital_scope.solar_system = {
-				is_same_value = ROOT.solar_system
-			}
-		}
-	}
-	planet_jobs_produces_mult = 0.05
 }

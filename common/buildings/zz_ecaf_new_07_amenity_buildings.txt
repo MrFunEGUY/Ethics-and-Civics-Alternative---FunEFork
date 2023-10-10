@@ -14,10 +14,13 @@ building_colliseum = {
 			}
 		}
 	}
+
 	allow = {
 		has_upgraded_capital = yes
 		has_building = building_slave_processing
+		is_occupied_flag = no # Ariphaos
 	}
+
 	destroy_trigger = {
 		exists = owner
 		OR = {
@@ -31,14 +34,17 @@ building_colliseum = {
 			}
 		}
 	}
+
 	planet_modifier = {
 		job_gladiator_add = 2
 		trade_value_add = 4
 		planet_housing_add = 1
 	}
+
 	army_modifier = {
 		army_damage_mult = 0.1
 	}
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -50,6 +56,7 @@ building_colliseum = {
 			job_gladiator_add = 1
 		}
 	}
+
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -60,12 +67,15 @@ building_colliseum = {
 			energy = 2
 		}
 	}
+
 	triggered_desc = {
 		text = job_gladiator_effect_desc
 	}
+
 	ai_weight = {
 		weight = 1
 	}
+	
 	on_built = {
 		planet = {
 			owner = {

@@ -34,6 +34,7 @@ building_institute = {
 
 	allow = {
 		has_major_upgraded_capital = yes
+		is_occupied_flag = no # Ariphaos
 		exists = owner
 		OR = {
 			owner = { is_ai = no }

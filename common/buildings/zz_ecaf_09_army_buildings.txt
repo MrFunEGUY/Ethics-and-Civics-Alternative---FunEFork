@@ -15,6 +15,7 @@ building_military_academy = {
 
 	allow = {
 		has_upgraded_capital = yes
+		is_occupied_flag = no # Ariphaos
 		if = {
 			limit = {
 				exists = owner
@@ -142,6 +143,10 @@ building_stronghold = {
 	potential = {
 	}
 
+	allow = {
+		is_occupied_flag = no # Ariphaos
+	}
+
 	destroy_trigger = {
 		exists = owner
 		owner = { is_ai = yes }
@@ -258,6 +263,7 @@ building_fortress = {
 
 	allow = {
 		has_upgraded_capital = yes
+		is_occupied_flag = no # Ariphaos
 	}
 
 	destroy_trigger = {
@@ -369,6 +375,7 @@ building_planetary_shield_generator = {
 
 	allow = {
 		has_upgraded_capital = yes
+		is_occupied_flag = no # Ariphaos
 		hidden_trigger = { owner = { is_ai = no } }
 		if = {
 			limit = {

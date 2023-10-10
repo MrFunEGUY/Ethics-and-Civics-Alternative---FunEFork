@@ -34,12 +34,8 @@ country_event = {
                 }
                 modifier = {
                     factor = 100
-                    sector = {
-                        exists = leader
-                        leader = {
-                            has_leader_flag = mem_convict_retheri_rhin
-                        }
-                    }
+                    exists = leader
+                    leader = { has_leader_flag = mem_convict_retheri_rhin }
                 }
                 modifier = {
                     factor = 0

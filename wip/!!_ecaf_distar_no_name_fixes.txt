@@ -717,7 +717,7 @@ country_event = {
 				cooldown = no
 			}
 			create_leader = {
-				class = ruler
+				class = governor
 				species = event_target:vol
 				name = random
 				skill = 5

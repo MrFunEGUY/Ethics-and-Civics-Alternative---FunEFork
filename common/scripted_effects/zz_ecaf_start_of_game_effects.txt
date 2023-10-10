@@ -312,7 +312,7 @@ generate_start_pops = {
 		}
 		add_building = building_clone_army_clone_vat
 		add_building = building_clone_army_clone_vat
-		planet_event = { id = clones.10 days = 1095 random = 730 }
+		planet_event = { id = clones.10 days = 1095 random = 720 }
 	}
 	if = {
 		limit = { owner = { is_hive_empire = yes } }

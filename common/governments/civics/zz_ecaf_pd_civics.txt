@@ -8,6 +8,28 @@ civic_pdinquisition = {
 	possible = {
 		civics = { value = civic_imperial_cult }
 	}
+	random_weight = { base = 0 }
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			OR = {
+				has_ai_personality = evangelising_zealots
+				has_ai_personality = hegemonic_imperialists
+				has_ai_personality = decadent_hierarchy
+				has_ai_personality = fanatic_purifiers
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				has_ai_personality = peaceful_traders
+				has_ai_personality = democratic_crusaders
+				has_ai_personality = erudite_explorers
+				has_ai_personality = harmonious_hierarchy
+			}
+		}
+	}
 	modifier = {
 		country_unity_produces_mult = 0.15
 		pop_government_ethic_attraction = 0.1

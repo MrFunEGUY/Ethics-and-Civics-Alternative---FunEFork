@@ -2604,9 +2604,9 @@ l_russian:
  job_mogul_plural: "Магнат"
  job_mogul_desc: "Значимый и влиятельный член финансовой элиты."
  job_mogul_effect_desc: "£job_mogul£ $job_mogul_plural$ производит £mod_trade_value_add£ §Y$TRADE_VALUE$§! и £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!, умножает £mod_planet_jobs_energy_produces_mult£ на §G+10%§! на планете."
- mod_job_mogul_add: "$job_mogul$"
+ mod_job_merchant_add: "$job_mogul$"
  mod_job_mogul_per_pop: "§G+1§! $job_mogul$ на каждые $VALUE$ Населения"
- mod_job_mogul_per_pop_short: "\n§G+1§! £mod_job_mogul_add£ на каждые $VALUE$ £pop£"
+ mod_job_mogul_per_pop_short: "\n§G+1§! £mod_job_merchant_add£ на каждые $VALUE$ £pop£"
 
  job_mining_engineer: "Горный Инженер"
  job_mining_engineer_plural: "Горный Инженеры"
@@ -2665,7 +2665,7 @@ l_russian:
  civic_commonwealth_desc: "Эта цивилизация характеризуется сильным чувством духовного единства Граждан, стремлением к сохранению и развитию культурной общности."
 
  civic_consumerism: "Общество Потребления"
- civic_consumerism_desc: "Общество потребления характеризуется массовым и избыточным потреблением материальных благ, и формированием соответствующей системы ценностей и установок. \n§YКлерки§! производят дополнительно §Y0.25§! £trade_value£ и §Y0.5§! £amenities£  \n§YТорговцы§! дополнительно производят §G+1§! £consumer_goods£ §YТМС§!  \n§YФабрики§! дают дополнительные рабочие места для £job_artisan£ §YРемесленников§! \nСтроения §YКоммерческие Зоны§! и §YКоммерческий Мегаплекс§!, а также §YГорода§! дают дополнительные рабочие места для £job_clerk£ §YКлерков§! \nФракция §YПредприниматели§! будет несчастлива из-за политики §YПовышенное Экологическое Регулирование§! и счастлива за-за торговой политики §YПотребительское Благосостояние§!"
+ civic_consumerism_desc: "Общество потребления характеризуется массовым и избыточным потреблением материальных благ, и формированием соответствующей системы ценностей и установок. \n§YКлерки§! производят дополнительно §Y0.25§! £trade_value£ и §Y0.5§! £amenities£  \n§YТорговцы§! дополнительно производят §G+1§! £consumer_goods£ §YТМС§!  \n§YФабрики§! дают дополнительные рабочие места для £job_artisan£ §YРемесленников§! \nСтроения §YКоммерческие Зоны§! и §YКоммерческий Мегаплекс§!, а также §YГорода§! дают дополнительные рабочие места для £job_trader£ §YКлерков§! \nФракция §YПредприниматели§! будет несчастлива из-за политики §YПовышенное Экологическое Регулирование§! и счастлива за-за торговой политики §YПотребительское Благосостояние§!"
 
 
  civic_military_dictatorship: "Военный Вождь"
@@ -3917,8 +3917,8 @@ l_russian:
  bureaucracy_gov_reg_loc: "\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_pacifist$§!, £building£ §YCapital Buildings§! replace some £job_politician£ §Y$job_politician$§! Jobs with £job_supervisor£ §Y$job_supervisor_plural$§!\n\n$job_supervisor_effect_desc$§!"
  bureaucracy_gov_corp_loc: "\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_pacifist$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_supervisor£ §Y$job_supervisor_plural$§!\n\n$job_supervisor_effect_desc$§!"
 
- plutocracy_gov_reg_loc: "\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_capitalism$§!, £building£ §YCapital Buildings§! replace some £job_politician£ §Y$job_politician$§! Jobs with £job_mogul£ §Y$job_mogul_plural$§!\n\n$job_mogul_effect_desc$§!"
- plutocracy_gov_corp_loc: "\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_capitalism$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_mogul£ §Y$job_mogul_plural$§!\n\n$job_mogul_effect_desc$§!"
+ plutocracy_gov_reg_loc: "\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_capitalism$§!, £building£ §YCapital Buildings§! replace some £job_politician£ §Y$job_politician$§! Jobs with £job_merchant£ §Y$job_merchant_plural$§!\n\n$jjob_merchant_effect_desc$§!"
+ plutocracy_gov_corp_loc: "\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_capitalism$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_merchant£ §Y$job_merchant_plural$§!\n\n$job_merchant_effect_desc$§!"
 
  plutocracy_gov_corp_loc: ""
 

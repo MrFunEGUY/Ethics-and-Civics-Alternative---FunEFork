@@ -25,11 +25,9 @@ ap_imperial_prerogative = {
 ap_lord_of_war = {
 	potential = {
 		host_has_dlc = "Overlord"
-		NOR = {
-			has_ascension_perk = ap_lord_of_war
-			is_gestalt = yes
-			has_valid_civic = civic_fanatic_purifiers
-		}
+		NOT = { has_ascension_perk = ap_lord_of_war }
+		is_gestalt = no
+		is_homicidal = no
 	}
 
 	on_enabled = {
@@ -55,6 +53,19 @@ ap_lord_of_war = {
 		modifier = {
 			factor = 2
 			is_megacorp = yes
+		}
+		# Ariphaos
+		modifier = {
+			factor = 0
+			is_pacifist = yes
+		}
+		modifier = {
+			factor = 0.25
+			is_xenophile = yes
+		}
+		modifier = {
+			factor = 2
+			is_xenophobe = yes
 		}
 	}
 }

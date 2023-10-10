@@ -44,6 +44,7 @@ building_capital = {
 	}
 	allow = {
 		num_pops >= 10
+		is_occupied_flag = no # Ariphaos
 	}
 
 	upgrades = {
@@ -74,26 +75,6 @@ building_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_ethic = ethic_authoritarian }
-		}
-		modifier = {
-			job_enforcer_add = 1
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_ethic = ethic_fanatic_authoritarian }
-		}
-		modifier = {
-			job_enforcer_add = 2
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
 			owner = {
 				has_active_tradition = tr_domination_imperious_architecture
 			}
@@ -110,42 +91,17 @@ building_capital = {
 		}
 		job_roboticist_add = 1
 	}
-	
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			has_administrators = yes
-		}
-		modifier = {
-			job_politician_add = 1
-		}
+
+	### ECAF
+	############
+	### 2 rulers, 1-2 Admin/Exec + 1 Special if Applicable
+
+	inline_script = {
+		script = jobs/ecaf_capital_buildings
+		AMOUNT = 1
 	}
 
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			has_regular_administrators = yes
-		}
-		modifier = {
-			job_politician_add = 1
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			has_executives = yes
-		}
-		modifier = {
-			job_executive_add = 1
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			has_regular_executives = yes
-		}
-		modifier = {
-			job_executive_add = 1
-		}
-	}
+	####################################### / ECAF
 
 	triggered_planet_modifier = {
 		potential = {
@@ -157,78 +113,6 @@ building_capital = {
 		}
 		modifier = {
 			job_steward_add = 3
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			is_theocracy = yes
-		}
-		modifier = {
-			job_high_priest_add = 1
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			is_aristocracy = yes
-		}
-		modifier = {
-			job_noble_add = 1
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			is_technocracy = yes
-		}
-		modifier = {
-			job_head_researcher_add = 1
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			is_plutocracy = yes
-		}
-		modifier = {
-			job_mogul_add = 1
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			is_stratocracy = yes
-		}
-		modifier = {
-			job_commandante_add = 1
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			is_bureaucracy = yes
-		}
-		modifier = {
-			job_supervisor_add = 1
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			is_isocracy = yes
-		}
-		modifier = {
-			job_commisar_add = 1
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			is_diplocracy = yes
-		}
-		modifier = {
-			job_ambassador_add = 1
 		}
 	}
 	
@@ -275,96 +159,42 @@ building_capital = {
 	}
 
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_imperial_cult
-					has_valid_civic = civic_divine_council
-					has_valid_civic = civic_spiritual_democracy
-					has_valid_civic = civic_exalted_priesthood
-				}
-			}
-		}
+		trigger = { is_theocracy = yes }
 		text = job_high_priest_effect_desc
 	}
 	
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { has_valid_civic = civic_aristocratic_elite }
-		}
+		trigger = { is_aristocracy = yes }
 		text = job_noble_effect_desc
 	}
 	
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_cyber_dictatorship
-					has_valid_civic = civic_science_directorate
-					has_valid_civic = civic_cyber_demos_cratos
-					has_valid_civic = civic_technocracy
-					has_civic = civic_science_syndicate #megacorp_mod - Venture Politics
-				}
-			}
-		}
+		trigger = { is_technocracy = yes }
 		text = job_head_researcher_effect_desc
 	}
 	
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_merchant_guilds
-					has_valid_civic = civic_state_monopoly
-					has_civic = civic_bancorp #megacorp_mod - Venture Politics
-				}
-			}
-		}
+		trigger = { is_plutocracy = yes }
+		text = job_merchant_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = { has_moguls = yes }
 		text = job_mogul_effect_desc
 	}
 	
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_military_dictatorship
-					has_valid_civic = civic_military_junta
-					has_valid_civic = civic_citizen_service
-					has_valid_civic = civic_stratocracy
-				}
-			}
-		}
+		trigger = { is_stratocracy = yes }
 		text = job_commandante_effect_desc
 	}
 	
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_executive_committee
-					has_valid_civic = civic_philosopher_king
-					has_valid_civic = civic_peaceful_republic
-					has_valid_civic = civic_bureaucracy
-				}
-			}
-		}
+		trigger = { is_bureaucracy = yes }
 		text = job_supervisor_effect_desc
 	}
 	
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_megacorp = no
-				is_regular_empire = yes
-			}
-		}
+		trigger = { has_administrators = yes }
 		text = job_politician_effect_desc
 	}
 	
@@ -436,6 +266,7 @@ building_major_capital = {
 
 	allow = {
 		num_pops >= 25
+		is_occupied_flag = no # Ariphaos
 	}
 
 	convert_to = {
@@ -471,26 +302,6 @@ building_major_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_ethic = ethic_authoritarian }
-		}
-		modifier = {
-			job_enforcer_add = 1
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_ethic = ethic_fanatic_authoritarian }
-		}
-		modifier = {
-			job_enforcer_add = 2
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
 			owner = {
 				has_active_tradition = tr_domination_imperious_architecture
 			}
@@ -507,138 +318,38 @@ building_major_capital = {
 		}
 		job_roboticist_add = 1
 	}
-	
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			has_administrators = yes
-		}
-		modifier = {
-			job_politician_add = 1
-		}
+
+	### ECAF
+	############
+	### 3 rulers, 2-3 Admin/Exec + 1 Special if Applicable
+
+	inline_script = {
+		script = jobs/ecaf_capital_buildings
+		AMOUNT = 1
 	}
 
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			has_administrators = yes
-			is_plutocracy = no
-			is_theocracy = no
-			is_bureaucracy = no
-			is_isocracy = no
-			is_diplocracy = no
-		}
-		modifier = {
-			job_politician_add = 1
-		}
+	triggered_planet_modifier = {
+		potential = { has_administrators = yes }
+		modifier = { job_politician_add = 1 }
 	}
 
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			has_regular_administrators = yes
-		}
-		modifier = {
-			job_politician_add = 1
-		}
+	triggered_planet_modifier = {
+		potential = { has_executives = yes }
+		modifier = { job_executive_add = 1 }
 	}
 
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			has_executives = yes
-		}
-		modifier = {
-			job_executive_add = 1
-		}
-	}
+	####################################### / ECAF
 
-	triggered_planet_modifier = { # ECAF
+	triggered_planet_modifier = {
 		potential = {
-			has_executives = yes
-			is_plutocracy = no
-			is_theocracy = no
-			is_bureaucracy = no
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_worker_coop_empire = yes
+			}
 		}
 		modifier = {
-			job_executive_add = 1
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			has_regular_executives = yes
-		}
-		modifier = {
-			job_executive_add = 1
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			is_theocracy = yes
-		}
-		modifier = {
-			job_high_priest_add = 2
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			is_aristocracy = yes
-		}
-		modifier = {
-			job_noble_add = 1
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			is_technocracy = yes
-		}
-		modifier = {
-			job_head_researcher_add = 1
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			is_plutocracy = yes
-		}
-		modifier = {
-			job_mogul_add = 2
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			is_stratocracy = yes
-		}
-		modifier = {
-			job_commandante_add = 1
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			is_bureaucracy = yes
-		}
-		modifier = {
-			job_supervisor_add = 2
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			is_isocracy = yes
-		}
-		modifier = {
-			job_commisar_add = 2
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			is_diplocracy = yes
-		}
-		modifier = {
-			job_ambassador_add = 2
+			job_steward_add = 4
 		}
 	}
 	
@@ -704,95 +415,42 @@ building_major_capital = {
 	}
 	
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_military_dictatorship
-					has_valid_civic = civic_military_junta
-					has_valid_civic = civic_citizen_service
-					has_valid_civic = civic_stratocracy
-				}
-			}
-		}
+		trigger = { is_stratocracy = yes }
 		text = job_commandante_effect_desc
 	}
 	
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_executive_committee
-					has_valid_civic = civic_philosopher_king
-					has_valid_civic = civic_peaceful_republic
-					has_valid_civic = civic_bureaucracy
-				}
-			}
-		}
+		trigger = { is_bureaucracy = yes }
 		text = job_supervisor_effect_desc
 	}
 	
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_imperial_cult
-					has_valid_civic = civic_divine_council
-					has_valid_civic = civic_spiritual_democracy
-					has_valid_civic = civic_exalted_priesthood
-				}
-			}
-		}
+		trigger = { is_theocracy = yes }
 		text = job_high_priest_effect_desc
 	}
 	
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { has_valid_civic = civic_aristocratic_elite }
-		}
+		trigger = { is_aristocracy = yes }
 		text = job_noble_effect_desc
 	}
 	
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_cyber_dictatorship
-					has_valid_civic = civic_science_directorate
-					has_valid_civic = civic_cyber_demos_cratos
-					has_valid_civic = civic_technocracy
-					has_civic = civic_science_syndicate #megacorp_mod - Venture Poliitcs
-				}
-			}
-		}
+		trigger = { is_technocracy = yes }
 		text = job_head_researcher_effect_desc
 	}
-	
+
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_merchant_guilds
-					has_valid_civic = civic_state_monopoly
-					has_civic = civic_bancorp #megacorp_mod - Venture Politics
-				}
-			}
-		}
+		trigger = { is_plutocracy = yes }
+		text = job_merchant_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = { has_moguls = yes }
 		text = job_mogul_effect_desc
 	}
 	
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_megacorp = no
-			}
-		}
+		trigger = { has_administrators = yes }
 		text = job_politician_effect_desc
 	}
 	
@@ -885,6 +543,7 @@ building_system_capital = {
 
 	allow = {
 		num_pops >= 50
+		is_occupied_flag = no # Ariphaos
 	}
 
 	prerequisites = {
@@ -911,36 +570,6 @@ building_system_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_valid_civic = civic_spiritual_seekers }
-		}
-		modifier = {
-			job_transcend_add = 1
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_ethic = ethic_authoritarian }
-		}
-		modifier = {
-			job_enforcer_add = 1
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_ethic = ethic_fanatic_authoritarian }
-		}
-		modifier = {
-			job_enforcer_add = 2
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
 			owner = {
 				has_active_tradition = tr_domination_imperious_architecture
 			}
@@ -957,114 +586,40 @@ building_system_capital = {
 		}
 		job_roboticist_add = 1
 	}
-	
-	triggered_planet_modifier = { # ECAF
+
+	triggered_planet_modifier = {
 		potential = {
-			has_administrators = yes
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_worker_coop_empire = yes
+			}
 		}
 		modifier = {
-			job_politician_add = 2
+			job_steward_add = 6
 		}
 	}
 
-	triggered_planet_modifier = { # ECAF
+	### ECAF
+	############
+	### 4 rulers, 2-4 Admin/Exec + 2 Special if Applicable
+
+	inline_script = {
+		script = jobs/ecaf_capital_buildings
+		AMOUNT = 2
+	}
+
+	triggered_planet_modifier = {
 		potential = {
-			has_regular_administrators = yes
+			exists = owner
+			owner = { has_valid_civic = civic_spiritual_seekers }
 		}
 		modifier = {
-			job_politician_add = 2
+			job_transcend_add = 1
 		}
 	}
 
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			has_executives = yes
-		}
-		modifier = {
-			job_executive_add = 2
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			has_regular_executives = yes
-		}
-		modifier = {
-			job_executive_add = 2
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			is_theocracy = yes
-		}
-		modifier = {
-			job_high_priest_add = 3
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			is_aristocracy = yes
-		}
-		modifier = {
-			job_noble_add = 2
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			is_technocracy = yes
-		}
-		modifier = {
-			job_head_researcher_add = 2
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			is_plutocracy = yes
-		}
-		modifier = {
-			job_mogul_add = 3
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			is_stratocracy = yes
-		}
-		modifier = {
-			job_commandante_add = 2
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			is_bureaucracy = yes
-		}
-		modifier = {
-			job_supervisor_add = 2
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			is_isocracy = yes
-		}
-		modifier = {
-			job_commisar_add = 2
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			is_diplocracy = yes
-		}
-		modifier = {
-			job_ambassador_add = 2
-		}
-	}
+	####################################### / ECAF
 
 	triggered_planet_modifier = {
 		potential = {
@@ -1139,96 +694,42 @@ building_system_capital = {
 	}
 	
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_military_dictatorship
-					has_valid_civic = civic_military_junta
-					has_valid_civic = civic_citizen_service
-					has_valid_civic = civic_stratocracy
-				}
-			}
-		}
+		trigger = { is_stratocracy = yes }
 		text = job_commandante_effect_desc
 	}
 	
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_executive_committee
-					has_valid_civic = civic_philosopher_king
-					has_valid_civic = civic_peaceful_republic
-					has_valid_civic = civic_bureaucracy
-				}
-			}
-		}
+		trigger = { is_bureaucracy = yes }
 		text = job_supervisor_effect_desc
 	}
 	
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_imperial_cult
-					has_valid_civic = civic_divine_council
-					has_valid_civic = civic_spiritual_democracy
-					has_valid_civic = civic_exalted_priesthood
-				}
-			}
-		}
+		trigger = { is_theocracy = yes }
 		text = job_high_priest_effect_desc
 	}
 	
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { has_valid_civic = civic_aristocratic_elite }
-		}
+		trigger = { is_aristocracy = yes }
 		text = job_noble_effect_desc
 	}
 	
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_cyber_dictatorship
-					has_valid_civic = civic_science_directorate
-					has_valid_civic = civic_cyber_demos_cratos
-					has_valid_civic = civic_technocracy
-					has_civic = civic_science_syndicate #megacorp_mod - Venture Politics
-				}
-			}
-		}
+		trigger = { is_technocracy = yes }
 		text = job_head_researcher_effect_desc
 	}
 	
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_merchant_guilds
-					has_valid_civic = civic_state_monopoly
-					has_civic = civic_bancorp #megacorp_mod - Venture Politics
-				}
-			}
-		}
+		trigger = { is_plutocracy = yes }
+		text = job_merchant_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = { has_moguls = yes }
 		text = job_mogul_effect_desc
 	}
 	
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_megacorp = no
-				is_regular_empire = yes
-			}
-		}
+		trigger = { has_administrators = yes }
 		text = job_politician_effect_desc
 	}
 	
@@ -1361,31 +862,17 @@ building_hab_capital = {
 			exists = owner
 			owner = { has_active_tradition = tr_synthetics_finish }
 		}
-		job_roboticist_add = 1
+		modifier = { job_roboticist_add = 1 }
 	}
 
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_megacorp = no
-				is_regular_empire = yes
-			}
-		}
-		job_politician_add = 1
+		potential = { has_administrators = yes }
+		modifier = { job_politician_add = 1 }
 	}
 
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_worker_coop_empire = no
-			}
-		}
-		modifier = {
-			job_executive_add = 1
-		}
+		potential = { has_executives = yes }
+		modifier = { job_executive_add = 1 }
 	}
 
 	triggered_planet_modifier = {
@@ -1466,13 +953,7 @@ building_hab_capital = {
 	}
 
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_megacorp = no
-				is_regular_empire = yes
-			}
-		}
+		trigger = { has_administrators = yes }
 		text = job_politician_effect_desc
 	}
 
@@ -1569,6 +1050,7 @@ building_hab_major_capital = {
 
 	allow = {
 		num_pops >= 10
+		is_occupied_flag = no # Ariphaos
 	}
 
 	resources = {
@@ -1659,32 +1141,6 @@ building_hab_major_capital = {
 		}
 		job_roboticist_add = 1
 	}
-	
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			has_administrators = yes
-			OR = {
-				NOT = { has_planet_flag = toxic_knights_habitat }
-				NOT = { owner = { has_origin = origin_toxic_knights } }
-			}
-		}
-		modifier = {
-			job_politician_add = 1
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			has_regular_administrators = yes
-			OR = {
-				NOT = { has_planet_flag = toxic_knights_habitat }
-				NOT = { owner = { has_origin = origin_toxic_knights } }
-			}
-		}
-		modifier = {
-			job_politician_add = 1
-		}
-	}
 
 	triggered_planet_modifier = {
 		potential = {
@@ -1697,26 +1153,6 @@ building_hab_major_capital = {
 		modifier = {
 			job_knight_commander_add = 1
 			job_knight_add = 1
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			NOT = { has_planet_flag = toxic_knights_habitat }
-			has_executives = yes
-		}
-		modifier = {
-			job_executive_add = 1
-		}
-	}
-
-	triggered_planet_modifier = { # ECAF
-		potential = {
-			NOT = { has_planet_flag = toxic_knights_habitat }
-			has_regular_executives = yes
-		}
-		modifier = {
-			job_executive_add = 1
 		}
 	}
 
@@ -1734,7 +1170,56 @@ building_hab_major_capital = {
 		}
 	}
 
-	triggered_planet_modifier = { # ECAF
+	### ECAF
+	############
+	
+	triggered_planet_modifier = {
+		potential = {
+			has_administrators = yes
+			OR = {
+				NOT = { has_planet_flag = toxic_knights_habitat }
+				NOT = { owner = { has_origin = origin_toxic_knights } }
+			}
+		}
+		modifier = {
+			job_politician_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_regular_administrators = yes
+			OR = {
+				NOT = { has_planet_flag = toxic_knights_habitat }
+				NOT = { owner = { has_origin = origin_toxic_knights } }
+			}
+		}
+		modifier = {
+			job_politician_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			NOT = { has_planet_flag = toxic_knights_habitat }
+			has_executives = yes
+		}
+		modifier = {
+			job_executive_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			NOT = { has_planet_flag = toxic_knights_habitat }
+			has_regular_executives = yes
+		}
+		modifier = {
+			job_executive_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
 		potential = {
 			is_theocracy = yes
 			OR = {
@@ -1747,7 +1232,7 @@ building_hab_major_capital = {
 		}
 	}
 
-	triggered_planet_modifier = { # ECAF
+	triggered_planet_modifier = {
 		potential = {
 			is_aristocracy = yes
 			OR = {
@@ -1760,7 +1245,7 @@ building_hab_major_capital = {
 		}
 	}
 
-	triggered_planet_modifier = { # ECAF
+	triggered_planet_modifier = {
 		potential = {
 			is_technocracy = yes
 			OR = {
@@ -1773,7 +1258,7 @@ building_hab_major_capital = {
 		}
 	}
 
-	triggered_planet_modifier = { # ECAF
+	triggered_planet_modifier = {
 		potential = {
 			is_plutocracy = yes
 			OR = {
@@ -1782,11 +1267,11 @@ building_hab_major_capital = {
 			}
 		}
 		modifier = {
-			job_mogul_add = 1
+			job_merchant_add = 1
 		}
 	}
 
-	triggered_planet_modifier = { # ECAF
+	triggered_planet_modifier = {
 		potential = {
 			is_stratocracy = yes
 			OR = {
@@ -1799,7 +1284,7 @@ building_hab_major_capital = {
 		}
 	}
 
-	triggered_planet_modifier = { # ECAF
+	triggered_planet_modifier = {
 		potential = {
 			is_bureaucracy = yes
 			OR = {
@@ -1812,7 +1297,7 @@ building_hab_major_capital = {
 		}
 	}
 
-	triggered_planet_modifier = { # ECAF
+	triggered_planet_modifier = {
 		potential = {
 			is_isocracy = yes
 			OR = {
@@ -1825,7 +1310,7 @@ building_hab_major_capital = {
 		}
 	}
 
-	triggered_planet_modifier = { # ECAF
+	triggered_planet_modifier = {
 		potential = {
 			is_diplocracy = yes
 			OR = {
@@ -1837,6 +1322,8 @@ building_hab_major_capital = {
 			job_ambassador_add = 1
 		}
 	}
+
+	####################################### / ECAF
 
 	triggered_planet_modifier = {
 		potential = {
@@ -1880,16 +1367,7 @@ building_hab_major_capital = {
 	
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_cyber_dictatorship
-					has_valid_civic = civic_science_directorate
-					has_valid_civic = civic_cyber_demos_cratos
-					has_valid_civic = civic_technocracy
-					has_valid_civic = civic_science_syndicate #megacorp_mod - Venture Politics
-				}
-			}
+			is_technocracy = yes
 			OR = {
 				NOT = { has_planet_flag = toxic_knights_habitat }
 				NOT = { owner = { has_origin = origin_toxic_knights } }
@@ -1900,15 +1378,7 @@ building_hab_major_capital = {
 	
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_military_dictatorship
-					has_valid_civic = civic_military_junta
-					has_valid_civic = civic_citizen_service
-					has_valid_civic = civic_stratocracy
-				}
-			}
+			is_stratocracy = yes
 			OR = {
 				NOT = { has_planet_flag = toxic_knights_habitat }
 				NOT = { owner = { has_origin = origin_toxic_knights } }
@@ -1919,15 +1389,7 @@ building_hab_major_capital = {
 	
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_executive_committee
-					has_valid_civic = civic_philosopher_king
-					has_valid_civic = civic_peaceful_republic
-					has_valid_civic = civic_bureaucracy
-				}
-			}
+			is_bureaucracy = yes
 			OR = {
 				NOT = { has_planet_flag = toxic_knights_habitat }
 				NOT = { owner = { has_origin = origin_toxic_knights } }
@@ -1938,15 +1400,7 @@ building_hab_major_capital = {
 	
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_imperial_cult
-					has_valid_civic = civic_divine_council
-					has_valid_civic = civic_spiritual_democracy
-					has_valid_civic = civic_exalted_priesthood
-				}
-			}
+			is_theocracy = yes
 			OR = {
 				NOT = { has_planet_flag = toxic_knights_habitat }
 				NOT = { owner = { has_origin = origin_toxic_knights } }
@@ -1957,8 +1411,7 @@ building_hab_major_capital = {
 	
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = { has_valid_civic = civic_aristocratic_elite }
+			is_aristocracy = yes
 			OR = {
 				NOT = { has_planet_flag = toxic_knights_habitat }
 				NOT = { owner = { has_origin = origin_toxic_knights } }
@@ -1966,17 +1419,21 @@ building_hab_major_capital = {
 		}
 		text = job_noble_effect_desc
 	}
-	
+
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_civic = civic_merchant_guilds
-					has_civic = civic_state_monopoly
-					has_civic = civic_bancorp #megacorp_mod - Venture Politics
-				}
+			is_plutocracy = yes
+			OR = {
+				NOT = { has_planet_flag = toxic_knights_habitat }
+				NOT = { owner = { has_origin = origin_toxic_knights } }
 			}
+		}
+		text = job_merchant_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			has_moguls = yes
 			OR = {
 				NOT = { has_planet_flag = toxic_knights_habitat }
 				NOT = { owner = { has_origin = origin_toxic_knights } }
@@ -1987,11 +1444,7 @@ building_hab_major_capital = {
 	
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				is_megacorp = no
-				is_regular_empire = yes
-			}
+			has_administrators = yes
 			OR = {
 				NOT = { has_planet_flag = toxic_knights_habitat }
 				NOT = { owner = { has_origin = origin_toxic_knights } }
@@ -2156,7 +1609,10 @@ building_resort_capital = {
 	category = government
 
 	potential = {
-		has_modifier = resort_colony
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = resort_colony_pd_hab
+		}
 	}
 
 	convert_to = {
@@ -2180,6 +1636,10 @@ building_resort_capital = {
 		job_entertainer_add = 1
 		planet_max_buildings_add = 5
 		planet_max_branch_office_buildings_add = 1
+	}
+
+	inline_script = {
+		script = buildings/on_all_capital_buildings
 	}
 
 	triggered_planet_modifier = {
@@ -2250,12 +1710,7 @@ building_resort_capital = {
 	}
 
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_megacorp = no
-			}
-		}
+		trigger = { has_administrators = yes }
 		text = job_politician_effect_desc
 	}
 
@@ -2309,7 +1764,10 @@ building_resort_major_capital = {
 	category = government
 
 	potential = {
-		has_modifier = resort_colony
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = resort_colony_pd_hab
+		}
 	}
 
 	convert_to = {
@@ -2322,6 +1780,7 @@ building_resort_major_capital = {
 
 	allow = {
 		num_pops >= 20
+		is_occupied_flag = no # Ariphaos
 	}
 
 	resources = {
@@ -2340,6 +1799,10 @@ building_resort_major_capital = {
 		job_entertainer_add = 2
 		planet_max_buildings_add = 11
 		planet_max_branch_office_buildings_add = 2
+	}
+
+	inline_script = {
+		script = buildings/on_all_capital_buildings
 	}
 
 	triggered_planet_modifier = {
@@ -2421,12 +1884,7 @@ building_resort_major_capital = {
 	}
 
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_megacorp = no
-			}
-		}
+		trigger = { has_administrators = yes }
 		text = job_politician_effect_desc
 	}
 
@@ -2502,12 +1960,14 @@ building_slave_capital = {
 		planet_max_branch_office_buildings_add = 1
 	}
 
+	inline_script = {
+		script = buildings/on_all_capital_buildings
+	}
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				is_megacorp = no
-			}
+			owner = { is_megacorp = no }
 		}
 		job_politician_add = 2
 	}
@@ -2549,12 +2009,7 @@ building_slave_capital = {
 	}
 
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_megacorp = no
-			}
-		}
+		trigger = { has_administrators = yes }
 		text = job_politician_effect_desc
 	}
 
@@ -2609,6 +2064,7 @@ building_slave_major_capital = {
 
 	allow = {
 		num_pops >= 20
+		is_occupied_flag = no # Ariphaos
 	}
 
 	convert_to = {
@@ -2636,6 +2092,10 @@ building_slave_major_capital = {
 		planet_stability_add = 10
 		planet_max_buildings_add = 11
 		planet_max_branch_office_buildings_add = 2
+	}
+
+	inline_script = {
+		script = buildings/on_all_capital_buildings
 	}
 
 	triggered_planet_modifier = {
@@ -2696,12 +2156,7 @@ building_slave_major_capital = {
 	}
 
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_megacorp = no
-			}
-		}
+		trigger = { has_administrators = yes }
 		text = job_politician_effect_desc
 	}
 
@@ -2764,6 +2219,7 @@ building_imperial_capital = {
 
 	allow = {
 		num_pops >= 50
+		is_occupied_flag = no # Ariphaos
 	}
 
 	prerequisites = {
@@ -2939,7 +2395,7 @@ building_imperial_capital = {
 			is_plutocracy = yes
 		}
 		modifier = {
-			job_mogul_add = 3
+			job_merchant_add = 3
 		}
 	}
 
@@ -2978,6 +2434,8 @@ building_imperial_capital = {
 			job_ambassador_add = 3
 		}
 	}
+
+	####################################### / ECAF
 
 	triggered_planet_modifier = {
 		potential = {
@@ -3044,96 +2502,42 @@ building_imperial_capital = {
 	}
 	
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_military_dictatorship
-					has_valid_civic = civic_military_junta
-					has_valid_civic = civic_citizen_service
-					has_valid_civic = civic_stratocracy
-				}
-			}
-		}
+		trigger = { is_stratocracy = yes }
 		text = job_commandante_effect_desc
 	}
 	
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_executive_committee
-					has_valid_civic = civic_philosopher_king
-					has_valid_civic = civic_peaceful_republic
-					has_valid_civic = civic_bureaucracy
-				}
-			}
-		}
+		trigger = { is_bureaucracy = yes }
 		text = job_supervisor_effect_desc
 	}
 	
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_imperial_cult
-					has_valid_civic = civic_divine_council
-					has_valid_civic = civic_spiritual_democracy
-					has_valid_civic = civic_exalted_priesthood
-				}
-			}
-		}
+		trigger = { is_theocracy = yes }
 		text = job_high_priest_effect_desc
 	}
 	
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { has_valid_civic = civic_aristocratic_elite }
-		}
+		trigger = { is_aristocracy = yes }
 		text = job_noble_effect_desc
 	}
 	
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_cyber_dictatorship
-					has_valid_civic = civic_science_directorate
-					has_valid_civic = civic_cyber_demos_cratos
-					has_valid_civic = civic_technocracy
-					has_civic = civic_science_syndicate #megacorp_mod  - Venture Politics
-				}
-			}
-		}
+		trigger = { is_technocracy = yes }
 		text = job_head_researcher_effect_desc
 	}
-	
+
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_civic = civic_merchant_guilds
-					has_civic = civic_state_monopoly
-					has_civic = civic_bancorp #megacorp_mod - Venture Politics
-				}
-			}
-		}
+		trigger = { is_plutocracy = yes }
+		text = job_merchant_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = { has_moguls = yes }
 		text = job_mogul_effect_desc
 	}
 	
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_megacorp = no
-				is_regular_empire = yes
-			}
-		}
+		trigger = { has_administrators = yes }
 		text = job_politician_effect_desc
 	}
 	

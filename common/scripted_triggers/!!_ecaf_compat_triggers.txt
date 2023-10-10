@@ -51,6 +51,11 @@ has_planetary_diversity = {
 	always = no
 }
 
+is_pd_habitat = {
+	optimize_memory
+	always = no
+}
+
 #####
 
 does_not_have_extra_origins = {

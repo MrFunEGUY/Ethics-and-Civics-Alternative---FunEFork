@@ -105,15 +105,27 @@ clerk = {
 		trade_value_mult = 0.01
 	}
 
+	resources = {				########################################## megacorp_mod start
+		category = planet_clerks
+		produces = {
+			trigger = { 
+				exists = owner
+				owner = { has_valid_civic = civic_founder_cult }
+			}
+			physics_research = 1
+			engineering_research = 1
+			society_research = 1
+		}
+				
+	}							
 	triggered_planet_modifier = {
 		potential = {
-			owner = { has_valid_civic = civic_consumerism }
+			has_councilor = { COUNCILOR = "councilor_consumer_culture" }
 		}
-		modifier = {
-			planet_amenities_add = 0.5
-			trade_value_add = 0.25
-		}
-	}
+
+		trade_value_add = 0.4
+		mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_trade_mult|TYPE|councilor_consumer_culture|
+	}							########################################## megacorp_mod end
 
 	triggered_planet_modifier = {
 		potential = {

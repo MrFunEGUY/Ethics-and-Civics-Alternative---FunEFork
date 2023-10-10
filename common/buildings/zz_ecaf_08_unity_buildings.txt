@@ -24,6 +24,10 @@ building_temple = {
 		NOT = { has_modifier = slave_colony }
 	}
 
+	allow = {
+		is_occupied_flag = no # Ariphaos
+	}
+
 	destroy_trigger = {
 		exists = owner
 		OR = {
@@ -91,7 +95,10 @@ building_temple = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { is_megacorp = yes }
+			owner = {
+				is_megacorp = yes
+				is_worker_coop_empire = no
+			}
 		}
 		text = job_manager_effect_desc
 	}
@@ -179,6 +186,7 @@ building_holotemple = {
 
 	allow = {
 		has_upgraded_capital = yes
+		is_occupied_flag = no # Ariphaos
 	}
 
 	destroy_trigger = {
@@ -274,7 +282,10 @@ building_holotemple = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { is_megacorp = yes }
+			owner = {
+				is_megacorp = yes
+				is_worker_coop_empire = no
+			}
 		}
 		text = job_manager_effect_desc
 	}
@@ -344,6 +355,7 @@ building_sacred_nexus = {
 
 	allow = {
 		has_major_upgraded_capital = yes
+		is_occupied_flag = no # Ariphaos
 	}
 
 	destroy_trigger = {
@@ -443,7 +455,10 @@ building_sacred_nexus = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { is_megacorp = yes }
+			owner = {
+				is_megacorp = yes
+				is_worker_coop_empire = no
+			}
 		}
 		text = job_manager_effect_desc
 	}
@@ -539,6 +554,7 @@ building_citadel_of_faith = {
 
 	allow = {
 		has_major_upgraded_capital = yes
+		is_occupied_flag = no # Ariphaos
 	}
 
 	destroy_trigger = {

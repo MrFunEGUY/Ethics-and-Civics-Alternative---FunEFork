@@ -17,7 +17,7 @@ diplomatic_stance = {
 			is_country_type = default
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
-			is_country_type = primitive
+			is_primitive = yes
 			is_country_type = awakened_marauders
 		}
 	}
@@ -411,6 +411,10 @@ diplomatic_stance = {
 				has_valid_civic = civic_free_traders
 			}
 			modifier = {
+                factor = 10
+                should_ai_focus_on_trade = yes
+            }
+			modifier = {
 				factor = 0.65
 				OR = {
 					has_valid_civic = civic_private_prospectors
@@ -660,7 +664,7 @@ diplomatic_stance = {
 		icon = "GFX_diplomatic_stance_rest"
 
 		potential = {
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 		}
 
 		valid = {
@@ -684,7 +688,7 @@ diplomatic_stance = {
 		icon = "GFX_diplomatic_stance_recompiling"
 
 		potential = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 		}
 
 		valid = {
@@ -758,7 +762,7 @@ diplomatic_stance = {
 		icon = "GFX_diplomatic_stance_isolationist"
 
 		potential = {
-			is_country_type = primitive
+			is_primitive = yes
 			current_awareness_level < medium
 			capital_scope = {
 				NOT = { has_modifier = culture_shock_diplomacy }
@@ -782,7 +786,7 @@ diplomatic_stance = {
 		icon = "GFX_diplomatic_stance_expansionist"
 
 		potential = {
-			is_country_type = primitive
+			is_primitive = yes
 			current_awareness_level = medium
 			capital_scope = {
 				NOT = { has_modifier = culture_shock_diplomacy }
@@ -806,7 +810,7 @@ diplomatic_stance = {
 		icon = "GFX_diplomatic_stance_cooperative"
 
 		potential = {
-			is_country_type = primitive
+			is_primitive = yes
 			current_awareness_level >= high
 			is_xenophile = yes
 			capital_scope = {
@@ -831,7 +835,7 @@ diplomatic_stance = {
 		icon = "GFX_diplomatic_stance_withdrawn"
 
 		potential = {
-			is_country_type = primitive
+			is_primitive = yes
 			current_awareness_level >= high
 			is_xenophobe = yes
 			capital_scope = {
@@ -856,7 +860,7 @@ diplomatic_stance = {
 		icon = "GFX_diplomatic_stance_isolationist"
 
 		potential = {
-			is_country_type = primitive
+			is_primitive = yes
 			current_awareness_level >= high
 			is_xenophile = no
 			is_xenophobe = no
@@ -882,7 +886,7 @@ diplomatic_stance = {
 		icon = "GFX_diplomatic_stance_belligerent"
 
 		potential = {
-			is_country_type = primitive
+			is_primitive = yes
 			capital_scope = {
 				has_modifier = culture_shock_diplomacy
 			}
@@ -1808,14 +1812,14 @@ economic_stance = {
 			economic_stance_market
 		}
 		modifier = {
-			job_mogul_per_pop = 0.03
-			job_merchant_per_pop = 0.04
-			job_clerk_per_pop = 0.06
-			country_trade_fee = -0.1
-			country_trade_attractiveness = 0.33
-			country_base_influence_produces_add = -0.5
-			local_trade_protection_add = -4
+			job_mogul_per_pop = 0.04
+			job_trader_per_pop = 0.05
+			country_trade_fee = -0.15
+			trade_value_mult = 0.2
+			country_trade_attractiveness = 0.25
+			local_trade_protection_add = -5
 			pop_ethic_capitalism_attraction_mult = 0.2
+			country_base_influence_produces_add = -0.33
 		}
 		valid = {
 			is_country_type_with_subjects = yes
@@ -1824,10 +1828,7 @@ economic_stance = {
 				has_policy_flag = trade_conversion_consumer_goods
 				has_policy_flag = trade_conversion_trade_league
 			}
-			OR = {
-				is_capitalism = yes
-				has_technology = tech_free_market
-			}
+			has_technology = tech_free_market
 			NOR = {
 				is_socialism = yes
 				has_valid_civic = civic_ultimate_collective
@@ -1894,10 +1895,7 @@ economic_stance = {
 				has_policy_flag = trade_conversion_mining
 				has_policy_flag = trade_conversion_growth
 			}
-			OR = {
-				is_socialism = yes
-				has_technology = tech_planned_economy
-			}
+			has_technology = tech_planned_economy
 			NOR = {
 				is_capitalism = yes
 				has_valid_civic = civic_beacon_of_liberty

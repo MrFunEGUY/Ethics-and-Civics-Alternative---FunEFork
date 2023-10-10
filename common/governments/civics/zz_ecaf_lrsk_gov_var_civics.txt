@@ -30,7 +30,29 @@ lrsk_gov_var_civic_elected_clergy = {
 		}
 	}
 
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
+
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			OR = {
+				has_ai_personality = spiritual_seekers
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				has_ai_personality = evangelising_zealots
+			}
+		}
+		#modifier = {
+		#	factor = @ai_civic_personality_forbid_factor
+		#	OR = {
+		#		#
+		#	}
+		#}
+	}
 
 	modifier = {
 		job_lrsk_gov_var_job_pastor_per_pop = 0.05
@@ -59,11 +81,38 @@ lrsk_gov_var_civic_ascetic_virtues = {
 		}
 	}
 
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
+  
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			OR = {
+				has_ai_personality = spiritual_seekers
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				has_ai_personality = evangelising_zealots
+				has_ai_personality = decadent_hierarchy
+				has_ai_personality = slaving_despots
+				has_ai_personality = hegemonic_imperialists
+			}
+		}
+		#modifier = {
+		#	factor = @ai_civic_personality_forbid_factor
+		#	OR = {
+		#		#
+		#	}
+		#}
+	}
 
 	modifier = {
-		leader_age = 15
-		pop_growth_speed = 0.1
+		leader_age = 5
+		pop_growth_speed = 0.05
+		planet_pops_organics_food_upkeep_mult = -0.1
+    	negative_traits_country = -1
 	}
 }
 
@@ -88,7 +137,30 @@ lrsk_gov_var_civic_republicanism = {
 		}
 	}
 
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
+  
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			OR = {
+				has_ai_personality = democratic_crusaders
+				has_ai_personality = federation_builders
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				#
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_forbid_factor
+			OR = {
+				#
+			}
+		}
+	}
 
 	modifier = {
 		leaders_cost_mult = -0.3
@@ -123,12 +195,35 @@ lrsk_gov_var_civic_utilitarian_planning = {
 		}
 	}
 
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
+  
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			OR = {
+				has_ai_personality = harmonious_hierarchy
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				has_ai_personality = erudite_explorers
+			}
+		}
+		#modifier = {
+		#	factor = @ai_civic_personality_forbid_factor
+		#	OR = {
+		#		#
+		#	}
+		#}
+	}
 
 	modifier = {
-		planet_pops_organics_food_upkeep_mult = -0.05
-		ships_upkeep_mult = -0.5
-		planet_structures_upkeep_mult = -0.1
+		planet_structures_upkeep_mult = -0.025
+		country_food_produces_mult = 0.05
+	    council_agenda_progress_speed = 0.1
+	    edicts_cost_mult = -0.1
 	}
 }
 
@@ -158,6 +253,32 @@ lrsk_gov_var_civic_siege_mentality = {
 		}
 	}
 
+	random_weight = { base = @civic_default_random_weight }
+  
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			OR = {
+				has_ai_personality = harmonious_hierarchy
+				has_ai_personality = xenophobic_isolationists
+				has_ai_personality = decadent_hierarchy
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				has_ai_personality = fanatic_purifiers
+			}
+		}
+		#modifier = {
+		#	factor = @ai_civic_personality_forbid_factor
+		#	OR = {
+		#		#
+		#	}
+		#}
+	}
+
 	modifier = {
 		starbase_defense_platform_capacity_add = 2
     	ship_home_territory_fire_rate_mult = 0.1
@@ -165,7 +286,6 @@ lrsk_gov_var_civic_siege_mentality = {
 		intel_encryption_add = 1
 	}
 
-	random_weight = { base = 5 }
 }
 
 #Cult of Personality (Dictatorship/Imperial, Authoritarian and not Spiritualist) - The ruler is considered a uniquely powerful and heroic individual nearly deserving of reverence. (+10% influence production, -10% war exhaustion)
@@ -201,13 +321,37 @@ lrsk_gov_var_civic_cult_of_personality = {
 		}
 	}
 
+	random_weight = { base = @civic_default_random_weight }
+  
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			OR = {
+				has_ai_personality = hegemonic_imperialists
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				has_ai_personality = harmonious_hierarchy
+				has_ai_personality = decadent_hierarchy
+			}
+		}
+		#modifier = {
+		#	factor = @ai_civic_personality_forbid_factor
+		#	OR = {
+		#		#
+		#	}
+		#}
+	}
+
 	modifier = {
-		country_influence_produces_mult = 0.05
+		country_starbase_influence_cost_mult = -0.1
 		country_unity_produces_mult = 0.1
 		country_war_exhaustion_mult = -0.1
 	}
 
-	random_weight = { base = 5 }
 }
 
 #Universal Sovereignty (Dictatorship/Imperial, not Xenophobic) - The ruler has an inclusive ideology that embraces all forms of sentient life... as future subjects. (-25% vassal integration cost)
@@ -244,7 +388,37 @@ lrsk_gov_var_civic_universal_sovereignty = {
 		}
 	}
 
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
+  
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			OR = {
+				has_ai_personality = hegemonic_imperialists
+				has_ai_personality = honorbound_warriors
+				has_ai_personality = evangelising_zealots
+				has_ai_personality = slaving_despots
+				has_ai_personality = fanatic_befrienders
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				has_ai_personality = migrating_flock
+				has_ai_personality = spiritual_seekers
+				has_ai_personality = erudite_explorers
+				has_ai_personality = harmonious_hierarchy
+				has_ai_personality = decadent_hierarchy
+			}
+		}
+		#modifier = {
+		#	factor = @ai_civic_personality_forbid_factor
+		#	OR = {
+		#		#
+		#	}
+		#}
+	}
 
 	modifier = {
 		subject_tribute_mult = 0.05
@@ -263,7 +437,7 @@ lrsk_gov_var_civic_workers_councils = {
 
 	playable = { lrsk_gvp_is_active = yes }
 
-	description = "civic_tooltip_lrsk_gov_var_civic_workers_councils_effects"
+	# description = "civic_tooltip_lrsk_gov_var_civic_workers_councils_effects"
 
 	possible = {
 		ethics = {
@@ -281,7 +455,29 @@ lrsk_gov_var_civic_workers_councils = {
 		}
 	}
 
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
+  
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+		#modifier = {
+		#	factor = @ai_civic_personality_match_factor
+		#	OR = {
+		#		#
+		#	}
+		#}
+		#modifier = {
+		#	factor = @ai_civic_personality_mismatch_factor
+		#	OR = {
+		#		#
+		#	}
+		#}
+		modifier = {
+			factor = @ai_civic_personality_forbid_factor
+			OR = {
+				has_ai_personality = ruthless_capitalists
+			}
+		}
+	}
 
 	modifier = {
 		planet_building_build_speed_mult = 0.1
@@ -316,11 +512,13 @@ lrsk_gov_var_civic_supremacist_demagoguery = {
 		ethics = {
 			NOR = {
 				text = civic_tooltip_not_xenophile
-			  value = ethic_xenophile
-			  value = ethic_fanatic_xenophile
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+			}
+			NOR = {
 				text = civic_tooltip_not_egalitarian
-			  value = ethic_egalitarian
-			  value = ethic_fanatic_egalitarian
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
 			}
 		}
 		civics = {
@@ -331,11 +529,39 @@ lrsk_gov_var_civic_supremacist_demagoguery = {
 		}
 	}
 
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
+  
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			OR = {
+				has_ai_personality = hegemonic_imperialists
+				has_ai_personality = evangelising_zealots
+				has_ai_personality = metalhead
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				has_ai_personality = erudite_explorers
+				has_ai_personality = spiritual_seekers
+				has_ai_personality = democratic_crusaders
+				has_ai_personality = xenophobic_isolationists
+			}
+		}
+		#modifier = {
+		#	factor = @ai_civic_personality_forbid_factor
+		#	OR = {
+		#		#
+		#	}
+		#}
+	}
 
 	modifier = {
-		max_rivalries = 2
-		army_morale_damage_mult = 0.3
+		max_rivalries = 1
+	    damage_vs_rival_mult = 0.15
+	    diplo_weight_rivals_mult = 0.05
 		country_power_projection_influence_produces_mult = 0.25
 	}
 }
@@ -350,6 +576,7 @@ lrsk_gov_var_civic_enlightened_liberalism = {
 	playable = { lrsk_gvp_is_active = yes }
 
 	#icon = "gfx/interface/icons/governments/civics/civic_technocracy.dds"
+	#description = "civic_tooltip_lrsk_gov_var_civic_enlightened_liberalism_effects"
 
 	possible = {
 		civics = {
@@ -374,11 +601,37 @@ lrsk_gov_var_civic_enlightened_liberalism = {
 		}
 	}
 
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
+  
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			OR = {
+				has_ai_personality = ruthless_capitalists
+				has_ai_personality = erudite_explorers
+				has_ai_personality = democratic_crusaders
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				has_ai_personality = hegemonic_imperialists
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_forbid_factor
+			OR = {
+				has_ai_personality = harmonious_hierarchy
+			}
+		}
+	}
 
 	modifier = {
 		station_gatherers_produces_mult = 0.2
 		station_researchers_produces_mult = 0.2
+		pop_cat_worker_political_power = 0.25
+	    pop_cat_specialist_political_power = 0.5
 	}
 }
 
@@ -401,7 +654,31 @@ lrsk_gov_var_civic_business_lobby  = {
 	#  }
 	#}
 
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
+  
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			OR = {
+				has_ai_personality = ruthless_capitalists
+				has_ai_personality = slaving_despots
+				has_ai_personality = peaceful_traders
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				has_ai_personality = decadent_hierarchy
+			}
+		}
+		#modifier = {
+		#	factor = @ai_civic_personality_forbid_factor
+		#	OR = {
+		#		#
+		#	}
+		#}
+	}
 
 	modifier = {
 		country_energy_produces_mult = 0.1
@@ -444,7 +721,31 @@ lrsk_gov_var_civic_chivalry = {
 		}
 	}
 
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_uncommon_random_weight }
+  
+	ai_weight = {
+		base = @ai_civic_uncommon_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			OR = {
+				has_ai_personality = honorbound_warriors
+				has_ai_personality = evangelising_zealots
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				has_ai_personality = slaving_despots
+				has_ai_personality = metalhead
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_forbid_factor
+			OR = {
+				has_ai_personality = fanatic_purifiers
+			}
+		}
+	}
 
 	modifier = {
 		admiral_skill_levels = 1
@@ -480,7 +781,30 @@ lrsk_gov_var_civic_lifelong_learning = {
 		}
 	}
 
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
+  
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			OR = {
+				has_ai_personality = migrating_flock
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				has_ai_personality = spiritual_seekers
+				has_ai_personality = evangelising_zealots
+			}
+		}
+		#modifier = {
+		#	factor = @ai_civic_personality_forbid_factor
+		#	OR = {
+		#		#
+		#	}
+		#}
+	}
 
 	modifier = {
 		scientist_skill_levels = 1
@@ -526,7 +850,31 @@ lrsk_gov_var_civic_institutionalized_collectivism = {
 		}
 	}
 
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
+  
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			OR = {
+				has_ai_personality = harmonious_hierarchy
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				has_ai_personality = hegemonic_imperialists
+				has_ai_personality = decadent_hierarchy
+				has_ai_personality = slaving_despots
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_forbid_factor
+			OR = {
+				has_ai_personality = ruthless_capitalists
+			}
+		}
+	}
 
 	modifier = {
 		country_consumer_goods_produces_mult = 0.1
@@ -562,7 +910,29 @@ lrsk_gov_var_civic_direct_revelation  = {
 		}
 	}
 
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_uncommon_random_weight }
+  
+	ai_weight = {
+		base = @ai_civic_uncommon_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			OR = {
+				has_ai_personality = spiritual_seekers
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				has_ai_personality = evangelising_zealots
+			}
+		}
+		#modifier = {
+		#	factor = @ai_civic_personality_forbid_factor
+		#	OR = {
+		#		#
+		#	}
+		#}
+	}
 
 	modifier = { job_lrsk_gov_var_job_hedge_preacher_per_pop = 0.0666 }
 }
@@ -598,7 +968,31 @@ lrsk_gov_var_civic_royal_absolutism = {
 		}
 	}
 
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_uncommon_random_weight }
+  
+	ai_weight = {
+		base = @ai_civic_uncommon_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			OR = {
+				has_ai_personality = hegemonic_imperialists
+				has_ai_personality = harmonious_hierarchy
+				has_ai_personality = decadent_hierarchy
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				has_ai_personality = evangelising_zealots
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_forbid_factor
+			OR = {
+				#
+			}
+		}
+	}
 
 	modifier = {
 		pop_ethics_shift_speed_mult = -0.5
@@ -618,7 +1012,30 @@ lrsk_gov_var_civic_public_works = {
 
 	#icon = "gfx/interface/icons/governments/civics/civic_functional_architecture.dds"
 
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
+  
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			OR = {
+				has_ai_personality = harmonious_hierarchy
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				has_ai_personality = decadent_hierarchy
+				has_ai_personality = slaving_despots
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_forbid_factor
+			OR = {
+				#
+			}
+		}
+	}
 
 	modifier = {
 		deposit_blockers_cost_mult = -0.15
@@ -663,7 +1080,31 @@ lrsk_gov_var_civic_imperial_economy = {
 		}
 	}
 
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_uncommon_random_weight }
+  
+	ai_weight = {
+		base = @ai_civic_uncommon_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			OR = {
+				has_ai_personality = hegemonic_imperialists
+				has_ai_personality = slaving_despots
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				has_ai_personality = decadent_hierarchy
+				has_ai_personality = erudite_explorers
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_forbid_factor
+			OR = {
+				has_ai_personality = xenophobic_isolationists
+			}
+		}
+	}
 
 	modifier = {
 		country_vassal_naval_capacity_contribution_mult = 0.15
@@ -701,7 +1142,30 @@ lrsk_gov_var_civic_colonial_fiefs = {
 		}
 	}
 
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_rare_random_weight }
+  
+	ai_weight = {
+		base = @ai_civic_rare_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			OR = {
+				has_ai_personality = erudite_explorers
+				has_ai_personality = migrating_flock
+			}
+		}
+		#modifier = {
+		#	factor = @ai_civic_personality_mismatch_factor
+		#	OR = {
+		#		#
+		#	}
+		#}
+		#modifier = {
+		#	factor = @ai_civic_personality_forbid_factor
+		#	OR = {
+		#		#
+		#	}
+		#}
+	}
 
 	modifier = {
 		planet_colony_development_speed_mult = 0.15
@@ -714,6 +1178,7 @@ lrsk_gov_var_civic_automated_indolence = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
+		civics = { value = lrsk_gov_var_civic_automated_indolence }
 	}
 
 	playable = { lrsk_gvp_is_active = yes }
@@ -730,12 +1195,28 @@ lrsk_gov_var_civic_automated_indolence = {
 		}
 	}
 
-	random_weight = {
-		base = 1
-		modifier = {
-			factor = 5
-			has_origin = origin_mechanists
-		}
+	random_weight = { base = @civic_rare_random_weight }
+
+	ai_weight = {
+		base = @ai_civic_rare_base_weight
+		# modifier = {
+		# 	factor = @ai_civic_personality_match_factor
+		# 	OR = {
+		# 		#
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = @ai_civic_personality_match_factor
+		# 	OR = {
+		# 		#
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = @ai_civic_personality_match_factor
+		# 	OR = {
+		# 		#
+		# 	}
+		# }
 	}
 
 	modifier = {

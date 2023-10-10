@@ -23,7 +23,7 @@ country_event = {
 	location = event_target:caravan_hulk_object
 	show_sound = event_ship_thrusters
 
-	mean_time_to_happen = { years = 2 }
+    is_triggered_only = yes
 
 	trigger = {
 		caravaneer_fleet_events_valid = yes
@@ -36,11 +36,11 @@ country_event = {
 	immediate = {
 		set_timed_country_flag = {
 			flag = hulk_caravan_recent
-			days = 3650 # 10 years
+			days = 3600 # 10 years
 		}
 		set_timed_country_flag = {
 			flag = caravan_recent_event
-			years = 2 
+			days = 720
 		}
 		random_system_within_border = {
 			limit = { caravaneer_fleet_in_system = yes }

@@ -1319,6 +1319,7 @@ techno_priest = {
 }
 
 #### Ruler Jobs
+###################
 
 # Commandante - Militarist
 commandante = {
@@ -1490,10 +1491,23 @@ mogul = {
 			}
 		}
 	}
-	planet_modifier = {
-		planet_amenities_add = 7
-		trade_value_add = 8
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		trade_value_add = 7
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
 	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_add = 6
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
 	# planet_jobs_energy_produces_mult
 	triggered_planet_modifier = {
 		potential = {
@@ -1503,6 +1517,7 @@ mogul = {
 			trade_value_add = 2
 		}
 	}
+	
 	triggered_planet_modifier = {
 		potential = {
 			has_trait = trait_nuumismatic_administration
@@ -1511,18 +1526,16 @@ mogul = {
 			trade_value_add = 2
 		}
 	}
+
 	triggered_planet_modifier = {
 		potential = {
-			OR = {
-				owner = {
-					has_valid_civic = civic_merchant_guilds
-				}
-			}
+			owner = { has_valid_civic = civic_merchant_guilds }
 		}
 		modifier = {
 			planet_technician_produces_mult = 0.04
 		}
 	}
+
 	triggered_planet_modifier = {
 		potential = {
 			OR = {
@@ -1536,6 +1549,7 @@ mogul = {
 			planet_miners_produces_mult = 0.05
 		}
 	}
+
 	triggered_planet_modifier = {
 		potential = {
 			has_trait = trait_repugnant
@@ -1544,6 +1558,7 @@ mogul = {
 			planet_amenities_add = -1
 		}
 	}
+
 	weight = {
 		weight = @ruler_job_weight
 		modifier = {

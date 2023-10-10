@@ -6,6 +6,9 @@
 # station = station class in orbit to gather
 @blocker_high = 10
 @blocker_low = 5
+@ranger_small_production = 0.5
+@ranger_large_production = 1
+
 d_mountain_range = {
 	time = 270
 
@@ -34,6 +37,14 @@ d_mountain_range = {
 
 	planet_modifier = {
 		planet_max_districts_add = -2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_minerals_produces_add = @ranger_large_production
 	}
 
 	triggered_planet_modifier = {
@@ -139,6 +150,14 @@ d_active_volcano = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_energy_produces_add = @ranger_large_production
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { has_valid_civic = civic_keepers_harmony }
 		}
 		modifier = {
@@ -171,6 +190,16 @@ d_active_volcano = {
 		}
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_energy_produces_add = @ranger_large_production
+	}
+
+	inline_script = deposits/ai_weight_natural_blocker
+
 	on_cleared = {
 		if = {
 			limit = {
@@ -182,8 +211,6 @@ d_active_volcano = {
 			}
 		}
 	}
-
-	inline_script = deposits/ai_weight_natural_blocker
 
 	drop_weight = {
 		weight = @blocker_low
@@ -236,6 +263,14 @@ d_dangerous_wildlife_blocker = {
 	planet_modifier = {
 		planet_max_districts_add = -2
 	}
+
+	triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { has_civic = civic_environmentalist }
+        }
+        planet_rangers_society_research_produces_add = @ranger_large_production
+    }
 
 	triggered_planet_modifier = {
 		potential = {
@@ -350,6 +385,14 @@ d_dense_jungle = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_food_produces_add = @ranger_small_production
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { has_valid_civic = civic_keepers_harmony }
 		}
 		modifier = {
@@ -451,6 +494,14 @@ d_toxic_kelp = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_food_produces_add = @ranger_small_production
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { has_valid_civic = civic_terraforming }
 		}
 		modifier = {
@@ -532,6 +583,14 @@ d_deep_sinkhole = {
 
 	planet_modifier = {
 		planet_max_districts_add = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_energy_produces_add = @ranger_small_production
 	}
 
 	triggered_planet_modifier = {
@@ -638,6 +697,14 @@ d_quicksand_basin = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_minerals_produces_add = @ranger_small_production
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { has_valid_civic = civic_keepers_harmony }
 		}
 		modifier = {
@@ -736,6 +803,14 @@ d_noxious_swamp = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_food_produces_add = @ranger_small_production
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { has_valid_civic = civic_keepers_harmony }
 		}
 		modifier = {
@@ -829,6 +904,14 @@ d_massive_glacier = {
 
 	planet_modifier = {
 		planet_max_districts_add = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_minerals_produces_add = @ranger_small_production
 	}
 
 	triggered_planet_modifier = {

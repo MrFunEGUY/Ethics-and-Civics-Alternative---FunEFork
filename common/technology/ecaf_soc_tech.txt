@@ -12,6 +12,7 @@ tech_free_market = {
 	weight = @tier3weight1
 	potential = {
 		is_gestalt = no
+		is_capitalism = yes
 	}
 	weight_modifier = {
 		factor = 1.5
@@ -63,6 +64,7 @@ tech_planned_economy = {
 	weight = @tier3weight1
 	potential = {
 		is_gestalt = no
+		is_socialism = yes
 	}
 	weight_modifier = {
 		factor = 1.5

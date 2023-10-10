@@ -2795,6 +2795,7 @@ resolution_greatergood_repeal_1 = {
 			OR = {
 				has_valid_civic = civic_slaver_guilds
 				has_valid_civic = civic_indentured_assets
+				has_valid_civic = civic_dystopian_society
 				is_slaver = yes
 			}
 			desc = gal_com_slaver_empire
@@ -2911,10 +2912,19 @@ resolution_greatergood_repeal_2 = {
 		}
 
 		modifier = {
-			factor = 0.5
+			factor = 0
 			has_valid_civic = civic_machine_servitor
 			desc = civic_machine_servitor
 		}
+
+		modifier = {
+            factor = 1.25
+            OR = {
+                has_valid_civic = civic_aristocratic_elite
+                has_valid_civic = civic_police_state
+            }
+            desc = gal_com_supporting_civics
+        }
 
 		modifier = {
 			factor = 0.5
@@ -2927,6 +2937,7 @@ resolution_greatergood_repeal_2 = {
 			OR = {
 				has_valid_civic = civic_slaver_guilds
 				has_valid_civic = civic_indentured_assets
+				has_valid_civic = civic_dystopian_society
 				is_slaver = yes
 			}
 			desc = gal_com_slaver_empire
@@ -3052,7 +3063,7 @@ resolution_greatergood_repeal_3 = {
 		}
 
 		modifier = {
-			factor = 0.5
+			factor = 0.1
 			has_valid_civic = civic_machine_servitor
 			desc = civic_machine_servitor
 		}
@@ -3064,10 +3075,20 @@ resolution_greatergood_repeal_3 = {
 		}
 
 		modifier = {
+            factor = 1.25
+            OR = {
+                has_valid_civic = civic_aristocratic_elite
+                has_valid_civic = civic_police_state
+            }
+            desc = gal_com_supporting_civics
+        }
+
+		modifier = {
 			factor = 2
 			OR = {
 				has_valid_civic = civic_slaver_guilds
 				has_valid_civic = civic_indentured_assets
+				has_valid_civic = civic_dystopian_society
 				is_slaver = yes
 			}
 			desc = gal_com_slaver_empire
@@ -3211,6 +3232,7 @@ resolution_greatergood_repeal_4 = {
 			OR = {
 				has_valid_civic = civic_slaver_guilds
 				has_valid_civic = civic_indentured_assets
+				has_valid_civic = civic_dystopian_society
 				is_slaver = yes
 			}
 			desc = gal_com_slaver_empire
@@ -3348,6 +3370,7 @@ resolution_greatergood_repeal_5 = {
 			OR = {
 				has_valid_civic = civic_slaver_guilds
 				has_valid_civic = civic_indentured_assets
+				has_valid_civic = civic_dystopian_society
 				is_slaver = yes
 			}
 			desc = gal_com_slaver_empire
@@ -3470,7 +3493,7 @@ resolution_greatergood_workers_rights = {
 		modifier = {
 			factor = 0.8
 			OR = {
-				is_gestalt = yes
+				# is_gestalt = yes # Ariphaos
 				has_valid_civic = civic_aristocratic_elite
 				has_valid_civic = civic_police_state
 			}
@@ -3482,6 +3505,7 @@ resolution_greatergood_workers_rights = {
 			OR = {
 				has_valid_civic = civic_slaver_guilds
 				has_valid_civic = civic_indentured_assets
+				has_valid_civic = civic_dystopian_society
 				is_slaver = yes
 			}
 			desc = gal_com_slaver_empire
@@ -3608,6 +3632,7 @@ resolution_greatergood_five_year_plans = {
 			OR = {
 				has_valid_civic = civic_slaver_guilds
 				has_valid_civic = civic_indentured_assets
+				has_valid_civic = civic_dystopian_society
 				is_slaver = yes
 				any_owned_species = {
 					is_sapient = yes
@@ -3686,6 +3711,7 @@ resolution_greatergood_greater_than_ourselves = {
 								OR = {
 									has_living_standard = { type = living_standard_subsistence country = prev }
 									has_living_standard = { type = living_standard_stratified country = prev }
+									has_living_standard = { type = living_standard_dystopian_society country = prev }
 								}
 							}
 						}
@@ -3747,6 +3773,7 @@ resolution_greatergood_greater_than_ourselves = {
 					OR = {
 						has_living_standard = { type = living_standard_subsistence country = prev }
 						has_living_standard = { type = living_standard_stratified country = prev }
+						has_living_standard = { type = living_standard_dystopian_society country = prev }
 					}
 				}
 			}
@@ -3824,6 +3851,7 @@ resolution_greatergood_greater_than_ourselves = {
 					OR = {
 						has_living_standard = { type = living_standard_subsistence country = prev }
 						has_living_standard = { type = living_standard_stratified country = prev }
+						has_living_standard = { type = living_standard_dystopian_society country = prev }
 					}
 				}
 			}
@@ -3901,6 +3929,7 @@ resolution_greatergood_balance_in_the_middle = {
 									has_living_standard = { type = living_standard_stratified country = prev }
 									has_living_standard = { type = living_standard_normal country = prev }
 									has_living_standard = { type = living_standard_academic_privilege country = prev }
+									has_living_standard = { type = living_standard_dystopian_society country = prev }
 								}
 							}
 						}
@@ -3957,6 +3986,7 @@ resolution_greatergood_balance_in_the_middle = {
 						has_living_standard = { type = living_standard_stratified country = prev }
 						has_living_standard = { type = living_standard_normal country = prev }
 						has_living_standard = { type = living_standard_academic_privilege country = prev }
+						has_living_standard = { type = living_standard_dystopian_society country = prev }
 					}
 				}
 			}
@@ -4036,6 +4066,7 @@ resolution_greatergood_balance_in_the_middle = {
 						has_living_standard = { type = living_standard_stratified country = prev }
 						has_living_standard = { type = living_standard_normal country = prev }
 						has_living_standard = { type = living_standard_academic_privilege country = prev }
+						has_living_standard = { type = living_standard_dystopian_society country = prev }
 					}
 				}
 			}
@@ -4116,6 +4147,7 @@ resolution_greatergood_universal_prosperity_mandate = {
 									has_living_standard = { type = living_standard_academic_privilege country = prev }
 									has_living_standard = { type = living_standard_good country = prev }
 									has_living_standard = { type = living_standard_decadent country = prev }
+									has_living_standard = { type = living_standard_dystopian_society country = prev }
 								}
 							}
 						}
@@ -4168,6 +4200,7 @@ resolution_greatergood_universal_prosperity_mandate = {
 						has_living_standard = { type = living_standard_academic_privilege country = prev }
 						has_living_standard = { type = living_standard_good country = prev }
 						has_living_standard = { type = living_standard_decadent country = prev }
+						has_living_standard = { type = living_standard_dystopian_society country = prev }
 					}
 				}
 			}
@@ -4230,6 +4263,7 @@ resolution_greatergood_universal_prosperity_mandate = {
 				has_valid_civic = civic_shared_burden
 				has_valid_civic = civic_machine_servitor
 				has_valid_civic = civic_machine_exploration_protocol
+				is_worker_coop_empire = yes
 			}
 			desc = gal_com_supporting_civics
 		}

@@ -30,6 +30,7 @@ building_mecha_monastery = {
 	}
 	allow = {
 		has_upgraded_capital = yes
+		is_occupied_flag = no # Ariphaos
 		hidden_trigger = {
 			OR = {
 				owner = {

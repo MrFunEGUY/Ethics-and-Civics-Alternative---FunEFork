@@ -568,6 +568,7 @@ empire_name_format = {
 				has_government = "gov_criminal_syndicate"
 				# More Authorities
 				has_government = "gov_criminal_syndicate_fam"
+				has_government = "gov_pirate_haven"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -591,6 +592,7 @@ empire_name_format = {
 				has_government = "gov_criminal_syndicate"
 				# More Authorities
 				has_government = "gov_criminal_syndicate_fam"
+				has_government = "gov_pirate_haven"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -614,6 +616,7 @@ empire_name_format = {
 				has_government = "gov_criminal_syndicate"
 				# More Authorities
 				has_government = "gov_criminal_syndicate_fam"
+				has_government = "gov_pirate_haven"
 			}
 			is_pirate = no
 			is_primitive = no

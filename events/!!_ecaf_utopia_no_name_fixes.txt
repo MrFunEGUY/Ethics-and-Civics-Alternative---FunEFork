@@ -1,5 +1,6 @@
 ### Utopia Shroud Fixes ###
 namespace = utopia
+
 country_event = {
 	id = utopia.3400
 	title = "utopia.3400.name"
@@ -11,33 +12,31 @@ country_event = {
 		is_country_type = default
 		NOT = { has_country_flag = chosen_one_ruler_event }
 		OR = {
-			is_democracy = yes
-			has_authority = auth_oligarchic
-			is_dictatorial = yes
-		}
-		any_owned_leader = {
-			OR = {
-				has_trait = leader_trait_admiral_chosen
-				has_trait = leader_trait_general_chosen
-				has_trait = leader_trait_governor_chosen
-				has_trait = leader_trait_scientist_chosen
-				has_trait = leader_trait_ruler_chosen
-				has_trait = leader_trait_general_composer_chosen
-				has_trait = leader_trait_governor_composer_chosen
-				has_trait = leader_trait_ruler_composer_chosen
-				has_trait = leader_trait_scientist_composer_chosen
-				has_trait = leader_trait_admiral_eater_chosen
-				has_trait = leader_trait_general_eater_chosen
-				has_trait = leader_trait_governor_eater_chosen
-				has_trait = leader_trait_ruler_eater_chosen
-				has_trait = leader_trait_admiral_instrument_chosen
-				has_trait = leader_trait_governor_instrument_chosen
-				has_trait = leader_trait_ruler_instrument_chosen
-				has_trait = leader_trait_scientist_instrument_chosen
-				has_trait = leader_trait_admiral_whisperers_chosen
-				has_trait = leader_trait_general_whisperers_chosen
-				has_trait = leader_trait_ruler_whisperers_chosen
-				has_trait = leader_trait_scientist_whisperers_chosen
+			# Either you've not Imperial and have a Chosen One
+			AND = {
+				OR = {
+					is_democracy = yes
+					has_authority = auth_oligarchic
+					is_dictatorial = yes
+					# MegaCorps deliberately excluded.
+				}
+				any_owned_leader = {
+					has_chosen_one_leader_trait = yes
+				}
+			}
+			# Or you're Imperial and the Chosen One is your current ruler or heir.
+			AND = {
+				has_authority = auth_imperial
+				any_owned_leader = {
+					has_chosen_one_leader_trait = yes
+					has_trait = trait_imperial_heir
+				}
+				NOT = { # Ariphaos
+                    any_owned_leader = {
+                        has_chosen_one_leader_trait = yes
+                        is_ruler = yes
+                    }
+                }
 			}
 		}
 	}
@@ -48,34 +47,32 @@ country_event = {
 
 	immediate = {
 		set_country_flag = chosen_one_ruler_event
-		random_owned_leader = {
+		if = {
 			limit = {
 				OR = {
-					has_trait = leader_trait_admiral_chosen
-					has_trait = leader_trait_general_chosen
-					has_trait = leader_trait_governor_chosen
-					has_trait = leader_trait_scientist_chosen
-					has_trait = leader_trait_ruler_chosen
-					has_trait = leader_trait_general_composer_chosen
-					has_trait = leader_trait_governor_composer_chosen
-					has_trait = leader_trait_ruler_composer_chosen
-					has_trait = leader_trait_scientist_composer_chosen
-					has_trait = leader_trait_admiral_eater_chosen
-					has_trait = leader_trait_general_eater_chosen
-					has_trait = leader_trait_governor_eater_chosen
-					has_trait = leader_trait_ruler_eater_chosen
-					has_trait = leader_trait_admiral_instrument_chosen
-					has_trait = leader_trait_governor_instrument_chosen
-					has_trait = leader_trait_ruler_instrument_chosen
-					has_trait = leader_trait_scientist_instrument_chosen
-					has_trait = leader_trait_admiral_whisperers_chosen
-					has_trait = leader_trait_general_whisperers_chosen
-					has_trait = leader_trait_ruler_whisperers_chosen
-					has_trait = leader_trait_scientist_whisperers_chosen
+					has_authority = auth_democratic
+					has_authority = auth_oligarchic
+					has_authority = auth_dictatorial
+					# MegaCorps deliberately excluded.
 				}
 			}
-			save_event_target_as = chosen_one
-			species = { save_event_target_as = chosen_one_species }
+			random_owned_leader = {
+				limit = {
+					has_chosen_one_leader_trait = yes
+				}
+				save_event_target_as = chosen_one
+				species = { save_event_target_as = chosen_one_species }
+			}
+		}
+		else = {
+			random_owned_leader = {
+				limit = {
+					has_chosen_one_leader_trait = yes
+					has_trait = trait_imperial_heir
+				}
+				save_event_target_as = chosen_one
+				species = { save_event_target_as = chosen_one_species }
+			}
 		}
 	}
 
@@ -107,6 +104,12 @@ country_event = {
 				has_ethic = ethic_fanatic_authoritarian
 			}
 		}
+		if = {
+			limit = {
+				has_origin = origin_legendary_leader_dictatorial
+			}
+			set_origin = origin_legendary_leader_imperial
+		}
 		shift_ethic = "ethic_fanatic_authoritarian"
 		shift_ethic = "ethic_spiritualist"
 		change_government = {
@@ -116,12 +119,22 @@ country_event = {
 		}
 		force_add_civic = civic_psionic_sovereign
 		set_government_cooldown = no
-		ruler = {
-			exile_leader_as = destituted_ruler_chosen_one
+		# The ruler doesn't need to abdicate if they're being crowned.
+		if = {
+			limit = {
+				ruler = {
+					NOT = {
+						is_same_value = event_target:chosen_one
+					}
+				}
+			}
+			ruler = {
+				exile_leader_as = destituted_ruler_chosen_one
+			}
+			set_leader = event_target:chosen_one
 		}
-		set_leader = event_target:chosen_one
 		hidden_effect = {
-			every_playable_country = {
+			every_country = {
 				limit = {
 					is_ai = no
 					NOT = { is_same_value = root }

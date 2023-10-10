@@ -5,6 +5,7 @@ building_thermal_borehole = {
 	base_buildtime = 600
 	base_cap_amount = 1
 	category = resource
+
 	potential = {
 		exists = owner
 		is_artificial = no
@@ -16,10 +17,16 @@ building_thermal_borehole = {
 			has_modifier = slave_colony
 		}
 	}
+
+	allow = {
+		is_occupied_flag = no # Ariphaos
+	}
+
 	planet_modifier = {
 		job_deep_miner_add = 3
 		planet_stability_add = -5
 	}
+
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -27,12 +34,15 @@ building_thermal_borehole = {
 			alloys = 200
 		}
 	}
+
 	prerequisites = {
 		"tech_thermal_borehole"
 	}
+
 	triggered_desc = {
 		text = job_deep_miner_effect_desc
 	}
+
 	ai_resource_production = {
 		minerals = 1
 		energy = 1
