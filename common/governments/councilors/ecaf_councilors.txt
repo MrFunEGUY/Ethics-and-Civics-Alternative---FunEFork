@@ -145,9 +145,7 @@ councilor_evangelism = { #Proselytizer Prime
 councilor_peacekeepers = { #Peacekeeper-Marshal
 	leader_class = { general }
 	is_leader_possible = {
-		OR = {
-			leader_class = general
-		}
+		leader_class = general
 	}
 	civic = civic_peacekeepers
 	modifier = { #Improves the max morale and reduces collateral damage of armies and improves trust/relation growth
@@ -211,12 +209,13 @@ councilor_distributism = { #Televangelist Prime
 councilor_martial_brotherhood = { #Military Theorist
 	leader_class = { general }
 	is_leader_possible = {
-		OR = {
-			leader_class = general
-		}
+		leader_class = general
 	}
 	civic = civic_martial_brotherhood
 	modifier = { #Pushes military theory to its limits HOOAH
+		army_damage_mult = 0.02
+		army_experience_gain_mult = 0.02
+		planet_army_build_speed_mult = 0.06
 		category_military_theory_research_speed_mult = 0.1
 	}
 }
@@ -281,8 +280,8 @@ councilor_slaving_despots = { #Director of Slavery
 	}
 	civic = civic_slaving_despots
 	modifier = { #Reduces slave costs and enslaves more pops!
+		slave_market_cost_mult = -0.03
 		planet_jobs_slave_produces_mult = 0.01
-		country_pop_enslaved_mult = 0.02
 	}
 }
 
@@ -333,15 +332,14 @@ councilor_enlightment = { #Public Moderator
 	civic = civic_enlightment
 	modifier = { #Further improves unity from factions
 		faction_approval = 0.02
+		pop_factions_unity_produces_mult = 0.01
 	}
 }
 
 councilor_private_militaries = { #Big Boss
 	leader_class = { general }
 	is_leader_possible = {
-		OR = {
-			leader_class = general
-		}
+		leader_class = general
 	}
 	civic = civic_private_militaries
 	modifier = { #Improves starting experience of recruits and greatly improves morale
@@ -354,9 +352,7 @@ councilor_private_militaries = { #Big Boss
 councilor_defenders_faith = { #Crusader Order General
 	leader_class = { general }
 	is_leader_possible = {
-		OR = {
-			leader_class = general
-		}
+		leader_class = general
 	}
 	civic = civic_defenders_faith
 	modifier = { #Increases attraction to spiritual attraction and various army benefits
@@ -369,9 +365,7 @@ councilor_defenders_faith = { #Crusader Order General
 councilor_divine_order = { #Registry Bureau Secretary
 	leader_class = { governor }
 	is_leader_possible = {
-		OR = {
-			leader_class = governor
-		}
+		leader_class = governor
 	}
 	civic = civic_divine_order
 	modifier = { #Siphons political power from workers and improves productivity. 5% at level 10.
@@ -384,9 +378,7 @@ councilor_divine_order = { #Registry Bureau Secretary
 councilor_ultimate_collective = { #Propaganda Media Director
 	leader_class = { governor }
 	is_leader_possible = {
-		OR = {
-			leader_class = governor
-		}
+		leader_class = governor
 	}
 	civic = civic_ultimate_collective
 	modifier = { #Improves unity and government ethics attraction
@@ -422,7 +414,7 @@ councilor_socialistic = { #Union Representative
 	}
 	civic = civic_socialistic
 	modifier = { #Improves worker political power
-		pop_cat_worker_political_power = 0.1
+		pop_cat_worker_political_power = 0.15
 		pop_cat_worker_happiness = 0.005
 	}
 }
@@ -437,20 +429,20 @@ councilor_welfare_state = { #Minister of Health and Welfare
 	}
 	civic = civic_welfare_state
 	modifier = { #Improves population growth speed
-		pop_growth_speed = 0.01
+		pop_growth_speed = 0.02
 	}
 }
 
 councilor_machine_cult = { #Mechpope
-	leader_class = { admiral general scientist governor }
+	leader_class = { scientist }
 	is_leader_possible = {
-		OR = {
-			leader_class = scientist
-		}
+		leader_class = scientist
 	}
 	civic = civic_machine_cult
-	modifier = { #Drifts toward spiritual and industrial ethics
-		pop_ethic_industrial_attraction_mult = 0.05
+	modifier = { #Drifts toward spiritual ethic
+		planet_jobs_robotic_produces_mult = 0.02
+		planet_pops_robotics_upkeep_mult = -0.02
+		pop_cat_robot_servant_happiness = 0.02
 		pop_ethic_spiritualist_attraction_mult = 0.05
 	}
 }
@@ -474,9 +466,7 @@ councilor_military_industry = { #Chief War Inventioneer
 councilor_naval_traditions = { #Fleet Marshal
 	leader_class = { admiral }
 	is_leader_possible = {
-		OR = {
-			leader_class = admiral
-		}
+		leader_class = admiral
 	}
 	civic = civic_naval_traditions
 	modifier = { #Improves the navy in various ways, primarily experience
@@ -516,7 +506,6 @@ councilor_consumerism = { #CMO (chief marketing officer)
 		planet_pops_consumer_goods_upkeep_mult = 0.02
 		planet_jobs_unity_produces_mult = 0.01
 		pop_ethic_capitalism_attraction_mult = 0.05
-		pop_ethic_industrial_attraction_mult = 0.05
 	}
 }
 
@@ -575,9 +564,7 @@ councilor_spiritual_democracy = { #Popular Pope
 councilor_cyber_demos_cratos = { #Cybersecurity Overseer
 	leader_class = { scientist }
 	is_leader_possible = {
-		OR = {
-			leader_class = scientist
-		}
+		leader_class = scientist
 	}
 	civic = civic_cyber_demos_cratos
 	modifier = { #Counteracts the crime boost caused by the civic and improves overall encryption
@@ -599,16 +586,14 @@ councilor_divine_council = { #Council Representative (Camerlengo)
 	}
 	civic = civic_divine_council
 	modifier = { #Reduces edict costs across the board
-		edicts_cost_mult = -0.01
+		edicts_cost_mult = -0.02
 	}
 }
 
 councilor_military_junta = { #Militia Marshal
 	leader_class = { general }
 	is_leader_possible = {
-		OR = {
-			leader_class = general
-		}
+		leader_class = general
 	}
 	civic = civic_military_junta
 	modifier = { #Increases the size of soldier and enforcer jobs across the nation. Lv 10 = 1 soldier or enforcer per 50 pop. Lv 20 = 1 soldier or enforcer per 25 pop. 
@@ -621,9 +606,7 @@ councilor_military_junta = { #Militia Marshal
 councilor_science_directorate = { #Representative of the Directorate
 	leader_class = { scientist }
 	is_leader_possible = {
-		OR = {
-			leader_class = scientist
-		}
+		leader_class = scientist
 	}
 	civic = civic_science_directorate
 	modifier = { #Considerably increases scientist pay and technology research
@@ -636,9 +619,7 @@ councilor_science_directorate = { #Representative of the Directorate
 councilor_innovative_economy = { #Cooperative Representative
 	leader_class = { scientist }
 	is_leader_possible = {
-		OR = {
-			leader_class = scientist
-		}
+		leader_class = scientist
 	}
 	civic = civic_innovative_economy
 	modifier = { #Considerably increases scientist pay and technology research
@@ -667,9 +648,7 @@ councilor_executive_committee = { #Forum Speaker
 councilor_cyber_dictatorship = { #Head of AI Development
 	leader_class = { scientist }
 	is_leader_possible = {
-		OR = {
-			leader_class = scientist
-		}
+		leader_class = scientist
 	}
 	civic = civic_cyber_dictatorship
 	modifier = { #Reduces empire size as a whole and insane boost to AI research
@@ -697,9 +676,7 @@ councilor_industrial_economy = { #Automation overseer
 councilor_globalism = { #Commission Chairman
 	leader_class = { governor }
 	is_leader_possible = {
-		OR = {
-			leader_class = governor
-		}
+		leader_class = governor
 	}
 	civic = civic_globalism
 	modifier = { #Reduces overall trade fee
@@ -742,9 +719,7 @@ councilor_stratocracy = { #Internal Security Director
 councilor_bureaucracy = { #Enlightened Bureau Administrator
 	leader_class = { governor }
 	is_leader_possible = {
-		OR = {
-			leader_class = governor
-		}
+		leader_class = governor
 	}
 	civic = civic_bureaucracy
 	modifier = { #Reduces colony empire size penalty and improves attraction to enlightened ways

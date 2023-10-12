@@ -91,6 +91,10 @@ building_military_academy = {
 		}
 	}
 
+	country_modifier = { # ECAF
+		country_resource_max_ecaf_crew_add = 50
+	}
+
 	resources = {
 		category = planet_buildings
 		cost = {

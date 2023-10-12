@@ -338,6 +338,10 @@ building_major_capital = {
 		modifier = { job_executive_add = 1 }
 	}
 
+	country_modifier = { # ECAF
+		country_resource_max_ecaf_crew_add = 200
+	}
+
 	####################################### / ECAF
 
 	triggered_planet_modifier = {
@@ -617,6 +621,10 @@ building_system_capital = {
 		modifier = {
 			job_transcend_add = 1
 		}
+	}
+
+	country_modifier = { # ECAF
+		country_resource_max_ecaf_crew_add = 300
 	}
 
 	####################################### / ECAF

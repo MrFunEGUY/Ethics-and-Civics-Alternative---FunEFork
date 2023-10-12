@@ -284,6 +284,9 @@ soldier = {
 			}
 			unity = 2
 		}
+		produces = { # ECAF
+			ecaf_crew = 10
+		}
 	}
 
 	triggered_country_modifier = {
@@ -524,13 +527,16 @@ ranger = {
 		produces = {
 			society_research = 2
 		}
-		produces = {
+		produces = { # ECAF
 			trigger = {
 				exists = owner
 				owner = { has_valid_civic = civic_keepers_harmony }
 			}
 			unity = 2
 			society_research = 3
+		}
+		produces = { # ECAF
+			ecaf_crew = 2
 		}
 	}
 

@@ -41,6 +41,10 @@ building_colliseum = {
 		planet_housing_add = 1
 	}
 
+	country_modifier = { # ECAF
+		country_resource_max_ecaf_crew_add = 50
+	}
+
 	army_modifier = {
 		army_damage_mult = 0.1
 	}

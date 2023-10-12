@@ -233,6 +233,9 @@ gladiator = {
 		upkeep = {
 			alloys = 0.25
 		}
+		produces = { # ECAF
+			ecaf_crew = 0.5
+		}
 	}
 	pop_modifier = {
 		pop_defense_armies_add = 1
@@ -321,6 +324,9 @@ templar = {
 		}
 		upkeep = {
 			consumer_goods = 1
+		}
+		produces = { # ECAF
+			ecaf_crew = 0.5
 		}
 	}
 	country_modifier = {
@@ -680,6 +686,15 @@ mercenary = {
 	possible = {
 		complex_specialist_job_check_trigger = yes
 	}
+	resources = {
+		category = planet_soldiers
+		upkeep = {
+			consumer_goods = 1
+		}
+		produces = { # ECAF
+			ecaf_crew = 0.5
+		}
+	}
 	country_modifier = {
 		country_naval_cap_add = 4
 	}
@@ -709,12 +724,6 @@ mercenary = {
 		}
 		modifier = {
 			planet_stability_add = 5
-		}
-	}
-	resources = {
-		category = planet_soldiers
-		upkeep = {
-			consumer_goods = 1
 		}
 	}
 	weight = {
@@ -1347,6 +1356,9 @@ commandante = {
 				}
 			}
 			unity = 2
+		}
+		produces = { # ECAF
+			ecaf_crew = 1
 		}
 	}
 	planet_modifier = {

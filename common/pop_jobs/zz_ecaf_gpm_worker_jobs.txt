@@ -40,14 +40,6 @@ gpm_bunker_army = {
 
 	resources = {
 		category = planet_enforcers
-		produces = { # ECAF
-			trigger = {
-				owner = {
-					has_valid_civic = civic_martial_brotherhood
-				}
-			}
-			unity = 2
-		}
 		produces = {
 			trigger = {
 				exists = owner
@@ -61,6 +53,18 @@ gpm_bunker_army = {
 				planet = { has_modifier = anticrime_campaign }
 			}
 			energy = 2
+		}
+		produces = { # ECAF
+			trigger = {
+				owner = {
+					has_valid_civic = civic_martial_brotherhood
+				}
+			}
+			unity = 2
+			ecaf_crew = 10
+		}
+		produces = { # ECAF
+			ecaf_crew = 5
 		}
 	}
 	

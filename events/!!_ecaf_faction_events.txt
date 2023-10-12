@@ -88,9 +88,6 @@ pop_faction_event = {
             }
         }
     }
-	option = {
-		name = OK
-	}
 }
 
 # Notification event - other empire shifts ethics.

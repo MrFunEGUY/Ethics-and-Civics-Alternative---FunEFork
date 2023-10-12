@@ -2209,6 +2209,10 @@ l_german:
  ## ECAF NEW ###
  ###############
 
+ ecaf_crew: "Crew"
+ ecaf_crew_desc: "The brave crew that make up our naval personnel; they're the true backbone of our military strength."
+ mod_country_resource_max_ecaf_crew_add: "Empire $crew$ Capacity"
+
  auth_dict_democratic: "Democratic Autocracy"
  auth_dict_democratic_desc: "Democratic Autocracies are ruled by a single, democratically-elected, individual that wields absolute control over the state until their death."
  
