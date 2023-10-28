@@ -53,22 +53,18 @@ socialism_unrest = {
 
 suppressed_capitalism = {
   pop_ethic_capitalism_attraction_mult = -0.75
-  country_base_influence_produces_add = -1
 }
 
 promoted_capitalism = {
   pop_ethic_capitalism_attraction_mult = 1
-  country_base_influence_produces_add = -2
 }
 
 suppressed_socialism = {
   pop_ethic_socialism_attraction_mult = -0.75
-  country_base_influence_produces_add = -1
 }
 
 promoted_socialism = {
   pop_ethic_socialism_attraction_mult = 1
-  country_base_influence_produces_add = -2
 }
 
 espionage_pre_ftl_indoctrination_socialism = {

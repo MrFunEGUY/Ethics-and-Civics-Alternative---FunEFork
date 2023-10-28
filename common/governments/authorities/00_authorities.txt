@@ -26,8 +26,8 @@
 # Overwrites #
 ##############
 
-# Changed Frequency Weights
-# Ordering done for in game viewing reasons
+## Changed Frequency Weights
+###!!! Ordering done for in game viewing reasons
 
 auth_democratic = {
 	election_term_years = 10

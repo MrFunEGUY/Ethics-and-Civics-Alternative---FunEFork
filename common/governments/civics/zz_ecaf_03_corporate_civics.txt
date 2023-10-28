@@ -25,7 +25,7 @@
 civic_franchising = {
 	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
+	ai_weight = {
 		base = @ai_civic_default_base_weight 
 		modifier = {
 			factor = @ai_civic_personality_match_factor
@@ -55,7 +55,7 @@ civic_franchising = {
 civic_trading_posts = {
 	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
+	ai_weight = {
 		base = @ai_civic_default_base_weight 
 		modifier = {
 			factor = @ai_civic_personality_match_factor
@@ -84,7 +84,7 @@ civic_media_conglomerate = {
 		civics = { NOT = { value = civic_idealistic_foundation } }
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
+	ai_weight = {
 		base = @ai_civic_default_base_weight 
 		modifier = {
 			factor = @ai_civic_personality_match_factor
@@ -107,7 +107,7 @@ civic_media_conglomerate = {
 civic_naval_contractors = {
 	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
+	ai_weight = {
 		base = @ai_civic_default_base_weight 
 		modifier = {
 			factor = @ai_civic_personality_match_factor
@@ -164,7 +164,7 @@ civic_naval_contractors = {
 civic_free_traders = {
 	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
+	ai_weight = {
 		base = @ai_civic_default_base_weight 
 		modifier = {
 			factor = @ai_civic_personality_match_factor
@@ -203,7 +203,7 @@ civic_free_traders = {
 civic_private_prospectors = {
 	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
+	ai_weight = {
 		base = @ai_civic_default_base_weight 
 		modifier = {
 			factor = @ai_civic_personality_match_factor
@@ -242,7 +242,7 @@ civic_private_prospectors = {
 civic_gospel_of_the_masses = {
 	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
+	ai_weight = {
 		base = @ai_civic_default_base_weight 
 		modifier = {
 			factor = @ai_civic_personality_match_factor
@@ -298,7 +298,7 @@ civic_ruthless_competition = {
 		}
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
+	ai_weight = {
 		base = @ai_civic_default_base_weight 
 		modifier = {
 			factor = @ai_civic_personality_match_factor
@@ -377,7 +377,7 @@ civic_criminal_heritage = {
 civic_private_military_companies = {
 	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
+	ai_weight = {
 		base = @ai_civic_default_base_weight 
 		modifier = {
 			factor = @ai_civic_personality_match_factor
@@ -436,7 +436,7 @@ civic_private_military_companies = {
 civic_indentured_assets = {
 	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
+	ai_weight = {
 		base = @ai_civic_default_base_weight 
 		modifier = {
 			factor = @ai_civic_personality_match_factor
@@ -495,7 +495,7 @@ civic_brand_loyalty = {
 		civics = { NOT = { value = civic_beacon_of_liberty } }
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
+	ai_weight = {
 		base = @ai_civic_default_base_weight 
 		modifier = {
 			factor = @ai_civic_personality_match_factor
@@ -531,7 +531,7 @@ civic_public_relations_specialists = {
 		civics = { NOT = { value = civic_diplomatic_corps } }
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
+	ai_weight = {
 		base = @ai_civic_default_base_weight 
 		modifier = {
 			factor = @ai_civic_personality_match_factor
@@ -570,7 +570,7 @@ civic_death_cult_corporate = {
 	description = "civic_tooltip_death_cult_effects"
 	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
+	ai_weight = {
 		base = @ai_civic_default_base_weight 
 		modifier = {
 			factor = @ai_civic_personality_match_factor
@@ -634,7 +634,7 @@ civic_corporate_catalytic_processing = {
 		}
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
+	ai_weight = {
 		base = 0			# Too dangerous to switch mid-game
 	}
 }
@@ -654,7 +654,7 @@ civic_corporate_hedonism = {
 		}
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
+	ai_weight = {
 		base = @ai_civic_default_base_weight 
 		modifier = {
 			factor = @ai_civic_personality_match_factor
@@ -723,7 +723,7 @@ civic_corporate_crafters = {
 	random_weight = {
 		base = @civic_uncommon_random_weight
 	}
-	ai_weight = { 
+	ai_weight = {
 		base = @ai_civic_uncommon_base_weight 
 		modifier = {
 			factor = @ai_civic_personality_match_factor
@@ -774,7 +774,7 @@ civic_permanent_employment = {
 		}
 	}
 	random_weight = { base = @civic_uncommon_random_weight }
-	ai_weight = { 
+	ai_weight = {
 		base = @ai_civic_uncommon_base_weight 
 		modifier = {
 			factor = @ai_civic_personality_match_factor
@@ -830,7 +830,7 @@ civic_corporate_relentless_industrialists = {
 	random_weight = {
 		base = @civic_uncommon_random_weight
 	}
-	ai_weight = { 
+	ai_weight = {
 		base = @ai_civic_uncommon_base_weight 
 		modifier = {
 			factor = @ai_civic_personality_match_factor
@@ -876,7 +876,7 @@ civic_corporate_toxic_baths = {
 	random_weight = {
 		base = @civic_uncommon_random_weight
 	}
-	ai_weight = { 
+	ai_weight = {
 		base = @ai_civic_uncommon_base_weight 
 		modifier = {
 			factor = @ai_civic_personality_match_factor
@@ -926,7 +926,7 @@ civic_corporate_scavengers = {
 	random_weight = {
 		base = @civic_default_random_weight
 	}
-	ai_weight = { 
+	ai_weight = {
 		base = @ai_civic_default_base_weight 
 		modifier = {
 			factor = @ai_civic_personality_match_factor
@@ -977,7 +977,7 @@ civic_corporate_ascensionists = {
 	random_weight = {
 		base = @civic_uncommon_random_weight
 	}
-	ai_weight = { 
+	ai_weight = {
 		base = @ai_civic_uncommon_base_weight 
 		modifier = {
 			factor = @ai_civic_personality_match_factor
@@ -1128,7 +1128,7 @@ civic_memory_vault_corporate = {
 civic_worker_coop = {
 	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
+	ai_weight = {
 		base = @ai_civic_default_base_weight 
 		modifier = {
 			factor = @ai_civic_personality_mismatch_factor

@@ -757,9 +757,8 @@ councilor_uncivil_defence_contractor = { #Director of Government Affairs
 	modifier = {
 		envoy_exp_gain = 0.15
 		envoys_add = 0.5
-		envoy_improve_relations_mult = 0.1
-		diplo_weight_envoys_mult = 0.1
-		pop_government_ethic_attraction = 0.1
+		envoy_improve_relations_mult = 0.05
+		diplo_weight_envoys_mult = 0.02
 	}
 }
 
@@ -773,11 +772,10 @@ councilor_uncivil_mercenary_company = { #Chief Aquisitions Officer
 	}
 	civic = civic_uncivil_mercenary_company
 	modifier = {
-		armies_cost_mult = 0.02
-		armies_upkeep_mult = 0.02
+		armies_cost_mult = -0.02
+		armies_upkeep_mult = -0.02
 		army_attack_damage_mult = 0.04
 		army_defense_damage_mult = 0.02
-		
 		planet_jobs_alloys_produces_mult = 0.01 #Since no military goods, alloys as placeholder. Will change if the game gets an army update
 	}
 }

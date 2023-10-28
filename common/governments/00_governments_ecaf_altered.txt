@@ -488,7 +488,7 @@ gov_enlightened_monarchy = {
 
 	possible = {
 		has_authority = auth_imperial
-		is_socialism = yes
+		is_pacifist = yes
 	}
 
 	weight = {

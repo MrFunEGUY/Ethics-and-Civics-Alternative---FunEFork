@@ -93,7 +93,6 @@ leader_class_government_match_bonus_mult = {
 						has_government = gov_irenic_bureaucracy
 						has_government = gov_moral_democracy
 						has_government = gov_rational_consensus
-						has_government = gov_research_development_corp
 						has_government = gov_science_directorate
 						has_government = gov_technocratic_dictatorship
 						# ECAF

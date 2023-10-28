@@ -1027,7 +1027,7 @@ trader = {
             }
         }
         trade_value_add = 0.4
-        mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_trade_mult|TYPE|councilor_merchant_guilds|
+        mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_trade_mult|TYPE|councilor_bancorp|
     }
 
 	weight = {

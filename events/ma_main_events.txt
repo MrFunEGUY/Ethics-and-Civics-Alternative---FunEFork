@@ -37,115 +37,15 @@ country_event = {
 
 		ruler = { save_event_target_as = current_president }
 		
-		if = {
-			limit = { ruler = { pre_ruler_leader_class = scientist } }
-			clone_leader = {
-				target = event_target:current_president
-				class = scientist
-				event_leader = yes
-			}
-		}
-		else_if = {
-			limit = { ruler = { pre_ruler_leader_class = general } }
-			clone_leader = {
-				target = event_target:current_president
-				class = general
-				event_leader = yes
-			}
-		}
-		else_if = {
-			limit = { ruler = { pre_ruler_leader_class = admiral } }
-			clone_leader = {
-				target = event_target:current_president
-				class = admiral
-				event_leader = yes
-			}
-		}
-		else = {
-			clone_leader = {
-				target = event_target:current_president
-				class = governor
-				event_leader = yes
-			}
-		}
-
-		last_created_leader = {
-			add_random_leader_trait = yes
-			add_random_leader_trait = yes
-			set_saved_date = { key = ruler_stint_start_date_1 days_from_present = -5400 }
-			set_saved_date = { key = ruler_stint_end_date_1 days_from_present = 0 }
-			# Honor Leaders Compat
-			set_leader_flag = honor_leader_was_ruler
+		clone_leader = {
+			target = event_target:current_president
+			event_leader = yes
 		}
 
 		ruler = {
-			set_leader_flag = switch_ruler
+			set_leader_flag = leader_death_events_blocked
 			kill_leader = { show_notification = no }
 		}
-	}
-}
-
-#  Reform to Single Term Event
-country_event = {
-	id = moreauthorities.5
-	title = moreauthorities.5.title
-	desc = moreauthorities.5.desc
-	picture = GFX_evt_throne_room
-	is_triggered_only = yes
-		
-	option = {
-		name = moreauthorities.5.a
-		allow = {
-		custom_tooltip = {
-				fail_text = unity_fail_text_ma_1
-				has_resource = { type = unity amount >= 2000 }
-			}
-		}
-		hidden_effect = {
-			add_resource = { unity = -2000 }
-			country_add_ethic = ethic_egalitarian
-			change_government = {
-				authority = auth_strict_democratic
-				remove_invalid_civics = yes
-			}
-			set_government_cooldown = 1800
-			ruler = { set_leader_flag = one_term }
-		}	
-	}
-
-	option = {
-		name = moreauthorities.5.b
-	}
-}
-
-# Edict Reform away from Single Term Event
-country_event = {
-	id = moreauthorities.6
-	title = moreauthorities.6.title
-	desc = moreauthorities.6.desc
-	picture = GFX_evt_throne_room
-	is_triggered_only = yes
-	
-	option = {
-		name = moreauthorities.6.a
-		allow = {
-		custom_tooltip = {
-				fail_text = unity_fail_text_ma_2
-				has_resource = { type = unity amount >= 10000 }
-			}
-		}
-		hidden_effect = {
-			add_resource = { unity = -10000 }
-			change_government = {
-				authority = auth_democratic
-				remove_invalid_civics = yes
-			}
-			set_government_cooldown = 1800
-		}
-	}
-
-	option = {
-		name = moreauthorities.6.b
 	}
 }
 

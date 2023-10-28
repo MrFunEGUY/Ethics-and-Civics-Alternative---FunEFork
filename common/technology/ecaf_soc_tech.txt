@@ -18,10 +18,7 @@ tech_free_market = {
 		factor = 1.5
 		modifier = {
 			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_good_trading"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_good_trading }
 		}
 		modifier = {
 			factor = 1.25
@@ -42,10 +39,7 @@ tech_free_market = {
 	ai_weight = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_good_trading"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_good_trading }
 		}
 	}
 }
@@ -70,10 +64,7 @@ tech_planned_economy = {
 		factor = 1.5
 		modifier = {
 			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_good_trading"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_good_trading }
 		}
 		modifier = {
 			factor = 1.25
@@ -90,10 +81,7 @@ tech_planned_economy = {
 	ai_weight = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_good_trading"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_good_trading }
 		}
 	}
 }
@@ -117,10 +105,7 @@ tech_innovations = {
 		factor = 1.5
 		modifier = {
 			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_good_trading"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_good_trading }
 		}
 		modifier = {
 			factor = 1.25
@@ -140,10 +125,7 @@ tech_innovations = {
 	ai_weight = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_good_trading"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_good_trading }
 		}
 	}
 }
@@ -169,10 +151,7 @@ tech_agri_consortium = {
 		factor = 1.5
 		modifier = {
 			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_good_trading"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_good_trading }
 		}
 		modifier = {
 			factor = 1.25
@@ -186,10 +165,7 @@ tech_agri_consortium = {
 	ai_weight = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_good_trading"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_good_trading }
 		}
 	}
 }
@@ -215,10 +191,7 @@ tech_mining_consortium = {
 		factor = 1.5
 		modifier = {
 			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_good_trading"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_good_trading }
 		}
 		modifier = {
 			factor = 2
@@ -232,10 +205,7 @@ tech_mining_consortium = {
 	ai_weight = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_good_trading"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_good_trading }
 		}
 	}
 }
@@ -254,10 +224,7 @@ tech_centralized_state = {
 	weight_modifier = {
 		modifier = {
 			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_statecraft"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_statecraft }
 		}
 		modifier = {
 			factor = 1.25
@@ -276,10 +243,7 @@ tech_centralized_state = {
 	ai_weight = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_statecraft"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_statecraft }
 		}
 	}
 }
@@ -298,10 +262,7 @@ tech_federal_state = {
 	weight_modifier = {
 		modifier = {
 			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_statecraft"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_statecraft }
 		}
 		modifier = {
 			factor = 1.25
@@ -320,10 +281,7 @@ tech_federal_state = {
 	ai_weight = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_statecraft"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_statecraft }
 		}
 	}
 }

@@ -525,6 +525,13 @@ civic_feudal_realm = {
 				inline_script = governments/conditions/auth_imperial
 			}
 		}
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_socialism
+				value = ethic_socialism
+				value = ethic_fanatic_socialism
+			}
+		}
 		civics = {
 			NOT = { value = lrsk_gov_var_civic_royal_absolutism }
 		}
@@ -1549,6 +1556,11 @@ civic_aristocratic_elite = {
 				text = civic_tooltip_not_egalitarian
 				value = ethic_egalitarian
 				value = ethic_fanatic_egalitarian
+			}
+			NOR = {
+				text = civic_tooltip_not_socialism
+				value = ethic_socialism
+				value = ethic_fanatic_socialism
 			}
 		}
 		civics = {
@@ -2776,6 +2788,11 @@ civic_dystopian_society = {
 	possible = {
 		ethics = {
 			value = ethic_fanatic_authoritarian
+			NOR = {
+				text = civic_tooltip_not_socialism
+				value = ethic_socialism
+				value = ethic_fanatic_socialism
+			}
 		}
 		civics = {
 			NOR = {
