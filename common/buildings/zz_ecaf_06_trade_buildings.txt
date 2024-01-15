@@ -36,8 +36,18 @@ building_commercial_zone = {
 	}
 
 	planet_modifier = {
-		job_clerk_add = 2
+		job_clerk_add = 1
 		job_trader_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { NOT = { has_valid_civic = civic_consumerism } }
+		}
+		modifier = {
+			job_clerk_add = 1
+		}
 	}
 
 	triggered_planet_modifier = {
@@ -121,8 +131,18 @@ building_commercial_megaplex = {
 	}
 
 	planet_modifier = {
-		job_clerk_add = 4
+		job_clerk_add = 2
 		job_trader_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { NOT = { has_valid_civic = civic_consumerism } }
+		}
+		modifier = {
+			job_clerk_add = 2
+		}
 	}
 
 	triggered_planet_modifier = {

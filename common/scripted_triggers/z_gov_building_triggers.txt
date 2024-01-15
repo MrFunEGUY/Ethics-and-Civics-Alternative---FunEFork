@@ -69,6 +69,7 @@ is_theocracy = {
 			has_government = gov_holy_tribunal
 			has_government = gov_megachurch
 			has_government = gov_sacrificial_megachurch
+			has_government = gov_dimensional_covenant
 			# ECAF
 			has_government = gov_megachurch_fam
 			has_government = gov_subversive_cult_fam
@@ -142,6 +143,7 @@ is_stratocracy = {
 			has_government = gov_successor_khanate
 			has_government = gov_mortal_empire
 			has_government = gov_grim_council
+			has_government = gov_defensive_union
 			# ECAF
 			has_government = gov_jingoism
 			has_government = gov_military_corp

@@ -155,6 +155,14 @@ district_crashed_slaver_ship = {
 		}
 		text = job_clerk_effect_desc
 	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_valid_civic = civic_consumerism }
+		}
+		text = job_trader_effect_desc
+	}
 }
 
 district_city = {
@@ -321,6 +329,14 @@ district_city = {
 			owner = { is_regular_empire = yes }
 		}
 		text = job_clerk_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_valid_civic = civic_consumerism }
+		}
+		text = job_trader_effect_desc
 	}
 }
 
