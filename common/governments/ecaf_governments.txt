@@ -1070,7 +1070,7 @@ lrsk_gov_var_gov_galactic_cartel_fam = {
 	}
 
 
-	leader_class = governor
+	leader_class = official
 
 	weight = {
 		base = 1000

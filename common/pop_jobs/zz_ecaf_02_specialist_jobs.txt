@@ -19,18 +19,11 @@ researcher = {
 		complex_specialist_job_check_trigger = yes
 	}
 
-	triggered_pop_modifier = {
-		potential = {
-			planet = {
-				exists = army_leader
-				army_leader = {
-					has_trait = leader_trait_academia_recruiter
-				}
-			}
-		}
+	triggered_country_modifier = {
 		modifier = {
-			pop_defense_armies_add = 1
+			country_naval_cap_add = 1
 		}
+		mult = planet.modifier:job_researcher_naval_cap_add
 	}
 
 	resources = {
@@ -193,6 +186,15 @@ priest = {
 		}
 		country_edict_fund_add = 2
 		mult = value:job_total_output_modifier|JOB|priest|RESOURCE|unity|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_councilor = { COUNCILOR = "councilor_dimensional_worship_corporate" } }
+		}
+		trade_value_add = @councilor_dimensional_worship_priest_trade_value
+		mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_trade_mult|TYPE|councilor_dimensional_worship_corporate|
 	}
 
 	inline_script = "jobs/pd_priest_outputs" # Planetary Diversity
@@ -914,6 +916,15 @@ healthcare = {
 		}
 		trade_value_add = 2
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_modifier = revolutionary_medigel_modifier }
+		}
+		pop_growth_speed = 0.025
+		planet_pop_assembly_organic_mult = 0.025
+		pop_environment_tolerance = 0.0125
 	}
 
 	weight = {

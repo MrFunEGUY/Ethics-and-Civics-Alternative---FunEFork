@@ -25,7 +25,7 @@ education_campaign = {
 		}
 	}
 	modifier = {
-		species_leader_exp_gain = 0.25
+		species_leader_exp_gain = 0.15
 	}
 	potential = {
 		is_gestalt = no

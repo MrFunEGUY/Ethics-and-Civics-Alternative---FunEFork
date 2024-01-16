@@ -28,10 +28,10 @@ leader_trait_legendary_leader = { #Origin trait
 			has_leader_flag = legendary_leader_coma
 		}
 		species_leader_exp_gain = -2.0
-		leader_age = 300
+		leader_lifespan_add = 300
 	}
 
-	leader_class = { governor admiral scientist general }
+	leader_class = { official commander scientist }
 
 	initial = no
 	randomized = no

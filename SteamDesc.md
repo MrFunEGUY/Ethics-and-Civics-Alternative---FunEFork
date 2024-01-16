@@ -16,7 +16,7 @@
 
 [b]Term Limited:[/b]
 
-- This government form elects a ruler for a single 15-year term. After their term, leaders will go back to whatever job they had before (scientist, governor, admiral, general). However, their portrait may be changed. This is still an issue in 3.6, and may yet be resolved in the future.
+- This government form elects a ruler for a single 15-year term. After their term, leaders will go back to whatever job they had before (scientist, official, commander). However, their portrait may be changed. This is still an issue in 3.6, and may yet be resolved in the future.
 
 ----
 

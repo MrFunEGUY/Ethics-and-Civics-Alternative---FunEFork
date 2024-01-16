@@ -517,14 +517,14 @@ country_event = {
 			while = {
 				count = 1
 				create_leader = {
-					class = admiral
+					class = commander
 					species = event_target:ratling_species
 					name = random
 					skill = 3
 				}
 			}
 			create_leader = {
-				class = governor
+				class = official
 				species = event_target:ratling_species
 				name = random
 				skill = 3
@@ -717,7 +717,7 @@ country_event = {
 				cooldown = no
 			}
 			create_leader = {
-				class = governor
+				class = official
 				species = event_target:vol
 				name = random
 				skill = 5

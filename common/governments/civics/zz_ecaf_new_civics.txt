@@ -1293,11 +1293,9 @@ civic_military_junta = {
 		base = 5
 	}
 	modifier = {
-		admiral_exp_gain = 0.6
-		general_exp_gain = 0.6
+		commander_exp_gain = 0.6
 		job_commandante_per_pop = 0.03
-		leader_admirals_upkeep_mult = 0.15
-		leader_generals_upkeep_mult = 0.15
+		leader_commanders_upkeep_mult = 0.15
 	}
 }
 

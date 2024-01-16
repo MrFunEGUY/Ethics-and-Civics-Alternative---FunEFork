@@ -150,7 +150,7 @@ gov_martial_dictatorship = {
 
 	should_force_rename = yes
 
-	leader_class = admiral	# Initial ruler will become this if elected out of office
+	leader_class = commander	# Initial ruler will become this if elected out of office
 
 	possible = {
 		OR = {
@@ -172,7 +172,7 @@ gov_assembly_of_clans = {
 
 	should_force_rename = yes
 
-	leader_class = admiral	# Initial ruler will become this if elected out of office
+	leader_class = commander	# Initial ruler will become this if elected out of office
 
 	possible = {
 		OR = {
@@ -195,7 +195,7 @@ gov_citizen_stratocracy = {
 
 	should_force_rename = yes
 
-	leader_class = admiral	# Initial ruler will become this if elected out of office
+	leader_class = commander	# Initial ruler will become this if elected out of office
 
 	possible = {
 		has_ethic = ethic_egalitarian

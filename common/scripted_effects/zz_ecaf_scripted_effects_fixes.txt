@@ -153,7 +153,7 @@ create_first_diadochi = {
 				save_event_target_as = unit_spawn_point
 			}
 			create_leader = {
-				class = admiral
+				class = commander
 				species = owner_main_species
 				name = random
 				skill = 3
@@ -215,7 +215,7 @@ create_first_diadochi = {
 				}
 			}
 			create_leader = {
-				class = general
+				class = commander
 				species = owner_main_species
 				name = random
 				skill = 3
@@ -427,7 +427,7 @@ create_second_diadochi = {
 				save_event_target_as = unit_spawn_point
 			}
 			create_leader = {
-				class = admiral
+				class = commander
 				species = owner_main_species
 				name = random
 				skill = 3
@@ -489,7 +489,7 @@ create_second_diadochi = {
 				}
 			}
 			create_leader = {
-				class = general
+				class = commander
 				species = owner_main_species
 				name = random
 				skill = 3
@@ -701,7 +701,7 @@ create_third_diadochi = {
 				save_event_target_as = unit_spawn_point
 			}
 			create_leader = {
-				class = admiral
+				class = commander
 				species = owner_main_species
 				name = random
 				skill = 3
@@ -763,7 +763,7 @@ create_third_diadochi = {
 				}
 			}
 			create_leader = {
-				class = general
+				class = commander
 				species = owner_main_species
 				name = random
 				skill = 3
@@ -975,7 +975,7 @@ create_fourth_diadochi = {
 				save_event_target_as = unit_spawn_point
 			}
 			create_leader = {
-				class = admiral
+				class = commander
 				species = owner_main_species
 				name = random
 				skill = 3
@@ -1037,7 +1037,7 @@ create_fourth_diadochi = {
 				}
 			}
 			create_leader = {
-				class = general
+				class = commander
 				species = owner_main_species
 				name = random
 				skill = 3

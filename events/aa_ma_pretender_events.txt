@@ -49,7 +49,7 @@ country_event = {
 	immediate = {
 		# Install a new leader
 		create_leader = {
-			class = governor
+			class = official
 			species = owner_main_species
 			name = random
 			traits = {}

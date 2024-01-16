@@ -749,7 +749,7 @@ lrsk_gov_var_civic_chivalry = {
 	}
 }
 
-#Lifelong Learning (Democratic or Pacifist) - This society values public education so strongly that opportunities for it are made available throughout citizens' lives. (+1 governor and scientist skill levels, +20% leader experience gain)
+#Lifelong Learning (Democratic or Pacifist) - This society values public education so strongly that opportunities for it are made available throughout citizens' lives. (+1 official and scientist skill levels, +20% leader experience gain)
 lrsk_gov_var_civic_lifelong_learning = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }

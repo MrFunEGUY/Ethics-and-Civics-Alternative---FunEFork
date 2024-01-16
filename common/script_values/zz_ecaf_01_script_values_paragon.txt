@@ -5,47 +5,8 @@ leader_class_government_match_bonus_mult = {
 		# Check Leader Class vs PROMOTING Governments.
 		mult = 1.2
 		OR = {
-			AND = { # ADMIRAL good.
-				leader_class = admiral
-				owner = {
-					OR = {
-						has_government = gov_star_empire
-						has_government = gov_military_dictatorship
-						has_government = gov_military_junta
-						has_government = gov_military_commissariat
-						has_government = gov_martial_empire
-						has_government = gov_martial_dictatorship
-						has_government = gov_war_council
-						has_government = gov_assembly_of_clans
-						has_government = gov_citizen_stratocracy
-						has_government = gov_citizen_republic
-						has_government = gov_bandit_kingdom
-						has_government = gov_bandit_commune
-						has_government = gov_band_blood
-						# ECAF
-						has_government = lrsk_gov_var_gov_private_military_contractor_fam
-						# Government Variety Pack
-						has_government = lrsk_gov_var_gov_citizen_legion
-						has_government = lrsk_gov_var_gov_death_cult
-						has_government = lrsk_gov_var_gov_death_cult_imp
-						has_government = lrsk_gov_var_gov_doom_horde
-						has_government = lrsk_gov_var_gov_doom_horde_imp
-						has_government = lrsk_gov_var_gov_enterprise_authority
-						has_government = lrsk_gov_var_gov_enterprise_junta
-						has_government = lrsk_gov_var_gov_enterprise_society
-						has_government = lrsk_gov_var_gov_folkish_commonwealth
-						has_government = lrsk_gov_var_gov_folkish_league
-						has_government = lrsk_gov_var_gov_folkish_regime
-						has_government = lrsk_gov_var_gov_folkish_realm
-						has_government = lrsk_gov_var_gov_private_military_contractor
-						has_government = lrsk_gov_var_gov_pure_social_republic
-						has_government = lrsk_gov_var_gov_republican_protectorate
-						has_government = lrsk_gov_var_gov_revolutionary_republic
-					}
-				}
-			}
-			AND = { # GENERAL good.
-				leader_class = general
+			AND = { # COMMANDER good.
+				leader_class = commander
 				owner = {
 					OR = {
 						has_government = gov_star_empire
@@ -93,6 +54,7 @@ leader_class_government_match_bonus_mult = {
 						has_government = gov_irenic_bureaucracy
 						has_government = gov_moral_democracy
 						has_government = gov_rational_consensus
+						has_government = gov_dimensional_covenant
 						has_government = gov_science_directorate
 						has_government = gov_technocratic_dictatorship
 						# ECAF
@@ -110,8 +72,8 @@ leader_class_government_match_bonus_mult = {
 					}
 				}
 			}
-			AND = { # GOVERNOR good.
-				leader_class = governor
+			AND = { # OFFICIAL good.
+				leader_class = official
 				owner = {
 					OR = {
 						has_government = gov_band_blood
@@ -134,7 +96,7 @@ leader_class_government_match_bonus_mult = {
 						has_government = gov_theocratic_dictatorship
 						has_government = gov_theocratic_monarchy
 						has_government = gov_theocratic_oligarchy
-						has_government = gov_theocratic_republic      
+						has_government = gov_theocratic_republic
 						has_government = gov_trade_league
 						has_government = gov_worker_coop
 						# ECAF

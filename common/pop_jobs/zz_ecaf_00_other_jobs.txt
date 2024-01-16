@@ -13,6 +13,7 @@ slave_overseer = {
 		is_enslaved = yes
 		has_planet = yes
 		is_sapient = yes
+		is_robot_pop = no
 	}
 
 	possible = {

@@ -25,7 +25,7 @@ trait_perfected_genes = {
 	icon = "gfx/interface/icons/traits/trait_perfected_genes.dds"
 
 	modifier = {
-		leader_age = 15
+		leader_lifespan_add = 15
 		species_leader_exp_gain = -0.15
 	}
 }

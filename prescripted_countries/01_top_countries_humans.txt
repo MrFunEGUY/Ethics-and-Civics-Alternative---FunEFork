@@ -73,7 +73,7 @@ humans1_1 = {
 		attachment = 1
 		clothes = 0
  		trait = "trait_ruler_eye_for_talent"
-		leader_class = governor
+		leader_class = official
 	}
 }
 # Humans with Humanoid ships
@@ -150,7 +150,7 @@ humans2_1 = {
 		attachment = 6
 		clothes = 4
 		trait = "trait_ruler_warlike"
-		leader_class = admiral
+		leader_class = commander
 	}
 }
 #Federated Theian Preservers, FTP
@@ -305,6 +305,6 @@ plantoid_humans = {
 		attachment = 0
 		clothes = 2
 		trait = "trait_ruler_charismatic"
-		leader_class = governor
+		leader_class = official
 	}
 }

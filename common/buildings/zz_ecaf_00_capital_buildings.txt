@@ -145,17 +145,6 @@ building_capital = {
 		pop_growth_speed = 0.10
 	}
 
-	triggered_country_modifier = {
-		potential = {
-			is_capital = yes
-			owner = {
-				has_councilor = { COUNCILOR = "councilor_feudal_realm" }
-			}
-		}
-		country_naval_cap_add = 1
-		mult = value:naval_cap_vassals_councilor_feudal_realm
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -415,17 +404,6 @@ building_major_capital = {
 			growing_species = { has_trait = trait_cybernetic }
 		}
 		pop_growth_speed = 0.10
-	}
-
-	triggered_country_modifier = {
-		potential = {
-			is_capital = yes
-			owner = {
-				has_councilor = { COUNCILOR = "councilor_feudal_realm" }
-			}
-		}
-		country_naval_cap_add = 1
-		mult = value:naval_cap_vassals_councilor_feudal_realm
 	}
 
 	resources = {
@@ -710,17 +688,6 @@ building_system_capital = {
 			growing_species = { has_trait = trait_cybernetic }
 		}
 		pop_growth_speed = 0.10
-	}
-
-	triggered_country_modifier = {
-		potential = {
-			is_capital = yes
-			owner = {
-				has_councilor = { COUNCILOR = "councilor_feudal_realm" }
-			}
-		}
-		country_naval_cap_add = 1
-		mult = value:naval_cap_vassals_councilor_feudal_realm
 	}
 
 	resources = {
@@ -1809,6 +1776,14 @@ building_hab_system_capital = {
 		job_roboticist_add = 1
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_private_healthcare_corporate }
+		}
+		job_healthcare_add = 1
+	}
+
 	### ECAF
 	############
 	
@@ -2207,6 +2182,14 @@ building_hab_system_capital = {
 			owner = { is_regular_empire = yes }
 		}
 		text = job_enforcer_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_valid_civic = civic_private_healthcare_corporate }
+		}
+		text = job_healthcare_effect_desc
 	}
 
 	triggered_desc = {
@@ -3192,17 +3175,6 @@ building_imperial_capital = {
 			growing_species = { has_trait = trait_cybernetic }
 		}
 		pop_growth_speed = 0.10
-	}
-
-	triggered_country_modifier = {
-		potential = {
-			is_capital = yes
-			owner = {
-				has_councilor = { COUNCILOR = "councilor_feudal_realm" }
-			}
-		}
-		country_naval_cap_add = 1
-		mult = value:naval_cap_vassals_councilor_feudal_realm
 	}
 
 	resources = {
