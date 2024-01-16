@@ -692,7 +692,8 @@ l_russian:
  exploration_desc: " "
 
 
- #good_trading: "Экономика и Торговля"
+ #a_economics: "a economics"
+ good_trading: "Экономика и Торговля"
  #good_trading_desc: "Знание традиционных социально-экономических доктрин."
  #leader_trait_expertise_good_trading: "Талант: Экономика и Торговля"
  #leader_trait_expertise_good_trading_desc: "После нескольких лет обучения этот лидер считается экспертом в области экономики."
@@ -2574,6 +2575,7 @@ l_russian:
  building_mecha_monastery_desc: " "
 
  empire_is_socialism: "$TRIGGER_FAIL$Наша Империя исповедует идеалы этики §Y$ethic_socialism$§!."
+ empire_is_capitalism: "$TRIGGER_FAIL$Наша Империя исповедует идеалы этики §Y$ethic_capitalism$§!."
 
  PROGRESSIVE_NO_SLAVERY: "Нет Рабству"
  PROGRESSIVE_SLAVERY: "Рабство Разрешено"
@@ -2922,6 +2924,7 @@ l_russian:
  tech_taxation: "Гос. Управление: Политика Гибкого Налогооблажения"
  tech_taxation_desc: "Гос. Управление: Разблокирует политики §YНалогообложение§!."
 
+ a_economics: "a economics"
  good_trading: "Экономика"
  good_trading_desc: "Знание о базовых экономических системах и стратегиях."
  leader_trait_expertise_good_trading: "Познание: Экономика"
@@ -3835,15 +3838,6 @@ l_russian:
  moreauthorities.5.title: "Reform Government: Term Limited"
  moreauthorities.5.desc: "This decision will reform our system of government into one where the ruler is elected for a single 15-year term. The political capital required to implment term limits into our society means that once this action is taken, it it will be very difficult to undo. Are you sure?"
 
- moreauthorities.5.a: "I'm sure."
- moreauthorities.5.b: "Nevermind."
- 
- moreauthorities.6.title: "Reform Government: Eliminate Term Limits"
- moreauthorities.6.desc: "It'll take a tremendous amount of political capital, but we have the ability to eliminate term limits. You will be able to run in the next election, and any after that."
-
- moreauthorities.6.a: "I will run again."
- moreauthorities.6.b: "Nevermind."
-
  civic_tooltip_oli_imp_dict: "Is an §YOligarchic§!, §YImperial§!, or §YDictatorial§! Authority"
 
  ACTION_RECIPIENT_NOT_YOUR_CORP: "$TRIGGER_FAIL$§RBranch Offices can only be built on Megacorporations if they are our subsidiary.§!"
@@ -4015,6 +4009,9 @@ l_russian:
  gov_despotic_hegemony_desc: "This government is a materialistic form of hereditary autocracy, where citizens are viewed as little more than cogs in the state machinery. Efficiency and technological progress are valued above all things.$technocracy_gov_reg_loc$"
  gov_totalitarian_regime_desc: "This government is a materialistic form of autocracy, where the state aspires towards full control over the lives of its citizens in the name of efficiency.$technocracy_gov_reg_loc$"
  gov_executive_committee_desc: "This government is a materialistic form of oligarchy, where a powerful bureaucracy governs the state and guides the citizenry towards productive and meaningful goals.$technocracy_gov_reg_loc$"
+
+ gov_direct_democracy_desc: "This government is a materialistic form of democracy, where citizens use computer networks to vote directly on most matters regarding the state.$technocracy_gov_reg_loc$"
+ 
  gov_illuminated_autocracy_desc: "This government is a materialistic form of hereditary autocracy, based on technocratic principles that the sovereign is sworn to uphold. Nothing is valued more highly than scientific knowledge and the advancement of technology.$technocracy_gov_reg_loc$"
  gov_technocratic_dictatorship_desc: "This government is a materialistic form of autocracy, where the scientific elite has assumed control over the state in the name of efficiency and technological progress.$technocracy_gov_reg_loc$"
  gov_science_directorate_desc: "This government is a materialistic form of oligarchy, where a committee of scientists supervises the government apparatus for maximum efficiency.$technocracy_gov_reg_loc$"
@@ -4024,8 +4021,14 @@ l_russian:
 
  # Mogul Governments
  gov_trade_league_desc: "This government is a form of plutocratic oligarchy, where the state is made up of a myriad of free merchants, corporations and guilds that have banded together in common commercial interests.$plutocracy_gov_reg_loc$"
+
  gov_minarchy_desc: "A form of minimal 'night-watchman' state, that is not responsible for the education, health care, employment or transportation of its citizens, neither makes it any use of natural resources in its territory. All of this is instead held privately or publicly, but is never susceptible to any interference of the state, its law or its representatives.$plutocracy_gov_reg_loc$"
+
  gov_timocracy_desc: "A state, where political rights of the population are stratified according to the amount of property they own.$plutocracy_gov_reg_loc$"
+
+ gov_criminal_syndicate_desc:0 "This government is an enormous and ruthless business syndicate, which shares many of its operating practices with organized crime.$plutocracy_gov_reg_loc$"
+
+  gov_imperial_domain_megacorp_desc:0 "§LThis government rules the Galactic Imperium's central crown territory, which is under the direct control of the Imperial Sovereign.§!$plutocracy_gov_reg_loc$"
 
  # Militarist Commander Governments
  gov_star_empire_desc: "This government is a hereditary and militaristic form of autocracy, with a single sovereign controlling both the government and the military.$stratocracy_gov_reg_loc$"
@@ -4051,11 +4054,17 @@ l_russian:
  gov_purity_assembly_desc: "This government is a form of rabidly xenophobic democracy, where an elected assembly has been charged with overseeing the extermination of all lesser species in the galaxy.$stratocracy_gov_reg_loc$"
  gov_dread_brotherhood_desc: "An extremely xenophobic form of direct democracy, where all citizens are bound by the common goal - the destruction of all lesser life forms in the galaxy.$stratocracy_gov_reg_loc$"
   gov_successor_khanate_desc:0 "A successor state trying to recapture the glory of the Great Khan's empire.$stratocracy_gov_reg_loc$"
+
+ gov_mortal_empire_desc:0 "This theocratic monarchy engages in ritualized, sapient sacrifice.$stratocracy_gov_reg_loc$"
+
+ gov_grim_council_desc:0 "This nation's most powerful religious figures have formed a ruling council, overseeing an empire which engages in ritualized, sapient sacrifice.$stratocracy_gov_reg_loc$"
  # Pacifist Philosopher Governments
  gov_irenic_monarchy_desc: "This government is a pacifist form of hereditary autocracy, where the ruler is regarded as a benevolent guardian that is striving to protect the citizens from a violent galaxy.$bureaucracy_gov_reg_loc$"
  gov_irenic_dictatorship_desc: "This government is a pacifist form of autocracy, where the state is charged with protecting the citizenry from their own violent tendencies as well as any external threats.$bureaucracy_gov_reg_loc$"
  gov_irenic_bureaucracy_desc: "This government is a pacifistic form of oligarchy, where a complicated system of bureaucracy governs all aspects of society to ensure the safety of the citizenry.$bureaucracy_gov_reg_loc$"
  gov_moral_democracy_desc: "This government is a pacifistic form of democracy, firmly guided by moralist principles and non-violence.$bureaucracy_gov_reg_loc$"
+
+ gov_enlightened_monarchy_desc:0 "This government is a form of enlightened autocracy, where a strong emphasis is put on the knowledge and qualifications of the ruling monarch.$bureaucracy_gov_reg_loc$"
 
  #######################################
  # Government Variety Pack Governments #

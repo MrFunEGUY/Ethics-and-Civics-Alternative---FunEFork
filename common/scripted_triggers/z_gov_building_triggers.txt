@@ -69,6 +69,7 @@ is_theocracy = {
 			has_government = gov_holy_tribunal
 			has_government = gov_megachurch
 			has_government = gov_sacrificial_megachurch
+			has_government = gov_dimensional_covenant
 			# ECAF
 			has_government = gov_megachurch_fam
 			has_government = gov_subversive_cult_fam
@@ -95,11 +96,11 @@ is_technocracy = {
 			has_government = gov_despotic_hegemony
 			has_government = gov_totalitarian_regime
 			has_government = gov_executive_committee
+			has_government = gov_direct_democracy
 			has_government = gov_illuminated_autocracy
 			has_government = gov_technocratic_dictatorship
 			has_government = gov_science_directorate
 			has_government = gov_rational_consensus
-			has_government = gov_research_development_corp
 			# ECAF
 			has_government = gov_optimized_venture_fam
 			has_government = lrsk_gov_var_gov_innovation_initiative_fam
@@ -132,8 +133,6 @@ is_stratocracy = {
 			has_government = gov_assembly_of_clans
 			has_government = gov_citizen_stratocracy
 			has_government = gov_citizen_republic
-			has_government = gov_jingoism
-			has_government = gov_military_corp
 			has_government = gov_bandit_kingdom
 			has_government = gov_bandit_commune
 			has_government = gov_band_blood
@@ -141,9 +140,13 @@ is_stratocracy = {
 			has_government = gov_purity_order
 			has_government = gov_purification_committee
 			has_government = gov_purity_assembly
-			has_government = gov_dread_brotherhood
 			has_government = gov_successor_khanate
+			has_government = gov_mortal_empire
+			has_government = gov_grim_council
+			has_government = gov_defensive_union
 			# ECAF
+			has_government = gov_jingoism
+			has_government = gov_military_corp
 			has_government = lrsk_gov_var_gov_private_military_contractor_fam
 			# Government Variety Pack
 			has_government = lrsk_gov_var_gov_folkish_commonwealth
@@ -176,6 +179,7 @@ is_bureaucracy = {
 			has_government = gov_irenic_dictatorship
 			has_government = gov_irenic_bureaucracy
 			has_government = gov_moral_democracy
+			has_government = gov_enlightened_monarchy
 			# Government Variety Pack
 			has_government = lrsk_gov_var_gov_republic_of_virtue
 			has_government = lrsk_gov_var_gov_utopian_despotism_dic
@@ -198,6 +202,9 @@ is_plutocracy = {
 			has_government = gov_trade_league
 			has_government = gov_minarchy
 			has_government = gov_timocracy
+			has_government = gov_criminal_syndicate
+			has_government = gov_pirate_haven # Desc is equal to crim syndicate desc, so not needed in mod
+			has_government = gov_imperial_domain_megacorp
 			# ECAF
 			has_government = gov_trade_league_fam
 			has_government = gov_stellar_bancorp_fam
@@ -235,6 +242,7 @@ is_isocracy = {
 	owner = {
 		has_ethic = ethic_fanatic_socialism
 		OR = {
+			has_government = gov_communal_parity
 			# ECAF
 			has_government = gov_enlighted_socialism
 			has_government = gov_strasserism
@@ -291,12 +299,12 @@ is_aristocracy = {
 		OR = {
 			has_government = gov_imperial_domain
 			has_government = gov_elective_monarchy
-			has_government = gov_noble_aristocracy
 			has_government = gov_aristocratic_republic
 			has_government = gov_aristocratic_monarchy
 			has_government = gov_feudal_empire
 			# ECAF
 			has_government = gov_great_houses
+			has_government = gov_noble_aristocracy
 			has_government = gov_benevolent_aristocracy
 			has_government = gov_oligarchic_republic
 			# Government Variety Pack

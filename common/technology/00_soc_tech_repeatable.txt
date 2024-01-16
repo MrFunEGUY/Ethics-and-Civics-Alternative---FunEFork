@@ -204,7 +204,7 @@ tech_repeatable_improved_leader_life_span = { ## Altered
 	}
 
 	modifier = {
-		leader_age = 0
+		leader_lifespan_add = 0
 	}
 }
 

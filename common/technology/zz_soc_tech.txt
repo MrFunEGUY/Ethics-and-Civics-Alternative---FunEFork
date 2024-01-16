@@ -32,19 +32,9 @@ tech_galactic_markets = {
 			factor = 2
 			has_policy_flag = economic_stance_market
 		}
-		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
-			has_ascension_perk = ap_technological_ascendancy
-		}
-		modifier = {
-			factor = @federation_perk_factor
-			has_federation = yes
-			federation = {
-				has_federation_perk = rare_tech_boost
-				any_member = {
-					has_technology = tech_galactic_markets
-				}
-			}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_galactic_markets
 		}
 		modifier = {
 			factor = 0
@@ -668,19 +658,9 @@ tech_selected_lineages = {
 			factor = 2
 			is_capitalism = yes
 		}
-		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
-			has_ascension_perk = ap_technological_ascendancy
-		}
-		modifier = {
-			factor = @federation_perk_factor
-			has_federation = yes
-			federation = {
-				has_federation_perk = rare_tech_boost
-				any_member = {
-					has_technology = tech_selected_lineages
-				}
-			}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_selected_lineages
 		}
 		modifier = {
 			factor = 2
@@ -731,19 +711,9 @@ tech_capacity_boosters = {
 			factor = 2
 			is_capitalism = yes
 		}
-		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
-			has_ascension_perk = ap_technological_ascendancy
-		}
-		modifier = {
-			factor = @federation_perk_factor
-			has_federation = yes
-			federation = {
-				has_federation_perk = rare_tech_boost
-				any_member = {
-					has_technology = tech_capacity_boosters
-				}
-			}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_capacity_boosters
 		}
 		modifier = {
 			factor = 2
@@ -812,21 +782,9 @@ tech_psionic_theory = {
 				has_trait_in_council = { TRAIT = leader_trait_whisperers_chosen }
 			}
 		}
-		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
-			has_valid_civic = civic_spiritual_seekers
-		}
-		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
-			has_ascension_perk = ap_technological_ascendancy
-		}
-		modifier = {
-			factor = @federation_perk_factor
-			has_federation = yes
-			federation = {
-				has_federation_perk = rare_tech_boost
-				any_member = { has_technology = tech_psionic_theory }
-			}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_psionic_theory
 		}
 		modifier = {
             factor = 2

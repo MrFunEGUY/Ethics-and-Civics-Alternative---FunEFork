@@ -2,12 +2,12 @@
 # l_spanish:
 # l_german:
 # l_french:
-l_polish:
+# l_polish:
 # l_russian:
 # l_braz_por:
 # l_simp_chinese:
 # l_japanese:
-# l_korean:
+l_korean:
 
  01_INSULT_PROPOSE_IND_COL: "Your brutal, tyrannical regime will eventually fall, and there will be a reckoning."
  02_INSULT_PROPOSE_COL_IND: "So who is it that rules your amusing little star nation today? What a quaint notion, to 'vote' someone into power! It will inevitably lead to your collapse, of course."
@@ -82,7 +82,7 @@ l_polish:
  ALLOWS_MARKET_ECONOMY:0 "§EAllows to use the §YFree Market§! economic policy§!"
  ALLOWS_PLANNED_ECONOMY:0 "§EAllows to use the §YPlanned§! economic policy§!"
  allows_new_babylon: "Provides an opportunity (an Edict) to transform any of your Worlds (just one) into §YGalactic Wonder: New Babylon§!. The Edict is only available if the number of different species in your Empire is more than 3. The planet size will be increased up to 10 tiles (no more than 25 in total), and will be given a constant modifier, increasing §YAlien Migration Attraction§!, §YHabitability§!, §YUnity§!, §YSociety Research§!, §YEnergy§! and potential §YUnrest§!, and reducing it's §YGovernment Ethic Attraction§!."
- ALLOWS_STRATIFIED: "§ECombination with §Hnon-Cooperative§! ethic allows §HStratified Economy§! Living Standards§!"
+ ALLOWS_STRATIFIED: "§ECombination with §Hnon-Cooperative§! ethic allows §HStratified Economy§! living standards§!"
  anarch_com_utopia_desc: "Anarchists advocate the abolition of the state, capitalism and private property in favor of common ownership of the means of production and direct democracy."
  anarch_com_utopia: "Anarchist Communism"
  ap_anarchy_utopia_desc: "Free flow of Information is in the core of post-industrial society, encouraging an economical growth, based on knowledge, ideas and creativity. Edicts §YInformation Quarantine§! and §YEncourage Political Thought§! are not available."
@@ -115,6 +115,8 @@ l_polish:
  ARISTOCRATIC_TRADITION: "Traditional Aristocratism"
  ASCENSION_PERKS_NEW: "Ascension Perks"
  ASCENSION_TRADITIONS: "No Ascension Traditions"
+ auth_direct_democratic_desc: "With people being directly involved in governing and deciding on policy initiatives, bureaucratic efficiency is increased and both social and economical development are accelerated."
+ auth_direct_democratic: "Direct Democracy"
  # auth_democratic_desc: "Indirect democracies have regular elections where all citizens can vote on who should represent them."
  # auth_democratic: "Indirect Democracy"
  # auth_dictatorial_desc: "Dictatorial governments are ruled by a single individual for life that wields absolute control over the state."
@@ -226,6 +228,10 @@ l_polish:
  centralized_state: "Centralized Authority"
  CENTRALIZED_STATE: "Centralized State"
 
+ ##############
+ ##############
+ ##############
+
  civilian_telecom_desc: " "
  civilian_telecom_name: "Civilian Telecom"
  civilian_telecom: "Civilian Telecom"
@@ -238,7 +244,7 @@ l_polish:
  coalescence_desc: "Only learning the deepest secrets of both Matter and Mind allows to form this unique kind of society - True Collective, where mind of everyone is equally involved in accomplishing of the ultimate common goal - Prosperity in Cognition."
  coalescence: "Cyber-Transcendent Unity"
  COL_LABEL: "Authoritarian <-> Libertarian"
- COLLECT_ETHIC_ALLOWS_UTOPIA: "§ECombination with §HCooperative§! allows §YSocial Equality§! Living Standards§!"
+ COLLECT_ETHIC_ALLOWS_UTOPIA: "§ECombination with §HCooperative§! allows §YSocial Equality§! living standards§!"
  COLLECTIVIST_TRADITION_DESC: "Adopting §YUtopian Dream§! tradition will please the [Root.GetName]."
  COLLECTIVIST_TRADITION: "Traditional Harmony"
  COMMERCIAL_PACTS_DESC: "Signing Commercial Pacts with at least §Y2§! other Empires will please the [Root.GetName]."
@@ -324,7 +330,7 @@ l_polish:
  eco_market_desc: "Market, focused on ecological kinds of production, primarly agriculture, rather than heavy industry."
  eco_market_name: "Ecological-Right"
  eco_market: "Ecological-Right"
- ECO_MIN_WASTE_DESC: "Keeping §YLiving Standards§! at an appropriate minimum will please the [Root.GetName]."
+ ECO_MIN_WASTE_DESC: "Keeping §Yliving standards§! at an appropriate minimum will please the [Root.GetName]."
  ECO_MIN_WASTE: "Minimal Wasting"
  ECO_NO_ASCENSION_1: "Mastery of Nature"
  ECO_NO_ASCENSION_2: "Gaia Creators"
@@ -445,7 +451,7 @@ l_polish:
  eff_bureaucracy_desc: " "
  eff_bureaucracy_name: "Efficient Bureaucracy"
  eff_bureaucracy: "Efficient Bureaucracy"
- EGALITARIAN_ETHIC_ALLOWS_UTOPIA: "§EAllows §YSocial Equality§! Living Standards§!"
+ EGALITARIAN_ETHIC_ALLOWS_UTOPIA: "§EAllows §YSocial Equality§! living standards§!"
  egalitarian_unrest_desc: "§HUnrest§! on this colony has caused local Pops to become more attracted to §YLibertarianism§!."
  egalitarian_unrest: "Unrest (Libertarian Attraction)"
  ELITE_COMMAND_DESC: "Ensuring a stratified military - limited or none military service for some of our Species - will please the [Root.GetName]."
@@ -471,7 +477,7 @@ l_polish:
  ELITE_RULE: "Stratified Society"
  ELITISM_TRADITION_DESC: "Adoption of §YMeritocracy§! traditions displeases the [Root.GetName]."
  ELITISM_TRADITION: "Traditional Elitism"
- ELITIST_ETHIC_ALLOWS_STRATIFIED: "§EAllows §YStratified Economy§! Living Standards§!"
+ ELITIST_ETHIC_ALLOWS_STRATIFIED: "§EAllows §YStratified Economy§! living standards§!"
  ELITIST_INDOCTRINATION_DESC: "Active §YIndoctrination: Elitism§! edict displeases the [Root.GetName]."
  ELITIST_INDOCTRINATION: "ELITISM INDOCTRINATION"
  ELT_LABEL: "Elitist <-> Egalitarian"
@@ -480,8 +486,9 @@ l_polish:
  empire_bureaucracy: "Empire Bureaucracy"
  empire_is_elitist: "$TRIGGER_FAIL$Our empire embraces §Y$ethic_elitist$§! ideals."
  empire_is_socialism: "$TRIGGER_FAIL$Our empire embraces §Y$ethic_socialism$§! ideals."
+ empire_is_capitalism: "$TRIGGER_FAIL$Our empire embraces §Y$ethic_capitalism$§! ideals."
  empire_not_capitalism: "$TRIGGER_FAIL$Our empire does not embrace the necessary §Y$ethic_capitalism$§! ideals."
- empire_not_capitalist_authoritarian: "$TRIGGER_FAIL$Requires to have either §YFanatic Competitive§! OR §YAuthoritarian§!/§Ynon-Cooperative§! ethics."
+ empire_not_capitalist_authoritarian: "$TRIGGER_FAIL$Requires either §YFanatic Competitive§! OR §YAuthoritarian§!/§Ynon-Cooperative§! ethics."
  empire_not_elitist: "$TRIGGER_FAIL$Our empire does not embrace the necessary §Y$ethic_elitist$§! ideals."
  empire_not_pluralist_collectivist: "$TRIGGER_FAIL$Required to have §YFanatic Cooperative/non-Authoritarian§! ethic combination."
  empire_socialism_utopia_non_market: "$TRIGGER_FAIL$Our Empire is reqiured to have §YSocialistic Utopia§! Ascension Perk and §YFanatic Cooperative§! ethic."
@@ -672,28 +679,24 @@ l_polish:
  glor_monarchy: "Interstellar Kingdom"
  glorious_fleet: "Glorious Victory!"
  good_trading_desc: "Knowledge of standard economy doctrines and practices."
+ a_economics: "a economics"
  good_trading: "Economics"
  gov_absolute_monarchy_desc: "A form of monarchy in which the monarch holds supreme authority and where that authority is not restricted by any written laws, legislature, or customs."
  gov_absolute_monarchy: "Absolute Monarchy"
- gov_anarch_capitalism_desc: "A form of society where the size and authority of state apparatus is reduced to bare minimum, and free market provides all public goods and services, including law and order."
+ gov_anarch_capitalism_desc: "A form of society where the size and authority of state apparatus is reduced to bare minimum, and free market provides all public goods and services, including law and order.$plutocracy_gov_reg_loc$"
  gov_anarch_capitalism: "Anarcho-Capitalism"
- gov_anarchy_communism_desc: "An extreme form of Communist dictatorship, characterized with nationalization of all industries and the introduction of strict centralized management, state control of foreign trade, strict discipline for workers, with strikes forbidden and obligatory labor duty by non-working classes."
  gov_anarchy_communism: "Military Communism"
  gov_anarchy_state_desc: "The basic principles of anarcho-syndicalist society are solidarity, direct democracy, and workers' self-management. Syndicalists consider their economic theories a strategy for facilitating worker self-activity and as an alternative co-operative economic system with democratic values and production centered on meeting people's needs."
  gov_anarchy_state: "Anarcho-Syndicalism"
  gov_aristocratic_monarchy: "Aristocratic Monarchy"
  gov_aristocratic_republic_desc: "A form of representative democracy, in which only those who belong to social Elite may be elected to Senate and rule on behalf of the people."
  gov_aristocratic_republic: "Aristocratic Republic"
- gov_bur_collectivism_desc: "A bureaucratic collectivist state owns the means of production, while the surplus or profit is distributed among an elite party bureaucracy, rather than among the working class."
+ gov_benevolent_aristocracy: "Benevolent Aristocracy"
  gov_bur_collectivism: "Bureaucratic Collectivism"
- gov_communist_dictatorship_desc: "A political system, where the central government nationalizes ownership of the means of production from private to collective ownership, for the sake of achieving socialism and progressing toward a truly communist society."
  gov_communist_dictatorship: "Communist Dictatorship"
  gov_congress_republic_desc: "A form of representative democracy, in which power belongs to democratically elected members of Congress, who appoint Prime Minister. Every free citizen is allowed to be nominated and get elected for governing."
  gov_congress_republic: "Congressional Republic"
- gov_cor_dictatorship_desc: "An extremely capitalistic form of government, where powerful Corporations completely took over political and economical life of the society."
  gov_cor_dictatorship: "Corporate Dictatorship"
- gov_corporate_nationalism_desc: " "
- gov_corporate_nationalism: "Corporate Nationalism"
  gov_demos_cratos_desc: "This government is a form of democracy, where people directly decide on policy initiatives, either through vote or consensus."
  gov_demos_cratos: "Direct Democracy"
  gov_direct_democracy: "Cyber Democracy"
@@ -701,45 +704,30 @@ l_polish:
  gov_dread_brotherhood: "Dreadful Brotherhood"
  gov_enlighted_socialism_desc: "This government is a form of a socialistic dictatorship, where the the wise elected-for-life Ruler is undisputedly regarded as an enlightened architect of the brighter future."
  gov_enlighted_socialism: "Enlightened Despotism"
- gov_generic_stratocracy_desc: " "
- gov_generic_stratocracy: "Stratocracy"
  gov_genuine_aristocracy_desc: "An idealistic form of government, where ruling Elite considers the interests of society and cares about the people."
  gov_genuine_aristocracy: "Genuine Aristocracy"
- gov_great_houses_desc: "This civilization is ruled by the leadership council of a few Great Houses, which traditions derives from ancient clans and tribes, but which now function more as political parties. Unlike in classic Noble Aristocracy, house membership is not tied to patrimonial matters, such as birth or marriage, but rather anyone can be adopted to the House and advance to it's highest ranks, as long as he pledges loyalty to the House and preserve it's Tradition."
  gov_great_houses: "Great Houses"
  gov_jingoism_desc: "This form of authoritarian governance is headed by a xenophobic demagogue and notions of national supremacy and manifest destiny dominate the politics."
  gov_jingoism: "Jingoistic Regime"
- gov_liberal_democracy_desc: "A form of government, characterized by elections between multiple distinct political parties, a separation of powers, a market economy with private property and the equal protection of civil rights, civil liberties and political freedoms."
  gov_liberal_democracy: "Liberal Democracy"
- gov_military_corp_desc: "Government is represented by a massive military-industrial holding, with board of directors consisting solely of active war-chiefs."
  gov_military_corp: "Private Military Corporation"
  gov_minarchy_desc: "A form of minimal 'night-watchman' state, that is not responsible for the education, health care, employment or transportation of its citizens, neither makes it any use of natural resources in its territory. All of this is instead held privately or publicly, but is never susceptible to any interference of the state, its law or its representatives."
  gov_minarchy: "Minarchy"
- gov_national_socialism_desc: "Government is a form of radical right-wing, authoritarian ultranationalism characterized by dictatorial power, forcible suppression of opposition and strong regimentation of society and of the economy."
+ gov_national_socialism_desc: "Government is characterized by a form of radical right-wing, authoritarian ultranationalism held together by dictatorial power, forcible suppression of opposition and strong regimentation of society and the economy."
  gov_national_socialism: "Fascist Regime"
- gov_noble_aristocracy_desc: "The whole political power in this society belongs to the council of representatives of the ancient patrimonial aristocratic Houses."
  gov_noble_aristocracy: "Noble Aristocracy"
- gov_oligarchic_republic_desc: "An extremely elitist form of republic, in which significant amount of power is concentrated in the hands of a small, privileged group of people, with a strong influence on election's and governing processes."
  gov_oligarchic_republic: "Oligarchic Republic"
- gov_par_monarchy_desc: "A state headed by a monarch who is not actively involved in policy formation or implementation. True governmental leadership is carried out by a cabinet and its head - a prime minister, premier, or chancellor - who are drawn from parliament."
  gov_par_monarchy: "Parliamentary Monarchy"
- gov_peoples_commissariat_desc: "Government is appointed and monitored by a special Emergency Committee, which members has to be approved by the People, and work collectively to preserve the welfare of the Empire."
  gov_peoples_commissariat: "People's Commissariat"
- gov_peoples_republic_desc: "Government is an egalitarian form of dictatorship. There is an actual parliament, but it's dominated by a single political power - so-called 'People's Party'."
  gov_peoples_republic: "People's Republic"
- gov_plutocratic_oligarchy_desc: "This government is a form of oligarchy, where power rests with a committee of powerful and influential leaders, that run the large bureaucratic engine overseeing all matters of the state."
- gov_plutocratic_oligarchy: "Plutocratic Oligarchy"
+ gov_plutocratic_oligarchy_desc: "This government is a form of oligarchy, where power rests with a committee of powerful and influential leaders, that run the large bureaucratic engine overseeing all matters of the state." # Generic
+ gov_plutocratic_oligarchy: "Plutocratic Oligarchy" # Generic
  gov_slaver_republic_desc: "This government is an extremely elitist form of Republic, which has shut down most of the rights of a wider part of its population to restrain the citizenry and statuses to chosen ones."
  gov_slaver_republic: "Slaver Republic"
- gov_social_democracy_desc: "Idea of a state, which, acting in the frame of market economy, needs to provide security and equality of opportunity for its people and should actively reorder society in a way that is conducive to such development, but that such changes should be brought about gradually, legitimated by a democratically-elected majority."
  gov_social_democracy: "Social Democracy"
- gov_soviet_republic_desc: "A type of republic ruled by directly elected 'Soviets' - workers councils, which are directly responsible to their electors. There is no separation of powers, and elected Delegates act as legislators, government and courts in one."
  gov_soviet_republic: "Soviet Republic"
- gov_strasserism_desc: "A form of government ideology, based on strong nationalistic ideals in culture and politics, and egalitarian ideals in the sphere of economy."
  gov_strasserism: "National-Communism"
- gov_timocracy_desc: "A state, where political rights of the population are stratified according to the amount of property they own."
  gov_timocracy: "Timocracy"
- gov_xenophile_democracy_desc: "A form of government, ruled by an elected parliament, consisting of the most honorable representatives of different species, dominating in this World."
  gov_xenophile_democracy: "Multicultural Democracy"
  GREEN_INDOCTRINATION_DESC: "Active §YIndoctrination: Environmentalism§! edict displeases the [Root.GetName]."
  GREEN_INDOCTRINATION: "ECOLOGIST INDOCTRINATION"
@@ -787,7 +775,7 @@ l_polish:
  IMPERIALIST_TRADITION: "Traditional Imperialism"
  INCREASED_WAGE_DESC: "Setting up an §YIncreased Minimum Wage§! policy will please Labour Unions and thus [Root.GetName] will be pleased as well."
  INCREASED_WAGE: "Power to the People"
- INDIVID_ETHIC_ALLOWS_STRATIFIED: "§ECombination with §HCompetitive§! allows §YStratified Economy§! Living Standards§!"
+ INDIVID_ETHIC_ALLOWS_STRATIFIED: "§ECombination with §HCompetitive§! allows §YStratified Economy§! living standards§!"
  INDUSTRIAL_ADV_INFRASTRUCTURE_DESC: "Constructing a 'Thermal Borehole' on every planet, where this is possible, will please the [Root.GetName]."
  INDUSTRIAL_ADV_INFRASTRUCTURE: "Advanced Industrial Infrustructure"
  INDUSTRIAL_ECONOMY_DESC: "Active §YMechanist§! or §YIndustrial Economics§! government civic will please the [Root.GetName]."
@@ -837,7 +825,7 @@ l_polish:
  ISOLATIONIST_WAR_TRADITION_DESC: "Active §YIsolationist§! government civic will please the [Root.GetName]."
  ISOLATIONIST_WAR_TRADITION: "Developed Isolationism"
  job_commandante_desc: "An experienced military chief, either active or honorably discharged."
- job_commandante_effect_desc: "£job_commandante£ $job_commandante_plural$ increase Empire's §YNaval Capacity§!, spawn §YDefense Armies§!, increase planetary §YStability§!, reduce damage from §YBombardment§! and produce small amount of §YAmenities§!."
+ job_commandante_effect_desc: "£job_commandante£ $job_commandante_plural$ increase an Empire's §YNaval Capacity§!, spawn §YDefense Armies§!, increase planetary §YStability§!, reduce damage from §YBombardment§! and produce small amount of §YAmenities§!."
  job_commandante_plural: "Commanders"
  job_commandante: "Commander"
 
@@ -885,10 +873,10 @@ l_polish:
  job_mogul_effect_desc: "£job_mogul£ $job_mogul_plural$ produce £mod_trade_value_add£ §Y$TRADE_VALUE$§! and £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!, and multiplies planetary $mod_planet_jobs_energy_produces_mult$ by §G+10%§!."
  job_mogul_plural: "Moguls"
  job_mogul: "Mogul"
- job_supervisor_desc: "Members of Philosopher Ruler's strata, charged with articulating and examining the very principles by which their society operates."
+ job_supervisor_desc: "Enlightened thinkers charged with articulating and examining the very principles by which their society operates."
  job_supervisor_effect_desc: "£job_supervisor£ $job_supervisor_plural$ produce £unity£ §YUnity§!, increase £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!, multiply planetary $mod_planet_jobs_society_research_produces_mult$ and increase §Y$MOD_COUNTRY_ADMIN_CAP_ADD$§!."
- job_supervisor_plural: "Thinkers"
- job_supervisor: "Thinker"
+ job_supervisor_plural: "Philosophers"
+ job_supervisor: "Philosopher"
  job_techno_priest_desc: "It is the power of our Faith, that keeps these Machines up and running."
  job_techno_priest_effect_desc: "£job_priest£ $job_techno_priest_plural$ produce £engineering£ §Y$engineering_research$§! and £unity£ §Y$unity$§!, and reduce §Y$mod_planet_pops_robotics_upkeep_mult$§! by §G5%§!."
  job_techno_priest_plural: "Techno Priests"
@@ -1029,6 +1017,7 @@ l_polish:
  mixed_industrial_name: "Moderate"
  mixed_industrial: "Moderate"
  mod_category_good_trading_research_speed_mult: "Research Speed (Economics)"
+ mod_category_good_trading_draw_chance_mult:0 "Chance for §YEconomics§! Research Options"
  mod_category_statecraft_research_speed_mult: "Research Speed (Bureaucracy)"
  mod_decisions_cost_mult: "Decisions Cost"
  MOD_DISTANCE_TO_CAPITAL_STATIC_MODIFIER_EFFICIENCY_MULT: "Governing Ethic reduction due to Distance"
@@ -1585,9 +1574,9 @@ l_polish:
  PROGRESSIVE_NO_WELFARE: "No Social Equality"
  PROGRESSIVE_SLAVERY: "Slavery Allowed"
  PROGRESSIVE_STATE_MEDIA: "No Freedom of Speech"
- PROHIBITS_DECENT: "§EProhibits §HDecent§! Living Standards§!"
+ PROHIBITS_DECENT: "§EProhibits §HDecent§! living standards§!"
  PROHIBITS_SLAVERY: "§EProhibits to use §YEnslavement§! policy to enslave your own species§!"
- PROHIBITS_WELFARE: "§EProhibits §HSocial Welfare§! Living Standards§!"
+ PROHIBITS_WELFARE: "§EProhibits §HSocial Welfare§! living standards§!"
  promoted_capitalism_desc: "The §HIndividualist§! Ethic is being promoted by the government."
  promoted_capitalism: "Individualism Promoted"
  promoted_egalitarian_desc: "The §HLibertarian§! Ethic is being promoted by the government."
@@ -2202,10 +2191,9 @@ l_polish:
  XENOPHILE_INDOCTRINATION: "XENOPHILE INDOCTRINATION"
  XENOPHOBE_INDOCTRINATION_DESC: "Active §YIndoctrination: Xenophobia§! edict displeases the [Root.GetName]."
  XENOPHOBE_INDOCTRINATION: "XENOPHOBE INDOCTRINATION"
-#  job_politician: "Planetary Governor"
-#  job_politician_plural: "Planetary Governors"
-#  job_politician_desc: "Governing an entire planet is a daunting task that requires dedicated and highly trained individuals."
-
+ # job_politician: "Planetary Governor"
+ # job_politician_plural: "Planetary Governors"
+ # job_politician_desc: "Governing an entire planet is a daunting task that requires dedicated and highly trained individuals."
 
  ###########################################################################################
  ###########################################################################################
@@ -2215,39 +2203,29 @@ l_polish:
  ## ECAF NEW ###
  ###############
 
- ecaf_crew: "Crew"
- ecaf_crew_desc: "The brave crew that make up our naval personnel; they're the true backbone of our military strength."
- mod_country_resource_max_ecaf_crew_add: "Empire $crew$ Capacity"
- 
  auth_dict_democratic: "Democratic Autocracy"
  auth_dict_democratic_desc: "Democratic Autocracies are ruled by a single, democratically-elected, individual that wields absolute control over the state until their death."
  
  auth_strict_democratic: "Term Limited"
  auth_strict_democratic_desc: "Term Limited governments elect a ruler for one 15-year term."
 
- AUTHORITY_ELECTION_STRICT_DEMOCRATIC: "Holds an election every §H15§! years to select a new ruler. Rulers are limited to one term."
- AUTHORITY_HAS_HEIR_CORP: "Upon Ruler death, a designated successor takes over the family business."
-
  auth_corporate_imperial: "Private Corporate"
  auth_corporate_imperial_desc: "Private Corporate governments are organized as a family-owned massive commercial enterprise that has completely supplanted the role of the state."
 
- gov_democratic_dictatorship: "Elective Dictatorship"
- gov_democratic_dictatorship_desc: "This government is a dictatorship where a single individual has been democratically granted absolute powers to preserve the state."
+ gov_democratic_dictatorship: "Republican Dictatorship"
+ gov_democratic_dictatorship_desc: "A government where elected representatives exercise absolute power over the state. Rulers are voted in and reign until death, then a new ruler gets voted in."
  
  gov_strict_democracy: "Term Limited Democracy"
  gov_strict_democracy_desc: "This government is a representative democracy, where citizens vote on officials who are elected to represent them. Most offices have term limits, with the Head of State being limited to one term."
 
+ gov_megacorporation_fam: "Family Business"
+ gov_megacorporation_fam_desc: "This government operates under a form of corporate imperialism, where the entire state has been organized as a massive commercial enterprise overseen by a board of directors controlled by one family."
+
+ AUTHORITY_ELECTION_STRICT_DEMOCRATIC: "Holds an election every §H15§! years to select a new ruler. Rulers are limited to one term."
+ AUTHORITY_HAS_HEIR_CORP: "Upon Ruler death, a designated successor takes over the family business."
+
  moreauthorities.5.title: "Reform Government: Term Limited"
  moreauthorities.5.desc: "This decision will reform our system of government into one where the ruler is elected for a single 15-year term. The political capital required to implment term limits into our society means that once this action is taken, it it will be very difficult to undo. Are you sure?"
-
- moreauthorities.5.a: "I'm sure."
- moreauthorities.5.b: "Nevermind."
- 
- moreauthorities.6.title: "Reform Government: Eliminate Term Limits"
- moreauthorities.6.desc: "It'll take a tremendous amount of political capital, but we have the ability to eliminate term limits. You will be able to run in the next election, and any after that."
-
- moreauthorities.6.a: "I will run again."
- moreauthorities.6.b: "Nevermind."
 
  civic_tooltip_oli_imp_dict: "Is an §YOligarchic§!, §YImperial§!, or §YDictatorial§! Authority"
 
@@ -2276,7 +2254,7 @@ l_polish:
  format.monopolistic_trade_crime_fam.4: "<criminal_league> of [This.Capital.System.GetName]"
 
  #####
-
+ 
  opinion_capitalists_vs_collectivists: "Socialist Loons"
  opinion_industrialist_vs_ecologist: "Tree-Huggers"
 
@@ -2304,12 +2282,6 @@ l_polish:
  civic_tooltip_dic_imp_NEW:0 "Has a §YDictatorial§! or §YImperial§! Authority"
  civic_tooltip_dic_imp_oli:0 "Has a §YDictatorial§!, §YImperial§!, or §YOligarchic§! Authority"
 
- # Compat
- auth_corporate_fiefdom: "Corporate Fiefdom"
- auth_bugged_corporate_imperial:0 "Dynastic Enterprise"
- auth_tec_patrocorporate:0 "Patrimonial Corporate"
- auth_direct_democratic:0 "Direct Democratic"
-
  ###############
  # Governments #
  ###############
@@ -2329,7 +2301,10 @@ l_polish:
  plutocracy_gov_reg_loc: "\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_capitalism$§!, £building£ §YCapital Buildings§! replace some £job_politician£ §Y$job_politician$§! Jobs with £job_merchant£ §Y$job_merchant_plural$§!\n\n$jjob_merchant_effect_desc$§!"
  plutocracy_gov_corp_loc: "\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_capitalism$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_merchant£ §Y$job_merchant_plural$§!\n\n$job_merchant_effect_desc$§!"
 
- plutocracy_gov_corp_loc: ""
+ isocracy_gov_reg_loc: "\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_socialism$§!, £building£ §YCapital Buildings§! replace some £job_politician£ §Y$job_politician$§! Jobs with £job_commisar£ §Y$job_commisar_plural$§!\n\n$job_commisar_effect_desc$§!"
+
+ diplocracy_gov_reg_loc: "\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_xenophile$§!, £building£ §YCapital Buildings§! replace some £job_politician£ §Y$job_politician$§! Jobs with £job_ambassador£ §Y$job_ambassador_plural$§!\n\n$job_ambassador_effect_desc$§!"
+ diplocracy_gov_corp_loc: "\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_capitalism$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_ambassador£ §Y$job_ambassador_plural$§!\n\n$job_ambassador_effect_desc$§!"
 
  aristocracy_gov_reg_loc: "\n\n§EEffects:§!\n§T£building£ §YCapital Buildings§! replace some £job_politician£ §Y$job_politician$§! Jobs with £job_noble£ §Y$job_noble_plural$§!\n\n$job_noble_effect_desc$§!"
  aristocracy_gov_corp_loc: "\n\n§EEffects:§!\n§T£building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_noble£ §Y$job_noble_plural$§!\n\n$job_noble_effect_desc$§!"
@@ -2348,9 +2323,6 @@ l_polish:
 
  gov_trade_league_fam: "Trading Clans"
  gov_trade_league_fam_desc: "This government operates under a form of corporate feudalism, where almost all businesses are family-owned. The monarch rules indirectly, granting business licenses and properties to a myriad of merchants, guilds, and smaller corporations in exchange for obligations in the form of taxes and military provisions.$plutocracy_gov_corp_loc$"
-
- gov_megacorporation_fam: "Family Business"
- gov_megacorporation_fam_desc: "This government operates under a form of corporate imperialism, where the entire state has been organized as a massive commercial enterprise overseen by a board of directors controlled by one family."
 
  gov_megachurch_fam: "Megachurch"
  gov_megachurch_fam_desc: "This government is a corporate monarchy based on a curious blend of commercial and spiritualistic values, in which the monarch holds the positions of supreme ordained minister and head corporate officer simultaneously.$theocracy_gov_corp_loc$"
@@ -2392,83 +2364,27 @@ l_polish:
 
  RT_CUSTODIAN: "Noble Custodian"
 
- # Spiritualist High Priest Governments
- gov_theocratic_monarchy_desc: "This government is a spiritualistic form of autocracy, where the ruler is treated as a divine symbol. Organized religion is widely employed in support of the state apparatus.$theocracy_gov_reg_loc$"
- gov_theocratic_dictatorship_desc: "This government is a spiritualistic dictatorship, ruled by a single individual in a hierarchical power structure supported by the official state religion.$theocracy_gov_reg_loc$"
- gov_theocratic_oligarchy_desc: "This government is a spiritualistic form of oligarchy, where the political leadership lies in the hands of the leaders of the nation's most powerful religious factions.$theocracy_gov_reg_loc$"
- gov_theocratic_republic_desc: "This government is a spiritualistic form of democracy, where a religious council supervises the democratic process and serves in an advisory role.$theocracy_gov_reg_loc$"
- gov_divine_empire_desc: "This government is a form of spiritualistic autocracy. Everything is shaped by the official state religion, and the ruler is worshiped as an infallible living god.$theocracy_gov_reg_loc$"
- gov_holy_tribunal_desc: "This government is a spiritualistic form of oligarchy, where a divinely guided council made up of clergy controls the state. No division exists between the state and the dominant organized religion.$theocracy_gov_reg_loc$"
- gov_megachurch_desc: "This government is an oligarchy based on a curious blend of commercial and spiritualistic values, in which the positions of ordained minister and corporate officer have merged into a single role.$theocracy_gov_corp_loc$"
-  gov_sacrificial_megachurch_desc:0 "This government blends its commercial and spiritual goals within a grim oligarchy, in which ordained overseers encourage greater prosperity through ritualized sacrifice.$theocracy_gov_corp_loc$"
- gov_subversive_cult_desc: "This government is structured like a religious cult that relies on a variety of criminal and corporate enterprises to sustain itself.$theocracy_gov_corp_loc$"
-
- # Noble Aristocratic Governments
- gov_imperial_domain_desc:1 "§LThis government rules the Galactic Imperium's central crown territory, which is under the direct control of the Imperial Sovereign.§!$aristocracy_gov_reg_loc$"
- gov_elective_monarchy_desc: "This government is a form of enlightened autocracy, where a strong emphasis is put on the knowledge and qualifications of the elected monarch.$aristocracy_gov_reg_loc$"
- gov_noble_aristocracy_desc: "The whole political power in this society belongs to the council of representatives of the ancient patrimonial aristocratic Houses.$aristocracy_gov_reg_loc$"
- gov_aristocratic_republic_desc: "A form of representative democracy, in which only those who belong to social Elite may be elected to Senate and rule on behalf of the people.$aristocracy_gov_reg_loc$"
- gov_aristocratic_monarchy_desc: "Form of monarchy, in which hereditary Ruler does not have absolute power, but has to share it with the most influential members of Nobility.$aristocracy_gov_reg_loc$"
- gov_feudal_empire_desc: "This government is a feudal autocracy where the monarch rules indirectly, granting offices and territories to vassals in exchange for obligations in the form of taxes and military service.$aristocracy_gov_reg_loc$"
- gov_great_houses: "Great Houses"
- gov_great_houses_desc: "This civilization is ruled by the leadership council of a few Great Houses, which traditions derives from ancient clans and tribes, but which now function more as political parties. Unlike in classic Noble Aristocracy, house membership is not tied to patrimonial matters, such as birth or marriage, but rather anyone can be adopted to the House and advance to it's highest ranks, as long as he pledges loyalty to the House and preserve it's Tradition.$aristocracy_gov_reg_loc$"
- gov_benevolent_aristocracy: "Benevolent Aristocracy"
- gov_benevolent_aristocracy_desc: "The council of representatives of the patrimonial aristocratic Houses believe it is their duty to care for all equally.$aristocracy_gov_reg_loc$"
-
-
- # Materialist Head Researcher Governments
- gov_despotic_hegemony_desc: "This government is a materialistic form of hereditary autocracy, where citizens are viewed as little more than cogs in the state machinery. Efficiency and technological progress are valued above all things.$technocracy_gov_reg_loc$"
- gov_totalitarian_regime_desc: "This government is a materialistic form of autocracy, where the state aspires towards full control over the lives of its citizens in the name of efficiency.$technocracy_gov_reg_loc$"
- gov_executive_committee_desc: "This government is a materialistic form of oligarchy, where a powerful bureaucracy governs the state and guides the citizenry towards productive and meaningful goals.$technocracy_gov_reg_loc$"
- gov_illuminated_autocracy_desc: "This government is a materialistic form of hereditary autocracy, based on technocratic principles that the sovereign is sworn to uphold. Nothing is valued more highly than scientific knowledge and the advancement of technology.$technocracy_gov_reg_loc$"
- gov_technocratic_dictatorship_desc: "This government is a materialistic form of autocracy, where the scientific elite has assumed control over the state in the name of efficiency and technological progress.$technocracy_gov_reg_loc$"
- gov_science_directorate_desc: "This government is a materialistic form of oligarchy, where a committee of scientists supervises the government apparatus for maximum efficiency.$technocracy_gov_reg_loc$"
- gov_rational_consensus_desc: "This government is a materialistic form of democracy, governed according to principles based on rationality and scientific theory.$technocracy_gov_reg_loc$"
- gov_research_development_corp: "Research & Development Corporation"
- gov_research_development_corp_desc: "This government is a materialistic form of corporate authority, where the board of directors is made up of highly educated individuals whose goal is to develop the best tech in the galaxy!$technocracy_gov_corp_loc$"
-
- # Mogul Governments
- gov_trade_league_desc: "This government is a form of plutocratic oligarchy, where the state is made up of a myriad of free merchants, corporations and guilds that have banded together in common commercial interests.$plutocracy_gov_reg_loc$"
- gov_minarchy_desc: "A form of minimal 'night-watchman' state, that is not responsible for the education, health care, employment or transportation of its citizens, neither makes it any use of natural resources in its territory. All of this is instead held privately or publicly, but is never susceptible to any interference of the state, its law or its representatives.$plutocracy_gov_reg_loc$"
- gov_timocracy_desc: "A state, where political rights of the population are stratified according to the amount of property they own.$plutocracy_gov_reg_loc$"
-
- # Militarist Commander Governments
- gov_star_empire_desc: "This government is a hereditary and militaristic form of autocracy, with a single sovereign controlling both the government and the military.$stratocracy_gov_reg_loc$"
- gov_military_dictatorship_desc: "This government is a militaristic form of autocracy, with the ruler serving as the undisputed head of the military which is firmly in control of the state apparatus.$stratocracy_gov_reg_loc$"
- gov_military_junta_desc: "This government is a militaristic form of oligarchy, where power rests with a council of high-ranking military officers who oversee all matters of state.$stratocracy_gov_reg_loc$"
-
- gov_military_commissariat_desc: "This government is nominally democratic, but the dividing line between the civil administration and the military has blurred to the point where they have largely become one and the same.$stratocracy_gov_reg_loc$"
-
- gov_martial_empire_desc: "This government is a militaristic form of hereditary autocracy, where the state exists largely to support the military. Martial ability is highly valued, and all citizens are regularly drilled in matters of war.$stratocracy_gov_reg_loc$"
- gov_martial_dictatorship_desc: "This government is a militaristic form of autocracy, where the warrior who is considered the strongest leader rules with absolute power. $stratocracy_gov_reg_loc$"
- gov_war_council_desc: "This government is a militaristic form of oligarchy, where all decisions concerning the state are taken by a council of the nation's strongest warlords.$stratocracy_gov_reg_loc$"
- gov_assembly_of_clans_desc: "This government is a militaristic form of democracy, where all free clan warriors can make their voices heard.$stratocracy_gov_reg_loc$"
- gov_citizen_stratocracy_desc: "This government is an advanced form of militaristic oligarchy, where the military has subsumed all aspects of civilian administration. All government offices are held by military officers.$stratocracy_gov_reg_loc$"
- gov_citizen_republic_desc: "This government is a militaristic form of democracy, where full citizenship can only be gained through military service. The voting franchise is limited to full citizens, and they are the only ones allowed to hold public offices.$stratocracy_gov_reg_loc$"
- gov_jingoism_desc: "This form of authoritarian governance is headed by a xenophobic demagogue and notions of national supremacy and manifest destiny dominate the politics.$stratocracy_gov_reg_loc$"
- gov_anarchy_communism_desc: "An extreme form of Communist dictatorship, characterized with nationalization of all industries and the introduction of strict centralized management, state control of foreign trade, strict discipline for workers, with strikes forbidden and obligatory labor duty by non-working classes.$stratocracy_gov_reg_loc$"
- gov_military_corp_desc: "Government is represented by a massive military-industrial holding, with board of directors consisting solely of active war-chiefs.$stratocracy_gov_corp_loc$"
- gov_bandit_kingdom_desc: "This government is organized like a massive crime syndicate, where the strong prey on the weak and any neighboring states are seen as little more than raiding targets.$stratocracy_gov_reg_loc$"
- gov_band_blood_desc:0 "This ruthless society is governed through conflict and ritualized sacrifice, honoring death within and without.$stratocracy_gov_reg_loc$"
- gov_blood_court_desc: "This government is a hereditary form of rabidly xenophobic autocracy, where the ultimate responsibility of the monarch is to oversee the extermination of all lesser species in the galaxy.$stratocracy_gov_reg_loc$"
- gov_purity_order_desc: "This government is a form of rabidly xenophobic autocracy, where a single ruler has sworn to oversee the extermination of all lesser species in the galaxy.$stratocracy_gov_reg_loc$"
- gov_purification_committee_desc: "This government is a form of rabidly xenophobic oligarchy, where a political committee has been set up to oversee the extermination of all lesser species in the galaxy.$stratocracy_gov_reg_loc$"
- gov_purity_assembly_desc: "This government is a form of rabidly xenophobic democracy, where an elected assembly has been charged with overseeing the extermination of all lesser species in the galaxy.$stratocracy_gov_reg_loc$"
- gov_dread_brotherhood_desc: "An extremely xenophobic form of direct democracy, where all citizens are bound by the common goal - the destruction of all lesser life forms in the galaxy.$stratocracy_gov_reg_loc$"
-  gov_successor_khanate_desc:0 "A successor state trying to recapture the glory of the Great Khan's empire.$stratocracy_gov_reg_loc$"
- # Pacifist Philosopher Governments
- gov_irenic_monarchy_desc: "This government is a pacifist form of hereditary autocracy, where the ruler is regarded as a benevolent guardian that is striving to protect the citizens from a violent galaxy.$bureaucracy_gov_reg_loc$"
- gov_irenic_dictatorship_desc: "This government is a pacifist form of autocracy, where the state is charged with protecting the citizenry from their own violent tendencies as well as any external threats.$bureaucracy_gov_reg_loc$"
- gov_irenic_bureaucracy_desc: "This government is a pacifistic form of oligarchy, where a complicated system of bureaucracy governs all aspects of society to ensure the safety of the citizenry.$bureaucracy_gov_reg_loc$"
- gov_moral_democracy_desc: "This government is a pacifistic form of democracy, firmly guided by moralist principles and non-violence.$bureaucracy_gov_reg_loc$"
-
- #######################################
- # Government Variety Pack Governments #
- #######################################
-
  ###############################
  ### High Priest Governments ###
  ###############################
+
+ gov_theocratic_monarchy_desc: "This government is a spiritualistic form of autocracy, where the ruler is treated as a divine symbol. Organized religion is widely employed in support of the state apparatus.$theocracy_gov_reg_loc$"
+ 
+ gov_theocratic_dictatorship_desc: "This government is a spiritualistic dictatorship, ruled by a single individual in a hierarchical power structure supported by the official state religion.$theocracy_gov_reg_loc$"
+ 
+ gov_theocratic_oligarchy_desc: "This government is a spiritualistic form of oligarchy, where the political leadership lies in the hands of the leaders of the nation's most powerful religious factions.$theocracy_gov_reg_loc$"
+ 
+ gov_theocratic_republic_desc: "This government is a spiritualistic form of democracy, where a religious council supervises the democratic process and serves in an advisory role.$theocracy_gov_reg_loc$"
+ 
+ gov_divine_empire_desc: "This government is a form of spiritualistic autocracy. Everything is shaped by the official state religion, and the ruler is worshiped as an infallible living god.$theocracy_gov_reg_loc$"
+ 
+ gov_holy_tribunal_desc: "This government is a spiritualistic form of oligarchy, where a divinely guided council made up of clergy controls the state. No division exists between the state and the dominant organized religion.$theocracy_gov_reg_loc$"
+ 
+ gov_megachurch_desc: "This government is an oligarchy based on a curious blend of commercial and spiritualistic values, in which the positions of ordained minister and corporate officer have merged into a single role.$theocracy_gov_corp_loc$"
+ 
+ gov_sacrificial_megachurch_desc:0 "This government blends its commercial and spiritual goals within a grim oligarchy, in which ordained overseers encourage greater prosperity through ritualized sacrifice.$theocracy_gov_corp_loc$"
+ 
+ gov_subversive_cult_desc: "This government is structured like a religious cult that relies on a variety of criminal and corporate enterprises to sustain itself.$theocracy_gov_corp_loc$"
 
  lrsk_gov_var_gov_crusader_kingdom_desc:0 "This government is a zealous warrior monarchy dedicated to defending and spreading its faith by force.$theocracy_gov_reg_loc$"
 
@@ -2486,6 +2402,26 @@ l_polish:
  ### Science Director Governments ###
  ####################################
 
+ gov_despotic_hegemony_desc: "This government is a materialistic form of hereditary autocracy, where citizens are viewed as little more than cogs in the state machinery. Efficiency and technological progress are valued above all things.$technocracy_gov_reg_loc$"
+ 
+ gov_totalitarian_regime_desc: "This government is a materialistic form of autocracy, where the state aspires towards full control over the lives of its citizens in the name of efficiency.$technocracy_gov_reg_loc$"
+ 
+ gov_executive_committee_desc: "This government is a materialistic form of oligarchy, where a powerful bureaucracy governs the state and guides the citizenry towards productive and meaningful goals.$technocracy_gov_reg_loc$"
+
+ gov_direct_democracy_desc: "This government is a materialistic form of democracy, where citizens use computer networks to vote directly on most matters regarding the state.$technocracy_gov_reg_loc$"
+ 
+ gov_illuminated_autocracy_desc: "This government is a materialistic form of hereditary autocracy, based on technocratic principles that the sovereign is sworn to uphold. Nothing is valued more highly than scientific knowledge and the advancement of technology.$technocracy_gov_reg_loc$"
+ 
+ gov_technocratic_dictatorship_desc: "This government is a materialistic form of autocracy, where the scientific elite has assumed control over the state in the name of efficiency and technological progress.$technocracy_gov_reg_loc$"
+ 
+ gov_science_directorate_desc: "This government is a materialistic form of oligarchy, where a committee of scientists supervises the government apparatus for maximum efficiency.$technocracy_gov_reg_loc$"
+ 
+ gov_rational_consensus_desc: "This government is a materialistic form of democracy, governed according to principles based on rationality and scientific theory.$technocracy_gov_reg_loc$"
+ 
+ gov_research_development_corp: "Research & Development Corporation"
+ 
+ gov_research_development_corp_desc: "This government is a materialistic form of corporate authority, where the board of directors is made up of highly educated individuals whose goal is to develop the best tech in the galaxy!$technocracy_gov_corp_loc$"
+
  lrsk_gov_var_gov_innovation_initiative_desc:0 "This government, from the outside, seems to be like a university or laboratory that has absorbed the functions of a state. Internally, its politics are like a series of experiments in governmental and social organizational forms.$technocracy_gov_reg_loc$"
 
  lrsk_gov_var_gov_academy_state_desc:0 "This government seems to be so devoted to advancing and spreading knowledge that it's rather like a gigantic university with a faculty administration. Rank in government closely tracks degrees of training and education.$technocracy_gov_reg_loc$"
@@ -2499,6 +2435,50 @@ l_polish:
  ###############################
  ### Commandante Governments ###
  ###############################
+
+ gov_star_empire_desc: "This government is a hereditary and militaristic form of autocracy, with a single sovereign controlling both the government and the military.$stratocracy_gov_reg_loc$"
+
+ gov_military_dictatorship_desc: "This government is a militaristic form of autocracy, with the ruler serving as the undisputed head of the military which is firmly in control of the state apparatus.$stratocracy_gov_reg_loc$"
+
+ gov_military_junta_desc: "This government is a militaristic form of oligarchy, where power rests with a council of high-ranking military officers who oversee all matters of state.$stratocracy_gov_reg_loc$"
+
+ gov_military_commissariat_desc: "This government is nominally democratic, but the dividing line between the civil administration and the military has blurred to the point where they have largely become one and the same.$stratocracy_gov_reg_loc$"
+
+ gov_martial_empire_desc: "This government is a militaristic form of hereditary autocracy, where the state exists largely to support the military. Martial ability is highly valued, and all citizens are regularly drilled in matters of war.$stratocracy_gov_reg_loc$"
+
+ gov_martial_dictatorship_desc: "This government is a militaristic form of autocracy, where the warrior who is considered the strongest leader rules with absolute power. $stratocracy_gov_reg_loc$"
+
+ gov_war_council_desc: "This government is a militaristic form of oligarchy, where all decisions concerning the state are taken by a council of the nation's strongest warlords.$stratocracy_gov_reg_loc$"
+
+ gov_assembly_of_clans_desc: "This government is a militaristic form of democracy, where all free clan warriors can make their voices heard.$stratocracy_gov_reg_loc$"
+
+ gov_citizen_stratocracy_desc: "This government is an advanced form of militaristic oligarchy, where the military has subsumed all aspects of civilian administration. All government offices are held by military officers.$stratocracy_gov_reg_loc$"
+
+ gov_citizen_republic_desc: "This government is a militaristic form of democracy, where full citizenship can only be gained through military service. The voting franchise is limited to full citizens, and they are the only ones allowed to hold public offices.$stratocracy_gov_reg_loc$"
+
+ gov_jingoism_desc: "This form of authoritarian governance is headed by a xenophobic demagogue and notions of national supremacy and manifest destiny dominate the politics.$stratocracy_gov_reg_loc$"
+
+ gov_military_corp_desc: "Government is represented by a massive military-industrial holding, with board of directors consisting solely of active war-chiefs.$stratocracy_gov_corp_loc$"
+
+ gov_bandit_kingdom_desc: "This government is organized like a massive crime syndicate, where the strong prey on the weak and any neighboring states are seen as little more than raiding targets.$stratocracy_gov_reg_loc$"
+
+ gov_band_blood_desc:0 "This ruthless society is governed through conflict and ritualized sacrifice, honoring death within and without.$stratocracy_gov_reg_loc$"
+
+ gov_blood_court_desc: "This government is a hereditary form of rabidly xenophobic autocracy, where the ultimate responsibility of the monarch is to oversee the extermination of all lesser species in the galaxy.$stratocracy_gov_reg_loc$"
+
+ gov_purity_order_desc: "This government is a form of rabidly xenophobic autocracy, where a single ruler has sworn to oversee the extermination of all lesser species in the galaxy.$stratocracy_gov_reg_loc$"
+
+ gov_purification_committee_desc: "This government is a form of rabidly xenophobic oligarchy, where a political committee has been set up to oversee the extermination of all lesser species in the galaxy.$stratocracy_gov_reg_loc$"
+ 
+ gov_purity_assembly_desc: "This government is a form of rabidly xenophobic democracy, where an elected assembly has been charged with overseeing the extermination of all lesser species in the galaxy.$stratocracy_gov_reg_loc$"
+ 
+ gov_dread_brotherhood_desc: "An extremely xenophobic form of direct democracy, where all citizens are bound by the common goal - the destruction of all lesser life forms in the galaxy.$stratocracy_gov_reg_loc$"
+ 
+ gov_successor_khanate_desc:0 "A successor state trying to recapture the glory of the Great Khan's empire.$stratocracy_gov_reg_loc$"
+
+ gov_mortal_empire_desc:0 "This theocratic monarchy engages in ritualized, sapient sacrifice.$stratocracy_gov_reg_loc$"
+
+ gov_grim_council_desc:0 "This nation's most powerful religious figures have formed a ruling council, overseeing an empire which engages in ritualized, sapient sacrifice.$stratocracy_gov_reg_loc$"
 
  lrsk_gov_var_gov_folkish_commonwealth_desc:0 "This government is a nationalist-populist republic that maintains loyalty by exploiting common prejudices.$stratocracy_gov_reg_loc$"
 
@@ -2518,12 +2498,6 @@ l_polish:
 
  lrsk_gov_var_gov_citizen_legion_desc:0 "This government is a rabidly xenophobic state in which political rights are granted to veterans: only those who have risked their lives to eradicate the xeno threat are trusted with the franchise. Its volunteer legions will cleanse the galaxy of all threats to the polity.$stratocracy_gov_reg_loc$"
 
- lrsk_gov_var_gov_social_imperialism_desc:0 "This socialist dictatorship maintains stability by the widespread distribution of goods and services... underwritten by imperial avarice. With an expansionistic policy that shows little regard for concepts of self-determination and equality, those who fall beneath the hegemony of this state in the name of interplanetary revolution are aptly called 'captive nations.'$stratocracy_gov_reg_loc$"
-
- lrsk_gov_var_gov_pure_social_republic_desc:0 "The emancipated proletarians of this master-race worker's state are interested in breaking only one kind of chain - the chains binding the souls of degenerate aliens to their living bodies!$stratocracy_gov_reg_loc$"
-
- lrsk_gov_var_gov_peasant_dictatorship_desc:0 "When a revolutionary party organized the peasantry against their oppressors - landlords, foreign imperialists, and urban capitalists - they enacted a program of radical agrarian collectivism. The result is a ruthless dictatorship where city dwellers and intellectuals are routinely forced to leave the cities and join the peasants in the countryside to learn humility and equality. The party draws its base of support from the peasantry and its governing priorities reflect agrarian needs.$stratocracy_gov_reg_loc$"
-
  lrsk_gov_var_gov_enterprise_society_desc:0 "This government takes the protection of private property very seriously as its highest responsibility. Its citizens support strict law enforcement measures and stripping political rights from criminals and 'the unproductive.'$stratocracy_gov_reg_loc$"
 
  lrsk_gov_var_gov_enterprise_junta_desc:0 "This government is based on the principle that people can have great personal freedom even without political rights, and that it's probably better that way. A police or military clique ensures order in the name of freedom of initiative and protection of property.$stratocracy_gov_reg_loc$"
@@ -2531,18 +2505,23 @@ l_polish:
  lrsk_gov_var_gov_enterprise_authority_desc:0 "This government is based on the principle that people can have great personal freedom even without political rights, and that it's probably better that way. A police or military commander ensures order in the name of freedom of initiative and protection of property.$stratocracy_gov_reg_loc$"
 
  lrsk_gov_var_gov_revolutionary_republic_desc:0 "This government is a democratic state that sees the strident defense of its liberties against enemies domestic and foreign as its highest duty. This vigilant stance may lead to a policy of preemptive regime change in other empires.$stratocracy_gov_reg_loc$"
+ 
  lrsk_gov_var_gov_republican_protectorate_desc:0 "This government is, in theory, a republic with a revolutionary and liberatory mission. In practice, over-extension of its military forces and the need to manage an empire of vassal states has led to the rule of populist military leaders.$stratocracy_gov_reg_loc$"
 
  ###############################
  ### Philosopher Governments ###
  ###############################
+
+ gov_irenic_monarchy_desc: "This government is a pacifist form of hereditary autocracy, where the ruler is regarded as a benevolent guardian that is striving to protect the citizens from a violent galaxy.$bureaucracy_gov_reg_loc$"
  
- lrsk_gov_var_gov_utopian_despotism_dic_desc:0 "Either as hereditary monarchs or dictators elected for life, the rulers of this society have secured their rule by eradicating poverty amongst their subjects, who dwell in collective communes according to a precise social plan. Though essential class divisions remain, the benevolent despots take special care of the people in the spirit of philanthropy, universal love, and moral improvement.$bureaucracy_gov_reg_loc$"
+ gov_irenic_dictatorship_desc: "This government is a pacifist form of autocracy, where the state is charged with protecting the citizenry from their own violent tendencies as well as any external threats.$bureaucracy_gov_reg_loc$"
+ 
+ gov_irenic_bureaucracy_desc: "This government is a pacifistic form of oligarchy, where a complicated system of bureaucracy governs all aspects of society to ensure the safety of the citizenry.$bureaucracy_gov_reg_loc$"
+ 
+ gov_moral_democracy_desc: "This government is a pacifistic form of democracy, firmly guided by moralist principles and non-violence.$bureaucracy_gov_reg_loc$"
 
- lrsk_gov_var_gov_utopian_socialism_desc:0 "The people live in precisely planned collective communes, safe in the knowledge that a rational and humane economic system provides for all their needs. Though essential class divisions remain, the benevolent economic planners take special care of their workers in the spirit of philanthropy, universal love, and moral improvement.$bureaucracy_gov_reg_loc$"
-
- lrsk_gov_var_gov_onestate_socialism_desc:0 "This society has committed itself to constructing socialism in one state, and has renounced the ideal of interplanetary revolution beyond indirect support. Though ready to defend itself against any aggressor, this society directs all its efforts towards the task of socialist construction within its own borders so as to be an inspiration to revolutionaries elsewhere.$bureaucracy_gov_reg_loc$"
-
+ gov_enlightened_monarchy_desc:0 "This government is a form of enlightened autocracy, where a strong emphasis is put on the knowledge and qualifications of the ruling monarch.$bureaucracy_gov_reg_loc$"
+ 
  lrsk_gov_var_gov_rustic_republic_desc:0 "Though some urban centers do exist, the vast majority of the population live and work in the countryside. As a result, when a republican system was adopted, the peasant population so completely outvoted every other class that only those politicians who espouse an agrarian agenda had any chance of success. Permanently preoccupied with matters of rural policy, the government of this society has neither time nor political capital to spare on reckless empire building.$bureaucracy_gov_reg_loc$"
 
  lrsk_gov_var_gov_peasant_commune_collective_desc:0 "This society is a federation of largely self-reliant farming communes, run by elected village councils who delegate their authority to a central government that handles foreign policy and coordinates responses to disasters. It is a fundamentally peaceful society with little interest in conquest.$bureaucracy_gov_reg_loc$"
@@ -2558,6 +2537,18 @@ l_polish:
  #########################
  ### Mogul Governments ###
  #########################
+
+ gov_trade_league_desc: "This government is a form of plutocratic oligarchy, where the state is made up of a myriad of free merchants, corporations and guilds that have banded together in common commercial interests.$plutocracy_gov_reg_loc$"
+
+ gov_minarchy_desc: "A form of minimal 'night-watchman' state, that is not responsible for the education, health care, employment or transportation of its citizens, neither makes it any use of natural resources in its territory. All of this is instead held privately or publicly, but is never susceptible to any interference of the state, its law or its representatives.$plutocracy_gov_reg_loc$"
+
+ gov_timocracy_desc: "A state, where political rights of the population are stratified according to the amount of property they own.$plutocracy_gov_reg_loc$"
+
+ gov_criminal_syndicate_desc:0 "This government is an enormous and ruthless business syndicate, which shares many of its operating practices with organized crime.$plutocracy_gov_reg_loc$"
+
+  gov_imperial_domain_megacorp_desc:0 "§LThis government rules the Galactic Imperium's central crown territory, which is under the direct control of the Imperial Sovereign.§!$plutocracy_gov_reg_loc$"
+
+ gov_cor_dictatorship_desc: "An extremely capitalistic form of government, where powerful Corporations completely took over political and economical life of the society.$plutocracy_gov_reg_loc$"
 
  lrsk_gov_var_gov_merchant_principality_d_desc:0 "$LRSK_GOV_VAR_GOV_MERCHANT_PRINCIPALITY_COMMON$ These powerful business magnates representing the wealthiest firms select from their number a final arbitrator of internal issues according to the candidates' past records of discernment and wise business decisions.$plutocracy_gov_reg_loc$"
 
@@ -2593,27 +2584,99 @@ l_polish:
 
  lrsk_gov_var_gov_galactic_cartel_desc:0 "This government is a staggeringly ambitious business with designs on total galactic monopoly. Its selection is unbelievably diverse, its stock value soaring, its employees productive and courteous. Any who are not yet loyal customers feel an emptiness they don't yet know how to fill, or so the stockholders believe.$plutocracy_gov_reg_loc$"
 
+ ############################
+ ### Commisar Governments ###
+ ############################
+
+ gov_strasserism_desc: "A form of government ideology, based on strong nationalistic ideals in culture and politics, and egalitarian ideals in the sphere of economy.$isocracy_gov_reg_loc$"
+
+ gov_soviet_republic_desc: "A type of republic ruled by directly elected 'Soviets' - workers councils, which are directly responsible to their electors. There is no separation of powers, and elected Delegates act as legislators, government and courts in one.$isocracy_gov_reg_loc$"
+
+ gov_anarchy_communism_desc: "An extreme form of Communist dictatorship, characterized with nationalization of all industries and the introduction of strict centralized management, state control of foreign trade, strict discipline for workers, with strikes forbidden and obligatory labor duty by non-working classes.$isocracy_gov_reg_loc$"
+
+ gov_bur_collectivism_desc: "A bureaucratic collectivist state owns the means of production, while the surplus or profit is distributed among an elite party bureaucracy, rather than among the working class.$isocracy_gov_reg_loc$"
+
+ gov_communist_dictatorship_desc: "A political system, where the central government nationalizes ownership of the means of production from private to collective ownership, for the sake of achieving socialism and progressing toward a truly communist society.$isocracy_gov_reg_loc$"
+
+ gov_peoples_commissariat_desc: "Government is appointed and monitored by a special Emergency Committee, which members has to be approved by the People, and work collectively to preserve the welfare of the Empire.$isocracy_gov_reg_loc$"
+
+ gov_peoples_republic_desc: "Government is an egalitarian form of dictatorship. There is an actual parliament, but it's dominated by a single political power - so-called 'People's Party'.$isocracy_gov_reg_loc$"
+
+ gov_communal_parity_desc:0 "This government promotes total equality for all of its citizens, regardless of their jobs or assigned tasks. One life is worth the same as any other.$isocracy_gov_reg_loc$"
+
+ lrsk_gov_var_gov_communal_democracy_desc:0 "This government has extended the principle of representative government to the whole political economy, with the central state being simply the largest-scale democratic decision making body. The personal truly is political, and its citizens collectively participate in nearly all the relevant decisions of all aspects of their lives.$isocracy_gov_reg_loc$"
+  
+ lrsk_gov_var_gov_feudal_socialism_desc:0 "The aristocracy of this society were able to strangle capitalism in its cradle by convincing the workers and peasants that only the noble orders of society could protect them from exploitation. Now the monarch and the court control state-run industries in the same manner as the landed estates of old, passing down mines and manufactories by right of birth. The workers are bound as serfs to their production lines in exchange for the traditional noble obligation of charity, which is much more generous thanks to industrial production methods.$isocracy_gov_reg_loc$"
+
+ lrsk_gov_var_gov_onestate_socialism_desc:0 "This society has committed itself to constructing socialism in one state, and has renounced the ideal of interplanetary revolution beyond indirect support. Though ready to defend itself against any aggressor, this society directs all its efforts towards the task of socialist construction within its own borders so as to be an inspiration to revolutionaries elsewhere.$isocracy_gov_reg_loc$"
+ 
+ lrsk_gov_var_gov_peasant_dictatorship_desc:0 "When a revolutionary party organized the peasantry against their oppressors - landlords, foreign imperialists, and urban capitalists - they enacted a program of radical agrarian collectivism. The result is a ruthless dictatorship where city dwellers and intellectuals are routinely forced to leave the cities and join the peasants in the countryside to learn humility and equality. The party draws its base of support from the peasantry and its governing priorities reflect agrarian needs.$isocracy_gov_reg_loc$"
+ 
+ lrsk_gov_var_gov_pure_social_republic_desc:0 "The emancipated proletarians of this master-race worker's state are interested in breaking only one kind of chain - the chains binding the souls of degenerate aliens to their living bodies!$isocracy_gov_reg_loc$"
+ 
+ lrsk_gov_var_gov_reactionary_socialism_desc:0 "Once, the old elites of this society were threatened by the rise of capitalism. In response, an alliance of the aristocrats and petty-bourgeoise were able to manipulate the emerging working class into siding with them against the new captains of industry. The result is that a restrictive system of state ownership, regulations, tariffs, and taxation to prevent the new self-made bourgeoise from ever threatening to size state power away from old money and old blood.$isocracy_gov_reg_loc$"
+ 
+ lrsk_gov_var_gov_socialist_plenary_desc:0 "This government operates under an ongoing series of panels, committees, and conferences held by representatives of various trade unions and worker-stakeholder organizations. While high politics is a bit distant from the ordinary citizen's reach, locally and regionally they are active and engaged in all the decisions that affect their lives.$isocracy_gov_reg_loc$"
+ 
+ lrsk_gov_var_gov_social_imperialism_desc:0 "This socialist dictatorship maintains stability by the widespread distribution of goods and services... underwritten by imperial avarice. With an expansionistic policy that shows little regard for concepts of self-determination and equality, those who fall beneath the hegemony of this state in the name of interplanetary revolution are aptly called 'captive nations.'$isocracy_gov_reg_loc$"
+ 
+ lrsk_gov_var_gov_utopian_despotism_dic_desc:0 "Either as hereditary monarchs or dictators elected for life, the rulers of this society have secured their rule by eradicating poverty amongst their subjects, who dwell in collective communes according to a precise social plan. Though essential class divisions remain, the benevolent despots take special care of the people in the spirit of philanthropy, universal love, and moral improvement.$isocracy_gov_reg_loc$"
+ 
+ lrsk_gov_var_gov_utopian_socialism_desc:0 "The people live in precisely planned collective communes, safe in the knowledge that a rational and humane economic system provides for all their needs. Though essential class divisions remain, the benevolent economic planners take special care of their workers in the spirit of philanthropy, universal love, and moral improvement.$isocracy_gov_reg_loc$"
+
+ lrsk_gov_var_gov_workers_republic_desc:0 "This is a republican system of government where the working class and their elected leaders are predominant. Though similar in structure to most republics, the most influential political blocs are the labor unions and cooperative industry lobbies.$isocracy_gov_reg_loc$"
+
+ ############################
+ ### Diplomat Governments ###
+ ############################
+
+ gov_xenophile_democracy_desc: "A form of government, ruled by an elected parliament, consisting of the most honorable representatives of different species, dominating in this World.$diplocracy_gov_reg_loc$"
+
+ gov_liberal_democracy_desc: "A form of government, characterized by elections between multiple distinct political parties, a separation of powers, a market economy with private property and the equal protection of civil rights, civil liberties and political freedoms.$diplocracy_gov_reg_loc$"
+
+ gov_par_monarchy_desc: "A state headed by a monarch who is not actively involved in policy formation or implementation. True governmental leadership is carried out by a cabinet and its head - a prime minister, premier, or chancellor - who are drawn from parliament.$diplocracy_gov_reg_loc$"
+
+ gov_social_democracy_desc: "Idea of a state, which, acting in the frame of market economy, needs to provide security and equality of opportunity for its people and should actively reorder society in a way that is conducive to such development, but that such changes should be brought about gradually, legitimated by a democratically-elected majority.$diplocracy_gov_reg_loc$"
+
+ lrsk_gov_var_gov_constitutional_monarchy_desc:0 "This government is a monarchy that has made a pact, in the name of justice and progress, with the people over which it reigns to govern according to a legal framework establishing the nature and limits of the ruler's power.$diplocracy_gov_reg_loc$"
+
+ lrsk_gov_var_gov_republic_of_virtue_desc:0 "This government is dedicated to cultivating the civic virtue of its citizens, for without virtue, liberty and equality cannot endure.$diplocracy_gov_reg_loc$"
+
+ lrsk_gov_var_gov_federal_republic_desc:0 "This government shares power between a central legislature and many regional governments in order to accommodate a wide variety of views and interests.$diplocracy_gov_reg_loc$"
+
  #########################
  ### Noble Governments ###
  #########################
+
+ gov_imperial_domain_desc:1 "§LThis government rules the Galactic Imperium's central crown territory, which is under the direct control of the Imperial Sovereign.§!$aristocracy_gov_reg_loc$"
+ 
+ gov_elective_monarchy_desc: "This government is a form of enlightened autocracy, where a strong emphasis is put on the knowledge and qualifications of the elected monarch.$aristocracy_gov_reg_loc$"
+ 
+ gov_noble_aristocracy_desc: "The whole political power in this society belongs to the council of representatives of the ancient patrimonial aristocratic Houses.$aristocracy_gov_reg_loc$"
+ 
+ gov_aristocratic_republic_desc: "A form of representative democracy, in which only those who belong to social Elite may be elected to Senate and rule on behalf of the people.$aristocracy_gov_reg_loc$"
+ 
+ gov_aristocratic_monarchy_desc: "Form of monarchy, in which hereditary Ruler does not have absolute power, but has to share it with the most influential members of Nobility.$aristocracy_gov_reg_loc$"
+ 
+ gov_feudal_empire_desc: "This government is a feudal autocracy where the monarch rules indirectly, granting offices and territories to vassals in exchange for obligations in the form of taxes and military service.$aristocracy_gov_reg_loc$"
+ 
+ gov_great_houses_desc: "This civilization is ruled by the leadership council of a few Great Houses, which traditions derives from ancient clans and tribes, but which now function more as political parties. Unlike in classic Noble Aristocracy, house membership is not tied to patrimonial matters, such as birth or marriage, but rather anyone can be adopted to the House and advance to it's highest ranks, as long as he pledges loyalty to the House and preserve it's Tradition.$aristocracy_gov_reg_loc$"
+ 
+ gov_benevolent_aristocracy_desc: "The council of representatives of the patrimonial aristocratic Houses believe it is their duty to care for all equally.$aristocracy_gov_reg_loc$"
+ 
+ gov_oligarchic_republic_desc: "An extremely elitist form of republic, in which significant amount of power is concentrated in the hands of a small, privileged group of people, with a strong influence on election's and governing processes.$aristocracy_gov_reg_loc$"
 
  lrsk_gov_var_gov_noble_empire_desc:0 "This government is a quaint, romantic monarchy in which a strong central ruler governs a complex hierarchy of planetary vassal-lords. Could be the subject of a good opera, in space. A 'space opera' if you will.$aristocracy_gov_reg_loc$"
 
  lrsk_gov_var_gov_noble_republic_desc:0 "This government is a quaint, romantic aristocracy in which a high council of noble families selects one of the heads of the dynastic houses to be first-among-equals and mediator of affairs of state. Could be the subject of a good opera, in space. A 'space opera' if you will.$aristocracy_gov_reg_loc$"
 
- lrsk_gov_var_gov_reactionary_socialism_desc:0 "Once, the old elites of this society were threatened by the rise of capitalism. In response, an alliance of the aristocrats and petty-bourgeoise were able to manipulate the emerging working class into siding with them against the new captains of industry. The result is that a restrictive system of state ownership, regulations, tariffs, and taxation to prevent the new self-made bourgeoise from ever threatening to size state power away from old money and old blood.$aristocracy_gov_reg_loc$"
-
  lrsk_gov_var_gov_empire_of_rapine_desc:0 "Once and idealistic monarchical government sworn to protect the rights and freedoms of the people, its ruling dynasty and most prominent nobles came to adopt a restrictive view of both 'the people' and 'their rights and freedoms.' Under a cut-throat theory of the equal right to 'earn' freedom and personhood, and the importance of property-holding to this exclusive franchise, outright plunder and slavery are the order of the day.$aristocracy_gov_reg_loc$"
-
- lrsk_gov_var_gov_absolute_monarchy_desc:0 "This government is a powerful, centralized monarchy. Its ruling dynasty seeks to exert absolute control over its territory and integrate all its dependents into one order.$aristocracy_gov_reg_loc$"
 
  lrsk_gov_var_gov_populist_monarchy_desc:0 "This government is ruled by a long dynasty of agrarian reformers and levelers who have drawn their greatest support from the poor and struggling urban and peasant masses. While there is some inequality of wealth, the monarchy's poverty relief programs protect the meager from the worst exploitation.$aristocracy_gov_reg_loc$"
 
  lrsk_gov_var_gov_insurrectionary_lineage_desc:0 "This government has theoretically been waging a global revolution against various oppressors of the people under the emergency guidance of a single leader for so long that the leadership has practically become hereditary.$aristocracy_gov_reg_loc$"
 
  lrsk_gov_var_gov_solar_monarchy_desc:0 "This government is centered around the person of the monarch, who claims to embody the state. All subjects and dependencies of the throne are likened to planets orbiting the sun.$aristocracy_gov_reg_loc$"
-
- lrsk_gov_var_gov_feudal_socialism_desc:0 "The aristocracy of this society were able to strangle capitalism in its cradle by convincing the workers and peasants that only the noble orders of society could protect them from exploitation. Now the monarch and the court control state-run industries in the same manner as the landed estates of old, passing down mines and manufactories by right of birth. The workers are bound as serfs to their production lines in exchange for the traditional noble obligation of charity, which is much more generous thanks to industrial production methods.$aristocracy_gov_reg_loc$"
 
  lrsk_gov_var_gov_galactic_imperium_desc:0 "This government is a staggeringly ambitious monarchy with designs on total galactic rule. Its court is resplendent, its holdings abundant, its nobility fierce and faithful. Any who have yet to bend the knee before the throne nonetheless stand in awe of its glory, or so the monarch believes.$aristocracy_gov_reg_loc$"
 
@@ -2797,6 +2860,45 @@ l_polish:
  PR_VASSAL_GREETING_DISLOYAL_01: "The [From.GetName] becomes a bigger threat to the sanctity of the galaxy every day. If you fail to respect the natural laws of the universe, we will have no choice but to reenge on our current agreements, and break any relationship we have with each other."
  # Declaration of War
  PR_DOW_PROPOSE_01: "This is a declaration of war! The [From.GetSpeciesNamePlural] have for too long engaged in wanton crimes against nature, upsetting the balance of the galaxy. That stops today."
+
+ 
+ # Pre-FTL Events:
+ preftl_operation.1016.social:0 "Our select group of operatives - all highly skilled mediators - mingled with a diverse set of communities, demonstrating the value of [root.GetAdj] §Ycooperation§! as the solution to many [from.target.GetSpeciesAdj] social ills. For these groups, at least, any individual desire must be weighed against the consequence to the collective."
+ preftl_operation.1016.capital:0 "Our two-pronged approach placed  charismatic and entrepreneurial operatives at carefully selection locations around the planet, while other operatives worked to protect these burgeoning industries from political interference and regulation. These operations have spurred the development of many other industries, and there is now a vibrant §Ycompetitive§! spirit among the [from.target.GetSpecies]."
+
+ preftl_operation.1016.social.desc:0 "$preftl_operation.1016.intro$\n\n$preftl_operation.1016.social$"
+ preftl_operation.1016.capital.desc:0 "$preftl_operation.1016.intro$\n\n$preftl_operation.1016.capital$"
+
+ preftl_operation.1017.social.desc:0 "$preftl_operation.1016.intro.good$\n\n$preftl_operation.1016.social$"
+ preftl_operation.1017.capital.desc:0 "$preftl_operation.1016.intro.good$\n\n$preftl_operation.1016.capital$"
+
+ preftl_operation.1018.social.desc:0 "$preftl_operation.1016.intro.poor$\n\n$preftl_operation.1016.social$"
+ preftl_operation.1018.capital.desc:0 "$preftl_operation.1016.intro.poor$\n\n$preftl_operation.1016.capital$"
+
+ preftl_operation.1019.social:0 "Our operatives traveled far and wide, engaging local communities and institutions in matters such as cooperation and inclusion. [from.target.GetSpeciesAdj] political sciences are already fairly mature, but we have set multiple campaigns in motion which are already pushing for more inclusive debate and §Ycooperative§! policies." # post-industrial societies only
+ preftl_operation.1019.capital:0 "The operations set up by our initial operatives have now becomes titans in their respective fields, and wield a great deal of political and cultural influence. The §Ycompetitive§! nature of the [from.target.GetSpeciesNamePlural] has been healthily devloped." # post-industrial societies only
+
+ preftl_operation.1019.social.desc:0 "$preftl_operation.1016.social.desc$\n\n$preftl_operation.1019.social$"
+ preftl_operation.1019.capital.desc:0 "$preftl_operation.1016.capital.desc$\n\n$preftl_operation.1019.capital$"
+
+ preftl_operation.1020.social.desc:0 "$preftl_operation.1016.intro.good$\n\n$preftl_operation.1019.social$"
+ preftl_operation.1020.capital.desc:0 "$preftl_operation.1016.intro.good$\n\n$preftl_operation.1019.capital$"
+
+ preftl_operation.1021.social.desc:0 "$preftl_operation.1016.intro.poor$\n\n$preftl_operation.1019.social$"
+ preftl_operation.1021.capital.desc:0 "$preftl_operation.1016.intro.poor$\n\n$preftl_operation.1019.capital$"
+
+ espionage_pre_ftl_indoctrination_socialism:0 "$espionage_pre_ftl_indoctrination$"
+ espionage_pre_ftl_indoctrination_socialism_desc:0 "$espionage_pre_ftl_indoctrination_desc$"
+ espionage_pre_ftl_indoctrination_capitalism:0 "$espionage_pre_ftl_indoctrination$"
+ espionage_pre_ftl_indoctrination_capitalism_desc:0 "$espionage_pre_ftl_indoctrination_desc$"
+
+ # Faction Visuals
+ socialists_visual_ethic:0 "£socialism£"
+ bankers_visual_ethic:0 "£capitalism£"
+
+ # Unused
+ gov_corporate_nationalism_desc: " "
+ gov_corporate_nationalism: "Corporate Nationalism"
 
  # Override
  civic_tooltip_not_xenophobe:0 "Is not §YXenophobic§!"

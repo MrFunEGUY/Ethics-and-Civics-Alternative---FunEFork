@@ -12,6 +12,7 @@
 @med_rare = 1
 @low_rare = 0.5
 
+
 d_migrating_forests = {
 	is_for_colonizable = yes
 	category = deposit_cat_rare

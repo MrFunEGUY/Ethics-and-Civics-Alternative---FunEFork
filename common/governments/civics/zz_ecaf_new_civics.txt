@@ -1293,11 +1293,9 @@ civic_military_junta = {
 		base = 5
 	}
 	modifier = {
-		admiral_skill_levels = 2
-		general_skill_levels = 2
+		commander_exp_gain = 0.6
 		job_commandante_per_pop = 0.03
-		leader_admirals_upkeep_mult = 0.15
-		leader_generals_upkeep_mult = 0.15
+		leader_commanders_upkeep_mult = 0.15
 	}
 }
 
@@ -1333,7 +1331,7 @@ civic_science_directorate = {
 		base = 5
 	}
 	modifier = {
-		scientist_skill_levels = 3
+		scientist_exp_gain = 0.75
 		job_head_researcher_per_pop = 0.03
 		leader_scientists_upkeep_mult = 0.25
 	}

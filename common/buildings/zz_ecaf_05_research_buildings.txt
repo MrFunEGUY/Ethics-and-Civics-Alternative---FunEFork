@@ -4,7 +4,9 @@
 
 building_institute = {
 	base_buildtime = @b2_time
-	base_cap_amount = 1
+	empire_limit = {
+		base = 1
+	}
 
 	category = research
 
@@ -56,6 +58,11 @@ building_institute = {
 			energy = @b2_upkeep
 			exotic_gases = @b2_rare_upkeep
 		}
+	}
+
+	country_modifier = {
+		country_scientist_cap_add = 1
+		all_technology_research_speed = 0.05
 	}
 
 	planet_modifier = {

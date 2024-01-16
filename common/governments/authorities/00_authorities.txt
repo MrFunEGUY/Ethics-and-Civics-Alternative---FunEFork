@@ -26,8 +26,8 @@
 # Overwrites #
 ##############
 
-# Changed Frequency Weights
-# Ordering done for in game viewing reasons
+## Changed Frequency Weights
+###!!! Ordering done for in game viewing reasons
 
 auth_democratic = {
 	election_term_years = 10
@@ -58,6 +58,7 @@ auth_democratic = {
 
 	country_modifier = {
 		faction_approval = 0.10
+		country_leader_pool_size = 1
 		pop_cat_worker_political_power = 3
 		pop_cat_specialist_political_power = 4
 		pop_cat_ruler_political_power = 7
@@ -101,6 +102,7 @@ auth_dictatorial = {
 
 	country_modifier = {
 		# Other modifiers are on "councilor_ruler_dictatorial".
+		councilor_ruler_dictatorial_exp_gain = 0.25
 		pop_cat_worker_political_power = 2
 		pop_cat_specialist_political_power = 4
 		pop_cat_ruler_political_power = 9
@@ -143,7 +145,7 @@ auth_imperial = {
 	}
 
 	country_modifier = {
-		# Country modifier is on Capital buildings.
+		# Additional modifiers are found in inline_scripts\buildings\on_all_capital_buildings.txt
 		pop_cat_worker_political_power = 2
 		pop_cat_specialist_political_power = 3
 		pop_cat_ruler_political_power = 9
@@ -373,11 +375,12 @@ auth_corporate_imperial = {
 	}
 
 	country_modifier = {
-		country_power_projection_influence_produces_add = 0.5
-		empire_size_penalty_mult = 0.2
+		# Additional modifiers are found in inline_scripts\buildings\on_all_capital_buildings.txt
+		commercial_pact_mult = 0.1
+		empire_size_colonies_mult = 0.25
 		pop_cat_worker_political_power = 2
-		pop_cat_specialist_political_power = 3
-		pop_cat_ruler_political_power = 9
+		pop_cat_specialist_political_power = 3.5
+		pop_cat_ruler_political_power = 7
 	}
 
 	tags = {
@@ -430,10 +433,11 @@ auth_corporate = {
 	}
 
 	country_modifier = {
-		country_unity_produces_mult = 0.1
-		empire_size_penalty_mult = 0.25
+		commercial_pact_mult = 0.2
+		empire_size_colonies_mult = 0.5
+		external_leader_pool_add = 1
 		pop_cat_worker_political_power = 2
-		pop_cat_specialist_political_power = 3
+		pop_cat_specialist_political_power = 4
 		pop_cat_ruler_political_power = 5
 	}
 

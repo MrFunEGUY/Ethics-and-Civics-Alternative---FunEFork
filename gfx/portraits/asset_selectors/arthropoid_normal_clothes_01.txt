@@ -21,11 +21,10 @@ arthropoid_normal_clothes_01 = {
 		"gfx/models/portraits/arthropoid/arthropoid_normal_outfit_admiral.dds" 	= { is_pop_category = ruler }
 	}
 	#leader scope
-	leader = { #scientists, generals, admirals, governor
+	leader = { #scientists, generals, admirals, official
 		"gfx/models/portraits/arthropoid/arthropoid_normal_outfit_scientist.dds" = { leader_class = scientist }
-		"gfx/models/portraits/arthropoid/arthropoid_normal_outfit_general.dds" = { leader_class = general }
-		"gfx/models/portraits/arthropoid/arthropoid_normal_outfit_admiral.dds" = { leader_class = admiral }
-		"gfx/models/portraits/arthropoid/arthropoid_normal_outfit_governor.dds" = { leader_class = governor }
+		"gfx/models/portraits/arthropoid/arthropoid_normal_outfit_admiral.dds" = { leader_class = commander }
+		"gfx/models/portraits/arthropoid/arthropoid_normal_outfit_governor.dds" = { leader_class = official }
 	}
 
 	#leader scope 

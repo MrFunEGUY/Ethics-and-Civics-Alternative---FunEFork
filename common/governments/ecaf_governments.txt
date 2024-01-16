@@ -172,19 +172,6 @@ gov_military_corp = {
 
 # Fanatic Purifier Governments
 
-# gov_dread_brotherhood = {
-# 	ruler_title = RT_BROTHER
-# 	ruler_title_female = RT_SISTER
-# 	should_force_rename = yes
-# 	possible = {
-# 		has_valid_civic = civic_fanatic_purifiers
-# 		has_authority = auth_direct_democratic
-# 	}
-# 	weight = {
-# 		base = 10000
-# 	}
-# }
-
 ### Competitive Governments
 gov_anarch_capitalism = {
 	ruler_title = RT_CEO
@@ -1083,7 +1070,7 @@ lrsk_gov_var_gov_galactic_cartel_fam = {
 	}
 
 
-	leader_class = governor
+	leader_class = official
 
 	weight = {
 		base = 1000

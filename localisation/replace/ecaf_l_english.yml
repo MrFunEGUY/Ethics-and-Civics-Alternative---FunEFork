@@ -486,8 +486,9 @@
  empire_bureaucracy: "Empire Bureaucracy"
  empire_is_elitist: "$TRIGGER_FAIL$Our empire embraces §Y$ethic_elitist$§! ideals."
  empire_is_socialism: "$TRIGGER_FAIL$Our empire embraces §Y$ethic_socialism$§! ideals."
+ empire_is_capitalism: "$TRIGGER_FAIL$Our empire embraces §Y$ethic_capitalism$§! ideals."
  empire_not_capitalism: "$TRIGGER_FAIL$Our empire does not embrace the necessary §Y$ethic_capitalism$§! ideals."
- empire_not_capitalist_authoritarian: "$TRIGGER_FAIL$Requires to have either §YFanatic Competitive§! OR §YAuthoritarian§!/§Ynon-Cooperative§! ethics."
+ empire_not_capitalist_authoritarian: "$TRIGGER_FAIL$Requires either §YFanatic Competitive§! OR §YAuthoritarian§!/§Ynon-Cooperative§! ethics."
  empire_not_elitist: "$TRIGGER_FAIL$Our empire does not embrace the necessary §Y$ethic_elitist$§! ideals."
  empire_not_pluralist_collectivist: "$TRIGGER_FAIL$Required to have §YFanatic Cooperative/non-Authoritarian§! ethic combination."
  empire_socialism_utopia_non_market: "$TRIGGER_FAIL$Our Empire is reqiured to have §YSocialistic Utopia§! Ascension Perk and §YFanatic Cooperative§! ethic."
@@ -678,6 +679,7 @@
  glor_monarchy: "Interstellar Kingdom"
  glorious_fleet: "Glorious Victory!"
  good_trading_desc: "Knowledge of standard economy doctrines and practices."
+ a_economics: "a economics"
  good_trading: "Economics"
  gov_absolute_monarchy_desc: "A form of monarchy in which the monarch holds supreme authority and where that authority is not restricted by any written laws, legislature, or customs."
  gov_absolute_monarchy: "Absolute Monarchy"
@@ -1015,6 +1017,7 @@
  mixed_industrial_name: "Moderate"
  mixed_industrial: "Moderate"
  mod_category_good_trading_research_speed_mult: "Research Speed (Economics)"
+ mod_category_good_trading_draw_chance_mult:0 "Chance for §YEconomics§! Research Options"
  mod_category_statecraft_research_speed_mult: "Research Speed (Bureaucracy)"
  mod_decisions_cost_mult: "Decisions Cost"
  MOD_DISTANCE_TO_CAPITAL_STATIC_MODIFIER_EFFICIENCY_MULT: "Governing Ethic reduction due to Distance"
@@ -2228,15 +2231,6 @@
  moreauthorities.5.title: "Reform Government: Term Limited"
  moreauthorities.5.desc: "This decision will reform our system of government into one where the ruler is elected for a single 15-year term. The political capital required to implment term limits into our society means that once this action is taken, it it will be very difficult to undo. Are you sure?"
 
- moreauthorities.5.a: "I'm sure."
- moreauthorities.5.b: "Nevermind."
- 
- moreauthorities.6.title: "Reform Government: Eliminate Term Limits"
- moreauthorities.6.desc: "It'll take a tremendous amount of political capital, but we have the ability to eliminate term limits. You will be able to run in the next election, and any after that."
-
- moreauthorities.6.a: "I will run again."
- moreauthorities.6.b: "Nevermind."
-
  civic_tooltip_oli_imp_dict: "Is an §YOligarchic§!, §YImperial§!, or §YDictatorial§! Authority"
 
  ACTION_RECIPIENT_NOT_YOUR_CORP: "$TRIGGER_FAIL$§RBranch Offices can only be built on Megacorporations if they are our subsidiary.§!"
@@ -2417,6 +2411,8 @@
  gov_totalitarian_regime_desc: "This government is a materialistic form of autocracy, where the state aspires towards full control over the lives of its citizens in the name of efficiency.$technocracy_gov_reg_loc$"
  
  gov_executive_committee_desc: "This government is a materialistic form of oligarchy, where a powerful bureaucracy governs the state and guides the citizenry towards productive and meaningful goals.$technocracy_gov_reg_loc$"
+
+ gov_direct_democracy_desc: "This government is a materialistic form of democracy, where citizens use computer networks to vote directly on most matters regarding the state.$technocracy_gov_reg_loc$"
  
  gov_illuminated_autocracy_desc: "This government is a materialistic form of hereditary autocracy, based on technocratic principles that the sovereign is sworn to uphold. Nothing is valued more highly than scientific knowledge and the advancement of technology.$technocracy_gov_reg_loc$"
  
@@ -2484,6 +2480,10 @@
  
  gov_successor_khanate_desc:0 "A successor state trying to recapture the glory of the Great Khan's empire.$stratocracy_gov_reg_loc$"
 
+ gov_mortal_empire_desc:0 "This theocratic monarchy engages in ritualized, sapient sacrifice.$stratocracy_gov_reg_loc$"
+
+ gov_grim_council_desc:0 "This nation's most powerful religious figures have formed a ruling council, overseeing an empire which engages in ritualized, sapient sacrifice.$stratocracy_gov_reg_loc$"
+
  lrsk_gov_var_gov_folkish_commonwealth_desc:0 "This government is a nationalist-populist republic that maintains loyalty by exploiting common prejudices.$stratocracy_gov_reg_loc$"
 
  lrsk_gov_var_gov_folkish_league_desc:0 "This government is a nationalist-populist alliance of states that maintains a united front by exploiting common prejudices.$stratocracy_gov_reg_loc$"
@@ -2523,6 +2523,8 @@
  gov_irenic_bureaucracy_desc: "This government is a pacifistic form of oligarchy, where a complicated system of bureaucracy governs all aspects of society to ensure the safety of the citizenry.$bureaucracy_gov_reg_loc$"
  
  gov_moral_democracy_desc: "This government is a pacifistic form of democracy, firmly guided by moralist principles and non-violence.$bureaucracy_gov_reg_loc$"
+
+ gov_enlightened_monarchy_desc:0 "This government is a form of enlightened autocracy, where a strong emphasis is put on the knowledge and qualifications of the ruling monarch.$bureaucracy_gov_reg_loc$"
  
  lrsk_gov_var_gov_rustic_republic_desc:0 "Though some urban centers do exist, the vast majority of the population live and work in the countryside. As a result, when a republican system was adopted, the peasant population so completely outvoted every other class that only those politicians who espouse an agrarian agenda had any chance of success. Permanently preoccupied with matters of rural policy, the government of this society has neither time nor political capital to spare on reckless empire building.$bureaucracy_gov_reg_loc$"
 
@@ -2541,8 +2543,14 @@
  #########################
 
  gov_trade_league_desc: "This government is a form of plutocratic oligarchy, where the state is made up of a myriad of free merchants, corporations and guilds that have banded together in common commercial interests.$plutocracy_gov_reg_loc$"
+
  gov_minarchy_desc: "A form of minimal 'night-watchman' state, that is not responsible for the education, health care, employment or transportation of its citizens, neither makes it any use of natural resources in its territory. All of this is instead held privately or publicly, but is never susceptible to any interference of the state, its law or its representatives.$plutocracy_gov_reg_loc$"
+
  gov_timocracy_desc: "A state, where political rights of the population are stratified according to the amount of property they own.$plutocracy_gov_reg_loc$"
+
+ gov_criminal_syndicate_desc:0 "This government is an enormous and ruthless business syndicate, which shares many of its operating practices with organized crime.$plutocracy_gov_reg_loc$"
+
+ gov_imperial_domain_megacorp_desc:0 "§LThis government rules the Galactic Imperium's central crown territory, which is under the direct control of the Imperial Sovereign.§!$plutocracy_gov_reg_loc$"
 
  gov_cor_dictatorship_desc: "An extremely capitalistic form of government, where powerful Corporations completely took over political and economical life of the society.$plutocracy_gov_reg_loc$"
 
@@ -2597,6 +2605,8 @@
  gov_peoples_commissariat_desc: "Government is appointed and monitored by a special Emergency Committee, which members has to be approved by the People, and work collectively to preserve the welfare of the Empire.$isocracy_gov_reg_loc$"
 
  gov_peoples_republic_desc: "Government is an egalitarian form of dictatorship. There is an actual parliament, but it's dominated by a single political power - so-called 'People's Party'.$isocracy_gov_reg_loc$"
+
+ gov_communal_parity_desc:0 "This government promotes total equality for all of its citizens, regardless of their jobs or assigned tasks. One life is worth the same as any other.$isocracy_gov_reg_loc$"
 
  lrsk_gov_var_gov_communal_democracy_desc:0 "This government has extended the principle of representative government to the whole political economy, with the central state being simply the largest-scale democratic decision making body. The personal truly is political, and its citizens collectively participate in nearly all the relevant decisions of all aspects of their lives.$isocracy_gov_reg_loc$"
   

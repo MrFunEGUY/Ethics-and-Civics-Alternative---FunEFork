@@ -4,5 +4,5 @@ tags={
 }
 name="Ethics and Civics Alternative - FunEFork"
 picture="thumbnail.png"
-supported_version="3.8.*"
+supported_version="3.10.*"
 remote_file_id="2949463581"

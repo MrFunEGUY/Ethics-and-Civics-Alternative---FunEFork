@@ -16,7 +16,7 @@
 
 [b]Term Limited:[/b]
 
-- This government form elects a ruler for a single 15-year term. After their term, leaders will go back to whatever job they had before (scientist, governor, admiral, general). However, their portrait may be changed. This is still an issue in 3.6, and may yet be resolved in the future.
+- This government form elects a ruler for a single 15-year term. After their term, leaders will go back to whatever job they had before (scientist, official, commander). However, their portrait may be changed. This is still an issue in 3.6, and may yet be resolved in the future.
 
 ----
 
@@ -56,6 +56,10 @@ This mod should go below any of the mods listed below.
 [hr][/hr]
 [h1]Credits:[/h1]
 
+- Obviously [url=https://steamcommunity.com/profiles/76561198053407812]petruxa[/url] for most of the code.
+
+- To [url=https://steamcommunity.com/profiles/76561198030577785]joakim.westergaard[/url] and any other caretakers for updating the code.
+
 - [url=https://steamcommunity.com/id/Juhius]Juhius[/url] - For [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2662166848]Mercenary Megacorps[/url], which has been integrated into this mod.
 
 - The thumbnail image uses [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1769029620]Colored Ethics Alternate[/url]
@@ -78,9 +82,12 @@ This mod should go below any of the mods listed below.
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2732567565]- No More Exclaves[/url]
 
-[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2183551683]- Vassals Expanded and Reworked - FunEFork[/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2956036384]- Galactic Bank - FunEFork[/url]
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2177145527]- Intervene: Help Friendly Nations - FunEFork[/url]
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2183551683]- Vassals Expanded and Reworked - FunEFork[/url]
+
 
 
 [hr][/hr]

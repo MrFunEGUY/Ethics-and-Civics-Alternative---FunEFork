@@ -61,48 +61,10 @@ new_human_female_hair_01 = {
 	
 	
 	#leader scope
-	leader = { #scientists, generals, admirals, governor
-	
-		random = {
-			trigger = { leader_class = general }
-			list = {
-
-				"gfx/models/portraits/human/new_human/new_human_female_hair_black_style_01.dds"
-				"gfx/models/portraits/human/new_human/new_human_female_hair_brown_style_01.dds"
-				"gfx/models/portraits/human/new_human/new_human_female_hair_red_style_01.dds"
-				"gfx/models/portraits/human/new_human/new_human_female_hair_blonde_style_01.dds"
-				"gfx/models/portraits/human/new_human/new_human_female_hair_platinum_style_01.dds"
-
-				"gfx/models/portraits/human/new_human/new_human_female_hair_black_style_02.dds"
-				"gfx/models/portraits/human/new_human/new_human_female_hair_brown_style_02.dds"
-				"gfx/models/portraits/human/new_human/new_human_female_hair_red_style_02.dds"
-				"gfx/models/portraits/human/new_human/new_human_female_hair_blonde_style_02.dds"
-				"gfx/models/portraits/human/new_human/new_human_female_hair_platinum_style_02.dds"
-
-				"gfx/models/portraits/human/new_human/new_human_female_hair_black_style_03.dds"
-				"gfx/models/portraits/human/new_human/new_human_female_hair_brown_style_03.dds"
-				"gfx/models/portraits/human/new_human/new_human_female_hair_red_style_03.dds"
-				"gfx/models/portraits/human/new_human/new_human_female_hair_blonde_style_03.dds"
-				"gfx/models/portraits/human/new_human/new_human_female_hair_platinum_style_03.dds"
-
-				"gfx/models/portraits/human/new_human/new_human_female_hair_black_style_04.dds"
-				"gfx/models/portraits/human/new_human/new_human_female_hair_brown_style_04.dds"
-				"gfx/models/portraits/human/new_human/new_human_female_hair_red_style_04.dds"
-				"gfx/models/portraits/human/new_human/new_human_female_hair_blonde_style_04.dds"
-				"gfx/models/portraits/human/new_human/new_human_female_hair_platinum_style_04.dds"
-
-				"gfx/models/portraits/human/new_human/new_human_female_hair_black_style_05.dds"
-				"gfx/models/portraits/human/new_human/new_human_female_hair_brown_style_05.dds"
-				"gfx/models/portraits/human/new_human/new_human_female_hair_red_style_05.dds"
-				"gfx/models/portraits/human/new_human/new_human_female_hair_blonde_style_05.dds"
-				"gfx/models/portraits/human/new_human/new_human_female_hair_platinum_style_05.dds"
-
-				"gfx/models/portraits/human/new_human/human_female_hair_default_style.dds"
-			}
-		}		
+	leader = { #scientists, commander, official	
 		
 		random = {
-			trigger = { leader_class = admiral }
+			trigger = { leader_class = commander }
 			list = {
 
 				"gfx/models/portraits/human/new_human/new_human_female_hair_black_style_01.dds"
@@ -178,7 +140,7 @@ new_human_female_hair_01 = {
 		}		
 		
 		random = {
-			trigger = { leader_class = governor }
+			trigger = { leader_class = official }
 			list = {
 
 				"gfx/models/portraits/human/new_human/new_human_female_hair_black_style_01.dds"

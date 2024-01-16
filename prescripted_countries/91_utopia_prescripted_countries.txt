@@ -87,7 +87,7 @@ xanid = {
 		clothes = 4
 		ruler_title = "PRESCRIPTED_ruler_title_xanid"
  		trait = "trait_ruler_charismatic"
-		leader_class = general
+		leader_class = commander
 	}
 }
 

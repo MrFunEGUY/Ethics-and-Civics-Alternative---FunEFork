@@ -324,51 +324,6 @@ technologist = {
 	} 
 
 	demand = {
-		title = "TECHNOLOGIST_NO_SYNTH_ENVY"
-		unfulfilled_title = "TECHNOLOGIST_SYNTH_ENVY"
-		desc = "TECHNOLOGIST_NO_SYNTH_ENVY_DESC"
-
-		unfulfilled_effect = -10
-		fulfilled_effect = 0.001
-
-		potential = {
-			years_passed >= 50 #otherwise, just a penalty for meeting Mechanists early
-			exists = owner
-			owner = {
-				NOT = { has_ascension_perk = ap_synthetic_evolution }
-				any_relation = {
-					has_communications = root.owner
-					root.owner = {
-						has_intel_level = {
-							who = prev
-							category = economy
-							level >= 1
-						}
-					}
-					is_gestalt = no
-					any_owned_species = {
-						OR = {
-							has_trait = trait_mechanical
-							has_trait = trait_cybernetic
-						}
-					}
-				}
-			}
-		}
-
-		trigger = {
-			owner = {
-				any_owned_species = {
-					OR = {
-						has_trait = trait_mechanical
-						has_trait = trait_cybernetic
-					}
-				}
-			}
-		}
-	}
-
-	demand = {
 		title = "TECHNOLOGIST_SECRET_KNOWLEDGE"
 		unfulfilled_title = "TECHNOLOGIST_NO_SECRET_KNOWLEDGE"
 		desc = "TECHNOLOGIST_SECRET_KNOWLEDGE_DESC"

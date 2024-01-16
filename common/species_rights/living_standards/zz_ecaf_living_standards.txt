@@ -152,8 +152,8 @@ living_standard_utopian = {
 	allow = {
 		hidden_trigger = { exists = from }
 		custom_tooltip = {
-			fail_text = empire_not_egalitarian
-			from = { is_egalitarian = yes }
+			fail_text = empire_is_capitalism
+			from = { is_capitalism = no }
 		}
 		custom_tooltip = {
 			fail_text = is_slaves_tooltip
@@ -421,7 +421,10 @@ living_standard_good = {
 		from = {
 			is_gestalt = no
 			NOR = {
-				has_valid_civic = civic_shared_burden
+				AND = {
+					has_valid_civic = civic_shared_burden
+					prev = { has_citizenship_type = { type = citizenship_full country = from } }
+				}
 				is_worker_coop_empire = yes
 				has_valid_civic = civic_dystopian_society
 				has_valid_civic = civic_beacon_of_liberty
@@ -574,7 +577,10 @@ living_standard_normal = {
 		from = {
 			is_gestalt = no
 			NOR = {
-				has_valid_civic = civic_shared_burden
+				AND = {
+					has_valid_civic = civic_shared_burden
+					prev = { has_citizenship_type = { type = citizenship_full country = from } }
+				}
 				is_worker_coop_empire = yes
 				has_valid_civic = civic_dystopian_society
 				has_valid_civic = civic_slaving_despots
@@ -689,7 +695,10 @@ living_standard_stratified = {
 		from = {
 			is_gestalt = no
 			NOR = {
-				has_valid_civic = civic_shared_burden
+				AND = {
+					has_valid_civic = civic_shared_burden
+					prev = { has_citizenship_type = { type = citizenship_full country = from } }
+				}
 				is_worker_coop_empire = yes
 				has_valid_civic = civic_dystopian_society
 			}
@@ -813,7 +822,10 @@ living_standard_subsistence = {
 		exists = from
 		from = {
 			NOR = {
-				has_valid_civic = civic_shared_burden
+				AND = {
+					has_valid_civic = civic_shared_burden
+					prev = { has_citizenship_type = { type = citizenship_full country = from } }
+				}
 				is_worker_coop_empire = yes
 				has_valid_civic = civic_dystopian_society
 			}

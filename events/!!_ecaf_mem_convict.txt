@@ -22,7 +22,7 @@ country_event = {
     }
 
     immediate = {
-        random_owned_planet = { # Ship will prefer to bully planet ruled by your governor, if possible. His second best guess would be your capital
+        random_owned_planet = { # Ship will prefer to bully planet ruled by your official, if possible. His second best guess would be your capital
             limit = {
                 is_under_colonization = no
             }

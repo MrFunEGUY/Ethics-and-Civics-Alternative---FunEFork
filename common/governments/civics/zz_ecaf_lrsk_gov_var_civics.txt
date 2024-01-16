@@ -116,7 +116,7 @@ lrsk_gov_var_civic_ascetic_virtues = {
 	}
 }
 
-#Republicanism (Democratic) - This society believes that the greatest virtue is attained by people of good character serving the common good. (-30% leader cost, 1 Administrator per 50 pops)
+#Republicanism - This society believes that the greatest virtue is attained by people of good character serving the common good. (-30% leader cost, 1 Politician per 25 pops)
 lrsk_gov_var_civic_republicanism = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
@@ -132,9 +132,10 @@ lrsk_gov_var_civic_republicanism = {
 			OR = {
 				# text = civic_tooltip_democratic
 				inline_script = governments/conditions/auth_democratic
-				ethics = { value = ethic_egalitarian }
+				inline_script = governments/conditions/auth_oligarchic
 			}
 		}
+		ethics = { value = ethic_egalitarian }
 	}
 
 	random_weight = { base = @civic_default_random_weight }
@@ -691,12 +692,7 @@ lrsk_gov_var_civic_business_lobby  = {
 lrsk_gov_var_civic_chivalry = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		authority = {
-			NOR = {
-				inline_script = governments/conditions/auth_corporate
-				inline_script = governments/conditions/auth_oligarchic
-			}
-		}
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 
 	playable = { lrsk_gvp_is_active = yes }
@@ -748,12 +744,12 @@ lrsk_gov_var_civic_chivalry = {
 	}
 
 	modifier = {
-		admiral_skill_levels = 1
-		general_skill_levels = 1
+		admiral_exp_gain = 0.15
+    	general_exp_gain = 0.15
 	}
 }
 
-#Lifelong Learning (Democratic or Pacifist) - This society values public education so strongly that opportunities for it are made available throughout citizens' lives. (+1 governor and scientist skill levels, +20% leader experience gain)
+#Lifelong Learning (Democratic or Pacifist) - This society values public education so strongly that opportunities for it are made available throughout citizens' lives. (+1 official and scientist skill levels, +20% leader experience gain)
 lrsk_gov_var_civic_lifelong_learning = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
@@ -807,9 +803,8 @@ lrsk_gov_var_civic_lifelong_learning = {
 	}
 
 	modifier = {
-		scientist_skill_levels = 1
-		governor_skill_levels = 1
-		species_leader_exp_gain = 0.2
+		scientist_exp_gain = 0.15
+		governor_exp_gain = 0.15
 	}
 }
 
@@ -883,7 +878,7 @@ lrsk_gov_var_civic_institutionalized_collectivism = {
 	}
 }
 
-#Direct Revelation (Egalitarian and Spiritualist) - The religious culture of this society values personal revelation of the divine. (Wild cults may occasionally form with (mostly) beneficial effects, and which add Hedge Preacher jobs. 1 Hedge Preacher per 25 pops.)
+#Direct Revelation (Egalitarian and Spiritualist) - The religious culture of this society values personal revelation of the divine. (Wild cults may occasionally form with (mostly) beneficial effects, and which add Hedge Preacher jobs. 1 Hedge Preacher per 15 pops.)
 lrsk_gov_var_civic_direct_revelation  = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
