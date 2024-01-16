@@ -693,7 +693,7 @@ l_russian:
 
 
  #a_economics: "a economics"
- good_trading: "Экономика и Торговля"
+ #good_trading: "Экономика и Торговля"
  #good_trading_desc: "Знание традиционных социально-экономических доктрин."
  #leader_trait_expertise_good_trading: "Талант: Экономика и Торговля"
  #leader_trait_expertise_good_trading_desc: "После нескольких лет обучения этот лидер считается экспертом в области экономики."
@@ -965,7 +965,7 @@ l_russian:
  civic_space_engineering: "Космическая Инженерия"
 
  civic_timocracy: "Тимократия"
- civic_timocracy_desc: "Это правительство является элитарной формой республики, лишившее большую часть населения гражданских прав для наглядного превосходства избранных. Позволяет выбрать §HКастовую систему§! как общественную форму. Строение §HФабрика Рабов§! дает дополнительное §HЕдинство§! £unity."
+ civic_timocracy_desc: "Это правительство является элитарной формой республики, лишившее большую часть населения гражданских прав для наглядного превосходства избранных. Позволяет выбрать §HКастовую систему§! как общественную форму. Строение §HФабрика Рабов§! дает дополнительное §HЕдинство§! £unity£"
 
  #civic_free_haven_desc: "Это общество имеет заслуженную репутацию свободного убежища. Усталые, бедные, смущенные массы, жаждущие дышать свободно - здесь все приветствуются, независимо от их вида или происхождения. Традиции §HЧистоты§! недоступны."
 
@@ -1006,7 +1006,7 @@ l_russian:
  edict_voice_people_desc: "Фестиваль на котором граждане празднуют свои права и свободы, которые у них есть в империи. "
 
 
- civic_tooltip_syncretic_evolution_effects: "Вы начинаете игру с §Y4§! £pop  дополнительными иными, подчиненными видами.\n§Y$MOD_COUNTRY_TRAIT_POINTS$§! увеличивается на §G+1§! (лучшее понимание путей Эволюции)."
+ civic_tooltip_syncretic_evolution_effects: "Вы начинаете игру с §Y4§! £pop£  дополнительными иными, подчиненными видами.\n§Y$MOD_COUNTRY_TRAIT_POINTS$§! увеличивается на §G+1§! (лучшее понимание путей Эволюции)."
 
 
  pft_bankers: "Предприниматели"
@@ -1074,7 +1074,7 @@ l_russian:
 
  ap_thought_control: "Тоталитарная утопия"
  ap_thought_control_desc: "Правительство использует новейшие инновации в области нейрохимии, психотехники и нейролингвистики для умиротворения населения и обеспечения их лояльности и сопротивления внешним идеям. Но для поддержания такого уровня контроля требуются значительные ресурсы."
- requires_technology_big_brother: "$TRIGGER_FAIL$ Требует §YФан. Авторитарный§! принцип и £society технологию §Y$tech_big_brother$§!."
+ requires_technology_big_brother: "$TRIGGER_FAIL$ Требует §YФан. Авторитарный§! принцип и £society£ технологию §Y$tech_big_brother$§!."
 
  POP_ATTRACTION_RULER_TRAIT_FERTILITY_POS: "§G+ Черта правителя 'Плодовитость'§!"
  POP_ATTRACTION_CIVIC_POS: "§G+ Гражданская модель империи§!"
@@ -1120,15 +1120,15 @@ l_russian:
 
  WEALTH_ACCUMULATION_2: "Богатство"
  NO_WEALTH_ACCUMULATION_2: "Накопление богатства"
- WEALTH_ACCUMULATION_2_DESC: "Сохранение не менее £energy §Y7000§! за все время понравится [Root.GetName]."
+ WEALTH_ACCUMULATION_2_DESC: "Сохранение не менее £energy£ §Y7000§! за все время понравится [Root.GetName]."
 
  WEALTH_ACCUMULATION_3: "Богатство"
  NO_WEALTH_ACCUMULATION_3: "Накопление богатства"
- WEALTH_ACCUMULATION_3_DESC: "Сохранение не менее £energy §Y12000§! за все время понравится [Root.GetName]."
+ WEALTH_ACCUMULATION_3_DESC: "Сохранение не менее £energy£ §Y12000§! за все время понравится [Root.GetName]."
 
  WEALTH_ACCUMULATION_4: "Богатство"
  NO_WEALTH_ACCUMULATION_4: "Накопление богатства"
- WEALTH_ACCUMULATION_4_DESC: "Сохранение не менее £energy §Y18000§! за все время понравится [Root.GetName]."
+ WEALTH_ACCUMULATION_4_DESC: "Сохранение не менее £energy£ §Y18000§! за все время понравится [Root.GetName]."
 
  #MARKET_ECONOMY: "Развитый рынок"
  #NO_MARKET_ECONOMY: "Рыночная экономика"
@@ -1192,11 +1192,11 @@ l_russian:
 
  MINERALS_ACCUMULATION_2: "Богатый минералами"
  NO_MINERALS_ACCUMULATION_2: "Накопить минералы"
- MINERALS_ACCUMULATION_2_DESC: "Сохранение не менее £minerals §Y3000§! за все время понравится [Root.GetName]."
+ MINERALS_ACCUMULATION_2_DESC: "Сохранение не менее £minerals£ §Y3000§! за все время понравится [Root.GetName]."
 
  MINERALS_ACCUMULATION_3: "Богатый минералами"
  NO_MINERALS_ACCUMULATION_3: "Накопить минералы"
- MINERALS_ACCUMULATION_3_DESC: "Сохранение не менее £minerals §Y7000§! за все время понравится [Root.GetName]."
+ MINERALS_ACCUMULATION_3_DESC: "Сохранение не менее £minerals£ §Y7000§! за все время понравится [Root.GetName]."
 
  OWN_RICH_WORLD: "Минерально богатый мир"
  NO_OWN_RICH_WORLD: "Минерально богатый мир"
@@ -1282,7 +1282,7 @@ l_russian:
 
  ELITE_COMMAND: "Элитарные военные"
  NO_ELITE_COMMAND: "Элитарные военные"
- ELITE_COMMи_DESC: "Обеспечение стратифицированной военной или ограниченной военной службы для некоторых - понравится [Root.GetName]."
+ ELITE_COMMAND_DESC: "Обеспечение стратифицированной военной или ограниченной военной службы для некоторых - понравится [Root.GetName]."
 
  #ARISTOCRATIC_ELITE: "Аристократическая элита"
  #NO_ARISTOCRATIC_ELITE: "Аристократическая элита"
@@ -1542,7 +1542,7 @@ l_russian:
  ethic_fanatic_green: "Фанатичный Экологизм"
 
  civic_drone_brotherhood: "Братство Дронов"
- civic_drone_brotherhood_desc: "В этом обществе люди рабочего класса (те, кто занимается низкотехнологичными отраслями) традиционно прославляются и формируют глобальное сообщество, основанное на идеалистических принципах коллективизма и равенства. £строение  §YФермы§! и §YШахты§! производят дополнительные §Y0.2§! £unity Единства."
+ civic_drone_brotherhood_desc: "В этом обществе люди рабочего класса (те, кто занимается низкотехнологичными отраслями) традиционно прославляются и формируют глобальное сообщество, основанное на идеалистических принципах коллективизма и равенства. £строение  §YФермы§! и §YШахты§! производят дополнительные §Y0.2§! £unity£ Единства."
 
 
  shipsize_military_station_small_construction_speed_mult: "Скорость Строительства мал.Военной Станции"
@@ -1555,7 +1555,7 @@ l_russian:
 
 
  civic_private_property: "Энергетический Картель"
- civic_private_property_desc: "Рынку нужно много энергии для роста! С целью стимулировать развитие экономики, государство приватизирует значительную часть своих генерирующих мощностей, отдавая их под управление картеля частных корпораций. §Y$building_power_hub_1$§! и §Y$building_power_hub_2$§! производит дополнительное §Y1§! £unity Единство."
+ civic_private_property_desc: "Рынку нужно много энергии для роста! С целью стимулировать развитие экономики, государство приватизирует значительную часть своих генерирующих мощностей, отдавая их под управление картеля частных корпораций. §Y$building_power_hub_1$§! и §Y$building_power_hub_2$§! производит дополнительное §Y1§! £unity£ Единство."
 
  civic_militia: "Частные Военные Компании"
  civic_militia_desc: "Корпоративный бизнес по оружию и борьбе с оружием достиг ключевой позиции в этом обществе, и многие аспекты поддержания государственных военных были переданы мощным корпорациям."
@@ -2272,7 +2272,7 @@ l_russian:
  #civic_noble_aristocracy_desc: "Это общество управляется меритократическое формой олигархии, где власть переходит к лучшим из всех людей, морально и интеллектуально подготовленным к правлению."
 
  #civic_tribal_aristocracy: "Благородная аристократия"
- #civic_tribal_aristocracy_desc: "У этого общества укоренившееся дворянство, оккупируеющее верхние эшелоны власти, формируя неизменную касту Правителей. Обязательно нужна §HКастовая система§!. §HНео-колизей§! производит дополнительно §G+1§! §Hединства§! £unity."
+ #civic_tribal_aristocracy_desc: "У этого общества укоренившееся дворянство, оккупируеющее верхние эшелоны власти, формируя неизменную касту Правителей. Обязательно нужна §HКастовая система§!. §HНео-колизей§! производит дополнительно §G+1§! §Hединства§! £unity£"
 
  requires_adopt_environmentalism: "$TRIGGER_FAIL$Требует принятия ветки традиций §YЭнвайронментализм§!."
  requires_adopt_development: "$TRIGGER_FAIL$Требует принятия ветки традиций §YРазвитие§!."
@@ -2320,7 +2320,7 @@ l_russian:
  #civic_hierarchy_desc: "Прочное авторитарное общество, где граждане преданы государству без нужды к пренуждению."
 
  #civic_tribal_aristocracy: "Незыблемая Каста"
- #civic_tribal_aristocracy_desc: "Это общество подвержено строжайшей форме расслоения, где граждане строжайшим образом раделены на касты хозяев и рабов. Обязаны применять §HКастовою Систему§!. Здание §HНовый Колизей§! даёт долнительно §G+1§! §HЕдинство§! £unity."
+ #civic_tribal_aristocracy_desc: "Это общество подвержено строжайшей форме расслоения, где граждане строжайшим образом раделены на касты хозяев и рабов. Обязаны применять §HКастовою Систему§!. Здание §HНовый Колизей§! даёт долнительно §G+1§! §HЕдинство§! £unity£"
 
  civic_free_market: "Ассоциация Свободной Торговли"
  civic_free_market_desc: "Экономика этого общества подчиняется законам Свободного Рынка - идиализированной системы в которой цены на товары и услуги определяются открытым рынком и потребителями, в котором законы спроса и предложения работают свободно от вмешательства со стороны правительства, монополии или других форм власти."
@@ -2339,9 +2339,9 @@ l_russian:
  ethic_fanatic_socialism_desc: "§LФанатичные коллективисты применяют идею плановой экономики в полную силу, где государство, помимом всякого рода регуляций, также имеет существенный общественный контроль над крупными отраслями промышленности.§!\n"
 
  ETHIC_ALLOWS_WELFARE_POLICY_1: "§EПозволяет установить §HПлановую§! экономическую политику: §G+20%§! §HРост Населения§!, §G+33%§! §HСкорость Планетарного Строительства§!, §G+7%§! §HHСчастья§!."
- ETHIC_ALLOWS_WELFARE_POLICY_2: "§EПозволяет установить §HПлановую§! экономическую политику: §G+30%§! §HРост Населения§!, §G+50%§! §HСкорость Планетарного Строительства§!, §G+50%§! §HСкорость Строительства Кораблей§!, §G+10%§! §HСчастья§!, §R-5%§! §HЭнергии§! £energy§!"
- ETHIC_ALLOWS_MARKET_POLICY_1: "§EПозволяет установить §HРыночную§! экономическую политику: §G+5%§! §HЭнергии§! £energy§"
- ETHIC_ALLOWS_MARKET_POLICY_2: "§EПозволяет установить §HРыночную§! экономическую политику: §G+8%§! §HЭнергии§! £energy, §G-8%§! §HСодержание§! зданий и кораблей, §R-15%§! §HЕдинства§! £unity§!"
+ ETHIC_ALLOWS_WELFARE_POLICY_2: "§EПозволяет установить §HПлановую§! экономическую политику: §G+30%§! §HРост Населения§!, §G+50%§! §HСкорость Планетарного Строительства§!, §G+50%§! §HСкорость Строительства Кораблей§!, §G+10%§! §HСчастья§!, §R-5%§! §HЭнергии§! £energy£§!"
+ ETHIC_ALLOWS_MARKET_POLICY_1: "§EПозволяет установить §HРыночную§! экономическую политику: §G+5%§! §HЭнергии§! £energy£§"
+ ETHIC_ALLOWS_MARKET_POLICY_2: "§EПозволяет установить §HРыночную§! экономическую политику: §G+8%§! §HЭнергии§! £energy£, §G-8%§! §HСодержание§! зданий и кораблей, §R-15%§! §HЕдинства§! £unity£§!"
 
  DIPLOMACY_TRADITIONS: "Традиционный Милитаризм"
  NO_DIPLOMACY_TRADITIONS: "Нет Традиционного Процветания"
@@ -2489,7 +2489,7 @@ l_russian:
 
 
  gov_jingoism: "Шовинистический Режим"
- gov_jingoism_desc: "Эта форма авторитарного правления возглавляется ксенофобным демагогом, а в политике доминируют идеи превосходства и явного передназначения рассы."
+ gov_jingoism_desc: "Эта форма авторитарного правления возглавляется ксенофобным демагогом, а в политике доминируют идеи превосходства и явного передназначения рассы.$stratocracy_gov_reg_loc$"
 
  observation.0002.name: "[From.GetSpeciesAdj] Социальный Сдвиг"
  observation.0002.start.desc: "Наши агенты, работающие подпольно на поверхности и на орбите планеты [From.Capital.GetName], добились успехов. Благодаря их усилиям, расса [From.GetName] изменила свою систему ценностей в выгодном нам направлении."
@@ -2507,14 +2507,14 @@ l_russian:
  RT_DICTATOR: "Диктатор"
  RT_PRESIDENT: "Президент"
 
- country_subjects_resource_unity_mult: "£unity единство за вассала"
- country_subjects_resource_unity_max_mult: "£unity единство за вассала, максимальный эффект"
- country_planet_classes_resource_unity_mult: "£unity единство за разные классы планет"
- country_planet_classes_resource_unity_max_mult: "£unity единство за разные классы планет, максимальный эффект"
- country_federation_member_resource_unity_mult: "£unity единство за члена федерации"
- country_federation_member_resource_unity_max_mult: "£unity единство за члена федерации, максимальный эффект"
- country_strategic_resources_resource_unity_mult: "£unity единство за уникальный стратегический ресурс"
- country_strategic_resources_resource_unity_max_mult: "£unity единство за уникальный стратегический ресурс, максимальный эффект"
+ country_subjects_resource_unity_mult: "£unity£ единство за вассала"
+ country_subjects_resource_unity_max_mult: "£unity£ единство за вассала, максимальный эффект"
+ country_planet_classes_resource_unity_mult: "£unity£ единство за разные классы планет"
+ country_planet_classes_resource_unity_max_mult: "£unity£ единство за разные классы планет, максимальный эффект"
+ country_federation_member_resource_unity_mult: "£unity£ единство за члена федерации"
+ country_federation_member_resource_unity_max_mult: "£unity£ единство за члена федерации, максимальный эффект"
+ country_strategic_resources_resource_unity_mult: "£unity£ единство за уникальный стратегический ресурс"
+ country_strategic_resources_resource_unity_max_mult: "£unity£ единство за уникальный стратегический ресурс, максимальный эффект"
 
 
  civic_military_dictatorship_desc: "Правитель этого общества традиционно является также и действующим военачальником."
@@ -2525,7 +2525,7 @@ l_russian:
 
 
  civic_tribal_aristocracy: "Незыблемая Каста"
- civic_tribal_aristocracy_desc: "Это общество подвержено строгой форме расслоения, население жестко разделено на иерархические касты хозяев и рабов. Обязаны использовать §HКастовую Систему§!. Здание §HНовы Колизей§§! даёт дополнительно §G+1§! §HЕдинство§! £unity."
+ civic_tribal_aristocracy_desc: "Это общество подвержено строгой форме расслоения, население жестко разделено на иерархические касты хозяев и рабов. Обязаны использовать §HКастовую Систему§!. Здание §HНовы Колизей§§! даёт дополнительно §G+1§! §HЕдинство§! £unity£"
 
  civic_noble_aristocracy: "Король Философ"
  civic_noble_aristocracy_desc: "Эти обществом руководит идеалистическая форма аристократии, праведная и интелектуальная элита, руководствующаяся меритократическими принципами."
@@ -2783,7 +2783,7 @@ l_russian:
  private_healthcare: "Частное Здравоохранение"
  private_healthcare_desc: "Продолжительность жизни лидера увеличена на §G+15§!, £job_healthcare£ $job_healthcare_plural$ производит §G+2§! £mod_trade_value_add£ §Y$TRADE_VALUE$§!, но §YРост Населения§! от $job_healthcare_plural$ уменьшен на §R-1%§!."
  public_healthcare: "Всеобщее Здравоохранение"
- public_healthcare_desc: "£job_healthcare£ $job_healthcare_plural$ требует вдвое меньше средств на содержание и производит дополнительное §YUnity§! £unity и §YAmenitie§! £amenities. Строения §YКлиник§! дают дополнительные рабочие места для £job_healthcare£ $job_healthcare$, но тх содержание увеличено вдвое."
+ public_healthcare_desc: "£job_healthcare£ $job_healthcare_plural$ требует вдвое меньше средств на содержание и производит дополнительное §YUnity§! £unity£ и §YAmenitie§! £amenities£. Строения §YКлиник§! дают дополнительные рабочие места для £job_healthcare£ $job_healthcare$, но тх содержание увеличено вдвое."
 
  policy_education: "Образование"
  policy_education_name: "Образование"
@@ -3070,7 +3070,7 @@ l_russian:
 
  MINERALS_ACCUMULATION_1: "Богаты Минералами"
  NO_MINERALS_ACCUMULATION_1: "Накопить Минералы"
- MINERALS_ACCUMULATION_1_DESC: "Владение единовременно минимум £minerals §Y10000§! удовлетворит [Root.GetName]."
+ MINERALS_ACCUMULATION_1_DESC: "Владение единовременно минимум £minerals£ §Y10000§! удовлетворит [Root.GetName]."
 
  INDUSTRIAL_ECONOMY: "Культура Индустриализма"
  NO_INDUSTRIAL_ECONOMY: "Нет Культуры Индустриализма"
@@ -3163,7 +3163,7 @@ l_russian:
 
 
  gov_timocracy: "Тимократия"
- gov_timocracy_desc: "Форма государства, при которой политические права граждан (возможность выбирать власть и быть избранным) стратифицированы в соответствие с имущественным цензом."
+ gov_timocracy_desc: "Форма государства, при которой политические права граждан (возможность выбирать власть и быть избранным) стратифицированы в соответствие с имущественным цензом.$plutocracy_gov_reg_loc$"
 
  gov_par_monarchy: "Парламентарная Монархия"
  gov_par_monarchy_desc: "Конституционная монархия, в которой монарх не обладает значительными властными полномочиями по сравнению с правительством и играет преимущественно представительскую или церемониальную роль."
@@ -3181,7 +3181,7 @@ l_russian:
  unglorious_fleet: "Горе Побежденным!"
 
  civic_police_state: "Полицейское государство"
- civic_police_state_desc: "С целью подавления любых признаков инакомыслия население в этом репрессивном обществе тщательно отслеживается и контролируется крупными внутренними полицейскими силами.\n\n£job_enforcer  §Y$job_enforcer_plural$§! также производят дополнительно §Y1§! £unity£ Единство, строения §YПолицейский Участок§! and §YЗал Правосудия§! потребляют больше £energy£ энергии."
+ civic_police_state_desc: "С целью подавления любых признаков инакомыслия население в этом репрессивном обществе тщательно отслеживается и контролируется крупными внутренними полицейскими силами.\n\n£job_enforcer£  §Y$job_enforcer_plural$§! также производят дополнительно §Y1§! £unity£ Единство, строения §YПолицейский Участок§! and §YЗал Правосудия§! потребляют больше £energy£ энергии."
 
  civic_tooltip_private_prospectors_effects: "§HОткрывает тип корабля:§! Частный колониальный корабль.\n$MOD_COUNTRY_ADMIN_CAP_ADD$: §G+20§!"
 
@@ -3247,7 +3247,7 @@ l_russian:
  HT_PROSELYTE: "Новообращенный"
 
  gov_dread_brotherhood: "Смертоносное Братство"
- gov_dread_brotherhood_desc: "Крайне ксенофобная форма прямой демократии, в которой граждане объеденены общей целью - истреблением всех низших форм жизни в Галактике."
+ gov_dread_brotherhood_desc: "Крайне ксенофобная форма прямой демократии, в которой граждане объеденены общей целью - истреблением всех низших форм жизни в Галактике.$stratocracy_gov_reg_loc$"
 
  RT_BROTHER: "Брат"
  RT_SISTER: "Сестра"
@@ -3340,7 +3340,7 @@ l_russian:
  SHARED_BURDEN_DESC: "Действующий гражданский принцип §YРазделение Тягот§! нравится [Root.GetName]."
 
  gov_aristocratic_republic: "Аристократическая Республика"
- gov_aristocratic_republic_desc: "Форма представительской демократии, при которой управление государством осуществляет Сенат, избираться в который могут только представители элитных слоев общества."
+ gov_aristocratic_republic_desc: "Форма представительской демократии, при которой управление государством осуществляет Сенат, избираться в который могут только представители элитных слоев общества.$aristocracy_gov_reg_loc$"
 
  gov_oligarchic_republic: "Олигархическая Республика"
  gov_oligarchic_republic_desc: "Чрезвычайно элитарная форма республики, при которой значительно количество власти сконцентрировано в руках небольшой группы представителей Элит, обладающих значительных влияением на выборный процесс и управление государством."
@@ -3349,7 +3349,7 @@ l_russian:
  gov_congress_republic_desc: "Форма представительской демократии, в которой власть принадлежит демократически избираемому Конгрессу, члены которого назначают премьер-министра. Любой свободный гражданин может быть избран в парламент."
 
  gov_noble_aristocracy: "Благородная Аристократия"
- gov_noble_aristocracy_desc: "Политическая власть в этом обществе целиком принадлежит Совету, собранному из представителей древнейшей родовой Аристократии."
+ gov_noble_aristocracy_desc: "Политическая власть в этом обществе целиком принадлежит Совету, собранному из представителей древнейшей родовой Аристократии.$aristocracy_gov_reg_loc$"
 
  RT_REGENT: "Регент"
 
@@ -3370,7 +3370,7 @@ l_russian:
  RT_DUCE: "Вождь"
 
  gov_anarchy_communism: "Военный Коммунизм"
- gov_anarchy_communism_desc: "Экстремальная форма коммунистической диктатуры, которая характеризуется полной национализацией всей промышленности, пол жестким централизованным управлением, гос. контроль за международной торговлей жесткой дисциплиной для рабочих, с запретом на забастовки и принуждением к труду не-рабочих классов населения."
+ gov_anarchy_communism_desc: "Экстремальная форма коммунистической диктатуры, которая характеризуется полной национализацией всей промышленности, пол жестким централизованным управлением, гос. контроль за международной торговлей жесткой дисциплиной для рабочих, с запретом на забастовки и принуждением к труду не-рабочих классов населения.$stratocracy_gov_reg_loc$"
 
  RT_GENERALISSIMO: "Генералиссимус"
 
@@ -3411,7 +3411,7 @@ l_russian:
  civic_philosopher_king_desc: "Недостаточно просто править. За штурвалом государственного корабля должен стоять король, у которого достаточно мудрости и знаний, чтобы идти правильным курсом."
 
  gov_minarchy: "Минархия"
- gov_minarchy_desc: "Форма минимального государства, сильного ограниченного по своим функциям лишь защитой свободы и собственности каждого гражданина или человека, пребывающего на территории государства. Государство облагает граждан налогами, но их собирается не больше, чем необходимо для правоохранительной, оборонной и общеадминистративной деятельности государства."
+ gov_minarchy_desc: "Форма минимального государства, сильного ограниченного по своим функциям лишь защитой свободы и собственности каждого гражданина или человека, пребывающего на территории государства. Государство облагает граждан налогами, но их собирается не больше, чем необходимо для правоохранительной, оборонной и общеадминистративной деятельности государства.$plutocracy_gov_reg_loc$"
 
  XENOIST_UNIVERSALISM: "Мультикультурная Утопия"
  XENOIST_UNIVERSALISM_DESC: "Наличие по крайней мере §Y8§! уникальных видов существ в нашей Империи очень понравится [Root.GetName]."
@@ -3737,12 +3737,12 @@ l_russian:
  civic_star_settlers_desc: "С началом освоения космоса, мощный дух первооткрывательства стал основой культуры народа этой Цивилизации. Колонизация новых миров стала национальной идеологией. \n\nНачинает игру с технологией §YГалактические Амбиции§! \n\n£job_colonist£ §Y$job_colonist_plural$§! производят §Y5§! £unity£ Единства \n\nНе может устанавливать политики §YВоенный Транспорт§! или §YВоенные Телекоммуникации§!"
 
  gov_military_corp: "Частная Военная Компания"
- gov_military_corp_desc: "Правительство представляет собой Военно-Промышленный холдинг, с советом директоров состоящим исключительно из действующих военачальников."
+ gov_military_corp_desc: "Правительство представляет собой Военно-Промышленный холдинг, с советом директоров состоящим исключительно из действующих военачальников.$stratocracy_gov_reg_loc$"
 
  6_HAPPINESS: "§G+6%§! £happiness£"
 
  gov_great_houses: "Великие Дома"
- gov_great_houses_desc: "Эта цивилизация управляется лидерами нескольких Великих Домов. Их традиции восходят к древним кланам и племенам, но сейчас они выступают больше в роли политических партий. В отличие от классической Родовой Аристократии, членство в Доме не привязано жестко к семейным узам - любой может поступить на службу Великого Дома и продвинуться до его самых высоких рангов, при условии что он дает клятву верности Дому и чтит его Традицию."
+ gov_great_houses_desc: "Эта цивилизация управляется лидерами нескольких Великих Домов. Их традиции восходят к древним кланам и племенам, но сейчас они выступают больше в роли политических партий. В отличие от классической Родовой Аристократии, членство в Доме не привязано жестко к семейным узам - любой может поступить на службу Великого Дома и продвинуться до его самых высоких рангов, при условии что он дает клятву верности Дому и чтит его Традицию.$aristocracy_gov_reg_loc$"
 
  requires_ap_world_shaper: "$TRIGGER_FAIL$Требует сначала получить перк §YМеняющий миры§!."
 
@@ -3863,7 +3863,7 @@ l_russian:
  #####
 
  opinion_capitalists_vs_collectivists: "Socialist Loons"
- opinion_industrialist_vs_ecologist: "Tree-Huggers"
+ #opinion_industrialist_vs_ecologist: "Tree-Huggers"
 
  policy_slavery_percent: "Enslavement Rate"
  policy_slavery_percent_desc: " "
@@ -3893,7 +3893,7 @@ l_russian:
  auth_corporate_fiefdom: "Corporate Fiefdom"
  auth_bugged_corporate_imperial:0 "Dynastic Enterprise"
  auth_tec_patrocorporate:0 "Patrimonial Corporate"
- auth_direct_democratic:0 "Direct Democratic"
+ #auth_direct_democratic:0 "Direct Democratic"
 
  ###############
  # Governments #
@@ -3913,8 +3913,6 @@ l_russian:
 
  plutocracy_gov_reg_loc: "\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_capitalism$§!, £building£ §YCapital Buildings§! replace some £job_politician£ §Y$job_politician$§! Jobs with £job_merchant£ §Y$job_merchant_plural$§!\n\n$jjob_merchant_effect_desc$§!"
  plutocracy_gov_corp_loc: "\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_capitalism$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_merchant£ §Y$job_merchant_plural$§!\n\n$job_merchant_effect_desc$§!"
-
- plutocracy_gov_corp_loc: ""
 
  aristocracy_gov_reg_loc: "\n\n§EEffects:§!\n§T£building£ §YCapital Buildings§! replace some £job_politician£ §Y$job_politician$§! Jobs with £job_noble£ §Y$job_noble_plural$§!\n\n$job_noble_effect_desc$§!"
  aristocracy_gov_corp_loc: "\n\n§EEffects:§!\n§T£building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_noble£ §Y$job_noble_plural$§!\n\n$job_noble_effect_desc$§!"
@@ -3972,8 +3970,8 @@ l_russian:
  ## Relytor's Empire Governance ###
  ##################################
 
- job_supervisor: "Philosopher"
- job_supervisor_plural: "Philosophers"
+ #job_supervisor: "Philosopher"
+ #job_supervisor_plural: "Philosophers"
 
  RT_CUSTODIAN: "Noble Custodian"
 
@@ -3991,12 +3989,12 @@ l_russian:
  # Noble Aristocratic Governments
  gov_imperial_domain_desc:1 "§LThis government rules the Galactic Imperium's central crown territory, which is under the direct control of the Imperial Sovereign.§!$aristocracy_gov_reg_loc$"
  gov_elective_monarchy_desc: "This government is a form of enlightened autocracy, where a strong emphasis is put on the knowledge and qualifications of the elected monarch.$aristocracy_gov_reg_loc$"
- gov_noble_aristocracy_desc: "The whole political power in this society belongs to the council of representatives of the ancient patrimonial aristocratic Houses.$aristocracy_gov_reg_loc$"
- gov_aristocratic_republic_desc: "A form of representative democracy, in which only those who belong to social Elite may be elected to Senate and rule on behalf of the people.$aristocracy_gov_reg_loc$"
+ #gov_noble_aristocracy_desc: "The whole political power in this society belongs to the council of representatives of the ancient patrimonial aristocratic Houses.$aristocracy_gov_reg_loc$"
+ #gov_aristocratic_republic_desc: "A form of representative democracy, in which only those who belong to social Elite may be elected to Senate and rule on behalf of the people.$aristocracy_gov_reg_loc$"
  gov_aristocratic_monarchy_desc: "Форма монархии, при которой король не обладает абсолютной властью, но вынужден разделять её с влиятельными представителями родовой Аристократии.$aristocracy_gov_reg_loc$"
   gov_feudal_empire_desc: "This government is a feudal autocracy where the monarch rules indirectly, granting offices and territories to vassals in exchange for obligations in the form of taxes and military service.$aristocracy_gov_reg_loc$"
- gov_great_houses: "Great Houses"
- gov_great_houses_desc: "This civilization is ruled by the leadership council of a few Great Houses, which traditions derives from ancient clans and tribes, but which now function more as political parties. Unlike in classic Noble Aristocracy, house membership is not tied to patrimonial matters, such as birth or marriage, but rather anyone can be adopted to the House and advance to it's highest ranks, as long as he pledges loyalty to the House and preserve it's Tradition.$aristocracy_gov_reg_loc$"
+ #gov_great_houses: "Great Houses"
+ #gov_great_houses_desc: "This civilization is ruled by the leadership council of a few Great Houses, which traditions derives from ancient clans and tribes, but which now function more as political parties. Unlike in classic Noble Aristocracy, house membership is not tied to patrimonial matters, such as birth or marriage, but rather anyone can be adopted to the House and advance to it's highest ranks, as long as he pledges loyalty to the House and preserve it's Tradition.$aristocracy_gov_reg_loc$"
  gov_benevolent_aristocracy: "Benevolent Aristocracy"
  gov_benevolent_aristocracy_desc: "The council of representatives of the patrimonial aristocratic Houses believe it is their duty to care for all equally.$aristocracy_gov_reg_loc$"
 
@@ -4018,9 +4016,9 @@ l_russian:
  # Mogul Governments
  gov_trade_league_desc: "This government is a form of plutocratic oligarchy, where the state is made up of a myriad of free merchants, corporations and guilds that have banded together in common commercial interests.$plutocracy_gov_reg_loc$"
 
- gov_minarchy_desc: "A form of minimal 'night-watchman' state, that is not responsible for the education, health care, employment or transportation of its citizens, neither makes it any use of natural resources in its territory. All of this is instead held privately or publicly, but is never susceptible to any interference of the state, its law or its representatives.$plutocracy_gov_reg_loc$"
+ #gov_minarchy_desc: "A form of minimal 'night-watchman' state, that is not responsible for the education, health care, employment or transportation of its citizens, neither makes it any use of natural resources in its territory. All of this is instead held privately or publicly, but is never susceptible to any interference of the state, its law or its representatives.$plutocracy_gov_reg_loc$"
 
- gov_timocracy_desc: "A state, where political rights of the population are stratified according to the amount of property they own.$plutocracy_gov_reg_loc$"
+ #gov_timocracy_desc: "A state, where political rights of the population are stratified according to the amount of property they own.$plutocracy_gov_reg_loc$"
 
  gov_criminal_syndicate_desc:0 "This government is an enormous and ruthless business syndicate, which shares many of its operating practices with organized crime.$plutocracy_gov_reg_loc$"
 
@@ -4039,16 +4037,16 @@ l_russian:
  gov_assembly_of_clans_desc: "This government is a militaristic form of democracy, where all free clan warriors can make their voices heard.$stratocracy_gov_reg_loc$"
  gov_citizen_stratocracy_desc: "This government is an advanced form of militaristic oligarchy, where the military has subsumed all aspects of civilian administration. All government offices are held by military officers.$stratocracy_gov_reg_loc$"
  gov_citizen_republic_desc: "This government is a militaristic form of democracy, where full citizenship can only be gained through military service. The voting franchise is limited to full citizens, and they are the only ones allowed to hold public offices.$stratocracy_gov_reg_loc$"
- gov_jingoism_desc: "This form of authoritarian governance is headed by a xenophobic demagogue and notions of national supremacy and manifest destiny dominate the politics.$stratocracy_gov_reg_loc$"
- gov_anarchy_communism_desc: "An extreme form of Communist dictatorship, characterized with nationalization of all industries and the introduction of strict centralized management, state control of foreign trade, strict discipline for workers, with strikes forbidden and obligatory labor duty by non-working classes.$stratocracy_gov_reg_loc$"
- gov_military_corp_desc: "Government is represented by a massive military-industrial holding, with board of directors consisting solely of active war-chiefs.$stratocracy_gov_corp_loc$"
+ #gov_jingoism_desc: "This form of authoritarian governance is headed by a xenophobic demagogue and notions of national supremacy and manifest destiny dominate the politics.$stratocracy_gov_reg_loc$"
+ #gov_anarchy_communism_desc: "An extreme form of Communist dictatorship, characterized with nationalization of all industries and the introduction of strict centralized management, state control of foreign trade, strict discipline for workers, with strikes forbidden and obligatory labor duty by non-working classes.$stratocracy_gov_reg_loc$"
+ #gov_military_corp_desc: "Government is represented by a massive military-industrial holding, with board of directors consisting solely of active war-chiefs.$stratocracy_gov_corp_loc$"
  gov_bandit_kingdom_desc: "This government is organized like a massive crime syndicate, where the strong prey on the weak and any neighboring states are seen as little more than raiding targets.$stratocracy_gov_reg_loc$"
  gov_band_blood_desc:0 "This ruthless society is governed through conflict and ritualized sacrifice, honoring death within and without.$stratocracy_gov_reg_loc$"
  gov_blood_court_desc: "This government is a hereditary form of rabidly xenophobic autocracy, where the ultimate responsibility of the monarch is to oversee the extermination of all lesser species in the galaxy.$stratocracy_gov_reg_loc$"
  gov_purity_order_desc: "This government is a form of rabidly xenophobic autocracy, where a single ruler has sworn to oversee the extermination of all lesser species in the galaxy.$stratocracy_gov_reg_loc$"
  gov_purification_committee_desc: "This government is a form of rabidly xenophobic oligarchy, where a political committee has been set up to oversee the extermination of all lesser species in the galaxy.$stratocracy_gov_reg_loc$"
  gov_purity_assembly_desc: "This government is a form of rabidly xenophobic democracy, where an elected assembly has been charged with overseeing the extermination of all lesser species in the galaxy.$stratocracy_gov_reg_loc$"
- gov_dread_brotherhood_desc: "An extremely xenophobic form of direct democracy, where all citizens are bound by the common goal - the destruction of all lesser life forms in the galaxy.$stratocracy_gov_reg_loc$"
+ #gov_dread_brotherhood_desc: "An extremely xenophobic form of direct democracy, where all citizens are bound by the common goal - the destruction of all lesser life forms in the galaxy.$stratocracy_gov_reg_loc$"
   gov_successor_khanate_desc:0 "A successor state trying to recapture the glory of the Great Khan's empire.$stratocracy_gov_reg_loc$"
 
  gov_mortal_empire_desc:0 "This theocratic monarchy engages in ritualized, sapient sacrifice.$stratocracy_gov_reg_loc$"

@@ -1,5 +1,4 @@
 leader_trait_legendary_leader = { #Origin trait
-	councilor_trait = yes
 	inline_script = {
 		script = trait/icon
 		ICON = "GFX_leader_trait_legendary_leader"
@@ -8,7 +7,7 @@ leader_trait_legendary_leader = { #Origin trait
 		TIER = none
 	}
 
-	triggered_modifier = {
+	triggered_councilor_modifier = {
 		potential = {
 			NOT = { has_leader_flag = legendary_leader_coma }
 			is_variable_set = paragon_origin_story_ruling

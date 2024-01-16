@@ -313,6 +313,15 @@ death_priest = {
 		mult = value:job_total_output_modifier|JOB|death_priest|RESOURCE|unity|
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_councilor = { COUNCILOR = "councilor_dimensional_worship_corporate" } }
+		}
+		trade_value_add = @councilor_dimensional_worship_priest_trade_value
+		mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_trade_mult|TYPE|councilor_dimensional_worship_corporate|
+	}
+
 	inline_script = "jobs/pd_priest_outputs" # Planetary Diversity
 
 	weight = {
@@ -925,6 +934,18 @@ healthcare = {
 		pop_growth_speed = 0.025
 		planet_pop_assembly_organic_mult = 0.025
 		pop_environment_tolerance = 0.0125
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_modifier = revolutionary_medigel_modifier
+				has_valid_civic = civic_private_healthcare_corporate
+			}
+		}
+		planet_amenities_add = 1
+		trade_value_add = 2
 	}
 
 	weight = {

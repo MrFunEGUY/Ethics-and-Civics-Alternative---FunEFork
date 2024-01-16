@@ -1106,6 +1106,7 @@ civic_corporate_dimensional_worship = {
 	possible = {
 		civics = {
 			NOR = {
+				text = civic_tooltip_not_death_cult
 				value = civic_death_cult
 				value = civic_death_cult_corporate
 			}
@@ -1271,10 +1272,12 @@ civic_corporate_dark_consortium = {
 		civics = { NOT = { value = civic_dark_consortium } }
 	}
 	modification = {
+		moddable_conditions_custom_tooltip = CIVIC_NOT_MODDABLE_ONLY_REMOVE
 		add = {
 			has_technology = tech_mine_dark_matter
 		}
 		remove = {
+			fail_text = CIVIC_LOCKED
 			NOT = { has_country_flag = civic_dark_consortium_locked }
 		}
 	}
@@ -1325,7 +1328,7 @@ civic_corporate_sovereign_guardianship = {
 	modifier = {
 		empire_size_colonies_mult = 1
 		empire_size_branch_office_mult = 1
-		empire_size_systems_mult = 1
+		empire_size_systems_mult = 1.5
 		empire_size_pops_mult = -0.50
 		empire_size_districts_mult = -0.50
 		diplo_weight_mult = 0.2

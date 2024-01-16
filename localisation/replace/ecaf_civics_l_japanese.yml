@@ -1,4 +1,4 @@
-﻿l_english:
+﻿#l_english:
 # l_spanish:
 # l_german:
 # l_french:
@@ -6,7 +6,7 @@
 # l_russian:
 # l_braz_por:
 # l_simp_chinese:
-# l_japanese:
+ l_japanese:
 # l_korean:
 
  ##############
@@ -240,7 +240,7 @@
  civic_tooltip_xenologist_effects: "§YAncient Civilizations Anomalies:§!\n Anomaly Research Speed: §G+50.0%§!\nAnomaly Fail Risk: §R-25.0%§!\n§Y$BIOLOGICAL_species_trait_points_add$§! increased by §G+1§!\n§Y$category_biology_research_speed_mult$§! increased by §G+30%§!\n§Y$category_new_worlds_research_speed_mult$§! increased by §G+30%§!\n§Y$pop_ethic_xenophile_attraction_mult$§! increased by §G+5%§!\n§Y$pop_ethic_materialist_attraction_mult$§! increased by §G+10%§!\n§Y$MOD_COUNTRY_PHYSICS_TECH_RESEARCH_SPEED$§! reduced by §G+10%§!\n"
  civic_trade_league_desc: "Trade Syndicate represents a consortium of wealthiest Corporations, which dominates Empire's economical and political life."
  civic_trade_league: "Trade Syndicate"
- civic_tribal_aristocracy_desc: "This society is subject to a strict form of social stratification, with people being divided into rigid hierarchical groups of Masters and Slaves. Obligated to have §HCaste System§!. Building §HNeo-Coliseum§! provides additional §G+1§! §HUnity§! £unity."
+ civic_tribal_aristocracy_desc: "This society is subject to a strict form of social stratification, with people being divided into rigid hierarchical groups of Masters and Slaves. Obligated to have §HCaste System§!. Building §HNeo-Coliseum§! provides additional §G+1§! §HUnity§! £unity£"
  civic_tribal_aristocracy: "Immutable Caste"
  civic_tribals_desc: "The government is overwatched by a council of society's Elders, who keeps and eye on preserving the Empire's safety from any potential outside threat."
  civic_tribals: "Elders Ring"
