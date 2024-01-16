@@ -48,8 +48,6 @@ This mod should go below any of the mods listed below.
 [hr][/hr]
 [h1]Patches:[/h1]
 
-[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2464185035]- Expanded Mandates[/url]
-
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1923444292]- UI Overhaul Dynamic + Ethics and Civics Alternative[/url]
 
 
