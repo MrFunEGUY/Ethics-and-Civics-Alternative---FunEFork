@@ -78,6 +78,7 @@ espionage_smear_campaign_xenophobe = {
 	if = {
 		limit = {
 			root.target = {
+				is_individual_machine = no
 				OR = {
 					is_megacorp = yes
 					has_valid_civic = civic_merchant_guilds

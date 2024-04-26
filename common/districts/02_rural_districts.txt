@@ -713,6 +713,20 @@ district_generator_uncapped = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { 
+				is_machine_empire = yes 
+				has_ascension_perk = ap_machine_worlds
+			}
+		}
+		modifier = {
+			job_technician_drone_add = 2
+			planet_housing_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = {
 				is_gestalt = no
 				is_fallen_empire_spiritualist = no
@@ -790,7 +804,7 @@ district_mining_uncapped = {
 	desc = {
 		trigger = {
 			uses_district_set = shattered_ring_world
-			NOT = { owner = { is_subterranean_empire = yes } }
+			owner = { is_subterranean_empire = no }
 		}
 		text = district_srw_mining_desc
 	}
@@ -905,6 +919,21 @@ district_mining_uncapped = {
 		potential = {
 			NOT = { uses_district_set = shattered_ring_world }
 			exists = owner
+			owner = { 
+				is_machine_empire = yes 
+				has_ascension_perk = ap_machine_worlds
+			}
+		}
+		modifier = {
+			job_mining_drone_add = 2
+			planet_housing_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			NOT = { uses_district_set = shattered_ring_world }
+			exists = owner
 			owner = {
 				is_gestalt = no
 				is_fallen_empire_spiritualist = no
@@ -1007,7 +1036,7 @@ district_mining_uncapped = {
 
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			exists = owner
 		}
 		modifier = {
 			planet_housing_add = 1
@@ -1017,7 +1046,7 @@ district_mining_uncapped = {
 
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			exists = owner
 		}
 		modifier = {
 			planet_max_buildings_add = 1
@@ -1047,6 +1076,7 @@ district_mining_uncapped = {
 
 	triggered_desc = {
 		trigger = {
+			uses_district_set = shattered_ring_world
 			exists = owner
 			owner = { is_gestalt = yes }
 			NOT = { owner = { has_origin = origin_subterranean } }
@@ -1055,6 +1085,7 @@ district_mining_uncapped = {
 	}
 	triggered_desc = {
 		trigger = {
+			uses_district_set = shattered_ring_world
 			exists = owner
 			owner = { is_regular_empire = yes }
 			NOT = { owner = { has_origin = origin_subterranean } }

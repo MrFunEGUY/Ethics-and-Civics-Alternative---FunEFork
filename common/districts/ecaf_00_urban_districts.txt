@@ -179,6 +179,7 @@ district_city = {
 			uses_district_set = machine_world
 			uses_district_set = shattered_ring_world
 		}
+		NOT = { has_modifier = resort_colony }
 	}
 
 	potential = {
@@ -199,18 +200,17 @@ district_city = {
 		}
 		NOT = { has_deposit = d_crashed_slaver_ship }
 		OR = {
+			uses_district_set = district_resort
 			uses_district_set = standard
 			uses_district_set = hive_world
 			uses_district_set = machine_world
 			uses_district_set = shattered_ring_world
 		}
+		NOT = { has_modifier = resort_colony }
 	}
 
 	allow = {
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-		}
+		NOT = { has_modifier = slave_colony }
 	}
 
 	conversion_ratio = 1

@@ -38,7 +38,7 @@ part = {
 # Payback - Megacorp
 part = {
 	location = 0
-	localization = "START_SCREEN_PAYBACK" # TODO: custom start screen
+	localization = "START_SCREEN_PAYBACK"
 	
 	trigger = {
 		has_origin = origin_payback

@@ -388,8 +388,9 @@ action_declare_war = {
 				FROM = {
 					has_ai_personality = devouring_swarm
 				}
-				NOT = {
+				NOR = {
 					has_authority = auth_machine_intelligence
+					is_individual_machine = yes
 					is_species_class = ROBOT
 				}
 			}
@@ -734,9 +735,10 @@ action_declare_war = {
 			trigger = {
 				has_ai_personality = devouring_swarm
 				FROM = {
-					NOT = {
-						is_species_class = ROBOT
+					NOR = {
 						has_authority = auth_machine_intelligence
+						is_individual_machine = yes
+						is_species_class = ROBOT
 					}
 				}
 			}
@@ -747,8 +749,9 @@ action_declare_war = {
 				has_ai_personality = devouring_swarm
 				FROM = {
 					OR = {
-						is_species_class = ROBOT
 						has_authority = auth_machine_intelligence
+						is_individual_machine = yes
+						is_species_class = ROBOT
 					}
 				}
 			}
@@ -1617,8 +1620,9 @@ action_offer_peace = {
 			trigger = {
 				has_ai_personality = devouring_swarm
 				FROM = {
-					NOT = {
+					NOR = {
 						has_authority = auth_machine_intelligence
+						is_individual_machine = yes
 						is_species_class = ROBOT
 					}
 				}
@@ -1630,6 +1634,7 @@ action_offer_peace = {
 				FROM = {
 					OR = {
 						has_authority = auth_machine_intelligence
+						is_individual_machine = yes
 						is_species_class = ROBOT
 					}
 				}
@@ -1765,9 +1770,10 @@ action_offer_peace = {
 			trigger = {
 				has_ai_personality = devouring_swarm
 				FROM = {
-					NOT = {
-						is_species_class = ROBOT
+					NOR = {
 						has_authority = auth_machine_intelligence
+						is_individual_machine = yes
+						is_species_class = ROBOT
 					}
 				}
 			}
@@ -1778,8 +1784,9 @@ action_offer_peace = {
 				has_ai_personality = devouring_swarm
 				FROM = {
 					OR = {
-						is_species_class = ROBOT
 						has_authority = auth_machine_intelligence
+						is_individual_machine = yes
+						is_species_class = ROBOT
 					}
 				}
 			}
@@ -3119,6 +3126,7 @@ action_make_rival = {
 				from = { has_ai_personality = devouring_swarm }
 				NOR = {
 					has_authority = auth_machine_intelligence
+					is_individual_machine = yes
 					is_species_class = ROBOT
 				}
 			}
@@ -3321,7 +3329,29 @@ action_make_rival = {
 		}
 		ORG_TO_MECH_MAKE_RIVAL_ACCEPT_FRIENDLY_01 = {
 			trigger = {
-				NOT = { has_authority = auth_machine_intelligence }
+				NOR = {
+					has_authority = auth_machine_intelligence
+					has_origin = origin_cybernetic_creed
+				}
+				OR = {
+					is_cordial_to = FROM
+					is_friendly_to = FROM
+					is_protective_to = FROM
+				}
+				FROM = {
+					has_authority = auth_machine_intelligence
+				}
+			}
+			weight = {
+				weight = 20
+			}
+		}
+		ORG_TO_MECH_MAKE_RIVAL_ACCEPT_FRIENDLY_02 = { # "Cybernetic Creed" variant
+			trigger = {
+				has_origin = origin_cybernetic_creed
+				NOT = {
+					has_authority = auth_machine_intelligence
+				}
 				OR = {
 					is_cordial_to = FROM
 					is_friendly_to = FROM
@@ -3339,8 +3369,9 @@ action_make_rival = {
 			trigger = {
 				has_ai_personality = devouring_swarm
 				FROM = {
-					NOT = {
+					NOR = {
 						has_authority = auth_machine_intelligence
+						is_individual_machine = yes
 						is_species_class = ROBOT
 					}
 				}
@@ -3351,7 +3382,10 @@ action_make_rival = {
 			trigger = {
 				has_ai_personality = devouring_swarm
 				FROM = {
-					has_authority = auth_machine_intelligence
+					OR = {
+						has_authority = auth_machine_intelligence
+						is_individual_machine = yes
+					}
 				}
 			}
 		}
@@ -3777,8 +3811,9 @@ action_end_rivalry = {
 			trigger = {
 				has_ai_personality = devouring_swarm
 				FROM = {
-					NOT = {
+					NOR = {
 						has_authority = auth_machine_intelligence
+						is_individual_machine = yes
 						is_species_class = ROBOT
 					}
 				}
@@ -4135,8 +4170,9 @@ action_end_rivalry = {
 			trigger = {
 				from = { has_ai_personality = devouring_swarm }
 				ROOT = {
-					NOT = {
+					NOR = {
 						has_authority = auth_machine_intelligence
+						is_individual_machine = yes
 						is_species_class = ROBOT
 					}
 				}
@@ -4147,7 +4183,10 @@ action_end_rivalry = {
 			trigger = {
 				from = { has_ai_personality = devouring_swarm }
 				ROOT = {
-					has_authority = auth_machine_intelligence
+					OR = {
+						has_authority = auth_machine_intelligence
+						is_individual_machine = yes
+					}
 				}
 			}
 		}
@@ -4373,8 +4412,9 @@ action_end_rivalry = {
 			trigger = {
 				has_ai_personality = devouring_swarm
 				FROM = {
-					NOT = {
+					NOR = {
 						has_authority = auth_machine_intelligence
+						is_individual_machine = yes
 						is_species_class = ROBOT
 					}
 				}
@@ -4384,7 +4424,10 @@ action_end_rivalry = {
 			trigger = {
 				has_ai_personality = devouring_swarm
 				FROM = {
-					has_authority = auth_machine_intelligence
+					OR = {
+						has_authority = auth_machine_intelligence
+						is_individual_machine = yes
+					}
 				}
 			}
 		}
@@ -4709,8 +4752,9 @@ action_insult = {
 			trigger = {
 				has_ai_personality = devouring_swarm
 				FROM = {
-					NOT = {
+					NOR = {
 						has_authority = auth_machine_intelligence
+						is_individual_machine = yes
 						is_species_class = ROBOT
 					}
 				}
@@ -4720,7 +4764,10 @@ action_insult = {
 			trigger = {
 				has_ai_personality = devouring_swarm
 				FROM = {
-					has_authority = auth_machine_intelligence
+					OR = {
+						has_authority = auth_machine_intelligence
+						is_individual_machine = yes
+					}
 				}
 			}
 		}
@@ -5580,16 +5627,19 @@ action_insult = {
 		}
 	}
 	propose = {
-		03_INSULT_PROPOSE_SPI_MAT = {
+		03_INSULT_PROPOSE_SPI_MAT = { # "a nation designed for computers and automatons"
 			trigger = {
+				is_materialist = yes
 				FROM = {
 					NOR = {
 						has_ethic = ethic_gestalt_consciousness
 						is_megacorp = yes
 					}
+					is_spiritualist = yes
+					NOT = {
+						has_origin = origin_cybernetic_creed
+					}
 				}
-				is_materialist = yes
-				FROM = { is_spiritualist = yes }
 			}
 		}
 	}
@@ -6419,7 +6469,10 @@ action_insult = {
 	propose = {
 		DS_INSULT_PROPOSE_MECH_01 = {
 			trigger = {
-				has_authority = auth_machine_intelligence
+				OR = {
+					has_authority = auth_machine_intelligence
+					is_individual_machine = yes
+				}
 				FROM = {
 					has_ai_personality = devouring_swarm
 				}
@@ -6431,6 +6484,7 @@ action_insult = {
 			trigger = {
 				OR = {
 					has_authority = auth_machine_intelligence
+					is_individual_machine = yes
 					is_species_class = ROBOT
 				}
 				FROM = {
@@ -6453,7 +6507,10 @@ action_insult = {
 			trigger = {
 			has_ai_personality = devouring_swarm
 				FROM = {
-					has_authority = auth_machine_intelligence
+					OR = {
+						has_authority = auth_machine_intelligence
+						is_individual_machine = yes
+					}
 				}
 			}
 		}
@@ -6463,7 +6520,10 @@ action_insult = {
 			trigger = {
 			has_ai_personality = devouring_swarm
 				FROM = {
-					has_authority = auth_machine_intelligence
+					OR = {
+						has_authority = auth_machine_intelligence
+						is_individual_machine = yes
+					}
 				}
 			}
 		}
@@ -6616,8 +6676,9 @@ action_insult = {
 			trigger = {
 				has_ai_personality = devouring_swarm
 				FROM = {
-					NOT = {
+					NOR = {
 						has_authority = auth_machine_intelligence
+						is_individual_machine = yes
 						is_species_class = ROBOT
 					}
 				}
@@ -6627,7 +6688,10 @@ action_insult = {
 			trigger = {
 				has_ai_personality = devouring_swarm
 				FROM = {
-					has_authority = auth_machine_intelligence
+					OR = {
+						has_authority = auth_machine_intelligence
+						is_individual_machine = yes
+					}
 				}
 			}
 		}
@@ -7086,7 +7150,31 @@ action_integrate_subject = {
 					is_hostile_to = FROM
 					is_domineering_to = FROM
 					is_unfriendly_to = FROM
+					has_origin = origin_cybernetic_creed
 				}
+				FROM = {
+					OR = {
+						has_authority = auth_machine_intelligence
+					}
+				}
+			}
+			weight = {
+				weight = 20
+			}
+		}
+		ORG_TO_MECH_INTEGRATE_NEUTRAL_02 = { # "Cybernetic Creed" variant
+			trigger = {
+				NOR = {
+					has_authority = auth_machine_intelligence
+					is_species_class = ROBOT
+					is_friendly_to = FROM
+					is_protective_to = FROM
+					is_cordial_to = FROM
+					is_hostile_to = FROM
+					is_domineering_to = FROM
+					is_unfriendly_to = FROM
+				}
+				has_origin = origin_cybernetic_creed
 				FROM = {
 					OR = {
 						has_authority = auth_machine_intelligence
@@ -7431,7 +7519,7 @@ action_integrate_subject = {
 				}
 			}
 		}
-		ORG_TO_MECH_INTEGRATE_ACCEPT_NEUTRAL_01 = {
+		ORG_TO_MECH_INTEGRATE_ACCEPT_NEUTRAL_01 = { # "we struggle to see how a full integration of organics into a machine society would work..."
 			trigger = {
 				NOR = {
 					has_authority = auth_machine_intelligence
@@ -7439,6 +7527,7 @@ action_integrate_subject = {
 					is_hostile_to = FROM
 					is_domineering_to = FROM
 					is_unfriendly_to = FROM
+					has_origin = origin_cybernetic_creed
 				}
 				FROM = {
 					has_authority = auth_machine_intelligence
@@ -7462,6 +7551,24 @@ action_integrate_subject = {
 						has_authority = auth_machine_intelligence
 						is_species_class = ROBOT
 					}
+				}
+			}
+			weight = {
+				weight = 20
+			}
+		}
+		ORG_TO_MECH_INTEGRATE_ACCEPT_NEUTRAL_03 = { # "Cybernetic Creed" variant
+			trigger = {
+				NOR = {
+					has_authority = auth_machine_intelligence
+					is_species_class = ROBOT
+					is_hostile_to = FROM
+					is_domineering_to = FROM
+					is_unfriendly_to = FROM
+				}
+				has_origin = origin_cybernetic_creed
+				FROM = {
+					has_authority = auth_machine_intelligence
 				}
 			}
 			weight = {
@@ -8650,6 +8757,7 @@ action_guarantee_independence = {
 		KET_GUARANTEE_SELECT = {
 			weight = { weight = 100000 }
 			trigger = {
+				exists = event_target:ratling_country
 				is_same_empire = event_target:ratling_country
 			}
 		}
@@ -8659,6 +8767,7 @@ action_guarantee_independence = {
 			weight = { weight = 100000 }
 			trigger = {
 				FROM = {
+					exists = event_target:ratling_country
 					is_same_empire = event_target:ratling_country
 				}
 			}
@@ -8668,6 +8777,7 @@ action_guarantee_independence = {
 		KET_GUARANTEE_ACCEPT = {
 			weight = { weight = 100000 }
 			trigger = {
+				exists = event_target:ratling_country
 				is_same_empire = event_target:ratling_country
 			}
 		}
@@ -8756,6 +8866,7 @@ action_break_guarantee = {
 	accept = {
 		MECH_REVOKE_GUARANTEE_ACCEPT = {
 			trigger = {
+				exists = event_target:ratling_country
 				is_same_empire = event_target:ratling_country
 			}
 		}
@@ -8766,6 +8877,7 @@ action_break_guarantee = {
 		KET_REVOKE_GUARANTEE_SELECT = {
 			weight = { weight = 100000 }
 			trigger = {
+				exists = event_target:ratling_country
 				is_same_empire = event_target:ratling_country
 			}
 		}
@@ -8774,6 +8886,7 @@ action_break_guarantee = {
 		KET_REVOKE_GUARANTEE_PROPOSE = {
 			weight = { weight = 100000 }
 			trigger = {
+				exists = event_target:ratling_country
 				FROM = {
 					is_same_empire = event_target:ratling_country
 				}
@@ -8784,6 +8897,7 @@ action_break_guarantee = {
 		KET_REVOKE_GUARANTEE_ACCEPT = {
 			weight = { weight = 100000 }
 			trigger = {
+				exists = event_target:ratling_country
 				is_same_empire = event_target:ratling_country
 			}
 		}

@@ -125,6 +125,7 @@ lrsk_gov_var_civic_republicanism = {
 
 	playable = { lrsk_gvp_is_active = yes }
 
+	description = "civic_tooltip_lrsk_gov_var_civic_republicanism_effects"
 	#icon = "gfx/interface/icons/governments/civics/civic_beacon_of_liberty.dds"
 
 	possible = {
@@ -164,8 +165,9 @@ lrsk_gov_var_civic_republicanism = {
 	}
 
 	modifier = {
-		leaders_cost_mult = -0.3
-		job_politician_per_pop = 0.04
+		leader_officials_cost_mult = -0.2
+		country_official_cap_add = 1
+		job_lrsk_gvp_job_civic_leader_per_pop = 0.04
 	}
 }
 
@@ -744,8 +746,8 @@ lrsk_gov_var_civic_chivalry = {
 	}
 
 	modifier = {
-		admiral_exp_gain = 0.15
-    	general_exp_gain = 0.15
+		commander_exp_gain = 0.1
+		commander_initial_skill = 1
 	}
 }
 
@@ -804,7 +806,7 @@ lrsk_gov_var_civic_lifelong_learning = {
 
 	modifier = {
 		scientist_exp_gain = 0.15
-		governor_exp_gain = 0.15
+		official_exp_gain = 0.15
 	}
 }
 
@@ -1038,7 +1040,7 @@ lrsk_gov_var_civic_public_works = {
 	}
 }
 
-#Imperial Economy (Dictatorial/Imperial, not Xenophile) - The regime exploits its vassals ruthlessly. (+10% subject research share, +7.5% tributary income)
+#Extractive Economy (Dictatorial/Imperial, not Xenophile) - The regime exploits its vassals ruthlessly. (+10% subject research share, +7.5% tributary income)
 lrsk_gov_var_civic_imperial_economy = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
@@ -1052,18 +1054,23 @@ lrsk_gov_var_civic_imperial_economy = {
 	#icon = "gfx/interface/icons/governments/civics/civic_slaver_guilds.dds"
 
 	possible = {
-		authority = {
-			OR = {
-				text = civic_tooltip_dic_imp_NEW
-				inline_script = governments/conditions/auth_imperial
-				inline_script = governments/conditions/auth_dictatorial
-			}
-		}
+		# authority = {
+		# 	OR = {
+		# 		text = civic_tooltip_dic_imp_NEW
+		# 		inline_script = governments/conditions/auth_imperial
+		# 		inline_script = governments/conditions/auth_dictatorial
+		# 	}
+		# }
 		ethics = {
 			NOR = {
 				text = civic_tooltip_not_xenophile
 				value = ethic_xenophile
 				value = ethic_fanatic_xenophile
+			}
+			NOR = {
+				text = civic_tooltip_not_egalitarian
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
 			}
 		}
 		civics = {

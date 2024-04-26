@@ -20,7 +20,7 @@ leader_trait_legendary_leader = { #Origin trait
 		potential = {
 			NOT = { has_leader_flag = legendary_leader_coma }
 		}
-		leader_age = 20
+		leader_lifespan_add = 20
 	}
 	triggered_self_modifier = {
 		potential = {

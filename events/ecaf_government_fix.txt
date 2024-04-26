@@ -67,7 +67,6 @@ event = {
 					is_fallen_empire = no
 					has_authority = auth_corporate
 					is_capitalism = no
-					is_materialist = no
 				}
 				shift_ethic = ethic_capitalism
 				change_government = {

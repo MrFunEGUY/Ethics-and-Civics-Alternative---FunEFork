@@ -73,6 +73,7 @@ living_standard_shared_burden = {
 				OR = {
 					has_purge_type = { country = from type = purge_neutering }
 					has_purge_type = { country = from type = purge_displacement }
+					has_purge_type = { country = from type = purge_cosmogenesis_lathe_resettle }
 				}
 			}
 		}
@@ -113,9 +114,9 @@ living_standard_utopian = {
 				is_pop_category = worker
 			}
 		}
-		unemployment_resources_society_research_produces_add = 2
-		unemployment_resources_physics_research_produces_add = 2
-		unemployment_resources_engineering_research_produces_add = 2
+		unemployment_resources_society_research_produces_add = 1.25
+		unemployment_resources_physics_research_produces_add = 1.25
+		unemployment_resources_engineering_research_produces_add = 1.25
 		unemployment_resources_unity_produces_add = 1
 	}
 
@@ -144,7 +145,10 @@ living_standard_utopian = {
 		}
 		NOR = {
 			has_trait = trait_hive_mind
-			has_trait = trait_machine_unit
+			AND = {
+				from = { is_individual_machine = no }
+				has_trait = trait_machine_unit
+			}
 			is_shackled_robot_species_rights = yes
 		}
 	}
@@ -171,6 +175,7 @@ living_standard_utopian = {
 				OR = {
 					has_purge_type = { country = from type = purge_neutering }
 					has_purge_type = { country = from type = purge_displacement }
+					has_purge_type = { country = from type = purge_cosmogenesis_lathe_resettle }
 				}
 			}
 		}
@@ -278,7 +283,10 @@ living_standard_academic_privilege = {
 		}
 		NOR = {
 			has_trait = trait_hive_mind
-			has_trait = trait_machine_unit
+			AND = {
+				from = { is_individual_machine = no }
+				has_trait = trait_machine_unit
+			}
 			is_shackled_robot_species_rights = yes
 		}
 	}
@@ -307,6 +315,7 @@ living_standard_academic_privilege = {
 				OR = {
 					has_purge_type = { country = from type = purge_neutering }
 					has_purge_type = { country = from type = purge_displacement }
+					has_purge_type = { country = from type = purge_cosmogenesis_lathe_resettle }
 				}
 			}
 		}
@@ -431,10 +440,16 @@ living_standard_good = {
 				has_ethic = ethic_fanatic_capitalism
 			}
 		}
-		NOR = {
-			has_trait = trait_hive_mind
-			has_trait = trait_machine_unit
-			is_shackled_robot_species_rights = yes
+		NOT = { has_trait = trait_hive_mind }
+		OR = {
+			AND = {
+				is_robotic_species = yes
+				OR = {
+					species_rights_robot_full_rights_check = yes
+					from = { is_individual_machine = yes }
+				}
+			}
+			is_robotic_species = no
 		}
 	}
 
@@ -464,6 +479,7 @@ living_standard_good = {
 				OR = {
 					has_purge_type = { country = from type = purge_neutering }
 					has_purge_type = { country = from type = purge_displacement }
+					has_purge_type = { country = from type = purge_cosmogenesis_lathe_resettle }
 				}
 			}
 		}
@@ -590,7 +606,10 @@ living_standard_normal = {
 		}
 		NOR = {
 			has_trait = trait_hive_mind
-			has_trait = trait_machine_unit
+			AND = {
+				from = { is_individual_machine = no }
+				has_trait = trait_machine_unit
+			}
 			is_shackled_robot_species_rights = yes
 		}
 	}
@@ -618,6 +637,7 @@ living_standard_normal = {
 				OR = {
 					has_purge_type = { country = from type = purge_neutering }
 					has_purge_type = { country = from type = purge_displacement }
+					has_purge_type = { country = from type = purge_cosmogenesis_lathe_resettle }
 				}
 			}
 		}
@@ -705,7 +725,10 @@ living_standard_stratified = {
 		}
 		NOR = {
 			has_trait = trait_hive_mind
-			has_trait = trait_machine_unit
+			AND = {
+				from = { is_individual_machine = no }
+				has_trait = trait_machine_unit
+			}
 			is_shackled_robot_species_rights = yes
 		}
 	}
@@ -745,6 +768,7 @@ living_standard_stratified = {
 				OR = {
 					has_purge_type = { country = from type = purge_neutering }
 					has_purge_type = { country = from type = purge_displacement }
+					has_purge_type = { country = from type = purge_cosmogenesis_lathe_resettle }
 				}
 			}
 		}
@@ -836,7 +860,10 @@ living_standard_subsistence = {
 		}
 		NOR = {
 			has_trait = trait_hive_mind
-			has_trait = trait_machine_unit
+			AND = {
+				from = { is_individual_machine = no }
+				has_trait = trait_machine_unit
+			}
 			is_shackled_robot_species_rights = yes
 		}
 	}

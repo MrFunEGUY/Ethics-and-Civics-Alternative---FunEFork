@@ -2979,9 +2979,9 @@ resolution_greatergood_repeal_3 = {
 				days = 2200
 			}
 			every_playable_country = {
-				limit = { 
+				limit = {
 					is_galactic_community_member = yes
-					has_origin = origin_broken_shackles 
+					has_origin = origin_broken_shackles
 				}
 				country_event = { id = origin.5131 }
 			}
@@ -3130,9 +3130,9 @@ resolution_greatergood_repeal_4 = {
 				days = 2200
 			}
 			every_playable_country = {
-				limit = { 
+				limit = {
 					is_galactic_community_member = yes
-					has_origin = origin_broken_shackles 
+					has_origin = origin_broken_shackles
 				}
 				country_event = { id = origin.5131 }
 			}
@@ -3720,9 +3720,9 @@ resolution_greatergood_greater_than_ourselves = {
 				country_event = { id = federations.10210 }
 			}
 			every_playable_country = {
-				limit = { 
+				limit = {
 					is_galactic_community_member = yes
-					has_origin = origin_broken_shackles 
+					has_origin = origin_broken_shackles
 				}
 				country_event = { id = origin.5095 }
 			}
@@ -3736,9 +3736,9 @@ resolution_greatergood_greater_than_ourselves = {
 
 	fail_effects = {
 		every_playable_country = {
-			limit = { 
+			limit = {
 				is_galactic_community_member = yes
-				has_origin = origin_broken_shackles 
+				has_origin = origin_broken_shackles
 			}
 			country_event = { id = origin.5100 }
 		}
@@ -3940,7 +3940,7 @@ resolution_greatergood_balance_in_the_middle = {
 			every_playable_country = {
 				limit = {
 					is_galactic_community_member = yes
-					has_origin = origin_broken_shackles 
+					has_origin = origin_broken_shackles
 				}
 				country_event = { id = origin.5105 }
 			}
@@ -3955,9 +3955,9 @@ resolution_greatergood_balance_in_the_middle = {
 				days = 2200
 			}
 			every_playable_country = {
-				limit = { 
+				limit = {
 					is_galactic_community_member = yes
-					has_origin = origin_broken_shackles 
+					has_origin = origin_broken_shackles
 				}
 				country_event = { id = origin.5110 }
 			}

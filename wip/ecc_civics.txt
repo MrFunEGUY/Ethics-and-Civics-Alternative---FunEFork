@@ -32,7 +32,7 @@ civic_circular_economy = {
 	modifier = {
 		planet_structures_cost_mult = -0.1
 		planet_structures_upkeep_mult = -0.05
-		starbase_shipyard_build_cost_mult = -0.1
+		starbase_shipyard_build_speed_mult = 0.1
 		ships_upkeep_mult = -0.05
 		planet_building_refund_mult = 0.25
 		trade_value_mult = -0.1
@@ -290,7 +290,7 @@ civic_harmonious_hierarchy = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
 	modifier = {
-		governor_exp_gain = 0.4
+		official_exp_gain = 0.4
 	}
 	possible = {
 		ethics = {

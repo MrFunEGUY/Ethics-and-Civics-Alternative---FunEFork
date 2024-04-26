@@ -7,7 +7,7 @@
 
 #ID 1 - 1999#
 
-namespace = utopia
+namespace = over
 
 ### Hyper Relays
 # Connected to another capital | this = Hyper Relay owner; from = Hyper Relay partner (country)

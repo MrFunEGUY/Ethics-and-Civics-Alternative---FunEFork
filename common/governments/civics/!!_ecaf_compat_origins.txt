@@ -1,4 +1,6 @@
 # Irony this is a placeholder file please ignore it
+# Mine
+origin_coup_successor = { playable = { always = no } potential = { always = no } }
 # Extra Origins
 origin_next_generation = { playable = { always = no } potential = { always = no } }
 origin_irradiated_evolution = { playable = { always = no } potential = { always = no } }
