@@ -130,7 +130,7 @@ isolationist = {
 		unfulfilled_title = "ISOLATIONIST_NO_PHILOSOPHY"
 		desc = "ISOLATIONIST_PHILOSOPHY_DESC"
 
-		unfulfilled_effect = -25
+		unfulfilled_effect = -15 # -25
 		fulfilled_effect = 0.001
 
 		potential = {
@@ -156,7 +156,7 @@ isolationist = {
 		unfulfilled_title = "ISOLATIONIST_AGGRESSIVE_WAR"
 		desc = "ISOLATIONIST_NO_AGGRESSIVE_WAR_DESC"
 
-		unfulfilled_effect = -25
+		unfulfilled_effect = -15 # -25
 		fulfilled_effect = 0.001
 
 		potential = {

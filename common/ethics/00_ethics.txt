@@ -237,12 +237,7 @@ ethic_authoritarian = {
 					exists = capital_scope
 					capital_scope = {
 						has_observation_outpost = yes
-						observation_outpost = {
-							has_mission = native_indoctrination
-						}
-						observation_outpost_owner = {
-							is_authoritarian = yes
-						}
+						observation_outpost_owner = { is_authoritarian = yes }
 					}
 				}
 			}
@@ -254,12 +249,7 @@ ethic_authoritarian = {
 			exists = capital_scope
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost = {
-					has_mission = native_indoctrination
-				}
-				observation_outpost_owner = {
-					has_ethic = ethic_fanatic_authoritarian
-				}
+				observation_outpost_owner = { has_ethic = ethic_fanatic_authoritarian }
 			}
 		}
 		modifier = {
@@ -268,12 +258,7 @@ ethic_authoritarian = {
 			exists = capital_scope
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost = {
-					has_mission = native_indoctrination
-				}
-				observation_outpost_owner = {
-					has_ethic = ethic_authoritarian
-				}
+				observation_outpost_owner = { has_ethic = ethic_authoritarian }
 			}
 		}
 		modifier = {
@@ -1361,6 +1346,7 @@ ethic_xenophile = {
 			any_relation = {
 				has_opinion_modifier = {
 					who = root
+					is_reverse = yes
 					modifier = opinion_genocidal_our_species
 				}
 			}
@@ -1490,10 +1476,10 @@ ethic_xenophile = {
 		mult = value:xenophile_ethics_from_relations
 		modifier = {
 			factor = 0.25
-			is_same_species = root
 			any_relation = {
 				has_opinion_modifier = {
 					who = root
+					is_reverse = yes
 					modifier = opinion_genocidal_our_species
 				}
 			}

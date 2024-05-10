@@ -512,7 +512,7 @@ xenoist = {
 			exists = owner
 			owner = {
 				any_country = {
-					NOT = { has_communications = prev}
+					NOT = { has_communications = prev }
 					OR = {
 						is_country_type = default
 						is_fallen_empire = yes

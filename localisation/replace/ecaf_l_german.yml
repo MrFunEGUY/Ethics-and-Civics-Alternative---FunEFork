@@ -2221,8 +2221,17 @@ l_german:
  gov_megacorporation_fam: "Family Business"
  gov_megacorporation_fam_desc: "This government operates under a form of corporate imperialism, where the entire state has been organized as a massive commercial enterprise overseen by a board of directors controlled by one family."
 
- AUTHORITY_ELECTION_STRICT_DEMOCRATIC: "Holds an election every §H15§! years to select a new ruler. Rulers are limited to one term."
- AUTHORITY_HAS_HEIR_CORP: "Upon Ruler death, a designated successor takes over the family business."
+ AUTHORITY_ELECTION_STRICT_DEMOCRATIC: "$t$ Holds a ['concept_democratic_election'] every §H15§! years to select a new Ruler. Rulers are limited to one term."
+ AUTHORITY_DEM_DICTATORIAL_SUCCESSION: "$t$ Holds a ['concept_democratic_election'] upon ruler death to select a new Ruler"
+ AUTH_CORP_IMPERIAL_CAPITAL_SYSTEM_BONUS:0 "\n§E$CAPITAL_SYSTEM_EFFECTS_TXT$§!:\n$t$$mod_planet_jobs_produces_mult$ §G+5%§!"
+
+ concept_strict_election: "Single-Term Election"
+ concept_strict_election_desc: "$AUTHORITY_ELECTION_15_YEARS$ $AUTHORITY_ELECTION_DEMOCRATIC$ $AUTHORITY_ELECTION_UNLIMITED_CANDIDATES$ $AUTHORITY_ELECTION_NO_REELECTION$ $AUTHORITY_ELECTION_NO_EMERGENCY_ELECTION$"
+
+ concept_dem_dict_election: "Life-Term Election"
+ concept_dem_dict_election_desc: "$AUTHORITY_ELECTION_ON_RULER_DEATH$ $AUTHORITY_ELECTION_DEMOCRATIC$ $AUTHORITY_ELECTION_UNLIMITED_CANDIDATES$ $AUTHORITY_ELECTION_NO_REELECTION$ $AUTHORITY_ELECTION_ALLOWS_EMERGENCY_ELECTION$"
+
+ AUTHORITY_ELECTION_15_YEARS: "$t$- Elections are held every §H15§! years"
 
  moreauthorities.5.title: "Reform Government: Term Limited"
  moreauthorities.5.desc: "This decision will reform our system of government into one where the ruler is elected for a single 15-year term. The political capital required to implment term limits into our society means that once this action is taken, it it will be very difficult to undo. Are you sure?"

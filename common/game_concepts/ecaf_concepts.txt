@@ -1,0 +1,11 @@
+concept_strict_election = {
+	icon =  "gfx/interface/icons/governments/authorities/auth_strict_democratic_35x35.dds"
+}
+
+concept_dem_dict_election = {
+	icon =  "gfx/interface/icons/governments/authorities/auth_dict_democratic_35x35.dds"
+}
+
+concept_democratic_election = {
+	icon =  "gfx/interface/icons/governments/authorities/auth_ecaf_democratic_35x35.dds"
+}

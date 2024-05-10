@@ -99,7 +99,7 @@ triggered_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = { has_policy_flag = identity_fusion }
-		assembling_species = { is_robotic_species = yes }
+		assembling_species = { is_robotic = yes }
 	}
 	planet_pop_assemblers_upkeep_mult = 0.10
 }
@@ -109,7 +109,7 @@ triggered_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = { has_policy_flag = identity_initialization }
-		assembling_species = { is_robotic_species = yes }
+		assembling_species = { is_robotic = yes }
 	}
 	planet_pop_assemblers_upkeep_mult = 0.20
 }

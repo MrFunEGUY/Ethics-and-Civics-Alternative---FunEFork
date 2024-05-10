@@ -208,3 +208,15 @@ ai_should_build_habitats = {
 	}
 	NOT = { any_neighbor_country = { is_crisis_faction = yes } }
 }
+
+is_specialist_researcher_society = {
+	OR = {
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_biology }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_military_theory }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_new_worlds }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_statecraft }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_archaeostudies }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_psionics }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_good_trading }
+	}
+}

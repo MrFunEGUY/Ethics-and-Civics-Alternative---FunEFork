@@ -542,8 +542,8 @@ councilor_spiritual_democracy = { #Popular Pope
 		pop_ethic_egalitarian_attraction_mult = 0.04
 		pop_ethic_spiritualist_attraction_mult = 0.04
 		planet_jobs_unity_produces_mult = 0.01
-		planet_districts_unity_produces_mult = 0.01
-		planet_buildings_unity_produces_mult = 0.01
+		#planet_districts_unity_produces_mult = 0.01
+		planet_buildings_unity_produces_mult = 0.03
 	}
 }
 
@@ -695,7 +695,7 @@ councilor_stratocracy = { #Internal Security Director
 	civic = civic_stratocracy
 	modifier = { #Reduces crime across the board and improves enforcer unity
 		planet_crime_mult = -0.01
-		planet_enforcers_unity_produces_mult = 0.05
+		planet_enforcers_unity_produces_add = 2
 	}
 }
 
@@ -738,9 +738,8 @@ councilor_uncivil_defence_contractor = { #Director of Government Affairs
 	civic = civic_uncivil_defence_contractor
 	modifier = {
 		envoy_exp_gain = 0.15
-		envoys_add = 0.5
+		envoys_add = 1
 		envoy_improve_relations_mult = 0.05
-		diplo_weight_envoys_mult = 0.02
 	}
 }
 

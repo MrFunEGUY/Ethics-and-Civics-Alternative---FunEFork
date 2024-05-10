@@ -427,7 +427,7 @@ imperialist = {
 		unfulfilled_title = "IMPERIALIST_NOT_UNDERLING"
 		desc = "IMPERIALIST_UNDERLING_DESC"
 
-		unfulfilled_effect = -25
+		unfulfilled_effect = -15 # -25
 		fulfilled_effect = 0.001
 
 		potential = {
@@ -450,7 +450,7 @@ imperialist = {
 		unfulfilled_title = "IMPERIALIST_NOT_BULWARK"
 		desc = "IMPERIALIST_BULWARK_DESC"
 
-		unfulfilled_effect = -25
+		unfulfilled_effect = -15 # -25
 		fulfilled_effect = 0.001
 
 		potential = {

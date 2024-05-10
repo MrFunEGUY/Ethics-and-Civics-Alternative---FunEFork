@@ -184,6 +184,7 @@ empire_name_format = {
 				has_government = "gov_martial_dictatorship"
 				###
 				has_government = "gov_national_socialism"
+				has_government = "gov_military_corp"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -208,6 +209,7 @@ empire_name_format = {
 				has_government = "gov_martial_dictatorship"
 				###
 				has_government = "gov_national_socialism"
+				has_government = "gov_military_corp"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -232,6 +234,7 @@ empire_name_format = {
 				has_government = "gov_martial_dictatorship"
 				###
 				has_government = "gov_national_socialism"
+				has_government = "gov_military_corp"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -498,6 +501,7 @@ empire_name_format = {
 				####
 				has_government = "gov_assembly_of_clans"
 				has_government = "gov_anarch_capitalism"
+				has_government = "gov_military_corp"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -522,6 +526,7 @@ empire_name_format = {
 				####
 				has_government = "gov_assembly_of_clans"
 				has_government = "gov_anarch_capitalism"
+				has_government = "gov_military_corp"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -546,6 +551,7 @@ empire_name_format = {
 				####
 				has_government = "gov_assembly_of_clans"
 				has_government = "gov_anarch_capitalism"
+				has_government = "gov_military_corp"
 			}
 			is_pirate = no
 			is_primitive = no

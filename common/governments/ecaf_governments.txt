@@ -589,17 +589,31 @@ gov_soviet_republic = {
 	should_force_rename = yes
 	possible = {
 		has_valid_civic = civic_shared_burden
-		OR = {
-			has_authority = auth_democratic
-			has_authority = auth_strict_democratic
-			has_authority = auth_dict_democratic
-		}
+		inline_script = governments/conditions/auth_democratic
 	}
 	weight = {
 		base = 1000
 		modifier = {
 			factor = 100
 			has_valid_civic = civic_shared_burden
+		}
+	}
+}
+
+gov_imperial_socialism = {
+	ruler_title = RT_GENSEK
+	ruler_title_female = RT_GENSEK
+	should_force_rename = yes
+	possible = {
+		is_socialism = yes
+		inline_script = governments/conditions/auth_imperial
+	}
+	weight = {
+		base = 0
+		#base = 1000
+		modifier = {
+			factor = 10
+			has_ethic = ethic_fanatic_socialism
 		}
 	}
 }

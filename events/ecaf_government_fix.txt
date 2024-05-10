@@ -78,3 +78,19 @@ event = {
 		}
 	}
 }
+
+country_event = {
+	id = ethic_rebuid_government_fix.2000
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		civics_count < 5
+	}
+
+	immediate = {
+		change_government = {
+			civics = { civic = random }
+		}
+	}
+}

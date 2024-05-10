@@ -2088,7 +2088,7 @@ greetings = {
 			is_country_type = fallen_empire
 			NOT = { is_at_war_with = FROM }
 			is_angry_to = FROM
-			is_fallen_machine_empire = no
+			is_fallen_empire_machine = no
 			FROM = { NOT = { has_authority = auth_machine_intelligence } }
 		}
 	}
@@ -2097,7 +2097,7 @@ greetings = {
 			is_country_type = fallen_empire
 			NOT = { is_at_war_with = FROM }
 			is_angry_to = FROM
-			is_fallen_machine_empire = no
+			is_fallen_empire_machine = no
 		}
 	}
 	03_FALLEN_EMPIRE_ANGRY_GREETING = {
@@ -2105,7 +2105,7 @@ greetings = {
 			is_country_type = fallen_empire
 			NOT = { is_at_war_with = FROM }
 			is_angry_to = FROM
-			is_fallen_machine_empire = no
+			is_fallen_empire_machine = no
 			FROM = { NOT = { has_authority = auth_machine_intelligence } }
 		}
 	}
@@ -2114,7 +2114,7 @@ greetings = {
 			is_country_type = fallen_empire
 			NOT = { is_at_war_with = FROM }
 			is_angry_to = FROM
-			is_fallen_machine_empire = no
+			is_fallen_empire_machine = no
 		}
 	}
 	05_FALLEN_EMPIRE_ANGRY_GREETING = {
@@ -2122,7 +2122,7 @@ greetings = {
 			is_country_type = fallen_empire
 			NOT = { is_at_war_with = FROM }
 			is_angry_to = FROM
-			is_fallen_machine_empire = no
+			is_fallen_empire_machine = no
 		}
 	}
 	06_FALLEN_EMPIRE_ANGRY_GREETING = {
@@ -2130,7 +2130,7 @@ greetings = {
 			is_country_type = fallen_empire
 			NOT = { is_at_war_with = FROM }
 			is_angry_to = FROM
-			is_fallen_machine_empire = no
+			is_fallen_empire_machine = no
 		}
 	}
 	07_FALLEN_EMPIRE_ANGRY_GREETING = {
@@ -2138,7 +2138,7 @@ greetings = {
 			is_country_type = fallen_empire
 			NOT = { is_at_war_with = FROM }
 			is_angry_to = FROM
-			is_fallen_machine_empire = no
+			is_fallen_empire_machine = no
 		}
 	}
 	08_FALLEN_EMPIRE_ANGRY_GREETING = {
@@ -2146,7 +2146,7 @@ greetings = {
 			is_country_type = fallen_empire
 			NOT = { is_at_war_with = FROM }
 			is_angry_to = FROM
-			is_fallen_machine_empire = no
+			is_fallen_empire_machine = no
 			FROM = { NOT = { has_authority = auth_machine_intelligence } }
 		}
 	}
@@ -2155,7 +2155,7 @@ greetings = {
 			is_country_type = fallen_empire
 			NOT = { is_at_war_with = FROM }
 			is_angry_to = FROM
-			is_fallen_machine_empire = no
+			is_fallen_empire_machine = no
 			FROM = {
 				OR = {
 					has_authority = auth_machine_intelligence
@@ -2169,7 +2169,7 @@ greetings = {
 			is_country_type = fallen_empire
 			NOT = { is_at_war_with = FROM }
 			is_angry_to = FROM
-			is_fallen_machine_empire = no
+			is_fallen_empire_machine = no
 			FROM = {
 				OR = {
 					has_authority = auth_machine_intelligence
@@ -2278,14 +2278,14 @@ greetings = {
 	01_AWAKENED_EMPIRE_WAR_GREETING = {
 		trigger = {
 			is_country_type = awakened_fallen_empire
-			is_fallen_machine_empire = no
+			is_fallen_empire_machine = no
 			is_at_war_with = FROM
 		}
 	}
 	02_AWAKENED_EMPIRE_WAR_GREETING = {
 		trigger = {
 			is_country_type = awakened_fallen_empire
-			is_fallen_machine_empire = no
+			is_fallen_empire_machine = no
 			is_at_war_with = FROM
 		}
 	}
@@ -2293,7 +2293,7 @@ greetings = {
 	# For Machine Fallen Empires
 	01_FALLEN_MACHINE_EMPIRE_ANGRY_GREETING = {
 		trigger = {
-			is_fallen_machine_empire = yes
+			is_fallen_empire_machine = yes
 			NOT = { is_at_war_with = FROM }
 			is_angry_to = FROM
 		}
@@ -2301,7 +2301,7 @@ greetings = {
 
 	01_FALLEN_MACHINE_EMPIRE_ENIGMATIC_GREETING_O = {
 		trigger = {
-			is_fallen_machine_empire = yes
+			is_fallen_empire_machine = yes
 			NOT = { is_at_war_with = FROM }
 			is_enigmatic_to = FROM
 			from = {
@@ -2314,7 +2314,7 @@ greetings = {
 	}
 	02_FALLEN_MACHINE_EMPIRE_ENIGMATIC_GREETING_O = {
 		trigger = {
-			is_fallen_machine_empire = yes
+			is_fallen_empire_machine = yes
 			NOT = { is_at_war_with = FROM }
 			is_enigmatic_to = FROM
 			from = {
@@ -2327,7 +2327,7 @@ greetings = {
 	}
 	03_FALLEN_MACHINE_EMPIRE_ENIGMATIC_GREETING_O = {
 		trigger = {
-			is_fallen_machine_empire = yes
+			is_fallen_empire_machine = yes
 			NOT = { is_at_war_with = FROM }
 			is_enigmatic_to = FROM
 			from = {
@@ -2340,7 +2340,7 @@ greetings = {
 	}
 	01_FALLEN_MACHINE_EMPIRE_ENIGMATIC_GREETING_S = {
 		trigger = {
-			is_fallen_machine_empire = yes
+			is_fallen_empire_machine = yes
 			NOT = { is_at_war_with = FROM }
 			is_enigmatic_to = FROM
 			from = {
@@ -2353,7 +2353,7 @@ greetings = {
 	}
 	02_FALLEN_MACHINE_EMPIRE_ENIGMATIC_GREETING_S = {
 		trigger = {
-			is_fallen_machine_empire = yes
+			is_fallen_empire_machine = yes
 			NOT = { is_at_war_with = FROM }
 			is_enigmatic_to = FROM
 			from = {
@@ -2366,7 +2366,7 @@ greetings = {
 	}
 	03_FALLEN_MACHINE_EMPIRE_ENIGMATIC_GREETING_S = {
 		trigger = {
-			is_fallen_machine_empire = yes
+			is_fallen_empire_machine = yes
 			NOT = { is_at_war_with = FROM }
 			is_enigmatic_to = FROM
 			from = {
@@ -2380,28 +2380,28 @@ greetings = {
 
 	01_FALLEN_MACHINE_EMPIRE_ENIGMATIC_GREETING_ALL = {
 		trigger = {
-			is_fallen_machine_empire = yes
+			is_fallen_empire_machine = yes
 			NOT = { is_at_war_with = FROM }
 			is_enigmatic_to = FROM
 		}
 	}
 	02_FALLEN_MACHINE_EMPIRE_ENIGMATIC_GREETING_ALL = {
 		trigger = {
-			is_fallen_machine_empire = yes
+			is_fallen_empire_machine = yes
 			NOT = { is_at_war_with = FROM }
 			is_enigmatic_to = FROM
 		}
 	}
 	03_FALLEN_MACHINE_EMPIRE_ENIGMATIC_GREETING_ALL = {
 		trigger = {
-			is_fallen_machine_empire = yes
+			is_fallen_empire_machine = yes
 			NOT = { is_at_war_with = FROM }
 			is_enigmatic_to = FROM
 		}
 	}
 	04_FALLEN_MACHINE_EMPIRE_ENIGMATIC_GREETING_ALL = {
 		trigger = {
-			is_fallen_machine_empire = yes
+			is_fallen_empire_machine = yes
 			NOT = { is_at_war_with = FROM }
 			is_enigmatic_to = FROM
 		}
@@ -2409,14 +2409,14 @@ greetings = {
 
 	01_FALLEN_MACHINE_EMPIRE_WAR_GREETING = {
 		trigger = {
-			is_fallen_machine_empire = yes
+			is_fallen_empire_machine = yes
 			is_at_war_with = FROM
 			NOT = { is_berserker_to = FROM }
 		}
 	}
 	02_FALLEN_MACHINE_EMPIRE_WAR_GREETING = {
 		trigger = {
-			is_fallen_machine_empire = yes
+			is_fallen_empire_machine = yes
 			is_at_war_with = FROM
 			NOT = { is_berserker_to = FROM }
 		}
@@ -2424,26 +2424,26 @@ greetings = {
 
 	01_FALLEN_MACHINE_EMPIRE_CUSTODIAL_GREETING = {
 		trigger = {
-			is_fallen_machine_empire = yes
+			is_fallen_empire_machine = yes
 			is_custodial_to = FROM
 		}
 	}
 	02_FALLEN_MACHINE_EMPIRE_CUSTODIAL_GREETING = {
 		trigger = {
-			is_fallen_machine_empire = yes
+			is_fallen_empire_machine = yes
 			is_custodial_to = FROM
 		}
 	}
 	03_FALLEN_MACHINE_EMPIRE_CUSTODIAL_GREETING = {
 		trigger = {
-			is_fallen_machine_empire = yes
+			is_fallen_empire_machine = yes
 			is_custodial_to = FROM
 		}
 	}
 
 	01_FALLEN_MACHINE_EMPIRE_BERSERKER_GREETING = {
 		trigger = {
-			is_fallen_machine_empire = yes
+			is_fallen_empire_machine = yes
 			is_berserker_to = FROM
 		}
 	}

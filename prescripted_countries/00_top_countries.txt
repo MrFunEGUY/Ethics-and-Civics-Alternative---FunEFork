@@ -77,7 +77,7 @@ humans1 = {
 }
 
 humans2 = {
-	name = "EMPIRE_DESIGN_humans2"
+	name = "NAME_Commonwealth_of_Humanity"
 	adjective = "PRESCRIPTED_adjective_humans2"
 	spawn_enabled = no # yes / no / always
 	ignore_portrait_duplication = yes

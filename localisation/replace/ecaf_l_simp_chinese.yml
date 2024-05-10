@@ -2415,8 +2415,17 @@ l_simp_chinese:
  auth_strict_democratic: "Term Limited"
  auth_strict_democratic_desc: "Term Limited governments elect a ruler for one 15-year term."
 
- AUTHORITY_ELECTION_STRICT_DEMOCRATIC: "Holds an election every §H15§! years to select a new ruler. Rulers are limited to one term."
- AUTHORITY_HAS_HEIR_CORP: "Upon Ruler death, a designated successor takes over the family business."
+ AUTHORITY_ELECTION_STRICT_DEMOCRATIC: "$t$ Holds a ['concept_democratic_election'] every §H15§! years to select a new Ruler. Rulers are limited to one term."
+ AUTHORITY_DEM_DICTATORIAL_SUCCESSION: "$t$ Holds a ['concept_democratic_election'] upon ruler death to select a new Ruler"
+ AUTH_CORP_IMPERIAL_CAPITAL_SYSTEM_BONUS:0 "\n§E$CAPITAL_SYSTEM_EFFECTS_TXT$§!:\n$t$$mod_planet_jobs_produces_mult$ §G+5%§!"
+
+ concept_strict_election: "Single-Term Election"
+ concept_strict_election_desc: "$AUTHORITY_ELECTION_15_YEARS$ $AUTHORITY_ELECTION_DEMOCRATIC$ $AUTHORITY_ELECTION_UNLIMITED_CANDIDATES$ $AUTHORITY_ELECTION_NO_REELECTION$ $AUTHORITY_ELECTION_NO_EMERGENCY_ELECTION$"
+
+ concept_dem_dict_election: "Life-Term Election"
+ concept_dem_dict_election_desc: "$AUTHORITY_ELECTION_ON_RULER_DEATH$ $AUTHORITY_ELECTION_DEMOCRATIC$ $AUTHORITY_ELECTION_UNLIMITED_CANDIDATES$ $AUTHORITY_ELECTION_NO_REELECTION$ $AUTHORITY_ELECTION_ALLOWS_EMERGENCY_ELECTION$"
+
+ AUTHORITY_ELECTION_15_YEARS: "$t$- Elections are held every §H15§! years"
 
  auth_corporate_imperial: "Private Corporate"
  auth_corporate_imperial_desc: "Private Corporate governments are organized as a family-owned massive commercial enterprise that has completely supplanted the role of the state."

@@ -13,7 +13,7 @@ building_mecha_monastery = {
 				exists = assembling_species
 			}
 			assembling_species = {
-				is_robotic_species = yes
+				is_robotic = yes
 			}
 		}
 		owner = {
