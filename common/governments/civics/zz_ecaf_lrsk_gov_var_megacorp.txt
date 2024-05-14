@@ -602,7 +602,8 @@ lrsk_gov_var_civic_mc_police_state = {
 
 lrsk_gvp_civic_mc_war_profiteers = {
 	potential = { inline_script = governments/conditions/is_corporate }
-	
+	playable = { lrsk_gvp_is_active = yes }
+
 	description = "civic_tooltip_lrsk_gvp_civic_mc_war_profiteers_effects"
 	
 	random_weight = { base = @civic_default_random_weight }

@@ -1667,6 +1667,7 @@ l_simp_chinese:
  civic_exalted_priesthood_desc: "为防止社会出现异端邪说，宗教领袖会预先占据行政职位。\n\n开始时拥有§Y全息投影§!科技。\n§Y神圣中枢§!建筑和§Y信念堡垒§!提供额外的§Y大祭司§!岗位。 \n结合§Y机械崇拜§!国民理念，§Y大祭司§!额外大幅提高星球的§Y机器人产出§!和§Y工程学研究§!，且§Y科技牧师§!产出额外§Y凝聚力§!和§Y工程学研究§!。"
  civic_citizen_service: "军阀共和国"
  civic_citizen_service_desc: "仅限为军队服役的人才拥有完整的公民权和随之而来的政治责任。服役保证公民权和选举、从政的权利。\n\n允许进行特殊的国家敕令: §Y爱国呼声§!"
+ civic_tooltip_citizen_service_effects: "允许进入 £building£ §Y$holding_recruitment_office$§! 每个 £pop_cat_worker£ §Y$pop_cat_worker$§! 和每个 £pop_cat_specialist£ §Y$pop_cat_specialist$§! 都会产生 §G1§! §Y解锁特别法令§! §Y爱国召唤§!"
  civic_idealistic_foundation: "无政府理想"
  civic_idealistic_foundation_desc: "该社会建立在自由与平等的理想主义基础之上，其特征是中央政府权力的削弱。 \n§Y进步§!和§Y工党§!派系要求§Y直接民主§!。"
  civic_hierarchy: "阶级固化"

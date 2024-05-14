@@ -705,9 +705,9 @@ lrsk_gov_var_civic_chivalry = {
 	possible = {
 		authority = {
 			OR = {
-				# text = civic_tooltip_heir
+				 text = civic_tooltip_heir
 				inline_script = governments/conditions/auth_imperial
-				civics = { value = civic_aristocratic_elite }
+				#civics = { value = civic_aristocratic_elite }
 			}
 		}
 		ethics = {

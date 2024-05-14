@@ -2710,6 +2710,8 @@ l_russian:
 
  civic_citizen_service: "Стратократическая Республика"
  civic_citizen_service_desc: "Полными гражданскими и политическими правами может обладать только индивид, прошедший военную подготовку. Военная служба гарантирует гражданство, право избирать и быть избранным.\n\nМожет проводить специальный Указ: §YПатриотический Зов§!"
+ civic_tooltip_citizen_service_effects: "Grants access to the £building£ §Y$holding_recruitment_office$§! Holding\nEach £pop_cat_worker£ §Y$pop_cat_worker$§! and each £pop_cat_specialist£ §Y$pop_cat_specialist$§! Pop with §HFull Citizenship§! produce §G1§! §YDefensive Army§!\nUnlocks special edict: §YPatriotic Call§!"
+ civic_tooltip_citizen_service_effects: "Предоставляет доступ к £building£ §Y$holding_recruitment_office$§! Проведение\nКаждый £pop_cat_worker£ §Y$pop_cat_worker$§! и каждый £pop_cat_specialist£ §Y$pop_cat_specialist$§! Поп с §HПолное гражданство§! производит §G1§! §YОборонительная армия§!\nОткрывает специальный эдикт: §YПатриотический призыв§!"
 
 
  civic_idealistic_foundation: "Идеалы Анархии"
