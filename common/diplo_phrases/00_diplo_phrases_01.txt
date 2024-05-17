@@ -7914,7 +7914,7 @@ action_form_defensive_pact = {
 					is_megacorp = yes
 				}
 				OR = {
-					has_authority = auth_democratic
+					is_democracy = yes
 					#has_government = military_republic
 					#has_government = martial_demarchy
 					#has_government = theocratic_republic
@@ -8337,7 +8337,7 @@ action_form_non_aggression_pact = {
 					is_megacorp = yes
 				}
 				OR = {
-					has_authority = auth_democratic
+					is_democracy = yes
 					#has_government = military_republic
 					#has_government = martial_demarchy
 					#has_government = theocratic_republic

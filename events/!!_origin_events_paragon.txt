@@ -2,6 +2,129 @@
 
 namespace = paragon
 
+country_event = { #Won the civil war
+	id = paragon.5213
+	title = "paragon.5213.name"
+	desc = "paragon.5213.desc"
+	picture = GFX_evt_crisis_defeated
+	show_sound = event_radio_chatter
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = this
+		NOT = { has_country_flag = won_civil_war }
+		has_modifier = paragon_origin_rebel_player
+		OR = {
+			has_global_flag = rebel_empire_killed_@this
+			AND = {
+				exists = from
+				from = { has_country_flag = rebel_empire_@root }
+			}
+		}
+	}
+
+	immediate = {
+		remove_country_flag = main_player_empire_@this
+		remove_global_flag = rebel_empire_killed_@this
+		set_country_flag = won_civil_war
+		set_country_flag = equality_democracy_freedom_achievement
+		remove_modifier = paragon_origin_reformists_empire
+		every_owned_planet = {
+			limit = { has_modifier = paragon_origin_reformists }
+			remove_modifier = paragon_origin_reformists
+		}
+	}
+
+	option = {
+		name = paragon.5213.a
+		trigger = {
+			is_xenophile = yes
+		}
+		add_modifier = {
+			modifier = paragon_origin_rebel_xenophile
+			days = -1
+		}
+	}
+	option = {
+		name = paragon.5213.b
+		trigger = {
+			is_xenophobe = yes
+		}
+		add_modifier = {
+			modifier = paragon_origin_rebel_xenophobe
+			days = -1
+		}
+	}
+	option = {
+		name = paragon.5213.c
+		trigger = {
+			is_militarist = yes
+		}
+		add_modifier = {
+			modifier = paragon_origin_rebel_militarist
+			days = -1
+		}
+	}
+	option = {
+		name = paragon.5213.d
+		trigger = {
+			is_pacifist = yes
+		}
+		add_modifier = {
+			modifier = paragon_origin_rebel_pacifist
+			days = -1
+		}
+	}
+	option = {
+		name = paragon.5213.e
+		trigger = {
+			is_materialist = yes
+		}
+		add_modifier = {
+			modifier = paragon_origin_rebel_materialist
+			days = -1
+		}
+	}
+	option = {
+		name = paragon.5213.f
+		trigger = {
+			is_spiritualist = yes
+		}
+		add_modifier = {
+			modifier = paragon_origin_rebel_spiritualist
+			days = -1
+		}
+	}
+	option = {
+		name = paragon.5213.socialism
+		trigger = {
+			is_socialism = yes
+		}
+		add_modifier = {
+			modifier = paragon_origin_rebel_spiritualist
+			days = -1
+		}
+	}
+	option = {
+		name = paragon.5213.capitalism
+		trigger = {
+			is_capitalism = yes
+		}
+		add_modifier = {
+			modifier = paragon_origin_rebel_spiritualist
+			days = -1
+		}
+	}
+	after = {
+		paragon_origin_gain_modifier = yes
+		hidden_effect = {
+			set_government_cooldown = no
+			remove_modifier = paragon_origin_rebel_player
+		}
+	}
+}
+
 country_event = { #After the Fall - First negotiation batch - with Reformists
 	id = paragon.5210
 	title = "paragon.5210.name"

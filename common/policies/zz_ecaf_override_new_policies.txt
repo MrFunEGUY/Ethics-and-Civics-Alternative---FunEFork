@@ -1427,7 +1427,10 @@ border_policy = {
 		}
 
 		valid = {
-			is_homicidal = no
+			OR = {
+				is_primitive = yes
+				is_homicidal = no
+			}
 		}
 	}
 
@@ -1772,7 +1775,7 @@ trade_policy = {
 		valid = {
 			has_technology = tech_innovations
 			NOR = {
-				has_valid_civic = civic_ultimate_collective
+				has_valid_civic = civic_harmonious_hierarchy
 				has_policy_flag = "economic_stance_market"
 				has_policy_flag = "economic_stance_planned"
 			}
@@ -1847,7 +1850,7 @@ economic_stance = {
 			has_technology = tech_free_market
 			NOR = {
 				is_socialism = yes
-				has_valid_civic = civic_ultimate_collective
+				has_valid_civic = civic_harmonious_hierarchy
 				has_valid_civic = civic_distributism
 				has_valid_civic = civic_state_monopoly
 				and = {
@@ -2063,7 +2066,7 @@ bureaucracy = {
 			is_country_type_with_subjects = yes
 			has_technology = tech_federal_state
 			NOR = {
-				has_valid_civic = civic_ultimate_collective
+				has_valid_civic = civic_harmonious_hierarchy
 				has_ethic = "ethic_fanatic_authoritarian"
 			}
 		}
@@ -2446,7 +2449,7 @@ interstellar_media = {
 			NOR = {
 				has_ethic = ethic_fanatic_authoritarian
 				has_valid_civic = civic_divine_order
-				has_valid_civic = civic_ultimate_collective
+				has_valid_civic = civic_harmonious_hierarchy
 			}
 		}
 		modifier = {

@@ -839,7 +839,7 @@ lrsk_gov_var_civic_institutionalized_collectivism = {
 				value = lrsk_gov_var_civic_enlightened_liberalism
 				value = civic_merchant_guilds
 				value = civic_meritocracy
-				value = civic_socialistic
+				value = civic_labour_unions
 			}
 		}
 		ethics = {

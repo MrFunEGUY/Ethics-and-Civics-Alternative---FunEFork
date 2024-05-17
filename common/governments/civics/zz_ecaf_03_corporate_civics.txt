@@ -513,6 +513,7 @@ civic_indentured_assets = {
 			}
 		}
 	}
+	description = "civic_tooltip_indentured_assets_effects"
 	modifier = {
 		planet_jobs_slave_produces_mult = 0.10
 		country_pop_enslaved_mult = 0.35

@@ -1,0 +1,409 @@
+defined_text = {
+	name = GetScriptedCouncilBackground
+	text = {
+		localization_key = GFX_council_room_common
+		trigger = {
+			has_paragon_dlc = no
+		}
+	}
+	text = {
+		localization_key = GFX_council_room_corporate
+		trigger = {
+			has_paragon_dlc = yes
+			is_megacorp = yes
+			country_has_extra_council_position = no
+		}
+	}
+	text = {
+		localization_key = GFX_council_room_corporate_offset
+		trigger = {
+			has_paragon_dlc = yes
+			is_megacorp = yes
+			country_has_extra_council_position = yes
+		}
+	}
+	text = {
+		localization_key = GFX_council_room_democratic
+		trigger = {
+			has_paragon_dlc = yes
+			is_democracy = yes
+			country_has_extra_council_position = no
+		}
+	}
+	text = {
+		localization_key = GFX_council_room_democratic_offset
+		trigger = {
+			has_paragon_dlc = yes
+			is_democracy = yes
+			country_has_extra_council_position = yes
+		}
+	}
+	text = {
+		localization_key = GFX_council_room_dictatorial
+		trigger = {
+			has_paragon_dlc = yes
+			is_dictatorial = yes
+			country_has_extra_council_position = no
+		}
+	}
+	text = {
+		localization_key = GFX_council_room_dictatorial_offset
+		trigger = {
+			has_paragon_dlc = yes
+			is_dictatorial = yes
+			country_has_extra_council_position = yes
+		}
+	}
+	text = {
+		localization_key = GFX_council_room_hive
+		trigger = {
+			has_paragon_dlc = yes
+			is_hive_empire = yes
+		}
+	}
+	text = {
+		localization_key = GFX_council_room_imperial
+		trigger = {
+			has_paragon_dlc = yes
+			has_authority = auth_imperial
+			country_has_extra_council_position = no
+		}
+	}
+	text = {
+		localization_key = GFX_council_room_imperial_offset
+		trigger = {
+			has_paragon_dlc = yes
+			has_authority = auth_imperial
+			country_has_extra_council_position = yes
+		}
+	}
+	text = {
+		localization_key = GFX_council_room_machine
+		trigger = {
+			has_paragon_dlc = yes
+			is_machine_empire = yes
+		}
+	}
+	text = {
+		localization_key = GFX_council_room_oligarchic
+		trigger = {
+			has_paragon_dlc = yes
+			has_authority = auth_oligarchic
+			country_has_extra_council_position = no
+		}
+	}
+	text = {
+		localization_key = GFX_council_room_oligarchic_offset
+		trigger = {
+			has_paragon_dlc = yes
+			has_authority = auth_oligarchic
+			country_has_extra_council_position = yes
+		}
+	}
+}
+
+# Leader type and ethics-based hiring toasts
+
+defined_text = {
+	name = GetScriptedLeaderRecruitedGreeting
+	text = {
+		localization_key = hive_greeting
+		trigger = {
+			has_authority = auth_hive_mind
+		}
+	}
+	text = {
+		localization_key = machine_greeting
+		trigger = {
+			is_machine_empire = yes
+		}
+	}
+	text = { #ETHICS-SPECIFIC TOASTS FOR NEW LEADER JOINING
+		localization_key = authoritarian_scientist
+		trigger = {
+			from = {
+				leader_class = scientist
+				has_ethic = ethic_authoritarian
+			}
+		}
+	}
+	text = {
+		localization_key = authoritarian_admiral
+		trigger = {
+			from = {
+				leader_class = commander
+				has_ethic = ethic_authoritarian
+			}
+		}
+	}
+	text = {
+		localization_key = authoritarian_general
+		trigger = {
+			from = {
+				leader_class = commander
+				has_ethic = ethic_authoritarian
+			}
+		}
+	}
+	text = {
+		localization_key = authoritarian_official
+		trigger = {
+			from = {
+				leader_class = official
+				has_ethic = ethic_authoritarian
+			}
+		}
+	}
+	text = {
+		localization_key = egalitarian_scientist
+		trigger = {
+			from = {
+				leader_class = scientist
+				has_ethic = ethic_egalitarian
+			}
+		}
+	}
+	text = {
+		localization_key = egalitarian_admiral
+		trigger = {
+			from = {
+				leader_class = commander
+				has_ethic = ethic_egalitarian
+			}
+		}
+	}
+	text = {
+		localization_key = egalitarian_general
+		trigger = {
+			from = {
+				leader_class = commander
+				has_ethic = ethic_egalitarian
+			}
+		}
+	}
+	text = {
+		localization_key = egalitarian_official
+		trigger = {
+			from = {
+				leader_class = official
+				has_ethic = ethic_egalitarian
+			}
+		}
+	}
+	text = {
+		localization_key = militarist_scientist
+		trigger = {
+			from = {
+				leader_class = scientist
+				has_ethic = ethic_militarist
+			}
+		}
+	}
+	text = {
+		localization_key = militarist_admiral
+		trigger = {
+			from = {
+				leader_class = commander
+				has_ethic = ethic_militarist
+			}
+		}
+	}
+	text = {
+		localization_key = militarist_general
+		trigger = {
+			from = {
+				leader_class = commander
+				has_ethic = ethic_militarist
+			}
+		}
+	}
+	text = {
+		localization_key = militarist_official
+		trigger = {
+			from = {
+				leader_class = official
+				has_ethic = ethic_militarist
+			}
+		}
+	}
+	text = {
+		localization_key = pacifist_scientist
+		trigger = {
+			from = {
+				leader_class = scientist
+				has_ethic = ethic_pacifist
+			}
+		}
+	}
+	text = {
+		localization_key = pacifist_admiral
+		trigger = {
+			from = {
+				leader_class = commander
+				has_ethic = ethic_pacifist
+			}
+		}
+	}
+	text = {
+		localization_key = pacifist_general
+		trigger = {
+			from = {
+				leader_class = commander
+				has_ethic = ethic_pacifist
+			}
+		}
+	}
+	text = {
+		localization_key = pacifist_official
+		trigger = {
+			from = {
+				leader_class = official
+				has_ethic = ethic_pacifist
+			}
+		}
+	}
+	text = {
+		localization_key = spiritualist_scientist
+		trigger = {
+			from = {
+				leader_class = scientist
+				has_ethic = ethic_spiritualist
+			}
+		}
+	}
+	text = {
+		localization_key = spiritualist_admiral
+		trigger = {
+			from = {
+				leader_class = commander
+				has_ethic = ethic_spiritualist
+			}
+		}
+	}
+	text = {
+		localization_key = spiritualist_general
+		trigger = {
+			from = {
+				leader_class = commander
+				has_ethic = ethic_spiritualist
+			}
+		}
+	}
+	text = {
+		localization_key = spiritualist_official
+		trigger = {
+			from = {
+				leader_class = official
+				has_ethic = ethic_spiritualist
+			}
+		}
+	}
+	text = {
+		localization_key = materialist_scientist
+		trigger = {
+			from = {
+				leader_class = scientist
+				has_ethic = ethic_materialist
+			}
+		}
+	}
+	text = {
+		localization_key = materialist_admiral
+		trigger = {
+			from = {
+				leader_class = commander
+				has_ethic = ethic_materialist
+			}
+		}
+	}
+	text = {
+		localization_key = materialist_general
+		trigger = {
+			from = {
+				leader_class = commander
+				has_ethic = ethic_materialist
+			}
+		}
+	}
+	text = {
+		localization_key = materialist_official
+		trigger = {
+			from = {
+				leader_class = official
+				has_ethic = ethic_materialist
+			}
+		}
+	}
+	text = {
+		localization_key = xenophile_scientist
+		trigger = {
+			from = {
+				leader_class = scientist
+				has_ethic = ethic_xenophile
+			}
+		}
+	}
+	text = {
+		localization_key = xenophile_admiral
+		trigger = {
+			from = {
+				leader_class = commander
+				has_ethic = ethic_xenophile
+			}
+		}
+	}
+	text = {
+		localization_key = xenophile_general
+		trigger = {
+			from = {
+				leader_class = commander
+				has_ethic = ethic_xenophile
+			}
+		}
+	}
+	text = {
+		localization_key = xenophile_official
+		trigger = {
+			from = {
+				leader_class = official
+				has_ethic = ethic_xenophile
+			}
+		}
+	}
+	text = {
+		localization_key = xenophobe_scientist
+		trigger = {
+			from = {
+				leader_class = scientist
+				has_ethic = ethic_xenophobe
+			}
+		}
+	}
+	text = {
+		localization_key = xenophobe_admiral
+		trigger = {
+			from = {
+				leader_class = commander
+				has_ethic = ethic_xenophobe
+			}
+		}
+	}
+	text = {
+		localization_key = xenophobe_general
+		trigger = {
+			from = {
+				leader_class = commander
+				has_ethic = ethic_xenophobe
+			}
+		}
+	}
+	text = {
+		localization_key = xenophobe_official
+		trigger = {
+			from = {
+				leader_class = official
+				has_ethic = ethic_xenophobe
+			}
+		}
+	}
+}

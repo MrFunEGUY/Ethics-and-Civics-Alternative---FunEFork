@@ -39,7 +39,7 @@
 #  }
 
 ##### Diplomacy:
-# federation_acceptance -> Added directly to chance of accepting to form/join a federation
+# federation_acceptance -> Added directly to chance of accepting to form/join a federation,
 # nap_acceptance -> Added directly to chance of accepting to form a non-aggression pact
 # commercial_pact_acceptance -> Added directly to chance of accepting to form a commercial pact
 # research_agreement_acceptance -> Added directly to chance of accepting to form a research agreement
@@ -919,7 +919,7 @@ harmonious_hierarchy = {
 		weight = 10
 		modifier = {
 			add = 2
-			has_valid_civic = civic_ultimate_collective
+			has_valid_civic = civic_harmonious_hierarchy
 		}
 		modifier = {
 			add = 2

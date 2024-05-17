@@ -225,6 +225,13 @@ noble = {
 		upkeep = {
 			consumer_goods = 2
 		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_harmonious_hierarchy }
+			}
+			unity = 1
+		}
 	}
 
 	planet_modifier = {
@@ -250,6 +257,31 @@ noble = {
 		}
 		planet_amenities_add = 3
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { OR = { has_valid_civic = civic_harmonious_hierarchy } }
+		}
+		planet_stability_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { OR = { has_valid_civic = civic_harmonious_hierarchy } }
+		}
+		planet_amenities_add = 5
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_harmonious_hierarchy }
+		}
+		empire_size_pops_mult = -0.001
 	}
 
 	weight = {

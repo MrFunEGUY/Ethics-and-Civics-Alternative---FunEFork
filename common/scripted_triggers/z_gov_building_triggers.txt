@@ -159,7 +159,6 @@ is_stratocracy = {
 			has_government = lrsk_gov_var_gov_death_cult
 			has_government = lrsk_gov_var_gov_death_cult_imp
 			has_government = lrsk_gov_var_gov_citizen_legion
-			has_government = lrsk_gov_var_gov_pure_social_republic
 			has_government = lrsk_gov_var_gov_enterprise_society
 			has_government = lrsk_gov_var_gov_enterprise_junta
 			has_government = lrsk_gov_var_gov_enterprise_authority
@@ -236,7 +235,7 @@ is_plutocracy = {
 	}
 }
 
-# Socialist - Commisars
+# Socialist - Commissars
 is_isocracy = {
 	exists = owner
 	owner = {
@@ -302,6 +301,7 @@ is_aristocracy = {
 			has_government = gov_aristocratic_republic
 			has_government = gov_aristocratic_monarchy
 			has_government = gov_feudal_empire
+			has_government = gov_absolute_monarchy
 			# ECAF
 			has_government = gov_great_houses
 			has_government = gov_noble_aristocracy

@@ -1,0 +1,200 @@
+#################################################
+#												#
+# Machine Age DLC Digitization Situation Events	#
+#												#
+#################################################
+
+namespace = synth
+
+@synth_approach_mult = 5
+
+# Fired by: on_synthshock_chain_identity_events_list
+country_event = { # Synth Provenance
+	id = synth.610
+	title = "synth.610.name"
+	desc = synth.610.desc
+	picture = GFX_evt_individualistic_machines_2
+	show_sound = event_cityscape
+	location = from
+	event_chain = synthshock_chain
+	is_triggered_only = yes
+
+	option = { # Physical World Focus
+		name = synth.610.a
+		custom_tooltip = synth.social_consequences.tt
+		hidden_effect = {
+			change_variable = {
+				which = "synth_physical_society"
+				value = 1
+			}
+		}
+		add_modifier = {
+			modifier = synth_character_force
+			days = 18000
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = { # Virtual World Focus
+		name = synth.610.b
+		custom_tooltip = synth.social_consequences.tt
+		hidden_effect = {
+			change_variable = {
+				which = "synth_virtual_society"
+				value = 1
+			}
+		}
+		add_modifier = {
+			modifier = synth_character_customize
+			days = 18000
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = { # Neutral
+		name = synth.610.c
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = { # Virtual World Focus Elite
+		name = synth.610.d
+		custom_tooltip = synth.social_consequences.tt
+		trigger = {
+			owner = {
+				OR = {
+					has_valid_civic = civic_pompous_purists
+					has_valid_civic = civic_dystopian_society
+				}
+			}
+		}
+		hidden_effect = {
+			change_variable = {
+				which = "synth_virtual_society"
+				value = 1
+			}
+		}
+		add_modifier = {
+			modifier = synth_character_customize_elite
+			days = 18000
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				is_authoritarian = yes
+			}
+		}
+	}
+
+	option = { # Corporate
+		name = synth.610.e
+		custom_tooltip = synth.social_consequences.tt
+		trigger = {
+			owner = { is_megacorp = yes }
+		}
+		hidden_effect = {
+			change_variable = {
+				which = "synth_virtual_society"
+				value = 1
+			}
+		}
+		add_modifier = {
+			modifier = synth_character_customize_corpo
+			days = 9000
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 3
+				is_megacorp = yes
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			country_event = { id = synth.1000 days = 180 random = 90 }
+		}
+	}
+}
+
+# Fired by: on_synthshock_chain_identity_events_list
+country_event = { # Home Server Architecture
+	id = synth.630
+	title = "synth.630.name"
+	desc = synth.630.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_cityscape
+	location = from
+	event_chain = synthshock_chain
+	is_triggered_only = yes
+
+	option = { # Virtual World Focus
+		name = synth.630.a
+		custom_tooltip = synth.social_consequences.tt
+		hidden_effect = {
+			change_variable = {
+				which = "synth_virtual_society"
+				value = 1
+			}
+		}
+		add_modifier = {
+			modifier = synth_home_centralized
+			days = 9000
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = { # Physical World Focus
+		name = synth.630.b
+		custom_tooltip = synth.social_consequences.tt
+		hidden_effect = {
+			change_variable = {
+				which = "synth_physical_society"
+				value = 1
+			}
+		}
+		add_modifier = {
+			modifier = synth_home_distributed
+			days = 9000
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = { # Virtual World Focus Corporate
+		name = synth.630.c
+		custom_tooltip = synth.social_consequences.tt
+		trigger = {
+			owner = { is_megacorp = yes }
+		}
+		hidden_effect = {
+			change_variable = {
+				which = "synth_virtual_society"
+				value = 1
+			}
+		}
+		add_modifier = {
+			modifier = synth_digital_homes
+			days = 9000
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 3
+				is_megacorp = yes
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			country_event = { id = synth.1000 days = 180 random = 90 }
+		}
+	}
+}

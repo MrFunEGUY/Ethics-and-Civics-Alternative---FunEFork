@@ -207,6 +207,7 @@ civic_beacon_of_liberty = {
 			}
 		}
 	}
+	description = "civic_tooltip_beacon_of_liberty_effects"
 	modifier = {
 		trade_value_mult = 0.15
 		empire_size_pops_mult = -0.15
@@ -217,7 +218,6 @@ civic_beacon_of_liberty = {
 }
 
 civic_exalted_priesthood = {
-	# description = "civic_tooltip_exalted_priesthood_effects"
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
@@ -247,6 +247,7 @@ civic_exalted_priesthood = {
 			}
 		}
 	}
+	description = "civic_tooltip_exalted_priesthood_effects"
 	modifier = {
 		planet_priests_unity_produces_add = 1
 	}
@@ -364,8 +365,10 @@ civic_meritocracy = {
 				value = civic_aristocratic_elite
 				value = civic_divine_order
 				value = civic_state_monopoly
-				value = civic_ultimate_collective
-				value = civic_socialistic
+				value = civic_harmonious_hierarchy
+				value = civic_labour_unions
+				value = civic_feudal_realm
+				value = civic_genetic_aristocracy
 			}
 		}
 	}
@@ -562,13 +565,21 @@ civic_feudal_realm = {
 		}
 		ethics = {
 			NOR = {
+				text = civic_tooltip_not_egalitarian
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+			}
+			NOR = {
 				text = civic_tooltip_not_socialism
 				value = ethic_socialism
 				value = ethic_fanatic_socialism
 			}
 		}
 		civics = {
-			NOT = { value = lrsk_gov_var_civic_royal_absolutism }
+			NOR = {
+				value = civic_meritocracy
+				value = lrsk_gov_var_civic_royal_absolutism
+			}
 		}
 	}
 	random_weight = { base = @civic_default_random_weight }
@@ -615,25 +626,30 @@ civic_police_state = {
 	}
 	possible = {
 		ethics = {
-			NOT = {
+			NOR = {
+				text = civic_tooltip_not_egalitarian
+				value = ethic_egalitarian
 				value = ethic_fanatic_egalitarian
 			}
 		}
 		civics = {
 			NOR = {
 				value = civic_idealistic_foundation
-				value = civic_ultimate_collective
+				value = civic_harmonious_hierarchy
 				value = civic_divine_council
+				value = civic_harmonious_hierarchy
 			}
 		}
 	}
+	description = "civic_tooltip_police_state_effects"
 	modifier = {
 		planet_stability_add = 5
 		local_trade_protection_add = 5
 		ship_piracy_suppression_add = 5
+		country_counter_espionage_mult = 0.15
 		planet_enforcers_unity_produces_add = 1
 		planet_telepaths_unity_produces_add = 2
-		planet_enforcers_upkeep_mult = 0.15
+		# planet_enforcers_upkeep_mult = 0.15
 		pop_ethic_egalitarian_attraction_mult = -0.1
 	}
 	random_weight = { base = @civic_default_random_weight }
@@ -684,7 +700,7 @@ civic_idealistic_foundation = {
 		civics = {
 			NOR = {
 				value = civic_police_state
-				value = civic_ultimate_collective
+				value = civic_harmonious_hierarchy
 				value = civic_divine_council
 			}
 		}
@@ -818,6 +834,7 @@ civic_slaver_guilds = {
 			NOR = {
 				value = civic_pleasure_seekers
 				value = civic_slaving_despots
+				value = civic_divine_order
 			}
 		}
 	}
@@ -848,6 +865,7 @@ civic_slaver_guilds = {
 			}
 		}
 	}
+	description = "civic_tooltip_slaver_guilds_effects"
 	modifier = {
 		planet_jobs_slave_produces_mult = 0.10
 		# country_pop_enslaved_mult = 0.35 # Now has policy
@@ -1005,7 +1023,7 @@ civic_warrior_culture = {
 		army_experience_gain_mult = 0.15
 	}
 	swap_type = {
-		description = "civic_tooltip_warrior_culture_effects"
+		# description = "civic_tooltip_warrior_culture_effects"
 		trigger = {
 			host_has_dlc = "Overlord"
 		}
@@ -1064,7 +1082,7 @@ civic_distinguished_admiralty = {
 		commander_exp_gain = 0.2
 		command_limit_add = 15
 		commander_initial_skill = 2
-		leader_commanders_upkeep_mult = 0.25
+		leader_commanders_upkeep_mult = 0.5
 	}
 }
 
@@ -1121,6 +1139,7 @@ civic_free_haven = {
 			}
 		}
 	}
+	description = "civic_tooltip_free_haven_effects"
 	modifier = {
 		pop_growth_from_immigration = 0.15
 		planet_immigration_pull_mult = 0.50
@@ -1181,6 +1200,7 @@ civic_cutthroat_politics = {
 		}
 	}
 	modifier = {
+		species_leader_exp_gain = 0.25
 		edicts_upkeep_mult = -0.20
 		intel_decryption_add = 1
 		country_leader_cap_add = 1
@@ -1286,8 +1306,6 @@ civic_agrarian_idyll = {
 			NOR = {
 				value = civic_dystopian_society
 				value = civic_mining_guilds
-				value = civic_industrial_economy
-				# value = civic_anglers
 			}
 			NOR = {
 				text = civic_tooltip_not_relentless_industrialists
@@ -1300,6 +1318,11 @@ civic_agrarian_idyll = {
 
 	leader_background_job_weight = {
 		"farmer" = 50
+	}
+
+	modifier = {
+		planet_districts_cities_upkeep_mult = 0.75 ## Effective 50% with below
+		planet_districts_upkeep_mult = -0.25
 	}
 
 	random_weight = { base = @civic_default_random_weight }
@@ -1425,6 +1448,7 @@ civic_mining_guilds = {
 			}
 		}
 	}
+	description = "civic_tooltip_mining_guild_effects"
 	modifier = {
 		planet_miners_minerals_produces_add = 1
 		category_materials_research_speed_mult = 0.15
@@ -1525,7 +1549,7 @@ civic_efficient_bureaucracy = {
 		empire_size_penalty_mult = -0.1
 		starbases_upkeep_mult = -0.1
 		decisions_cost_mult = -0.1
-		planet_bureaucrats_upkeep_mult = 0.1
+		# planet_bureaucrats_upkeep_mult = 0.1
 	}
 }
 
@@ -1581,7 +1605,6 @@ civic_nationalistic_zeal = {
 	}
 	modifier = {
 		country_war_exhaustion_mult = -0.15
-		country_claim_influence_cost_mult = -0.15
 		country_occupation_armies_add = 5
 		subject_tribute_mult = 0.1
 		country_border_friction_mult = 0.33
@@ -1617,6 +1640,7 @@ civic_functional_architecture = {
 	}
 	modifier = {
 		planet_structures_cost_mult = -0.15
+		planet_structures_upkeep_mult = -0.15
 		planet_building_build_speed_mult = 0.15
 		planet_max_buildings_add = 2
 	}
@@ -1677,6 +1701,8 @@ civic_aristocratic_elite = {
 				value = civic_bureaucracy
 				value = civic_stratocracy
 				value = civic_shared_burden
+				value = civic_genetic_aristocracy
+				value = civic_harmonious_hierarchy
 			}
 		}
 	}
@@ -1722,7 +1748,7 @@ civic_shared_burden = {
 	possible = {
 		 authority = {
 			 NOR = {
-				 text = civic_tooltip_heir
+				 text = civic_tooltip_no_heir
 				 inline_script = governments/conditions/auth_imperial
 			 }
 		 }
@@ -3021,7 +3047,7 @@ civic_hyperspace_specialty = {
 		}
 	}
 	modifier = {
-		planet_sensor_range_add = 23
+		planet_sensor_range_add = 3
 		ship_speed_mult = 0.15
 		country_physics_tech_research_speed = 0.1
 	}

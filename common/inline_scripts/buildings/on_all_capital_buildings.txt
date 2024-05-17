@@ -118,7 +118,7 @@ triggered_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = {
-			has_authority = auth_democratic
+			is_democracy = yes
 			has_country_flag = synth_physical
 		}
 	}

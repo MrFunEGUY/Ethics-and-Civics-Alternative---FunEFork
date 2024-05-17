@@ -2663,7 +2663,7 @@ ethic_spiritualist = {
 			}
 		}
 		modifier = {
-			factor = value:ethics_from_federation_envoys
+			factor = 1.2
 			has_federation = yes
 			federation = {
 				has_federation_type = spiritualist_federation
@@ -3147,12 +3147,13 @@ ethic_fanatic_socialism = {
 	country_modifier = {
 		pop_citizen_happiness = 0.15
 		pop_amenities_usage_mult = -0.2
+		species_leader_exp_gain = 0.2
 		country_society_tech_research_speed = 0.1
 		pop_cat_worker_political_power = 2
-		trade_value_mult = -0.1
+		trade_value_mult = -0.15
 	}
 	random_weight = {
-		base = 125
+		base = 85
 	}
 }
 
@@ -3178,12 +3179,13 @@ ethic_socialism = {
 	country_modifier = {
 		pop_citizen_happiness = 0.05
 		pop_amenities_usage_mult = -0.1
+		species_leader_exp_gain = 0.1
 		country_society_tech_research_speed = 0.05
 		pop_cat_worker_political_power = 1
 		trade_value_mult = -0.05
 	}
 	random_weight = {
-		base = 85
+		base = 100
 	}
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_SOCIALISM_POS
@@ -3210,7 +3212,7 @@ ethic_socialism = {
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_CIVIC_POS
 		trigger = {
-			has_valid_civic = civic_socialistic
+			has_valid_civic = civic_labour_unions
 		}
 	}
 	pop_attraction_tag = {
@@ -3462,10 +3464,10 @@ ethic_fanatic_capitalism = {
 	}
 	country_modifier = {
 		trade_value_mult = 0.2
-		country_trade_fee = -0.07
-		species_leader_exp_gain = 0.2
+		country_trade_fee = -0.1
+		country_trade_attractiveness = 0.5
 		pop_cat_worker_political_power = -1
-		planet_crime_mult = 0.2
+		planet_crime_mult = 0.15
 	}
 	random_weight = {
 		base = 150
@@ -3492,8 +3494,8 @@ ethic_capitalism = {
 	}
 	country_modifier = {
 		trade_value_mult = 0.1
-		country_trade_fee = -0.03
-		species_leader_exp_gain = 0.1
+		country_trade_attractiveness = 0.25
+		country_trade_fee = -0.05
 		pop_cat_worker_political_power = -0.5
 	}
 	random_weight = {

@@ -1,0 +1,213 @@
+#####################
+# Machine Age Edicts
+#####################
+
+@Edict1Cost = 20
+@Edict2Cost = 25
+@Edict3Cost = 30
+@HiveMegaFood = 30
+@HiveMegaAlloys = 5
+
+@EdictDuration = -1
+
+legislative_chorus = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	edict_lock_in_months = 180
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict2Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict2Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_democracy = yes
+		has_country_flag = cyber_individualist
+	}
+
+	modifier = {
+		council_agenda_progress_speed = 0.25
+		council_agenda_finishing_effect_duration_mult = 0.25
+	}
+
+	allow = {
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+self_preservation_override = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict2Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict2Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_democracy = yes
+		has_country_flag = cyber_collectivist
+	}
+
+	modifier = {
+		planet_cyborg_jobs_produces_mult = 0.2
+		pop_growth_speed = -0.1
+	}
+
+	allow = {
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+self_indictment_protocol = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict2Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict2Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_dictatorial = yes
+		has_country_flag = cyber_individualist
+	}
+
+	modifier = {
+		planet_crime_add = -30
+		planet_stability_add = 5
+		pop_cyborg_happiness = 0.15
+	}
+
+	allow = {
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+love_letter_virus = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict2Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict2Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_dictatorial = yes
+		has_country_flag = cyber_collectivist
+	}
+
+	modifier = {
+		planet_resettlement_unemployed_mult = 1.00
+		pop_resettlement_cost_mult = -0.15
+		pop_cyborg_happiness = 0.15
+	}
+
+	allow = {
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+customer_insights = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict2Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict2Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_megacorp = yes
+		has_country_flag = cyber_individualist
+	}
+
+	modifier = {
+		planet_branch_offices_energy_cost_mult = -0.25
+		branch_office_value_mult = 0.25
+	}
+
+	allow = {
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+rolling_updates = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			unity = @Edict2Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict2Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_megacorp = yes
+		has_country_flag = cyber_collectivist
+	}
+
+	modifier = {
+		intel_encryption_add = 1
+		intel_decryption_add = 1
+		planet_pops_consumer_goods_upkeep_mult = -0.15
+	}
+
+	allow = {
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

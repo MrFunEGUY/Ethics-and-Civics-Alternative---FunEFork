@@ -30,7 +30,7 @@
 # shields_ratio -> Amount of shields they should aim for on ships
 # hull_ratio -> Amount of hull boosters they should aim for on ships (if available)
 ##### Diplomacy:
-# federation_acceptance -> Added directly to chance of accepting to form/join a federation
+# federation_acceptance -> Added directly to chance of accepting to form/join a federation,
 # nap_acceptance -> Added directly to chance of accepting to form a non-aggression pact
 # commercial_pact_acceptance -> Added directly to chance of accepting to form a commercial pact
 # research_agreement_acceptance -> Added directly to chance of accepting to form a research agreement

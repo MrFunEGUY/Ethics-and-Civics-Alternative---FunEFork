@@ -101,7 +101,7 @@ yondar = {
 	civics = {
 		"civic_imperial_cult"
 		"civic_divine_order"
-		"civic_ultimate_collective"
+		"civic_harmonious_hierarchy"
 	}
 	government = gov_divine_empire
 	origin = "origin_default"

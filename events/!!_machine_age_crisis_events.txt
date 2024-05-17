@@ -1,0 +1,214 @@
+#Synth Queen
+#crisis.8000-8999 - Spawning and Player Facing Events
+#crisis.9000-9999 - Player Situation
+#crisis.10000-10999 - Hidden Queen Events and Retalitations
+#crisis.20000-25000 - Player Investigations
+
+#########################
+#						#
+# Cosmogenesis Events	#
+#	 					#
+#########################
+
+namespace = crisis
+
+# Final Speech
+country_event = {
+	id = crisis.23005
+	title = "crisis.23005.name"
+	diplomatic_title = "crisis.23005.name"
+	desc = "crisis.23005.desc"
+	show_sound = crisis_23005_desc
+
+	diplomatic = yes
+
+	event_window_type = crisis_leader_conversation
+	situation = event_target:synth_queen_doomclock_situation
+
+	picture_event_data = {
+		portrait = event_target:synth_queen_country.ruler
+		room = event_target:synth_queen_country.owner
+	}
+	picture = GFX_crisis_conversation_bg_synth_queen
+	show_sound = crisis_8040_desc
+
+	is_triggered_only = yes
+
+	immediate = {
+		create_species = {
+			name = "NAME_Cetana"
+			class = "ROBOT"
+			namelist = "CETANA"
+			portrait = "synth_queen"
+			traits = {
+				trait = "trait_mechanical"
+			}
+			effect = {
+				save_event_target_as = synth_queen_species
+			}
+		}
+		create_country = {
+			name = "NAME_Synth_Queen"
+			type = "synth_queen"
+			species = event_target:synth_queen_species
+			name_list = "CETANA"
+			flag = {
+				icon = {
+					category = "special"
+					file = "synth_queen.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "flag_BG_13.dds"
+				}
+				colors = {
+					"burgundy"
+					"burgundy"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				save_event_target_as = synth_queen_country
+				establish_communications = root
+				create_leader = {
+					class = commander
+					species = event_target:synth_queen_country
+					name = "NAME_Cetana"
+					immortal = yes
+					skill = 10
+					event_leader = yes
+					skip_background_generation = yes
+					set_age = 126872
+					custom_description = cetana_desc
+					traits = {
+						0 = subclass_commander_councilor
+					}
+					effect = {
+						change_leader_portrait = cetana_empty
+					}
+				}
+				set_leader = last_created_leader
+			}
+		}
+	}
+
+	#See you never!
+	option = { # Spiritualist Response
+		name = crisis.23005.1
+		trigger = {
+			has_spiritualist_government = yes
+			NOR = {
+				has_ethic = "ethic_fanatic_xenophile"
+				has_ethic = "ethic_fanatic_xenophobe"
+			}
+		}
+	}
+	option = { # Militarist Response
+		name = crisis.23005.2
+		trigger = {
+			has_militarist_government = yes
+			NOR = {
+				has_ethic = "ethic_fanatic_xenophile"
+				has_ethic = "ethic_fanatic_xenophobe"
+			}
+		}
+	}
+	option = { # Materialist Response
+		name = crisis.23005.3
+		trigger = {
+			has_materialist_government = yes
+			NOR = {
+				has_ethic = "ethic_fanatic_xenophile"
+				has_ethic = "ethic_fanatic_xenophobe"
+			}
+		}
+	}
+	option = { # Pacifist Response
+		name = crisis.23005.4
+		trigger = {
+			has_pacifist_government = yes
+			NOR = {
+				has_ethic = "ethic_fanatic_xenophile"
+				has_ethic = "ethic_fanatic_xenophobe"
+			}
+		}
+	}
+	option = { # Corporate Response
+		name = crisis.23005.5
+		trigger = {
+			OR = {
+				has_government = gov_megacorporation
+				has_government = gov_trade_league
+				is_megacorp = yes
+			}
+			NOR = {
+				has_ethic = "ethic_fanatic_xenophile"
+				has_ethic = "ethic_fanatic_xenophobe"
+			}
+		}
+	}
+	option = { # Default Response
+		name = crisis.23005.6
+		trigger = {
+			NOR = {
+				has_ethic = "ethic_fanatic_xenophile"
+				has_ethic = "ethic_fanatic_xenophobe"
+				has_government = gov_megacorporation
+				has_government = gov_trade_league
+				is_megacorp = yes
+				has_pacifist_government = yes
+				has_materialist_government = yes
+				has_militarist_government = yes
+				has_spiritualist_government = yes
+			}
+		}
+	}
+	option = { # Special Governments Default Response
+		name = crisis.23005.6
+		trigger = {
+			OR = {
+				has_generic_government = yes
+				has_government = gov_enlightened_monarchy
+				has_government = gov_elective_monarchy
+				has_government = gov_hive_mind
+				has_government = gov_parasitic_overmind
+				has_government = gov_successor_khanate
+				has_government = gov_diadochi
+				has_ethic = ethic_gestalt_consciousness
+				is_fallen_empire = yes
+			}
+			NOR = {
+				has_ethic = "ethic_fanatic_xenophobe"
+				has_ethic = "ethic_fanatic_xenophile"
+			}
+		}
+	}
+	option = { # Xenophobe Response
+		name = crisis.23005.7
+		trigger = {
+			has_ethic = "ethic_fanatic_xenophobe"
+		}
+	}
+	option = { # Xenophile Response
+		name = crisis.23005.8
+		trigger = {
+			has_ethic = "ethic_fanatic_xenophile"
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			country_event = { id = crisis.23010 days = 15 }
+			every_country = {
+				limit = {
+					is_synth_queen_country_type = yes
+				}
+				destroy_country = yes
+			}
+			every_country = {
+				remove_country_flag = synth_queen_player_can_see_doomclock
+			}
+		}
+	}
+}

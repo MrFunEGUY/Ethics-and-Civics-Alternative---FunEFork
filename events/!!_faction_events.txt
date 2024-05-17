@@ -180,3 +180,143 @@ country_event = {
 		name = OK
 	}
 }
+
+# The PoliticaL Frontier
+# via on_colony_[1/2]_years_old = {} | this = colony world
+planet_event = {
+	id = factions.3000
+	title = factions.3000.name
+	desc = factions.3000.desc
+	picture = GFX_evt_alien_propaganda
+	show_sound = event_factions
+	location = this
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			is_regular_empire = yes
+			NOR = {
+				has_country_flag = recent_factions_event
+				has_country_flag = factions_political_frontier
+			}
+			count_pop_faction = {
+				count > 1
+			}
+		}
+	}
+
+	immediate = {
+		owner = {
+			set_timed_country_flag = {
+				flag = recent_factions_event
+				days = @RecentFactionsEventTimer
+			}
+			set_country_flag = factions_political_frontier
+		}
+	}
+
+	# Carry on (standard)
+	option = {
+		name = INTERESTING
+		trigger = {
+			owner = {
+				NOR = {
+					is_democracy = yes
+					is_authoritarian = yes
+				}
+			}
+		}
+		add_modifier = {
+			modifier = planet_political_frontier
+			years = 10
+		}
+	}
+	# Carry on (Democracy)
+	option = {
+		name = factions.3000.a.demo
+		trigger = {
+			owner = {
+				is_democracy = yes
+			}
+		}
+		add_modifier = {
+			modifier = planet_political_frontier
+			years = 10
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward
+				min = @tier1unitymin
+				max = @tier1unitymax
+			}
+		}
+		planet_event = {
+			id = factions.3010
+			days = 200
+		}
+	}
+	# Carry on (Authoritarian)
+	option = {
+		name = factions.3000.a.auth
+		trigger = {
+			owner = {
+				is_authoritarian = yes
+			}
+		}
+		add_modifier = {
+			modifier = planet_political_frontier
+			years = 5
+		}
+		planet_event = {
+			id = factions.3005
+			days = 200
+		}
+	}
+	# Shut this down (standard)
+	option = {
+		name = factions.3000.b
+		trigger = {
+			owner = {
+				NOR = {
+					is_democracy = yes
+					has_valid_civic = civic_police_state
+					is_authoritarian = yes
+				}
+			}
+		}
+		add_modifier = {
+			modifier = planet_political_safezone
+			years = 10
+		}
+	}
+	# Shut this down (Authoritarian)
+	option = {
+		name = factions.3000.b.auth
+		trigger = {
+			owner = {
+				OR = {
+					is_authoritarian = yes
+					has_valid_civic = civic_police_state
+				}
+			}
+		}
+		allow = {
+			owner = {
+				resource_stockpile_compare = {
+					resource = unity
+					value >= 250
+				}
+			}
+		}
+		owner = {
+			add_resource = {
+				unity = -250
+			}
+		}
+		add_modifier = {
+			modifier = planet_political_crackdown
+			years = 40
+		}
+	}
+}
