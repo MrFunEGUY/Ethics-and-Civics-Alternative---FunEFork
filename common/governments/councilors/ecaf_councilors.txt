@@ -409,12 +409,12 @@ councilor_defenders_faith = { #Crusader Order Commander
 	}
 }
 
-councilor_divine_order = { #Registry Bureau Secretary
+councilor_caste_system = { #Registry Bureau Secretary
 	leader_class = { official }
 	is_leader_possible = {
 		leader_class = official
 	}
-	civic = civic_divine_order
+	civic = civic_caste_system
 	modifier = { #Siphons political power from workers and improves productivity. 5% at level 10.
 		pop_cat_worker_political_power = -0.05
 		pop_cat_ruler_political_power = 0.1

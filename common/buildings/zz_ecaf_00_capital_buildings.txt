@@ -160,7 +160,7 @@ building_capital = {
 	
 	triggered_desc = {
 		trigger = { is_stratocracy = yes }
-		text = job_commandante_effect_desc
+		text = job_commandant_effect_desc
 	}
 	
 	triggered_desc = {
@@ -374,7 +374,7 @@ building_major_capital = {
 	
 	triggered_desc = {
 		trigger = { is_stratocracy = yes }
-		text = job_commandante_effect_desc
+		text = job_commandant_effect_desc
 	}
 	
 	triggered_desc = {
@@ -596,7 +596,7 @@ building_system_capital = {
 	
 	triggered_desc = {
 		trigger = { is_stratocracy = yes }
-		text = job_commandante_effect_desc
+		text = job_commandant_effect_desc
 	}
 	
 	triggered_desc = {
@@ -1237,7 +1237,7 @@ building_hab_major_capital = {
 			}
 		}
 		modifier = {
-			job_commandante_add = 1
+			job_commandant_add = 1
 		}
 	}
 
@@ -1263,7 +1263,7 @@ building_hab_major_capital = {
 			}
 		}
 		modifier = {
-			job_commisar_add = 1
+			job_commissar_add = 1
 		}
 	}
 
@@ -1331,7 +1331,7 @@ building_hab_major_capital = {
 				NOT = { owner = { has_origin = origin_toxic_knights } }
 			}
 		}
-		text = job_commandante_effect_desc
+		text = job_commandant_effect_desc
 	}
 	
 	triggered_desc = {
@@ -1825,7 +1825,7 @@ building_hab_system_capital = {
 			}
 		}
 		modifier = {
-			job_commandante_add = 1
+			job_commandant_add = 1
 		}
 	}
 
@@ -1851,7 +1851,7 @@ building_hab_system_capital = {
 			}
 		}
 		modifier = {
-			job_commisar_add = 1
+			job_commissar_add = 1
 		}
 	}
 
@@ -1947,7 +1947,7 @@ building_hab_system_capital = {
 				NOT = { owner = { has_origin = origin_toxic_knights } }
 			}
 		}
-		text = job_commandante_effect_desc
+		text = job_commandant_effect_desc
 	}
 	
 	triggered_desc = {
@@ -2983,7 +2983,7 @@ building_imperial_capital = {
 			is_stratocracy = yes
 		}
 		modifier = {
-			job_commandante_add = 3
+			job_commandant_add = 3
 		}
 	}
 
@@ -3001,7 +3001,7 @@ building_imperial_capital = {
 			is_isocracy = yes
 		}
 		modifier = {
-			job_commisar_add = 3
+			job_commissar_add = 3
 		}
 	}
 
@@ -3074,7 +3074,7 @@ building_imperial_capital = {
 	
 	triggered_desc = {
 		trigger = { is_stratocracy = yes }
-		text = job_commandante_effect_desc
+		text = job_commandant_effect_desc
 	}
 	
 	triggered_desc = {

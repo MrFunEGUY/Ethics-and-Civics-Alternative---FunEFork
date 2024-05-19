@@ -325,6 +325,7 @@ totalitarian = {
 		fulfilled_effect = 5
 		potential = {
 			exists = owner
+			has_global_flag = cultural_overhaul_active
 		}
 		trigger = {
 			owner = { has_policy_flag = gun_rights_limited }
@@ -338,7 +339,7 @@ totalitarian = {
 		unfulfilled_effect = -10
 		potential = {
 			exists = owner
-			owner = { has_policy_flag = free_media }
+			has_global_flag = cultural_overhaul_active
 		}
 		trigger = {
 			owner = { has_policy_flag = free_media }

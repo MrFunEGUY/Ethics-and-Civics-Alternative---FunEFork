@@ -2448,7 +2448,7 @@ interstellar_media = {
 			is_country_type_with_subjects = yes
 			NOR = {
 				has_ethic = ethic_fanatic_authoritarian
-				has_valid_civic = civic_divine_order
+				has_valid_civic = civic_caste_system
 				has_valid_civic = civic_harmonious_hierarchy
 			}
 		}
@@ -3018,7 +3018,7 @@ slavery = {
 				has_valid_civic = civic_slaver_guilds
 				has_valid_civic = civic_indentured_assets
 				has_valid_civic = civic_slaving_despots
-				has_valid_civic = civic_divine_order
+				has_valid_civic = civic_caste_system
 			}
 		}
 

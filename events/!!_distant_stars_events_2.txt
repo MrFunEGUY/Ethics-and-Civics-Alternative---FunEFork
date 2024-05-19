@@ -2,7 +2,7 @@
 # Colony Events
 ##############################
 
-namespace = colony
+namespace = distar
 
 # The Vol have discovered Mardak on your planets
 country_event = {
@@ -239,11 +239,13 @@ country_event = {
 					civic = random
 				}
 				species = last_created_species
+				randomize_ethos = yes
 				ethos = {
 					ethic = ethic_fanatic_xenophobe
 					ethic = ethic_militarist
+					ethic = ethic_fanatic_militarist
 					ethic = ethic_spiritualist
-					ethic = random
+					ethic = ethic_fanatic_spiritualist
 				}
 				flag = {
 					icon = {

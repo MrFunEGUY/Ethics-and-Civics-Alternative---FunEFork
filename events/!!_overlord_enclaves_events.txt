@@ -182,13 +182,13 @@ fleet_event = {
 			limit = {
 				owner = { is_authoritarian = yes }
 			}
-			create_mercenary_enclave_country = { INHERITED_ETHIC = ethic_fanatic_authoritarian }
+			create_mercenary_enclave_country = { INHERITED_ETHIC = ethic_authoritarian }
 		}
 		else_if = {
 			limit = {
 				owner = { is_egalitarian = yes }
 			}
-			create_mercenary_enclave_country = { INHERITED_ETHIC = ethic_fanatic_egalitarian }
+			create_mercenary_enclave_country = { INHERITED_ETHIC = ethic_egalitarian }
 		}
 		else = {
 			create_mercenary_enclave_country = { INHERITED_ETHIC = ethic_xenophile }

@@ -147,9 +147,6 @@ bankers = {
 			owner = {
 				is_homicidal = no
 				is_country_type = default
-				not = {
-					has_policy_flag = diplo_stance_mercantile
-				}
 			}
 		}
 		trigger = {
@@ -378,6 +375,7 @@ bankers = {
 		title = "ALLOWED_LOBBY"
 		unfulfilled_title = "NO_ALLOWED_LOBBY"
 		desc = "ALLOWED_LOBBY_DESC"
+		unfulfilled_effect = -0.001
 		fulfilled_effect = 15
 		potential = {
 			exists = owner
@@ -412,12 +410,10 @@ bankers = {
 		title = "NO_PUBLIC_EDUCATION"
 		unfulfilled_title = "PUBLIC_EDUCATION"
 		desc = "NO_PUBLIC_EDUCATION_DESC"
+		fulfilled_effect = 0.001
 		unfulfilled_effect = -7
 		potential = {
 			exists = owner
-			owner = {
-				has_policy_flag = public_education
-			}
 		}
 		trigger = {
 			owner = {
@@ -436,11 +432,6 @@ bankers = {
 		unfulfilled_effect = -5
 		potential = {
 			exists = owner
-			owner = {
-				NOT = {
-					has_policy_flag = economic_stance_market
-				}
-			}
 		}
 		trigger = {
 			owner = {
@@ -453,12 +444,10 @@ bankers = {
 		title = "NO_PLANNED_ECONOMY"
 		unfulfilled_title = "PLANNED_ECONOMY"
 		desc = "NO_PLANNED_ECONOMY_DESC"
+		fulfilled_effect = 0.001
 		unfulfilled_effect = -15
 		potential = {
 			exists = owner
-			owner = {
-				has_policy_flag = economic_stance_planned
-			}
 		}
 		trigger = {
 			owner = {
@@ -489,12 +478,11 @@ bankers = {
 		title = "NO_PUBLIC_MEDICINE"
 		unfulfilled_title = "PUBLIC_MEDICINE"
 		desc = "NO_PUBLIC_MEDICINE_DESC"
+		fulfilled_effect = 0.001
 		unfulfilled_effect = -7
 		potential = {
 			exists = owner
-			owner = {
-				has_policy_flag = public_healthcare
-			}
+
 		}
 		trigger = {
 			owner = {
@@ -581,9 +569,7 @@ bankers = {
 				owner = {
 					OR = {
 						is_subject = no
-						NOT = {
-							is_subject_type = dominion
-						}
+						NOT = { any_agreement = { agreement_preset = preset_dominion } }
 					}
 				}
 			}

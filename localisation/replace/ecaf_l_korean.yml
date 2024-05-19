@@ -9,6 +9,23 @@
 # l_japanese:
 l_korean:
 
+ SOCIALISM_ICON: "£socialism£"
+ CAPITALISM_ICON: "£capitalism£"
+
+ job_politician_plural_with_icon: "£job_politician£ $job_politician_plural$"
+
+ #GetOppositionGalcomLobbyists
+ galcom_movement_socialism: "Movement for Empowering Communities"
+ galcom_movement_capitalism: "Organization for the Facilitation of Trickle-Down Economics"
+
+ paragon_origin_rebel_socialism: "Community Oriented"
+ paragon_origin_rebel_socialism_desc: "The new society, remembering the bitterness of galactic civil war, understands the importance of looking after your neighbors. We strive to accomplish our goals, together."
+ paragon_origin_rebel_capitalism: "Competitive Spirit"
+ paragon_origin_rebel_capitalism_desc: "Competition is the engine of progress. Our civil war taught us the value of the individual's spirit. While the war was devastating, it demonstrated that there are always opportunities to capitalize on."
+
+ paragon.5213.socialism: "We will take care of each other."
+ paragon.5213.capitalism: "We must seek new opportunities."
+
  01_INSULT_PROPOSE_IND_COL: "Your brutal, tyrannical regime will eventually fall, and there will be a reckoning."
  02_INSULT_PROPOSE_COL_IND: "So who is it that rules your amusing little star nation today? What a quaint notion, to 'vote' someone into power! It will inevitably lead to your collapse, of course."
  02_INSULT_PROPOSE_IND_COL: "Have you even considered the notion of letting your citizens think for themselves? If you are frightened that it would lead to the end of the [Root.GetName]... you are right."
@@ -192,16 +209,6 @@ l_korean:
  building_symbol_purity_desc: "A standing monument to the superiority of our people."
  building_thermal_borehole_desc: "A Thermal Borehole excavates through the planet's mantle to its core. While this can be a rich source of minerals and energy, the massive amounts of heat released can cause significant harm to the natural environment."
  building_thermal_borehole: "Thermal Borehole"
- building_tribal_surveying_desc: " "
- building_tribal_surveying: "Native Reservation Surveying Camp"
- building_wellfare_center_desc: "Local administration keeps an eye on maintaining decent living conditions for the communities on the planet."
- building_wellfare_center: "Wellfare Center"
- building_wildlife_surveying_desc: " "
- building_wildlife_surveying: "Dangerous Wildlife Surveying Camp"
- building_xeno_hatchery_desc: " "
- building_xeno_hatchery: "Xeno Hatchery"
- building_xeno_zoo_garden_desc: " "
- building_xeno_zoo_garden: "Xeno Zoological Garden"
  building_xenology_institute_desc: "We can study local §YWildlife§, learning how to tame it (which reduces it's negative impact on the planet) and possibly use it as a dangerous weapon."
  building_xenology_institute: "Institute of Applied Xenology"
  cap_autocracy_desc: "Autocratic state, generally implementing pro-market policy, but with economic activity being under strict supervision of corporatized government agencies. Society, build around the values of big bureaucracy and constant economic rivalry, seems to grow considerably unhappy."
@@ -531,10 +538,10 @@ l_korean:
  ENVIRONMENTAL_ECONOMY: "Traditional Environmentalism"
  EQUAL_ARMY_DESC: "Ensuring that no species in our Empire is subject to Limited or None Military Service will please the [Root.GetName]."
  EQUAL_ARMY: "Egalitarian Military"
- ETHIC_ALLOWS_MARKET_POLICY_1: "§EAllows to set §HMarket§! economic policy: §G+5%§! §HEnergy§! £energy§"
- ETHIC_ALLOWS_MARKET_POLICY_2: "§EAllows to set §HMarket§! economic policy: §G+8%§! §HEnergy§! £energy, §G-8%§! buildings/ships §HUpkeep§!, §R-15%§! §HUnity§! £unity§!. §HHealthcare Campaign§! is not available."
+ ETHIC_ALLOWS_MARKET_POLICY_1: "§EAllows to set §HMarket§! economic policy: §G+5%§! §HEnergy§! £energy£"
+ ETHIC_ALLOWS_MARKET_POLICY_2: "§EAllows to set §HMarket§! economic policy: §G+8%§! §HEnergy§! £energy£, §G-8%§! buildings/ships §HUpkeep§!, §R-15%§! §HUnity§! £unity£. §HHealthcare Campaign§! is not available."
  ETHIC_ALLOWS_WELFARE_POLICY_1: "§EAllows to set §HPlanned§! economic policy: §G+20%§! §HPop Growth§!, §G+33%§! §HPlanet Construction Speed§!, §G+7%§! §HHappiness§!."
- ETHIC_ALLOWS_WELFARE_POLICY_2: "§EAllows to set §HPlanned§! economic policy: §G+30%§! §HPop Growth§!, §G+50%§! §HPlanet Construction Speed§!, §G+50%§! §HShip Construction Speed§!, §G+10%§! §HHappiness§!, §R-5%§! §HEnergy§! £energy§!"
+ ETHIC_ALLOWS_WELFARE_POLICY_2: "§EAllows to set §HPlanned§! economic policy: §G+30%§! §HPop Growth§!, §G+50%§! §HPlanet Construction Speed§!, §G+50%§! §HShip Construction Speed§!, §G+10%§! §HHappiness§!, §R-5%§! §HEnergy§! £energy£"
  ethic_capitalism_desc: "§LPersonal ambition is the engine of progress. The desire to improve, the drive to pursue it: these are the things that have brought the stars themselves to our fingertips. We must continue to protect our hard-won freedoms of expression from the irrational fears of conformists, and to never allow genius to be held back by genericism.§!\n"
  ethic_capitalism: "Competitive"
  ethic_collectivist_desc: "§LIt is self-evident that different people have different skills. Some are more fit to rule, while others are more fit to serve, and their roles in society should reflect this. To ignore this fact is to invite chaos and disorder.§!\n"
@@ -714,6 +721,7 @@ l_korean:
  gov_slaver_republic: "Slaver Republic"
  gov_social_democracy: "Social Democracy"
  gov_soviet_republic: "Soviet Republic"
+ gov_imperial_socialism: "Monarchical Socialism"
  gov_strasserism: "National-Communism"
  gov_timocracy: "Timocracy"
  gov_xenophile_democracy: "Multicultural Democracy"
@@ -731,6 +739,7 @@ l_korean:
  gun_rights_limited: "Limited"
  HEALTHCARE_CAMPAIGN_DESC: "Invoking §YNutritional Plenitude§! edict pleases the [Root.GetName]."
  HEALTHCARE_CAMPAIGN: "Nutritional Plenitude"
+ HT_LEGATEE: "Legatee"
  HT_1COUNS: "1st Counsellor"
  HT_CHCOMAN: "Chief-Commandant"
  HT_COMAN: "Commandant"
@@ -812,16 +821,16 @@ l_korean:
  ISOLATIONIST_NO_WAR_TRADITION: "Develop Isolationism"
  ISOLATIONIST_WAR_TRADITION_DESC: "Active §YIsolationist§! government civic will please the [Root.GetName]."
  ISOLATIONIST_WAR_TRADITION: "Developed Isolationism"
- job_commandante_desc: "An experienced military chief, either active or honorably discharged."
- job_commandante_effect_desc: "£job_commandante£ $job_commandante_plural$ increase an Empire's §YNaval Capacity§!, spawn §YDefense Armies§!, increase planetary §YStability§!, reduce damage from §YBombardment§! and produce small amount of §YAmenities§!."
- job_commandante_plural: "Commanders"
- job_commandante: "Commander"
+ job_commandant_desc: "An experienced military chief, either active or honorably discharged."
+ job_commandant_effect_desc: "£job_commandant£ $job_commandant_plural$ increase an Empire's §YNaval Capacity§!, spawn §YDefense Armies§!, increase planetary §YStability§!, reduce damage from §YBombardment§! and produce small amount of §YAmenities§!."
+ job_commandant_plural: "Commanders"
+ job_commandant: "Commander"
 
- job_commisar_desc: "A high-ranking functionary tasked with ensuring the ideological purity of a planet's administration."
- job_commisar_effect_desc: "£job_commisar£ $job_commisar_plural$ produce £unity£ §YUnity§!, increase an Empire's £unity£ §YUnity§! output, and increase planetary £mod_pop_government_ethic_attraction£ §YGoverning Ethics Attraction§! and £mod_pop_ethics_shift_speed£ §YEthics Shift Speed§!"
- job_commisar_plural: "Commissars"
- job_commisar: "Commisar"
- mod_job_commisar_add: "$job_commisar$ Jobs"
+ job_commissar_desc: "A high-ranking functionary tasked with ensuring the ideological purity of a planet's administration."
+ job_commissar_effect_desc: "£job_commissar£ $job_commissar_plural$ produce £unity£ §YUnity§!, increase an Empire's £unity£ §YUnity§! output, and increase planetary £mod_pop_government_ethic_attraction£ §YGoverning Ethics Attraction§! and £mod_pop_ethics_shift_speed£ §YEthics Shift Speed§!"
+ job_commissar_plural: "Commissars"
+ job_commissar: "Commissar"
+ mod_job_commissar_add: "$job_commissar$ Jobs"
 
  job_ambassador_desc: "A diplomat tasked with communicating the policies of the central administration, and tailoring them to the specific needs of the planet."
  job_ambassador_effect_desc: "£job_ambassador£ $job_ambassador_plural$ increase an Empire's £mod_country_trust_cap_add£ §YTrust Cap§!, increase £happiness£ §YHappiness§!, and produce £unity£ §YUnity§! and a small amount of §YAmenities§!."
@@ -1018,9 +1027,9 @@ l_korean:
  mod_decisions_cost_mult: "Decisions Cost"
  MOD_DISTANCE_TO_CAPITAL_STATIC_MODIFIER_EFFICIENCY_MULT: "Governing Ethic reduction due to Distance"
  mod_planet_districts_cities_upkeep_mult: "$district_city$ Upkeep"
- mod_job_commandante_add: "$job_commandante$ Jobs"
- mod_job_commandante_per_pop: "§G+1§! $job_commandante$ Job per $VALUE$ Pops"
- mod_job_commandante_pop_short: "\n§G+1§! £mod_job_commandante_add£ per $VALUE$ £pop£"
+ mod_job_commandant_add: "$job_commandant$ Jobs"
+ mod_job_commandant_per_pop: "§G+1§! $job_commandant$ Job per $VALUE$ Pops"
+ mod_job_commandant_pop_short: "\n§G+1§! £mod_job_commandant_add£ per $VALUE$ £pop£"
  mod_job_deep_miner_add: "$job_deep_miner$ Jobs"
  mod_job_deep_miner_per_pop_short: "\n§G+1§! £mod_job_deep_miner_add£ per $VALUE$ £pop£"
  mod_job_deep_miner_per_pop: "§G+1§! $job_deep_miner$ Job per $VALUE$ Pops"
@@ -1181,9 +1190,9 @@ l_korean:
  NO_PLURALIST_INDOCTRINATION: "NO EGALITARIAN INDOCTRINATION"
  NO_POP_GROWTH: "Population Growth"
  NO_POWER_INDUSTRY: "Power Industry"
- NO_PRIVATE_EDUCATION_DESC: "Active §YPublic Education§! social policy displeases the [Root.GetName]."
+ NO_PRIVATE_EDUCATION_DESC: "Active §YPrivate Education§! social policy displeases the [Root.GetName]."
  NO_PRIVATE_EDUCATION: "No Private Education"
- NO_PRIVATE_MEDICINE_DESC: "Active §YPublic Healthcare§! social policy displeases the [Root.GetName]."
+ NO_PRIVATE_MEDICINE_DESC: "Active §YPrivate Healthcare§! social policy displeases the [Root.GetName]."
  NO_PRIVATE_MEDICINE: "No Private Healthcare"
  NO_PRIVATE_PROPERTY: "Private Property"
  NO_PRODUCTIVISM_DESC: "§YReduced Environmental Regulation§! policy displeases the [Root.GetName]."
@@ -1325,8 +1334,7 @@ l_korean:
  opinion_industrial_pos_2: "Fellow Engineers"
  opinion_industrial_pos_3: "Fellow Engineers"
  opinion_industrial_pos_4: "Fellow Engineers"
- opinion_industrialist_vs_ecologist: "Dumb-ass Tree-Huggers"
- opinion_of_egalitarian_pos: "Free Libertarianists"
+ opinion_of_egalitarian_pos: "Free Libertarians"
  opinion_of_egalitarian: "Libertarian Rabble"
  opinion_pluralist_neg_1: "Egalitarian Rabble"
  opinion_pluralist_neg_2: "Egalitarian Rabble"
@@ -1606,7 +1614,7 @@ l_korean:
  public_education_name: "Public"
  public_education: "Public Education"
  PUBLIC_EDUCATION: "Public Education"
- public_healthcare_desc: "£job_healthcare£ $job_healthcare_plural$ have 50% reduced upkeep and produce additional §YUnity§! £unity£ and §YAmenities§! £amenities. Building §YClinic§! produce additional £job_healthcare£ $job_healthcare$ Job, but it Upkeep is increased."
+ public_healthcare_desc: "£job_healthcare£ $job_healthcare_plural$ have 50% reduced upkeep and produce additional £unity£ §YUnity§! £unity£ and §YAmenities§! £amenities£. Building §YClinic§! produce additional £job_healthcare£ $job_healthcare$ Job, but it Upkeep is increased."
  public_healthcare_name: "Public"
  public_healthcare: "Public Healthcare"
  PUBLIC_MEDICINE_DESC: "Active §YPublic Healthcare§! social policy will please the [Root.GetName]."
@@ -1708,7 +1716,7 @@ l_korean:
  RT_HEMPEROR: "High-Emperor"
  RT_HIGH_OVERSEER: "High Overseer"
  RT_HIGH_TECHNICIAN: "SKYNET"
- RT_HTECH: "First Citizen"
+ RT_FCITIZEN: "First Citizen"
  RT_HTHANE: "Chief-Thane"
  RT_IRON_LORD: "Arch-Mechanician"
  RT_KEEPER: "Lord-Emperor"
@@ -2255,7 +2263,6 @@ l_korean:
 
  #####
  
- opinion_capitalists_vs_collectivists: "Socialist Loons"
  opinion_industrialist_vs_ecologist: "Tree-Huggers"
 
  policy_slavery_percent: "Enslavement Rate"
@@ -2286,34 +2293,81 @@ l_korean:
  # Governments #
  ###############
 
- theocracy_gov_reg_loc: "\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_spiritualist$§!, £building£ §YCapital Buildings§! replace some £job_politician£ §Y$job_politician$§! Jobs with £job_high_priest£ §Y$job_high_priest_plural$§!\n\n$job_high_priest_effect_desc$§!"
- theocracy_gov_corp_loc: "\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_spiritualist$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_high_priest£ §Y$job_high_priest_plural$§!\n\n$job_high_priest_effect_desc$§!"
+ concept_theocracy_government: "Theocratic Government"
+ concept_theocracy_government_desc: "Theocratic Governments are §YFanatically Spiritualist§! governments that replace some §Y$job_politician_plural_with_icon$§! or §Y$job_executive_plural_with_icon$§! with £job_high_priest£ §Y$job_high_priest_plural$§!"
+
+ concept_technocracy_government: "Technocratic Government"
+ concept_technocracy_government_desc: "Technocratic Governments are §YFanatically Materialist§! governments that replace some §Y$job_politician_plural_with_icon$§! or §Y$job_executive_plural_with_icon$§! with £job_head_researcher£ §Y$job_head_researcher_plural$§!"
+
+ concept_stratocracy_government: "Stratocratic Government"
+ concept_stratocracy_government_desc: "Stratocratic Governments are §YFanatically Militarist§! governments that replace some §Y$job_politician_plural_with_icon$§! or §Y$job_executive_plural_with_icon$§! with £job_commandant£ §Y$job_commandant_plural$§!"
+
+ concept_bureaucracy_government: "Bureaucratic Government"
+ concept_bureaucracy_government_desc: "Bureaucratic Governments are §YFanatically Pacifist§! governments that replace some §Y$job_politician_plural_with_icon$§! or §Y$job_executive_plural_with_icon$§! with £job_supervisor£ §Y$job_supervisor_plural$§!"
+
+ concept_plutocracy_government: "Plutocratic Government"
+ concept_plutocracy_government_desc: "Plutocratic Governments are §YFanatically Competitive§! governments that replace some §Y$job_politician_plural_with_icon$§! or §Y$job_executive_plural_with_icon$§! with  £job_merchant£ §Y$job_merchant_plural$§!"
+
+ concept_isocracy_government: "Communitarian Government"
+ concept_isocracy_government_desc: "Communitarian Governments are §YFanatically Cooperative§! governments that replace some §Y$job_politician_plural_with_icon$§! or §Y$job_executive_plural_with_icon$§! with  £job_commissar£ §Y$job_commissar_plural$§!"
+
+ concept_diplocracy_government: "Diplomatic Government"
+ concept_diplocracy_government_desc: "Diplomatic Governments are §YFanatically Xenophilic§! governments that replace some §Y$job_politician_plural_with_icon$§! or §Y$job_executive_plural_with_icon$§! with £job_ambassador£ §Y$job_ambassador_plural$§!"
+
+ concept_aristocracy_government: "Aristocratic Government"
+ concept_aristocracy_government_desc: "Aristocratic Governments are replace some §Y$job_politician_plural_with_icon$§! or §Y$job_executive_plural_with_icon$§! with £job_noble£ §Y$job_noble_plural$§!"
+
+ theocracy_gov_reg_loc: "['concept_theocracy_government']:§!\n§TWith £ethic_fanatic_spiritualist£ §Y$ethic_fanatic_spiritualist$§!, £building£ §YCapital Buildings§! replace some §Y$job_politician_plural_with_icon$§! with £job_high_priest£ §Y$job_high_priest_plural$§!\n$job_high_priest_effect_desc$§!"
+ theocracy_gov_corp_loc: "['concept_theocracy_government']:§!\n§TWith £ethic_fanatic_spiritualist£ §Y$ethic_fanatic_spiritualist$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_high_priest£ §Y$job_high_priest_plural$§!\n$job_high_priest_effect_desc$§!"
+
+ technocracy_gov_reg_loc: "['concept_technocracy_government']:§!\n§TWith £ethic_fanatic_materialist£ §Y$ethic_fanatic_materialist$§!, £building£ §YCapital Buildings§! replace some §Y$job_politician_plural_with_icon$§! with £job_head_researcher£ §Y$job_head_researcher_plural$§!\n$job_head_researcher_effect_desc$§!"
+ technocracy_gov_corp_loc: "['concept_technocracy_government']:§!\n§TWith £ethic_fanatic_materialist£ §Y$ethic_fanatic_materialist$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_head_researcher£ §Y$job_head_researcher_plural$§!\n$job_head_researcher_effect_desc$§!"
+
+ stratocracy_gov_reg_loc: "['concept_stratocracy_government']:§!\n§TWith £ethic_fanatic_militarist£ §Y$ethic_fanatic_militarist$§!, £building£ §YCapital Buildings§! replace some §Y$job_politician_plural_with_icon$§! with £job_commandant£ §Y$job_commandant_plural$§!\n$job_commandant_effect_desc$§!"
+ stratocracy_gov_corp_loc: "['concept_stratocracy_government']:§!\n§TWith £ethic_fanatic_militarist£ §Y$ethic_fanatic_militarist$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_commandant£ §Y$job_commandant_plural$§!\n$job_commandant_effect_desc$§!"
+
+ bureaucracy_gov_reg_loc: "['concept_bureaucracy_government']:§!\n§TWith £ethic_fanatic_pacifist£ §Y$ethic_fanatic_pacifist$§!, £building£ §YCapital Buildings§! replace some §Y$job_politician_plural_with_icon$§! with £job_supervisor£ §Y$job_supervisor_plural$§!\n$job_supervisor_effect_desc$§!"
+ bureaucracy_gov_corp_loc: "['concept_bureaucracy_government']:§!\n§TWith £ethic_fanatic_pacifist£ §Y$ethic_fanatic_pacifist$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_supervisor£ §Y$job_supervisor_plural$§!\n$job_supervisor_effect_desc$§!"
+
+ plutocracy_gov_reg_loc: "['concept_plutocracy_government']:§!\n§TWith £ethic_fanatic_capitalism£ §Y$ethic_fanatic_capitalism$§!, £building£ §YCapital Buildings§! replace some §Y$job_politician_plural_with_icon$§! with £job_merchant£ §Y$job_merchant_plural$§!\n$job_merchant_effect_desc$§!"
+ plutocracy_gov_corp_loc: "['concept_plutocracy_government']:§!\n§TWith £ethic_fanatic_capitalism£ §Y$ethic_fanatic_capitalism$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_merchant£ §Y$job_merchant_plural$§!\n$job_merchant_effect_desc$§!"
+
+ isocracy_gov_reg_loc: "['concept_isocracy_government']:§!\n§TWith £ethic_fanatic_socialism£ §Y$ethic_fanatic_socialism$§!, £building£ §YCapital Buildings§! replace some §Y$job_politician_plural_with_icon$§! with £job_commissar£ §Y$job_commissar_plural$§!\n$job_commissar_effect_desc$§!"
+
+ diplocracy_gov_reg_loc: "['concept_diplocracy_government']:§!\n§TWith £ethic_fanatic_xenophile£ §Y$ethic_fanatic_xenophile$§!, £building£ §YCapital Buildings§! replace some §Y$job_politician_plural_with_icon$§! with £job_ambassador£ §Y$job_ambassador_plural$§!\n$job_ambassador_effect_desc$§!"
+ diplocracy_gov_corp_loc: "['concept_diplocracy_government']:§!\n§TWith £ethic_fanatic_capitalism£ §Y$ethic_fanatic_capitalism$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_ambassador£ §Y$job_ambassador_plural$§!\n$job_ambassador_effect_desc$§!"
+
+ aristocracy_gov_reg_loc: "['concept_aristocracy_government']:§!\n§T£building£ §YCapital Buildings§! replace some §Y$job_politician_plural_with_icon$§! with £job_noble£ §Y$job_noble_plural$§!\n$job_noble_effect_desc$§!"
+ aristocracy_gov_corp_loc: "['concept_aristocracy_government']:§!\n§T£building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_noble£ §Y$job_noble_plural$§!\n$job_noble_effect_desc$§!"
+
+ theocracy_gov_reg_loc: "['concept_theocracy_government']:§!\n§TWith £ethic_fanatic_spiritualist£ §Y$ethic_fanatic_spiritualist$§!, £building£ §YCapital Buildings§! replace some §Y$job_politician_plural_with_icon$§! with £job_high_priest£ §Y$job_high_priest_plural$§!\n$job_high_priest_effect_desc$§!"
+ theocracy_gov_corp_loc: "['concept_theocracy_government']:§!\n§TWith £ethic_fanatic_spiritualist£ §Y$ethic_fanatic_spiritualist$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_high_priest£ §Y$job_high_priest_plural$§!\n$job_high_priest_effect_desc$§!"
  
- technocracy_gov_reg_loc: "\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_materialist$§!, £building£ §YCapital Buildings§! replace some £job_politician£ §Y$job_politician$§! Jobs with £job_head_researcher£ §Y$job_head_researcher_plural$§!\n\n$job_head_researcher_effect_desc$§!"
- technocracy_gov_corp_loc: "\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_materialist$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_head_researcher£ §Y$job_head_researcher_plural$§!\n\n$job_head_researcher_effect_desc$§!"
+ technocracy_gov_reg_loc: "['concept_technocracy_government']:§!\n§TWith £ethic_fanatic_materialist£ §Y$ethic_fanatic_materialist$§!, £building£ §YCapital Buildings§! replace some §Y$job_politician_plural_with_icon$§! with £job_head_researcher£ §Y$job_head_researcher_plural$§!\n$job_head_researcher_effect_desc$§!"
+ technocracy_gov_corp_loc: "['concept_technocracy_government']:§!\n§TWith £ethic_fanatic_materialist£ §Y$ethic_fanatic_materialist$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_head_researcher£ §Y$job_head_researcher_plural$§!\n$job_head_researcher_effect_desc$§!"
 
- stratocracy_gov_reg_loc: "\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_militarist$§!, £building£ §YCapital Buildings§! replace some £job_politician£ §Y$job_politician$§! Jobs with £job_commandante£ §Y$job_commandante_plural$§!\n\n$job_commandante_effect_desc$§!"
- stratocracy_gov_corp_loc: "\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_militarist$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_commandante£ §Y$job_commandante_plural$§!\n\n$job_commandante_effect_desc$§!"
+ stratocracy_gov_reg_loc: "['concept_stratocracy_government']:§!\n§TWith £ethic_fanatic_militarist£ §Y$ethic_fanatic_militarist$§!, £building£ §YCapital Buildings§! replace some §Y$job_politician_plural_with_icon$§! with £job_commandant£ §Y$job_commandant_plural$§!\n$job_commandant_effect_desc$§!"
+ stratocracy_gov_corp_loc: "['concept_stratocracy_government']:§!\n§TWith £ethic_fanatic_militarist£ §Y$ethic_fanatic_militarist$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_commandant£ §Y$job_commandant_plural$§!\n$job_commandant_effect_desc$§!"
 
- bureaucracy_gov_reg_loc: "\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_pacifist$§!, £building£ §YCapital Buildings§! replace some £job_politician£ §Y$job_politician$§! Jobs with £job_supervisor£ §Y$job_supervisor_plural$§!\n\n$job_supervisor_effect_desc$§!"
- bureaucracy_gov_corp_loc: "\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_pacifist$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_supervisor£ §Y$job_supervisor_plural$§!\n\n$job_supervisor_effect_desc$§!"
+ bureaucracy_gov_reg_loc: "['concept_bureaucracy_government']:§!\n§TWith £ethic_fanatic_pacifist£ §Y$ethic_fanatic_pacifist$§!, £building£ §YCapital Buildings§! replace some §Y$job_politician_plural_with_icon$§! with £job_supervisor£ §Y$job_supervisor_plural$§!\n$job_supervisor_effect_desc$§!"
+ bureaucracy_gov_corp_loc: "['concept_bureaucracy_government']:§!\n§TWith £ethic_fanatic_pacifist£ §Y$ethic_fanatic_pacifist$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_supervisor£ §Y$job_supervisor_plural$§!\n$job_supervisor_effect_desc$§!"
 
- plutocracy_gov_reg_loc: "\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_capitalism$§!, £building£ §YCapital Buildings§! replace some £job_politician£ §Y$job_politician$§! Jobs with £job_merchant£ §Y$job_merchant_plural$§!\n\n$job_merchant_effect_desc$§!"
- plutocracy_gov_corp_loc: "\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_capitalism$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_merchant£ §Y$job_merchant_plural$§!\n\n$job_merchant_effect_desc$§!"
+ plutocracy_gov_reg_loc: "['concept_plutocracy_government']:§!\n§TWith £ethic_fanatic_capitalism£ §Y$ethic_fanatic_capitalism$§!, £building£ §YCapital Buildings§! replace some §Y$job_politician_plural_with_icon$§! with £job_merchant£ §Y$job_merchant_plural$§!\n$job_merchant_effect_desc$§!"
+ plutocracy_gov_corp_loc: "['concept_plutocracy_government']:§!\n§TWith £ethic_fanatic_capitalism£ §Y$ethic_fanatic_capitalism$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_merchant£ §Y$job_merchant_plural$§!\n$job_merchant_effect_desc$§!"
 
- isocracy_gov_reg_loc: "\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_socialism$§!, £building£ §YCapital Buildings§! replace some £job_politician£ §Y$job_politician$§! Jobs with £job_commisar£ §Y$job_commisar_plural$§!\n\n$job_commisar_effect_desc$§!"
+ isocracy_gov_reg_loc: "['concept_isocracy_government']:§!\n§TWith £ethic_fanatic_socialism£ §Y$ethic_fanatic_socialism$§!, £building£ §YCapital Buildings§! replace some §Y$job_politician_plural_with_icon$§! with £job_commissar£ §Y$job_commissar_plural$§!\n$job_commissar_effect_desc$§!"
 
- diplocracy_gov_reg_loc: "\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_xenophile$§!, £building£ §YCapital Buildings§! replace some £job_politician£ §Y$job_politician$§! Jobs with £job_ambassador£ §Y$job_ambassador_plural$§!\n\n$job_ambassador_effect_desc$§!"
- diplocracy_gov_corp_loc: "\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_capitalism$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_ambassador£ §Y$job_ambassador_plural$§!\n\n$job_ambassador_effect_desc$§!"
+ diplocracy_gov_reg_loc: "['concept_diplocracy_government']:§!\n§TWith £ethic_fanatic_xenophile£ §Y$ethic_fanatic_xenophile$§!, £building£ §YCapital Buildings§! replace some §Y$job_politician_plural_with_icon$§! with £job_ambassador£ §Y$job_ambassador_plural$§!\n$job_ambassador_effect_desc$§!"
+ diplocracy_gov_corp_loc: "['concept_diplocracy_government']:§!\n§TWith £ethic_fanatic_capitalism£ §Y$ethic_fanatic_capitalism$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_ambassador£ §Y$job_ambassador_plural$§!\n$job_ambassador_effect_desc$§!"
 
- aristocracy_gov_reg_loc: "\n\n§EEffects:§!\n§T£building£ §YCapital Buildings§! replace some £job_politician£ §Y$job_politician$§! Jobs with £job_noble£ §Y$job_noble_plural$§!\n\n$job_noble_effect_desc$§!"
- aristocracy_gov_corp_loc: "\n\n§EEffects:§!\n§T£building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_noble£ §Y$job_noble_plural$§!\n\n$job_noble_effect_desc$§!"
+ aristocracy_gov_reg_loc: "['concept_aristocracy_government']:§!\n§T£building£ §YCapital Buildings§! replace some §Y$job_politician_plural_with_icon$§! with £job_noble£ §Y$job_noble_plural$§!\n$job_noble_effect_desc$§!"
+ aristocracy_gov_corp_loc: "['concept_aristocracy_government']:§!\n§T£building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_noble£ §Y$job_noble_plural$§!\n$job_noble_effect_desc$§!"
 
  gov_military_corp_fam: "Private Military Corporation"
  gov_military_corp_fam_desc: "This government is operated by a family-owned, massive military-industrial holding."
 
  gov_subversive_cult_fam: "Subversive Cult"
- gov_subversive_cult_fam_desc: "This government is structured as a religious cult, with the rulng family seen as merchant-mystics. This family operates through a variety of criminal and corporate enterprises.$theocracy_gov_corp_loc$"
+ gov_subversive_cult_fam_desc: "This government is structured as a religious cult, with the ruling family seen as merchant-mystics. This family operates through a variety of criminal and corporate enterprises.$theocracy_gov_corp_loc$"
 
  gov_criminal_syndicate_fam: "Criminal Syndicate"
  gov_criminal_syndicate_fam_desc: "This government is an enormous and ruthless business syndicate, owned and operated by one family. It shares many of its operating practises with organized crime."
@@ -2358,9 +2412,6 @@ l_korean:
  ##################################
  ## Relytor's Empire Governance ###
  ##################################
-
- job_supervisor: "Philosopher"
- job_supervisor_plural: "Philosophers"
 
  RT_CUSTODIAN: "Noble Custodian"
 
@@ -2433,7 +2484,7 @@ l_korean:
  lrsk_gov_var_gov_rationalist_managerial_firm_desc: "This government is actually a kind of business enterprise that operates according to a principle of rationally planned efficiency for profit maximization. Every aspect of the lives of citizen-workers has been designed according to best practices. Local and regional governments have had their roles reduced to enforcement of waste-reduction measures.$technocracy_gov_reg_loc$"
 
  ###############################
- ### Commandante Governments ###
+ ### commandant Governments ###
  ###############################
 
  gov_star_empire_desc: "This government is a hereditary and militaristic form of autocracy, with a single sovereign controlling both the government and the military.$stratocracy_gov_reg_loc$"
@@ -2587,12 +2638,14 @@ l_korean:
  lrsk_gov_var_gov_galactic_cartel_desc: "This government is a staggeringly ambitious business with designs on total galactic monopoly. Its selection is unbelievably diverse, its stock value soaring, its employees productive and courteous. Any who are not yet loyal customers feel an emptiness they don't yet know how to fill, or so the stockholders believe.$plutocracy_gov_reg_loc$"
 
  ############################
- ### Commisar Governments ###
+ ### commissar Governments ###
  ############################
 
  gov_strasserism_desc: "A form of government ideology, based on strong nationalistic ideals in culture and politics, and egalitarian ideals in the sphere of economy.$isocracy_gov_reg_loc$"
 
  gov_soviet_republic_desc: "A type of republic ruled by directly elected 'Soviets' - workers councils, which are directly responsible to their electors. There is no separation of powers, and elected Delegates act as legislators, government and courts in one.$isocracy_gov_reg_loc$"
+
+ gov_imperial_socialism_desc: "A political system where the monarchy has nationalized the vast majority of industries. The elimination of private industry has allowed for a unique wealth redistribution scheme, whereby the wealth is relatively evenly distributed between the workers, the monarchy, and the state.$isocracy_gov_reg_loc$"
 
  gov_anarchy_communism_desc: "An extreme form of Communist dictatorship, characterized with nationalization of all industries and the introduction of strict centralized management, state control of foreign trade, strict discipline for workers, with strikes forbidden and obligatory labor duty by non-working classes.$isocracy_gov_reg_loc$"
 
@@ -2605,6 +2658,8 @@ l_korean:
  gov_peoples_republic_desc: "Government is an egalitarian form of dictatorship. There is an actual parliament, but it's dominated by a single political power - so-called 'People's Party'.$isocracy_gov_reg_loc$"
 
  gov_communal_parity_desc: "This government promotes total equality for all of its citizens, regardless of their jobs or assigned tasks. One life is worth the same as any other.$isocracy_gov_reg_loc$"
+
+ gov_enlighted_socialism_desc: "This government is a form of a socialist dictatorship, where the the wise elected-for-life ruler is undisputedly regarded as an enlightened architect for a brighter future.$isocracy_gov_reg_loc$"
 
  lrsk_gov_var_gov_communal_democracy_desc: "This government has extended the principle of representative government to the whole political economy, with the central state being simply the largest-scale democratic decision making body. The personal truly is political, and its citizens collectively participate in nearly all the relevant decisions of all aspects of their lives.$isocracy_gov_reg_loc$"
   
@@ -2641,8 +2696,6 @@ l_korean:
  gov_social_democracy_desc: "Idea of a state, which, acting in the frame of market economy, needs to provide security and equality of opportunity for its people and should actively reorder society in a way that is conducive to such development, but that such changes should be brought about gradually, legitimated by a democratically-elected majority.$diplocracy_gov_reg_loc$"
 
  lrsk_gov_var_gov_constitutional_monarchy_desc: "This government is a monarchy that has made a pact, in the name of justice and progress, with the people over which it reigns to govern according to a legal framework establishing the nature and limits of the ruler's power.$diplocracy_gov_reg_loc$"
-
- lrsk_gov_var_gov_republic_of_virtue_desc: "This government is dedicated to cultivating the civic virtue of its citizens, for without virtue, liberty and equality cannot endure.$diplocracy_gov_reg_loc$"
 
  lrsk_gov_var_gov_federal_republic_desc: "This government shares power between a central legislature and many regional governments in order to accommodate a wide variety of views and interests.$diplocracy_gov_reg_loc$"
 

@@ -117,7 +117,7 @@ is_technocracy = {
 	}
 }
 
-# Militarist - Commandante
+# Militarist - commandant
 is_stratocracy = {
 	exists = owner
 	owner = {
@@ -186,7 +186,6 @@ is_bureaucracy = {
 			has_government = lrsk_gov_var_gov_peasant_commune_collective
 			has_government = lrsk_gov_var_gov_agrarian_monarchy
 			has_government = lrsk_gov_var_gov_agrarian_social_state
-			has_government = lrsk_gov_var_gov_republic_of_virtue
 			has_government = lrsk_gov_var_gov_social_bureaucracy
 		}
 	}
@@ -206,6 +205,7 @@ is_plutocracy = {
 			has_government = gov_imperial_domain_megacorp
 			# ECAF
 			has_government = gov_trade_league_fam
+			has_government = gov_criminal_syndicate_fam
 			has_government = gov_stellar_bancorp_fam
 			has_government = lrsk_gov_var_gov_galactic_cartel_fam
 			has_government = gov_anarch_capitalism
@@ -246,6 +246,7 @@ is_isocracy = {
 			has_government = gov_enlighted_socialism
 			has_government = gov_strasserism
 			has_government = gov_soviet_republic
+			has_government = gov_imperial_socialism
 			has_government = gov_anarchy_communism
 			has_government = gov_bur_collectivism
 			has_government = gov_communist_dictatorship
@@ -283,7 +284,6 @@ is_diplocracy = {
 			# Government Variety Pack
 			has_government = lrsk_gov_var_gov_constitutional_monarchy
 			has_government = lrsk_gov_var_gov_federal_republic
-			has_government = lrsk_gov_var_gov_republic_of_virtue
 		}
 	}
 }

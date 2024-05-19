@@ -345,7 +345,6 @@ gov_enlighted_socialism = {
 	possible = {
 		OR = {
 			has_authority = auth_dictatorial
-			has_authority = auth_imperial
 			has_authority = auth_dict_democratic
 		}
 		has_ethic = ethic_fanatic_socialism
@@ -615,16 +614,19 @@ gov_soviet_republic = {
 }
 
 gov_imperial_socialism = {
-	ruler_title = RT_GENSEK
-	ruler_title_female = RT_GENSEK
+	ruler_title = RT_FCITIZEN
+	ruler_title_female = RT_FCITIZEN
+	heir_title = HT_LEGATEE
+	heir_title_female = HT_LEGATEE
+	use_regnal_names = yes
+	dynastic_last_names = yes
 	should_force_rename = yes
 	possible = {
 		is_socialism = yes
 		inline_script = governments/conditions/auth_imperial
 	}
 	weight = {
-		base = 0
-		#base = 1000
+		base = 250
 		modifier = {
 			factor = 10
 			has_ethic = ethic_fanatic_socialism

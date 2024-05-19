@@ -5704,7 +5704,24 @@ action_insult = {
 	}
 
 	propose = {
-		01_INSULT_PROPOSE_IND_COL = {
+		 SOCIALISM_ICON: "£socialism£"
+ CAPITALISM_ICON: "£capitalism£"
+
+ job_politician_plural_with_icon: "£job_politician£ $job_politician_plural$"
+
+ #GetOppositionGalcomLobbyists
+ galcom_movement_socialism: "Movement for Empowering Communities"
+ galcom_movement_capitalism: "Organization for the Facilitation of Trickle-Down Economics"
+
+ paragon_origin_rebel_socialism: "Community Oriented"
+ paragon_origin_rebel_socialism_desc: "The new society, remembering the bitterness of galactic civil war, understands the importance of looking after your neighbors. We strive to accomplish our goals, together."
+ paragon_origin_rebel_capitalism: "Competitive Spirit"
+ paragon_origin_rebel_capitalism_desc: "Competition is the engine of progress. Our civil war taught us the value of the individual's spirit. While the war was devastating, it demonstrated that there are always opportunities to capitalize on."
+
+ paragon.5213.socialism: "We will take care of each other."
+ paragon.5213.capitalism: "We must seek new opportunities."
+
+ 01_INSULT_PROPOSE_IND_COL = {
 			trigger = {
 				is_authoritarian = yes
 				FROM = {

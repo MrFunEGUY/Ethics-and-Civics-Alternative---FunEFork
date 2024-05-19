@@ -575,11 +575,6 @@ imperialist = {
 			owner = {
 				is_homicidal = no
 				is_country_type = default
-				OR = {
-					has_policy_flag = diplo_stance_belligerent
-					has_policy_flag = diplo_stance_supremacist
-					has_policy_flag = diplo_stance_animosity
-				}
 			}
 		}
 
@@ -607,7 +602,6 @@ imperialist = {
 			owner = {
 				is_homicidal = no
 				is_country_type = default
-				has_policy_flag = diplo_stance_cooperative
 			}
 		}
 
@@ -628,10 +622,7 @@ imperialist = {
 
 		potential = {
 			exists = owner
-			owner = {
-				is_subject = no
-				has_policy_flag = benevolent_terms
-			}
+			owner = { is_subject = no }
 		}
 
 		trigger = {
@@ -651,10 +642,7 @@ imperialist = {
 
 		potential = {
 			exists = owner
-			owner = {
-				is_subject = no
-				NOT = { has_policy_flag = benevolent_terms }
-			}
+			owner = { is_subject = no }
 		}
 
 		trigger = {

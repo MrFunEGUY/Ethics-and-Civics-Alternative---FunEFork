@@ -18,6 +18,7 @@ empire_name_format = {
 				has_government = "gov_enlighted_socialism"
 				has_government = "gov_aristocratic_monarchy"
 				has_government = "gov_strasserism"
+				has_government = "gov_imperial_socialism"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -49,6 +50,7 @@ empire_name_format = {
 				has_government = "gov_enlighted_socialism"
 				has_government = "gov_aristocratic_monarchy"
 				has_government = "gov_strasserism"
+				has_government = "gov_imperial_socialism"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -80,6 +82,7 @@ empire_name_format = {
 				has_government = "gov_enlighted_socialism"
 				has_government = "gov_aristocratic_monarchy"
 				has_government = "gov_strasserism"
+				has_government = "gov_imperial_socialism"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -109,6 +112,7 @@ empire_name_format = {
 				has_government = "gov_enlighted_socialism"
 				has_government = "gov_aristocratic_monarchy"
 				has_government = "gov_strasserism"
+				has_government = "gov_imperial_socialism"
 			}
 			is_pirate = no
 			is_primitive = no
@@ -134,6 +138,7 @@ empire_name_format = {
 				###
 				has_government = "gov_peoples_commissariat"
 				has_government = "gov_strasserism"
+				has_government = "gov_imperial_socialism"
 			}
 			is_pirate = no
 			is_primitive = no
