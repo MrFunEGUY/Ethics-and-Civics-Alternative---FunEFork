@@ -310,6 +310,6 @@ hazbuzan = {
 		ruler_title = "PRESCRIPTED_ruler_title_hazbuzan"
 		ruler_title_female = "PRESCRIPTED_ruler_title_hazbuzan_female"
 		trait = "leader_trait_spycraft"
-		leader_class = commander
+		leader_class = official
 	}
 }

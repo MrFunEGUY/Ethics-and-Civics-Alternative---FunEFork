@@ -61,71 +61,17 @@ building_temple = {
 	}
 
 	planet_modifier = {
-		job_priest_add = 1
 		pop_ethic_spiritualist_attraction_mult = 0.05
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_megacorp = no }
-		}
-		modifier = {
-			job_priest_add = 1
-		}
+	inline_script = {
+		script = jobs/priests_add
+		AMOUNT = @b1_jobs
 	}
 
-	triggered_desc = {
-		text = job_priest_effect_desc
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_worker_coop_empire = no
-			}
-		}
-		modifier = {
-			job_manager_add = 1
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_worker_coop_empire = no
-			}
-		}
-		text = job_manager_effect_desc
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_worker_coop_empire = yes
-			}
-		}
-		modifier = {
-			job_steward_add = 1
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_worker_coop_empire = yes
-			}
-		}
-		text = job_steward_effect_desc
-	}
+	# triggered_desc = {
+	# 	text = job_priest_effect_desc
+	# }
 	
 	triggered_planet_modifier = {
 		potential = {
@@ -223,26 +169,17 @@ building_holotemple = {
 		}
 	}
 	planet_modifier = {
-		job_priest_add = 2
 		pop_ethic_spiritualist_attraction_mult = 0.1
 	}
 	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_megacorp = no
-				NOT = { has_valid_civic = civic_defenders_faith }
-			}
-		}
-		modifier = {
-			job_priest_add = 2
-		}
+	inline_script = {
+		script = jobs/priests_add
+		AMOUNT = @b2_jobs
 	}
 
-	triggered_desc = {
-		text = job_priest_effect_desc
-	}
+	# triggered_desc = {
+	# 	text = job_priest_effect_desc
+	# }
 	
 	triggered_planet_modifier = {
 		potential = {
@@ -253,8 +190,7 @@ building_holotemple = {
 			}
 		}
 		modifier = {
-			job_priest_add = 1
-			job_templar_add = 1
+			job_templar_add = 2
 		}
 	}
 
@@ -264,54 +200,6 @@ building_holotemple = {
 			owner = { has_valid_civic = civic_defenders_faith }
 		}
 		text = job_templar_effect_desc
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_worker_coop_empire = no
-			}
-		}
-		modifier = {
-			job_manager_add = 2
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_worker_coop_empire = no
-			}
-		}
-		text = job_manager_effect_desc
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_worker_coop_empire = yes
-			}
-		}
-		modifier = {
-			job_steward_add = 2
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_worker_coop_empire = yes
-			}
-		}
-		text = job_steward_effect_desc
 	}
 
 	upgrades = {
@@ -391,35 +279,19 @@ building_sacred_nexus = {
 		}
 	}
 	planet_modifier = {
-		job_priest_add = 3
 		pop_ethic_spiritualist_attraction_mult = 0.15
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner.federation
-			owner.federation = { has_federation_perk = all_the_priests_2 }
-		}
-		job_high_priest_add = 1
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_megacorp = no
-				NOT = { has_valid_civic = civic_defenders_faith }
-			}
-		}
-		modifier = {
-			job_priest_add = 3
-		}
+	# Add Priest & High Priest Jobs
+	inline_script = {
+		script = jobs/priests_add
+		AMOUNT = @b3_jobs
 	}
 
-	triggered_desc = {
-		text = job_priest_effect_desc
-	}
+	inline_script = buildings/job_high_priest_variants_add_saintly_hierarchy
 	
+
+	## ECAF 
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -438,54 +310,6 @@ building_sacred_nexus = {
 		}
 		text = job_templar_effect_desc
 	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_worker_coop_empire = no
-			}
-		}
-		modifier = {
-			job_manager_add = 3
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_worker_coop_empire = no
-			}
-		}
-		text = job_manager_effect_desc
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_worker_coop_empire = yes
-			}
-		}
-		modifier = {
-			job_steward_add = 3
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_worker_coop_empire = yes
-			}
-		}
-		text = job_steward_effect_desc
-	}
 
 	triggered_planet_modifier = {
 		potential = {
@@ -500,18 +324,12 @@ building_sacred_nexus = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				OR = {
-					is_theocracy = yes
-					AND = {
-						exists = federation
-						federation = { has_federation_perk = all_the_priests_2 }
-					}
-				}
-			}
+			owner = { is_theocracy = yes }
 		}
 		text = job_high_priest_effect_desc
 	}
+
+	### //ECAF 
 
 
 	prerequisites = {

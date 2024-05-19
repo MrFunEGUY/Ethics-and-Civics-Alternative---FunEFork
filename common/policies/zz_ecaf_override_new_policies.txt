@@ -1427,7 +1427,10 @@ border_policy = {
 		}
 
 		valid = {
-			is_homicidal = no
+			OR = {
+				is_primitive = yes
+				is_homicidal = no
+			}
 		}
 	}
 
@@ -1489,6 +1492,10 @@ economic_policy = {
 			planet_jobs_consumer_goods_produces_mult = 0.1
 			planet_jobs_alloys_produces_mult = -0.25
 			pop_ethic_pacifist_attraction_mult = 0.15
+		}
+
+		policy_flags = {
+			economic_policy_civilian
 		}
 
 		AI_weight = {
@@ -1768,7 +1775,7 @@ trade_policy = {
 		valid = {
 			has_technology = tech_innovations
 			NOR = {
-				has_valid_civic = civic_ultimate_collective
+				has_valid_civic = civic_harmonious_hierarchy
 				has_policy_flag = "economic_stance_market"
 				has_policy_flag = "economic_stance_planned"
 			}
@@ -1843,7 +1850,7 @@ economic_stance = {
 			has_technology = tech_free_market
 			NOR = {
 				is_socialism = yes
-				has_valid_civic = civic_ultimate_collective
+				has_valid_civic = civic_harmonious_hierarchy
 				has_valid_civic = civic_distributism
 				has_valid_civic = civic_state_monopoly
 				and = {
@@ -2059,12 +2066,12 @@ bureaucracy = {
 			is_country_type_with_subjects = yes
 			has_technology = tech_federal_state
 			NOR = {
-				has_valid_civic = civic_ultimate_collective
+				has_valid_civic = civic_harmonious_hierarchy
 				has_ethic = "ethic_fanatic_authoritarian"
 			}
 		}
 		modifier = {
-			governor_exp_gain = 0.25
+			official_exp_gain = 0.25
 			edicts_cost_mult = 0.25
 			pop_ethic_egalitarian_attraction_mult = 0.15
 		}
@@ -2441,8 +2448,8 @@ interstellar_media = {
 			is_country_type_with_subjects = yes
 			NOR = {
 				has_ethic = ethic_fanatic_authoritarian
-				has_valid_civic = civic_divine_order
-				has_valid_civic = civic_ultimate_collective
+				has_valid_civic = civic_caste_system
+				has_valid_civic = civic_harmonious_hierarchy
 			}
 		}
 		modifier = {
@@ -2538,17 +2545,24 @@ artificial_intelligence_policy = {
 			is_valid_organic_zealots = yes # need to be able to see the policy so they have the appropriate policy flag set
 			can_set_ai_policy = yes
 			has_country_flag = synthetic_empire
+			is_individual_machine = yes
 		}
 	}
 
 	option = {
 		name = "ai_outlawed"
 
+		potential = {
+			is_individual_machine = no
+		}
+
 		valid = {
 			if = {
 				limit = { is_robot_empire = no }
 				NOT = { has_valid_civic = civic_machine_cult }
 				OR = {
+					is_individual_machine = no
+					NOT = { has_origin = origin_synthetic_fertility }
 					custom_tooltip = {
 						fail_text = civic_tooltip_not_materialist
 						is_materialist = no
@@ -2624,10 +2638,15 @@ artificial_intelligence_policy = {
 	option = {
 		name = "ai_servitude"
 
+		potential = {
+			is_individual_machine = no
+		}
+
 		valid = {
 			if = {
 				limit = { is_robot_empire = no }
 				NOT = { has_valid_civic = civic_machine_cult }
+				NOT = {	has_origin = origin_synthetic_fertility }
 				custom_tooltip = {
 					fail_text = lost_robot_policy_war_fail
 					NOT = { has_country_flag = lost_robot_policy_war }
@@ -2688,6 +2707,10 @@ artificial_intelligence_policy = {
 					}
 				}
 			}
+			modifier = {
+				factor = 0.1
+				is_individual_machine = yes
+			}
 		}
 	}
 
@@ -2703,6 +2726,7 @@ artificial_intelligence_policy = {
 						fail_text = empire_is_spiritualist
 						is_spiritualist = no
 					}
+					is_individual_machine = yes
 				}
 				custom_tooltip = {
 					fail_text = lost_robot_policy_war_fail
@@ -2779,6 +2803,7 @@ robot_pop_policy = {
 
 	potential = {
 		is_gestalt = no
+		is_individual_machine = no
 	}
 
 	option = {
@@ -2787,6 +2812,8 @@ robot_pop_policy = {
 		valid = {
 			if = {
 				limit = { is_robot_empire = no }
+				NOT = { has_origin = origin_synthetic_fertility }
+				is_individual_machine = no
 				OR = {
 					custom_tooltip = {
 						text = civic_tooltip_not_materialist
@@ -2831,7 +2858,7 @@ robot_pop_policy = {
 		on_enabled = {
 			hidden_effect = {
 				every_owned_species = {
-					limit = { is_robotic_species = yes }
+					limit = { is_robotic = yes }
 					set_citizenship_type = {
 						type = citizenship_purge
 						country = root
@@ -2902,6 +2929,14 @@ robot_pop_policy = {
 
 		policy_flags = {
 			robots_allowed
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				country_event = {
+					id = action.56 # Failsafe if you don't have a robot species to assemble.
+				}
+			}
 		}
 
 		AI_weight = {
@@ -2983,7 +3018,7 @@ slavery = {
 				has_valid_civic = civic_slaver_guilds
 				has_valid_civic = civic_indentured_assets
 				has_valid_civic = civic_slaving_despots
-				has_valid_civic = civic_divine_order
+				has_valid_civic = civic_caste_system
 			}
 		}
 
@@ -3056,6 +3091,7 @@ slavery = {
 				NOR = {
 					has_valid_civic = "civic_slaver_guilds"
 					has_trait = "trait_decadent"
+					has_trait = "trait_robot_decadent"
 				}
 			}
 		}

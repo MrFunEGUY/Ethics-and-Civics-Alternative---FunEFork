@@ -28,8 +28,16 @@ totalitarian = {
                 	}
                 }
             }
-            unity = @faction_base_unity
+            unity = @faction_base_output
         }
+	}
+
+	extortion_resource = {
+		category = pop_factions
+		produces = {
+			engineering_research = @faction_base_output
+			mult = @faction_extortion_research_ratio
+		}
 	}
 
 	is_potential = {
@@ -317,6 +325,7 @@ totalitarian = {
 		fulfilled_effect = 5
 		potential = {
 			exists = owner
+			has_global_flag = cultural_overhaul_active
 		}
 		trigger = {
 			owner = { has_policy_flag = gun_rights_limited }
@@ -330,7 +339,7 @@ totalitarian = {
 		unfulfilled_effect = -10
 		potential = {
 			exists = owner
-			owner = { has_policy_flag = free_media }
+			has_global_flag = cultural_overhaul_active
 		}
 		trigger = {
 			owner = { has_policy_flag = free_media }
@@ -665,6 +674,51 @@ totalitarian = {
 				parameter:empire = {
 					remove_modifier = suppressed_authoritarian
 				}
+			}
+
+			ai_weight = {
+				base = 0
+			}
+		}
+		# Faction Extortion Buttons
+		extort_faction = {
+			title = "EXTORT_FACTION"
+			description = "EXTORT_FACTION_DESC"
+
+			potential = {
+				exists = owner
+				owner = {
+					has_authority = auth_oligarchic
+					has_country_flag = cyber_collectivist
+				}
+				is_faction_extorted = no
+			}
+
+			effect = {
+				set_faction_extorted = yes
+				custom_tooltip = engineering_research_extortion_tt
+				custom_tooltip = ONLY_ONE_EXTORTED_FACTION_TT
+			}
+
+			ai_weight = {
+				base = 0
+			}
+		}
+		cancel_extort_faction = {
+			title = "CANCEL_EXTORT_FACTION"
+			description = "CANCEL_EXTORT_FACTION_DESC"
+
+			potential = {
+				exists = owner
+				owner = {
+					has_authority = auth_oligarchic
+					has_country_flag = cyber_collectivist
+				}
+				is_faction_extorted = yes
+			}
+
+			effect = {
+				set_faction_extorted = no
 			}
 
 			ai_weight = {

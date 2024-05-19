@@ -1,0 +1,43 @@
+concept_strict_election = {
+	icon =  "gfx/interface/icons/governments/authorities/auth_strict_democratic_35x35.dds"
+}
+
+concept_dem_dict_election = {
+	icon =  "gfx/interface/icons/governments/authorities/auth_dict_democratic_35x35.dds"
+}
+
+concept_democratic_election = {
+	icon =  "gfx/interface/icons/governments/authorities/auth_ecaf_democratic_35x35.dds"
+}
+
+concept_theocracy_government = {
+	icon =  "gfx/interface/icons/ethics/ethic_fanatic_spiritualist.dds"
+}
+
+concept_technocracy_government = {
+	icon =  "gfx/interface/icons/ethics/ethic_fanatic_materialist.dds"
+}
+
+concept_stratocracy_government = {
+	icon =  "gfx/interface/icons/ethics/ethic_fanatic_militarist.dds"
+}
+
+concept_bureaucracy_government = {
+	icon =  "gfx/interface/icons/ethics/ethic_fanatic_pacifist.dds"
+}
+
+concept_plutocracy_government = {
+	icon =  "gfx/interface/icons/ethics/ethic_fanatic_capitalism.dds"
+}
+
+concept_isocracy_government = {
+	icon =  "gfx/interface/icons/ethics/ethic_fanatic_socialism.dds"
+}
+
+concept_diplocracy_government = {
+	icon =  "gfx/interface/icons/ethics/ethic_fanatic_xenophile.dds"
+}
+
+concept_aristocracy_government = {
+	icon =  "gfx/interface/icons/jobs/job_noble.dds"
+}

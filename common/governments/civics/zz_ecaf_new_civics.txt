@@ -40,6 +40,7 @@ civic_state_monopoly = {
 			value = ethic_fanatic_capitalism
 		}
 	}
+	description = "civic_tooltip_state_monopoly_effects"
 	modifier = {
 		station_gatherers_produces_mult = 0.1
 		job_mogul_per_pop = 0.03
@@ -76,12 +77,14 @@ civic_keepers_harmony = {
 				value = civic_mining_guilds
 				value = civic_consumerism
 				value = civic_environmentalist
+				value = civic_industrial_economy
 			}
 		}
 	}
 	random_weight = {
 		base = 5
 	}
+	description = "civic_tooltip_keepers_harmony_effects"
 	modifier = {
 		pop_environment_tolerance = 0.1
 		planet_pops_organics_food_upkeep_mult = -0.1
@@ -147,6 +150,7 @@ civic_terraforming = {
 	random_weight = {
 		base = 5
 	}
+	description = "civic_tooltip_terraforming_effects"
 	modifier = {
 		deposit_blockers_cost_mult = -0.25
 		planet_clear_blocker_time_mult = -1
@@ -184,7 +188,8 @@ civic_evangelism = {
 		country_trust_growth = 0.5
 		COUNTRY_TRUST_CAP_ADD = 50
 		DIPLO_WEIGHT_POPS_MULT = 0.15
-		DIPLO_WEIGHT_ENVOYS_MULT = 0.15
+		envoys_add = 1
+		# pop_ethic_spiritualist_attraction_mult = 0.1 ##TODO Give to neighbor countries
 	}
 	random_weight = {
 		base = 5
@@ -220,6 +225,7 @@ civic_peacekeepers = {
 	random_weight = {
 		base = 5
 	}
+	description = "civic_tooltip_peacekeepers_effects"
 	modifier = {
 		diplomacy_upkeep_mult = -0.15
 		diplo_weight_mult = 0.15
@@ -258,6 +264,7 @@ civic_xeno_militarist = {
 	random_weight = {
 		base = 5
 	}
+	description = "civic_tooltip_xeno_militarist_effects"
 	modifier = {
 		federation_naval_cap_contribution_mult = 1
 		country_vassal_naval_capacity_contribution_mult = 0.33
@@ -284,6 +291,7 @@ civic_star_settlers = {
 			}
 		}
 	}
+	description = "civic_tooltip_star_settlers_effects"
 	modifier = {
 		pop_environment_tolerance = 0.05
 		country_starbase_influence_cost_mult = -0.25
@@ -322,6 +330,7 @@ civic_distributism = {
 	random_weight = {
 		base = 5
 	}
+	description = "civic_tooltip_distributism_effects"
 	modifier = {
 		planet_metallurgists_produces_mult = 0.1
 		planet_artisans_produces_mult = 0.1
@@ -351,6 +360,7 @@ civic_martial_brotherhood = {
 			}
 		}
 	}
+	description = "civic_tooltip_martial_brotherhood_effects"
 	modifier = {
 		job_soldier_per_pop = 0.05
 		army_morale = 0.25
@@ -380,6 +390,7 @@ civic_industrial_automatation = {
 			}
 		}
 	}
+	description = "civic_tooltip_industrial_automation_effects"
 	modifier = {
 		BIOLOGICAL_species_trait_points_add = 1
 		ROBOT_species_trait_points_add = 1
@@ -415,8 +426,6 @@ civic_symbiotic_race = {
 		civics = {
 			NOR = {
 				value = civic_fanatic_purifiers
-				# value = civic_agrarian_idyll
-				# value = civic_shared_burden
 				value = civic_slaver_guilds
 				value = civic_slaving_despots
 				value = civic_slave_race
@@ -433,6 +442,7 @@ civic_symbiotic_race = {
 	random_weight = {
 		base = 1		# Should be fairly rare
 	}
+	description = "civic_tooltip_symbiotic_race_effects"
 	modifier = {
 		planet_jobs_society_research_produces_mult = 0.1
 	}
@@ -471,7 +481,7 @@ civic_slave_race = {
 				# value = civic_shared_burden
 				# value = civic_slaver_guilds
 				# value = civic_slaving_despots
-				value = civic_socialistic
+				value = civic_labour_unions
 			}
 		}
 		origin = {
@@ -485,6 +495,7 @@ civic_slave_race = {
 	random_weight = {
 		base = 1		# Should be fairly rare
 	}
+	description = "civic_tooltip_slave_race_effects"
 	modifier = {
 		planet_jobs_slave_produces_mult = 0.1
 	}
@@ -514,6 +525,7 @@ civic_slaving_despots = {
 		civics = {
 			NOR = {
 				value = civic_slaver_guilds
+				value = civic_caste_system
 				value = civic_indentured_assets
 				value = civic_pleasure_seekers
 			}
@@ -522,6 +534,7 @@ civic_slaving_despots = {
 	random_weight = {
 		base = 5
 	}
+	description = "civic_tooltip_slaving_despots_effects"
 	modifier = {
 		planet_jobs_slave_produces_mult = 0.15
 		slave_market_cost_mult = -0.25
@@ -551,12 +564,12 @@ civic_exploration = {
 			}
 		}
 	}
+	description = "civic_tooltip_exploration_effects"
 	modifier = {
 		science_ship_survey_speed = 0.15
 		ship_anomaly_generation_chance_mult = 0.15
 		ship_anomaly_research_speed_mult = 0.25
 		ship_archaeological_site_excavation_speed_mult = 0.25
-		ship_archeaological_site_clues_add = 1
 		station_researchers_produces_mult = 0.15
 		ship_hyperlane_range_add = 1
 		station_researchers_upkeep_mult = 0.15
@@ -587,9 +600,9 @@ civic_spiritual_seekers = {
 			}
 		}
 	}
+	description = "civic_tooltip_spiritual_seekers_effects"
 	modifier = {
-		biological_pop_happiness = 0.05
-		LITHOID_POP_HAPPINESS = 0.05
+		pop_happiness = 0.05
 		category_psionics_research_speed_mult = 1
 		job_transcend_per_pop = 0.04
 		max_rivalries = -2
@@ -619,6 +632,7 @@ civic_enlightment = {
 			}
 		}
 	}
+	description = "civic_tooltip_enlightment_effects"
 	modifier = {
 		country_unity_produces_mult = 0.05
 		country_energy_produces_mult = 0.1
@@ -654,6 +668,7 @@ civic_private_militaries = {
 	random_weight = {
 		base = 5
 	}
+	description = "civic_tooltip_private_militaries_effects"
 	modifier = {
 		job_mercenary_per_pop = 0.03
 		ARMY_STARTING_EXPERIENCE_ADD = 200
@@ -690,6 +705,7 @@ civic_defenders_faith = {
 			}
 		}
 	}
+	description = "civic_tooltip_defenders_faith_effects"
 	modifier = {
 		rivalries_influence_produces_mult = 0.25
 		army_attack_morale_mult = 0.25
@@ -702,7 +718,7 @@ civic_defenders_faith = {
 }
 
 #Caste System
-civic_divine_order = {
+civic_caste_system = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
@@ -722,6 +738,9 @@ civic_divine_order = {
 			NOR = {
 				value = ethic_fanatic_capitalism
 				value = ethic_fanatic_socialism
+			}
+			NOR = {
+				text = civic_tooltip_not_egalitarian
 				value = ethic_egalitarian
 				value = ethic_fanatic_egalitarian
 			}
@@ -730,27 +749,30 @@ civic_divine_order = {
 			NOR = {
 				value = civic_meritocracy
 				value = civic_welfare_state
+				value = civic_slaver_guilds
+				value = civic_slaving_despots
 			}
 		}
 	}
+	description = "civic_tooltip_caste_system_effects"
 	modifier = {
+		job_slave_master_per_pop = 0.04
 		pop_cat_ruler_happiness = 0.05
-		pop_government_ethic_attraction = 0.25
+		pop_cat_ruler_political_power = 0.5
 		planet_jobs_worker_produces_mult = 0.05
-		planet_jobs_slave_produces_mult = 0.05
-		country_pop_enslaved_mult = 0.25
-		pop_demotion_time_mult = 1.5
+		planet_jobs_slave_produces_mult = 0.1
+		slave_market_cost_mult = -0.1
+		country_pop_enslaved_mult = 0.3
+		pop_demotion_time_mult = 1.25
 		country_leader_pool_size = -1
-		num_tech_alternatives_add = -1
-		pop_cat_worker_happiness = -0.1
 	}
 	random_weight = {
 		base = 5
 	}
 }
 
-#Harmonious Hierarchy - icon???
-civic_ultimate_collective = {
+#Harmonious Hierarchy -
+civic_harmonious_hierarchy = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
@@ -758,31 +780,72 @@ civic_ultimate_collective = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_authoritarian
-				value = ethic_authoritarian
-				value = ethic_fanatic_authoritarian
-			}
-			OR = {
 				text = civic_tooltip_socialism
 				value = ethic_socialism
 				value = ethic_fanatic_socialism
 			}
+			NOR = {
+				text = civic_tooltip_not_egalitarian
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+			}
 		}
 		civics = {
-			NOT = {
+			NOR = {
+				value = civic_aristocratic_elite
 				value = civic_police_state
 				value = civic_meritocracy
+				value = civic_genetic_aristocracy
 			}
 		}
 	}
 	random_weight = {
 		base = 5
 	}
+	description = "civic_tooltip_harmonious_hierarchy_effects"
 	modifier = {
 		pop_government_ethic_attraction = 0.33
 		planet_stability_add = 5
 		country_base_influence_produces_add = 0.5
 		country_trade_fee = 0.15
+	}
+}
+
+#Genetic Aristocracy
+civic_genetic_aristocracy = {
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
+	}
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_materialist
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
+			NOR = {
+				value = ethic_fanatic_egalitarian
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_aristocratic_elite
+				value = civic_harmonious_hierarchy
+				value = civic_meritocracy
+			}
+		}
+	}
+	random_weight = { base = @civic_default_random_weight }
+	modifier = {
+		species_leader_exp_gain = 0.6
+		leader_lifespan_add = 5
+		planet_jobs_ruler_produces_mult = 0.05
+		pop_cat_specialist_political_power = -1.5
+		pop_cat_specialist_happiness = -0.05
+		country_leader_pool_size = -1
+		leaders_upkeep_mult = 0.75
+		leader_skill_levels = 1
 	}
 }
 
@@ -799,12 +862,12 @@ civic_political_pluralism = {
 				value = ethic_fanatic_spiritualist
 			}
 		}
-		# authority = {
-		# 	NOR = {
-		# 		text = civic_tooltip_heir
-		# 		inline_script = governments/conditions/auth_imperial
-		# 	}
-		# }
+		 authority = {
+		 	NOR = {
+		 		text = civic_tooltip_not_dictatorship
+		 		inline_script = governments/conditions/auth_dictatorial
+		 	}
+		 }
 		civics = {
 			NOR = {
 				value = civic_merchant_guilds
@@ -833,17 +896,15 @@ civic_political_pluralism = {
 }
 
 #Industrial Democracy
-civic_socialistic = {
+civic_labour_unions = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
+		authority = { OR = { inline_script = governments/conditions/auth_democratic } }
 		ethics = {
-			NOR = {
-				value = ethic_fanatic_capitalism
-				value = ethic_fanatic_authoritarian
-			}
+			NOR = { value = ethic_fanatic_capitalism }
 		}
 		civics = {
 			NOR = {
@@ -857,6 +918,7 @@ civic_socialistic = {
 	}
 	modifier = {
 		pop_cat_worker_happiness = 0.05
+		empire_size_districts_mult = -0.15
 		planet_jobs_worker_produces_mult = 0.1
 		pop_cat_worker_political_power = 2
 	}
@@ -878,8 +940,7 @@ civic_welfare_state = {
 		}
 		civics = {
 			NOR = {
-				value = civic_consumerism
-				value = civic_divine_order
+				value = civic_caste_system
 				value = civic_merchant_guilds
 				value = civic_shared_burden
 				value = civic_slaver_guilds
@@ -889,6 +950,7 @@ civic_welfare_state = {
 	random_weight = {
 		base = 5
 	}
+	description = "civic_tooltip_welfare_state_effects"
 	modifier = {
 		pop_growth_speed = 0.1
 		country_leader_pool_size = 2
@@ -924,6 +986,7 @@ civic_machine_cult = {
 	random_weight = {
 		base = 0
 	}
+	description = "civic_tooltip_machine_cult_effects"
 	modifier = {
 		COUNTRY_SYNTHETIC_TRUST_CAP_ADD = 100
 		planet_pop_assembly_mult = 0.1
@@ -982,8 +1045,41 @@ civic_naval_traditions = {
 	}
 	modifier = {
 		ship_fire_rate_mult = 0.1
-		country_command_limit_add = 20
+		command_limit_add = 20
 		ships_upkeep_mult = -0.1
+	}
+}
+
+civic_chosen_people = {
+	modification = no
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
+	}
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+			OR = {
+				text = civic_tooltip_spiritualist
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	random_weight = { base = 1000 }
+	description = "civic_tooltip_chosen_people_effects"
+	modifier = {
+		country_unity_produces_mult = 0.2
+		pop_citizen_happiness = 0.1
+		ship_home_territory_fire_rate_mult = 0.15
+		pop_purge_speed = 0.5
+		country_insult_efficiency = 0.25
+		envoy_harm_relations_mult = 0.25
+		envoys_add = -1
 	}
 }
 
@@ -1005,6 +1101,7 @@ civic_isolationism = {
 	random_weight = {
 		base = 5
 	}
+	description = "civic_tooltip_isolationism_effects"
 	modifier = {
 		shipclass_starbase_damage_mult = 0.15
 		starbase_defensive_war_ship_build_speed_mult = 1
@@ -1027,15 +1124,16 @@ civic_consumerism = {
 	possible = {
 		ethics = {
 			NOR = {
+				text = civic_tooltip_not_socialism
 				value = ethic_socialism
 				value = ethic_fanatic_socialism
-				value = ethic_fanatic_spiritualist
 			}
+			NOT = { value = ethic_fanatic_spiritualist }
 		}
 		civics = {
 			NOR = {
 				value = civic_environmentalist
-				value = civic_welfare_state
+				value = civic_keepers_harmony
 				value = civic_distributism
 			}
 		}
@@ -1043,6 +1141,7 @@ civic_consumerism = {
 	random_weight = {
 		base = 5
 	}
+	description = "civic_tooltip_consumerism_effects"
 	modifier = {
 		planet_pops_consumer_goods_upkeep_mult = 0.1
 		planet_pops_organics_food_upkeep_mult = 0.1
@@ -1255,6 +1354,7 @@ civic_divine_council = {
 	random_weight = {
 		base = 5
 	}
+	description = "civic_tooltip_divine_council_effects"
 	modifier = {
 		planet_stability_add = 7.5
 		job_high_priest_per_pop = 0.03
@@ -1292,9 +1392,10 @@ civic_military_junta = {
 	random_weight = {
 		base = 5
 	}
+	description = "civic_tooltip_military_junta_effects"
 	modifier = {
 		commander_exp_gain = 0.6
-		job_commandante_per_pop = 0.03
+		job_commandant_per_pop = 0.03
 		leader_commanders_upkeep_mult = 0.15
 	}
 }
@@ -1330,10 +1431,11 @@ civic_science_directorate = {
 	random_weight = {
 		base = 5
 	}
+	description = "civic_tooltip_science_directorate_effects"
 	modifier = {
 		scientist_exp_gain = 0.75
 		job_head_researcher_per_pop = 0.03
-		leader_scientists_upkeep_mult = 0.25
+		leader_scientists_upkeep_mult = 0.2
 	}
 }
 
@@ -1360,6 +1462,7 @@ civic_innovative_economy = {
 	random_weight = {
 		base = 1
 	}
+	description = "civic_tooltip_innovative_economy_effects"
 	modifier = {
 		num_tech_alternatives_add = 1
 		tech_cost_empire_size_mult = -0.25
@@ -1399,7 +1502,7 @@ civic_executive_committee = {
 		base = 5
 	}
 	modifier = {
-		country_edict_cap_add = 1
+		country_edict_fund_add = 25
 		campaigns_cost_mult = -0.25
 		job_supervisor_per_pop = 0.03
 		category_military_theory_research_speed_mult = -0.5
@@ -1441,6 +1544,7 @@ civic_cyber_dictatorship = {
 	random_weight = {
 		base = 5
 	}
+	description = "civic_tooltip_cyber_dictatorship_effects"
 	modifier = {
 		empire_size_penalty_mult = -0.2
 		planet_crime_mult = -0.2
@@ -1466,14 +1570,15 @@ civic_industrial_economy = {
 		civics = {
 			NOR = {
 				value = civic_environmentalist
-				value = civic_mining_guilds
 				value = civic_agrarian_idyll
+				value = civic_keepers_harmony
 			}
 		}
 	}
 	random_weight = {
 		base = 5
 	}
+	description = "civic_tooltip_industrial_economy_effects"
 	modifier = {
 		country_minerals_produces_mult = 0.15
 		planet_max_districts_add = 1
@@ -1506,6 +1611,7 @@ civic_globalism = {
 	random_weight = {
 		base = 5
 	}
+	description = "civic_tooltip_globalism_effects"
 	modifier = {
 		country_trade_attractiveness = 0.5
 		country_trade_fee = -0.05

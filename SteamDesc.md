@@ -36,8 +36,6 @@ This mod should go below any of the mods listed below.
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2920668465]- Civic: Organic Zealots by corsairmarks[/url]
 
-[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2028670202]- Extra Origins by G_S_Palmer[/url]
-
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2806903835]- Government Variety Pack by LittleRaskol[/url]
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=727000451]- More Events Mod by Malthus[/url]
@@ -47,8 +45,6 @@ This mod should go below any of the mods listed below.
 
 [hr][/hr]
 [h1]Patches:[/h1]
-
-[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2464185035]- Expanded Mandates[/url]
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1923444292]- UI Overhaul Dynamic + Ethics and Civics Alternative[/url]
 

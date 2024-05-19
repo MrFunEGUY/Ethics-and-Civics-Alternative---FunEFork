@@ -237,7 +237,7 @@ pasharti = {
 		clothes = 0
 		ruler_title = "PRESCRIPTED_ruler_title_pasharti"
 		trait = "leader_trait_spycraft"
-		leader_class = commander
+		leader_class = official
 	}
 	flags = { necrophage_start_empire }
 }

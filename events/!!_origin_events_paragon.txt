@@ -1,0 +1,291 @@
+#########################
+
+namespace = paragon
+
+country_event = { #Won the civil war
+	id = paragon.5213
+	title = "paragon.5213.name"
+	desc = "paragon.5213.desc"
+	picture = GFX_evt_crisis_defeated
+	show_sound = event_radio_chatter
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = this
+		NOT = { has_country_flag = won_civil_war }
+		has_modifier = paragon_origin_rebel_player
+		OR = {
+			has_global_flag = rebel_empire_killed_@this
+			AND = {
+				exists = from
+				from = { has_country_flag = rebel_empire_@root }
+			}
+		}
+	}
+
+	immediate = {
+		remove_country_flag = main_player_empire_@this
+		remove_global_flag = rebel_empire_killed_@this
+		set_country_flag = won_civil_war
+		set_country_flag = equality_democracy_freedom_achievement
+		remove_modifier = paragon_origin_reformists_empire
+		every_owned_planet = {
+			limit = { has_modifier = paragon_origin_reformists }
+			remove_modifier = paragon_origin_reformists
+		}
+	}
+
+	option = {
+		name = paragon.5213.a
+		trigger = {
+			is_xenophile = yes
+		}
+		add_modifier = {
+			modifier = paragon_origin_rebel_xenophile
+			days = -1
+		}
+	}
+	option = {
+		name = paragon.5213.b
+		trigger = {
+			is_xenophobe = yes
+		}
+		add_modifier = {
+			modifier = paragon_origin_rebel_xenophobe
+			days = -1
+		}
+	}
+	option = {
+		name = paragon.5213.c
+		trigger = {
+			is_militarist = yes
+		}
+		add_modifier = {
+			modifier = paragon_origin_rebel_militarist
+			days = -1
+		}
+	}
+	option = {
+		name = paragon.5213.d
+		trigger = {
+			is_pacifist = yes
+		}
+		add_modifier = {
+			modifier = paragon_origin_rebel_pacifist
+			days = -1
+		}
+	}
+	option = {
+		name = paragon.5213.e
+		trigger = {
+			is_materialist = yes
+		}
+		add_modifier = {
+			modifier = paragon_origin_rebel_materialist
+			days = -1
+		}
+	}
+	option = {
+		name = paragon.5213.f
+		trigger = {
+			is_spiritualist = yes
+		}
+		add_modifier = {
+			modifier = paragon_origin_rebel_spiritualist
+			days = -1
+		}
+	}
+	option = {
+		name = paragon.5213.socialism
+		trigger = {
+			is_socialism = yes
+		}
+		add_modifier = {
+			modifier = paragon_origin_rebel_spiritualist
+			days = -1
+		}
+	}
+	option = {
+		name = paragon.5213.capitalism
+		trigger = {
+			is_capitalism = yes
+		}
+		add_modifier = {
+			modifier = paragon_origin_rebel_spiritualist
+			days = -1
+		}
+	}
+	after = {
+		paragon_origin_gain_modifier = yes
+		hidden_effect = {
+			set_government_cooldown = no
+			remove_modifier = paragon_origin_rebel_player
+		}
+	}
+}
+
+country_event = { #After the Fall - First negotiation batch - with Reformists
+	id = paragon.5210
+	title = "paragon.5210.name"
+	desc = "paragon.5210.desc"
+	picture = GFX_evt_galactic_senate
+	show_sound = event_factions
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = ruler
+		ruler = { has_leader_flag = paragon_origin_legendary_leader }
+	}
+
+	immediate = {
+		set_country_flag = main_player_empire_@this
+	}
+
+	option = {
+		name = paragon.5210.a
+		paragon_origin_reformists_negotiations_effect = yes
+		country_event = {
+			id = paragon.5220 days = 15 random = 30
+		}
+	}
+	option = {
+		name = paragon.5210.b
+		trigger = {
+			NOT = { has_country_flag = took_reformists_side }
+		}
+		country_event = {
+			id = paragon.5221 days = 15 random = 15
+		}
+		custom_tooltip = paragon.5210.b.tt
+	}
+	option = {
+		trigger = {
+			ruler = {
+				check_variable = {
+					which = paragon_origin_delusion_tier
+					value >= 10
+				}
+			}
+		}
+		name = paragon.5210.c
+		hidden_effect = {
+			ruler = {
+				while = {
+					count = 5
+					paragon_origin_gain_delusion = yes
+				}
+			}
+		}
+		country_event = {
+			id = paragon.5222 days = 15 random = 15
+		}
+		custom_tooltip = paragon.5210.c.tt
+	}
+	option = {
+		name = paragon.5210.d
+		trigger = {
+			any_system_within_border = {
+				is_capital_system = no
+				any_system_colony = { has_modifier = paragon_origin_reformists }
+			}
+			NOT = { has_valid_civic = civic_fanatic_purifiers }
+		}
+		hidden_effect = {
+			random_owned_leader = {
+				remove_leader_flag = paragon_origin_legendary_leader
+				limit = { is_ruler = yes }
+				kill_leader = { show_notification = no }
+			}
+		}
+		add_modifier = {
+			modifier = paragon_origin_rebel_player
+			days = -1
+		}
+		set_origin = origin_legendary_leader_death
+		shift_ethic = ethic_fanatic_egalitarian
+		hidden_effect = {
+			paragon_origin_launch_rebelion = yes
+			country_event = {
+				id = paragon.5211 days = 15 random = 15
+			}
+		}
+		if = {
+			limit = { host_has_dlc = "Megacorp" }
+			hidden_effect = {
+				force_remove_civic = 2
+			}
+			change_government = {
+				authority = auth_democratic
+				remove_invalid_civics = yes
+				civics = {
+					civic = civic_idealistic_foundation
+					civic = civic_shared_burden
+				}
+			}
+		}
+		else = {
+			hidden_effect = {
+				force_remove_civic = 2
+			}
+			change_government = {
+				authority = auth_democratic
+				remove_invalid_civics = yes
+				civics = {
+					civic = civic_meritocracy
+					civic = civic_idealistic_foundation
+				}
+			}
+		}
+		set_policy = {
+			policy = war_philosophy
+			option = liberation_wars
+			cooldown = yes
+		}
+		custom_tooltip = paragon.5210.d.tt
+	}
+	option = {
+		name = paragon.5210.e
+		trigger = {
+			any_system_within_border = {
+				is_capital_system = no
+				any_system_colony = { has_modifier = paragon_origin_reformists }
+			}
+			has_valid_civic = civic_fanatic_purifiers
+		}
+		hidden_effect = {
+			random_owned_leader = {
+				remove_leader_flag = paragon_origin_legendary_leader
+				limit = { is_ruler = yes }
+				kill_leader = { show_notification = no }
+			}
+		}
+		add_modifier = {
+			modifier = paragon_origin_rebel_player
+			days = -1
+		}
+		set_origin = origin_legendary_leader_death
+		hidden_effect = {
+			clear_ethos = yes
+			paragon_origin_launch_rebelion = yes
+			force_remove_civic = 3
+			country_event = {
+				id = paragon.5211 days = 15 random = 30
+			}
+		}
+		country_add_ethic = ethic_fanatic_xenophobe
+		country_add_ethic = ethic_fanatic_militarist
+		country_add_ethic = ethic_spiritualist
+		change_government = {
+			authority = auth_democratic
+			remove_invalid_civics = yes
+			civics = {
+				civic = civic_distinguished_admiralty
+				civic = civic_fanatic_purifiers
+				civic = civic_citizen_service
+			}
+		}
+		custom_tooltip = paragon.5210.d.tt
+	}
+}

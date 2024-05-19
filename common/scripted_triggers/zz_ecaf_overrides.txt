@@ -208,3 +208,282 @@ ai_should_build_habitats = {
 	}
 	NOT = { any_neighbor_country = { is_crisis_faction = yes } }
 }
+
+is_specialist_researcher_society = {
+	OR = {
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_biology }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_military_theory }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_new_worlds }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_statecraft }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_archaeostudies }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_psionics }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_good_trading }
+	}
+}
+
+leader_has_empire_ethic = {
+	OR = {
+		AND = {
+			has_ethic = ethic_pacifist
+			owner = { is_pacifist = yes }
+		}
+		AND = {
+			has_ethic = ethic_militarist
+			owner = { is_militarist = yes }
+		}
+		AND = {
+			has_ethic = ethic_xenophile
+			owner = { is_xenophile = yes }
+		}
+		AND = {
+			has_ethic = ethic_xenophobe
+			owner = { is_xenophobe = yes }
+		}
+		AND = {
+			has_ethic = ethic_egalitarian
+			owner = { is_egalitarian = yes }
+		}
+		AND = {
+			has_ethic = ethic_authoritarian
+			owner = { is_authoritarian = yes }
+		}
+		AND = {
+			has_ethic = ethic_spiritualist
+			owner = { is_spiritualist = yes }
+		}
+		AND = {
+			has_ethic = ethic_materialist
+			owner = { is_materialist = yes }
+		}
+		AND = {
+			has_ethic = ethic_socialism
+			owner = { is_socialism = yes }
+		}
+		AND = {
+			has_ethic = ethic_capitalism
+			owner = { is_capitalism = yes }
+		}
+	}
+}
+
+has_opposing_ethics = {
+	OR = {
+		AND = {
+			$COUNTRY1$ = { is_pacifist = yes }
+			$COUNTRY2$ = { is_militarist = yes }
+		}
+		AND = {
+			$COUNTRY1$ = { is_militarist = yes }
+			$COUNTRY2$ = { is_pacifist = yes }
+		}
+		AND = {
+			$COUNTRY1$ = { is_xenophobe = yes }
+			$COUNTRY2$ = { is_xenophile = yes }
+		}
+		AND = {
+			$COUNTRY1$ = { is_xenophile = yes }
+			$COUNTRY2$ = { is_xenophobe = yes }
+		}
+		AND = {
+			$COUNTRY1$ = { is_egalitarian = yes }
+			$COUNTRY2$ = { is_authoritarian = yes }
+		}
+		AND = {
+			$COUNTRY1$ = { is_authoritarian = yes }
+			$COUNTRY2$ = { is_egalitarian = yes }
+		}
+		AND = {
+			$COUNTRY1$ = { is_spiritualist = yes }
+			$COUNTRY2$ = { is_materialist = yes }
+		}
+		AND = {
+			$COUNTRY1$ = { is_materialist = yes }
+			$COUNTRY2$ = { is_spiritualist = yes }
+		}
+		AND = {
+			$COUNTRY1$ = { is_capitalism = yes }
+			$COUNTRY2$ = { is_socialism = yes }
+		}
+		AND = {
+			$COUNTRY1$ = { is_socialism = yes }
+			$COUNTRY2$ = { is_capitalism = yes }
+		}
+	}
+}
+
+has_alternative_ethics = { # Consider THIS_SCOPE as the entity you are checking (e.g. a Pop), and REF_SCOPE as the reference point (e.g. an empire) you're checking against for ethical drift. Note that this trigger ignores directly opposing ethics.
+	OR = {
+		AND = {
+			$THIS_SCOPE$ = {
+				is_pacifist = yes
+			}
+			$REF_SCOPE$ = {
+				is_pacifist = no
+				is_militarist = no
+			}
+		}
+		AND = {
+			$THIS_SCOPE$ = {
+				is_militarist = yes
+			}
+			$REF_SCOPE$ = {
+				is_militarist = no
+				is_pacifist = no
+			}
+		}
+		AND = {
+			$THIS_SCOPE$ = {
+				is_xenophobe = yes
+			}
+			$REF_SCOPE$ = {
+				is_xenophobe = no
+				is_xenophile = no
+			}
+		}
+		AND = {
+			$THIS_SCOPE$ = {
+				is_xenophile = yes
+			}
+			$REF_SCOPE$ = {
+				is_xenophile = no
+				is_xenophobe = no
+			}
+		}
+		AND = {
+			$THIS_SCOPE$ = {
+				is_egalitarian = yes
+			}
+			$REF_SCOPE$ = {
+				is_egalitarian = no
+				is_authoritarian = no
+			}
+		}
+		AND = {
+			$THIS_SCOPE$ = {
+				is_authoritarian = yes
+			}
+			$REF_SCOPE$ = {
+				is_authoritarian = no
+				is_egalitarian = no
+			}
+		}
+		AND = {
+			$THIS_SCOPE$ = {
+				is_spiritualist = yes
+			}
+			$REF_SCOPE$ = {
+				is_spiritualist = no
+				is_materialist = no
+			}
+		}
+		AND = {
+			$THIS_SCOPE$ = {
+				is_materialist = yes
+			}
+			$REF_SCOPE$ = {
+				is_materialist = no
+				is_spiritualist = no
+			}
+		}
+		AND = {
+			$THIS_SCOPE$ = {
+				is_socialism = yes
+			}
+			$REF_SCOPE$ = {
+				is_socialism = no
+				is_capitalism = no
+			}
+		}
+		AND = {
+			$THIS_SCOPE$ = {
+				is_capitalism = yes
+			}
+			$REF_SCOPE$ = {
+				is_capitalism = no
+				is_socialism = no
+			}
+		}
+	}
+}
+
+is_owner_ethic_pop_faction = {
+	switch = {
+		trigger = is_pop_faction_type
+		prosperity = {
+			owner = { is_pacifist = yes }
+		}
+		progressive = {
+			owner = { is_egalitarian = yes }
+		}
+		imperialist = {
+			owner = { is_militarist = yes }
+		}
+		isolationist = {
+			owner = { is_xenophobe = yes }
+		}
+		supremacist = {
+			owner = { is_xenophobe = yes }
+		}
+		technologist = {
+			owner = { is_materialist = yes }
+		}
+		totalitarian = {
+			owner = { is_authoritarian = yes }
+		}
+		traditionalist = {
+			owner = { is_spiritualist = yes }
+		}
+		xenoist = {
+			owner = { is_xenophile = yes }
+		}
+		socialists = {
+			owner = { is_socialism = yes }
+		}
+		bankers = {
+			owner = { is_capitalism = yes }
+		}
+		default = {
+			always = yes
+		}
+	}
+}
+
+has_any_ethic = {
+	OR = {
+		has_ethic = ethic_authoritarian
+		has_ethic = ethic_egalitarian
+		has_ethic = ethic_xenophile
+		has_ethic = ethic_xenophobe
+		has_ethic = ethic_materialist
+		has_ethic = ethic_spiritualist
+		has_ethic = ethic_militarist
+		has_ethic = ethic_pacifist
+		has_ethic = ethic_socialism
+		has_ethic = ethic_capitalism
+	}
+}
+
+subject_socialism_overlord_opposing = {
+	is_socialism = yes
+	overlord = { is_capitalism = yes }
+}
+
+subject_capitalism_overlord_opposing = {
+	is_capitalism = yes
+	overlord = { is_socialism = yes }
+}
+
+subject_overlord_opposing_ethics = {
+	OR = {
+		subject_pacifist_overlord_opposing = yes
+		subject_militarist_overlord_opposing = yes
+		subject_authoritarian_overlord_opposing = yes
+		subject_egalitarian_overlord_opposing = yes
+		subject_materialist_overlord_opposing = yes
+		subject_spiritualist_overlord_opposing = yes
+		subject_xenophile_overlord_opposing = yes
+		subject_xenophobe_overlord_opposing = yes
+		subject_socialism_overlord_opposing = yes
+		subject_capitalism_overlord_opposing = yes
+	}
+}

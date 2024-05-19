@@ -32,7 +32,7 @@ tech_free_market = {
 			factor = 0
 			OR = {
 				is_capitalism = yes
-				has_valid_civic = civic_ultimate_collective
+				has_valid_civic = civic_harmonious_hierarchy
 			}
 		}
 	}
@@ -118,7 +118,7 @@ tech_innovations = {
 		modifier = {
 			factor = 0
 			OR = {
-				has_valid_civic = civic_ultimate_collective
+				has_valid_civic = civic_harmonious_hierarchy
 			}
 		}
 	}
@@ -274,7 +274,7 @@ tech_federal_state = {
 			factor = 0
 			OR = {
 				has_ethic = ethic_fanatic_authoritarian
-				has_valid_civic = civic_ultimate_collective
+				has_valid_civic = civic_harmonious_hierarchy
 			}
 		}
 	}

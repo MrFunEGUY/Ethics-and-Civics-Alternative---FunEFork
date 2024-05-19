@@ -1,0 +1,176 @@
+#################################################
+#												#
+# Machine Age DLC Cyberization Situation Events #
+#												#
+#################################################
+
+namespace = cyber
+
+@cyber_approach_mult = 5
+
+# Fired by: on_cyberization_situation_random_events_list
+situation_event = { # Stage 2 Opportunity
+	id = cyber.220
+	title = "cyber.220.name"
+	desc = "cyber.220.desc"
+	picture = GFX_evt_cyberization_2
+	show_sound = event_administrative_work
+	situation = this
+	is_triggered_only = yes
+
+	trigger = {
+		situation_progress > 250
+	}
+
+	weight_multiplier = {
+		factor = 1
+		modifier = {
+			factor = @cyber_approach_mult
+			current_situation_approach = situation_cyberization_cautious
+		}
+		modifier = {
+			factor = 0
+			has_situation_flag = cyber_220_happened
+		}
+	}
+
+	immediate = {
+		set_situation_flag = situation_cyberization_pause
+		set_situation_flag = cyber_220_happened
+	}
+
+	option = {
+		name = "cyber.220.a"
+		owner = {
+			add_modifier = {
+				modifier = helping_hand
+				days = 720
+			}
+		}
+	}
+	option = {
+		name = "cyber.220.b"
+		owner = {
+			add_modifier = {
+				modifier = armed_forces
+				days = 720
+			}
+		}
+	}
+	option = {
+		name = "cyber.220.c"
+		trigger = {
+			owner = {
+				is_egalitarian = yes
+			}
+		}
+		owner = {
+			add_modifier = {
+				modifier = state_handouts
+				days = 720
+			}
+		}
+	}
+	option = {
+		name = "cyber.220.d"
+		trigger = {
+			owner = {
+				is_megacorp = yes
+			}
+		}
+		owner = {
+			add_modifier = {
+				modifier = branching_out
+				days = 720
+			}
+		}
+	}
+	option = {
+		name = "cyber.220.e"
+		trigger = {
+			owner = {
+				OR = {
+					has_valid_civic = civic_shared_burden
+					has_valid_civic = civic_worker_coop
+				}
+			}
+		}
+		owner = {
+			add_modifier = {
+				modifier = handy_workers
+				days = 720
+			}
+		}
+	}
+	option = {
+		name = "cyber.220.f"
+		trigger = {
+			owner = {
+				OR = {
+					has_valid_civic = civic_dystopian_society
+					has_valid_civic = civic_aristocratic_elite
+				}
+			}
+		}
+		owner = {
+			add_modifier = {
+				modifier = luxury_limbs
+				days = 720
+			}
+		}
+	}
+
+	after = {
+		remove_situation_flag = situation_cyberization_pause
+	}
+}
+
+# Remove old effects before reforming cyber swap government
+# THIS = country
+# Fired by: on_pre_government_changed
+country_event = {
+	id = cyber.30
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = default
+		OR = {
+			AND = {
+				is_democracy = yes
+				has_country_flag = cyber_collectivist
+			}
+			AND = {
+				has_authority = auth_oligarchic
+				has_country_flag = cyber_collectivist
+			}
+			AND = {
+				has_authority = auth_imperial
+				has_country_flag = cyber_individualist
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_authority = auth_oligarchic
+				has_country_flag = cyber_collectivist
+			}
+			every_pop_faction = {
+				limit = {
+					is_faction_extorted = yes
+				}
+				set_faction_extorted = no
+			}
+		}
+		else_if = {
+			limit = {
+				has_authority = auth_imperial
+				has_country_flag = cyber_individualist
+			}
+			remove_relic = r_the_rulerchip
+			remove_modifier = rulerchip_intergenerational_knowledge
+		}
+	}
+}

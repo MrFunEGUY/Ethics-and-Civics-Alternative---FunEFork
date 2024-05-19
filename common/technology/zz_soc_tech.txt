@@ -666,6 +666,13 @@ tech_selected_lineages = {
 			factor = 2
 			has_relic = r_pox_sample
 		}
+		modifier = {
+			factor = 0.5
+			is_individual_machine = yes
+			any_owned_species = {
+				is_organic_species = no
+			}
+		}
 	}
 	ai_weight = {
 		modifier = {
@@ -691,6 +698,7 @@ tech_capacity_boosters = {
 	# Modifiers from this tech is added through a policy-option
 	potential = {
 		is_machine_empire = no
+		is_natural_design_empire = no
 	}
 	weight_modifier = {
 		factor = 0.5
@@ -718,6 +726,13 @@ tech_capacity_boosters = {
 		modifier = {
 			factor = 2
 			has_relic = r_pox_sample
+		}
+		modifier = {
+			factor = 0.5
+			is_individual_machine = yes
+			any_owned_species = {
+				is_organic_species = no
+			}
 		}
 	}
 	ai_weight = {

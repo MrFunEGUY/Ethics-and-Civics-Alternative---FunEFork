@@ -3,6 +3,45 @@
 # If rules here evaluate to true, there might still be other rules that make the action unavailable.
 # If a rule here evaluates to false the action will become unavailable.
 
+# Root = Species
+# From = Country
+# This = Species
+species_has_happiness = {
+	NOR = {
+		AND = {
+			has_trait = trait_machine_unit
+			from = { has_authority = auth_machine_intelligence }
+		}
+		has_trait = trait_hive_mind
+		can_think = no
+		AND = {
+			has_trait = trait_mechanical
+			OR = {
+				NOT = { exists = from }
+				from = { has_authority = auth_machine_intelligence }
+				from = { NOT = { has_technology = tech_synthetic_workers } }
+				from = { has_policy_flag = ai_outlawed }
+			}
+		}
+		AND = {
+			has_trait = trait_cybernetic
+			exists = from
+			from = {
+				OR = {
+					AND = {
+						has_authority = auth_machine_intelligence
+						has_civic = civic_machine_assimilator # Assimilator empire
+					}
+					AND = {
+						is_democracy = yes
+						has_country_flag = cyber_collectivist
+					}
+				}
+			}
+		}
+	}
+}
+
 # This = country
 can_build_branch_offices = {
 	custom_tooltip = {

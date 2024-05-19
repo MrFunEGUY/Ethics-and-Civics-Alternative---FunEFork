@@ -32,7 +32,11 @@ gov_aristocratic_monarchy = {
 	should_force_rename = yes
 	possible = {
 		has_authority = auth_imperial
-		has_valid_civic = civic_aristocratic_elite
+		OR = {
+			has_valid_civic = civic_aristocratic_elite
+			has_valid_civic = civic_genetic_aristocracy
+			has_valid_civic = civic_harmonious_hierarchy
+		}
 	}
 	weight = {
 		base = 300
@@ -44,11 +48,15 @@ gov_aristocratic_republic = {
 	ruler_title_female = RT_PRESIDENT
 	should_force_rename = yes
 	possible = {
-		has_valid_civic = civic_aristocratic_elite
 		OR = {
 			has_authority = auth_democratic
 			has_authority = auth_strict_democratic
 			has_authority = auth_dict_democratic
+		}
+		OR = {
+			has_valid_civic = civic_aristocratic_elite
+			has_valid_civic = civic_genetic_aristocracy
+			has_valid_civic = civic_harmonious_hierarchy
 		}
 	}
 	weight = {
@@ -63,17 +71,24 @@ gov_aristocratic_republic = {
 gov_great_houses = {
 	ruler_title = RT_WARDEN
 	ruler_title_female = RT_WARDEN
+
 	should_force_rename = yes
+
 	possible = {
-		NOT = {
-			has_ethic = ethic_egalitarian
-		}
+		is_primitive = no
 		has_authority = auth_oligarchic
-		has_ethic = ethic_authoritarian
-		has_valid_civic = civic_meritocracy
+		OR = {
+			has_valid_civic = civic_harmonious_hierarchy
+			has_valid_civic = civic_aristocratic_elite
+		}
 	}
+
 	weight = {
-		base = 3000
+		base = 100
+		modifier = {
+			add = 500
+			has_valid_civic = civic_harmonious_hierarchy
+		}
 	}
 }
 
@@ -177,9 +192,10 @@ gov_anarch_capitalism = {
 	ruler_title = RT_CEO
 	ruler_title_female = RT_CEO_FEMALE
 	possible = {
-		has_ethic = ethic_fanatic_capitalism
-		is_megacorp = yes
-		is_egalitarian = yes
+		# has_ethic = ethic_fanatic_capitalism
+		# is_megacorp = yes
+		# is_egalitarian = yes
+		always = no
 	}
 	weight = {
 		base = 5000
@@ -329,7 +345,6 @@ gov_enlighted_socialism = {
 	possible = {
 		OR = {
 			has_authority = auth_dictatorial
-			has_authority = auth_imperial
 			has_authority = auth_dict_democratic
 		}
 		has_ethic = ethic_fanatic_socialism
@@ -380,7 +395,7 @@ gov_peoples_republic = {
 		}
 		modifier = {
 			factor = 5
-			has_valid_civic = civic_socialistic
+			has_valid_civic = civic_labour_unions
 		}
 	}
 }
@@ -410,17 +425,15 @@ gov_genuine_aristocracy = {
 	ruler_title_female = RT_PRINCEPS
 	should_force_rename = yes
 	possible = {
-		has_ethic = ethic_egalitarian
-		has_valid_civic = civic_meritocracy
+		OR = {
+			has_valid_civic = civic_meritocracy
+			has_valid_civic = civic_harmonious_hierarchy
+		}
 		has_authority = auth_oligarchic
 		is_capitalism = no
 	}
 	weight = {
 		base = 3000
-		modifier = {
-			factor = 10
-			has_ethic = ethic_egalitarian
-		}
 	}
 }
 
@@ -453,7 +466,7 @@ gov_peoples_commissariat = {
 		base = 1000
 		modifier = {
 			factor = 10
-			has_valid_civic = civic_socialistic
+			has_valid_civic = civic_labour_unions
 		}
 	}
 }
@@ -484,7 +497,7 @@ gov_benevolent_aristocracy = {
 # 	possible = {
 # 		has_authority = auth_direct_democratic
 # 		has_ethic = ethic_fanatic_socialism
-# 		has_valid_civic = civic_socialistic
+# 		has_valid_civic = civic_labour_unions
 # 	}
 # 	weight = {
 # 		base = 500
@@ -589,17 +602,34 @@ gov_soviet_republic = {
 	should_force_rename = yes
 	possible = {
 		has_valid_civic = civic_shared_burden
-		OR = {
-			has_authority = auth_democratic
-			has_authority = auth_strict_democratic
-			has_authority = auth_dict_democratic
-		}
+		inline_script = governments/conditions/auth_democratic
 	}
 	weight = {
 		base = 1000
 		modifier = {
 			factor = 100
 			has_valid_civic = civic_shared_burden
+		}
+	}
+}
+
+gov_imperial_socialism = {
+	ruler_title = RT_FCITIZEN
+	ruler_title_female = RT_FCITIZEN
+	heir_title = HT_LEGATEE
+	heir_title_female = HT_LEGATEE
+	use_regnal_names = yes
+	dynastic_last_names = yes
+	should_force_rename = yes
+	possible = {
+		is_socialism = yes
+		inline_script = governments/conditions/auth_imperial
+	}
+	weight = {
+		base = 250
+		modifier = {
+			factor = 10
+			has_ethic = ethic_fanatic_socialism
 		}
 	}
 }

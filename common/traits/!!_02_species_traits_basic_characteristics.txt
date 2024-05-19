@@ -15,7 +15,6 @@ trait_perfected_genes = {
 	species_possible_merge_add = {
 		always = no
 	}
-	forced_happiness = no
 
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	ai_weight = {

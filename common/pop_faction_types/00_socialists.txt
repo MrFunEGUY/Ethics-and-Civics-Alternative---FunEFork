@@ -26,13 +26,21 @@ socialists = {
                 	}
                 }
             }
-            unity = @faction_base_unity
+            unity = @faction_base_output
         }
         produces = {
 			trigger = { 
 				FROM = { has_valid_civic = civic_shared_burden }
 			}
-			unity = 0.5
+			unity = @faction_base_output
+		}
+	}
+
+	extortion_resource = {
+		category = pop_factions
+		produces = {
+			food = @faction_base_output
+			mult = @faction_extortion_food_ratio
 		}
 	}
 
@@ -268,8 +276,10 @@ socialists = {
 		unfulfilled_title = "NO_PUBLIC_EDUCATION"
 		desc = "PUBLIC_EDUCATION_DESC"
 		fulfilled_effect = 5
+		unfulfilled_effect = -5
 		potential = {
 			exists = owner
+			owner = { NOT = { has_policy_flag = private_education } }
 		}
 		trigger = {
 			owner = {
@@ -282,7 +292,7 @@ socialists = {
 		title = "NO_PRIVATE_EDUCATION"
 		unfulfilled_title = "PRIVATE_EDUCATION"
 		desc = "NO_PRIVATE_EDUCATION_DESC"
-		unfulfilled_effect = -7
+		unfulfilled_effect = -10
 		potential = {
 			exists = owner
 			owner = {
@@ -293,26 +303,6 @@ socialists = {
 			owner = {
 				NOT = {
 					has_policy_flag = private_education
-				}
-			}
-		}
-	}
-
-	demand = {
-		title = "NO_FREE_MARKET"
-		unfulfilled_title = "FREE_MARKET"
-		desc = "NO_FREE_MARKET_DESC"
-		unfulfilled_effect = -15
-		potential = {
-			exists = owner
-			owner = {
-				has_policy_flag = economic_stance_market
-			}
-		}
-		trigger = {
-			owner = {
-				NOT = {
-					has_policy_flag = economic_stance_market
 				}
 			}
 		}
@@ -340,13 +330,36 @@ socialists = {
 	}
 
 	demand = {
+		title = "NO_FREE_MARKET"
+		unfulfilled_title = "FREE_MARKET"
+		desc = "NO_FREE_MARKET_DESC"
+		unfulfilled_effect = -10
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = economic_stance_market
+			}
+		}
+		trigger = {
+			owner = {
+				NOT = {
+					has_policy_flag = economic_stance_market
+				}
+			}
+		}
+	}
+
+	demand = {
 		title = "PUBLIC_MEDICINE"
 		unfulfilled_title = "NO_PUBLIC_MEDICINE"
 		desc = "PUBLIC_MEDICINE_DESC"
 		fulfilled_effect = 10
-		unfulfilled_effect = -5
+		unfulfilled_effect = -0.001
 		potential = {
 			exists = owner
+			owner = {
+				NOT = { has_policy_flag = private_healthcare }
+			}
 		}
 		trigger = {
 			owner = {
@@ -416,9 +429,7 @@ socialists = {
 				owner = {
 					OR = {
 						is_subject = no
-						NOT = {
-							is_subject_type = dominion
-						}
+						NOT = { any_agreement = { agreement_preset = preset_dominion } }
 					}
 				}
 			}
@@ -588,6 +599,51 @@ socialists = {
 					remove_modifier = suppressed_socialism
 				}
 			}
+			ai_weight = {
+				base = 0
+			}
+		}
+		# Faction Extortion Buttons
+		extort_faction = {
+			title = "EXTORT_FACTION"
+			description = "EXTORT_FACTION_DESC"
+
+			potential = {
+				exists = owner
+				owner = {
+					has_authority = auth_oligarchic
+					has_country_flag = cyber_collectivist
+				}
+				is_faction_extorted = no
+			}
+
+			effect = {
+				set_faction_extorted = yes
+				custom_tooltip = society_research_extortion_tt
+				custom_tooltip = ONLY_ONE_EXTORTED_FACTION_TT
+			}
+
+			ai_weight = {
+				base = 0
+			}
+		}
+		cancel_extort_faction = {
+			title = "CANCEL_EXTORT_FACTION"
+			description = "CANCEL_EXTORT_FACTION_DESC"
+
+			potential = {
+				exists = owner
+				owner = {
+					has_authority = auth_oligarchic
+					has_country_flag = cyber_collectivist
+				}
+				is_faction_extorted = yes
+			}
+
+			effect = {
+				set_faction_extorted = no
+			}
+
 			ai_weight = {
 				base = 0
 			}

@@ -78,7 +78,7 @@ humans1_1 = {
 }
 # Humans with Humanoid ships
 humans2_1 = {
-	name = "EMPIRE_DESIGN_humans2"
+	name = "NAME_Commonwealth_of_Humanity"
 	adjective = "PRESCRIPTED_adjective_humans2"
 	spawn_enabled = no # yes / no / always
 	ignore_portrait_duplication = yes
@@ -260,7 +260,7 @@ plantoid_humans = {
 	room = "personality_spiritual_seekers_room"
 	
 	authority = "auth_democratic"
-	civics = { "civic_environmentalist" "civic_catalytic_processing" "civic_keepers_harmony" }
+	civics = { "civic_environmentalist" "civic_catalytic_processing" "civic_asceticism" }
 	government = gov_moral_democracy
 	
 	ethic = "ethic_pacifist"

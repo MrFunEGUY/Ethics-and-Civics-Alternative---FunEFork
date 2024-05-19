@@ -1,0 +1,144 @@
+namespace = observation
+
+# Societal Shift towards Authoritarian
+country_event = {
+	id = observation.3138
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = primitive
+		NOT = { has_country_flag = indoctrination_cooldown }
+		is_authoritarian = no
+		capital_scope = {
+			has_observation_outpost = yes
+			observation_outpost_owner = { is_authoritarian = yes }
+			any_owned_pop = { is_authoritarian = yes }
+		}
+	}
+
+	weight_multiplier = {
+		factor = 1
+		modifier = {
+			add = value:percent_species_ethic|ETHIC|authoritarian|
+			any_owned_pop = {
+				is_authoritarian = yes
+			}
+		}
+	}
+
+	immediate = {
+		set_timed_country_flag = { flag = indoctrination_cooldown days = 540 }
+		shift_ethic = "ethic_authoritarian"
+		if = {
+			limit = {
+				OR = {
+					is_democracy = yes
+					has_authority = auth_oligarchic
+				}
+			}
+			change_government = { authority = auth_imperial }
+		}
+		capital_scope = {
+			observation_outpost_owner = { country_event = { id = observation.3139 } }
+		}
+	}
+}
+
+# Societal Shift towards Individualist
+country_event = {
+	id = observation.3154
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = primitive
+		NOR = {
+			has_ethic = ethic_fanatic_capitalism
+			has_country_flag = indoctrination_cooldown
+		}
+		capital_scope = {
+			has_observation_outpost = yes
+			observation_outpost_owner = { is_capitalism = yes }
+			any_owned_pop = { has_ethic = ethic_capitalism }
+		}
+	}
+
+	weight_multiplier = {
+		factor = 1
+		modifier = {
+			factor = value:percent_species_ethic|ETHIC|capitalism|
+			any_owned_pop = { is_capitalism = yes }
+		}
+	}
+
+	immediate = {
+		set_timed_country_flag = { flag = indoctrination_cooldown days = 540 }
+		shift_ethic = "ethic_capitalism"
+		capital_scope = {
+			observation_outpost_owner = { country_event = { id = observation.3155 } }
+		}
+	}
+}
+
+country_event = {
+	id = observation.3155
+	title = "observation.3139.name"
+	desc = "observation.3155.desc"
+	picture = GFX_evt_medieval_alien_civilization
+	show_sound = event_pre_ftl_civilization
+	location = from
+	is_triggered_only = yes
+	option = {
+		name = "observation.3139.a"
+	}
+}
+
+# Societal Shift towards Collectivism
+country_event = {
+	id = observation.3156
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = primitive
+		NOR = {
+			has_ethic = ethic_fanatic_socialism
+			has_country_flag = indoctrination_cooldown
+		}
+		capital_scope = {
+			has_observation_outpost = yes
+			observation_outpost_owner = { is_socialism = yes }
+			any_owned_pop = { has_ethic = ethic_socialism }
+		}
+	}
+
+	weight_multiplier = {
+		factor = 1
+		modifier = {
+			factor = value:percent_species_ethic|ETHIC|socialism|
+			any_owned_pop = { is_socialism = yes }
+		}
+	}
+
+	immediate = {
+		set_timed_country_flag = { flag = indoctrination_cooldown days = 540 }
+		shift_ethic = "ethic_socialism"
+		capital_scope = {
+			observation_outpost_owner = { country_event = { id = observation.3157 } }
+		}
+	}
+}
+
+country_event = {
+	id = observation.3157
+	title = "observation.3139.name"
+	desc = "observation.3157.desc"
+	picture = GFX_evt_medieval_alien_civilization
+	show_sound = event_pre_ftl_civilization
+	location = from
+	is_triggered_only = yes
+	option = {
+		name = "observation.3139.a"
+	}
+}

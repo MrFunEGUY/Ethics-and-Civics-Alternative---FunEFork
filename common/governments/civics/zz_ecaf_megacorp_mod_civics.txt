@@ -156,6 +156,7 @@ civic_executive_worship = {
 	}
 	random_weight = { base = 5 }
 	modifier = {
+		official_initial_skill = 2
 		pop_cat_ruler_happiness = 0.20
 	}
 	
@@ -395,7 +396,7 @@ civic_maniac_monopoly = {
 	}
 	modification = no
 	modifier = {
-		starbase_shipyard_build_cost_mult = -0.15
+		starbase_shipyard_build_speed_mult = 0.15
 		country_naval_cap_mult = 0.33
 		branch_office_value_mult = 0.25
 		planet_branch_offices_cost_mult = -0.25

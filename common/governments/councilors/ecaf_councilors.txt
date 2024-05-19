@@ -71,6 +71,9 @@ councilor_state_monopoly = { #Constant
 	modifier = { #Maintains stability and enforces the hierarchy of society
 		pop_cat_worker_political_power = -0.1 #base civic is -.25, at level 8 this councilor eliminates base worker political power and thus cannot join factions
 	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
 councilor_keepers_harmony = { #Greenpope
@@ -87,6 +90,9 @@ councilor_keepers_harmony = { #Greenpope
 		planet_pops_consumer_goods_upkeep_mult = -0.02
 		pop_ethic_spiritualist_attraction_mult = 0.05
 	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
 councilor_asceticism = { #Guru Sramana
@@ -102,6 +108,9 @@ councilor_asceticism = { #Guru Sramana
 	modifier = { #Reduces overall consumption, promotes asceticism
 		planet_pops_consumer_goods_upkeep_mult = -0.01
 		pop_amenities_usage_mult = -0.02
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -120,6 +129,9 @@ councilor_terraforming = { #Terrasculptor
 		deposit_blockers_cost_mult = -0.03
 		terraform_speed_mult = 0.1
 	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
 councilor_evangelism = { #Proselytizer Prime
@@ -136,6 +148,9 @@ councilor_evangelism = { #Proselytizer Prime
 		pop_ethic_spiritualist_attraction_mult = 0.1
 		pop_government_ethic_attraction = 0.03
 	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
 councilor_peacekeepers = { #Peacekeeper-Marshal
@@ -149,6 +164,9 @@ councilor_peacekeepers = { #Peacekeeper-Marshal
 		army_collateral_damage_mult = -0.05
 		country_trust_cap_add = 0.02
 		country_trust_growth = 0.02
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -164,6 +182,9 @@ councilor_xeno_militarist = { #Intelligence Marshal
 		intel_encryption_add = 0.1
 		add_base_country_intel = 1.5
 		planet_crime_mult = -0.02
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -182,6 +203,9 @@ councilor_star_settlers = { #Colonial Administrator
 		pop_resettlement_cost_mult = -0.05
 		empire_size_colonies_mult = -0.02
 	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
 councilor_distributism = { #Televangelist Prime
@@ -198,6 +222,9 @@ councilor_distributism = { #Televangelist Prime
 		pop_ethic_capitalism_attraction_mult = 0.1
 		pop_ethic_spiritualist_attraction_mult = 0.1
 	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
 councilor_martial_brotherhood = { #Military Theorist
@@ -211,6 +238,9 @@ councilor_martial_brotherhood = { #Military Theorist
 		army_experience_gain_mult = 0.02
 		planet_army_build_speed_mult = 0.06
 		category_military_theory_research_speed_mult = 0.1
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -229,6 +259,9 @@ councilor_industrial_automatation = { #Tech Mogul
 		category_computing_research_speed_mult = 0.06
 		category_biology_research_speed_mult = 0.02
 	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
 councilor_symbiotic_race = { #Communications Officer
@@ -243,6 +276,9 @@ councilor_symbiotic_race = { #Communications Officer
 	modifier = { #Improves governing ethic attraction and edicts
 		pop_government_ethic_attraction = 0.05
 		edicts_cost_mult = -0.01
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -259,6 +295,9 @@ councilor_slave_race = { #Slave Overmaster
 		slave_market_cost_mult = -0.01
 		country_pop_enslaved_mult = 0.01
 	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
 councilor_slaving_despots = { #Director of Slavery
@@ -274,6 +313,9 @@ councilor_slaving_despots = { #Director of Slavery
 	modifier = { #Reduces slave costs and enslaves more pops!
 		slave_market_cost_mult = -0.03
 		planet_jobs_slave_produces_mult = 0.01
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -292,6 +334,9 @@ councilor_exploration = { #Adventurer
 		ship_anomaly_generation_chance_mult = 0.05
 		ship_archaeological_site_excavation_speed_mult = 0.03
 	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
 councilor_spiritual_seekers = { #High Seer
@@ -307,6 +352,9 @@ councilor_spiritual_seekers = { #High Seer
 	modifier = { #Reduces unity costs across the board
 		tradition_cost_empire_size_mult = -0.01
 		edicts_unity_cost_mult = -0.01
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -324,6 +372,9 @@ councilor_enlightment = { #Public Moderator
 		faction_approval = 0.02
 		pop_factions_unity_produces_mult = 0.01
 	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
 councilor_private_militaries = { #Big Boss
@@ -336,6 +387,9 @@ councilor_private_militaries = { #Big Boss
 		army_starting_experience_add = 50
 		armies_upkeep_mult = 0.02
 		army_morale = 0.05
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -350,30 +404,63 @@ councilor_defenders_faith = { #Crusader Order Commander
 		army_morale = 0.05
 		army_attack_damage_mult = 0.04
 	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
-councilor_divine_order = { #Registry Bureau Secretary
+councilor_caste_system = { #Registry Bureau Secretary
 	leader_class = { official }
 	is_leader_possible = {
 		leader_class = official
 	}
-	civic = civic_divine_order
+	civic = civic_caste_system
 	modifier = { #Siphons political power from workers and improves productivity. 5% at level 10.
 		pop_cat_worker_political_power = -0.05
 		pop_cat_ruler_political_power = 0.1
 		planet_jobs_produces_mult = 0.005
 	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
-councilor_ultimate_collective = { #Propaganda Media Director
-	leader_class = { official }
+councilor_harmonious_hierarchy = { #Inspector Superior
+	leader_class = { commander scientist }
 	is_leader_possible = {
-		leader_class = official
+		OR = {
+			leader_class = commander
+			leader_class = scientist
+		}
 	}
-	civic = civic_ultimate_collective
-	modifier = { #Improves unity and government ethics attraction
-		planet_jobs_unity_produces_mult = 0.01
-		pop_government_ethic_attraction = 0.05
+	civic = civic_harmonious_hierarchy
+	modifier = { #Increases worker happiness and ruler political power
+		pop_cat_ruler_political_power = 0.1
+		pop_cat_worker_happiness = 0.005
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
+councilor_genetic_aristocracy = { #Genetic Librarian
+	leader_class = { scientist official }
+	is_leader_possible = {
+		OR = {
+			leader_class = scientist
+			leader_class = official
+		}
+	}
+	civic = civic_genetic_aristocracy
+	modifier = { #Increases country leader cap and pool
+		country_leader_cap_add = 1
+		country_leader_pool_size = 0.25
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -391,20 +478,26 @@ councilor_political_pluralism = { #Minister of Elections
 		pop_cat_worker_political_power = 0.5
 		country_election_cost_mult = -0.15
 	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
-councilor_socialistic = { #Union Representative
-	leader_class = { commander scientist }
+councilor_labour_unions = { #Union Representative
+	leader_class = { scientist official }
 	is_leader_possible = {
 		OR = {
-			leader_class = commander
+			leader_class = official
 			leader_class = scientist
 		}
 	}
-	civic = civic_socialistic
+	civic = civic_labour_unions
 	modifier = { #Improves worker political power
 		pop_cat_worker_political_power = 0.15
 		pop_cat_worker_happiness = 0.005
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -420,6 +513,9 @@ councilor_welfare_state = { #Minister of Health and Welfare
 	modifier = { #Improves population growth speed
 		pop_growth_speed = 0.02
 	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
 councilor_machine_cult = { #Mechpope
@@ -433,6 +529,9 @@ councilor_machine_cult = { #Mechpope
 		planet_pops_robotics_upkeep_mult = -0.02
 		pop_cat_robot_servant_happiness = 0.02
 		pop_ethic_spiritualist_attraction_mult = 0.05
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -450,6 +549,9 @@ councilor_military_industry = { #Chief War Inventioneer
 		category_particles_research_speed_mult = 0.05
 		category_military_theory_research_speed_mult = 0.05
 	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
 councilor_naval_traditions = { #Fleet Marshal
@@ -461,6 +563,31 @@ councilor_naval_traditions = { #Fleet Marshal
 	modifier = { #Improves the navy in various ways, primarily experience
 		ship_fire_rate_mult = 0.01
 		ship_experience_gain_mult = 0.05
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
+councilor_chosen_people = { #Purity pope
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = commander
+			leader_class = scientist
+			leader_class = official
+		}
+	}
+	civic = civic_chosen_people
+	modifier = { #Increases xenophobia and spiritualist ethic attraction
+		pop_ethic_xenophobe_attraction_mult = 0.05
+		pop_ethic_spiritualist_attraction_mult = 0.05
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -479,6 +606,9 @@ councilor_isolationism = { #National Security Director
 		envoys_add = 0.5
 		intel_encryption_add = 0.5
 	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
 councilor_consumerism = { #CMO (chief marketing officer)
@@ -495,6 +625,9 @@ councilor_consumerism = { #CMO (chief marketing officer)
 		planet_jobs_unity_produces_mult = 0.01
 		pop_ethic_capitalism_attraction_mult = 0.05
 	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
 councilor_military_dictatorship = { #Upstart
@@ -509,6 +642,9 @@ councilor_military_dictatorship = { #Upstart
 		army_disengage_chance_mult = -0.03
 		army_collateral_damage_mult = 0.1
 		army_damage_mult = 0.05
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -526,6 +662,9 @@ councilor_peaceful_republic = { #Social Theorist
 		category_statecraft_research_speed_mult = 0.03
 		category_new_worlds_research_speed_mult = 0.03
 	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
 councilor_spiritual_democracy = { #Popular Pope
@@ -542,8 +681,11 @@ councilor_spiritual_democracy = { #Popular Pope
 		pop_ethic_egalitarian_attraction_mult = 0.04
 		pop_ethic_spiritualist_attraction_mult = 0.04
 		planet_jobs_unity_produces_mult = 0.01
-		planet_districts_unity_produces_mult = 0.01
-		planet_buildings_unity_produces_mult = 0.01
+		#planet_districts_unity_produces_mult = 0.01
+		planet_buildings_unity_produces_mult = 0.03
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -557,6 +699,9 @@ councilor_cyber_demos_cratos = { #Cybersecurity Overseer
 		category_computing_research_speed_mult = 0.05
 		planet_crime_mult = -0.01
 		intel_encryption_add = 0.1
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -573,6 +718,9 @@ councilor_divine_council = { #Council Representative (Camerlengo)
 	modifier = { #Reduces edict costs across the board
 		edicts_cost_mult = -0.02
 	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
 councilor_military_junta = { #Militia Marshal
@@ -585,6 +733,9 @@ councilor_military_junta = { #Militia Marshal
 		job_soldier_per_pop = 0.001
 		job_enforcer_per_pop = 0.001
 		armies_upkeep_mult = -0.01
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -599,6 +750,9 @@ councilor_science_directorate = { #Representative of the Directorate
 		all_technology_research_speed = 0.01
 		planet_researchers_upkeep_mult = 0.02
 	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
 councilor_innovative_economy = { #Cooperative Representative
@@ -610,6 +764,9 @@ councilor_innovative_economy = { #Cooperative Representative
 	modifier = { #Considerably increases scientist pay and technology research
 		all_technology_research_speed = 0.01
 		planet_researchers_upkeep_mult = 0.04
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -627,6 +784,9 @@ councilor_executive_committee = { #Forum Speaker
 		tradition_cost_empire_size_mult = -0.01
 		leader_upkeep_empire_size_mult = 0.01
 	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
 councilor_cyber_dictatorship = { #Head of AI Development
@@ -639,6 +799,9 @@ councilor_cyber_dictatorship = { #Head of AI Development
 		empire_size_pops_mult = -0.01
 		empire_size_colonies_mult = -0.01
 		category_computing_research_speed_mult = 0.03
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -655,6 +818,9 @@ councilor_industrial_economy = { #Automation overseer
 		country_engineering_tech_research_speed = 0.05
 		planet_pop_assembly_mult = 0.02
 	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
 councilor_globalism = { #Commission Chairman
@@ -665,6 +831,9 @@ councilor_globalism = { #Commission Chairman
 	civic = civic_globalism
 	modifier = { #Reduces overall trade fee
 		country_trade_fee = -0.003 #3% at level 10, 6% at level 20
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -682,6 +851,9 @@ councilor_in_perfect = { #Elder
 		planet_jobs_unity_produces_mult = 0.01
 		pop_government_ethic_attraction = 0.02
 	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
 councilor_stratocracy = { #Internal Security Director
@@ -695,7 +867,10 @@ councilor_stratocracy = { #Internal Security Director
 	civic = civic_stratocracy
 	modifier = { #Reduces crime across the board and improves enforcer unity
 		planet_crime_mult = -0.01
-		planet_enforcers_unity_produces_mult = 0.05
+		planet_enforcers_unity_produces_add = 2
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -708,6 +883,9 @@ councilor_bureaucracy = { #Enlightened Bureau Administrator
 	modifier = { #Reduces colony empire size penalty and improves attraction to enlightened ways
 		empire_size_colonies_mult = -0.01
 		pop_ethic_pacifist_attraction_mult = 0.04
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -738,9 +916,11 @@ councilor_uncivil_defence_contractor = { #Director of Government Affairs
 	civic = civic_uncivil_defence_contractor
 	modifier = {
 		envoy_exp_gain = 0.15
-		envoys_add = 0.5
+		envoys_add = 1
 		envoy_improve_relations_mult = 0.05
-		diplo_weight_envoys_mult = 0.02
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -758,5 +938,8 @@ councilor_uncivil_mercenary_company = { #Chief Aquisitions Officer
 		army_attack_damage_mult = 0.04
 		army_defense_damage_mult = 0.02
 		planet_jobs_alloys_produces_mult = 0.01 #Since no military goods, alloys as placeholder. Will change if the game gets an army update
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }

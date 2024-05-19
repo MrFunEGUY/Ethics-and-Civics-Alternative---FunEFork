@@ -67,7 +67,6 @@ event = {
 					is_fallen_empire = no
 					has_authority = auth_corporate
 					is_capitalism = no
-					is_materialist = no
 				}
 				shift_ethic = ethic_capitalism
 				change_government = {
@@ -76,6 +75,22 @@ event = {
 					remove_invalid_civics = yes
 				}
 			}
+		}
+	}
+}
+
+country_event = {
+	id = ethic_rebuid_government_fix.2000
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		civics_count < 5
+	}
+
+	immediate = {
+		change_government = {
+			civics = { civic = random }
 		}
 	}
 }

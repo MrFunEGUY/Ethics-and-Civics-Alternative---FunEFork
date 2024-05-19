@@ -80,6 +80,24 @@ high_priest = {
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_councilor = { COUNCILOR = "councilor_dimensional_worship_corporate" } }
+		}
+		trade_value_add = @councilor_dimensional_worship_priest_trade_value
+		mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_trade_mult|TYPE|councilor_dimensional_worship_corporate|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_machine_cult }
+		}
+		planet_jobs_engineering_research_produces_mult = 0.03
+		planet_jobs_robotic_produces_mult = 0.02
+	}
+
 	inline_script = "jobs/pd_priest_outputs" # Planetary Diversity
 
 	weight = {
@@ -108,6 +126,8 @@ high_priest = {
 			}
 		}
 	}
+
+	inline_script = "jobs/automodding_priority_unity"
 }
 
 politician = {
@@ -186,6 +206,8 @@ politician = {
 			}
 		}
 	}
+
+	inline_script = "jobs/automodding_priority_unity"
 }
 
 noble = {
@@ -212,6 +234,13 @@ noble = {
 		upkeep = {
 			consumer_goods = 2
 		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_harmonious_hierarchy }
+			}
+			unity = 1
+		}
 	}
 
 	planet_modifier = {
@@ -237,6 +266,31 @@ noble = {
 		}
 		planet_amenities_add = 3
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { OR = { has_valid_civic = civic_harmonious_hierarchy } }
+		}
+		planet_stability_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { OR = { has_valid_civic = civic_harmonious_hierarchy } }
+		}
+		planet_amenities_add = 5
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_harmonious_hierarchy }
+		}
+		empire_size_pops_mult = -0.001
 	}
 
 	weight = {
@@ -272,6 +326,8 @@ noble = {
 			}
 		}
 	}
+
+	inline_script = "jobs/automodding_priority_unity"
 }
 
 merchant = {
@@ -329,6 +385,16 @@ merchant = {
 		mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_trade_mult|TYPE|councilor_bancorp|
 	}							########################################## megacorp_mod end
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_augmentation_bazaars }
+		}
+		trade_value_mult = 0.01
+		pop_growth_speed = 0.005
+		mult = value:num_cyborg_traits_species
+	}
+
 	weight = {
 		weight = @ruler_job_weight
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
@@ -357,4 +423,6 @@ merchant = {
 			}
 		}
 	}
+
+	inline_script = "jobs/automodding_priority_unity"
 }

@@ -888,7 +888,7 @@ wg_scion = {
 					preset = preset_scion
 				}
 			}
-			
+
 			if = {
 				limit = {
 					root = { is_megacorp = yes }

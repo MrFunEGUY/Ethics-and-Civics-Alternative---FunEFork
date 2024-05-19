@@ -1,0 +1,75 @@
+############################
+#
+# Subject Events
+#
+# Written by Joachim Holmsen
+#
+############################
+
+namespace = subject
+
+### General 3001 - 4000
+## Event Chain - Overlord Tourist Disagreements
+country_event = { # HIDDEN - Find a relevant subject for the event chain
+	id = subject.3001
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = cooldown_spiritualist_specialist_event_chain_1_overlord }
+		is_overlord = yes
+		is_gestalt = no
+		any_subject = {
+			NOT = { has_country_flag = cooldown_spiritualist_specialist_event_chain_1_subject }
+			is_specialist_subject = yes
+			is_spiritualist = yes
+			is_gestalt = no
+			OR = {
+				is_xenophobe = yes
+				overlord = { is_xenophobe = yes }
+				subject_pacifist_overlord_opposing = yes
+				subject_militarist_overlord_opposing = yes
+				subject_authoritarian_overlord_opposing = yes
+				subject_egalitarian_overlord_opposing = yes
+				subject_materialist_overlord_opposing = yes
+				subject_spiritualist_overlord_opposing = yes
+				subject_socialism_overlord_opposing = yes
+				subject_capitalism_overlord_opposing = yes
+			}
+		}
+	}
+
+	immediate = {
+		save_event_target_as = overlord_empire
+		set_timed_country_flag = {
+			flag = cooldown_spiritualist_specialist_event_chain_1_overlord
+			days = 10800
+		}
+		random_subject = {
+			limit = {
+				NOT = { has_country_flag = cooldown_spiritualist_specialist_event_chain_1_subject }
+				is_specialist_subject = yes
+				is_spiritualist = yes
+				is_gestalt = no
+				OR = {
+					is_xenophobe = yes
+					overlord = { is_xenophobe = yes }
+					subject_pacifist_overlord_opposing = yes
+					subject_militarist_overlord_opposing = yes
+					subject_authoritarian_overlord_opposing = yes
+					subject_egalitarian_overlord_opposing = yes
+					subject_materialist_overlord_opposing = yes
+					subject_spiritualist_overlord_opposing = yes
+					subject_socialism_overlord_opposing = yes
+					subject_capitalism_overlord_opposing = yes
+				}
+			}
+			set_country_flag = cooldown_spiritualist_specialist_event_chain_1_subject
+			save_event_target_as = subject_empire
+			country_event = {
+				id = subject.3005
+			}
+		}
+	}
+}

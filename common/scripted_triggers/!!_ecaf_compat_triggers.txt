@@ -21,44 +21,18 @@ is_pd_gaia = {
 
 ##########
 
-has_civic_organic_zealots_active = {
-	optimize_memory
-	always = no
-}
+has_civic_organic_zealots_active = { always = no }
 
-has_planetary_diversity_arcologies = {
-	optimize_memory
-	always = no
-}
+has_planetary_diversity_arcologies = { always = no }
 
-am_civics_is_active = {
-	optimize_memory
-	always = no
-}
+am_civics_is_active = { always = no }
 
-has_megacorp_mod_active = {
-	optimize_memory
-	always = no
-}
+has_megacorp_mod_active = { always = no }
 
-lrsk_gvp_is_active = {
-	optimize_memory
-	always = no
-}
+lrsk_gvp_is_active = { always = no }
 
-has_planetary_diversity = {
-	optimize_memory
-	always = no
-}
+has_planetary_diversity = { always = no }
 
-is_pd_habitat = {
-	optimize_memory
-	always = no
-}
+is_pd_habitat = { always = no }
 
-#####
-
-does_not_have_extra_origins = {
-	optimize_memory
-	always = yes
-}
+is_symbiote_of_prev = { always = no }

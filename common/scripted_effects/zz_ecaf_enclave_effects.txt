@@ -1,0 +1,51 @@
+######################
+# "Overlord" Enclaves
+######################
+
+#NB: Mercenary enclaves are created after galaxy start, and not as part of system initialisers.
+
+#Fleet scope | owner = original empire
+create_mercenary_enclave_country = {
+	create_country = {
+		name = random
+		type = enclave_mercenary
+		authority = "auth_oligarchic"
+		civics = {
+			civic = civic_mercenary_enclave
+		}
+		origin = "origin_default"
+		species = event_target:mercenary_enclave_species
+		flag = random
+		randomize_ethos = yes
+		ethos = {
+			ethic = ethic_fanatic_militarist
+			ethic = $INHERITED_ETHIC$
+		}
+		ignore_initial_colony_error = yes
+		effect = {
+			save_event_target_as = mercenary_enclave_country
+			set_country_flag = mercenary_enclave_country
+			set_graphical_culture = root.owner
+			create_fleet = {
+				settings = { spawn_debris = no }
+				effect = {
+					set_owner = prev
+					create_ship = {
+						name = random
+						design = "NAME_Mercenary_Enclave_Station"
+						graphical_culture = reptilian_01
+					}
+					set_location = {
+						target = event_target:mercenary_enclave_planet
+						distance = 90
+					}
+					save_event_target_as = mercenary_enclave_station
+				}
+			}
+			set_custom_capital_location = event_target:mercenary_enclave_planet
+			#Create ruler
+			set_leader = event_target:mercenary_enclave_leader
+			establish_communications_no_message = root.from
+		}
+	}
+}

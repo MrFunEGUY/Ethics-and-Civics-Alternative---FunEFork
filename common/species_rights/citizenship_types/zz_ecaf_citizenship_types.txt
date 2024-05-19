@@ -7,10 +7,6 @@ citizenship_full = {
 	potential = {
 		exists = from
 		NOT = { from = { has_authority = auth_machine_intelligence } }
-		NOR = {
-			has_trait = trait_machine_unit
-			is_shackled_robot_species_rights = yes
-		}
 	}
 
 	triggered_pop_modifier = {
@@ -43,10 +39,10 @@ citizenship_full = {
 			fail_text = "lonely_hive_mind_pops_kill_themselves_citizenship"
 			is_lonely_hive_mind_pop = no
 		}
-		custom_tooltip = {
-			fail_text = "disconnected_machine_pops_kill_themselves_citizenship"
-			is_disconnected_machine_pop = no
-		}
+		#custom_tooltip = {
+		#	fail_text = "disconnected_machine_pops_kill_themselves_citizenship"
+		#	is_disconnected_machine_pop = no
+		#}
 		custom_tooltip = {
 			fail_text = "HIVE_MIND_SPECIES_CITIZENS_ONLY"
 			OR = {
@@ -66,19 +62,27 @@ citizenship_full = {
 		}
 		custom_tooltip = {
 			fail_text = too_alien
-			OR = {
-				is_same_species = from
-				from = {
-					AND = {
-						has_valid_civic = civic_selective_kinship
-						is_same_species_class = root
+			if = {
+				limit = {
+					from = {
+						NOT = { has_origin = origin_synthetic_fertility }
 					}
+					has_trait = trait_mechanical
 				}
-				from = {
-					is_xenophobe = no
-				}
-				from.owner_species = { # Extra Origins
-					is_symbiote_of_prev = yes
+				OR = {
+					is_same_species = from
+					from = {
+						AND = {
+							has_valid_civic = civic_selective_kinship
+							is_same_species_class = root
+						}
+					}
+					from = {
+						is_xenophobe = no
+					}
+					from.owner_species = { # Extra Origins
+						is_symbiote_of_prev = yes
+					}
 				}
 			}
 		}
@@ -124,15 +128,23 @@ citizenship_limited = {
 	}
 
 	potential = {
-		exists = from
-		from = {
-			NOR = {
-				is_hive_empire = yes
-				is_machine_empire = yes
+		OR = {
+			is_sapient = no
+			AND = {
+				exists = from
+				from = {
+					NOR = {
+						is_hive_empire = yes
+						is_machine_empire = yes
+					}
+				}
 			}
 		}
 		NOR = {
-			has_trait = trait_machine_unit
+			AND = {
+				from = { is_individual_machine = no }
+				has_trait = trait_machine_unit
+			}
 			is_shackled_robot_species_rights = yes
 		}
 	}
@@ -153,7 +165,10 @@ citizenship_limited = {
 		custom_tooltip = {
 			fail_text = "HIVE_MIND_SPECIES_CITIZENS_ONLY"
 			OR = {
-				from = { is_hive_empire = no }
+				OR = {
+					from = { is_hive_empire = no }
+					from = { has_valid_civic = civic_hive_guided_sapience }
+				}
 				has_trait = trait_hive_mind
 			}
 		}
@@ -254,6 +269,13 @@ citizenship_slavery = {
 		NAND = {
 			exists = this
 			OR = {
+				AND = {
+					from = { is_individual_machine = yes }
+					OR = {
+						has_trait = trait_machine_unit
+						has_trait = trait_mechanical
+					}
+				}
 				has_trait = trait_machine_unit
 				has_trait = trait_mechanical
 			}

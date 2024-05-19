@@ -14,6 +14,7 @@ tech_droid_workers = {
 
 	potential = {
 		is_gestalt = no
+		is_individual_machine = no
 	}
 
 	weight_modifier = {
@@ -22,13 +23,13 @@ tech_droid_workers = {
 			has_valid_civic = civic_machine_cult
 		}
 		modifier = {
-			factor = 0
-			has_policy_flag = robots_outlawed
-		}
-		modifier = {
 			factor = 0.5
 			is_spiritualist = yes
 			NOT = { has_valid_civic = civic_machine_cult }
+		}
+		modifier = {
+			factor = 0
+			has_policy_flag = robots_outlawed
 		}
 		modifier = {
 			factor = 2
@@ -57,6 +58,10 @@ tech_droid_workers = {
 			factor = 2
 			has_origin = origin_mechanists
 		}
+		modifier = {
+			factor = 1000
+			has_origin = origin_synthetic_fertility
+		}
 	}
 }
 
@@ -81,6 +86,7 @@ tech_synthetic_workers = {
 
 	potential = {
 		is_gestalt = no
+		is_individual_machine = no
 	}
 
 	weight_modifier = {
@@ -90,13 +96,13 @@ tech_synthetic_workers = {
 			has_valid_civic = civic_machine_cult
 		}
 		modifier = {
-			factor = 0
-			has_policy_flag = robots_outlawed
-		}
-		modifier = {
 			factor = 0.5
 			is_spiritualist = yes
 			NOT = { has_valid_civic = civic_machine_cult }
+		}
+		modifier = {
+			factor = 0
+			has_policy_flag = robots_outlawed
 		}
 		modifier = {
 			factor = 2
@@ -140,6 +146,69 @@ tech_synthetic_workers = {
 		modifier = {
 			factor = 2
 			has_origin = origin_mechanists
+		}
+		modifier = {
+			factor = 1000
+			has_origin = origin_synthetic_fertility
+		}
+	}
+}
+
+#Synthetic Personality Matrix
+tech_synthetic_leaders = {
+	cost = @tier4cost3
+	area = engineering
+	tier = 4
+	category = { industry }
+	prerequisites = { "tech_synthetic_workers" }
+	weight = @tier4weight3
+
+	feature_flags = { robot_leaders }
+
+	## unlocks robot-leaders
+
+	potential = {
+		NOR = {
+			has_ethic = "ethic_gestalt_consciousness"
+			is_individual_machine = yes
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			has_valid_civic = civic_machine_cult
+		}
+		modifier = {
+			factor = 0.5
+			is_spiritualist = yes
+			NOT = { has_valid_civic = civic_machine_cult }
+		}
+		modifier = {
+			factor = 0
+			has_policy_flag = robots_outlawed
+		}
+		modifier = {
+			factor = 0
+			has_policy_flag = ai_outlawed
+		}
+
+		modifier = {
+			factor = 0.33
+			has_origin = origin_necrophage
+			has_trait = trait_necrophage
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOT = { has_ai_personality_behaviour = robot_exploiter }
+			NOT = { has_ai_personality_behaviour = robot_liberator }
+		}
+		modifier = {
+			factor = 2
+			is_materialist = yes
 		}
 	}
 }

@@ -1,0 +1,135 @@
+#Country scope. Get an opposing group of lobbyists in the Galcom
+defined_text = {
+	name = GetOppositionGalcomLobbyists
+	text = {
+		trigger = {
+			is_xenophile = yes
+		}
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 2
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		localization_key = galcom_movement_xenophobe
+	}
+	text = {
+		trigger = {
+			is_xenophobe = yes
+		}
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 2
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		localization_key = galcom_movement_xenophile
+	}
+	text = {
+		trigger = {
+			is_pacifist = yes
+		}
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 2
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+		localization_key = galcom_movement_militarist
+	}
+	text = {
+		trigger = {
+			is_militarist = yes
+		}
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 2
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		localization_key = galcom_movement_pacifist
+	}
+	text = {
+		trigger = {
+			is_authoritarian = yes
+		}
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 2
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		localization_key = galcom_movement_egalitarian
+	}
+	text = {
+		trigger = {
+			is_egalitarian = yes
+		}
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 2
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+		localization_key = galcom_movement_authoritarian
+	}
+	text = {
+		trigger = {
+			is_materialist = yes
+		}
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 2
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		localization_key = galcom_movement_spiritualist
+	}
+	text = {
+		trigger = {
+			is_spiritualist = yes
+		}
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 2
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		localization_key = galcom_movement_materialist
+	}
+	text = {
+		trigger = {
+			is_socialism = yes
+		}
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 2
+				has_ethic = ethic_fanatic_socialism
+			}
+		}
+		localization_key = galcom_movement_socialism
+	}
+
+	text = {
+		trigger = {
+			is_capitalism = yes
+		}
+		weight = {
+			weight = 1
+			modifier = {
+				factor = 2
+				has_ethic = ethic_fanatic_capitalism
+			}
+		}
+		localization_key = galcom_movement_capitalism
+	}
+}

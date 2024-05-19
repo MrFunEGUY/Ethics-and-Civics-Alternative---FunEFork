@@ -1330,8 +1330,8 @@ techno_priest = {
 #### Ruler Jobs
 ###################
 
-# Commandante - Militarist
-commandante = {
+# commandant - Militarist
+commandant = {
 	category = ruler
 	condition_string = RULER_JOB_TRIGGER
 	building_icon = building_stronghold
@@ -1407,7 +1407,7 @@ commandante = {
 		}
 		modifier = {
 			factor = 5
-			has_job = commandante
+			has_job = commandant
 		}
 		modifier = {
 			factor = 1.2
@@ -1602,8 +1602,8 @@ mogul = {
 	}
 }
 
-# Commisar - Socialist
-commisar = {
+# commissar - Socialist
+commissar = {
 	category = ruler
 	condition_string = RULER_JOB_TRIGGER
 	building_icon = building_stronghold
