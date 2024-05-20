@@ -307,6 +307,7 @@ is_aristocracy = {
 			has_government = gov_noble_aristocracy
 			has_government = gov_benevolent_aristocracy
 			has_government = gov_oligarchic_republic
+			has_government = gov_genuine_aristocracy
 			# Government Variety Pack
 			has_government = lrsk_gov_var_gov_noble_empire
 			has_government = lrsk_gov_var_gov_noble_republic
