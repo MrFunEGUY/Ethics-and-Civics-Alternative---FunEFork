@@ -29,6 +29,8 @@ l_simp_chinese:
  paragon.5213.socialism: "We will take care of each other."
  paragon.5213.capitalism: "We must seek new opportunities."
 
+ mod_ship_military_alloys_cost_mult: "Military Ship Alloy Cost"
+
  01_INSULT_PROPOSE_IND_COL: "你这野蛮、残暴的政权终有一天会覆灭，会有算总账的时候。"
  02_INSULT_PROPOSE_IND_COL: "你考虑哪怕过一次让你的国民自己思考他们的福祉么？如果你担心那会导致[Root.GetName]的覆灭……那么你还真猜对了。"
  03_INSULT_PROPOSE_IND_COL: "像[Root.GetName]这样的极权政权居然能够存在，这是多么令人痛彻心扉的一件事情。"
@@ -2409,8 +2411,11 @@ l_simp_chinese:
  ###############
 
  ecaf_crew: "Crew"
- ecaf_crew_desc: "The brave crew that make up our naval personnel; they're the true backbone of our military strength."
+ ecaf_crew_desc: "The brave crew that make up our military personnel; they're the true backbone of our military strength."
  mod_country_resource_max_ecaf_crew_add: "Empire $crew$ Capacity"
+ ecaf_crew_deficit: "$ecaf_crew$ Shortage"
+
+
  
  auth_dict_democratic: "Democratic Autocracy"
  auth_dict_democratic_desc: "Democratic Autocracies are ruled by a single, democratically-elected, individual that wields absolute control over the state until their death."
@@ -2528,7 +2533,7 @@ l_simp_chinese:
  concept_diplocracy_government_desc: "Diplomatic Governments are §YFanatically Xenophilic§! governments that replace some §Y$job_politician_plural_with_icon$§! or §Y$job_executive_plural_with_icon$§! with £job_ambassador£ §Y$job_ambassador_plural$§!"
 
  concept_aristocracy_government: "Aristocratic Government"
- concept_aristocracy_government_desc: "Aristocratic Governments are replace some §Y$job_politician_plural_with_icon$§! or §Y$job_executive_plural_with_icon$§! with £job_noble£ §Y$job_noble_plural$§!"
+ concept_aristocracy_government_desc: "Aristocratic Governments replace some §Y$job_politician_plural_with_icon$§! or §Y$job_executive_plural_with_icon$§! with £job_noble£ §Y$job_noble_plural$§!"
 
  theocracy_gov_reg_loc: "\n\n['concept_theocracy_government']:§!\n§TWith £ethic_fanatic_spiritualist£ §Y$ethic_fanatic_spiritualist$§!, £building£ §YCapital Buildings§! replace some §Y$job_politician_plural_with_icon$§! with £job_high_priest£ §Y$job_high_priest_plural$§!\n$job_high_priest_effect_desc$§!"
  theocracy_gov_corp_loc: "\n\n['concept_theocracy_government']:§!\n§TWith £ethic_fanatic_spiritualist£ §Y$ethic_fanatic_spiritualist$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_high_priest£ §Y$job_high_priest_plural$§!\n$job_high_priest_effect_desc$§!"

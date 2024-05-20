@@ -29,6 +29,8 @@ l_russian:
  paragon.5213.socialism: "We will take care of each other."
  paragon.5213.capitalism: "We must seek new opportunities."
 
+ mod_ship_military_alloys_cost_mult: "Military Ship Alloy Cost"
+
  01_INSULT_PROPOSE_IND_COL: "Ваш жестокий, тиранический режим в конце концов упадет, и придет расплата."
  02_INSULT_PROPOSE_IND_COL: "Вы когда-нибудь рассматривали мысль о том, чтобы позволить вашим гражданам думать за себя? Если вы испугались, что это привело бы к концу [Root.GetName] ... то вы абсолютно правы."
  03_INSULT_PROPOSE_IND_COL: "Как печально, что авторитарные нации, такие как [Root.GetName] могут существовать. Это позор для всех живых существ в галактике."
@@ -3798,8 +3800,11 @@ l_russian:
  ###############
 
  ecaf_crew: "Crew"
- ecaf_crew_desc: "The brave crew that make up our naval personnel; they're the true backbone of our military strength."
+ ecaf_crew_desc: "The brave crew that make up our military personnel; they're the true backbone of our military strength."
  mod_country_resource_max_ecaf_crew_add: "Empire $crew$ Capacity"
+ ecaf_crew_deficit: "$ecaf_crew$ Shortage"
+
+
  
  auth_dict_democratic: "Democratic Autocracy"
  auth_dict_democratic_desc: "Democratic Autocracies are ruled by a single, democratically-elected, individual that wields absolute control over the state until their death."
@@ -3918,7 +3923,7 @@ l_russian:
  concept_diplocracy_government_desc: "Diplomatic Governments are §YFanatically Xenophilic§! governments that replace some §Y$job_politician_plural_with_icon$§! or §Y$job_executive_plural_with_icon$§! with £job_ambassador£ §Y$job_ambassador_plural$§!"
 
  concept_aristocracy_government: "Aristocratic Government"
- concept_aristocracy_government_desc: "Aristocratic Governments are replace some §Y$job_politician_plural_with_icon$§! or §Y$job_executive_plural_with_icon$§! with £job_noble£ §Y$job_noble_plural$§!"
+ concept_aristocracy_government_desc: "Aristocratic Governments replace some §Y$job_politician_plural_with_icon$§! or §Y$job_executive_plural_with_icon$§! with £job_noble£ §Y$job_noble_plural$§!"
 
  theocracy_gov_reg_loc: "\n\n['concept_theocracy_government']:§!\n§TWith £ethic_fanatic_spiritualist£ §Y$ethic_fanatic_spiritualist$§!, £building£ §YCapital Buildings§! replace some §Y$job_politician_plural_with_icon$§! with £job_high_priest£ §Y$job_high_priest_plural$§!\n$job_high_priest_effect_desc$§!"
  theocracy_gov_corp_loc: "\n\n['concept_theocracy_government']:§!\n§TWith £ethic_fanatic_spiritualist£ §Y$ethic_fanatic_spiritualist$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_high_priest£ §Y$job_high_priest_plural$§!\n$job_high_priest_effect_desc$§!"

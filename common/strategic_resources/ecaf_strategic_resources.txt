@@ -5,11 +5,13 @@
 ecaf_crew = {
 	category = other
 	tradable = no
-	allow_deficit = no
-	max = 5000
+	allow_deficit = yes
+	max = 2500
 	special_max_amount = yes
+
+	deficit_modifier = ecaf_crew_deficit
 	
 	visibility_prerequisite = { always = yes }
 	ai_weight = { weight = 100 }
-	ai_wants = { base = 400 }
+	ai_wants = { base = 500 }
 }

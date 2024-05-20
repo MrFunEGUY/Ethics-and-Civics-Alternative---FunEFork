@@ -61,7 +61,7 @@ ecaf_crew_expenditure_ship_upgrades = {
 		is_at_war = no
 	}
 	weight = {
-		weight = 0.2
+		weight = 1
 
 		# spend more on ship upgrades if at capacity
 		modifier = {
@@ -81,7 +81,7 @@ ecaf_crew_expenditure_starbases = {
 	}
 
 	weight = {
-		weight = 0.4
+		weight = 1
 
 		# spend more on starbase upgrades if at fleet cap
 		modifier = {
@@ -90,19 +90,19 @@ ecaf_crew_expenditure_starbases = {
 		}
 
 		# Reduce spending on claiming new systems if we have unclaimed planets
-		modifier = {
-			is_machine_empire = yes
-			has_country_resource = { type = alloys amount < 450 }
-			factor = 0.25 # more aggresive saving for robots since their colony ships cost more
-			ai_colonize_plans > 0
-		}
-		# Reduce spending on claiming new systems if we have unclaimed planets
-		modifier = {
-			is_machine_empire = no
-			has_country_resource = { type = alloys amount < 250 }
-			factor = 0.50
-			ai_colonize_plans > 0
-		}
+		# modifier = {
+		# 	is_machine_empire = yes
+		# 	has_country_resource = { type = ecaf_crew amount < 50 }
+		# 	factor = 0.25 # more aggresive saving for robots since their colony ships cost more
+		# 	ai_colonize_plans > 0
+		# }
+		# # Reduce spending on claiming new systems if we have unclaimed planets
+		# modifier = {
+		# 	is_machine_empire = no
+		# 	has_country_resource = { type = ecaf_crew amount < 20 }
+		# 	factor = 0.50
+		# 	ai_colonize_plans > 0
+		# }
 
 		modifier = {
 			factor = 1.5
@@ -124,12 +124,30 @@ ecaf_crew_expenditure_starbases = {
 			}
 		}
 	}
-	desired_min = {
-		base = 500
-		modifier = {
-			add = 5000
-			has_ascension_perk = ap_cosmogenesis
+}
+
+ecaf_crew_expenditure_starbases_expand = {
+	resource = ecaf_crew
+	type = expenditure
+	category = starbases
+
+	potential = {
+		# has_ai_expansion_plan = yes
+		# highest_threat < 50
+		NOT = {
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+			# ai_colonize_plans > 0
 		}
+		# has_resource = { type = influence amount > 75 }
+	}
+
+	weight = {
+		weight = 1
+	}
+
+	desired_min = {
+		base = 50
 	}
 }
 
@@ -143,7 +161,7 @@ ecaf_crew_expenditure_armies = {
 	}
 
 	weight = {
-		weight = 0.2
+		weight = 0.5
 
 		modifier = {
 			factor = 2
@@ -194,7 +212,7 @@ ecaf_crew_upkeep_starbases = {
 	category = starbases
 	potential = { always = yes }
 	weight = {
-		weight = 0.6
+		weight = 1.0
 	}
 }
 

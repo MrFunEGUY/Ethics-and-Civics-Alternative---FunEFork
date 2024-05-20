@@ -38,7 +38,7 @@ building_colliseum = {
 	}
 
 	country_modifier = { # ECAF
-		country_resource_max_ecaf_crew_add = 500
+		country_resource_max_ecaf_crew_add = @fortress_building_crew_max_add
 	}
 
 	army_modifier = {

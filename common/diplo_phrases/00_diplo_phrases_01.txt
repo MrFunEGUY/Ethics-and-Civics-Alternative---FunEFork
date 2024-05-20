@@ -5721,6 +5721,8 @@ action_insult = {
  paragon.5213.socialism: "We will take care of each other."
  paragon.5213.capitalism: "We must seek new opportunities."
 
+ mod_ship_military_alloys_cost_mult: "Military Ship Alloy Cost"
+
  01_INSULT_PROPOSE_IND_COL = {
 			trigger = {
 				is_authoritarian = yes

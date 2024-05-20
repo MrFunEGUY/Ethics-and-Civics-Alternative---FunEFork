@@ -238,7 +238,7 @@ basic_economy_plan = {
 		set_name = "ECAF Crew Scaling"
         potential = { always = yes }
 		income = {
-			ecaf_crew = 50
+			ecaf_crew = @crew_scaling_plan
 		}
 	}
 

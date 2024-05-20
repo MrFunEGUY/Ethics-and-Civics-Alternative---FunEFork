@@ -26,6 +26,8 @@ l_braz_por:
  paragon.5213.socialism: "We will take care of each other."
  paragon.5213.capitalism: "We must seek new opportunities."
 
+ mod_ship_military_alloys_cost_mult: "Military Ship Alloy Cost"
+
  01_INSULT_PROPOSE_IND_COL: "Your brutal, tyrannical regime will eventually fall, and there will be a reckoning."
  02_INSULT_PROPOSE_COL_IND: "So who is it that rules your amusing little star nation today? What a quaint notion, to 'vote' someone into power! It will inevitably lead to your collapse, of course."
  02_INSULT_PROPOSE_IND_COL: "Have you even considered the notion of letting your citizens think for themselves? If you are frightened that it would lead to the end of the [Root.GetName]... you are right."
@@ -813,8 +815,8 @@ l_braz_por:
  ISOLATIONIST_WAR_TRADITION: "Developed Isolationism"
  job_commandant_desc: "An experienced military chief, either active or honorably discharged."
  job_commandant_effect_desc: "£job_commandant£ $job_commandant_plural$ increase an Empire's §YNaval Capacity§!, spawn §YDefense Armies§!, increase planetary §YStability§!, reduce damage from §YBombardment§! and produce small amount of §YAmenities§!."
- job_commandant_plural: "Commanders"
- job_commandant: "Commander"
+ job_commandant_plural: "Commandants"
+ job_commandant: "Commandant"
 
  job_commissar_desc: "A high-ranking functionary tasked with ensuring the ideological purity of a planet's administration."
  job_commissar_effect_desc: "£job_commissar£ $job_commissar_plural$ produce £unity£ §YUnity§!, increase an Empire's £unity£ §YUnity§! output, and increase planetary £mod_pop_government_ethic_attraction£ §YGoverning Ethics Attraction§! and £mod_pop_ethics_shift_speed£ §YEthics Shift Speed§!"
@@ -2181,6 +2183,11 @@ l_braz_por:
  ## ECAF NEW ###
  ###############
 
+ ecaf_crew: "Crew"
+ ecaf_crew_desc: "The brave crew that make up our military personnel; they're the true backbone of our military strength."
+ mod_country_resource_max_ecaf_crew_add: "Empire $crew$ Capacity"
+ ecaf_crew_deficit: "$ecaf_crew$ Shortage"
+
  auth_dict_democratic: "Democratic Autocracy"
  auth_dict_democratic_desc: "Democratic Autocracies are ruled by a single, democratically-elected, individual that wields absolute control over the state until their death."
  
@@ -2294,7 +2301,7 @@ l_braz_por:
  concept_diplocracy_government_desc: "Diplomatic Governments are §YFanatically Xenophilic§! governments that replace some §Y$job_politician_plural_with_icon$§! or §Y$job_executive_plural_with_icon$§! with £job_ambassador£ §Y$job_ambassador_plural$§!"
 
  concept_aristocracy_government: "Aristocratic Government"
- concept_aristocracy_government_desc: "Aristocratic Governments are replace some §Y$job_politician_plural_with_icon$§! or §Y$job_executive_plural_with_icon$§! with £job_noble£ §Y$job_noble_plural$§!"
+ concept_aristocracy_government_desc: "Aristocratic Governments replace some §Y$job_politician_plural_with_icon$§! or §Y$job_executive_plural_with_icon$§! with £job_noble£ §Y$job_noble_plural$§!"
 
  theocracy_gov_reg_loc: "\n\n['concept_theocracy_government']:§!\n§TWith £ethic_fanatic_spiritualist£ §Y$ethic_fanatic_spiritualist$§!, £building£ §YCapital Buildings§! replace some §Y$job_politician_plural_with_icon$§! with £job_high_priest£ §Y$job_high_priest_plural$§!\n$job_high_priest_effect_desc$§!"
  theocracy_gov_corp_loc: "\n\n['concept_theocracy_government']:§!\n§TWith £ethic_fanatic_spiritualist£ §Y$ethic_fanatic_spiritualist$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_high_priest£ §Y$job_high_priest_plural$§!\n$job_high_priest_effect_desc$§!"

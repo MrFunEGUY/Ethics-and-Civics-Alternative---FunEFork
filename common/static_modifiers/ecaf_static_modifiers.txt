@@ -92,3 +92,9 @@ paragon_origin_rebel_capitalism = {
   pop_citizen_happiness = 0.05
   planet_jobs_produces_mult = 0.05
 }
+
+ecaf_crew_deficit = {
+  ship_military_alloys_cost_mult = 0.25
+  ship_military_energy_upkeep_mult = 0.75
+  ship_weapon_damage = -0.3
+}

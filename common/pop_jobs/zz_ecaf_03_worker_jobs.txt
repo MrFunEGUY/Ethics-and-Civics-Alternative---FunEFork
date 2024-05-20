@@ -350,10 +350,10 @@ soldier = {
 					owner = { has_valid_civic = civic_martial_brotherhood }
 				}
 			}
-			ecaf_crew = 25
+			ecaf_crew = @soldier_job_crew_production
 		}
 		produces = { # ECAF
-			ecaf_crew = 100
+			ecaf_crew = @soldier_job_crew_production
 		}
 	}
 
@@ -570,7 +570,7 @@ ranger = {
 			society_research = 3
 		}
 		produces = { # ECAF
-			ecaf_crew = 10
+			ecaf_crew = @other_military_job_crew_production
 		}
 	}
 

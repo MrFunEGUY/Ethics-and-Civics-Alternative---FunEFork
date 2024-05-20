@@ -50,7 +50,7 @@ ring_psi_corps = {
 	}
 
 	country_modifier = { # ECAF
-		country_resource_max_ecaf_crew_add = 150
+		country_resource_max_ecaf_crew_add = @small_military_building_crew_max_add
 	}
 
 	resources = {
@@ -116,7 +116,7 @@ ring_orbital_shield_generator = {
 	}
 
 	country_modifier = { # ECAF
-		country_resource_max_ecaf_crew_add = 150
+		country_resource_max_ecaf_crew_add = @small_military_building_crew_max_add
 	}
 
 	resources = {

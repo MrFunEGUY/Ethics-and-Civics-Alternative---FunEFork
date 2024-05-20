@@ -1,0 +1,96 @@
+namespace = ethic_rebuid_government_fix
+# Hopefully this will run on game start, SP game load and monthly_pulse.
+# Also hopefully this won't be laggy as all get-out
+# Idea is to remove civics no-longer valid with ECA/ECA Redux and let the AI reform government.
+# And pick random replacements.
+event = {
+	id = ethic_rebuid_government_fix.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_country = {
+			limit = {
+				is_ai = yes
+				has_government = yes
+				OR = {
+					is_fallen_empire = yes
+					has_authority = auth_imperial
+					has_authority = auth_corporate
+				}
+			}
+			if = {
+				limit = {
+					is_fallen_empire = yes
+					is_gestalt = no
+					NOT = { has_ethic = ethic_focused }
+				}
+				country_add_ethic = ethic_focused
+			}
+			if = {
+				limit = {
+					is_fallen_empire = yes
+					is_gestalt = no
+					NOT = { has_authority = auth_imperial }
+				}
+				change_government = {
+					authority = auth_imperial
+					cooldown = no
+					remove_invalid_civics = yes
+				}
+			}
+			if = {
+				limit = {
+					is_fallen_empire = yes
+					OR = {
+						is_gestalt = yes
+						has_authority = auth_machine_intelligence
+					}
+					has_ethic = ethic_focused
+				}
+				country_remove_ethic = ethic_focused
+			}
+			if = {
+				limit = {
+					is_fallen_empire = no
+					has_authority = auth_imperial
+					is_authoritarian = no
+				}
+				shift_ethic = ethic_authoritarian
+				change_government = {
+					authority = auth_imperial
+					cooldown = no
+					remove_invalid_civics = yes
+				}
+			}
+			if = {
+				limit = {
+					is_fallen_empire = no
+					has_authority = auth_corporate
+					is_capitalism = no
+				}
+				shift_ethic = ethic_capitalism
+				change_government = {
+					authority = auth_corporate
+					cooldown = no
+					remove_invalid_civics = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ethic_rebuid_government_fix.2000
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		civics_count < 5
+	}
+
+	immediate = {
+		change_government = {
+			civics = { civic = random }
+		}
+	}
+}
