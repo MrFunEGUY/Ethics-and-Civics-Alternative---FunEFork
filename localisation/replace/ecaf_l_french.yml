@@ -715,7 +715,7 @@ l_french:
  gov_dread_brotherhood: "Dreadful Brotherhood"
  gov_enlighted_socialism_desc: "This government is a form of a socialistic dictatorship, where the the wise elected-for-life Ruler is undisputedly regarded as an enlightened architect for a brighter future."
  gov_enlighted_socialism: "Enlightened Despotism"
- gov_genuine_aristocracy_desc: "An idealistic form of government, where ruling Elite considers the interests of society and cares about the people."
+ gov_genuine_aristocracy_desc: "An idealistic form of government, where ruling Elite considers the best interests of society and cares about the people."
  gov_genuine_aristocracy: "Genuine Aristocracy"
  gov_great_houses: "Great Houses"
  gov_jingoism_desc: "This form of authoritarian governance is headed by a xenophobic demagogue and notions of national supremacy and manifest destiny dominate the politics."
@@ -2725,7 +2725,7 @@ l_french:
  
  gov_oligarchic_republic_desc: "An extremely elitist form of republic, in which significant amount of power is concentrated in the hands of a small, privileged group of people, with a strong influence on election's and governing processes.$aristocracy_gov_reg_loc$"
 
- gov_genuine_aristocracy_desc: "An idealistic form of government, where ruling Elite considers the interests of society and cares about the people.$aristocracy_gov_reg_loc$"
+ gov_genuine_aristocracy_desc: "An idealistic form of government, where ruling Elite considers the best interests of society and cares about the people.$aristocracy_gov_reg_loc$"
 
  lrsk_gov_var_gov_noble_empire_desc: "This government is a quaint, romantic monarchy in which a strong central ruler governs a complex hierarchy of planetary vassal-lords. Could be the subject of a good opera, in space. A 'space opera' if you will.$aristocracy_gov_reg_loc$"
 

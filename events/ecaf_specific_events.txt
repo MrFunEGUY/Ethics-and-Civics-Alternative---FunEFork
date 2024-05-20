@@ -3,16 +3,18 @@ planet_event = {
 	id = unity_patrons.1
 	hide_window = yes
 	is_triggered_only = yes
-	location = root
+
 	pre_triggers = {
 		has_owner = yes
 	}
+
 	trigger = {
 		exists = owner
 		owner = {
 			has_valid_civic = civic_peacekeepers
 		}
 	}
+
 	immediate = {
 		owner = {
 			add_modifier = {
@@ -83,48 +85,34 @@ planet_event = {
 	id = voice_planet.1
 	hide_window = yes
 	is_triggered_only = yes
-	location = root
+
 	immediate = {
 		if = {
-			limit = {
-				has_modifier = "dangerous_wildlife"
-			}
+			limit = { has_modifier = "dangerous_wildlife" }
 			remove_modifier = "dangerous_wildlife"
 		}
 		if = {
-			limit = {
-				has_modifier = "bleak_planet"
-			}
+			limit = { has_modifier = "bleak_planet" }
 			remove_modifier = "bleak_planet"
 		}
 		if = {
-			limit = {
-				has_modifier = "hazardous_weather"
-			}
+			limit = { has_modifier = "hazardous_weather" }
 			remove_modifier = "hazardous_weather"
 		}
 		if = {
-			limit = {
-				has_modifier = "wild_storms"
-			}
+			limit = { has_modifier = "wild_storms" }
 			remove_modifier = "wild_storms"
 		}
 		if = {
-			limit = {
-				has_modifier = "damaged_ecology"
-			}
+			limit = { has_modifier = "damaged_ecology" }
 			remove_modifier = "damaged_ecology"
 		}
 		if = {
-			limit = {
-				has_modifier = "wasteland_radiation"
-			}
+			limit = { has_modifier = "wasteland_radiation" }
 			remove_modifier = "wasteland_radiation"
 		}
 		if = {
-			limit = {
-				has_modifier = "irradiated_planet"
-			}
+			limit = { has_modifier = "irradiated_planet" }
 			remove_modifier = "irradiated_planet"
 		}
 	}
@@ -134,48 +122,34 @@ planet_event = {
 	id = voice_planet.2
 	hide_window = yes
 	is_triggered_only = yes
-	location = root
+
 	immediate = {
 		if = {
-			limit = {
-				has_modifier = "unstable_tectonics"
-			}
+			limit = { has_modifier = "unstable_tectonics" }
 			remove_modifier = "unstable_tectonics"
 		}
 		if = {
-			limit = {
-				has_modifier = "weak_magnetic_field"
-			}
+			limit = { has_modifier = "weak_magnetic_field" }
 			remove_modifier = "weak_magnetic_field"
 		}
 		if = {
-			limit = {
-				has_modifier = "tidal_locked"
-			}
+			limit = { has_modifier = "tidal_locked" }
 			remove_modifier = "tidal_locked"
 		}
 		if = {
-			limit = {
-				has_modifier = "irradiated_planet"
-			}
+			limit = { has_modifier = "irradiated_planet" }
 			remove_modifier = "irradiated_planet"
 		}
 		if = {
-			limit = {
-				has_modifier = "damaged_ecology"
-			}
+			limit = { has_modifier = "damaged_ecology" }
 			remove_modifier = "damaged_ecology"
 		}
 		if = {
-			limit = {
-				has_modifier = "wasteland_radiation"
-			}
+			limit = { has_modifier = "wasteland_radiation" }
 			remove_modifier = "wasteland_radiation"
 		}
 		if = {
-			limit = {
-				has_modifier = "abandoned_terraforming"
-			}
+			limit = { has_modifier = "abandoned_terraforming" }
 			remove_modifier = "abandoned_terraforming"
 		}
 	}
@@ -193,11 +167,15 @@ country_event = {
 		capital_scope = { is_wet = no }
 	}
 	immediate = {
-		force_remove_civic = civic_anglers
-		change_government = {
-			civics = random
-			cooldown = no
+		capital_scope = {
+			random_list = {
+				40 = { change_pc = pc_ocean }
+				30 = { change_pc = pc_continental }
+				30 = { change_pc = pc_tropical }
+			}
+
+			reroll_planet = yes
+			clear_blockers = yes
 		}
-		species = { remove_trait = trait_aquatic }
 	}
 }
