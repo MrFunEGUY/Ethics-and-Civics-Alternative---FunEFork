@@ -61,10 +61,10 @@ gpm_bunker_army = {
 				}
 			}
 			unity = 2
-			ecaf_crew = 10
+			ecaf_crew = 100
 		}
 		produces = { # ECAF
-			ecaf_crew = 5
+			ecaf_crew = 50
 		}
 	}
 	

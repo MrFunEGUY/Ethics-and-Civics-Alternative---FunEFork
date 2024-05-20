@@ -318,20 +318,6 @@ progressive = {
 	}
 
 	demand = {
-		title = "PROGRESSIVE_GUN_RIGHTS"
-		unfulfilled_title = "PROGRESSIVE_NO_GUN_RIGHTS"
-		desc = "PROGRESSIVE_GUN_RIGHTS_DESC"
-		fulfilled_effect = 7
-		unfulfilled_effect = -3
-		potential = {
-			exists = owner
-			has_global_flag = cultural_overhaul_active
-		}
-		trigger = {
-			owner = { has_policy_flag = gun_rights_allowed }
-		}
-	}
-	demand = {
 		title = "FEDERAL_STATE"
 		unfulfilled_title = "NO_FEDERAL_STATE"
 		desc = "FEDERAL_STATE_DESC"

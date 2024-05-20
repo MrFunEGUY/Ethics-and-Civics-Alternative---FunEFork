@@ -493,7 +493,7 @@ d_pd_palace_arc = {
 		modifier = {	
 			job_politician_add = 4
 			job_culture_worker_add = 6
-			job_palace_guard_add = 8
+			# job_palace_guard_add = 8
 		}
 	}
 	triggered_planet_modifier = {
@@ -514,7 +514,7 @@ d_pd_palace_arc = {
 		modifier = {	
 			job_politician_add = 2
 			job_culture_worker_add = 2
-			job_palace_guard_add = 2
+			# job_palace_guard_add = 2
 		}
 	}
 
@@ -537,7 +537,7 @@ d_pd_palace_arc = {
 		modifier = {	
 			job_politician_add = 4
 			job_culture_worker_add = 6
-			job_palace_guard_add = 8
+			# job_palace_guard_add = 8
 		}
 	}
 	triggered_planet_modifier = {
@@ -558,7 +558,7 @@ d_pd_palace_arc = {
 		modifier = {	
 			job_politician_add = 2
 			job_culture_worker_add = 2
-			job_palace_guard_add = 2
+			# job_palace_guard_add = 2
 		}
 	}
 
@@ -578,7 +578,7 @@ d_pd_palace_arc = {
 			job_noble_add = 2
 			job_politician_add = 2
 			job_culture_worker_add = 6
-			job_palace_guard_add = 8
+			# job_palace_guard_add = 8
 		}
 	}
 	triggered_planet_modifier = {
@@ -596,7 +596,7 @@ d_pd_palace_arc = {
 			job_noble_add = 1
 			job_politician_add = 1
 			job_culture_worker_add = 2
-			job_palace_guard_add = 2
+			# job_palace_guard_add = 2
 		}
 	}
 
@@ -616,7 +616,7 @@ d_pd_palace_arc = {
 			job_noble_add = 2
 			job_politician_add = 2
 			job_culture_worker_add = 6
-			job_palace_guard_add = 8
+			# job_palace_guard_add = 8
 		}
 	}
 	triggered_planet_modifier = {
@@ -634,7 +634,7 @@ d_pd_palace_arc = {
 			job_noble_add = 1
 			job_politician_add = 1
 			job_culture_worker_add = 2
-			job_palace_guard_add = 2
+			# job_palace_guard_add = 2
 		}
 	}
 
@@ -653,7 +653,7 @@ d_pd_palace_arc = {
 			job_head_researcher_add = 2
 			job_politician_add = 2
 			job_culture_worker_add = 6
-			job_palace_guard_add = 8
+			# job_palace_guard_add = 8
 		}
 	}
 	triggered_planet_modifier = {
@@ -670,7 +670,7 @@ d_pd_palace_arc = {
 			job_head_researcher_add = 1
 			job_politician_add = 1
 			job_culture_worker_add = 2
-			job_palace_guard_add = 2
+			# job_palace_guard_add = 2
 		}
 	}
 
@@ -690,7 +690,7 @@ d_pd_palace_arc = {
 			job_merchant_add = 2
 			job_politician_add = 2
 			job_culture_worker_add = 6
-			job_palace_guard_add = 8
+			# job_palace_guard_add = 8
 		}
 	}
 	triggered_planet_modifier = {
@@ -708,7 +708,7 @@ d_pd_palace_arc = {
 			job_merchant_add = 1
 			job_politician_add = 1
 			job_culture_worker_add = 2
-			job_palace_guard_add = 2
+			# job_palace_guard_add = 2
 		}
 	}
 
@@ -728,7 +728,7 @@ d_pd_palace_arc = {
 			job_merchant_add = 2
 			job_politician_add = 2
 			job_culture_worker_add = 6
-			job_palace_guard_add = 8
+			# job_palace_guard_add = 8
 		}
 	}
 	triggered_planet_modifier = {
@@ -746,7 +746,7 @@ d_pd_palace_arc = {
 			job_merchant_add = 1
 			job_politician_add = 1
 			job_culture_worker_add = 2
-			job_palace_guard_add = 2
+			# job_palace_guard_add = 2
 		}
 	}
 
@@ -765,7 +765,7 @@ d_pd_palace_arc = {
 			job_high_priest_add = 2
 			job_politician_add = 2
 			job_culture_worker_add = 6
-			job_palace_guard_add = 8
+			# job_palace_guard_add = 8
 		}
 	}
 	triggered_planet_modifier = {
@@ -782,7 +782,7 @@ d_pd_palace_arc = {
 			job_high_priest_add = 1
 			job_politician_add = 1
 			job_culture_worker_add = 2
-			job_palace_guard_add = 2
+			# job_palace_guard_add = 2
 		}
 	}
 

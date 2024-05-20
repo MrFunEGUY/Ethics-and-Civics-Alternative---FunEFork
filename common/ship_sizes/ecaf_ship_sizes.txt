@@ -46,9 +46,10 @@ corvette = {
 		upkeep = {
 			energy = @corvette_upkeep_energy
 			alloys = @corvette_upkeep_alloys
+			ecaf_crew = @frigate_crew_upkeep
 		}
 		cost = { # ECAF
-			ecaf_crew = 1
+			ecaf_crew = @frigate_crew_cost
 		}
 	}
 
@@ -142,9 +143,10 @@ frigate = {
 		upkeep = {
 			energy = @corvette_upkeep_energy
 			alloys = @corvette_upkeep_alloys
+			ecaf_crew = @corvette_crew_upkeep
 		}
 		cost = { # ECAF
-			ecaf_crew = 0.5
+			ecaf_crew = @corvette_crew_cost
 		}
 	}
 
@@ -218,9 +220,10 @@ destroyer = {
 		upkeep = {
 			energy = @destroyer_upkeep_energy
 			alloys = @destroyer_upkeep_alloys
+			ecaf_crew = @destroyer_crew_upkeep
 		}
 		cost = { # ECAF
-			ecaf_crew = 3
+			ecaf_crew = @destroyer_crew_cost
 		}
 	}
 	min_upgrade_cost = {
@@ -324,9 +327,10 @@ cruiser = {
 		upkeep = {
 			energy = @cruiser_upkeep_energy
 			alloys = @cruiser_upkeep_alloys
+			ecaf_crew = @cruiser_crew_upkeep
 		}
 		cost = { # ECAF
-			ecaf_crew = 6
+			ecaf_crew = @cruiser_crew_cost
 		}
 	}
 
@@ -400,9 +404,10 @@ battleship = {
 		upkeep = {
 			energy = @battleship_upkeep_energy
 			alloys = @battleship_upkeep_alloys
+			ecaf_crew = @battleship_crew_upkeep
 		}
 		cost = { # ECAF
-			ecaf_crew = 10
+			ecaf_crew = @battleship_crew_cost
 		}
 	}
 
@@ -536,9 +541,10 @@ titan = {
 		upkeep = {
 			energy = @titan_upkeep_energy
 			alloys = @titan_upkeep_alloys
+			ecaf_crew = @titan_crew_upkeep
 		}
 		cost = { # ECAF
-			ecaf_crew = 12
+			ecaf_crew = @titan_crew_cost
 		}
 	}
 
@@ -573,9 +579,10 @@ juggernaut = {
 		upkeep = {
 			energy = @juggernaut_upkeep_energy
 			alloys = @juggernaut_upkeep_alloys
+			ecaf_crew = @juggernaut_crew_upkeep
 		}
 		cost = { # ECAF
-			ecaf_crew = 30
+			ecaf_crew = @juggernaut_crew_cost
 		}
 	}
 

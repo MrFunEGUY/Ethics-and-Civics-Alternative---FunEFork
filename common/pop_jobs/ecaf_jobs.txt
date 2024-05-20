@@ -234,7 +234,7 @@ gladiator = {
 			alloys = 0.25
 		}
 		produces = { # ECAF
-			ecaf_crew = 0.5
+			ecaf_crew = 10
 		}
 	}
 	pop_modifier = {
@@ -326,7 +326,7 @@ templar = {
 			consumer_goods = 1
 		}
 		produces = { # ECAF
-			ecaf_crew = 0.5
+			ecaf_crew = 20
 		}
 	}
 	country_modifier = {
@@ -692,7 +692,7 @@ mercenary = {
 			consumer_goods = 1
 		}
 		produces = { # ECAF
-			ecaf_crew = 0.5
+			ecaf_crew = 25
 		}
 	}
 	country_modifier = {
@@ -1358,7 +1358,14 @@ commandant = {
 			unity = 2
 		}
 		produces = { # ECAF
-			ecaf_crew = 1
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_military_dictatorship }
+			}
+			ecaf_crew = 20
+		}
+		produces = { # ECAF
+			ecaf_crew = 10
 		}
 	}
 	planet_modifier = {

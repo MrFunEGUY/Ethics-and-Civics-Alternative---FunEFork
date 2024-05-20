@@ -1,7 +1,7 @@
 tb_others_group = {
 	category = {
 		resources = {
-			ecaf_crew
+			# ecaf_crew
 			volatile_motes
 			exotic_gases
 			rare_crystals

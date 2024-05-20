@@ -131,6 +131,17 @@ building_capital = {
 		upkeep = {
 			energy = @b2_upkeep
 		}
+		produces = {
+			trigger = { is_capital = yes }
+			ecaf_crew = @base_capital_crew_production
+		}
+		produces = {
+			trigger = {
+				exists = sector
+				is_sector_capital = yes
+			}
+			ecaf_crew = @base_sector_capital_crew_production
+		}
 	}
 
 	triggered_desc = {
@@ -331,7 +342,7 @@ building_major_capital = {
 	}
 
 	country_modifier = { # ECAF
-		country_resource_max_ecaf_crew_add = 200
+		country_resource_max_ecaf_crew_add = 1000
 	}
 
 	####################################### / ECAF
@@ -373,6 +384,17 @@ building_major_capital = {
 		}
 		upkeep = {
 			energy = @b3_upkeep
+		}
+		produces = {
+			trigger = { is_capital = yes }
+			ecaf_crew = @base_capital_crew_production
+		}
+		produces = {
+			trigger = {
+				exists = sector
+				is_sector_capital = yes
+			}
+			ecaf_crew = @base_sector_capital_crew_production
 		}
 	}
 	
@@ -546,7 +568,7 @@ building_system_capital = {
 	}
 
 	country_modifier = { # ECAF
-		country_resource_max_ecaf_crew_add = 300
+		country_resource_max_ecaf_crew_add = 2500
 	}
 
 	####################################### / ECAF
@@ -599,6 +621,17 @@ building_system_capital = {
 		}
 		upkeep = {
 			energy = @b4_upkeep
+		}
+		produces = {
+			trigger = { is_capital = yes }
+			ecaf_crew = @base_capital_crew_production
+		}
+		produces = {
+			trigger = {
+				exists = sector
+				is_sector_capital = yes
+			}
+			ecaf_crew = @base_sector_capital_crew_production
 		}
 	}
 	
@@ -706,6 +739,17 @@ building_hab_capital = {
 		upkeep = {
 			trigger = { owner = { has_active_tradition = tr_expansion_adopt } }
 			alloys = -1
+		}
+		produces = {
+			trigger = { is_capital = yes }
+			ecaf_crew = @base_capital_crew_production
+		}
+		produces = {
+			trigger = {
+				exists = sector
+				is_sector_capital = yes
+			}
+			ecaf_crew = @base_sector_capital_crew_production
 		}
 	}
 
@@ -991,6 +1035,17 @@ building_hab_major_capital = {
 			trigger = { owner = { has_active_tradition = tr_expansion_adopt } }
 			alloys = -1
 		}
+		produces = {
+			trigger = { is_capital = yes }
+			ecaf_crew = @base_capital_crew_production
+		}
+		produces = {
+			trigger = {
+				exists = sector
+				is_sector_capital = yes
+			}
+			ecaf_crew = @base_sector_capital_crew_production
+		}
 	}
 
 	planet_modifier = {
@@ -1135,6 +1190,10 @@ building_hab_major_capital = {
 
 	### ECAF
 	############
+
+	country_modifier = { # ECAF
+		country_resource_max_ecaf_crew_add = 1000
+	}
 	
 	triggered_planet_modifier = {
 		potential = {
@@ -1626,6 +1685,17 @@ building_hab_system_capital = {
 			trigger = { owner = { has_active_tradition = tr_expansion_adopt } }
 			alloys = -1
 		}
+		produces = {
+			trigger = { is_capital = yes }
+			ecaf_crew = @base_capital_crew_production
+		}
+		produces = {
+			trigger = {
+				exists = sector
+				is_sector_capital = yes
+			}
+			ecaf_crew = @base_sector_capital_crew_production
+		}
 	}
 
 	planet_modifier = {
@@ -1725,6 +1795,10 @@ building_hab_system_capital = {
 
 	### ECAF
 	############
+
+	country_modifier = { # ECAF
+		country_resource_max_ecaf_crew_add = 2500
+	}
 	
 	triggered_planet_modifier = {
 		potential = {
@@ -2177,6 +2251,276 @@ building_hab_system_capital = {
 	}
 }
 
+
+#############
+# Hive buildings
+#############
+
+# Hive Core
+building_hive_capital = {
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+
+	category = government
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_hive_empire = yes
+				is_country_type = swarm
+			}
+			is_fallen_empire = no
+		}
+		uses_habitat_capitals = no
+		NOT = { is_planet_class = pc_cosmogenesis_world }
+	}
+
+	destroy_trigger = { # destroys and/or triggers conversion if true
+		exists = owner
+		owner = { is_hive_empire = no }
+	}
+
+	convert_to = {
+		building_machine_capital
+		building_capital
+		building_ancient_control_center
+		building_ancient_palace
+		building_capital_nanotech
+	}
+
+	upgrades = {
+		"building_hive_major_capital"
+	}
+
+	prerequisites = {
+		"tech_planetary_government"
+	}
+
+	show_tech_unlock_if = {
+		is_hive_empire = yes
+	}
+
+	planet_modifier = {
+		planet_housing_add = 5
+		planet_amenities_add = 8
+		job_synapse_drone_add = 2
+		job_maintenance_drone_add = 2
+		job_patrol_drone_add = 1
+		planet_max_buildings_add = @buildings_t2
+		defense_armies_add = @tier_2_capital_defense_armies
+	}
+
+	inline_script = {
+		script = buildings/on_all_capital_buildings
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_origin = origin_progenitor_hive }
+			is_planet_class = pc_hive
+		}
+		job_spawning_drone_add = -1
+		job_offspring_drone_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_capital_productivity_1 }
+		}
+		modifier = {
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 2
+		}
+		produces = {
+			trigger = { is_capital = yes }
+			ecaf_crew = @base_capital_crew_production
+		}
+		produces = {
+			trigger = {
+				exists = sector
+				is_sector_capital = yes
+			}
+			ecaf_crew = @base_sector_capital_crew_production
+		}
+	}
+
+	triggered_desc = {
+		text = job_synapse_drone_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_maintenance_drone_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_patrol_drone_effect_desc
+	}
+}
+
+# Hive Nexus
+building_hive_major_capital = {
+	base_buildtime = @b2_time
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+
+	category = government
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_hive_empire = yes
+				is_country_type = swarm
+			}
+			is_fallen_empire = no
+		}
+	}
+
+	convert_to = {
+		building_machine_major_capital
+		building_major_capital
+		building_ancient_control_center
+		building_ancient_palace
+		building_machine_major_capital_nanotech
+		building_major_capital_nanotech
+	}
+
+	upgrades = {
+		"building_imperial_hive_capital"
+	}
+
+	allow = {
+		num_sapient_pops >= 25
+	}
+
+	prerequisites = {
+		"tech_colonial_centralization"
+	}
+
+	show_tech_unlock_if = {
+		is_hive_empire = yes
+	}
+
+	planet_modifier = {
+		planet_housing_add = 10
+		planet_amenities_add = 12
+		job_synapse_drone_add = 3
+		job_maintenance_drone_add = 5
+		job_patrol_drone_add = 2
+		planet_max_buildings_add = @buildings_t4
+		defense_armies_add = @tier_3_capital_defense_armies
+	}
+
+	inline_script = {
+		script = buildings/on_all_capital_buildings
+	}
+
+	### ECAF
+
+	country_modifier = { # ECAF
+		country_resource_max_ecaf_crew_add = 1000
+	}
+
+	### /ECAF
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_origin = origin_progenitor_hive }
+			is_planet_class = pc_hive
+		}
+		job_spawning_drone_add = -1
+		job_offspring_drone_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_capital_productivity_1 }
+		}
+		modifier = {
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_capital_productivity_2 }
+		}
+		modifier = {
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_capital_productivity_3 }
+		}
+		modifier = {
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+		produces = {
+			trigger = { is_capital = yes }
+			ecaf_crew = @base_capital_crew_production
+		}
+		produces = {
+			trigger = {
+				exists = sector
+				is_sector_capital = yes
+			}
+			ecaf_crew = @base_sector_capital_crew_production
+		}
+	}
+
+	triggered_desc = {
+		text = job_synapse_drone_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_maintenance_drone_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_patrol_drone_effect_desc
+	}
+}
+
 #############
 # Special
 #############
@@ -2568,6 +2912,10 @@ building_slave_capital = {
 		script = buildings/on_all_capital_buildings
 	}
 
+	country_modifier = { # ECAF
+		country_resource_max_ecaf_crew_add = 500
+	}
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -2692,6 +3040,10 @@ building_slave_major_capital = {
 		script = buildings/on_all_capital_buildings
 	}
 
+	country_modifier = { # ECAF
+		country_resource_max_ecaf_crew_add = 1000
+	}
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -2770,6 +3122,8 @@ building_slave_major_capital = {
 		text = job_slave_overseer_effect_desc
 	}
 }
+
+### Imperial Capitals
 
 # Imperial Capital
 building_imperial_capital = {
@@ -2887,6 +3241,10 @@ building_imperial_capital = {
 
 	### ECAF
 	############
+
+	country_modifier = { # ECAF
+		country_resource_max_ecaf_crew_add = 2500
+	}
 	
 	triggered_planet_modifier = {
 		potential = {
@@ -3160,5 +3518,898 @@ building_imperial_capital = {
 			owner = { has_valid_civic = civic_private_healthcare_corporate }
 		}
 		text = job_healthcare_effect_desc
+	}
+}
+
+# Imperial Center
+building_imperial_machine_capital = {
+	base_buildtime = @b4_time
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+
+	category = government
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_machine_empire = yes
+				is_country_type = ai_empire
+			}
+			is_galactic_emperor = yes
+		}
+		planet = { is_capital = yes }
+	}
+
+	convert_to = {
+		building_hive_major_capital
+		building_machine_system_capital
+		building_system_capital
+		building_hab_major_capital
+		building_ancient_control_center
+		building_ancient_palace
+	}
+
+	allow = {
+		num_sapient_pops >= 50
+	}
+
+	prerequisites = {
+	}
+
+	planet_modifier = {
+		planet_housing_add = 18
+		planet_amenities_add = 20
+		job_replicator_add = 4
+		job_patrol_drone_add = 5
+		job_maintenance_drone_add = 6
+		planet_max_buildings_add = 11
+		planet_max_branch_office_buildings_add = 3
+		defense_armies_add = @tier_4_capital_defense_armies
+	}
+
+	inline_script = {
+		script = buildings/on_all_capital_buildings
+	}
+
+	### ECAF
+
+	country_modifier = { # ECAF
+		country_resource_max_ecaf_crew_add = 2500
+	}
+
+	### /ECAF
+
+	triggered_desc = {
+		trigger = {
+			has_planet_flag = habitat
+		}
+		text = building_hab_system_capital_tooltip
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			num_sapient_pops >= 10
+		}
+		modifier = {
+			job_replicator_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			num_sapient_pops >= 40
+		}
+		modifier = {
+			job_replicator_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_machine_assimilator }
+		}
+		modifier = {
+			job_replicator_add = -1
+			job_maintenance_drone_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_modifier = gestation_colony
+		}
+		modifier = {
+			job_replicator_add = -1
+			job_gestation_drone_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_capital_productivity_1 }
+		}
+		modifier = {
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_capital_productivity_2 }
+		}
+		modifier = {
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_capital_productivity_3 }
+		}
+		modifier = {
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+		}
+		upkeep = {
+			energy = @b4_upkeep
+		}
+	}
+
+	triggered_desc = {
+		text = job_replicator_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			has_modifier = gestation_colony
+		}
+		text = job_gestation_drone_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_patrol_drone_effect_desc
+	}
+}
+
+# Imperial Complex
+building_imperial_hive_capital = {
+	base_buildtime = @b4_time
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+
+	category = government
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_hive_empire = yes
+				is_country_type = swarm
+			}
+			is_galactic_emperor = yes
+		}
+		planet = { is_capital = yes }
+	}
+
+	convert_to = {
+		building_hive_major_capital
+		building_machine_system_capital
+		building_system_capital
+		building_hab_major_capital
+		building_ancient_control_center
+		building_ancient_palace
+	}
+
+	allow = {
+		num_sapient_pops >= 50
+	}
+
+	prerequisites = {
+	}
+
+	planet_modifier = {
+		planet_housing_add = 20
+		planet_amenities_add = 20
+		job_synapse_drone_add = 5
+		job_maintenance_drone_add = 7
+		job_patrol_drone_add = 4
+		planet_max_buildings_add = 11
+		planet_max_branch_office_buildings_add = 3
+		defense_armies_add = @tier_4_capital_defense_armies
+	}
+
+	inline_script = {
+		script = buildings/on_all_capital_buildings
+	}
+
+	triggered_desc = {
+		trigger = {
+			has_planet_flag = habitat
+		}
+		text = building_hab_system_capital_tooltip
+	}
+
+	### ECAF
+
+	country_modifier = { # ECAF
+		country_resource_max_ecaf_crew_add = 2500
+	}
+
+	### /ECAF
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { has_origin = origin_progenitor_hive }
+			is_planet_class = pc_hive
+		}
+		job_spawning_drone_add = -1
+		job_offspring_drone_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_capital_productivity_1 }
+		}
+		modifier = {
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_capital_productivity_2 }
+		}
+		modifier = {
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_capital_productivity_3 }
+		}
+		modifier = {
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+		}
+		upkeep = {
+			energy = @b4_upkeep
+		}
+	}
+
+	triggered_desc = {
+		text = job_synapse_drone_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_maintenance_drone_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_patrol_drone_effect_desc
+	}
+}
+
+
+#############
+# Machine buildings
+#############
+
+# Colony
+building_deployment_post_nanotech = {
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+
+	category = government
+	building_sets = { nanotech_world }
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_machine_empire = yes
+				is_country_type = ai_empire
+			}
+			is_fallen_empire = no
+		}
+		uses_habitat_capitals = no
+		NOT = { is_planet_class = pc_cosmogenesis_world }
+	}
+
+	convert_to = {
+		building_hive_capital
+		building_colony_shelter
+		building_ancient_control_center
+		building_ancient_palace
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3
+		planet_amenities_add = 8
+		job_replicator_add = 2
+		job_patrol_drone_add = 1
+		job_maintenance_drone_add = 2
+		planet_max_buildings_add = @buildings_t1
+	}
+
+	inline_script = {
+		script = buildings/on_all_capital_buildings
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_machine_assimilator }
+		}
+		modifier = {
+			job_replicator_add = -1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_modifier = gestation_colony
+		}
+		modifier = {
+			job_replicator_add = -1
+			job_gestation_drone_add = 2
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = 1
+		}
+		produces = {
+			trigger = { is_capital = yes }
+			ecaf_crew = @base_capital_crew_production
+		}
+		produces = {
+			trigger = {
+				exists = sector
+				is_sector_capital = yes
+			}
+			ecaf_crew = @base_sector_capital_crew_production
+		}
+	}
+
+	upgrades = {
+		building_machine_capital
+	}
+
+	triggered_desc = {
+		trigger = {
+			NOT = { has_modifier = gestation_colony }
+		}
+		text = job_replicator_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			has_modifier = gestation_colony
+		}
+		text = job_gestation_drone_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_maintenance_drone_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_patrol_drone_effect_desc
+	}
+}
+
+# Administrative Array
+building_machine_capital_nanotech = {
+	base_buildtime = @b2_time
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+
+	category = government
+	building_sets = { nanotech_world }
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_machine_empire = yes
+				is_country_type = ai_empire
+				AND = {
+					exists = event_target:mechanocalibrator_country
+					is_same_value = event_target:mechanocalibrator_country
+				}
+			}
+			is_fallen_empire = no
+		}
+		uses_habitat_capitals = no
+		NOT = { is_planet_class = pc_cosmogenesis_world }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { is_machine_empire = no }
+	}
+
+	convert_to = {
+		building_hive_capital
+		building_colony_shelter
+		building_ancient_control_center
+		building_ancient_palace
+	}
+
+	allow = {
+		num_sapient_pops >= 10
+	}
+
+	prerequisites = {
+		"tech_planetary_government"
+	}
+
+	show_tech_unlock_if = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_housing_add = 5
+		planet_amenities_add = 10
+		job_replicator_add = 2
+		job_patrol_drone_add = 1
+		job_maintenance_drone_add = 3
+		planet_max_buildings_add = @buildings_t2
+		defense_armies_add = @tier_2_capital_defense_armies
+	}
+
+	inline_script = {
+		script = buildings/on_all_capital_buildings
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_machine_assimilator }
+		}
+		modifier = {
+			job_replicator_add = -1
+			job_maintenance_drone_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_modifier = gestation_colony
+		}
+		modifier = {
+			job_replicator_add = -1
+			job_gestation_drone_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_capital_productivity_1 }
+		}
+		modifier = {
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+		produces = {
+			trigger = { is_capital = yes }
+			ecaf_crew = @base_capital_crew_production
+		}
+		produces = {
+			trigger = {
+				exists = sector
+				is_sector_capital = yes
+			}
+			ecaf_crew = @base_sector_capital_crew_production
+		}
+	}
+
+	upgrades = {
+		building_machine_major_capital
+	}
+
+	triggered_desc = {
+		trigger = {
+			NOT = { has_modifier = gestation_colony }
+		}
+		text = job_replicator_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			has_modifier = gestation_colony
+		}
+		text = job_gestation_drone_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_patrol_drone_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_maintenance_drone_effect_desc
+	}
+}
+
+# Planetary Processor
+building_machine_major_capital_nanotech = {
+	base_buildtime = @b3_time
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+
+	category = government
+	building_sets = { nanotech_world }
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_machine_empire = yes
+				is_country_type = ai_empire
+			}
+			is_fallen_empire = no
+		}
+	}
+
+	convert_to = {
+		building_hive_major_capital
+		building_major_capital
+		building_ancient_control_center
+		building_ancient_palace
+	}
+
+	allow = {
+		num_sapient_pops >= 25
+	}
+
+	prerequisites = {
+		"tech_colonial_centralization"
+	}
+
+	show_tech_unlock_if = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_housing_add = 8
+		planet_amenities_add = 12
+		job_replicator_add = 2
+		job_patrol_drone_add = 2
+		job_maintenance_drone_add = 4
+		planet_max_buildings_add = @buildings_t3
+		defense_armies_add = @tier_3_capital_defense_armies
+	}
+
+	inline_script = {
+		script = buildings/on_all_capital_buildings
+	}
+
+	### ECAF
+
+	country_modifier = { # ECAF
+		country_resource_max_ecaf_crew_add = 1000
+	}
+
+	### /ECAF
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_machine_assimilator }
+		}
+		modifier = {
+			job_replicator_add = -1
+			job_maintenance_drone_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_modifier = gestation_colony
+		}
+		modifier = {
+			job_replicator_add = -1
+			job_gestation_drone_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_capital_productivity_1 }
+		}
+		modifier = {
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_capital_productivity_2 }
+		}
+		modifier = {
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = @b3_upkeep
+		}
+		produces = {
+			trigger = { is_capital = yes }
+			ecaf_crew = @base_capital_crew_production
+		}
+		produces = {
+			trigger = {
+				exists = sector
+				is_sector_capital = yes
+			}
+			ecaf_crew = @base_sector_capital_crew_production
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			NOT = { has_modifier = gestation_colony }
+		}
+		text = job_replicator_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			has_modifier = gestation_colony
+		}
+		text = job_gestation_drone_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_patrol_drone_effect_desc
+	}
+
+	upgrades = {
+		"building_machine_system_capital"
+	}
+}
+
+# Primary Nexus
+building_machine_system_capital_nanotech = {
+	base_buildtime = @b4_time
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+
+	category = government
+	building_sets = { nanotech_world }
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_machine_empire = yes
+				is_country_type = ai_empire
+			}
+			is_fallen_empire = no
+		}
+	}
+
+	convert_to = {
+		building_hive_major_capital
+		building_major_capital
+		building_machine_major_capital
+		building_ancient_control_center
+		building_ancient_palace
+	}
+
+	allow = {
+		num_sapient_pops >= 50
+	}
+
+	prerequisites = {
+		"tech_galactic_administration"
+	}
+
+	show_tech_unlock_if = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_housing_add = 12
+		planet_amenities_add = 18
+		job_replicator_add = 2
+		job_patrol_drone_add = 3
+		job_maintenance_drone_add = 5
+		planet_max_buildings_add = @buildings_t4
+		defense_armies_add = @tier_4_capital_defense_armies
+	}
+
+	inline_script = {
+		script = buildings/on_all_capital_buildings
+	}
+
+	### ECAF
+
+	country_modifier = { # ECAF
+		country_resource_max_ecaf_crew_add = 2500
+	}
+
+	### /ECAF
+
+	triggered_planet_modifier = {
+		potential = {
+			num_sapient_pops >= 10
+		}
+		modifier = {
+			job_replicator_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			num_sapient_pops >= 40
+		}
+		modifier = {
+			job_replicator_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_machine_assimilator }
+		}
+		modifier = {
+			job_replicator_add = -1
+			job_maintenance_drone_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_modifier = gestation_colony
+		}
+		modifier = {
+			job_replicator_add = -1
+			job_gestation_drone_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_capital_productivity_1 }
+		}
+		modifier = {
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_capital_productivity_2 }
+		}
+		modifier = {
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_capital_productivity_3 }
+		}
+		modifier = {
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+		}
+		upkeep = {
+			energy = @b4_upkeep
+		}
+		produces = {
+			trigger = { is_capital = yes }
+			ecaf_crew = @base_capital_crew_production
+		}
+		produces = {
+			trigger = {
+				exists = sector
+				is_sector_capital = yes
+			}
+			ecaf_crew = @base_sector_capital_crew_production
+		}
+	}
+
+	triggered_desc = {
+		text = job_replicator_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			has_modifier = gestation_colony
+		}
+		text = job_gestation_drone_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_patrol_drone_effect_desc
+	}
+
+	upgrades = {
+		"building_imperial_machine_capital"
 	}
 }

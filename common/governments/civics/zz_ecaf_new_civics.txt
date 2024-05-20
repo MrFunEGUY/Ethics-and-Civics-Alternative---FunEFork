@@ -1681,6 +1681,7 @@ civic_stratocracy = {
 		}
 	}
 	modifier = {
+		country_commander_cap_add = 2
 		country_base_influence_produces_add = 0.15
 	}
 	random_weight = {

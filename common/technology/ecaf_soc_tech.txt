@@ -285,17 +285,3 @@ tech_federal_state = {
 		}
 	}
 }
-
-tech_crew_test_2 = {
-	area = society
-	cost = @tier3cost1
-	tier = 1
-	category = { statecraft }
-	weight = 0
-
-	modifier = {
-		country_resource_max_ecaf_crew_add = 100
-	}
-
-	weight = 0
-}

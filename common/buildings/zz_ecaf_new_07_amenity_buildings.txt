@@ -7,18 +7,14 @@ building_colliseum = {
 	category = amenity
 	potential = {
 		exists = owner
-		owner = {
-			has_valid_civic = civic_slaving_despots
-			not = {
-				has_ethic = ethic_fanatic_pacifist
-			}
-		}
+		owner = { has_valid_civic = civic_slaving_despots }
 	}
 
 	allow = {
 		has_upgraded_capital = yes
 		has_building = building_slave_processing
 		is_occupied_flag = no # Ariphaos
+		owner = { is_pacifist = no }
 	}
 
 	destroy_trigger = {
@@ -42,7 +38,7 @@ building_colliseum = {
 	}
 
 	country_modifier = { # ECAF
-		country_resource_max_ecaf_crew_add = 50
+		country_resource_max_ecaf_crew_add = 500
 	}
 
 	army_modifier = {
@@ -77,7 +73,7 @@ building_colliseum = {
 	}
 
 	ai_weight = {
-		weight = 1
+		weight = 5
 	}
 	
 	on_built = {

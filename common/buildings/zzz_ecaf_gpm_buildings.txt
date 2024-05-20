@@ -10,7 +10,7 @@ gpm_building_stronghold = {
 	}
 
 	country_modifier = { # ECAF
-		country_resource_max_ecaf_crew_add = 50
+		country_resource_max_ecaf_crew_add = 1000
 	}
 
 	# gestalts get bunker drones

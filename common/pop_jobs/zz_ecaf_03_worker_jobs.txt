@@ -342,7 +342,18 @@ soldier = {
 			unity = 2
 		}
 		produces = { # ECAF
-			ecaf_crew = 10
+			trigger = {
+				exists = owner
+				OR = {
+					owner = { has_valid_civic = civic_stratocracy }
+					owner = { has_valid_civic = civic_citizen_service }
+					owner = { has_valid_civic = civic_martial_brotherhood }
+				}
+			}
+			ecaf_crew = 25
+		}
+		produces = { # ECAF
+			ecaf_crew = 100
 		}
 	}
 
@@ -508,6 +519,25 @@ soldier = {
 			factor = 5
 			has_trait = trait_cyborg_creed_of_war
 		}
+		modifier = {
+			factor = 5
+			exists = planet
+			exists = planet.owner
+			planet.owner = {
+				has_monthly_income = {
+					resource = ecaf_crew
+					value < 200
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			exists = planet
+			exists = planet.owner
+			planet.owner = {
+				resource_stockpile_compare = { resource = ecaf_crew value >= 1000 }
+			}
+		}
 	}
 }
 
@@ -540,7 +570,7 @@ ranger = {
 			society_research = 3
 		}
 		produces = { # ECAF
-			ecaf_crew = 2
+			ecaf_crew = 10
 		}
 	}
 

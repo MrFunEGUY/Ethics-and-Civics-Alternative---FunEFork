@@ -215,10 +215,7 @@ building_hall_judgment = {
 
 	destroy_trigger = {
 		exists = owner
-		OR = {
-			buildings_no_motes = yes
-			owner = { is_regular_empire = no }
-		}
+		owner = { is_regular_empire = no }
 	}
 
 	planet_modifier = {
@@ -253,5 +250,71 @@ building_hall_judgment = {
 
 	show_tech_unlock_if = {
 		is_regular_empire = yes
+	}
+}
+
+building_psi_corps = {
+	base_buildtime = @b2_time
+
+	category = government
+
+	base_cap_amount = 1
+
+	potential = {
+		host_has_dlc = "Utopia"
+		owner = { has_tradition = tr_psionics_psi_corps }
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+		if = {
+			limit = {
+				exists = orbital_defence
+			}
+			orbital_defence = {
+				exists = starbase
+				starbase = {
+					NOR = {
+						has_starbase_building = ring_psi_corps
+						is_starbase_building_building = ring_psi_corps
+					}
+				}
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		NOT = {
+			owner = { has_tradition = tr_psionics_psi_corps }
+		}
+	}
+
+	planet_modifier = {
+		job_telepath_add = 2
+		planet_stability_add = 5
+	}
+
+	country_modifier = { # ECAF
+		country_resource_max_ecaf_crew_add = 150
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+		produces = {
+			ecaf_crew = 2
+		}
+	}
+
+	triggered_desc = {
+		text = job_telepath_effect_desc
 	}
 }

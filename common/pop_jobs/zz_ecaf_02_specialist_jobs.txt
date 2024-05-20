@@ -427,7 +427,7 @@ enforcer = {
 			energy = 2
 		}
 		produces = { # ECAF
-			ecaf_crew = 1
+			ecaf_crew = 2
 		}
 	}
 
@@ -630,6 +630,7 @@ telepath = {
 		category = planet_telepaths
 		produces = {
 			unity = 9
+			ecaf_crew = 5
 		}
 		produces = {
 			trigger = {
@@ -833,7 +834,7 @@ duelist = {
 			alloys = 1
 		}
 		produces = { # ECAF
-			ecaf_crew = 5
+			ecaf_crew = 2
 		}
 	}
 

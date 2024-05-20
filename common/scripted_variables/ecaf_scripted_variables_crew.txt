@@ -1,0 +1,66 @@
+
+## Capital Base
+@base_capital_crew_production = 10
+@base_sector_capital_crew_production = 5
+
+## Starbase Crew Cost
+@starbase_outpost_crew_cost = 10
+@starbase_outpost_crew_upkeep = 0.25
+
+@starbase_starport_crew_cost = 10
+@starbase_starport_crew_upkeep = 0.5
+
+@starbase_starhold_crew_cost = 20
+@starbase_starhold_crew_upkeep = 1
+
+@starbase_starfortress_crew_cost = 20
+@starbase_starfortress_crew_upkeep = 1
+
+@starbase_citadel_crew_cost = 30
+@starbase_citadel_crew_upkeep = 2
+
+## Ship Crew Cost
+@frigate_crew_cost = 50
+@frigate_crew_upkeep = 1
+
+@corvette_crew_cost = 100
+@corvette_crew_upkeep = 5
+
+@destroyer_crew_cost = 200
+@destroyer_crew_upkeep = 7
+
+@cruiser_crew_cost = 500
+@cruiser_crew_upkeep = 10
+
+@battleship_crew_cost = 1000
+@battleship_crew_upkeep = 15
+
+@titan_crew_cost = 1500
+@titan_crew_upkeep = 20
+
+@juggernaut_crew_cost = 5000
+@juggernaut_crew_upkeep = 25
+
+### Army Crew Cost
+
+@assault_army_crew_cost = 25
+@assault_army_crew_upkeep = 0.25
+
+@slave_army_crew_cost = 25
+@slave_army_crew_upkeep = 0.2
+
+@clone_army_crew_cost = 15
+@clone_army_crew_upkeep = 0.1
+
+@psionic_army_crew_cost = 20
+@psionic_army_crew_upkeep = 0.5
+
+@gene_army_crew_cost = 50
+@gene_army_crew_upkeep = 0.75
+
+@machine_assault_3_army_crew_cost = 150
+@machine_assault_3_army_crew_upkeep = 5
+
+@planetary_assault_craft_crew_cost = 30
+@planetary_assault_craft_minerals_cost = 160
+@planetary_assault_craft_alloys_cost = 30

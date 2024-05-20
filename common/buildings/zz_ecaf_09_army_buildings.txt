@@ -32,8 +32,13 @@ building_military_academy = {
 	}
 
 	country_modifier = {
+		country_resource_max_ecaf_crew_add = 1000
 		country_commander_cap_add = 1
 		country_naval_cap_mult = 0.05
+	}
+
+	planet_modifier = {
+		planet_pops_ecaf_crew_produces_mult = 0.05
 	}
 
 	army_modifier = { # ECAF
@@ -97,10 +102,6 @@ building_military_academy = {
 		}
 	}
 
-	country_modifier = { # ECAF
-		country_resource_max_ecaf_crew_add = 50
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -132,6 +133,37 @@ building_military_academy = {
 				owner = { has_valid_civic = civic_martial_brotherhood }
 			}
 			unity = 5
+		}
+		produces = {
+			trigger = {
+				OR = {
+					owner = { has_valid_civic = civic_stratocracy }
+					owner = { has_valid_civic = civic_citizen_service }
+					owner = { has_valid_civic = civic_martial_brotherhood }
+				}
+			}
+			ecaf_crew = 25
+		}
+		produces = {
+			ecaf_crew = 50
+		}
+	}
+
+	ai_resource_production = {
+		ecaf_crew = 50
+		trigger = {
+			always = yes
+		}
+	}
+
+	ai_resource_production = {
+		ecaf_crew = 25
+		trigger = {
+			OR = {
+				owner = { has_valid_civic = civic_stratocracy }
+				owner = { has_valid_civic = civic_citizen_service }
+				owner = { has_valid_civic = civic_martial_brotherhood }
+			}
 		}
 	}
 
@@ -247,6 +279,23 @@ building_stronghold = {
 		upkeep = {
 			energy = 1
 		}
+		produces = {
+			ecaf_crew = 1
+		}
+		produces = {
+			trigger = {
+				OR = {
+					owner = { has_valid_civic = civic_stratocracy }
+					owner = { has_valid_civic = civic_citizen_service }
+					owner = { has_valid_civic = civic_martial_brotherhood }
+				}
+			}
+			ecaf_crew = 5
+		}
+	}
+
+	country_modifier = { # ECAF
+		country_resource_max_ecaf_crew_add = 250
 	}
 
 	prerequisites = {
@@ -280,6 +329,38 @@ building_stronghold = {
 		}
 		text = job_mercenary_effect_desc
 	}
+
+	ai_resource_production = {
+		ecaf_crew = 1
+		trigger = {
+			always = yes
+		}
+	}
+
+	ai_resource_production = {
+		ecaf_crew = 5
+		trigger = {
+			OR = {
+				owner = { has_valid_civic = civic_stratocracy }
+				owner = { has_valid_civic = civic_citizen_service }
+				owner = { has_valid_civic = civic_martial_brotherhood }
+			}
+		}
+	}
+
+	# ai_weight = {
+	# 	base = 1
+	# 	modifier = {
+	# 		factor = 5
+	# 		owner = {
+	# 			used_naval_capacity_percent < 1
+	# 			resource_stockpile_compare = {
+	# 				resource = ecaf_crew
+	# 				value = value:ecaf_crew_max
+	# 			}
+	# 		}
+	# 	}
+	# }
 }
 
 building_fortress = {
@@ -351,6 +432,41 @@ building_fortress = {
 			energy = 1
 			volatile_motes = @b2_rare_upkeep
 		}
+		produces = {
+			ecaf_crew = 2
+		}
+		produces = {
+			trigger = {
+				OR = {
+					owner = { has_valid_civic = civic_stratocracy }
+					owner = { has_valid_civic = civic_citizen_service }
+					owner = { has_valid_civic = civic_martial_brotherhood }
+				}
+			}
+			ecaf_crew = 10
+		}
+	}
+
+	country_modifier = { # ECAF
+		country_resource_max_ecaf_crew_add = 500
+	}
+
+	ai_resource_production = {
+		ecaf_crew = 2
+		trigger = {
+			always = yes
+		}
+	}
+
+	ai_resource_production = {
+		ecaf_crew = 10
+		trigger = {
+			OR = {
+				owner = { has_valid_civic = civic_stratocracy }
+				owner = { has_valid_civic = civic_citizen_service }
+				owner = { has_valid_civic = civic_martial_brotherhood }
+			}
+		}
 	}
 
 	prerequisites = {
@@ -417,6 +533,10 @@ building_planetary_shield_generator = {
 
 	planet_modifier = {
 		planet_orbital_bombardment_damage = -0.5
+	}
+
+	country_modifier = { # ECAF
+		country_resource_max_ecaf_crew_add = 150
 	}
 
 	triggered_planet_modifier = {
@@ -521,6 +641,9 @@ building_planetary_shield_generator = {
 				owner = { has_valid_civic = civic_isolationism }
 			}
 			unity = 4
+		}
+		produces = {
+			ecaf_crew = 1
 		}
 	}
 

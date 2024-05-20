@@ -1432,26 +1432,6 @@ l_russian:
  POP_ATTRACTION_PLURALIST_POS: "§G+ Один из государственных принципов - Эгалитаризм§!"
  POP_ATTRACTION_ENHANCED_LEADERS_POS: "§G+ Политика усовершенствования Лидеров в Империи§!"
 
- policy_gun_rights: "Ношение Оружия"
- policy_gun_rights_desc: "Политики определяющие возможность владения и использования оружия гражданским населением. Разрешение позитивно повлияет на развитие 'оруженой культуры' граждан, но может также негативно отразиться на росте преступности в Империи."
-
- gun_rights_limited: "Ограничено"
- gun_rights_limited_name: "Ограничено"
- gun_rights_limited_desc: "Ношение и применение оружия гражданскими строго контролируется."
-
- gun_rights_allowed: "Разрешено"
- gun_rights_allowed_name: "Разрешено"
- gun_rights_allowed_desc: "Жителям разрешено носить и применять оружие."
-
- gun_rights_disallowed: "Запрещено"
- gun_rights_disallowed_name: "Запрещено"
- gun_rights_disallowed_desc: "Жителям запрещено носить и применять оружие."
-
-
- PROGRESSIVE_GUN_RIGHTS: "Ношение оружия разрешено"
- PROGRESSIVE_NO_GUN_RIGHTS: "Разрешить ношение оружия"
- PROGRESSIVE_GUN_RIGHTS_DESC: "Разрешение на ношение оружия гражданским населением Империи порадует [Root.GetName]."
-
  civic_tooltip_egalitarian: "ЕСТЬ §YДемократия§!"
  civic_tooltip_not_egalitarian: "НЕТ §YДемократия§!"
 
@@ -2830,10 +2810,6 @@ l_russian:
  none_transport_name: "Без предпочтений"
  none_transport_desc: "Мы еще не основали Межзвездную Транспортную Систему"
 
- tech_gun_rights: "Социальная политика: Личное оружие"
- tech_gun_rights_desc: "Разблокирует политики §YЛичное оружие§!."
-
-
  policy_interstellar_telecom: "Телекоммуникации"
  policy_interstellar_telecom_desc: " "
 
@@ -3047,10 +3023,6 @@ l_russian:
  NO_PROGRESSIVE_STATE_MEDIA: "Нет Свободы Слова"
  PROGRESSIVE_STATE_MEDIA: "Свобода Слова"
  NO_PROGRESSIVE_STATE_MEDIA_DESC: "Политика §YГосударственные СМИ§! разочарует [Root.GetName]."
-
- #TOTALITARIAN_NO_GUN_RIGHTS: "Личное Оружие не Разрешено"
- #TOTALITARIAN_GUN_RIGHTS: "Личное Оружие Разрешено"
- TOTALITARIAN_NO_GUN_RIGHTS_DESC: "Запрет гражданам носить личное оружие разочарует [Root.GetName]."
 
  PRIVATE_EDUCATION: "Частное Образование"
  NO_PRIVATE_EDUCATION: "Нет Частного Образования"
@@ -3413,10 +3385,6 @@ l_russian:
  #TOTALITARIAN_NO_DRUG_RIGHTS: "Запретить Рекреационные Наркотики"
  #TOTALITARIAN_DRUG_RIGHTS_DESC: "Жесткий контроль на распространением и применением §YРекреационных Наркотиков§! в нашей Империи понравится [Root.GetName]."
 
- #TOTALITARIAN_GUN_RIGHTS: "Личное Оружие Запрещено"
- #TOTALITARIAN_NO_GUN_RIGHTS: "Запретить Личное Оружие"
- #TOTALITARIAN_GUN_RIGHTS_DESC: "Жесткий контроль на распространением и использованием §YЛичного Оружия§! в нашей Империи понравится [Root.GetName]."
-
  gov_communist_dictatorship: "Коммунистическая Диктатура"
  gov_communist_dictatorship_desc: "политическая система, при которой центральное правительство национализирует средства производства, под лозунгом строительства социализма и прогресса в сторону истинно коммунистического общества."
 
@@ -3660,10 +3628,6 @@ l_russian:
  TOTALITARIAN_POLICE_CONTROL: "Тоталитарный Порядок"
  TOTALITARIAN_NO_POLICE_CONTROL: "Тоталитарный Порядок"
  TOTALITARIAN_POLICE_CONTROL_DESC: "Такие гражданские принципы §YПолицейское Государство§! или §YКибер-Диктатура§! понравятся [Root.GetName]."
-
- TOTALITARIAN_GUN_RIGHTS: "Контроль за оборотом оружия"
- TOTALITARIAN_NO_GUN_RIGHTS: "Контроль за оборотом оружия"
- TOTALITARIAN_GUN_RIGHTS_DESC: "Ограничение на использование §YЛичного Оружия§! (политика) в Империи понравится [Root.GetName]."
 
  TOTALITARIAN_DRUG_RIGHTS: "Контроль за оборотом наркотиков"
  TOTALITARIAN_NO_DRUG_RIGHTS: "Контроль за оборотом наркотиков"

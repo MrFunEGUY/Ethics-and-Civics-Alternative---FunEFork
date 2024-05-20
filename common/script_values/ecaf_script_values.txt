@@ -1,0 +1,4 @@
+ecaf_crew_max = {
+  base = 5000
+  add = modifier:country_resource_max_ecaf_crew_add
+}

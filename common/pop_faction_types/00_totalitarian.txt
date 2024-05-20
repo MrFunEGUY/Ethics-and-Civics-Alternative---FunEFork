@@ -319,20 +319,6 @@ totalitarian = {
 	}
 
 	demand = {
-		title = "TOTALITARIAN_GUN_RIGHTS"
-		unfulfilled_title = "TOTALITARIAN_NO_GUN_RIGHTS"
-		desc = "TOTALITARIAN_GUN_RIGHTS_DESC"
-		fulfilled_effect = 5
-		potential = {
-			exists = owner
-			has_global_flag = cultural_overhaul_active
-		}
-		trigger = {
-			owner = { has_policy_flag = gun_rights_limited }
-		}
-	}
-
-	demand = {
 		title = "NO_FREE_MEDIA"
 		unfulfilled_title = "NO_FREE_MEDIA"
 		desc = "NO_FREE_MEDIA_DESC"
