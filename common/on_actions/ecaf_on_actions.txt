@@ -1,7 +1,6 @@
 # Triggers when the game starts.
 on_game_start = {
 	events = {
-		starter_tech.1
 		cultural_overhaul_flag.1
 		cultural_overhaul_flag.2
 		ethic_rebuid_government_fix.1
