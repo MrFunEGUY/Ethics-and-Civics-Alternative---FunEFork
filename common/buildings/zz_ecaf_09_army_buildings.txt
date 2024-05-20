@@ -331,38 +331,19 @@ building_stronghold = {
 	}
 
 	ai_resource_production = {
-		ecaf_crew = @base_fortress_building_crew_production
+		ecaf_crew = @crew_ai_resource_fortress_production
 		trigger = {
 			always = yes
 		}
 	}
 
 	ai_resource_production = {
-		ecaf_crew = @base_fortress_building_civic_crew_production
+		ecaf_crew = @crew_ai_resource_fortress_civic_production
 		trigger = {
 			OR = {
 				owner = { has_valid_civic = civic_stratocracy }
 				owner = { has_valid_civic = civic_citizen_service }
 				owner = { has_valid_civic = civic_martial_brotherhood }
-			}
-		}
-	}
-
-	ai_weight = {
-		base = 1
-		modifier = {
-			add = 1000
-			owner = { resource_income_compare = { resource = ecaf_crew value < 100 } }
-		}
-		modifier = {
-			add = 1000
-			owner = {
-				is_at_war = yes
-				used_naval_capacity_percent < 0.5
-				resource_stockpile_compare = {
-					resource = ecaf_crew
-					value = value:ecaf_crew_max
-				}
 			}
 		}
 	}
@@ -457,14 +438,14 @@ building_fortress = {
 	}
 
 	ai_resource_production = {
-		ecaf_crew = @incidental_job_crew_production
+		ecaf_crew = @crew_ai_resource_fortress_production_2
 		trigger = {
 			always = yes
 		}
 	}
 
 	ai_resource_production = {
-		ecaf_crew = @other_military_job_crew_production
+		ecaf_crew = @crew_ai_resource_fortress_civic_production_2
 		trigger = {
 			OR = {
 				owner = { has_valid_civic = civic_stratocracy }

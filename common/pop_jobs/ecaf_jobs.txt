@@ -233,9 +233,6 @@ gladiator = {
 		upkeep = {
 			alloys = 0.25
 		}
-		produces = { # ECAF
-			ecaf_crew = @other_military_job_crew_production
-		}
 	}
 	pop_modifier = {
 		pop_defense_armies_add = 1
@@ -324,9 +321,6 @@ templar = {
 		}
 		upkeep = {
 			consumer_goods = 1
-		}
-		produces = { # ECAF
-			ecaf_crew = @other_military_job_crew_production
 		}
 	}
 	country_modifier = {
@@ -690,9 +684,6 @@ mercenary = {
 		category = planet_soldiers
 		upkeep = {
 			consumer_goods = 1
-		}
-		produces = { # ECAF
-			ecaf_crew = @soldier_job_crew_production
 		}
 	}
 	country_modifier = {
@@ -1356,16 +1347,6 @@ commandant = {
 				}
 			}
 			unity = 2
-		}
-		produces = { # ECAF
-			trigger = {
-				exists = owner
-				owner = { has_valid_civic = civic_military_dictatorship }
-			}
-			ecaf_crew = @ruler_military_job_crew_production
-		}
-		produces = { # ECAF
-			ecaf_crew = @other_military_job_crew_production
 		}
 	}
 	planet_modifier = {

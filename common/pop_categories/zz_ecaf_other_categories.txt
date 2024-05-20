@@ -1,0 +1,396 @@
+
+# robot_servant = {
+# 	rank = 0
+# 	display_category = worker
+#
+# 	change_job_threshold = 1.15
+#
+# 	pop_modifier = {
+# 		pop_political_power = -1
+# 		pop_housing_usage_base = 0.5
+# 		pop_amenities_usage_base = 0.5
+# 	}
+#
+# 	assign_to_pop = {
+# 		OR = {
+# 			is_shackled_robot = yes
+# 			is_non_sapient_robot = yes
+# 		}
+# 		NAND = {
+# 			exists = planet
+# 			planet = {
+# 				exists = owner
+# 				owner = { is_gestalt = yes }
+# 			}
+# 		}
+# 	}
+# 	weight = {
+# 		weight = 15
+# 	}
+#
+# 	# scope: pop to be resettled
+# 	allow_resettlement = {
+# 		always = yes
+# 	}
+#
+# 	resettlement_cost = {
+# 		energy = 100
+# 	}
+#
+# 	resources = {
+# 		category = pop_category_robot
+#
+# 		# Additional energy upkeep for robot traits.
+# 		inline_script = "pop_categories/trait_upkeep"
+#
+# 		upkeep = {
+# 			energy = @living_standard_energy_normal
+# 		}
+# 	}
+# }
+
+slave = {
+	rank = 0
+	clothes_texture_index = 2
+	display_category = worker
+
+	change_job_threshold = 1.15
+
+	assign_to_pop = {
+		is_enslaved = yes
+	}
+	weight = {
+		weight = 10
+	}
+
+	pop_modifier = {
+		pop_political_power = -0.75
+		pop_housing_usage_base = 0.75
+		pop_amenities_usage_base = 0.75
+	}
+
+	# scope: pop to be resettled
+	allow_resettlement = {
+		always = yes
+	}
+
+	resettlement_cost = {
+		energy = 50
+	}
+	
+	triggered_pop_modifier = {
+		potential = {
+			owner = {
+				has_councilor = { COUNCILOR = "councilor_barbaric_despoilers" } 
+			}
+		}
+		species_empire_size_mult = 1
+		mult = value:empire_size_councilor_barbaric_despoilers
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_dystopian_society }
+		}
+		planet_crime_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			can_assemble_budding_pop = yes
+		}
+		planet_pop_assembly_organic_add = @plantoid_budding_rate
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			can_assemble_tiyanki_pop = yes
+		}
+		planet_pop_assembly_organic_add = @tiyanki_budding_rate
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				has_councilor = { COUNCILOR = "councilor_indentured_assets" } 
+			}
+		}
+
+		trade_value_add = @councilor_indentured_assets_trade_value
+		mult = value:councilor_level|TYPE|councilor_indentured_assets|
+	}
+	
+	inline_script = "pop_categories/social_classes_triggered_modifiers"
+
+	resources = {
+		category = pop_category_slave
+
+		# Regular food, mineral and energy upkeep.
+		inline_script = "pop_categories/regular_upkeep"
+
+		# Additional energy upkeep for cyborgs.
+		inline_script = "pop_categories/cyborg_upkeep"
+
+		# Exotic Metabolism Upkeep
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				has_trait = trait_exotic_metabolism
+			}
+			exotic_gases = @exotic_metabolism
+		}
+
+		# Resource Production
+
+		# Lithoid Trait Output
+		inline_script = "pop_categories/trait_production"
+
+		produces = {
+			trigger = {
+				is_organic_species = yes
+				has_trait = trait_inorganic_breath
+			}
+			exotic_gases = @inorganic_breath
+		}
+
+		produces = {
+			trigger = {
+				has_trait = trait_drake_scaled
+			}
+			alloys = @drake_scaled_trait_resource_production
+		}
+
+		produces = { ## ECAF
+			ecaf_crew = 1
+			multiplier = value:pop_ecaf_crew_production
+		}
+	}
+}
+
+bio_trophy = {
+	rank = 0
+	clothes_texture_index = 1
+
+	change_job_threshold = 1.25
+
+	assign_to_pop = {
+		exists = owner
+		has_citizenship_type = { type = citizenship_organic_trophy country = owner }
+	}
+	weight = {
+		weight = 5
+	}
+
+	# scope: pop to be resettled
+	allow_resettlement = {
+		always = yes
+	}
+
+	resettlement_cost = {
+		energy = 100
+		unity = 25
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			can_assemble_budding_pop = yes
+		}
+		planet_pop_assembly_organic_add = @plantoid_budding_rate
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			can_assemble_tiyanki_pop = yes
+		}
+		planet_pop_assembly_organic_add = @tiyanki_budding_rate
+	}
+	
+	# Triggered Modifiers
+	inline_script = "pop_categories/social_classes_triggered_modifiers"
+
+	pop_modifier = {
+		pop_political_power = 10
+		pop_housing_usage_base = 1
+		pop_amenities_usage_no_happiness_base = 1
+	}
+
+	resources = {
+		category = pop_category_bio_trophy
+
+		# Regular food, mineral and energy upkeep.
+		inline_script = "pop_categories/regular_upkeep"
+
+		# Additional energy upkeep for cyborgs.
+		inline_script = "pop_categories/cyborg_upkeep"
+
+		# Exotic Metabolism Upkeep
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				has_trait = trait_exotic_metabolism
+			}
+			exotic_gases = @exotic_metabolism
+		}
+
+		# Resource Production 
+		
+		# Lithoid Trait Output
+		inline_script = "pop_categories/trait_production"
+
+		produces = {
+			trigger = {
+				is_organic_species = yes
+				has_trait = trait_inorganic_breath
+			}
+			exotic_gases = @inorganic_breath
+		}
+
+		produces = {
+			trigger = {
+				has_trait = trait_drake_scaled
+			}
+			alloys = @drake_scaled_trait_resource_production
+		}
+
+		produces = { ## ECAF
+			ecaf_crew = 1
+			multiplier = value:pop_ecaf_crew_production
+		}
+	}
+
+	unemployment_penalties = {
+		pop_happiness = -0.80
+	}
+	triggered_pop_modifier = {
+		potential = {
+			has_global_flag = galactic_community_resolution_divinity_comfort_the_fallen
+			is_unemployed = yes
+			NOR = {
+				has_very_high_living_standard_type = yes
+				has_high_living_standard_type = yes
+				has_shared_burden_living_standard_type = yes
+			}
+			owner = {
+				is_galactic_community_member = yes
+			}
+		}
+
+		pop_happiness = 0.10
+	}
+}
+
+criminal = {
+	rank = 1
+	clothes_texture_index = 2
+	change_job_threshold = 2
+
+	demotion_time = 0
+	display_unemployment = no
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_dystopian_society }
+			planet = {
+				OR = {
+					has_branch_office = no
+					branch_office_owner = {
+						is_criminal_syndicate = no
+					}
+				}
+			}
+		}
+		planet_crime_add = 2
+		planet_stability_add = -2
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			NOT = { has_trait = trait_noxious }
+		}
+		key = trait_noxious
+		pop_happiness = 1
+		mult = modifier:pop_non_noxious_happiness
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_noxious
+		}
+		key = trait_noxious
+		pop_non_noxious_happiness = @noxious_happiness_penalty
+	}
+
+	should_apply_unemployment_penalties = {
+		NOR = {
+			has_very_high_living_standard_type = yes
+			has_high_living_standard_type = yes
+		}
+	}
+
+	pop_modifier = {
+		pop_housing_usage_base = 1
+		pop_amenities_usage_base = 1
+	}
+
+	# scope: pop to be resettled
+	allow_resettlement = {
+		always = no
+	}
+
+	resources = {
+		category = pop_category_workers
+
+		# Regular food, mineral and energy upkeep.
+		inline_script = "pop_categories/regular_upkeep"
+
+		# Additional energy upkeep for cyborgs.
+		inline_script = "pop_categories/cyborg_upkeep"
+
+		produces = { ## ECAF
+			ecaf_crew = 1
+			multiplier = value:pop_ecaf_crew_production
+		}
+	}
+}
+
+deviant_drone = {
+	rank = 2
+	clothes_texture_index = 2
+	change_job_threshold = 2
+
+	demotion_time = 0
+
+	should_apply_unemployment_penalties = {
+		always = yes
+	}
+
+	pop_modifier = {
+		pop_housing_usage_base = 1
+		pop_amenities_usage_base = 1
+	}
+
+	# scope: pop to be resettled
+	allow_resettlement = {
+		always = no
+	}
+
+	resources = {
+		category = pop_category_workers
+
+		# Regular food, mineral and energy upkeep.
+		inline_script = "pop_categories/regular_upkeep"
+
+		# Additional energy upkeep for cyborgs.
+		inline_script = "pop_categories/cyborg_upkeep"
+
+		# Additional energy upkeep for robot traits.
+		inline_script = "pop_categories/trait_upkeep"
+
+		produces = { ## ECAF
+			ecaf_crew = 1
+			multiplier = value:pop_ecaf_crew_production
+		}
+	}
+}

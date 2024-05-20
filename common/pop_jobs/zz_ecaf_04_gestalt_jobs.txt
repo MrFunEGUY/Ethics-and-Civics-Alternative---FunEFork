@@ -23,7 +23,6 @@ patrol_drone = {
 		category = planet_jobs
 		produces = {
 			unity = 1
-			ecaf_crew = @incidental_job_crew_production
 		}
 	}
 
@@ -104,9 +103,6 @@ warrior_drone = {
 	}
 	resources = {
 		category = planet_soldiers
-		produces = {
-			ecaf_crew = @soldier_job_crew_production
-		}
 	}
 
 	triggered_country_modifier = {

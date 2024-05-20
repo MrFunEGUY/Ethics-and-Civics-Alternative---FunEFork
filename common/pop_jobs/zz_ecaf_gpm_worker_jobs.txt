@@ -61,10 +61,6 @@ gpm_bunker_army = {
 				}
 			}
 			unity = 2
-			ecaf_crew = @soldier_job_crew_production
-		}
-		produces = { # ECAF
-			ecaf_crew = @soldier_job_crew_production
 		}
 	}
 	

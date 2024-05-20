@@ -426,9 +426,6 @@ enforcer = {
 			}
 			energy = 2
 		}
-		produces = { # ECAF
-			ecaf_crew = @incidental_job_crew_production
-		}
 	}
 
 	pop_modifier = {
@@ -602,6 +599,13 @@ enforcer = {
 			factor = 2
 			has_trait = trait_lithoid
 		}
+
+		modifier = { ## ECAF
+			add = 1000
+			exists = planet.owner
+			planet.owner = { has_monthly_income = { resource = ecaf_crew value < 15 } }
+			NOT = { has_job = enforcer }
+		}
 	}
 }
 
@@ -630,7 +634,6 @@ telepath = {
 		category = planet_telepaths
 		produces = {
 			unity = 9
-			ecaf_crew = @other_military_job_crew_production
 		}
 		produces = {
 			trigger = {
@@ -832,9 +835,6 @@ duelist = {
 		}
 		upkeep = {
 			alloys = 1
-		}
-		produces = { # ECAF
-			ecaf_crew = @incidental_job_crew_production
 		}
 	}
 

@@ -38,17 +38,21 @@ ecaf_crew_expenditure_ships = {
 			factor = 0.5
 			used_naval_capacity_percent >= 1.0
 		}
+	}
+
+	desired_min = {
+		base = 100
 		modifier = {
-			factor = 5
-			used_naval_capacity_percent < 1.0
-			OR = {
-				any_neighbor_country = {
-					has_ascension_perk = ap_become_the_crisis
-				}
-				any_country = {
-					is_crisis_faction = yes
-				}
-			}
+			factor = 3.0
+			has_technology = tech_cruisers
+		}
+		modifier = {
+			factor = 3.5
+			has_technology = tech_battleships
+		}
+		modifier = {
+			factor = 1.5
+			has_technology = tech_titans
 		}
 	}
 }
@@ -68,6 +72,10 @@ ecaf_crew_expenditure_ship_upgrades = {
 			factor = 2.5
 			used_naval_capacity_percent >= 1.0
 		}
+	}
+
+	desired_min = {
+		base = 300
 	}
 }
 
@@ -226,4 +234,14 @@ ecaf_crew_upkeep_armies = {
 	weight = {
 		weight = 0.25
 	}
+}
+
+ecaf_crew_upkeep_armies_peace = {
+	resource = ecaf_crew
+	type = upkeep
+	category = armies
+	potential = {
+		always = yes
+	}
+	weight = { weight = 0.25 }
 }

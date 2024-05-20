@@ -1,5 +1,10 @@
 
+# AI Budget Information
 @crew_ai_resource_mil_academy_production = 50
+@crew_ai_resource_fortress_production = 31 # We what they would get from jobs
+@crew_ai_resource_fortress_production_2 = 62 # We what they would get from jobs
+@crew_ai_resource_fortress_civic_production = 62 # We what they would get from jobs
+@crew_ai_resource_fortress_civic_production_2 = 122 # We what they would get from jobs
 @crew_scaling_plan = 50
 
 ## Crew Cap Add
@@ -21,14 +26,25 @@
 @mil_academy_crew_production = 30
 @mil_academy_civic_crew_production = 15
 
+## Pop Crew Generation
+@base_pop_crew_production = 0.6
+@bio_trophy_pop_crew_production = 0.01
+@worker_pop_crew_production = 0.85
+@slave_pop_crew_production = 0.85
+@specialist_pop_crew_production = 0.75
+@ruler_pop_crew_production = 0.5
+@limited_military_service_crew_mult = 0.75
+
 ## Job Crew Generation
+@criminal_job_crew_production = -0.5
 @incidental_job_crew_production = 2
+@civic_job_crew_production = 2
 @ruler_military_job_crew_production = 3
-@soldier_job_crew_production = 15
+@soldier_job_crew_production = 10
 @other_military_job_crew_production = 5
 
 ## Starbase Crew Cost
-@starbase_outpost_crew_cost = 10
+@starbase_outpost_crew_cost = 5
 @starbase_outpost_crew_upkeep = 0.5
 
 @starbase_starport_crew_cost = 20
@@ -54,16 +70,16 @@
 @destroyer_crew_upkeep = 10
 
 @cruiser_crew_cost = 500
-@cruiser_crew_upkeep = 25
+@cruiser_crew_upkeep = 20
 
 @battleship_crew_cost = 1000
-@battleship_crew_upkeep = 50
+@battleship_crew_upkeep = 30
 
 @titan_crew_cost = 1500
-@titan_crew_upkeep = 75
+@titan_crew_upkeep = 40
 
 @juggernaut_crew_cost = 5000
-@juggernaut_crew_upkeep = 250
+@juggernaut_crew_upkeep = 50
 
 ### Army Crew Cost
 

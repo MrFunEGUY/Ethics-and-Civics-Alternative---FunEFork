@@ -88,8 +88,10 @@ civic_corvee_system = {
 	}
 	modifier = {
 		pop_growth_from_immigration = 0.15
-		pop_political_power = -0.05
 		planet_jobs_worker_produces_mult = 0.05
+		pop_cat_worker_political_power = -3
+		pop_cat_specialist_political_power = -3
+		pop_cat_ruler_political_power = -1
 	}
 }
 
