@@ -5,6 +5,8 @@ is_exile_country = {
 	}
 }
 
+is_rogue_colony = { always = no }
+
 ##########
 
 is_pd_nuked = {

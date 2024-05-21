@@ -2476,6 +2476,8 @@ l_japanese:
 
  gov_military_junta_desc: "This government is a militaristic form of oligarchy, where power rests with a council of high-ranking military officers who oversee all matters of state.$stratocracy_gov_reg_loc$"
 
+ gov_defensive_union_desc: "This government unites its people in the common cause of protection against external threats.$stratocracy_gov_reg_loc$"
+
  gov_military_commissariat_desc: "This government is nominally democratic, but the dividing line between the civil administration and the military has blurred to the point where they have largely become one and the same.$stratocracy_gov_reg_loc$"
 
  gov_martial_empire_desc: "This government is a militaristic form of hereditary autocracy, where the state exists largely to support the military. Martial ability is highly valued, and all citizens are regularly drilled in matters of war.$stratocracy_gov_reg_loc$"

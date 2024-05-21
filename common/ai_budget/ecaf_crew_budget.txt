@@ -25,6 +25,15 @@ ecaf_crew_expenditure_ships = {
 	}
 	weight = {
 		weight = 1
+
+		modifier = {
+			factor = 10
+			resource_stockpile_compare = {
+				resource = ecaf_crew
+				value = value:ecaf_crew_max
+			}
+		}
+
 		# spend more ecaf_crew building ships while at war
 		modifier = {
 			factor = 2
@@ -41,19 +50,19 @@ ecaf_crew_expenditure_ships = {
 	}
 
 	desired_min = {
-		base = 100
-		modifier = {
-			factor = 3.0
-			has_technology = tech_cruisers
-		}
-		modifier = {
-			factor = 3.5
-			has_technology = tech_battleships
-		}
-		modifier = {
-			factor = 1.5
-			has_technology = tech_titans
-		}
+		base = 50
+		# modifier = {
+		# 	factor = 3.0
+		# 	has_technology = tech_cruisers
+		# }
+		# modifier = {
+		# 	factor = 3.5
+		# 	has_technology = tech_battleships
+		# }
+		# modifier = {
+		# 	factor = 1.5
+		# 	has_technology = tech_titans
+		# }
 	}
 }
 
@@ -73,10 +82,6 @@ ecaf_crew_expenditure_ship_upgrades = {
 			used_naval_capacity_percent >= 1.0
 		}
 	}
-
-	desired_min = {
-		base = 300
-	}
 }
 
 ecaf_crew_expenditure_starbases = {
@@ -91,26 +96,19 @@ ecaf_crew_expenditure_starbases = {
 	weight = {
 		weight = 1
 
+		modifier = {
+			factor = 10
+			resource_stockpile_compare = {
+				resource = ecaf_crew
+				value = value:ecaf_crew_max
+			}
+		}
+
 		# spend more on starbase upgrades if at fleet cap
 		modifier = {
 			factor = 2
 			used_naval_capacity_percent >= 1.0
 		}
-
-		# Reduce spending on claiming new systems if we have unclaimed planets
-		# modifier = {
-		# 	is_machine_empire = yes
-		# 	has_country_resource = { type = ecaf_crew amount < 50 }
-		# 	factor = 0.25 # more aggresive saving for robots since their colony ships cost more
-		# 	ai_colonize_plans > 0
-		# }
-		# # Reduce spending on claiming new systems if we have unclaimed planets
-		# modifier = {
-		# 	is_machine_empire = no
-		# 	has_country_resource = { type = ecaf_crew amount < 20 }
-		# 	factor = 0.50
-		# 	ai_colonize_plans > 0
-		# }
 
 		modifier = {
 			factor = 1.5
@@ -140,14 +138,7 @@ ecaf_crew_expenditure_starbases_expand = {
 	category = starbases
 
 	potential = {
-		# has_ai_expansion_plan = yes
-		# highest_threat < 50
-		NOT = {
-			is_country_type = fallen_empire
-			is_country_type = awakened_fallen_empire
-			# ai_colonize_plans > 0
-		}
-		# has_resource = { type = influence amount > 75 }
+		is_fallen_empire = no
 	}
 
 	weight = {
@@ -210,7 +201,14 @@ ecaf_crew_upkeep_ships = {
 		always = yes
 	}
 	weight = {
-		weight = 1.25
+		weight = 0.8
+		modifier = {
+			factor = 10
+			resource_income_compare = {
+				resource = ecaf_crew
+				value > 200
+			}
+		}
 	}
 }
 
@@ -220,21 +218,21 @@ ecaf_crew_upkeep_starbases = {
 	category = starbases
 	potential = { always = yes }
 	weight = {
-		weight = 1.0
+		weight = 0.6
 	}
 }
 
-ecaf_crew_upkeep_armies = {
-	resource = ecaf_crew
-	type = upkeep
-	category = armies
-	potential = {
-		always = yes
-	}
-	weight = {
-		weight = 0.25
-	}
-}
+# ecaf_crew_upkeep_armies = {
+# 	resource = ecaf_crew
+# 	type = upkeep
+# 	category = armies
+# 	potential = {
+# 		always = yes
+# 	}
+# 	weight = {
+# 		weight = 0.25
+# 	}
+# }
 
 ecaf_crew_upkeep_armies_peace = {
 	resource = ecaf_crew

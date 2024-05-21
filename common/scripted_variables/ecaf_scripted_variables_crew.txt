@@ -27,12 +27,12 @@
 @mil_academy_civic_crew_production = 15
 
 ## Pop Crew Generation
-@base_pop_crew_production = 0.6
-@bio_trophy_pop_crew_production = 0.01
+@base_pop_crew_production = 1
+@bio_trophy_pop_crew_production = -0.6
 @worker_pop_crew_production = 0.85
 @slave_pop_crew_production = 0.85
-@specialist_pop_crew_production = 0.75
-@ruler_pop_crew_production = 0.5
+@specialist_pop_crew_production = 0.65
+@ruler_pop_crew_production = 0.35
 @limited_military_service_crew_mult = 0.75
 
 ## Job Crew Generation
@@ -45,58 +45,58 @@
 
 ## Starbase Crew Cost
 @starbase_outpost_crew_cost = 5
-@starbase_outpost_crew_upkeep = 0.5
+@starbase_outpost_crew_upkeep = 0.1
 
 @starbase_starport_crew_cost = 20
-@starbase_starport_crew_upkeep = 1
+@starbase_starport_crew_upkeep = 0.2
 
 @starbase_starhold_crew_cost = 30
-@starbase_starhold_crew_upkeep = 1.5
+@starbase_starhold_crew_upkeep = 0.3
 
 @starbase_starfortress_crew_cost = 40
-@starbase_starfortress_crew_upkeep = 2
+@starbase_starfortress_crew_upkeep = 0.4
 
 @starbase_citadel_crew_cost = 50
-@starbase_citadel_crew_upkeep = 2.5
+@starbase_citadel_crew_upkeep = 0.5
 
 ## Ship Crew Cost
 @frigate_crew_cost = 50
-@frigate_crew_upkeep = 2
+@frigate_crew_upkeep = 0.25
 
 @corvette_crew_cost = 100
-@corvette_crew_upkeep = 5
+@corvette_crew_upkeep = 0.5
 
 @destroyer_crew_cost = 200
-@destroyer_crew_upkeep = 10
+@destroyer_crew_upkeep = 1
 
 @cruiser_crew_cost = 500
-@cruiser_crew_upkeep = 20
+@cruiser_crew_upkeep = 2.5
 
 @battleship_crew_cost = 1000
-@battleship_crew_upkeep = 30
+@battleship_crew_upkeep = 5
 
 @titan_crew_cost = 1500
-@titan_crew_upkeep = 40
+@titan_crew_upkeep = 7.5
 
 @juggernaut_crew_cost = 5000
-@juggernaut_crew_upkeep = 50
+@juggernaut_crew_upkeep = 25
 
 ### Army Crew Cost
 
-@assault_army_crew_cost = 25
-@assault_army_crew_upkeep = 1
+@assault_army_crew_cost = 15
+@assault_army_crew_upkeep = 0.05
 
-@slave_army_crew_cost = 25
-@slave_army_crew_upkeep = 0.5
+@slave_army_crew_cost = 15
+@slave_army_crew_upkeep = 0.03
 
-@clone_army_crew_cost = 15
-@clone_army_crew_upkeep = 0.25
+@clone_army_crew_cost = 10
+@clone_army_crew_upkeep = 0.01
 
 @psionic_army_crew_cost = 20
-@psionic_army_crew_upkeep = 2
+@psionic_army_crew_upkeep = 0.08
 
-@gene_army_crew_cost = 50
-@gene_army_crew_upkeep = 2.5
+@gene_army_crew_cost = 30
+@gene_army_crew_upkeep = 0.1
 
 @machine_assault_3_army_crew_cost = 150
 @machine_assault_3_army_crew_upkeep = 5

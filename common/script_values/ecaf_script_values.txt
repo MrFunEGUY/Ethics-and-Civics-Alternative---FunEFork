@@ -58,6 +58,14 @@ pop_ecaf_crew_production = {
 		add = @civic_job_crew_production
 	}
 
+	modifier = {
+		owner = {
+			num_pops < 50
+			is_rogue_colony = yes
+		}
+		factor = owner.value:ecaf_crew_fatherland_mult
+	}
+
 	# Recruitment Policy
 	# modifier = { exists = owner owner = { has_policy_flag = naval_recruitment_elite } factor = 0.25 } #-75%
 	# modifier = { exists = owner owner = { has_policy_flag = naval_recruitment_chiss_elite } factor = 0.5 } #-50%
@@ -67,4 +75,10 @@ pop_ecaf_crew_production = {
 	# modifier = { exists = owner owner = { has_policy_flag = naval_recruitment_encouraged_service } }
 	# modifier = { exists = owner owner = { has_policy_flag = naval_recruitment_limited_conscription } factor = 1.25 } #+25%
 	# modifier = { exists = owner owner = { has_policy_flag = naval_recruitment_extensive_conscription } factor = 1.50 } #+50%
+}
+
+ecaf_crew_fatherland_mult = {
+	base = 12
+	divide = trigger:num_pops
+	multiply = 2
 }
