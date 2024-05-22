@@ -6,7 +6,7 @@ ecaf_crew = {
 	category = other
 	tradable = no
 	allow_deficit = yes
-	max = 5000
+	max = @ecaf_crew_max_amount
 	special_max_amount = yes
 
 	deficit_modifier = ecaf_crew_deficit

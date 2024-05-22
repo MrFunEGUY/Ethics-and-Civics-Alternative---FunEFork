@@ -1,106 +1,246 @@
+## Crew
+
+@ecaf_crew_max_amount = 500
 
 # AI Budget Information
-@crew_ai_resource_mil_academy_production = 50
-@crew_ai_resource_fortress_production = 31 # We what they would get from jobs
-@crew_ai_resource_fortress_production_2 = 62 # We what they would get from jobs
-@crew_ai_resource_fortress_civic_production = 62 # We what they would get from jobs
-@crew_ai_resource_fortress_civic_production_2 = 122 # We what they would get from jobs
-@crew_scaling_plan = 50
+@crew_ai_resource_mil_academy_production = 10
+@crew_ai_resource_fortress_production = 6.2
+@crew_ai_resource_fortress_production_2 = 12.4
+@crew_ai_resource_fortress_civic_production = 12.4
+@crew_ai_resource_fortress_civic_production_2 = 24.4
+@crew_scaling_plan = 10
 
 ## Crew Cap Add
-@slave_reg_capital_crew_max_add = 100
-@slave_major_capital_crew_max_add = 200
-@major_capital_crew_max_add = 100
-@system_capital_crew_max_add = 250
-@small_military_building_crew_max_add = 75
-@fortress_building_crew_max_add = 100
-@fortress_building_crew_2_max_add = 250
+@slave_reg_capital_crew_max_add = 20
+@slave_major_capital_crew_max_add = 40
+@major_capital_crew_max_add = 20
+@system_capital_crew_max_add = 50
+@small_military_building_crew_max_add = 15
+@fortress_building_crew_max_add = 50
+@fortress_building_crew_2_max_add = 100
 
 ## Planet Crew Generation
-@base_capital_crew_production = 10
-@base_sector_capital_crew_production = 2
-@small_capital_crew_production = 5
-@base_fortress_building_crew_production = 1
-@base_fortress_building_civic_crew_production = 2
+@base_capital_crew_production = 2
+@base_sector_capital_crew_production = 0.4
+@small_capital_crew_production = 1
+@base_fortress_building_crew_production = 0.2
+@base_fortress_building_civic_crew_production = 0.4
 
-@mil_academy_crew_production = 30
-@mil_academy_civic_crew_production = 15
+@mil_academy_crew_production = 6
+@mil_academy_civic_crew_production = 3
+
+## Starbase Buildings
+@recruitment_office_crew_mult = 0.1
+@fleet_academy_crew_production = 2
+@crew_quarters_crew_max_add = 50
+@naval_logistics_crew_max_add = 25
+@mercenary_garrison_crew_max_add = 15
 
 ## Pop Crew Generation
-@base_pop_crew_production = 1
-@bio_trophy_pop_crew_production = -0.6
-@worker_pop_crew_production = 0.85
-@slave_pop_crew_production = 0.85
-@specialist_pop_crew_production = 0.65
-@ruler_pop_crew_production = 0.35
+@base_pop_crew_production = 0.15
+@bio_trophy_pop_crew_production = -0.09
+@worker_pop_crew_production = 0.1275
+@precursor_pop_crew_production = 0.0375
+@slave_pop_crew_production = 0.1275
+@specialist_pop_crew_production = 0.0975
+@ruler_pop_crew_production = 0.0525
+
+@pacifist_pop_crew_production = -0.2625
+@militarist_pop_crew_production = 0.15
+
+@battle_thrall_military_service_crew_mult = 2
 @limited_military_service_crew_mult = 0.75
+@occupation_crew_mult = 0
 
 ## Job Crew Generation
-@criminal_job_crew_production = -0.5
-@incidental_job_crew_production = 2
-@civic_job_crew_production = 2
-@ruler_military_job_crew_production = 3
-@soldier_job_crew_production = 10
-@other_military_job_crew_production = 5
+@criminal_job_crew_mult = -1.75
+@civic_job_crew_mult = 1.25
+@hedonist_job_crew_mult = 0.01
+
+@incidental_job_crew_production = 3
+@ruler_military_job_crew_production = 0.45
+@soldier_job_crew_production = 1.5
+@other_military_job_crew_production = 0.75
+
+## Pop Crew Generation
+# @base_pop_crew_production = 0.1
+# @bio_trophy_pop_crew_production = -0.06
+# @worker_pop_crew_production = 0.085
+# @precursor_pop_crew_production = 0.025
+# @slave_pop_crew_production = 0.085
+# @specialist_pop_crew_production = 0.065
+# @ruler_pop_crew_production = 0.035
+# @limited_military_service_crew_mult = 0.075
+#
+# @pacifist_pop_crew_production = -0.175
+# @militarist_pop_crew_production = 0.1
+#
+# ## Job Crew Generation
+# @criminal_job_crew_mult = -1.5
+# @incidental_job_crew_production = 2
+# @civic_job_crew_mult = 1.25
+# @ruler_military_job_crew_production = 0.3
+# @soldier_job_crew_production = 1
+# @other_military_job_crew_production = 0.5
+# @hedonist_job_crew_mult = 0.01
 
 ## Starbase Crew Cost
-@starbase_outpost_crew_cost = 5
-@starbase_outpost_crew_upkeep = 0.1
+@starbase_outpost_crew_cost = 1
+@starbase_outpost_crew_upkeep = 0.075
 
-@starbase_starport_crew_cost = 20
-@starbase_starport_crew_upkeep = 0.2
+@starbase_starport_crew_cost = 4
+@starbase_starport_crew_upkeep = 0.125
 
-@starbase_starhold_crew_cost = 30
-@starbase_starhold_crew_upkeep = 0.3
+@starbase_starhold_crew_cost = 6
+@starbase_starhold_crew_upkeep = 0.175
 
-@starbase_starfortress_crew_cost = 40
-@starbase_starfortress_crew_upkeep = 0.4
+@starbase_starfortress_crew_cost = 8
+@starbase_starfortress_crew_upkeep = 0.225
 
-@starbase_citadel_crew_cost = 50
-@starbase_citadel_crew_upkeep = 0.5
+@starbase_citadel_crew_cost = 10
+@starbase_citadel_crew_upkeep = 0.275
 
 ## Ship Crew Cost
-@frigate_crew_cost = 50
-@frigate_crew_upkeep = 0.25
+@frigate_crew_cost = 10
+@frigate_crew_upkeep = 0.05
 
-@corvette_crew_cost = 100
-@corvette_crew_upkeep = 0.5
+@corvette_crew_cost = 20
+@corvette_crew_upkeep = 0.1
 
-@destroyer_crew_cost = 200
-@destroyer_crew_upkeep = 1
+@destroyer_crew_cost = 40
+@destroyer_crew_upkeep = 0.2
 
-@cruiser_crew_cost = 500
-@cruiser_crew_upkeep = 2.5
+@cruiser_crew_cost = 100
+@cruiser_crew_upkeep = 0.5
 
-@battleship_crew_cost = 1000
-@battleship_crew_upkeep = 5
+@battleship_crew_cost = 200
+@battleship_crew_upkeep = 1
 
-@titan_crew_cost = 1500
-@titan_crew_upkeep = 7.5
+@titan_crew_cost = 300
+@titan_crew_upkeep = 1.5
 
-@juggernaut_crew_cost = 5000
-@juggernaut_crew_upkeep = 25
+@juggernaut_crew_cost = 1000
+@juggernaut_crew_upkeep = 10
+
+@colossus_crew_cost = 2000
+@colossus_crew_upkeep = 50
 
 ### Army Crew Cost
+@assault_army_crew_cost = 3
+@assault_army_crew_upkeep = 0.01
+@slave_army_crew_cost = 3
+@slave_army_crew_upkeep = 0.006
+@clone_army_crew_cost = 2
+@clone_army_crew_upkeep = 0.002
+@psionic_army_crew_cost = 4
+@psionic_army_crew_upkeep = 0.016
+@gene_army_crew_cost = 6
+@gene_army_crew_upkeep = 0.02
+@machine_assault_3_army_crew_cost = 30
+@machine_assault_3_army_crew_upkeep = 1
 
-@assault_army_crew_cost = 15
-@assault_army_crew_upkeep = 0.05
-
-@slave_army_crew_cost = 15
-@slave_army_crew_upkeep = 0.03
-
-@clone_army_crew_cost = 10
-@clone_army_crew_upkeep = 0.01
-
-@psionic_army_crew_cost = 20
-@psionic_army_crew_upkeep = 0.08
-
-@gene_army_crew_cost = 30
-@gene_army_crew_upkeep = 0.1
-
-@machine_assault_3_army_crew_cost = 150
-@machine_assault_3_army_crew_upkeep = 5
-
-# @planetary_assault_craft_crew_cost = 30
-# @planetary_assault_craft_minerals_cost = 160
-# @planetary_assault_craft_alloys_cost = 30
+# # AI Budget Information
+# @crew_ai_resource_mil_academy_production = 50
+# @crew_ai_resource_fortress_production = 31 # We what they would get from jobs
+# @crew_ai_resource_fortress_production_2 = 62 # We what they would get from jobs
+# @crew_ai_resource_fortress_civic_production = 62 # We what they would get from jobs
+# @crew_ai_resource_fortress_civic_production_2 = 122 # We what they would get from jobs
+# @crew_scaling_plan = 50
+#
+# ## Crew Cap Add
+# @slave_reg_capital_crew_max_add = 100
+# @slave_major_capital_crew_max_add = 200
+# @major_capital_crew_max_add = 100
+# @system_capital_crew_max_add = 250
+# @small_military_building_crew_max_add = 75
+# @fortress_building_crew_max_add = 100
+# @fortress_building_crew_2_max_add = 250
+#
+# ## Planet Crew Generation
+# @base_capital_crew_production = 10
+# @base_sector_capital_crew_production = 2
+# @small_capital_crew_production = 5
+# @base_fortress_building_crew_production = 1
+# @base_fortress_building_civic_crew_production = 2
+#
+# @mil_academy_crew_production = 30
+# @mil_academy_civic_crew_production = 15
+#
+# ## Pop Crew Generation
+# @base_pop_crew_production = 1
+# @bio_trophy_pop_crew_production = -0.6
+# @worker_pop_crew_production = 0.85
+# @slave_pop_crew_production = 0.85
+# @specialist_pop_crew_production = 0.65
+# @ruler_pop_crew_production = 0.35
+# @limited_military_service_crew_mult = 0.75
+#
+# ## Job Crew Generation
+# @criminal_job_crew_production = -0.5
+# @incidental_job_crew_production = 2
+# @civic_job_crew_production = 2
+# @ruler_military_job_crew_production = 3
+# @soldier_job_crew_production = 10
+# @other_military_job_crew_production = 5
+#
+# ## Starbase Crew Cost
+# @starbase_outpost_crew_cost = 5
+# @starbase_outpost_crew_upkeep = 0.1
+#
+# @starbase_starport_crew_cost = 20
+# @starbase_starport_crew_upkeep = 0.2
+#
+# @starbase_starhold_crew_cost = 30
+# @starbase_starhold_crew_upkeep = 0.3
+#
+# @starbase_starfortress_crew_cost = 40
+# @starbase_starfortress_crew_upkeep = 0.4
+#
+# @starbase_citadel_crew_cost = 50
+# @starbase_citadel_crew_upkeep = 0.5
+#
+# ## Ship Crew Cost
+# @frigate_crew_cost = 50
+# @frigate_crew_upkeep = 0.25
+#
+# @corvette_crew_cost = 100
+# @corvette_crew_upkeep = 0.5
+#
+# @destroyer_crew_cost = 200
+# @destroyer_crew_upkeep = 1
+#
+# @cruiser_crew_cost = 500
+# @cruiser_crew_upkeep = 2.5
+#
+# @battleship_crew_cost = 1000
+# @battleship_crew_upkeep = 5
+#
+# @titan_crew_cost = 1500
+# @titan_crew_upkeep = 7.5
+#
+# @juggernaut_crew_cost = 5000
+# @juggernaut_crew_upkeep = 25
+#
+# ### Army Crew Cost
+#
+# @assault_army_crew_cost = 15
+# @assault_army_crew_upkeep = 0.05
+#
+# @slave_army_crew_cost = 15
+# @slave_army_crew_upkeep = 0.03
+#
+# @clone_army_crew_cost = 10
+# @clone_army_crew_upkeep = 0.01
+#
+# @psionic_army_crew_cost = 20
+# @psionic_army_crew_upkeep = 0.08
+#
+# @gene_army_crew_cost = 30
+# @gene_army_crew_upkeep = 0.1
+#
+# @machine_assault_3_army_crew_cost = 150
+# @machine_assault_3_army_crew_upkeep = 5
+#
+# # @planetary_assault_craft_crew_cost = 30
+# # @planetary_assault_craft_minerals_cost = 160
+# # @planetary_assault_craft_alloys_cost = 30

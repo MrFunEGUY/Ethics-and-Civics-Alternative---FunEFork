@@ -11,7 +11,7 @@ country_event = {
 	}
 	
 	immediate = {
-		add_resource = { ecaf_crew = 1000 }
+		add_resource = { ecaf_crew = 500 }
 
 		if = {
 			limit = { has_valid_civic = civic_star_settlers }

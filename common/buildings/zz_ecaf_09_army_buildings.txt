@@ -136,11 +136,7 @@ building_military_academy = {
 		}
 		produces = {
 			trigger = {
-				OR = {
-					owner = { has_valid_civic = civic_stratocracy }
-					owner = { has_valid_civic = civic_citizen_service }
-					owner = { has_valid_civic = civic_martial_brotherhood }
-				}
+				owner = { has_valid_civic = civic_citizen_service }
 			}
 			ecaf_crew = @mil_academy_civic_crew_production
 		}
@@ -284,11 +280,7 @@ building_stronghold = {
 		}
 		produces = {
 			trigger = {
-				OR = {
-					owner = { has_valid_civic = civic_stratocracy }
-					owner = { has_valid_civic = civic_citizen_service }
-					owner = { has_valid_civic = civic_martial_brotherhood }
-				}
+				owner = { has_valid_civic = civic_citizen_service }
 			}
 			ecaf_crew = @base_fortress_building_civic_crew_production
 		}
@@ -340,11 +332,7 @@ building_stronghold = {
 	ai_resource_production = {
 		ecaf_crew = @crew_ai_resource_fortress_civic_production
 		trigger = {
-			OR = {
-				owner = { has_valid_civic = civic_stratocracy }
-				owner = { has_valid_civic = civic_citizen_service }
-				owner = { has_valid_civic = civic_martial_brotherhood }
-			}
+			owner = { has_valid_civic = civic_citizen_service }
 		}
 	}
 }
@@ -423,11 +411,7 @@ building_fortress = {
 		}
 		produces = {
 			trigger = {
-				OR = {
-					owner = { has_valid_civic = civic_stratocracy }
-					owner = { has_valid_civic = civic_citizen_service }
-					owner = { has_valid_civic = civic_martial_brotherhood }
-				}
+				owner = { has_valid_civic = civic_citizen_service }
 			}
 			ecaf_crew = @other_military_job_crew_production
 		}
@@ -447,11 +431,7 @@ building_fortress = {
 	ai_resource_production = {
 		ecaf_crew = @crew_ai_resource_fortress_civic_production_2
 		trigger = {
-			OR = {
-				owner = { has_valid_civic = civic_stratocracy }
-				owner = { has_valid_civic = civic_citizen_service }
-				owner = { has_valid_civic = civic_martial_brotherhood }
-			}
+			owner = { has_valid_civic = civic_citizen_service }
 		}
 	}
 

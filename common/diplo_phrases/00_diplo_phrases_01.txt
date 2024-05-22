@@ -839,18 +839,18 @@ action_declare_war = {
 				}
 			}
 		}
-		A_DOW_ACCEPT_04 = {
-			weight = { weight = 50 }
-			trigger = {
-				has_ai_personality = assimilators
-				FROM = {
-					NOT = {
-						is_species_class = ROBOT
-						has_authority = auth_machine_intelligence
-					}
-				}
-			}
-		}
+		# A_DOW_ACCEPT_04 = {
+		# 	weight = { weight = 50 }
+		# 	trigger = {
+		# 		has_ai_personality = assimilators
+		# 		FROM = {
+		# 			NOT = {
+		# 				is_species_class = ROBOT
+		# 				has_authority = auth_machine_intelligence
+		# 			}
+		# 		}
+		# 	}
+		# }
 		# Gen Machine Empire DOWs
 		MECH_DOW_ACCEPT_01 = {
 			trigger = {
@@ -1142,21 +1142,21 @@ action_declare_war = {
 		}
 	}
 	propose_vote = {
-		01_DOW_VOTE_PROPOSE = {
-			trigger = {
-				from = {
-					NOR = {
-						has_ethic = ethic_gestalt_consciousness
-						is_megacorp = yes
-					}
-				}
-			}
-		}
-		HM_DOW_VOTE_PROPOSE = {
-			trigger = {
-				from = { has_ai_personality = hive_mind }
-			}
-		}
+		# 01_DOW_VOTE_PROPOSE = {
+		# 	trigger = {
+		# 		from = {
+		# 			NOR = {
+		# 				has_ethic = ethic_gestalt_consciousness
+		# 				is_megacorp = yes
+		# 			}
+		# 		}
+		# 	}
+		# }
+		# HM_DOW_VOTE_PROPOSE = {
+		# 	trigger = {
+		# 		from = { has_ai_personality = hive_mind }
+		# 	}
+		# }
 	}
 }
 
@@ -5704,31 +5704,12 @@ action_insult = {
 	}
 
 	propose = {
-		 SOCIALISM_ICON: "£socialism£"
- CAPITALISM_ICON: "£capitalism£"
-
- job_politician_plural_with_icon: "£job_politician£ $job_politician_plural$"
-
- #GetOppositionGalcomLobbyists
- galcom_movement_socialism: "Movement for Empowering Communities"
- galcom_movement_capitalism: "Organization for the Facilitation of Trickle-Down Economics"
-
- paragon_origin_rebel_socialism: "Community Oriented"
- paragon_origin_rebel_socialism_desc: "The new society, remembering the bitterness of galactic civil war, understands the importance of looking after your neighbors. We strive to accomplish our goals, together."
- paragon_origin_rebel_capitalism: "Competitive Spirit"
- paragon_origin_rebel_capitalism_desc: "Competition is the engine of progress. Our civil war taught us the value of the individual's spirit. While the war was devastating, it demonstrated that there are always opportunities to capitalize on."
-
- paragon.5213.socialism: "We will take care of each other."
- paragon.5213.capitalism: "We must seek new opportunities."
-
- mod_ship_military_alloys_cost_mult: "Military Ship Alloy Cost"
-
- 01_INSULT_PROPOSE_IND_COL = {
+		01_INSULT_PROPOSE_IND_COL = {
 			trigger = {
 				is_authoritarian = yes
 				FROM = {
 					is_egalitarian = yes
-					NOT = { is_megacorp = yes }
+					NOT = { has_authority = auth_corporate }
 				}
 			}
 		}

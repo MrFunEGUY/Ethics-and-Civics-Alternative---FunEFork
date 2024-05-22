@@ -1820,6 +1820,182 @@ trade_policy = {
 }
 
 ### ECAF
+enlistment_policy = {
+	potential = {
+		is_country_type = default
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+	}
+
+	#Volunteer Only
+	option = {
+		name = "enlistment_volunteer"
+
+		policy_flags = {
+			enlistment_volunteer
+		}
+
+		modifier = {
+			country_influence_produces_mult = 0.25
+			pop_ethic_egalitarian_attraction_mult = 0.02
+		}
+
+		valid = {
+			is_primitive = no
+		}
+
+		AI_weight = {
+			weight = 2
+			modifier = {
+				factor = 4
+				has_valid_civic = civic_private_militaries
+			}
+			modifier = {
+				factor = 2
+				has_ethic = ethic_pacifist
+			}
+			modifier = {
+				factor = 4
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+	}
+	# Mandatory Service
+	option = {
+		name = "enlistment_mandatory"
+
+		policy_flags = {
+			enlistment_mandatory
+		}
+
+		modifier = {
+			job_soldier_per_pop = 0.02
+			country_ecaf_crew_produces_mult = 0.15
+			pop_ethic_militarist_attraction_mult = 0.05
+		}
+
+		valid = {
+			is_primitive = no
+
+			NOT = { has_valid_civic = civic_martial_brotherhood }
+
+			OR = {
+				any_war = { is_total_war = yes }
+				is_pacifist = no
+			}
+		}
+
+		AI_weight = {
+			weight = 3
+			modifier = {
+				factor = 2
+				has_ethic = ethic_militarist
+			}
+			modifier = {
+				factor = 3
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 2
+				has_valid_civic = civic_citizen_service
+			}
+		}
+	}
+	#Extensive enlistment
+	option = {
+		name = "enlistment_extended"
+
+		policy_flags = {
+			enlistment_extended
+		}
+
+		modifier = {
+			job_soldier_per_pop = 0.04
+			country_ecaf_crew_produces_mult = 0.25
+			pop_ethic_militarist_attraction_mult = 0.2
+		}
+
+		valid = {
+			is_country_type = default
+
+			NOR = {
+				has_valid_civic = civic_private_militaries
+				has_valid_civic = civic_martial_brotherhood
+			}
+
+			OR = {
+				any_war = { is_total_war = yes }
+				is_pacifist = no
+			}
+		}
+
+		AI_weight = {
+			weight = 1.5
+			modifier = {
+				factor = 5
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 2
+				has_valid_civic = civic_distinguished_admiralty
+			}
+		}
+	}
+	# Wartime Draft
+	option = {
+		name = "enlistment_draft"
+
+		policy_flags = {
+			enlistment_draft
+		}
+
+		modifier = {
+			job_soldier_per_pop = 0.08
+			country_ecaf_crew_produces_mult = 0.5
+			pop_ethic_militarist_attraction_mult = 0.15
+		}
+
+		valid = {
+			is_primitive = no
+			is_at_war = yes
+
+			OR = {
+				any_war = { is_total_war = yes }
+				NOT = { has_ethic = ethic_fanatic_pacifist }
+			}
+		}
+
+		AI_weight = {
+			weight = 2
+			modifier = {
+				factor = 20
+				any_war = { is_total_war = yes }
+			}
+		}
+	}
+	option = { ## Primitive Dummy
+		name = "enlistment_volunteer"
+
+		potential = {
+			is_primitive = yes
+		}
+
+		policy_flags = {
+			enlistment_volunteer
+		}
+
+		modifier = {
+		}
+
+		valid = {
+			is_primitive = yes
+		}
+
+		AI_weight = {
+			weight = 1
+		}
+	}
+}
+
 economic_stance = {
 	potential = {
 		is_gestalt = no
