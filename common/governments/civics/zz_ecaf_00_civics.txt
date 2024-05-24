@@ -968,7 +968,7 @@ civic_warrior_culture = {
 		civics = {
 			NOR = {
 				value = civic_pleasure_seekers
-				value = civic_pleasure_seekers
+				value = civic_dystopian_society
 			}
 		}
 	}
@@ -1011,7 +1011,7 @@ civic_warrior_culture = {
 		army_experience_gain_mult = 0.15
 	}
 	swap_type = {
-		# description = "civic_tooltip_warrior_culture_effects"
+		description = "civic_tooltip_warrior_culture_effects"
 		trigger = {
 			host_has_dlc = "Overlord"
 		}
@@ -2416,8 +2416,15 @@ civic_pleasure_seekers = {
 		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
 	}
 	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_socialism
+				value = ethic_socialism
+				value = ethic_fanatic_socialism
+			}
+		}
 		civics = {
-			NOT = {
+			NOR = {
 				value = civic_warrior_culture
 				value = civic_shared_burden
 				value = civic_slaver_guilds # would enslave hedonists

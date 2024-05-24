@@ -154,8 +154,6 @@ gov_martial_dictatorship = {
 
 	should_force_rename = yes
 
-	leader_class = commander	# Initial ruler will become this if elected out of office
-
 	possible = {
 		OR = {
 			has_authority = auth_dictatorial
@@ -175,8 +173,6 @@ gov_assembly_of_clans = {
 	ruler_title_female = RT_CLAN_SPEAKER_FEMALE
 
 	should_force_rename = yes
-
-	leader_class = commander	# Initial ruler will become this if elected out of office
 
 	possible = {
 		OR = {
@@ -198,8 +194,6 @@ gov_citizen_stratocracy = {
 	ruler_title_female = RT_STRATEGOS_FEMALE
 
 	should_force_rename = yes
-
-	leader_class = commander	# Initial ruler will become this if elected out of office
 
 	possible = {
 		has_ethic = ethic_egalitarian
@@ -345,8 +339,6 @@ gov_technocratic_dictatorship = {
 
 	should_force_rename = yes
 
-	leader_class = scientist	# Initial ruler will become this if elected out of office
-
 	possible = {
 		OR = {
 			has_authority = auth_dictatorial
@@ -367,8 +359,6 @@ gov_science_directorate = {
 
 	should_force_rename = yes
 
-	leader_class = scientist	# Initial ruler will become this if elected out of office
-
 	possible = {
 		has_valid_civic = civic_science_directorate
 	}
@@ -384,8 +374,6 @@ gov_rational_consensus = {
 	ruler_title_female = RT_FIRST_SPEAKER_FEMALE
 
 	should_force_rename = yes
-
-	leader_class = scientist	# Initial ruler will become this if elected out of office
 
 	possible = {
 		OR = {

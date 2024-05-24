@@ -331,8 +331,6 @@ lrsk_gov_var_gov_private_military_contractor_fam = {
 		}
 	}
 	
-	leader_class = commander
-
 	weight = {
 		base = 2000
 	}

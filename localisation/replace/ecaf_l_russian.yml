@@ -29,19 +29,19 @@ l_russian:
  paragon.5213.socialism: "We will take care of each other."
  paragon.5213.capitalism: "We must seek new opportunities."
 
- job_ranger_effect_desc: "£job_ranger£ $job_ranger_plural$ produce £amenities£ §YAmenities§!, £society_research£ §Y$society_research$§!, and extra £ecaf_crew£ §Y$ecaf_crew$§!. They also produce $r_energy$, $r_food$ and $r_minerals$ depending on the £blocker£ Natural Blockers present."
+ job_ranger_effect_desc: "£job_ranger£ $job_ranger_plural$ produce £amenities£ §YAmenities§!, £society_research£ §Y$society_research$§!, and train extra £ecaf_crew£ §Y$ecaf_crew$§!. They also produce $r_energy$, $r_food$ and $r_minerals$ depending on the £blocker£ Natural Blockers present."
 
- job_duelist_effect_desc:0 "£job_duelist£ $job_duelist_plural$ turn £alloys£ §Y$alloys$§! into £unity£ §Y$unity$§!, £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§! and £mod_country_naval_cap_add£ §Y$MOD_COUNTRY_NAVAL_CAP_ADD$§!. They also produce extra £ecaf_crew£ §Y$ecaf_crew$§!"
+ job_duelist_effect_desc:0 "£job_duelist£ $job_duelist_plural$ turn £alloys£ §Y$alloys$§! into £unity£ §Y$unity$§!, £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§! and £mod_country_naval_cap_add£ §Y$MOD_COUNTRY_NAVAL_CAP_ADD$§!. They also train extra £ecaf_crew£ §Y$ecaf_crew$§!"
 
- job_soldier_effect_desc: "£job_soldier£ $job_soldier_plural$ increase £mod_country_naval_cap_add£ §Y$MOD_COUNTRY_NAVAL_CAP_ADD$§!, £stability£ §Y$MOD_PLANET_STABILITY_ADD$§!, spawn £defense_army£ §YDefense Armies§!, and produce extra £ecaf_crew£ §Y$ecaf_crew$§!"
+ job_soldier_effect_desc: "£job_soldier£ $job_soldier_plural$ increase £mod_country_naval_cap_add£ §Y$MOD_COUNTRY_NAVAL_CAP_ADD$§!, £stability£ §Y$MOD_PLANET_STABILITY_ADD$§!, spawn £defense_army£ §YDefense Armies§!, and train extra £ecaf_crew£ §Y$ecaf_crew$§!"
 
- job_warrior_drone_effect_desc: "£job_warrior_drone£ $job_warrior_drone_plural$ increase £mod_country_naval_cap_add£ §Y$MOD_COUNTRY_NAVAL_CAP_ADD$§!, £stability£ §Y$MOD_PLANET_STABILITY_ADD$§!, spawn £defense_army£ §YDefense Armies§!, and produce extra £ecaf_crew£ §Y$ecaf_crew$§!"
+ job_warrior_drone_effect_desc: "£job_warrior_drone£ $job_warrior_drone_plural$ increase £mod_country_naval_cap_add£ §Y$MOD_COUNTRY_NAVAL_CAP_ADD$§!, £stability£ §Y$MOD_PLANET_STABILITY_ADD$§!, spawn £defense_army£ §YDefense Armies§!, and train extra £ecaf_crew£ §Y$ecaf_crew$§!"
 
- job_telepath_effect_desc: "£job_telepath£ $job_telepath_plural$ produce £unity£ §Y$unity$§!, decrease £crime£ §Y$PLANET_CRIME_TITLE$§!, produce extra £ecaf_crew£ §Y$ecaf_crew$§!, and provide a general productivity boost on the planet."
+ job_telepath_effect_desc: "£job_telepath£ $job_telepath_plural$ produce £unity£ §Y$unity$§!, decrease £crime£ §Y$PLANET_CRIME_TITLE$§!, train extra £ecaf_crew£ §Y$ecaf_crew$§!, and provide a general productivity boost on the planet."
 
- job_enforcer_effect_desc: "£job_enforcer£ $job_enforcer_plural$ decrease £crime£ §Y$PLANET_CRIME_TITLE$§!, produce extra £ecaf_crew£ §Y$ecaf_crew$§!, and spawn £defense_army£ §YDefense Armies§!"
+ job_enforcer_effect_desc: "£job_enforcer£ $job_enforcer_plural$ decrease £crime£ §Y$PLANET_CRIME_TITLE$§!, train extra £ecaf_crew£ §Y$ecaf_crew$§!, and spawn £defense_army£ §YDefense Armies§!"
 
- job_patrol_drone_effect_desc: "£job_patrol_drone£ $job_patrol_drone_plural$ decrease £crime£ §Y$PLANET_CRIME_NO_HAPPINESS_TITLE$§!, spawn £defense_army£ §YDefense Armies§!, and produce £unity£ §Y$unity$§! and extra £ecaf_crew£ §Y$ecaf_crew$§!"
+ job_patrol_drone_effect_desc: "£job_patrol_drone£ $job_patrol_drone_plural$ decrease £crime£ §Y$PLANET_CRIME_NO_HAPPINESS_TITLE$§!, spawn £defense_army£ §YDefense Armies§!, and produce £unity£ §Y$unity$§! and train extra £ecaf_crew£ §Y$ecaf_crew$§!"
 
  slavery_military_tooltip: "§HBattle Thralls§! make excellent soldiers for local §HArmies§!. They cannot perform £pop_cat_ruler£ §Y$pop_cat_ruler$§! or £pop_cat_specialist£ §Y$pop_cat_specialist$§! Jobs, with the sole exception of working as £defense_army£ §Y$job_soldier_plural$§!. They produce §Gtwice§! as much £ecaf_crew£ §Y$ecaf_crew$§!."
 
@@ -3952,19 +3952,19 @@ l_russian:
  concept_aristocracy_government: "Aristocratic Government"
  concept_aristocracy_government_desc: "Aristocratic Governments replace some §Y$job_politician_plural_with_icon$§! or §Y$job_executive_plural_with_icon$§! with £job_noble£ §Y$job_noble_plural$§!\n\n$job_noble_effect_desc$§!"
 
- theocracy_gov_loc: "\n\n§TThis is a ['concept_theocracy_government']§!"
+ theocracy_gov_loc: "\n\n§TThis may be a ['concept_theocracy_government']§!"
  
- technocracy_gov_loc: "\n\n§TThis is a ['concept_technocracy_government']§!"
+ technocracy_gov_loc: "\n\n§TThis may be a ['concept_technocracy_government']§!"
 
- stratocracy_gov_loc: "\n\n§TThis is a ['concept_stratocracy_government']§!"
+ stratocracy_gov_loc: "\n\n§TThis may be a ['concept_stratocracy_government']§!"
 
- bureaucracy_gov_loc: "\n\n§TThis is a ['concept_bureaucracy_government']§!"
+ bureaucracy_gov_loc: "\n\n§TThis may be a ['concept_bureaucracy_government']§!"
 
- plutocracy_gov_loc: "\n\n§TThis is a ['concept_plutocracy_government']§!"
+ plutocracy_gov_loc: "\n\n§TThis may be a ['concept_plutocracy_government']§!"
 
- isocracy_gov_loc: "\n\n§TThis is a ['concept_isocracy_government']§!"
+ isocracy_gov_loc: "\n\n§TThis may be a ['concept_isocracy_government']§!"
 
- diplocracy_gov_loc: "\n\n§TThis is a ['concept_diplocracy_government']§!"
+ diplocracy_gov_loc: "\n\n§TThis may be a ['concept_diplocracy_government']§!"
 
  aristocracy_gov_loc: "\n\n§TThis is an ['concept_aristocracy_government']§!"
 
@@ -4040,16 +4040,16 @@ l_russian:
  # Noble Aristocratic Governments
  gov_imperial_domain_desc:1 "§LThis government rules the Galactic Imperium's central crown territory, which is under the direct control of the Imperial Sovereign.§!$aristocracy_gov_loc$"
  gov_elective_monarchy_desc: "This government is a form of enlightened autocracy, where a strong emphasis is put on the knowledge and qualifications of the elected monarch.$aristocracy_gov_loc$"
- #gov_noble_aristocracy_desc: "The whole political power in this society belongs to the council of representatives of the ancient patrimonial aristocratic Houses.$aristocracy_gov_loc$"
+ #gov_noble_aristocracy_desc: "Political power in this society resides in a council consisting of representatives from ancient aristocratic houses.$aristocracy_gov_loc$"
  #gov_aristocratic_republic_desc: "A form of representative democracy, in which only those who belong to social Elite may be elected to Senate and rule on behalf of the people.$aristocracy_gov_loc$"
  gov_aristocratic_monarchy_desc: "Форма монархии, при которой король не обладает абсолютной властью, но вынужден разделять её с влиятельными представителями родовой Аристократии.$aristocracy_gov_loc$"
   gov_feudal_empire_desc: "This government is a feudal autocracy where the monarch rules indirectly, granting offices and territories to vassals in exchange for obligations in the form of taxes and military service.$aristocracy_gov_loc$"
 
  gov_absolute_monarchy_desc: "A form of monarchy in which the monarch holds supreme authority and where that authority is not restricted by any written laws, legislature, or customs.$aristocracy_gov_loc$"
  #gov_great_houses: "Great Houses"
- #gov_great_houses_desc: "This civilization is ruled by the leadership council of a few Great Houses, which traditions derives from ancient clans and tribes, but which now function more as political parties. Unlike in classic Noble Aristocracy, house membership is not tied to patrimonial matters, such as birth or marriage, but rather anyone can be adopted to the House and advance to it's highest ranks, as long as he pledges loyalty to the House and preserve it's Tradition.$aristocracy_gov_loc$"
+ #gov_great_houses_desc: "This civilization is ruled by the leadership council of a few Great Houses, which derive from ancient clans and tribes, but which now function more as political parties. Unlike in classic Noble Aristocracy, house membership is not tied to patrimonial matters, such as birth or marriage. Rather, anyone can be adopted to the House and advance to it's highest ranks, as long as he pledges loyalty to the House and preserve it's Tradition.$aristocracy_gov_loc$"
  gov_benevolent_aristocracy: "Benevolent Aristocracy"
- gov_benevolent_aristocracy_desc: "The council of representatives of the patrimonial aristocratic Houses believe it is their duty to care for all equally.$aristocracy_gov_loc$"
+ gov_benevolent_aristocracy_desc: "The council of representatives of the aristocratic houses believe it is their duty to care for all equally.$aristocracy_gov_loc$"
 
 
  # Materialist Head Researcher Governments
@@ -4061,7 +4061,7 @@ l_russian:
  
  gov_illuminated_autocracy_desc: "This government is a materialistic form of hereditary autocracy, based on technocratic principles that the sovereign is sworn to uphold. Nothing is valued more highly than scientific knowledge and the advancement of technology.$technocracy_gov_loc$"
  gov_technocratic_dictatorship_desc: "This government is a materialistic form of autocracy, where the scientific elite has assumed control over the state in the name of efficiency and technological progress.$technocracy_gov_loc$"
- gov_science_directorate_desc: "This government is a materialistic form of oligarchy, where a committee of scientists supervises the government apparatus for maximum efficiency.$technocracy_gov_loc$"
+ gov_science_directorate_desc: "This government is a materialistic form of oligarchy, where a committee of scientists supervises the government to ensure maximum efficiency.$technocracy_gov_loc$"
  gov_rational_consensus_desc: "This government is a materialistic form of democracy, governed according to principles based on rationality and scientific theory.$technocracy_gov_loc$"
  gov_research_development_corp: "Research & Development Corporation"
  gov_research_development_corp_desc: "This government is a materialistic form of corporate authority, where the board of directors is made up of highly educated individuals whose goal is to develop the best tech in the galaxy!$technocracy_gov_loc$"
@@ -4069,7 +4069,7 @@ l_russian:
  # Mogul Governments
  gov_trade_league_desc: "This government is a form of plutocratic oligarchy, where the state is made up of a myriad of free merchants, corporations and guilds that have banded together in common commercial interests.$plutocracy_gov_loc$"
 
- #gov_minarchy_desc: "A form of minimal 'night-watchman' state, that is not responsible for the education, health care, employment or transportation of its citizens, neither makes it any use of natural resources in its territory. All of this is instead held privately or publicly, but is never susceptible to any interference of the state, its law or its representatives.$plutocracy_gov_loc$"
+ #gov_minarchy_desc: "A form of minimal 'night-watchman' state, that is not responsible for the education, health care, employment, or transportation of its citizens. All of this is instead held privately, and is never susceptible to any interference from the state.$plutocracy_gov_loc$"
 
  #gov_timocracy_desc: "A state, where political rights of the population are stratified according to the amount of property they own.$plutocracy_gov_loc$"
 
@@ -4093,7 +4093,7 @@ l_russian:
  gov_citizen_stratocracy_desc: "This government is an advanced form of militaristic oligarchy, where the military has subsumed all aspects of civilian administration. All government offices are held by military officers.$stratocracy_gov_loc$"
  gov_citizen_republic_desc: "This government is a militaristic form of democracy, where full citizenship can only be gained through military service. The voting franchise is limited to full citizens, and they are the only ones allowed to hold public offices.$stratocracy_gov_loc$"
  #gov_jingoism_desc: "This form of authoritarian governance is headed by a xenophobic demagogue and notions of national supremacy and manifest destiny dominate the politics.$stratocracy_gov_loc$"
- #gov_anarchy_communism_desc: "An extreme form of Communist dictatorship, characterized with nationalization of all industries and the introduction of strict centralized management, state control of foreign trade, strict discipline for workers, with strikes forbidden and obligatory labor duty by non-working classes.$stratocracy_gov_loc$"
+ #gov_anarchy_communism_desc: "An extreme form of communist dictatorship, characterized with nationalization of all industries and the introduction of strict centralized management, state control of foreign trade, strict discipline for workers, with strikes forbidden and obligatory labor duty by non-working classes.$stratocracy_gov_loc$"
  #gov_military_corp_desc: "Government is represented by a massive military-industrial holding, with board of directors consisting solely of active war-chiefs.$stratocracy_gov_loc$"
  gov_bandit_kingdom_desc: "This government is organized like a massive crime syndicate, where the strong prey on the weak and any neighboring states are seen as little more than raiding targets.$stratocracy_gov_loc$"
  gov_band_blood_desc: "This ruthless society is governed through conflict and ritualized sacrifice, honoring death within and without.$stratocracy_gov_loc$"
@@ -4104,9 +4104,9 @@ l_russian:
  #gov_dread_brotherhood_desc: "An extremely xenophobic form of direct democracy, where all citizens are bound by the common goal - the destruction of all lesser life forms in the galaxy.$stratocracy_gov_loc$"
   gov_successor_khanate_desc: "A successor state trying to recapture the glory of the Great Khan's empire.$stratocracy_gov_loc$"
 
- gov_mortal_empire_desc: "This theocratic monarchy engages in ritualized, sapient sacrifice.$stratocracy_gov_loc$"
+ gov_mortal_empire_desc: "This theocratic monarchy engages in ritualized, sapient sacrifice.$theocracy_gov_loc$"
 
- gov_grim_council_desc: "This nation's most powerful religious figures have formed a ruling council, overseeing an empire which engages in ritualized, sapient sacrifice.$stratocracy_gov_loc$"
+ gov_grim_council_desc: "This nation's most powerful religious figures have formed a ruling council, overseeing an empire which engages in ritualized, sapient sacrifice.$theocracy_gov_loc$"
  # Pacifist Philosopher Governments
  gov_irenic_monarchy_desc: "This government is a pacifist form of hereditary autocracy, where the ruler is regarded as a benevolent guardian that is striving to protect the citizens from a violent galaxy.$bureaucracy_gov_loc$"
  gov_irenic_dictatorship_desc: "This government is a pacifist form of autocracy, where the state is charged with protecting the citizenry from their own violent tendencies as well as any external threats.$bureaucracy_gov_loc$"

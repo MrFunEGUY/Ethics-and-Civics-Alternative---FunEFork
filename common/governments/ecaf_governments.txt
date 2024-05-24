@@ -286,8 +286,9 @@ gov_absolute_monarchy = {
 		lrsk_gvp_is_active = no # GVP has its own version
 		has_authority = auth_imperial
 		has_ethic = ethic_fanatic_authoritarian
-		NOT = {
+		NOR = {
 			has_valid_civic = civic_feudal_realm
+			has_valid_civic = civic_aristocratic_elite
 		}
 	}
 	weight = {
@@ -1098,9 +1099,6 @@ lrsk_gov_var_gov_galactic_cartel_fam = {
 		}
 		is_militarist = yes
 	}
-
-
-	leader_class = official
 
 	weight = {
 		base = 1000

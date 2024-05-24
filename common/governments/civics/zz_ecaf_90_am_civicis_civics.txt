@@ -11,7 +11,6 @@ civic_am_civics_stellar_travel_agency = {
 	potential = { inline_script = governments/conditions/is_corporate }
 	random_weight = { base = 5 }
 	description = "tooltip_civic_am_civics_stellar_travel_agency_effects"
-	playable = { am_civics_is_active = yes }
 }
 
 civic_am_civics_social_media_giant = {
