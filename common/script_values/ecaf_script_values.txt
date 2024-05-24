@@ -6,15 +6,15 @@ ecaf_crew_max = {
 ecaf_crew_att_exhaustion_mult = {
 	base = 1
 	subtract = trigger:off_war_exhaustion_sum
-	multiply = 1.25
-	add = 0.02
+	multiply = 1.5
+	add = 0.05
 }
 
 ecaf_crew_def_exhaustion_mult = {
 	base = 1
 	subtract = trigger:def_war_exhaustion_sum
-	multiply = 1.5
-	add = 0.02
+	multiply = 2
+	add = 0.05
 }
 
 ecaf_crew_devastation_mult = {

@@ -1952,6 +1952,7 @@ enlistment_policy = {
 			job_soldier_per_pop = 0.08
 			country_ecaf_crew_produces_mult = 0.5
 			pop_ethic_militarist_attraction_mult = 0.15
+			country_energy_produces_mult = -0.35
 		}
 
 		valid = {
