@@ -33,114 +33,114 @@ pop_ecaf_crew_production = {
 	base = @base_pop_crew_production
 
 	# Pop Category
-	# modifier = { is_pop_category = bio_trophy add = @bio_trophy_pop_crew_production }
-	# modifier = { is_pop_category = slave add = @slave_pop_crew_production }
-	# modifier = { is_pop_category = worker add = @worker_pop_crew_production }
-	# modifier = { is_pop_category = simple_drone add = @worker_pop_crew_production }
-	# modifier = { is_pop_category = precursor add = @precursor_pop_crew_production }
-	# modifier = { is_pop_category = specialist add = @specialist_pop_crew_production }
-	# modifier = { is_pop_category = ruler add = @ruler_pop_crew_production }
-	#
-	# modifier = { is_pop_category = criminal factor = @criminal_job_crew_mult }
-	# modifier = { is_pop_category = deviant_drone factor = @criminal_job_crew_mult }
-	#
-	# # Ethic
-	# modifier = { has_ethic = ethic_pacifist add = @pacifist_pop_crew_production }
-	# modifier = { has_ethic = ethic_militarist add = @militarist_pop_crew_production }
-	#
-	# # Pop Military Service
-	# modifier = { has_military_service_type = { type = military_service_limited } factor = @limited_military_service_crew_mult } # -25%
-	# modifier = { has_slavery_type = { type = slavery_military } factor = @battle_thrall_military_service_crew_mult } # 200%
-	#
-	# # Pop Jobs
-	# modifier = { has_job = soldier add = @soldier_job_crew_production }
-	# modifier = { has_job = mercenary add = @soldier_job_crew_production }
-	# modifier = { has_job = warrior_drone add = @soldier_job_crew_production }
-	# modifier = { has_job = gpm_bunker_army add = @soldier_job_crew_production }
-	#
-	# modifier = { has_job = telepath add = @other_military_job_crew_production }
-	# modifier = { has_job = gladiator add = @other_military_job_crew_production }
-	# modifier = { has_job = templar add = @other_military_job_crew_production }
-	#
-	# modifier = { has_job = ranger add = @incidental_job_crew_production }
-	# modifier = { has_job = enforcer add = @incidental_job_crew_production }
-	# modifier = { has_job = duelist add = @incidental_job_crew_production }
-	# modifier = { has_job = patrol_drone add = @incidental_job_crew_production }
-	#
-	# modifier = { has_job = fe_hedonist factor = @hedonist_job_crew_mult }
-	#
-	# modifier = { has_job = commandant add = @ruler_military_job_crew_production }
-	#
-	# ## War Values
-	# modifier = {
-	# 	owner.capital_scope = { is_occupied_flag = yes }
-	# 	factor = @capital_occupation_crew_mult
-	# }
-	#
-	# modifier = {
-	# 	planet = { is_occupied_flag = yes }
-	# 	factor = @planet_occupation_crew_mult
-	# }
-	#
-	# modifier = {
-	# 	exists = planet.starbase
-	# 	NOT = { planet.starbase.controller = { is_same_value = prev.planet.starbase.owner } }
-	# 	factor = @system_occupation_crew_mult
-	# }
-	#
-	# modifier = {
-	# 	planet_devastation > 0
-	# 	factor = planet.value:ecaf_crew_devastation_mult
-	# }
-	#
-	# modifier = {
-	# 	owner = {
-	# 		is_at_war = yes
-	# 		any_war = { any_attacker = {  is_same_value = prevprev  } }
-	# 	}
-	# 	factor = owner.value:ecaf_crew_att_exhaustion_mult
-	# }
-	#
-	# modifier = {
-	# 	owner = {
-	# 		is_at_war = yes
-	# 		any_war = { any_defender = {  is_same_value = prevprev  } }
-	# 	}
-	# 	factor = owner.value:ecaf_crew_def_exhaustion_mult
-	# }
-	#
-	# # Civic Modifiers
-	# modifier = {
-	# 	has_job = commandant
-	# 	OR = {
-	# 		owner = { has_valid_civic = civic_military_junta }
-	# 		owner = { has_valid_civic = civic_military_dictatorship }
-	# 	}
-	# 	add = @incidental_job_crew_production
-	# }
-	#
-	# modifier = {
-	# 	is_enslaved = no
-	# 	OR = {
-	# 		is_pop_category = worker
-	# 		is_pop_category = specialist
-	# 		is_pop_category = ruler
-	# 	}
-	# 	OR = {
-	# 		owner = { has_valid_civic = civic_citizen_service }
-	# 		owner = { has_valid_civic = civic_martial_brotherhood }
-	# 	}
-	# 	factor = @civic_job_crew_mult
-	# }
-	#
-	# modifier = {
-	# 	owner = {
-	# 		num_pops < 50
-	# 		OR = {
-	# 			is_rogue_colony = yes
-	# 			has_civstrife_origin = yes
-	# 		}
-	# 	}
-	# 	factor = owner.value:ecaf_crew_bonus_mult
-	# }
+	modifier = { is_pop_category = bio_trophy add = @bio_trophy_pop_crew_production }
+	modifier = { is_pop_category = slave add = @slave_pop_crew_production }
+	modifier = { is_pop_category = worker add = @worker_pop_crew_production }
+	modifier = { is_pop_category = simple_drone add = @worker_pop_crew_production }
+	modifier = { is_pop_category = precursor add = @precursor_pop_crew_production }
+	modifier = { is_pop_category = specialist add = @specialist_pop_crew_production }
+	modifier = { is_pop_category = ruler add = @ruler_pop_crew_production }
+
+	modifier = { is_pop_category = criminal factor = @criminal_job_crew_mult }
+	modifier = { is_pop_category = deviant_drone factor = @criminal_job_crew_mult }
+
+	# Ethic
+	modifier = { has_ethic = ethic_pacifist add = @pacifist_pop_crew_production }
+	modifier = { has_ethic = ethic_militarist add = @militarist_pop_crew_production }
+
+	# Pop Military Service
+	modifier = { has_military_service_type = { type = military_service_limited } factor = @limited_military_service_crew_mult } # -25%
+	modifier = { has_slavery_type = { type = slavery_military } factor = @battle_thrall_military_service_crew_mult } # 200%
+
+	# Pop Jobs
+	modifier = { has_job = soldier add = @soldier_job_crew_production }
+	modifier = { has_job = mercenary add = @soldier_job_crew_production }
+	modifier = { has_job = warrior_drone add = @soldier_job_crew_production }
+	modifier = { has_job = gpm_bunker_army add = @soldier_job_crew_production }
+
+	modifier = { has_job = telepath add = @other_military_job_crew_production }
+	modifier = { has_job = gladiator add = @other_military_job_crew_production }
+	modifier = { has_job = templar add = @other_military_job_crew_production }
+
+	modifier = { has_job = ranger add = @incidental_job_crew_production }
+	modifier = { has_job = enforcer add = @incidental_job_crew_production }
+	modifier = { has_job = duelist add = @incidental_job_crew_production }
+	modifier = { has_job = patrol_drone add = @incidental_job_crew_production }
+
+	modifier = { has_job = fe_hedonist factor = @hedonist_job_crew_mult }
+
+	modifier = { has_job = commandant add = @ruler_military_job_crew_production }
+
+	## War Values
+	modifier = {
+		owner.capital_scope = { is_occupied_flag = yes }
+		factor = @capital_occupation_crew_mult
+	}
+
+	modifier = {
+		planet = { is_occupied_flag = yes }
+		factor = @planet_occupation_crew_mult
+	}
+
+	modifier = {
+		exists = planet.starbase
+		NOT = { planet.starbase.controller = { is_same_value = prev.planet.starbase.owner } }
+		factor = @system_occupation_crew_mult
+	}
+
+	modifier = {
+		planet_devastation > 0
+		factor = planet.value:ecaf_crew_devastation_mult
+	}
+
+	modifier = {
+		owner = {
+			is_at_war = yes
+			any_war = { any_attacker = {  is_same_value = prevprev  } }
+		}
+		factor = owner.value:ecaf_crew_att_exhaustion_mult
+	}
+
+	modifier = {
+		owner = {
+			is_at_war = yes
+			any_war = { any_defender = {  is_same_value = prevprev  } }
+		}
+		factor = owner.value:ecaf_crew_def_exhaustion_mult
+	}
+
+	# Civic Modifiers
+	modifier = {
+		has_job = commandant
+		OR = {
+			owner = { has_valid_civic = civic_military_junta }
+			owner = { has_valid_civic = civic_military_dictatorship }
+		}
+		add = @incidental_job_crew_production
+	}
+
+	modifier = {
+		is_enslaved = no
+		OR = {
+			is_pop_category = worker
+			is_pop_category = specialist
+			is_pop_category = ruler
+		}
+		OR = {
+			owner = { has_valid_civic = civic_citizen_service }
+			owner = { has_valid_civic = civic_martial_brotherhood }
+		}
+		factor = @civic_job_crew_mult
+	}
+
+	modifier = {
+		owner = {
+			num_pops < 50
+			OR = {
+				is_rogue_colony = yes
+				has_civstrife_origin = yes
+			}
+		}
+		factor = owner.value:ecaf_crew_bonus_mult
+	}
 }
