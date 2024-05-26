@@ -79,14 +79,14 @@ country_event = {
 		if = {
 			limit = {
 				is_spiritualist = no
-				has_valid_civic = civic_enlightment
+				has_valid_civic = civic_enlightenment
 			}
 			give_technology = { tech = tech_heritage_site }
 		}
 		if = {
 			limit = {
 				is_spiritualist = yes
-				has_valid_civic = civic_enlightment
+				has_valid_civic = civic_enlightenment
 			}
 			give_technology = { tech = tech_holographic_rituals }
 		}

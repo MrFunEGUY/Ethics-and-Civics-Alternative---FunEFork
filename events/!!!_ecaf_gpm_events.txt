@@ -80,8 +80,8 @@ planet_event = {
 			remove_modifier = "gpm_lingering_pollution"
 		}
 		if = {
-			limit = { has_modifier = "gpm_resilent_parasites" }
-			remove_modifier = "gpm_resilent_parasites"
+			limit = { has_modifier = "gpm_resilient_parasites" }
+			remove_modifier = "gpm_resilient_parasites"
 		}
 		if = {
 			limit = { has_modifier = "gpm_trubbles" }

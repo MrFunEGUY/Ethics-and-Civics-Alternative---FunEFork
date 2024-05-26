@@ -37,7 +37,7 @@ opinion_trade_enclave_vs_globalism = {
 opinion_artist_enclave_vs_cultural_heritage = {
 	trigger = {
 		has_valid_civic = civic_artist_collective
-		from = { has_valid_civic = civic_enlightment }
+		from = { has_valid_civic = civic_enlightenment }
 	}
 	opinion = {
 		base = 50

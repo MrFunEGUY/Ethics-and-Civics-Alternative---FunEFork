@@ -43,7 +43,7 @@ l_russian:
 
  job_patrol_drone_effect_desc: "£job_patrol_drone£ $job_patrol_drone_plural$ decrease £crime£ §Y$PLANET_CRIME_NO_HAPPINESS_TITLE$§!, spawn £defense_army£ §YDefense Armies§!, and produce £unity£ §Y$unity$§! and train extra £ecaf_crew£ §Y$ecaf_crew$§!"
 
- slavery_military_tooltip: "§HBattle Thralls§! make excellent soldiers for local §HArmies§!. They cannot perform £pop_cat_ruler£ §Y$pop_cat_ruler$§! or £pop_cat_specialist£ §Y$pop_cat_specialist$§! Jobs, with the sole exception of working as £defense_army£ §Y$job_soldier_plural$§!. They produce §Gtwice§! as much £ecaf_crew£ §Y$ecaf_crew$§!."
+ slavery_military_tooltip: "§HBattle Thralls§! make excellent soldiers for local §HArmies§!. They cannot perform £pop_cat_ruler£ §Y$pop_cat_ruler$§! or £pop_cat_specialist£ §Y$pop_cat_specialist$§! Jobs, with the sole exception of working as £defense_army£ §Y$job_soldier_plural$§!. They train §Gtwice§! as much £ecaf_crew£ §Y$ecaf_crew$§!."
 
  mod_ship_military_alloys_cost_mult: "Military Ship Alloy Cost"
  policy_enlistment_policy: "Enlistment Policy"
@@ -137,7 +137,7 @@ l_russian:
  HT_DPRINCE: "Божественный Князь"
  RT_DQUEEN: "Богоподобная Владычица"
  HT_DPRINCESS: "Поднебесная Принцесса"
- RT_HEMPERESS: "Великая Императрица"
+ RT_HEmpress: "Великая Императрица"
  HT_HPRINCESS: "Божественная Принцесса"
  RT_SGEN: "Генеральный секретарь"
  RT_PRINCEPS: "Принцепс"
@@ -1817,9 +1817,9 @@ l_russian:
  TECHNOLOGIST_NO_PROGRESS: "Традиционный Прогресс"
  TECHNOLOGIST_PROGRESS_DESC: "Принятие традиций §YПрогресс§! обрадует фракцию [Root.GetName]."
 
- TECHNOLOGIST_NO_RELIGIOUS_FANATISM: "Нет Религиозному Фанатизму"
- TECHNOLOGIST_RELIGIOUS_FANATISM: "Нет Религиозному Фанатизму"
- TECHNOLOGIST_NO_RELIGIOUS_FANATISM_DESC: "Принятие традиций §YРелигиозный Фундаментализм§! расстроит фракцию [Root.GetName]."
+ TECHNOLOGIST_NO_RELIGIOUS_Fanaticism: "Нет Религиозному Фанатизму"
+ TECHNOLOGIST_RELIGIOUS_Fanaticism: "Нет Религиозному Фанатизму"
+ TECHNOLOGIST_NO_RELIGIOUS_Fanaticism_DESC: "Принятие традиций §YРелигиозный Фундаментализм§! расстроит фракцию [Root.GetName]."
 
  #TECHNOLOGIST_NO_SPIRITUALISM: "Нет Спирутализму"
  #TECHNOLOGIST_SPIRITUALISM: "Нет Спирутализму"
@@ -1971,8 +1971,8 @@ l_russian:
 
  shipsize_outpost_station_construction_speed_mult: "Скорость строительство Пограничной Станции"
  # не уверен в переводе"
- building_collosal_monument: "Памятник Правителю"
- building_collosal_monument_desc: "Огромный монумент, посвященный славе правителя Империи."
+ building_Colossal_monument: "Памятник Правителю"
+ building_Colossal_monument_desc: "Огромный монумент, посвященный славе правителя Империи."
 
  post_industrial_economy: "Постиндустриальная Экономика"
  post_industrial_economy_desc: "Свобода информации лежит в основе постиндустриального общества, поощряя экономический рост, основанный на знаниях, идеях и творчестве."
@@ -2683,8 +2683,8 @@ l_russian:
  civic_land_of_plenty: "Земля Изобилия"
  civic_land_of_plenty_desc: "Народ этой цивилизации исповедует идеологию, нацеленную на всеобщее удовлетворение наиболее базовых материальных потребностей населения. \n\nПолитика пропитания §YНормирование§! недоступна."
 
- #civic_enlightment: "Культурное Наследие"
-# civic_enlightment_desc: "Научившись жить в мире и любви, это общество достигло невероятного уровня культурного развития. Начинает с технологией §HОбъект Культурного Наследия§!, §HСпиритуалисты§! начинают с технологией §HГолографические Ритуалы§!."
+ #civic_enlightenment: "Культурное Наследие"
+# civic_enlightenment_desc: "Научившись жить в мире и любви, это общество достигло невероятного уровня культурного развития. Начинает с технологией §HОбъект Культурного Наследия§!, §HСпиритуалисты§! начинают с технологией §HГолографические Ритуалы§!."
 
  civic_peacekeepers: "Универсализм"
  civic_peacekeepers_desc: "Эта цивилизация вышла в Космос, движимая духом надежды и веры в мирное и гармоничное сосуществование всех разумных существ в Галактике. \n\nНахождение в составе §YФедерации§!, заключение §YПакта не-Агрессии§! и §YНаучного Договора§! не стоит Влияния \nФракция §YКсенофилов§! будет рада нахождению в §YФедерации§!, а также, большому число различных существ в Империи \nПосле успешного §YГенетического возвышения§! низших существ, Империя получает глобальный модификатор - §YГалактические Покровители§!, сроком 10 лет, увеличивающий §YЕдинство§! и §YОбщественную Науку§! \nНе может иметь §YСоперников§! \nЯвляется продвинутой версией принципа §YДипломатические Корпусы§!"
@@ -3520,8 +3520,8 @@ l_russian:
  mod_leader_governors_cost_mult: "Стоимость Губернатора"
  mod_leader_governors_upkeep_mult: "Содержание Губернатора"
 
- civic_enlightment: "Процветающее Содружество"
- civic_enlightment_desc: "Научившись жить истинно мирной и гармоничной жизнью, это общество достигло небывалого уровня социально-экономического развития. \n\nНачинает с технологией §YОбъект Наследия§!, §YСпиритуалисты§! начинают с технологией §YГолографические Ритуалы§! \n\nПолучает бонус к отношениям с анклавом §YСообщество Творцов§!"
+ civic_enlightenment: "Процветающее Содружество"
+ civic_enlightenment_desc: "Научившись жить истинно мирной и гармоничной жизнью, это общество достигло небывалого уровня социально-экономического развития. \n\nНачинает с технологией §YОбъект Наследия§!, §YСпиритуалисты§! начинают с технологией §YГолографические Ритуалы§! \n\nПолучает бонус к отношениям с анклавом §YСообщество Творцов§!"
 
  job_transcend: "Просветленный"
  job_transcend_plural: "Просветленные"
@@ -4447,7 +4447,7 @@ l_russian:
  PR_WAR_GREETING_03: "After this war is over, we hope you will come to your senses and stop your needless meddling in the natural ecosystems."
  # Vassal greetings
  PR_VASSAL_GREETING_01: "So long as you respect our ways, to keep the balance of nature, we see no problem with serving you."
- PR_VASSAL_GREETING_DISLOYAL_01: "The [From.GetName] becomes a bigger threat to the sanctity of the galaxy every day. If you fail to respect the natural laws of the universe, we will have no choice but to reenge on our current agreements, and break any relationship we have with each other."
+ PR_VASSAL_GREETING_DISLOYAL_01: "The [From.GetName] becomes a bigger threat to the sanctity of the galaxy every day. If you fail to respect the natural laws of the universe, we will have no choice but to renege on our current agreements, and break any relationship we have with each other."
  # Declaration of War
  PR_DOW_PROPOSE_01: "This is a declaration of war! The [From.GetSpeciesNamePlural] have for too long engaged in wanton crimes against nature, upsetting the balance of the galaxy. That stops today."
 

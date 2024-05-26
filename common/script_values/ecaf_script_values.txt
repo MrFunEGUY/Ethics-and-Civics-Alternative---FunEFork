@@ -35,9 +35,11 @@ pop_ecaf_crew_production = {
 	# Pop Category
 	modifier = { is_pop_category = bio_trophy add = @bio_trophy_pop_crew_production }
 	modifier = { is_pop_category = slave add = @slave_pop_crew_production }
+	modifier = { is_pop_category = robot_servant add = @slave_pop_crew_production }
 	modifier = { is_pop_category = worker add = @worker_pop_crew_production }
 	modifier = { is_pop_category = simple_drone add = @worker_pop_crew_production }
 	modifier = { is_pop_category = precursor add = @precursor_pop_crew_production }
+	modifier = { is_pop_category = complex_drone add = @specialist_pop_crew_production }
 	modifier = { is_pop_category = specialist add = @specialist_pop_crew_production }
 	modifier = { is_pop_category = ruler add = @ruler_pop_crew_production }
 

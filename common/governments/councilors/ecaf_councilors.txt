@@ -358,7 +358,7 @@ councilor_spiritual_seekers = { #High Seer
 	}
 }
 
-councilor_enlightment = { #Public Moderator
+councilor_Enlightenment = { #Public Moderator
 	leader_class = { commander scientist official }
 	is_leader_possible = {
 		OR = {
@@ -367,7 +367,7 @@ councilor_enlightment = { #Public Moderator
 			leader_class = official
 		}
 	}
-	civic = civic_enlightment
+	civic = civic_enlightenment
 	modifier = { #Further improves unity from factions
 		faction_approval = 0.02
 		pop_factions_unity_produces_mult = 0.01

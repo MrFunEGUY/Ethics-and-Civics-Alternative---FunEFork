@@ -43,7 +43,7 @@ l_simp_chinese:
 
  job_patrol_drone_effect_desc: "£job_patrol_drone£ $job_patrol_drone_plural$ decrease £crime£ §Y$PLANET_CRIME_NO_HAPPINESS_TITLE$§!, spawn £defense_army£ §YDefense Armies§!, and produce £unity£ §Y$unity$§! and train extra £ecaf_crew£ §Y$ecaf_crew$§!"
 
- slavery_military_tooltip: "§HBattle Thralls§! make excellent soldiers for local §HArmies§!. They cannot perform £pop_cat_ruler£ §Y$pop_cat_ruler$§! or £pop_cat_specialist£ §Y$pop_cat_specialist$§! Jobs, with the sole exception of working as £defense_army£ §Y$job_soldier_plural$§!. They produce §Gtwice§! as much £ecaf_crew£ §Y$ecaf_crew$§!."
+ slavery_military_tooltip: "§HBattle Thralls§! make excellent soldiers for local §HArmies§!. They cannot perform £pop_cat_ruler£ §Y$pop_cat_ruler$§! or £pop_cat_specialist£ §Y$pop_cat_specialist$§! Jobs, with the sole exception of working as £defense_army£ §Y$job_soldier_plural$§!. They train §Gtwice§! as much £ecaf_crew£ §Y$ecaf_crew$§!."
 
  mod_ship_military_alloys_cost_mult: "Military Ship Alloy Cost"
  policy_enlistment_policy: "Enlistment Policy"
@@ -621,7 +621,7 @@ l_simp_chinese:
  HT_DPRINCE: "圣君"
  RT_DQUEEN: "圣女皇"
  HT_DPRINCESS: "圣公主"
- RT_HEMPERESS: "大女皇"
+ RT_HEmpress: "大女皇"
  HT_HPRINCESS: "大公主"
  RT_SGEN: "秘书长"
  RT_PRINCEPS: "元首"
@@ -1155,9 +1155,9 @@ l_simp_chinese:
  TECHNOLOGIST_PROGRESS: "进步传统"
  TECHNOLOGIST_NO_PROGRESS: "进步传统"
  TECHNOLOGIST_PROGRESS_DESC: "采用§Y进步§!传统将会取悦[Root.GetName]。"
- TECHNOLOGIST_NO_RELIGIOUS_FANATISM: "无宗教狂热"
- TECHNOLOGIST_RELIGIOUS_FANATISM: "无宗教狂热"
- TECHNOLOGIST_NO_RELIGIOUS_FANATISM_DESC: "采用§Y宗教原教旨主义§!传统将会惹怒[Root.GetName]。"
+ TECHNOLOGIST_NO_RELIGIOUS_Fanaticism: "无宗教狂热"
+ TECHNOLOGIST_RELIGIOUS_Fanaticism: "无宗教狂热"
+ TECHNOLOGIST_NO_RELIGIOUS_Fanaticism_DESC: "采用§Y宗教原教旨主义§!传统将会惹怒[Root.GetName]。"
  XENOIST_NO_ISOLATION: "非孤立主义"
  XENOIST_ISOLATION: "非孤立主义"
  XENOIST_NO_ISOLATION_DESC: "采用§Y孤立主义§!传统将使 [Root.GetName]不悦。"
@@ -1237,8 +1237,8 @@ l_simp_chinese:
  new_babylon: "银河奇迹:新巴比伦"
  new_babylon_desc: " "
  shipsize_outpost_station_construction_speed_mult: "边境哨站建设速度"
- building_collosal_monument: "巨型纪念碑"
- building_collosal_monument_desc: "赞颂帝国统治者的巨大纪念碑。"
+ building_Colossal_monument: "巨型纪念碑"
+ building_Colossal_monument_desc: "赞颂帝国统治者的巨大纪念碑。"
  post_industrial_economy: "后工业化经济"
  post_industrial_economy_desc: "信息的自由流动是后工业社会的核心，它鼓励以知识、思想和创造力为基础的经济增长。"
  ap_anarchy_utopia: "无政府主义乌托邦"
@@ -2241,8 +2241,8 @@ l_simp_chinese:
  mod_leader_scientists_upkeep_mult: "科学家维护费"
  mod_leader_governors_cost_mult: "总督花费"
  mod_leader_governors_upkeep_mult: "总督维护费"
- civic_enlightment: "和平国度"
- civic_enlightment_desc: "学会过真正和平和繁荣的生活，该文明已经达到了社会经济发展的空前水平。\n\n开始时拥有§Y文化遗址§!科技，§Y唯心主义§!开始时拥有§Y全息仪式§!科技 \n\n提高§Y艺术家联盟§!飞地的评价"
+ civic_enlightenment: "和平国度"
+ civic_enlightenment_desc: "学会过真正和平和繁荣的生活，该文明已经达到了社会经济发展的空前水平。\n\n开始时拥有§Y文化遗址§!科技，§Y唯心主义§!开始时拥有§Y全息仪式§!科技 \n\n提高§Y艺术家联盟§!飞地的评价"
  job_transcend: "超越者"
  job_transcend_plural: "超越者"
  job_transcend_desc: "这些人达到了明悟的意识状态。"
@@ -3054,7 +3054,7 @@ l_simp_chinese:
  PR_WAR_GREETING_03: "After this war is over, we hope you will come to your senses and stop your needless meddling in the natural ecosystems."
  # Vassal greetings
  PR_VASSAL_GREETING_01: "So long as you respect our ways, to keep the balance of nature, we see no problem with serving you."
- PR_VASSAL_GREETING_DISLOYAL_01: "The [From.GetName] becomes a bigger threat to the sanctity of the galaxy every day. If you fail to respect the natural laws of the universe, we will have no choice but to reenge on our current agreements, and break any relationship we have with each other."
+ PR_VASSAL_GREETING_DISLOYAL_01: "The [From.GetName] becomes a bigger threat to the sanctity of the galaxy every day. If you fail to respect the natural laws of the universe, we will have no choice but to renege on our current agreements, and break any relationship we have with each other."
  # Declaration of War
  PR_DOW_PROPOSE_01: "This is a declaration of war! The [From.GetSpeciesNamePlural] have for too long engaged in wanton crimes against nature, upsetting the balance of the galaxy. That stops today."
 

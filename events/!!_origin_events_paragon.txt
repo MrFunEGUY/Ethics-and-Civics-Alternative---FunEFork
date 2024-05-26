@@ -204,7 +204,7 @@ country_event = { #After the Fall - First negotiation batch - with Reformists
 			days = -1
 		}
 		set_origin = origin_legendary_leader_death
-		shift_ethic = ethic_fanatic_egalitarian
+		shift_ethic = ethic_egalitarian
 		hidden_effect = {
 			paragon_origin_launch_rebelion = yes
 			country_event = {

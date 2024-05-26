@@ -261,12 +261,13 @@ totalitarian = {
 		unfulfilled_title = "TOTALITARIAN_NO_CASTE"
 		desc = "TOTALITARIAN_CASTE_DESC"
 		fulfilled_effect = 5
+		unfulfilled_effect = 0
 		potential = {
 			exists = owner
-			owner = { has_valid_civic = civic_divine_order }
+			has_global_flag = cultural_overhaul_funefork_active
 		}
 		trigger = {
-			owner = { has_valid_civic = civic_divine_order }
+			owner = { has_valid_civic = civic_caste_system }
 		}
 	}
 

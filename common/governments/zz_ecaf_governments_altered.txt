@@ -102,17 +102,21 @@ gov_military_dictatorship = {
 	}
 
 	weight = {
-		base = 5
+		base = 50
 		modifier = {
 			factor = 2
 			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
-			factor = 1.10
+			factor = 2
 			OR = {
 				has_valid_civic = civic_distinguished_admiralty
 				has_valid_civic = civic_nationalistic_zeal
 			}
+		}
+		modifier = {
+			factor = 100
+			has_valid_civic = civic_military_dictatorship
 		}
 	}
 }

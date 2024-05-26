@@ -528,6 +528,11 @@ civic_slaving_despots = {
 				value = ethic_authoritarian
 				value = ethic_fanatic_authoritarian
 			}
+			NOR = {
+				text = civic_tooltip_not_pacifist
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
 			value = ethic_fanatic_capitalism
 		}
 		civics = {
@@ -621,7 +626,7 @@ civic_spiritual_seekers = {
 }
 
 #Peaceful Commonwealth
-civic_enlightment = {
+civic_enlightenment = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
@@ -640,7 +645,7 @@ civic_enlightment = {
 			}
 		}
 	}
-	description = "civic_tooltip_enlightment_effects"
+	description = "civic_tooltip_enlightenment_effects"
 	modifier = {
 		country_unity_produces_mult = 0.05
 		country_energy_produces_mult = 0.1
