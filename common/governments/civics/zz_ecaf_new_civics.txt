@@ -538,7 +538,7 @@ civic_slaving_despots = {
 		civics = {
 			NOR = {
 				value = civic_slaver_guilds
-				value = civic_caste_system
+				value = civic_divine_order
 				value = civic_indentured_assets
 				value = civic_pleasure_seekers
 			}
@@ -731,7 +731,7 @@ civic_defenders_faith = {
 }
 
 #Caste System
-civic_caste_system = {
+civic_divine_order = {
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 		authority = { NOR = { inline_script = governments/conditions/auth_corporate } }
@@ -953,7 +953,7 @@ civic_welfare_state = {
 		}
 		civics = {
 			NOR = {
-				value = civic_caste_system
+				value = civic_divine_order
 				value = civic_merchant_guilds
 				value = civic_shared_burden
 				value = civic_slaver_guilds

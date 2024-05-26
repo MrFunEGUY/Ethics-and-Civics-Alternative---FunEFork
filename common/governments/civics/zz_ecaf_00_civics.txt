@@ -365,7 +365,7 @@ civic_meritocracy = {
 		civics = {
 			NOR = {
 				value = civic_aristocratic_elite
-				value = civic_caste_system
+				value = civic_divine_order
 				value = civic_state_monopoly
 				value = civic_harmonious_hierarchy
 				value = civic_labour_unions
@@ -822,7 +822,7 @@ civic_slaver_guilds = {
 			NOR = {
 				value = civic_pleasure_seekers
 				value = civic_slaving_despots
-				value = civic_caste_system
+				value = civic_divine_order
 			}
 		}
 	}

@@ -100,7 +100,7 @@ yondar = {
 	authority = "auth_imperial"
 	civics = {
 		"civic_imperial_cult"
-		"civic_caste_system"
+		"civic_divine_order"
 		"civic_harmonious_hierarchy"
 	}
 	government = gov_divine_empire

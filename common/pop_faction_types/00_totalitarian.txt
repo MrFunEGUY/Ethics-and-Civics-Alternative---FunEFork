@@ -267,7 +267,7 @@ totalitarian = {
 			has_global_flag = cultural_overhaul_funefork_active
 		}
 		trigger = {
-			owner = { has_valid_civic = civic_caste_system }
+			owner = { has_valid_civic = civic_divine_order }
 		}
 	}
 

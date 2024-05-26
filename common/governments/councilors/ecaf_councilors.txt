@@ -414,7 +414,7 @@ councilor_caste_system = { #Registry Bureau Secretary
 	is_leader_possible = {
 		leader_class = official
 	}
-	civic = civic_caste_system
+	civic = civic_divine_order
 	modifier = { #Siphons political power from workers and improves productivity. 5% at level 10.
 		pop_cat_worker_political_power = -0.05
 		pop_cat_ruler_political_power = 0.1
