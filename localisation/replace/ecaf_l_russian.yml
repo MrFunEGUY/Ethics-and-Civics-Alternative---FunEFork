@@ -3331,8 +3331,6 @@ l_russian:
  requires_technology_tech_galactic_administration: "$TRIGGER_FAIL$Требуетя сначала изучить технологию £society£ §Y$tech_galactic_administration$§!."
  requires_ascension_perks_4: "$TRIGGER_FAIL$Требуется сначала получить минимум 4 других перка Вознесения."
 
- policy_enslavement_rate: "Уровень Рабства"
- policy_enslavement_rate_desc: "Позволяет устанавливать долю населения в §YРабстве§! для §YАвторитарных§! и §YГильдии Работорговцев§!."
 
  enslavement_10: "10%"
  enslavement_10_name: "10%"

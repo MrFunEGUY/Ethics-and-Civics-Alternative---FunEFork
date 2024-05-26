@@ -816,6 +816,7 @@ civic_slaver_guilds = {
 			NOR = {
 				value = ethic_fanatic_socialism
 				value = ethic_fanatic_egalitarian
+				value = ethic_fanatic_pacifist
 			}
 		}
 		civics = {

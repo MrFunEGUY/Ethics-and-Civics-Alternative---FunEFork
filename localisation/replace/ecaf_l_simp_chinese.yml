@@ -2119,8 +2119,6 @@ l_simp_chinese:
  mod_job_druid_per_pop_short: "\n每 $VALUE$ £pop£ §G+1§! £mod_job_druid_add£"
  requires_technology_tech_galactic_administration: "$TRIGGER_FAIL$需要£society£ §Y$tech_galactic_administration$§!技术。"
  requires_ascension_perks_4: "$TRIGGER_FAIL$R需要先选择4个飞升天赋。"
- policy_enslavement_rate: "奴役比例"
- policy_enslavement_rate_desc: "§Y奴隶公会§!和§Y威权主义§!国民理念可以设置人口的§Y奴役§!比例。"
  enslavement_10: "10%"
  enslavement_10_name: "10%"
  enslavement_10_desc: " "

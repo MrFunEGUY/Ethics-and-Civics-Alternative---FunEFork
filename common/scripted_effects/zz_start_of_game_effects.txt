@@ -30,6 +30,7 @@ generate_start_pops = {
 		if = { # Syncretic Evolution & Necrophage: set flag & citizenship type; (Necrophage) spawn prepatent Pops
 			limit = {
 				owner = {
+					#noinspection ParadoxScriptUnresolvedExpression
 					OR = {
 						has_origin = origin_syncretic_evolution
 						has_origin = origin_necrophage

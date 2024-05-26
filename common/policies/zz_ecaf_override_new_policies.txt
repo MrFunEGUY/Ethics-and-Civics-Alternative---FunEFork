@@ -1669,13 +1669,6 @@ trade_policy = {
 		name = "trade_policy_science"
 		potential = {
 			has_valid_civic = civic_science_syndicate
-			# OR = {
-			# 	has_federation = no
-			# 	AND = {
-			# 		has_federation = yes
-			# 		#federation = { NOT = { has_federation_perk = trade_federation_passive } }
-			# 	}
-			# }
 		}
 
 		policy_flags = {
