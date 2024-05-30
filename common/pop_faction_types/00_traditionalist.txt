@@ -236,13 +236,7 @@ traditionalist = {
 		potential = {
 			exists = owner
 			owner = {
-				OR = {
-					has_surveyed_class = pc_nuked
-					has_surveyed_class = pc_nuked_relic
-					has_surveyed_class = pc_nuked_tl
-					has_surveyed_class = pc_nuked_superhab
-					has_surveyed_class = pc_nuked_cave
-				}
+				pd_is_planet_class_nuked_surveyed = yes
 				NOR = {
 					has_origin = origin_post_apocalyptic
 					has_origin = origin_post_apocalyptic_machines
@@ -257,16 +251,10 @@ traditionalist = {
 			owner = {
 				NOR = {
 					any_owned_planet = {
-						OR = {
-							is_pd_radiotrophic_world = yes
-							is_pd_nuked = yes
-						}
+						pd_is_planet_class_nuked = yes
 					}
 					any_planet_within_border = {
-						OR = {
-							is_pd_radiotrophic_world = yes
-							is_pd_nuked = yes
-						}
+						pd_is_planet_class_nuked = yes
 						is_terraforming = yes
 					}
 				}
@@ -300,7 +288,7 @@ traditionalist = {
 		trigger = {
 			owner = {
 				any_planet_within_border = {
-					is_pd_gaia = yes
+					pd_is_planet_class_pd_gaia = yes
 					is_colony = no
 					OR = {
 						has_modifier = consecrated_quality_1

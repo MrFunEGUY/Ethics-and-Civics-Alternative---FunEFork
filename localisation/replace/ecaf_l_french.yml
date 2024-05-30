@@ -42,6 +42,8 @@ l_french:
 
  slavery_military_tooltip: "§HBattle Thralls§! make excellent soldiers for local §HArmies§!. They cannot perform £pop_cat_ruler£ §Y$pop_cat_ruler$§! or £pop_cat_specialist£ §Y$pop_cat_specialist$§! Jobs, with the sole exception of working as £defense_army£ §Y$job_soldier_plural$§!. They train §Gtwice§! as much £ecaf_crew£ §Y$ecaf_crew$§!."
 
+ BRANCH_OFFICE_CRIMINAL_HERITAGE_TO_OVERLORD: "£trigger_no£ §ROur overlord does not allow us to conduct extralegal activities on their planets.§!"
+
  mod_ship_military_alloys_cost_mult: "Military Ship Alloy Cost"
  policy_enlistment_policy: "Enlistment Policy"
  policy_enlistment_policy_desc: "There are many ways to serve your country, with military service being a prominent example.\n"

@@ -11,7 +11,7 @@
 living_standard_shared_burden = {
 	potential = {
 		exists = from
-		from = { is_socialist = yes }
+		from = { is_socialism = yes }
 	}
 
 	triggered_pop_modifier = {

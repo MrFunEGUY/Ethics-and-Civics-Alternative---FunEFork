@@ -550,6 +550,7 @@ civic_feudal_realm = {
 				inline_script = governments/conditions/auth_imperial
 				inline_script = governments/conditions/auth_dictatorial
 			}
+			NOT = { value = auth_dict_democratic }
 		}
 		ethics = {
 			NOR = {

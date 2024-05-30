@@ -32,8 +32,6 @@ l_korean:
  auth_tec_patrocorporate_desc: "Patrocorporate"
  auth_tec_ai_corporate: "AI Corporate"
  auth_tec_ai_corporate_desc: "AI Corporate"
- auth_tec_patrocorporate: "Patrimonial Corporate"
- auth_tec_patrocorporate_desc: "Patrimonial Corporate"
 
  auth_private: "Private"
  auth_private_desc: "Private"
@@ -75,7 +73,6 @@ l_korean:
  gpm_trubbles: "gpm_trubbles"
  gpm_strange_voices: "gpm_strange_voices"
  gpm_arachnophobia: "gpm_arachnophobia"
- gpm_sand_tornadoes: "gpm_sand_tornadoes"
  gpm_sand_tornadoes: "gpm_sand_tornadoes"
  gpm_quicksand: "gpm_quicksand"
  gpm_blizzards: "gpm_blizzards"

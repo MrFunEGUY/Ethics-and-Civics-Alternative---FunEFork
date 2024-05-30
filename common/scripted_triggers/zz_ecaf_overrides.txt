@@ -1,3 +1,5 @@
+## Vanilla
+
 can_think = {
 	NOR = {
 		has_trait = trait_nerve_stapled
@@ -12,18 +14,6 @@ is_capitalist = {
 		has_civic = civic_corporate_dominion
 		has_civic = civic_merchant_guilds
 	}
-}
-
-is_nuked_planet = {
-	is_planet_class = pc_nuked
-}
-
-is_toxic_planet = {
-	is_planet_class = pc_toxic
-}
-
-is_barren_planet = {
-	is_planet_class = pc_barren
 }
 
 is_fanatic = {
@@ -113,7 +103,8 @@ is_slaver = {
 		has_valid_civic = civic_slaver_guilds
 		has_valid_civic = civic_slaving_despots
 		has_valid_civic = civic_indentured_assets
-		
+		has_valid_civic = civic_divine_order
+
 	}
 }
 
@@ -421,16 +412,6 @@ has_any_ethic = {
 	}
 }
 
-subject_socialism_overlord_opposing = {
-	is_socialism = yes
-	overlord = { is_capitalism = yes }
-}
-
-subject_capitalism_overlord_opposing = {
-	is_capitalism = yes
-	overlord = { is_socialism = yes }
-}
-
 subject_overlord_opposing_ethics = {
 	OR = {
 		subject_pacifist_overlord_opposing = yes
@@ -444,4 +425,18 @@ subject_overlord_opposing_ethics = {
 		subject_socialism_overlord_opposing = yes
 		subject_capitalism_overlord_opposing = yes
 	}
+}
+
+######
+
+is_nuked_planet = {
+	is_planet_class = pc_nuked
+}
+
+is_toxic_planet = {
+	is_planet_class = pc_toxic
+}
+
+is_barren_planet = {
+	is_planet_class = pc_barren
 }

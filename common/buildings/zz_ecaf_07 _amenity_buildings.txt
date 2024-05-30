@@ -14,7 +14,7 @@ building_paradise_dome = {
 			NOT = {
 				OR = {
                     is_planet_class = pc_habitat
-                    is_pd_habitat = yes # PD
+                    pd_is_domed_colony_class = yes # PD
                 }
 			}
 			AND = {

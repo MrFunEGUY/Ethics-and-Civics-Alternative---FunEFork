@@ -1,0 +1,6 @@
+councilor_bancorp = {
+	leader_class = { official }
+	possible = { always = no }
+	is_leader_possible = { always = no }
+	icon = "GFX_icon_councilor_ruler"
+}

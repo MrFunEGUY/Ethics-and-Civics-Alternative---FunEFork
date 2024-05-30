@@ -8,18 +8,13 @@ is_exile_country = {
 is_rogue_colony = { always = no }
 
 ##########
+has_planetary_diversity = { always = no }
+pd_is_domed_colony_class = { always = no }
 
-is_pd_nuked = {
-	is_planet_class = pc_nuked
-}
+pd_is_planet_class_nuked = { is_planet_class = pc_nuked }
+pd_is_planet_class_nuked_surveyed = { has_surveyed_class = pc_nuked }
 
-is_pd_radiotrophic_world = {
-	is_planet_class = pc_irradiated
-}
-
-is_pd_gaia = {
- 	is_planet_class = pc_gaia
-}
+pd_is_planet_class_pd_gaia = { is_planet_class = pc_gaia }
 
 ##########
 
@@ -32,9 +27,5 @@ am_civics_is_active = { always = no }
 has_megacorp_mod_active = { always = no }
 
 lrsk_gvp_is_active = { always = no }
-
-has_planetary_diversity = { always = no }
-
-is_pd_habitat = { always = no }
 
 is_symbiote_of_prev = { always = no }

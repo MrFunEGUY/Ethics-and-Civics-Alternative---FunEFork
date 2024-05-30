@@ -32,8 +32,6 @@
  auth_tec_patrocorporate_desc: "Patrocorporate"
  auth_tec_ai_corporate: "AI Corporate"
  auth_tec_ai_corporate_desc: "AI Corporate"
- auth_tec_patrocorporate: "Patrimonial Corporate"
- auth_tec_patrocorporate_desc: "Patrimonial Corporate"
 
  auth_private: "Private"
  auth_private_desc: "Private"
@@ -62,7 +60,7 @@
 
  gpm_global_thunderstorms: "gpm_global_thunderstorms"
  gpm_hostile_flora: "gpm_hostile_flora"
- gpm_toxic_gas: "gpm_toxic_gas"civic_tooltip_not_organic_zealots_fail
+ gpm_toxic_gas: "gpm_toxic_gas"
  gpm_titanic_predators: "gpm_titanic_predators"
  gpm_unusual_seasons: "gpm_unusual_seasons"
  gpm_simple_organisms: "gpm_simple_organisms"
@@ -75,7 +73,6 @@
  gpm_trubbles: "gpm_trubbles"
  gpm_strange_voices: "gpm_strange_voices"
  gpm_arachnophobia: "gpm_arachnophobia"
- gpm_sand_tornadoes: "gpm_sand_tornadoes"
  gpm_sand_tornadoes: "gpm_sand_tornadoes"
  gpm_quicksand: "gpm_quicksand"
  gpm_blizzards: "gpm_blizzards"
@@ -259,8 +256,3 @@
  lrsk_gov_var_civic_mc_heritage_trust: "Heritage Trust"
  lrsk_gov_var_civic_mc_conflict_res: "Conflict Resolution Specialists"
  lrsk_gov_var_civic_mc_police_state: "Investigation & Security Services"
- lrsk_gov_var_civic_mc_gig_economy: "Gig Economics"
- lrsk_gov_var_civic_mc_chart_corp_board: "Colonial Chartering"
- lrsk_gov_var_civic_mc_chartered_company: "Chartered Company"
- lrsk_gov_var_civic_mc_controlling_interest: "Controlling Interest"
- lrsk_gov_var_civic_mc_vertical_integration: "Vertical Integration"

@@ -435,7 +435,7 @@ ship_event = {
 											}
 										}
 										else_if = {
-											limit = { is_socialist = yes }
+											limit = { is_socialism = yes }
 											random_list = {
 												1 = { country_add_ethic = ethic_spiritualist }
 												1 = { country_add_ethic = ethic_xenophobe }

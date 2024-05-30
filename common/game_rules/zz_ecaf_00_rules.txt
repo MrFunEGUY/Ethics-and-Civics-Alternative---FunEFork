@@ -10,6 +10,7 @@ species_has_happiness = {
 	NOR = {
 		AND = {
 			has_trait = trait_machine_unit
+			exists = from
 			from = { has_authority = auth_machine_intelligence }
 		}
 		has_trait = trait_hive_mind
@@ -240,6 +241,14 @@ can_build_branch_office_on_planet = {
 				root = { is_criminal_syndicate = yes }
 				NOT = { has_planet_flag = criminal_branch_closed_cooldown_planet@root }
 			}
+		}
+	}
+	custom_tooltip = {
+		fail_text = BRANCH_OFFICE_CRIMINAL_HERITAGE_TO_OVERLORD
+		exists = owner
+		OR = {
+			root = { is_criminal_syndicate = no }
+			owner = { NOT = { is_overlord_to = root } }
 		}
 	}
 }

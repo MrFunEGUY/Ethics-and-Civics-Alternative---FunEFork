@@ -91,7 +91,7 @@ pop_ecaf_crew_production = {
 	}
 
 	modifier = {
-		planet_devastation > 0
+		planet = { planet_devastation > 0 }
 		factor = planet.value:ecaf_crew_devastation_mult
 	}
 

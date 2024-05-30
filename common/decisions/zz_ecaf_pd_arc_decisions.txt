@@ -48,8 +48,11 @@ decision_capital_arc = {
 	effect = {
 		# Make city-planet
 		custom_tooltip = decision_capital_arc_effects
-		hidden_effect = {	
-			remove_deposit = d_pd_capital_spot
+		hidden_effect = {
+			random_deposit = {
+				limit = { is_same_value = d_pd_capital_spot }
+				remove_deposit = yes
+			}
 			add_deposit = d_pd_capital_arc
 			#Techno Arc
 			IF = {
@@ -478,8 +481,11 @@ decision_palace_arc = {
 	effect = {
 		# Make city-planet
 		custom_tooltip = decision_palace_arc_effects
-		hidden_effect = {	
-			remove_deposit = d_pd_capital_spot
+		hidden_effect = {
+			random_deposit = {
+				limit = { is_same_value = d_pd_capital_spot }
+				remove_deposit = yes
+			}
 			add_deposit = d_pd_palace_arc
 			#Techno Arc
 			IF = {

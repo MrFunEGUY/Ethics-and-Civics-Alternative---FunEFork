@@ -53,7 +53,7 @@ gov_theocratic_republic = {
 	weight = {
 		base = 100
 		modifier = {
-			add = 500
+			factor = 10
 			has_valid_civic = civic_spiritual_democracy
 		}
 	}
@@ -189,6 +189,10 @@ gov_assembly_of_clans = {
 
 	weight = {
 		base = 800
+		modifier = {
+			factor = 0.25
+			NOT = { has_ethic = ethic_fanatic_militarist }
+		}
 	}
 }
 
