@@ -68,7 +68,7 @@ gov_holy_tribunal = {
 	should_force_rename = yes
 
 	possible = {
-		has_authority = auth_oligarchic
+		is_oligarchic_authority = yes
 		OR = {
 			has_valid_civic = civic_divine_council
 			has_valid_civic = civic_exalted_priesthood
@@ -455,7 +455,7 @@ gov_megacorporation = {
 	possible = {
 		OR = {
 			AND = {
-				has_authority = auth_oligarchic
+				is_oligarchic_authority = yes
 				OR = {
 					is_authoritarian = yes
 					NOR = {
@@ -567,7 +567,7 @@ gov_bandit_commune = {
 
 	possible = {
 		OR = {
-			has_authority = auth_oligarchic
+			is_oligarchic_authority = yes
 			has_authority = auth_democratic
 			has_authority = auth_strict_democratic
 		}

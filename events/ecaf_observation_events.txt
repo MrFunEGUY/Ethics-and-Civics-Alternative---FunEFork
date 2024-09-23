@@ -1,53 +1,8 @@
-namespace = observation
-
-# Societal Shift towards Authoritarian
-country_event = {
-	id = observation.3138
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		is_country_type = primitive
-		NOT = { has_country_flag = indoctrination_cooldown }
-		is_authoritarian = no
-		capital_scope = {
-			has_observation_outpost = yes
-			observation_outpost_owner = { is_authoritarian = yes }
-			any_owned_pop = { is_authoritarian = yes }
-		}
-	}
-
-	weight_multiplier = {
-		factor = 1
-		modifier = {
-			add = value:percent_species_ethic|ETHIC|authoritarian|
-			any_owned_pop = {
-				is_authoritarian = yes
-			}
-		}
-	}
-
-	immediate = {
-		set_timed_country_flag = { flag = indoctrination_cooldown days = 540 }
-		shift_ethic = "ethic_authoritarian"
-		if = {
-			limit = {
-				OR = {
-					is_democracy = yes
-					has_authority = auth_oligarchic
-				}
-			}
-			change_government = { authority = auth_imperial }
-		}
-		capital_scope = {
-			observation_outpost_owner = { country_event = { id = observation.3139 } }
-		}
-	}
-}
+namespace = ecaf_observation
 
 # Societal Shift towards Individualist
 country_event = {
-	id = observation.3154
+	id = ecaf_observation.1000
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -76,15 +31,15 @@ country_event = {
 		set_timed_country_flag = { flag = indoctrination_cooldown days = 540 }
 		shift_ethic = "ethic_capitalism"
 		capital_scope = {
-			observation_outpost_owner = { country_event = { id = observation.3155 } }
+			observation_outpost_owner = { country_event = { id = ecaf_observation.1005 } }
 		}
 	}
 }
 
 country_event = {
-	id = observation.3155
+	id = ecaf_observation.1005
 	title = "observation.3139.name"
-	desc = "observation.3155.desc"
+	desc = "ecaf_observation.1005.desc"
 	picture = GFX_evt_medieval_alien_civilization
 	show_sound = event_pre_ftl_civilization
 	location = from
@@ -96,7 +51,7 @@ country_event = {
 
 # Societal Shift towards Collectivism
 country_event = {
-	id = observation.3156
+	id = ecaf_observation.2000
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -125,15 +80,15 @@ country_event = {
 		set_timed_country_flag = { flag = indoctrination_cooldown days = 540 }
 		shift_ethic = "ethic_socialism"
 		capital_scope = {
-			observation_outpost_owner = { country_event = { id = observation.3157 } }
+			observation_outpost_owner = { country_event = { id = ecaf_observation.2005 } }
 		}
 	}
 }
 
 country_event = {
-	id = observation.3157
+	id = ecaf_observation.2005
 	title = "observation.3139.name"
-	desc = "observation.3157.desc"
+	desc = "ecaf_observation.2005.desc"
 	picture = GFX_evt_medieval_alien_civilization
 	show_sound = event_pre_ftl_civilization
 	location = from

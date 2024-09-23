@@ -11,9 +11,9 @@ espionage_smear_campaign_spiritualist = {
 		limit = {
 			root.target = {
 				OR = {
-					is_democracy = yes
-					has_authority = auth_oligarchic
-					has_authority = auth_imperial
+					is_democratic_authority = yes
+					is_oligarchic_authority = yes
+					is_imperial_authority = yes
 				}
 			}
 		}
@@ -251,12 +251,12 @@ espionage_smear_campaign_xenophile = {
 espionage_smear_campaign_authoritarian = {
 	if = {
 		limit = {
-			is_dictatorial = yes
+			is_dictatorial_authority = yes
 			root.target = {
 				OR = {
-					is_democracy = yes
-					has_authority = auth_oligarchic
-					has_authority = auth_imperial
+					is_democratic_authority = yes
+					is_oligarchic_authority = yes
+					is_imperial_authority = yes
 				}
 			}
 		}
@@ -319,11 +319,11 @@ espionage_smear_campaign_authoritarian = {
 # espionage_smear_campaign_capitalism = {
 # 	if = {
 # 		limit = {
-# 			is_dictatorial = yes
+# 			is_dictatorial_authority = yes
 # 			root.target = {
 # 				OR = {
-# 					is_democracy = yes
-# 					has_authority = auth_oligarchic
+# 					is_democratic_authority = yes
+# 					is_oligarchic_authority = yes
 # 					has_authority = auth_imperial
 # 				}
 # 			}
@@ -358,8 +358,8 @@ espionage_smear_campaign_authoritarian = {
 # 		limit = {
 # 			root.target = {
 # 				OR = {
-# 					is_democracy = yes
-# 					has_authority = auth_oligarchic
+# 					is_democratic_authority = yes
+# 					is_oligarchic_authority = yes
 # 					has_authority = auth_imperial
 # 				}
 # 			}
@@ -386,8 +386,8 @@ espionage_smear_campaign_authoritarian = {
 # 		limit = {
 # 			root.target = {
 # 				OR = {
-# 					is_democracy = yes
-# 					has_authority = auth_oligarchic
+# 					is_democratic_authority = yes
+# 					is_oligarchic_authority = yes
 # 					has_authority = auth_imperial
 # 				}
 # 			}

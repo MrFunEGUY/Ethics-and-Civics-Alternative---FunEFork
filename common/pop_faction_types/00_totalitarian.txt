@@ -125,11 +125,16 @@ totalitarian = {
 
 		potential = {
 			exists = owner
-			owner = { is_democracy = no }
+			owner = { is_democratic_authority = no }
 		}
 
 		trigger = {
-			owner = { is_imp_or_dict = yes }
+			owner = {
+				OR = {
+					is_imperial_authority = yes
+					is_dictatorial_authority = yes
+				}
+			}
 		}
 	}
 
@@ -143,11 +148,16 @@ totalitarian = {
 
 		potential = {
 			exists = owner
-			owner = { is_imp_or_dict = no }
+			owner = {
+				NOR = {
+					is_imperial_authority = yes
+					is_dictatorial_authority = yes
+				}
+			}
 		}
 
 		trigger = {
-			owner = { is_democracy = no }
+			owner = { is_democratic_authority = no }
 		}
 	}
 
@@ -675,7 +685,7 @@ totalitarian = {
 			potential = {
 				exists = owner
 				owner = {
-					has_authority = auth_oligarchic
+					is_oligarchic_authority = yes
 					has_country_flag = cyber_collectivist
 				}
 				is_faction_extorted = no
@@ -698,7 +708,7 @@ totalitarian = {
 			potential = {
 				exists = owner
 				owner = {
-					has_authority = auth_oligarchic
+					is_oligarchic_authority = yes
 					has_country_flag = cyber_collectivist
 				}
 				is_faction_extorted = yes

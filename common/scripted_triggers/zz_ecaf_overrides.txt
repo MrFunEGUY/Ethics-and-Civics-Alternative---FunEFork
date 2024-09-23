@@ -104,7 +104,6 @@ is_slaver = {
 		has_valid_civic = civic_slaving_despots
 		has_valid_civic = civic_indentured_assets
 		has_valid_civic = civic_divine_order
-
 	}
 }
 

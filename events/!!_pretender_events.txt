@@ -24,7 +24,7 @@ country_event = {
 			is_same_value = root.leader
 		}
 		NOT = { exists = heir }
-		is_imperial = yes
+		is_imperial_authority = yes
 	}
 	
 	immediate = {

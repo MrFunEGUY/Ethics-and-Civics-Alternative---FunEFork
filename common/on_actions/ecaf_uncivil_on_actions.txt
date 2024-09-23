@@ -43,3 +43,11 @@ on_post_government_changed = {
 		uncivil_civics_events.10 	#Mercenary Company 1	// Changes Mercenary status
 	}
 }
+
+# Chance of pre-FTL civilizations to shift their ethics
+on_pre_ftl_pop_ethic_shift = {
+	random_events = {
+		5 = ecaf_observation.1000	# Societal Shift towards Individualism
+		5 = ecaf_observation.2000	# Societal Shift towards Collectivism
+	}
+}

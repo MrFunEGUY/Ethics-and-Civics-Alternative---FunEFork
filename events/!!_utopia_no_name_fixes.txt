@@ -15,9 +15,9 @@ country_event = {
 			# Either you've not Imperial and have a Chosen One
 			AND = {
 				OR = {
-					is_democracy = yes
-					has_authority = auth_oligarchic
-					is_dictatorial = yes
+					is_democratic_authority = yes
+					is_oligarchic_authority = yes
+					is_dictatorial_authority = yes
 					# MegaCorps deliberately excluded.
 				}
 				any_owned_leader = {
@@ -50,9 +50,9 @@ country_event = {
 		if = {
 			limit = {
 				OR = {
-					has_authority = auth_democratic
-					has_authority = auth_oligarchic
-					has_authority = auth_dictatorial
+					is_democratic_authority = yes
+					is_oligarchic_authority = yes
+					is_dictatorial_authority = yes
 					# MegaCorps deliberately excluded.
 				}
 			}

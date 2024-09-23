@@ -66,28 +66,6 @@
 @soldier_job_crew_production = 1.5
 @other_military_job_crew_production = 0.75
 
-## Pop Crew Generation
-# @base_pop_crew_production = 0.1
-# @bio_trophy_pop_crew_production = -0.06
-# @worker_pop_crew_production = 0.085
-# @precursor_pop_crew_production = 0.025
-# @slave_pop_crew_production = 0.085
-# @specialist_pop_crew_production = 0.065
-# @ruler_pop_crew_production = 0.035
-# @limited_military_service_crew_mult = 0.075
-#
-# @pacifist_pop_crew_production = -0.175
-# @militarist_pop_crew_production = 0.1
-#
-# ## Job Crew Generation
-# @criminal_job_crew_mult = -1.5
-# @incidental_job_crew_production = 2
-# @civic_job_crew_mult = 1.25
-# @ruler_military_job_crew_production = 0.3
-# @soldier_job_crew_production = 1
-# @other_military_job_crew_production = 0.5
-# @hedonist_job_crew_mult = 0.01
-
 ## Starbase Crew Cost
 @starbase_outpost_crew_cost = 1
 @starbase_outpost_crew_upkeep = 0.075

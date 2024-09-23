@@ -93,7 +93,7 @@ ruler = {
 		potential = {
 			exists = owner
 			owner = {
-				has_authority = auth_oligarchic
+				is_oligarchic_authority = yes
 				has_country_flag = cyber_individualist
 			}
 		}
@@ -215,7 +215,7 @@ specialist = {
 		potential = {
 			exists = owner
 			owner = {
-				is_democracy = yes
+				is_democratic_authority = yes
 				has_country_flag = synth_physical
 			}
 		}
@@ -481,7 +481,7 @@ worker = {
 			trigger = {
 				has_trait = trait_cybernetic
 				owner = {
-					is_democracy = yes
+					is_democratic_authority = yes
 					has_country_flag = cyber_collectivist
 				}
 			}

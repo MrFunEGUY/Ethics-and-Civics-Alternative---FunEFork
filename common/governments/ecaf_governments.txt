@@ -76,7 +76,7 @@ gov_great_houses = {
 
 	possible = {
 		is_primitive = no
-		has_authority = auth_oligarchic
+		is_oligarchic_authority = yes
 		OR = {
 			has_valid_civic = civic_harmonious_hierarchy
 			has_valid_civic = civic_aristocratic_elite
@@ -102,7 +102,7 @@ gov_noble_aristocracy = {
 			has_ethic = ethic_egalitarian
 		}
 		has_valid_civic = civic_aristocratic_elite
-		has_authority = auth_oligarchic
+		is_oligarchic_authority = yes
 	}
 	weight = {
 		base = 500
@@ -119,7 +119,7 @@ gov_anarchy_communism = {
 	possible = {
 		OR = {
 			has_authority = auth_dictatorial
-			has_authority = auth_oligarchic
+			is_oligarchic_authority = yes
 			has_authority = auth_dict_democratic
 		}
 		has_ethic = ethic_fanatic_socialism
@@ -146,7 +146,7 @@ gov_jingoism = {
 		OR = {
 			has_authority = auth_dictatorial
 			has_authority = auth_dict_democratic
-			has_authority = auth_oligarchic
+			is_oligarchic_authority = yes
 		}
 		is_xenophobe = yes
 		is_militarist = yes
@@ -219,7 +219,7 @@ gov_cor_dictatorship = {
 			has_valid_civic = civic_state_monopoly
 		}
 		OR = {
-			has_authority = auth_oligarchic
+			is_oligarchic_authority = yes
 			has_authority = auth_dictatorial
 			has_authority = auth_imperial
 		}
@@ -409,7 +409,7 @@ gov_bur_collectivism = {
 	ruler_title_female = RT_CHAIRWOMAN
 	should_force_rename = yes
 	possible = {
-		has_authority = auth_oligarchic
+		is_oligarchic_authority = yes
 		has_valid_civic = civic_byzantine_bureaucracy
 		NOT = {
 			has_ethic = ethic_egalitarian
@@ -430,7 +430,7 @@ gov_genuine_aristocracy = {
 			has_valid_civic = civic_meritocracy
 			has_valid_civic = civic_harmonious_hierarchy
 		}
-		has_authority = auth_oligarchic
+		is_oligarchic_authority = yes
 		is_capitalism = no
 	}
 	weight = {
@@ -444,7 +444,7 @@ gov_oligarchic_republic = {
 	should_force_rename = yes
 	possible = {
 		has_ethic = ethic_egalitarian
-		has_authority = auth_oligarchic
+		is_oligarchic_authority = yes
 	}
 	weight = {
 		base = 100
@@ -461,7 +461,7 @@ gov_peoples_commissariat = {
 	should_force_rename = yes
 	possible = {
 		has_ethic = ethic_fanatic_socialism
-		has_authority = auth_oligarchic
+		is_oligarchic_authority = yes
 	}
 	weight = {
 		base = 1000
@@ -482,7 +482,7 @@ gov_benevolent_aristocracy = {
 			has_ethic = ethic_egalitarian
 		}
 		has_valid_civic = civic_aristocratic_elite
-		has_authority = auth_oligarchic
+		is_oligarchic_authority = yes
 	}
 	weight = {
 		base = 1000
@@ -666,7 +666,7 @@ gov_strasserism = {
 		is_socialism = yes
 		OR = {
 			has_authority = auth_dictatorial
-			has_authority = auth_oligarchic
+			is_oligarchic_authority = yes
 			has_authority = auth_dict_democratic
 		}
 	}

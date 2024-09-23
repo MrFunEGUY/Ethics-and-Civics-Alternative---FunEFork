@@ -1843,6 +1843,14 @@ enlistment_policy = {
 				has_valid_civic = civic_private_militaries
 			}
 			modifier = {
+				factor = 1.5
+				has_ethic = ethic_egalitarian
+			}
+			modifier = {
+				factor = 3
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			modifier = {
 				factor = 2
 				has_ethic = ethic_pacifist
 			}

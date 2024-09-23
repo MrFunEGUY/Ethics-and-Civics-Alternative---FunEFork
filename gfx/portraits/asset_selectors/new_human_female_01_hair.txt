@@ -267,9 +267,10 @@ new_human_female_hair_01 = {
 			trigger = {
 				owner = {
 					OR = {
-						has_authority = auth_oligarchic
-						is_democracy = yes
-						is_imp_or_dict = yes
+						is_oligarchic_authority = yes
+						is_democratic_authority = yes
+						is_imperial_authority = yes
+						is_dictatorial_authority = yes
 						has_primitive_government = yes
 						has_government = gov_stagnant_ascendancy
 					}

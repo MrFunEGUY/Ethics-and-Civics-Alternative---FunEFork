@@ -71,7 +71,7 @@ gov_cyber_oligarchy_individualist = {
 	ruler_title_female = RT_CHIEF_PRECENTOR_FEMALE
 
 	possible = {
-		has_authority = auth_oligarchic
+		is_oligarchic_authority = yes
 		has_country_flag = cyber_individualist
 	}
 
@@ -86,7 +86,7 @@ gov_cyber_oligarchy_collectivist = {
 	ruler_title_female = RT_CHIEF_PRECENTOR_FEMALE
 
 	possible = {
-		has_authority = auth_oligarchic
+		is_oligarchic_authority = yes
 		has_country_flag = cyber_collectivist
 	}
 

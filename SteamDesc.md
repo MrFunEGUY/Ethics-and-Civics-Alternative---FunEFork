@@ -48,6 +48,8 @@ This mod should go below any of the mods listed below.
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1923444292]- UI Overhaul Dynamic + Ethics and Civics Alternative[/url]
 
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3334125193]- ECAF Crew Topbar[/url]
+
 
 [hr][/hr]
 [h1]Credits:[/h1]

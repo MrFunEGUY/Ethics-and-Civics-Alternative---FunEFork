@@ -35,11 +35,11 @@ arthropoid_normal_clothes_01 = {
 		
 		"gfx/models/portraits/arthropoid/arthropoid_normal_outfit_ruler.dds" = { owner = { has_spiritualist_government = yes } }
 		
-		"gfx/models/portraits/arthropoid/arthropoid_normal_outfit_ruler.dds" = { owner = { is_democracy = yes } }
+		"gfx/models/portraits/arthropoid/arthropoid_normal_outfit_ruler.dds" = { owner = { is_democractic_government = yes } }
 		
 		"gfx/models/portraits/arthropoid/arthropoid_normal_outfit_ruler.dds" = { owner = { has_government = gov_stagnant_ascendancy } }
 		
-		"gfx/models/portraits/arthropoid/arthropoid_normal_outfit_governor.dds" = { owner = { has_authority = auth_oligarchic } }
+		"gfx/models/portraits/arthropoid/arthropoid_normal_outfit_governor.dds" = { owner = { is_oligarchic_government = yes } }
 		
 		"gfx/models/portraits/arthropoid/arthropoid_normal_outfit_governor.dds" = { owner = { has_primitive_government = yes } }
 		

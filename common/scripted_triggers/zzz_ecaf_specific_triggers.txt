@@ -119,7 +119,7 @@ is_technocracy = {
 	}
 }
 
-# Militarist - commandant
+# Militarist - Commandant
 is_stratocracy = {
 	exists = owner
 	owner = {
@@ -331,4 +331,27 @@ subject_socialism_overlord_opposing = {
 subject_capitalism_overlord_opposing = {
 	is_capitalism = yes
 	overlord = { is_socialism = yes }
+}
+
+#####
+
+ecaf_can_build_branch_office_on_planet_trigger = {
+	custom_tooltip = {
+		fail_text = BRANCH_OFFICE_CRIMINAL_HERITAGE_TO_OVERLORD
+		exists = owner
+		OR = {
+			root = { is_criminal_syndicate = no }
+			owner = { NOT = { is_overlord_to = root } }
+		}
+	}
+}
+
+ecaf_can_support_branch_offices_trigger = {
+	custom_tooltip = {
+		fail_text = ACTION_RECIPIENT_NOT_YOUR_CORP
+		NAND = {
+			is_megacorp = yes
+			is_subject = no
+		}
+	}
 }

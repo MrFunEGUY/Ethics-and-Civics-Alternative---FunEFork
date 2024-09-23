@@ -20,7 +20,7 @@ ecaf_crew_def_exhaustion_mult = {
 ecaf_crew_devastation_mult = {
 	base = 100
 	subtract = trigger:planet_devastation
-	divide = 100
+	divide = 200
 }
 
 ecaf_crew_bonus_mult = {
@@ -47,8 +47,8 @@ pop_ecaf_crew_production = {
 	modifier = { is_pop_category = deviant_drone factor = @criminal_job_crew_mult }
 
 	# Ethic
-	modifier = { has_ethic = ethic_pacifist add = @pacifist_pop_crew_production }
-	modifier = { has_ethic = ethic_militarist add = @militarist_pop_crew_production }
+	modifier = { is_pacifist = yes add = @pacifist_pop_crew_production }
+	modifier = { is_militarist = yes add = @militarist_pop_crew_production }
 
 	# Pop Military Service
 	modifier = { has_military_service_type = { type = military_service_limited } factor = @limited_military_service_crew_mult } # -25%

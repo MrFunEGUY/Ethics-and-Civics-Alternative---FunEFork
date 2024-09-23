@@ -32,7 +32,7 @@ trade_federation = {
 		host_has_dlc = Federations
 	}
 	allow = {
-		is_capitalist = yes
+		is_capitalism = yes
 		federation_check_for_subject_trigger = yes
 		if = {
 			limit = { host_has_dlc = "Megacorp" }

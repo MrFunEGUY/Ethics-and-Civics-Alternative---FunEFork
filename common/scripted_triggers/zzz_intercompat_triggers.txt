@@ -1,8 +1,8 @@
 
-has_auth_democratic = { is_democracy = yes }
+has_auth_democratic = { is_democratic_authority = yes }
 
-has_auth_dictatorial = { is_dictatorial = yes }
+has_auth_dictatorial = { is_dictatorial_authority = yes }
 
-has_auth_imperial = { is_imperial = yes }
+has_auth_imperial = { is_imperial_authority = yes }
 
 has_auth_corporate = { is_megacorp = yes }
