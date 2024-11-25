@@ -11,7 +11,7 @@ add_ethics_compatibility_modifier = {
 	if = { limit = { is_xenophobe = yes }		compare_and_modify_ethics_factor = { SAME = xenophobe OPP = xenophile } }
 	if = { limit = { is_materialist = yes }		compare_and_modify_ethics_factor = { SAME = materialist OPP = spiritualist } }
 	if = { limit = { is_spiritualist = yes }	compare_and_modify_ethics_factor = { SAME = spiritualist OPP = materialist } }
-	if = { limit = { is_socialism = yes }	compare_and_modify_ethics_factor = { SAME = socialism OPP = capitalism } }
+	if = { limit = { is_socialist = yes }	compare_and_modify_ethics_factor = { SAME = socialism OPP = capitalism } }
 	if = { limit = { is_capitalism = yes }	compare_and_modify_ethics_factor = { SAME = capitalism OPP = socialism } }
 	if = {
 		limit = { NOT = { check_variable = { which = ethics_compatibility_factor value = 0 } } }

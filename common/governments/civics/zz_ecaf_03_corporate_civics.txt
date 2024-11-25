@@ -1584,3 +1584,169 @@ civic_corporate_toxic_baths_individual_machine = {
 		}
 	}
 }
+
+civic_corporate_beastmasters = {
+	playable = { has_grand_archive_dlc = yes }
+	ai_playable = { has_grand_archive_dlc = yes }
+	flags = { first_alien_life amoeba_encountered Story1 Story5 }
+	description = "civic_beastmasters_effects"
+	potential = {
+		inline_script = governments/conditions/is_corporate
+		civics = { NOT = { value = civic_beastmasters } }
+	}
+	possible = {
+		civics = { NOT = { value = civic_privatized_exploration } }
+	}
+	modification = no
+	alternate_civic_version = civic_beastmasters
+
+	modifier = {
+		artificial_ship_naval_cap_usage_mult = 2.0
+	}
+
+	random_weight = {
+		base = @civic_rare_random_weight
+	}
+	ai_weight = {
+		base = @civic_rare_random_weight
+	}
+}
+
+civic_astrometeorology_megacorp = {
+	playable = {
+		has_cosmic_storms_dlc = yes
+	}
+	ai_playable = {
+		has_cosmic_storms_dlc = yes
+	}
+	potential = { inline_script = governments/conditions/is_corporate }
+	random_weight = {
+		base = @civic_default_random_weight
+	}
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+	}
+	description = civic_astrometeorology_megacorp_effect_tooltip
+}
+
+civic_storm_callers_megacorp = {
+	modification = {
+		add = {
+			has_civic = civic_storm_callers
+		}
+		remove = {
+			always = no
+		}
+	}
+	alternate_civic_version = civic_storm_callers
+	playable = { has_cosmic_storms_dlc = yes }
+	ai_playable = { has_cosmic_storms_dlc = yes }
+	description = "civic_storm_callers_megacorp_effect_tooltip"
+	potential = { inline_script = governments/conditions/is_corporate }
+	traits = {
+		trait = trait_storm_touched
+	}
+	modifier = {
+		capital_storm_diplo_weight_mult = 0.20
+	}
+	random_weight = {
+		base = @civic_default_random_weight
+	}
+}
+
+civic_environmental_architects_megacorp = {
+	playable = {
+		has_cosmic_storms_dlc = yes
+	}
+	ai_playable = {
+		has_cosmic_storms_dlc = yes
+	}
+	potential = { inline_script = governments/conditions/is_corporate }
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_environmental_architects
+				value = civic_environmentalist
+			}
+			NOR = {
+				text = civic_tooltip_not_mutagenic
+				value = civic_toxic_baths
+				value = civic_toxic_baths_individual_machine
+				value = civic_corporate_toxic_baths
+				value = civic_corporate_toxic_baths_individual_machine
+				value = civic_hive_toxic_baths
+				value = civic_machine_toxic_baths
+			}
+			NOR = {
+				text = civic_tooltip_not_relentless_industrialists
+				value = civic_relentless_industrialists
+				value = civic_corporate_relentless_industrialists
+			}
+		}
+		origin = {
+			NOR = {
+				value = origin_remnants
+				value = origin_post_apocalyptic
+				value = origin_void_dwellers
+				value = origin_shattered_ring
+				value = origin_lithoid
+				value = origin_machine
+				value = origin_void_machines
+			}
+		}
+	}
+	modification = {
+		add = {
+			has_civic = civic_environmental_architects
+		}
+		remove = {
+			always = no
+		}
+	}
+	alternate_civic_version = civic_environmental_architects
+	random_weight = {
+		base = @civic_default_random_weight
+	}
+	modifier = {
+		planet_jobs_produces_mult = 0.1
+		pop_growth_speed = 0.1
+		planet_pops_upkeep_mult = -0.15
+		planet_clear_blocker_speed_mult = 0.25
+	}
+	description = civic_environmental_architects_megacorp_effect_tooltip
+	negative_description = civic_environmental_architects_negative_effect_tooltip
+}
+
+########################
+# Grand Archive Civics #
+########################
+
+civic_corporate_galactic_curators = {
+	playable = { has_grand_archive_dlc = yes }
+	ai_playable = { has_grand_archive_dlc = yes }
+	description = "civic_corporate_galactic_curators_effects"
+	potential = {
+		inline_script = governments/conditions/is_corporate
+		civics = {
+			NOT = { value = civic_galactic_curators }
+		}
+	}
+
+	modification = no
+
+	alternate_civic_version = civic_galactic_curators
+
+	random_weight = {
+		base = @civic_rare_random_weight
+	}
+	ai_weight = {
+		base = @civic_rare_random_weight
+	}
+
+	modifier = {
+		planet_jobs_unity_produces_mult = @galactic_curators_civic_unity_jobs_production_mult
+		country_specimen_selling_cost_mult = 1.0
+		country_exhibit_unlocking_cost_mult = -0.50
+		ship_anomaly_generation_chance_mult = @galactic_curators_civic_anomaly_discovery_mult
+	}
+}

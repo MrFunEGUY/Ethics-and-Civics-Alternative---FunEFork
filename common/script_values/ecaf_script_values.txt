@@ -1,6 +1,11 @@
 ecaf_crew_max = {
 	base = @ecaf_crew_max_amount
 	add = modifier:country_resource_max_ecaf_crew_add
+
+	modifier = {
+		has_global_flag = ecaf_crew_cheat_enabled
+		add = 1000000
+	}
 }
 
 ecaf_crew_att_exhaustion_mult = {
@@ -56,6 +61,9 @@ pop_ecaf_crew_production = {
 
 	# Pop Jobs
 	modifier = { has_job = soldier add = @soldier_job_crew_production }
+	modifier = { has_job = knight add = @soldier_job_crew_production }
+	modifier = { has_job = overlord_knight add = @soldier_job_crew_production }
+	modifier = { has_job = overlord_knight_drone add = @soldier_job_crew_production }
 	modifier = { has_job = mercenary add = @soldier_job_crew_production }
 	modifier = { has_job = warrior_drone add = @soldier_job_crew_production }
 	modifier = { has_job = gpm_bunker_army add = @soldier_job_crew_production }
@@ -63,11 +71,17 @@ pop_ecaf_crew_production = {
 	modifier = { has_job = telepath add = @other_military_job_crew_production }
 	modifier = { has_job = gladiator add = @other_military_job_crew_production }
 	modifier = { has_job = templar add = @other_military_job_crew_production }
+	modifier = { has_job = overlord_recruiter add = @other_military_job_crew_production }
+	modifier = { has_job = overlord_recruiter_drone add = @other_military_job_crew_production }
+	modifier = { has_job = overlord_beholder add = @other_military_job_crew_production }
+	modifier = { has_job = overlord_beholder_drone add = @other_military_job_crew_production }
 
 	modifier = { has_job = ranger add = @incidental_job_crew_production }
 	modifier = { has_job = enforcer add = @incidental_job_crew_production }
 	modifier = { has_job = duelist add = @incidental_job_crew_production }
 	modifier = { has_job = patrol_drone add = @incidental_job_crew_production }
+	modifier = { has_job = overlord_ranger add = @incidental_job_crew_production }
+	modifier = { has_job = overlord_ranger_drone add = @incidental_job_crew_production }
 
 	modifier = { has_job = fe_hedonist factor = @hedonist_job_crew_mult }
 
@@ -144,5 +158,10 @@ pop_ecaf_crew_production = {
 			}
 		}
 		factor = owner.value:ecaf_crew_bonus_mult
+	}
+
+	modifier = {
+		has_global_flag = ecaf_crew_cheat_enabled
+		add = 100000
 	}
 }

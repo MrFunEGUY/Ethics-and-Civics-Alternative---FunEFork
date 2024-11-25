@@ -62,7 +62,7 @@ country_event = { #Leader grows - 10 yo
 	}
 	option = {
 		name = paragon.3114.socialism
-		trigger = { is_socialism = yes }
+		trigger = { is_socialist = yes }
 		set_global_flag = leader_raised_socialism
 	}
 	option = {

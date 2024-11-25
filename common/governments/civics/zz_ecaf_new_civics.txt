@@ -1173,19 +1173,20 @@ civic_military_dictatorship = {
 				inline_script = governments/conditions/auth_dictatorial
 			}
 		}
-		# civics = {
-		# 	NOR = {
-		# 		value = civic_imperial_cult
-		# 		value = civic_cyber_dictatorship
-		# 		value = civic_aristocratic_elite
-		# 		value = civic_merchant_guilds
-		# 		value = civic_state_monopoly
-		# 		value = civic_exalted_priesthood
-		# 		value = civic_technocracy
-		# 		value = civic_bureaucracy
-		# 		value = civic_stratocracy
-		# 	}
-		# }
+		civics = {
+			NOT = {
+				value = civic_political_pluralism
+				# value = civic_imperial_cult
+				# value = civic_cyber_dictatorship
+				# value = civic_aristocratic_elite
+				# value = civic_merchant_guilds
+				# value = civic_state_monopoly
+				# value = civic_exalted_priesthood
+				# value = civic_technocracy
+				# value = civic_bureaucracy
+				# value = civic_stratocracy
+			}
+		}
 	}
 	can_build_ruler_ship = yes
 	random_weight = {
@@ -1534,20 +1535,20 @@ civic_cyber_dictatorship = {
 				inline_script = governments/conditions/auth_dictatorial
 			}
 		}
-		# civics = {
-		# 	NOR = {
-		# 		value = civic_military_dictatorship
-		# 		value = civic_philosopher_king
-		# 		value = civic_political_pluralism
-		# 		value = civic_aristocratic_elite
-		# 		value = civic_state_monopoly
-		# 		value = civic_merchant_guilds
-		# 		value = civic_exalted_priesthood
-		# 		value = civic_technocracy
-		# 		value = civic_bureaucracy
-		# 		value = civic_stratocracy
-		# 	}
-		# }
+		civics = {
+			NOT = {
+				# value = civic_military_dictatorship
+				# value = civic_philosopher_king
+				value = civic_political_pluralism
+				# value = civic_aristocratic_elite
+				# value = civic_state_monopoly
+				# value = civic_merchant_guilds
+				# value = civic_exalted_priesthood
+				# value = civic_technocracy
+				# value = civic_bureaucracy
+				# value = civic_stratocracy
+			}
+		}
 	}
 	random_weight = {
 		base = 5

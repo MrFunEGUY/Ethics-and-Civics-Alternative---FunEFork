@@ -11,7 +11,7 @@
 living_standard_shared_burden = {
 	potential = {
 		exists = from
-		from = { is_socialism = yes }
+		from = { is_socialist = yes }
 	}
 
 	triggered_pop_modifier = {
@@ -443,13 +443,13 @@ living_standard_good = {
 		NOT = { has_trait = trait_hive_mind }
 		OR = {
 			AND = {
-				from = { is_robotic_species = yes }
+				is_robotic_species = yes
 				OR = {
 					species_rights_robot_full_rights_check = yes
 					from = { is_individual_machine = yes }
 				}
 			}
-			from = { is_robotic_species = no }
+			is_robotic_species = no
 		}
 	}
 
@@ -504,7 +504,7 @@ living_standard_good = {
 			from = {
 				NOR = {
 					is_pacifist = yes
-					is_socialism = yes
+					is_socialist = yes
 				}
 			}
 		}
@@ -742,7 +742,7 @@ living_standard_stratified = {
 					has_ethic = ethic_fanatic_capitalism
 					AND = {
 						is_authoritarian = yes
-						is_socialism = no
+						is_socialist = no
 					}
 				}
 			}
@@ -902,7 +902,7 @@ living_standard_subsistence = {
 		modifier = {
 			factor = 0
 			from = {
-				is_socialism = yes
+				is_socialist = yes
 				is_xenophobe = no
 			}
 		}

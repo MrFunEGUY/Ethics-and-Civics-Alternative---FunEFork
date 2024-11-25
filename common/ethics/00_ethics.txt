@@ -3189,13 +3189,13 @@ ethic_socialism = {
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_SOCIALISM_POS
 		trigger = {
-			is_socialism = yes
+			is_socialist = yes
 		}
 	}
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_FACTION_POS
 		trigger = {
-			is_socialism = no
+			is_socialist = no
 			has_faction = socialists
 		}
 	}
@@ -3334,13 +3334,13 @@ ethic_socialism = {
 			factor = 0
 			NOR = {
 				is_country_type = default
-				is_socialism = yes
+				is_socialist = yes
 				AND = {
 					is_country_type = primitive
 					has_country_flag = preftl_societal_enlightenment_pact
 					capital_scope = {
 						has_observation_outpost = yes
-						observation_outpost_owner = { is_socialism = yes }
+						observation_outpost_owner = { is_socialist = yes }
 					}
 				}
 			}
@@ -3368,7 +3368,7 @@ ethic_socialism = {
 		modifier = {
 			factor = 2
 			is_country_type = default
-			is_socialism = no
+			is_socialist = no
 			has_faction = socialists
 		}
 		modifier = {

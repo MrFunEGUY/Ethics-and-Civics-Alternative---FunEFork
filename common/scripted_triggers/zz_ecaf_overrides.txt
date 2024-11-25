@@ -86,12 +86,12 @@ has_opposing_ethics = {
 			$COUNTRY2$ = { is_spiritualist = yes }
 		}
 		AND = {
-			$COUNTRY1$ = { is_socialism = yes }
+			$COUNTRY1$ = { is_socialist = yes }
 			$COUNTRY2$ = { is_capitalism = yes }
 		}
 		AND = {
 			$COUNTRY1$ = { is_capitalism = yes }
-			$COUNTRY2$ = { is_socialism = yes }
+			$COUNTRY2$ = { is_socialist = yes }
 		}
 	}
 }
@@ -205,7 +205,7 @@ leader_has_empire_ethic = {
 		}
 		AND = {
 			has_ethic = ethic_socialism
-			owner = { is_socialism = yes }
+			owner = { is_socialist = yes }
 		}
 		AND = {
 			has_ethic = ethic_capitalism
@@ -250,10 +250,10 @@ has_opposing_ethics = {
 		}
 		AND = {
 			$COUNTRY1$ = { is_capitalism = yes }
-			$COUNTRY2$ = { is_socialism = yes }
+			$COUNTRY2$ = { is_socialist = yes }
 		}
 		AND = {
-			$COUNTRY1$ = { is_socialism = yes }
+			$COUNTRY1$ = { is_socialist = yes }
 			$COUNTRY2$ = { is_capitalism = yes }
 		}
 	}
@@ -335,10 +335,10 @@ has_alternative_ethics = { # Consider THIS_SCOPE as the entity you are checking 
 		}
 		AND = {
 			$THIS_SCOPE$ = {
-				is_socialism = yes
+				is_socialist = yes
 			}
 			$REF_SCOPE$ = {
-				is_socialism = no
+				is_socialist = no
 				is_capitalism = no
 			}
 		}
@@ -348,7 +348,7 @@ has_alternative_ethics = { # Consider THIS_SCOPE as the entity you are checking 
 			}
 			$REF_SCOPE$ = {
 				is_capitalism = no
-				is_socialism = no
+				is_socialist = no
 			}
 		}
 	}
@@ -385,7 +385,7 @@ is_owner_ethic_pop_faction = {
 			owner = { is_xenophile = yes }
 		}
 		socialists = {
-			owner = { is_socialism = yes }
+			owner = { is_socialist = yes }
 		}
 		bankers = {
 			owner = { is_capitalism = yes }

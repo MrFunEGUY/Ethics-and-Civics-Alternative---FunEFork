@@ -1695,6 +1695,91 @@ pearl_diver = {
 	inline_script = "jobs/automodding_priority_trade"
 }
 
+knight = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_order_keep
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_enslaved = no
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = no
+		}
+	}
+
+	resources = {
+		category = planet_knights
+		produces = {
+			trigger = { exists = owner }
+			unity = 3
+			mult = value:knights_unity_output_modifier
+		}
+		produces = {
+			trigger = { exists = owner }
+			physics_research = 2
+			engineering_research = 2
+			society_research = 2
+			mult = value:knights_research_output_modifier
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_country_flag = cosmogenesis_knights
+				}
+			}
+			advanced_logic = 1
+			mult = value:knights_research_output_modifier
+		}
+		upkeep = {
+			alloys = 1
+			trigger = {
+				exists = owner
+				owner = {
+					NOT = {
+						has_modifier = luminous_blades
+					}
+				}
+			}
+		}
+	}
+
+	pop_modifier = {
+		pop_defense_armies_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { has_country_flag = toxoids_7090_a }
+		}
+		planet_amenities_add = 5
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 4
+	}
+
+	weight = {
+		weight = @high_prio_specialist_job_weight
+		factor = 1.2
+		add = 5 #Somehow pops preferred to work as squires than as knights. No more.
+		mult = value:job_weights_modifier|JOB|bureaucrat|RESOURCE|unity|
+		mult = value:job_weights_research_modifier|JOB|researcher|
+	}
+
+	inline_script = "jobs/automodding_priority_unity"
+}
+
 resort_worker = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER

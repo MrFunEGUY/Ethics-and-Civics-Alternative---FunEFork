@@ -616,4 +616,18 @@ building_planetary_shield_generator = {
 	prerequisites = {
 		"tech_planetary_shield_generator"
 	}
+
+	custom_storm_ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 5
+			AND = {
+				exists = owner
+				solar_system = {
+					exists = owner
+					owner = { num_cosmic_storms_encountered >=2 }
+				}
+			}
+		}
+	}
 }

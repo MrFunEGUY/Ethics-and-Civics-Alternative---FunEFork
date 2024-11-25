@@ -373,7 +373,7 @@ spiritual_seekers = {
 			is_egalitarian = yes
 			is_pacifist = yes
 			is_xenophile = yes
-			is_socialism = yes
+			is_socialist = yes
 		}
 		OR = {
 			is_spiritualist = yes
@@ -471,7 +471,7 @@ ruthless_capitalists = {
 		is_country_type = default
 		NOR = {
 			has_ethic = "ethic_fanatic_pacifist"
-			is_socialism = yes
+			is_socialist = yes
 			has_ethic = "ethic_fanatic_xenophobe"
 			has_valid_civic = civic_environmentalist
 			has_valid_civic = civic_welfare_state
@@ -783,7 +783,7 @@ decadent_hierarchy = {
 		}
 		NOR = {
 			is_egalitarian = yes
-			is_socialism = yes
+			is_socialist = yes
 		}
 	}
 
@@ -910,7 +910,7 @@ harmonious_hierarchy = {
 		OR = {
 			is_pacifist = yes
 			is_xenophile = yes
-			is_socialism = yes
+			is_socialist = yes
 		}
 		is_authoritarian = yes
 	}
@@ -923,7 +923,7 @@ harmonious_hierarchy = {
 		}
 		modifier = {
 			add = 2
-			is_socialism = yes
+			is_socialist = yes
 		}
 		modifier = {
 			add = 1

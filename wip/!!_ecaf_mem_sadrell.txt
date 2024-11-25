@@ -253,7 +253,7 @@ planet_event = {
                         }
                     }
                     else_if = {
-                        limit = { is_socialism = yes }
+                        limit = { is_socialist = yes }
                         random_list = {
                             1 = { country_add_ethic = ethic_militarist }
                             1 = { country_add_ethic = ethic_xenophobe }

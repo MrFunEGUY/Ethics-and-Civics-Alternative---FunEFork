@@ -107,7 +107,7 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			is_socialism = yes
+			is_socialist = yes
 		}
 		weight = {
 			weight = 1

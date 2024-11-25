@@ -98,7 +98,7 @@ gov_noble_aristocracy = {
 	should_force_rename = yes
 	possible = {
 		NOR = {
-			is_socialism = yes
+			is_socialist = yes
 			has_ethic = ethic_egalitarian
 		}
 		has_valid_civic = civic_aristocratic_elite
@@ -151,7 +151,7 @@ gov_jingoism = {
 		is_xenophobe = yes
 		is_militarist = yes
 		is_egalitarian = no
-		is_socialism = no
+		is_socialist = no
 	}
 	should_force_rename = yes
 	weight = {
@@ -386,7 +386,7 @@ gov_peoples_republic = {
 			has_authority = auth_dictatorial
 			has_authority = auth_dict_democratic
 		}
-		is_socialism = yes
+		is_socialist = yes
 	}
 	weight = {
 		base = 200
@@ -414,7 +414,7 @@ gov_bur_collectivism = {
 		NOT = {
 			has_ethic = ethic_egalitarian
 		}
-		is_socialism = yes
+		is_socialist = yes
 	}
 	weight = {
 		base = 8000
@@ -623,7 +623,7 @@ gov_imperial_socialism = {
 	dynastic_last_names = yes
 	should_force_rename = yes
 	possible = {
-		is_socialism = yes
+		is_socialist = yes
 		inline_script = governments/conditions/auth_imperial
 	}
 	weight = {
@@ -663,7 +663,7 @@ gov_strasserism = {
 		has_valid_civic = civic_in_perfect
 		is_xenophobe = yes
 		is_authoritarian = yes
-		is_socialism = yes
+		is_socialist = yes
 		OR = {
 			has_authority = auth_dictatorial
 			is_oligarchic_authority = yes

@@ -174,7 +174,7 @@ spiritual_seekers_machine = {
 			is_egalitarian = yes
 			is_pacifist = yes
 			is_xenophile = yes
-			is_socialism = yes
+			is_socialist = yes
 		}
 		OR = {
 			is_spiritualist = yes
@@ -260,7 +260,7 @@ proletarian_traders = {
 	}
 	allow = {
 		is_country_type = default
-		is_socialism = yes
+		is_socialist = yes
 		OR = {
 			has_valid_civic = "civic_shared_burden"
 			has_valid_civic = "civic_welfare_state"

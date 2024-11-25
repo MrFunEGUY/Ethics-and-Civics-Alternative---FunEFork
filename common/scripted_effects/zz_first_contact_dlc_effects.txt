@@ -382,7 +382,7 @@ pre_ftl_indoctrinate_operation_result = {
 				shift_pre_ftl_pop_ethic = { ETHIC = socialism BONUS = $BONUS$ }
 				modifier = {
 					mult = 0
-					is_socialism = no
+					is_socialist = no
 				}
 			}
 			1 = {

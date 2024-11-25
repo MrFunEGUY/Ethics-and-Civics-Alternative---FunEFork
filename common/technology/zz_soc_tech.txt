@@ -652,7 +652,7 @@ tech_selected_lineages = {
 		}
 		modifier = {
 			factor = 0.25
-			is_socialism = yes
+			is_socialist = yes
 		}
 		modifier = {
 			factor = 2
@@ -713,7 +713,7 @@ tech_capacity_boosters = {
 		}
 		modifier = {
 			factor = 0.25
-			is_socialism = yes
+			is_socialist = yes
 		}
 		modifier = {
 			factor = 2

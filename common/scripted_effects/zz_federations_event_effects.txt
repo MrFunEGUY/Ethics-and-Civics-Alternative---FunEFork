@@ -229,7 +229,7 @@ create_common_ground_member = {
 			1 = {	# Fanatic Socialism
 				modifier = {
 					factor = 10
-					root = { is_socialism = yes }
+					root = { is_socialist = yes }
 				}
 				create_country = {
 					name_list = random
@@ -532,7 +532,7 @@ create_hegemon_member = {
 			1 = {	# Fanatic Socialism
 				modifier = {
 					factor = 10
-					root = { is_socialism = yes }
+					root = { is_socialist = yes }
 				}
 				create_country = {
 					name = random

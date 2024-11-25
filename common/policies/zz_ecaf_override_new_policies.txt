@@ -2027,7 +2027,7 @@ economic_stance = {
 			}
 			has_technology = tech_free_market
 			NOR = {
-				is_socialism = yes
+				is_socialist = yes
 				has_valid_civic = civic_harmonious_hierarchy
 				has_valid_civic = civic_distributism
 				has_valid_civic = civic_state_monopoly

@@ -354,6 +354,10 @@ l_russian:
  edict_meal_real: " 'Хлеба и зрелищ!' "
  edict_meal_real_desc: " "
  edict_ancestor_call: "Священный Праздник Урожая"
+ edict_zz_disable_crew: "Effectively Disable £ecaf_crew£ §Y$ecaf_crew$§! Mechanic"
+ edict_zz_disable_crew_desc: "The maximum §Y$ecaf_crew$§! limit will be increased by 1M and pops will produce around 100K §Y$ecaf_crew$§! each."
+ edict_zz_enable_crew: "Enable £ecaf_crew£ §Y$ecaf_crew$§! Mechanic"
+ edict_zz_enable_crew_desc: "The £ecaf_crew£ §Y$ecaf_crew$§! mechanic will be reenabled."
  edict_ancestor_call_desc: " "
  edict_religious_unity_desc: "Этот указ на базе фанатичного спиритуализма объединяет население в квази-религиозном единстве, с особым вниманием к соблюдению строгого поста.\n\n"
  edict_increase_planetsize: "Эффективное Планирование Застройки"
@@ -2602,7 +2606,7 @@ l_russian:
  building_mecha_monastery: "Меха-Монастырь"
  building_mecha_monastery_desc: " "
 
- empire_is_socialism: "$TRIGGER_FAIL$Наша Империя исповедует идеалы этики §Y$ethic_socialism$§!."
+ empire_is_socialist: "$TRIGGER_FAIL$Наша Империя исповедует идеалы этики §Y$ethic_socialism$§!."
  empire_is_capitalism: "$TRIGGER_FAIL$Наша Империя исповедует идеалы этики §Y$ethic_capitalism$§!."
 
  PROGRESSIVE_NO_SLAVERY: "Нет Рабству"

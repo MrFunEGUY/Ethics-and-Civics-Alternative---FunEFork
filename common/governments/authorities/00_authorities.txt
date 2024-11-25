@@ -56,6 +56,8 @@ auth_democratic = {
 
 	uses_mandates = yes
 
+	color = { 81 140 44 255 }
+	
 	ruler_council_position = councilor_ruler_democratic
 
 	possible = {
@@ -199,6 +201,8 @@ auth_dictatorial = {
 
 	has_agendas = yes
 
+	color = { 162 85 12 255 }
+	
 	ruler_council_position = councilor_ruler_dictatorial
 	
 	possible = {
@@ -403,6 +407,8 @@ auth_imperial = {
 
 	has_agendas = yes
 
+	color = { 141 38 38 255 }
+	
 	ruler_council_position = councilor_ruler_imperial
 
 	possible = {
@@ -552,6 +558,8 @@ auth_oligarchic = {
 
 	has_agendas = yes
 
+	color = { 164 135 18 255 }
+	
 	ruler_council_position = councilor_ruler_oligarchic
 
 	possible = {
@@ -692,6 +700,8 @@ auth_hive_mind = {
 	can_reform = no
 	localization_postfix = hive_mind
 
+	color = { 225 165 33 255 }
+	
 	valid_for_released_vassal = yes
 
 	ruler_council_position = councilor_ruler_hive_mind
@@ -1406,6 +1416,8 @@ auth_corporate = {
 
 	has_agendas = yes
 
+	color = { 132 143 38 255 }
+	
 	ruler_council_position = councilor_ruler_corporate
 
 	playable = {
@@ -1542,6 +1554,8 @@ auth_machine_intelligence = {
 	can_reform = no
 	localization_postfix = machine_intelligence
 
+	color = { 0 165 155 255 }
+	
 	valid_for_released_vassal = no
 
 	ruler_council_position = councilor_ruler_machine_intelligence

@@ -58,7 +58,7 @@ tech_planned_economy = {
 	weight = @tier3weight1
 	potential = {
 		is_gestalt = no
-		is_socialism = yes
+		is_socialist = yes
 	}
 	weight_modifier = {
 		factor = 1.5
@@ -73,7 +73,7 @@ tech_planned_economy = {
 		modifier = {
 			factor = 0
 			OR = {
-				is_socialism = yes
+				is_socialist = yes
 				has_valid_civic = civic_beacon_of_liberty
 			}
 		}

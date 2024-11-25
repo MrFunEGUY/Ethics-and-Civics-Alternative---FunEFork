@@ -63,7 +63,7 @@ country_event = {
 		}
 		capital_scope = {
 			has_observation_outpost = yes
-			observation_outpost_owner = { is_socialism = yes }
+			observation_outpost_owner = { is_socialist = yes }
 			any_owned_pop = { has_ethic = ethic_socialism }
 		}
 	}
@@ -72,7 +72,7 @@ country_event = {
 		factor = 1
 		modifier = {
 			factor = value:percent_species_ethic|ETHIC|socialism|
-			any_owned_pop = { is_socialism = yes }
+			any_owned_pop = { is_socialist = yes }
 		}
 	}
 

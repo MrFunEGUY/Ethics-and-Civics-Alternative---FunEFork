@@ -324,13 +324,13 @@ is_aristocracy = {
 #############
 
 subject_socialism_overlord_opposing = {
-	is_socialism = yes
+	is_socialist = yes
 	overlord = { is_capitalism = yes }
 }
 
 subject_capitalism_overlord_opposing = {
 	is_capitalism = yes
-	overlord = { is_socialism = yes }
+	overlord = { is_socialist = yes }
 }
 
 #####

@@ -1,0 +1,142 @@
+################################
+# Grand Archive Origins Events #
+################################
+
+namespace = grand_archive
+
+country_event = {
+	id = grand_archive.1002
+	title = grand_archive.1002.name
+	desc = {
+		trigger = { is_homicidal = no }
+		text = grand_archive.1002.desc.default
+	}
+	desc = {
+		trigger = { is_homicidal = yes }
+		text = grand_archive.1002.desc.homicidal
+	}
+	picture = GFX_evt_primal_calling
+	show_sound = ga_event_hunter_fanfare_announcement
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = primal_calling_alignment_chosen }
+	}
+
+	immediate = {
+		set_country_flag = primal_calling_alignment_chosen
+	}
+
+	option = {
+		name = grand_archive.1002.a
+		trigger = { is_gestalt = no }
+		custom_tooltip = primal_calling_exhibit_bonus_tt
+		refresh_primal_calling_exhibit_modifier = yes
+	}
+
+	option = {
+		name = grand_archive.1002.b
+		trigger = { is_gestalt = no }
+		custom_tooltip = primal_calling_exploit_bonus_tt
+		refresh_primal_calling_exploit_modifier = yes
+		hidden_effect = {
+			remove_country_flag = wrangler_alignment
+			set_country_flag = rancher_alignment
+		}
+	}
+
+	option = {
+		name = grand_archive.1002.c
+		trigger = { is_gestalt = no }
+		allow = {
+			OR = {
+				is_xenophile = yes
+				is_pacifist = yes
+				is_socialist = yes
+			}
+		}
+		custom_tooltip = primal_calling_shelter_bonus_tt
+		add_modifier = {
+			modifier = primal_calling_shelter_modifier
+			days = -1
+		}
+		hidden_effect = {
+			remove_country_flag = wrangler_alignment
+			set_country_flag = animal_handler_alignment
+		}
+	}
+
+	option = {
+		name = {
+			trigger = {
+				NOT = { has_valid_civic = civic_fanatic_purifiers }
+			}
+			text = grand_archive.1002.d
+		}
+		name = {
+			trigger = {
+				has_valid_civic = civic_fanatic_purifiers
+			}
+			text = grand_archive.1002.d.purifier
+		}
+		trigger = { is_gestalt = no }
+		allow = {
+			OR = {
+				is_xenophobe = yes
+				is_militarist = yes
+				is_capitalism = yes
+			}
+		}
+		custom_tooltip = primal_calling_hunt_bonus_tt
+		add_modifier = {
+			modifier = primal_calling_hunt_modifier
+			days = -1
+		}
+		hidden_effect = {
+			remove_country_flag = wrangler_alignment
+			set_country_flag = trophy_hunter_alignment
+		}
+	}
+
+	option = {
+		name = grand_archive.1002.e
+		trigger = { is_gestalt = yes }
+		allow = {
+			NOT = { has_valid_civic = civic_hive_devouring_swarm }
+		}
+		custom_tooltip = primal_calling_assimilate_bonus_tt
+		refresh_primal_calling_assimilate_modifier = yes
+	}
+
+	option = {
+		name = grand_archive.1002.f
+		trigger = { is_gestalt = yes }
+		allow = {
+			NOT = { has_valid_civic = civic_hive_devouring_swarm }
+		}
+		custom_tooltip = primal_calling_symbiosis_bonus_tt
+		add_modifier = {
+			modifier = primal_calling_symbiosis_modifier
+			days = -1
+		}
+		hidden_effect = {
+			remove_country_flag = wrangler_alignment
+			set_country_flag = animal_handler_alignment
+		}
+	}
+
+	option = {
+		name = grand_archive.1002.g
+		trigger = { is_gestalt = yes }
+		custom_tooltip = primal_calling_feed_bonus_tt
+		add_modifier = {
+			modifier = primal_calling_feed_modifier
+			days = -1
+		}
+		hidden_effect = {
+			remove_country_flag = wrangler_alignment
+			set_country_flag = trophy_hunter_alignment
+		}
+	}
+}

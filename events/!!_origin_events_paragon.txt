@@ -99,7 +99,7 @@ country_event = { #Won the civil war
 	option = {
 		name = paragon.5213.socialism
 		trigger = {
-			is_socialism = yes
+			is_socialist = yes
 		}
 		add_modifier = {
 			modifier = paragon_origin_rebel_spiritualist
