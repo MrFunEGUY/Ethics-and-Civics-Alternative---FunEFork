@@ -1,3 +1,7 @@
+is_domineering_federation_type = {
+	has_federation_type = hegemony_federation
+}
+
 is_exile_country = {
 	OR = {
 		is_country_type = exile_country
@@ -14,7 +18,7 @@ pd_is_domed_colony_class = { always = no }
 pd_is_planet_class_nuked = { is_planet_class = pc_nuked }
 pd_is_planet_class_nuked_surveyed = { has_surveyed_class = pc_nuked }
 
-pd_is_planet_class_pd_gaia = { is_planet_class = pc_gaia }
+pd_is_planet_class_gaia = { is_planet_class = pc_gaia }
 
 ##########
 

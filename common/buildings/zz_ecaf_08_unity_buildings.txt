@@ -435,14 +435,10 @@ building_citadel_of_faith = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				NOT = { has_valid_civic = civic_defenders_faith }
-			}
+			owner = { NOT = { has_valid_civic = civic_defenders_faith } }
 		}
 		modifier = {
 			job_priest_add = @b2_jobs
-			job_high_priest_add = 1
-			pop_ethic_spiritualist_attraction_mult = 0.2
 		}
 	}
 	
@@ -453,8 +449,6 @@ building_citadel_of_faith = {
 		}
 		modifier = {
 			job_templar_add = @b2_jobs
-			job_high_priest_add = 1
-			pop_ethic_spiritualist_attraction_mult = 0.2
 		}
 	}
 	
@@ -467,15 +461,46 @@ building_citadel_of_faith = {
 			job_transcend_add = 1
 		}
 	}
-	
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = { is_theocracy = yes }
+			owner = { NOT = { has_origin = origin_cybernetic_creed } }
 		}
 		modifier = {
 			job_high_priest_add = 1
 		}
+	}
+
+	# Add bonus High Priest OR Tech Hierophant Jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { NOT = { has_origin = origin_cybernetic_creed } }
+		}
+		job_high_priest_add = 1
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { NOT = { has_origin = origin_cybernetic_creed } }
+		}
+		text = job_high_priest_effect_desc
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_origin = origin_cybernetic_creed }
+		}
+		job_technophant_add = 2
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_origin = origin_cybernetic_creed }
+		}
+		text = job_technophant_effect_desc
 	}
 
 	triggered_planet_modifier = {
@@ -494,7 +519,6 @@ building_citadel_of_faith = {
 	}
 
 	planet_modifier = {
-		job_high_priest_add = 1
 		pop_ethic_spiritualist_attraction_mult = 0.20
 	}
 
@@ -526,9 +550,5 @@ building_citadel_of_faith = {
 			owner = { has_valid_civic = civic_defenders_faith }
 		}
 		text = job_templar_effect_desc
-	}
-
-	triggered_desc = {
-		text = job_high_priest_effect_desc
 	}
 }

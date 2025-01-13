@@ -79,6 +79,17 @@ lrsk_gov_var_civic_ascetic_virtues = {
 				value = ethic_fanatic_materialist
 			}
 		}
+		species_archetype = {
+            NOT = {
+                text = disabled_by_synthetic_ascension
+                value = ROBOT
+            }
+        }
+        species_archetype = {
+            NOT = {
+                value = MACHINE
+            }
+        }
 	}
 
 	random_weight = { base = @civic_default_random_weight }
@@ -136,7 +147,13 @@ lrsk_gov_var_civic_republicanism = {
 				inline_script = governments/conditions/auth_oligarchic
 			}
 		}
-		ethics = { value = ethic_egalitarian }
+		ethics = {
+            NOR = {
+                text = civic_tooltip_not_authoritarian
+                value = ethic_authoritarian
+                value = ethic_fanatic_authoritarian
+            }
+        }
 	}
 
 	random_weight = { base = @civic_default_random_weight }
@@ -224,7 +241,8 @@ lrsk_gov_var_civic_utilitarian_planning = {
 
 	modifier = {
 		planet_structures_upkeep_mult = -0.025
-		country_food_produces_mult = 0.05
+		pop_housing_usage_mult = -0.05
+        pop_amenities_usage_mult = -0.05
 	    council_agenda_progress_speed = 0.1
 	    edicts_cost_mult = -0.1
 	}
@@ -244,16 +262,17 @@ lrsk_gov_var_civic_siege_mentality = {
 
 	possible = {
 		ethics = {
-			NOR = {
-				text = lrsk_gov_var_civic_tooltip_not_xenophile_or_not_militarist
-				#text = civic_tooltip_not_xenophile
-				value = ethic_xenophile
-				value = ethic_fanatic_xenophile
-				#text = civic_tooltip_not_militarist
-				value = ethic_militarist
-				value = ethic_fanatic_militarist
-			}
-		}
+            NOR = {
+                text = civic_tooltip_not_xenophile
+                value = ethic_xenophile
+                value = ethic_fanatic_xenophile
+            }
+            NOR = {
+                text = civic_tooltip_not_militarist
+                value = ethic_militarist
+                value = ethic_fanatic_militarist
+            }
+        }
 	}
 
 	random_weight = { base = @civic_default_random_weight }
@@ -523,6 +542,11 @@ lrsk_gov_var_civic_supremacist_demagoguery = {
 				value = ethic_egalitarian
 				value = ethic_fanatic_egalitarian
 			}
+			NOR = {
+                text = civic_tooltip_not_pacifist
+                value = ethic_pacifist
+                value = ethic_fanatic_pacifist
+            }
 		}
 		civics = {
 			NOR = {

@@ -383,6 +383,14 @@ death_priest = {
 			factor = 1.5
 			has_job = death_priest
 		}
+		modifier = { # Ariphaos
+            factor = 1.5
+            has_ethic = ethic_spiritualist
+        }
+        modifier = { # Ariphaos
+            factor = 0.5
+            has_ethic = ethic_materialist
+        }
 		modifier = {
 			factor = 0.1
 			is_enslaved = yes
@@ -1077,7 +1085,7 @@ healthcare = {
 		}
 		modifier = {
 			factor = 10
-			NOT = { has_job = healthcare }
+			# NOT = { has_job = healthcare } # Ariphaos
 			planet = {
 				free_amenities < 0
 				has_available_jobs = healthcare
@@ -1459,7 +1467,7 @@ artisan = {
 				planet = {
 					has_planet_flag = has_produce_requisitorium
 					exists = owner.overlord
-					owner.overlord = { is_gestalt = no }
+					owner.overlord = { country_uses_consumer_goods = yes }
 				}
 			}
 			consumer_goods = @requisitorium_consumer_goods_reduction
@@ -1469,7 +1477,7 @@ artisan = {
 				planet = {
 					has_planet_flag = has_produce_requisitorium
 					exists = owner.overlord
-					owner.overlord = { is_gestalt = no }
+					owner.overlord = { country_uses_consumer_goods = yes }
 				}
 			}
 			minerals = 1
@@ -1483,7 +1491,7 @@ artisan = {
 				planet = {
 					has_planet_flag = has_produce_requisitorium
 					exists = owner.overlord
-					owner.overlord = { is_gestalt = no }
+					owner.overlord = { country_uses_consumer_goods = yes }
 				}
 			}
 			consumer_goods = @requisitorium_consumer_goods_overlord
@@ -1597,7 +1605,7 @@ pearl_diver = {
 				planet = {
 					has_planet_flag = has_produce_requisitorium
 					exists = owner.overlord
-					owner.overlord = { is_gestalt = no }
+					owner.overlord = { country_uses_consumer_goods = yes }
 				}
 			}
 			consumer_goods = @requisitorium_consumer_goods_reduction
@@ -1607,7 +1615,7 @@ pearl_diver = {
 				planet = {
 					has_planet_flag = has_produce_requisitorium
 					exists = owner.overlord
-					owner.overlord = { is_gestalt = no }
+					owner.overlord = { country_uses_consumer_goods = yes }
 				}
 			}
 			minerals = 1
@@ -1630,7 +1638,7 @@ pearl_diver = {
 				planet = {
 					has_planet_flag = has_produce_requisitorium
 					exists = owner.overlord
-					owner.overlord = { is_gestalt = no }
+					owner.overlord = { country_uses_consumer_goods = yes }
 				}
 			}
 			consumer_goods = @requisitorium_consumer_goods_overlord

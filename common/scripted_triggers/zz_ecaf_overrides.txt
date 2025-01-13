@@ -133,10 +133,13 @@ ai_should_build_habitats = {
 	}
 	has_technology = tech_habitat_1
 	if = {  #VDs should build habitats even if there are other planets available
-		limit = { NOT = { has_origin = origin_void_dwellers } }
+		limit = { is_void_dweller_empire = no }
 		ai_colonize_plans <= 0
 		OR = {
-			NOT = { has_trait = trait_aquatic }
+			NOR = {
+				has_trait = trait_aquatic
+				has_trait = trait_robot_aquatic
+			}
 			has_ascension_perk = ap_hydrocentric
 		}
 	}
@@ -210,51 +213,6 @@ leader_has_empire_ethic = {
 		AND = {
 			has_ethic = ethic_capitalism
 			owner = { is_capitalism = yes }
-		}
-	}
-}
-
-has_opposing_ethics = {
-	OR = {
-		AND = {
-			$COUNTRY1$ = { is_pacifist = yes }
-			$COUNTRY2$ = { is_militarist = yes }
-		}
-		AND = {
-			$COUNTRY1$ = { is_militarist = yes }
-			$COUNTRY2$ = { is_pacifist = yes }
-		}
-		AND = {
-			$COUNTRY1$ = { is_xenophobe = yes }
-			$COUNTRY2$ = { is_xenophile = yes }
-		}
-		AND = {
-			$COUNTRY1$ = { is_xenophile = yes }
-			$COUNTRY2$ = { is_xenophobe = yes }
-		}
-		AND = {
-			$COUNTRY1$ = { is_egalitarian = yes }
-			$COUNTRY2$ = { is_authoritarian = yes }
-		}
-		AND = {
-			$COUNTRY1$ = { is_authoritarian = yes }
-			$COUNTRY2$ = { is_egalitarian = yes }
-		}
-		AND = {
-			$COUNTRY1$ = { is_spiritualist = yes }
-			$COUNTRY2$ = { is_materialist = yes }
-		}
-		AND = {
-			$COUNTRY1$ = { is_materialist = yes }
-			$COUNTRY2$ = { is_spiritualist = yes }
-		}
-		AND = {
-			$COUNTRY1$ = { is_capitalism = yes }
-			$COUNTRY2$ = { is_socialist = yes }
-		}
-		AND = {
-			$COUNTRY1$ = { is_socialist = yes }
-			$COUNTRY2$ = { is_capitalism = yes }
 		}
 	}
 }

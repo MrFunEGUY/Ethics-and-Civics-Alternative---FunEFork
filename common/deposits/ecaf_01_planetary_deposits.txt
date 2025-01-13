@@ -30,11 +30,24 @@ d_alien_pets_deposit = {
 		can_have_habitable_deposits = yes
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_guided_sapience_empire = yes
+			}
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.10
+			planet_amenities_add = 10
+		}
+	}
+
 	drop_weight = {
 		weight = @mid_rare
 		modifier = {
 			factor = 2
-			is_planet_class = pc_gaia
+			pd_is_planet_class_gaia = yes
 		}
 		modifier = {
 			factor = 0
@@ -55,9 +68,7 @@ d_alien_pets_deposit = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				has_valid_civic = civic_keepers_harmony
-			}
+			owner = { has_valid_civic = civic_keepers_harmony }
 		}
 		modifier = {
 			job_druid_add = 1
@@ -67,9 +78,7 @@ d_alien_pets_deposit = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				has_valid_civic = civic_terraforming
-			}
+			owner = { has_valid_civic = civic_terraforming }
 		}
 		modifier = {
 			job_xenobiologist_add = 2

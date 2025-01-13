@@ -26,8 +26,11 @@ ap_lord_of_war = {
 	potential = {
 		host_has_dlc = "Overlord"
 		NOT = { has_ascension_perk = ap_lord_of_war }
-		is_gestalt = no
 		is_homicidal = no
+		OR = {
+            is_regular_empire = yes
+            has_valid_civic = civic_machine_tactical_algorithms
+        }
 	}
 
 	on_enabled = {

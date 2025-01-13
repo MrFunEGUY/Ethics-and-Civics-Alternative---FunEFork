@@ -40,97 +40,22 @@ offworld_trading_company = {
 		trade_value_add = 4
 	}
 	triggered_station_modifier = {
-		potential = {
-			hidden_trigger = {
-				exists = this
-			}
-			count_starbase_modules = {
-				type = trading_hub
-				count >= 1
-			}
-			count_starbase_modules = {
-				type = trading_hub
-				count < 2
-			}
-		}
-		trade_value_add = 2
-	}
-	triggered_station_modifier = {
-		potential = {
-			hidden_trigger = {
-				exists = this
-			}
-			count_starbase_modules = {
-				type = trading_hub
-				count >= 2
-			}
-			count_starbase_modules = {
-				type = trading_hub
-				count < 3
-			}
-		}
-		trade_value_add = 4
-	}
-	triggered_station_modifier = {
-		potential = {
-			hidden_trigger = {
-				exists = this
-			}
-			count_starbase_modules = {
-				type = trading_hub
-				count >= 3
-			}
-			count_starbase_modules = {
-				type = trading_hub
-				count < 4
-			}
-		}
-		trade_value_add = 6
-	}
-	triggered_station_modifier = {
-		potential = {
-			hidden_trigger = {
-				exists = this
-			}
-			count_starbase_modules = {
-				type = trading_hub
-				count >= 4
-			}
-			count_starbase_modules = {
-				type = trading_hub
-				count < 5
-			}
-		}
-		trade_value_add = 8
-	}
-	triggered_station_modifier = {
-		potential = {
-			hidden_trigger = {
-				exists = this
-			}
-			count_starbase_modules = {
-				type = trading_hub
-				count >= 5
-			}
-			count_starbase_modules = {
-				type = trading_hub
-				count < 6
-			}
-		}
-		trade_value_add = 10
-	}
-	triggered_station_modifier = {
-		potential = {
-			hidden_trigger = {
-				exists = this
-			}
-			count_starbase_modules = {
-				type = trading_hub
-				count >= 6
-			}
-		}
-		trade_value_add = 12
-	}
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = trading_hub
+                count >= 1
+            }
+            count_starbase_modules = {
+                type = trading_hub
+                count < 2
+            }
+        }
+        trade_value_add = 2
+        mult = value:num_starbase_modules_of_type|TYPE|trading_hub|
+    }
 	custom_tooltip = sm_offworld_trading_company_desc_modifier
 	show_in_tech = "tech_space_trading"
 	ai_build_at_chokepoint = no

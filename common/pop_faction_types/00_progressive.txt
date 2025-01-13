@@ -348,10 +348,7 @@ progressive = {
 		potential = {
 			exists = owner.federation
 			owner.federation = {
-				OR = {
-					has_federation_type = hegemony_federation
-					has_federation_type = vf_ef_federation
-				}
+				is_domineering_federation_type = yes
 			}
 		}
 
@@ -359,10 +356,7 @@ progressive = {
 			OR = {
 				NOT = { exists = owner.federation }
 				owner.federation = {
-					NOR = {
-						has_federation_type = hegemony_federation
-						has_federation_type = vf_ef_federation
-					}
+					is_domineering_federation_type = no
 				}
 			}
 		}

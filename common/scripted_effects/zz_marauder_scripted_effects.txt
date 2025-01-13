@@ -336,7 +336,7 @@ create_second_diadochi = {
 				leader_age_min = 25
 				leader_age_max = 45
 				traits = {
-					trait = leader_trait_mercenary_warrior
+					0 = leader_trait_mercenary_warrior
 				}
 			}
 			create_fleet = {
@@ -394,6 +394,11 @@ create_second_diadochi = {
 				species = owner_main_species
 				name = random
 				skill = 3
+				leader_age_min = 25
+                leader_age_max = 45
+                traits = {
+                    0 = leader_trait_mercenary_warrior
+                }
 			}
 			create_fleet = {
 				effect = {
@@ -559,7 +564,7 @@ create_third_diadochi = {
 				leader_age_min = 25
 				leader_age_max = 45
 				traits = {
-					trait = leader_trait_mercenary_warrior
+					0 = leader_trait_mercenary_warrior
 				}
 			}
 			create_fleet = {
@@ -617,6 +622,11 @@ create_third_diadochi = {
 				species = owner_main_species
 				name = random
 				skill = 3
+				leader_age_min = 25
+                leader_age_max = 45
+                traits = {
+                    0 = leader_trait_mercenary_warrior
+                }
 			}
 			create_fleet = {
 				effect = {

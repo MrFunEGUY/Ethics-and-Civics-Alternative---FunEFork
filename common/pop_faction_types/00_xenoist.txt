@@ -517,6 +517,8 @@ xenoist = {
 						is_country_type = default
 						is_fallen_empire = yes
 						is_country_type = primitive
+						is_country_type = marauder_raiders
+                        is_country_type = enclave
 					}
 				}
 			}

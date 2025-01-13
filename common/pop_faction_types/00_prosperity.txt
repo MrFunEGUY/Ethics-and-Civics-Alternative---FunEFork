@@ -589,7 +589,7 @@ prosperity = {
 
 			effect = {
 				set_faction_extorted = yes
-				custom_tooltip = consumer_goods_extortion_tt
+				custom_tooltip = energy_extortion_tt
 				custom_tooltip = ONLY_ONE_EXTORTED_FACTION_TT
 			}
 

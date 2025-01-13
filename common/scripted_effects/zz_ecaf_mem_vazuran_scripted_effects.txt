@@ -8,9 +8,10 @@ create_mem_vazuran_country = {
 			}
 		}
 		create_species = {
-			name = "Vazurans"
-			class = ART
-			portrait = art17
+			name = "Vazuran"
+            plural = "Vazurans"
+            class = ART
+            portrait = mem_Vazu_crisis
 			traits = {
 				trait = trait_intelligent
 				trait = trait_natural_physicists

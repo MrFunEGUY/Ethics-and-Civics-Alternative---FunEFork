@@ -160,8 +160,8 @@ evangelising_zealots = {
 		uplifter = no
 		purger = no
 		displacer = no
-		infiltrator = no
-		dominator = yes
+		infiltrator = yes #no ariphaos
+		dominator = no #yes ariphaos
 		robot_exploiter = no
 		robot_liberator = no
 		propagator = no
@@ -285,6 +285,10 @@ erudite_explorers = {
 			add = 2
 			has_ethic = "ethic_fanatic_materialist"
 		}
+		modifier = { #Ariphaos
+            add = 3
+            has_trait = "trait_erudite"
+        }
 		modifier = {
 			add = 2
 			has_trait = "trait_intelligent"
@@ -370,10 +374,9 @@ spiritual_seekers = {
 			has_valid_civic = civic_machine_cult
 		}
 		OR = {
-			is_egalitarian = yes
+			is_socialist = yes
 			is_pacifist = yes
 			is_xenophile = yes
-			is_socialist = yes
 		}
 		OR = {
 			is_spiritualist = yes
@@ -469,9 +472,10 @@ ruthless_capitalists = {
 
 	allow = {
 		is_country_type = default
+		is_socialist = no
+		is_militarist = yes
 		NOR = {
 			has_ethic = "ethic_fanatic_pacifist"
-			is_socialist = yes
 			has_ethic = "ethic_fanatic_xenophobe"
 			has_valid_civic = civic_environmentalist
 			has_valid_civic = civic_welfare_state

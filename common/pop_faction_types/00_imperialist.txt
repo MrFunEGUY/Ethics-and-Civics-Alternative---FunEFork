@@ -349,10 +349,7 @@ imperialist = {
 				owner = {
 					has_federation = yes
 					federation = {
-						OR = {
-							has_federation_type = hegemony_federation
-							has_federation_type = vf_ef_federation
-						}
+						is_domineering_federation_type = yes
 					}
 					is_federation_leader = yes
 				}
@@ -575,6 +572,11 @@ imperialist = {
 			owner = {
 				is_homicidal = no
 				is_country_type = default
+				# OR = {
+                #     has_policy_flag = diplo_stance_belligerent
+                #     has_policy_flag = diplo_stance_supremacist
+                #     has_policy_flag = diplo_stance_animosity
+                # }
 			}
 		}
 
@@ -602,6 +604,7 @@ imperialist = {
 			owner = {
 				is_homicidal = no
 				is_country_type = default
+				# has_policy_flag = diplo_stance_cooperative
 			}
 		}
 
@@ -622,7 +625,10 @@ imperialist = {
 
 		potential = {
 			exists = owner
-			owner = { is_subject = no }
+			owner = {
+				is_subject = no
+				# has_policy_flag = benevolent_terms
+			}
 		}
 
 		trigger = {
@@ -642,7 +648,10 @@ imperialist = {
 
 		potential = {
 			exists = owner
-			owner = { is_subject = no }
+			owner = {
+				is_subject = no
+				# NOT = { has_policy_flag = benevolent_terms }
+			}
 		}
 
 		trigger = {

@@ -1422,14 +1422,15 @@ border_policy = {
 		potential = {
 			OR = {
 				is_country_type = default
+				is_country_type = mirrored_country
 				is_primitive = yes
 			}
 		}
 
 		valid = {
 			OR = {
-				is_primitive = yes
 				is_homicidal = no
+				is_primitive = yes
 			}
 		}
 	}
@@ -1567,6 +1568,7 @@ trade_policy = {
 		}
 
 		valid = {
+            is_worker_coop_empire = no
 			NOR = {
 				has_policy_flag = "economic_stance_planned"
 				has_ethic = "ethic_fanatic_socialism"
@@ -1596,6 +1598,7 @@ trade_policy = {
 		}
 
 		valid = {
+			is_worker_coop_empire = no
 			NOR = {
 				has_policy_flag = "economic_stance_planned"
 				has_ethic = "ethic_fanatic_socialism"
@@ -1632,6 +1635,7 @@ trade_policy = {
 		}
 
 		valid = {
+			is_worker_coop_empire = no
 			NOR = {
 				has_policy_flag = "economic_stance_market"
 				has_policy_flag = "economic_stance_planned"
@@ -2683,6 +2687,7 @@ artificial_intelligence_policy = {
 		is_gestalt = no
 		OR = {
 			is_valid_organic_zealots = yes # need to be able to see the policy so they have the appropriate policy flag set
+			has_origin = origin_synthetic_fertility # ariphaos
 			can_set_ai_policy = yes
 			has_country_flag = synthetic_empire
 			is_individual_machine = yes

@@ -123,3 +123,9 @@
 @gene_army_crew_upkeep = 0.02
 @machine_assault_3_army_crew_cost = 30
 @machine_assault_3_army_crew_upkeep = 1
+
+###############
+###############
+###############
+
+@has_eca_funefork = 1

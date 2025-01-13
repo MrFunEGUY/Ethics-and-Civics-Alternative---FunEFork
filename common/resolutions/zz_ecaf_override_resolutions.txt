@@ -1465,6 +1465,7 @@ resolution_commerce_buzzword_standardization = {
 			OR = {
 				has_valid_civic = civic_free_traders
 				has_valid_civic = civic_trading_posts
+				has_valid_civic = civic_merchant_guilds # Ariphaos
 				has_valid_civic = civic_corporate_dominion # ECAF
 				has_valid_civic = civic_beacon_of_liberty # ECAF
 			}
