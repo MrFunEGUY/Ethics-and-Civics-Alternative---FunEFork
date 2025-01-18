@@ -170,7 +170,7 @@ building_military_academy = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { is_gestalt = yes }
+			owner = { is_gestalt = no }
 		}
 		text = job_politician_effect_desc
 		text = job_soldier_effect_desc
@@ -179,7 +179,7 @@ building_military_academy = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { is_gestalt = no }
+			owner = { is_gestalt = yes }
 		}
 		text = job_evaluator_effect_desc
 		text = job_warrior_drone_effect_desc

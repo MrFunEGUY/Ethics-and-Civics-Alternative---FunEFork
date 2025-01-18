@@ -10,6 +10,7 @@ offworld_trading_company = {
 			has_technology = tech_space_trading
 			is_gestalt = no
 		}
+		is_normal_starbase = yes
 	}
 	possible = {
 		custom_tooltip = {
@@ -56,6 +57,36 @@ offworld_trading_company = {
         trade_value_add = 2
         mult = value:num_starbase_modules_of_type|TYPE|trading_hub|
     }
+	#### Venture Politics megacorp_mod
+	triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            has_starbase_module = trading_hub
+            exists = owner
+            owner = {
+                has_valid_civic = civic_trading_fleet
+            }
+        }
+        trade_value_add = 1
+        mult = value:num_starbase_modules_of_type|TYPE|anchorage|
+    }
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            has_starbase_module = anchorage
+            exists = owner
+            owner = {
+                has_valid_civic = civic_trading_fleet
+            }
+        }
+        trade_value_add = 3
+        mult = value:num_starbase_modules_of_type|TYPE|anchorage|
+    }
+	#### //Venture Politics megacorp_mod
 	custom_tooltip = sm_offworld_trading_company_desc_modifier
 	show_in_tech = "tech_space_trading"
 	ai_build_at_chokepoint = no

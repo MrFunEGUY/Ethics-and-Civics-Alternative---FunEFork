@@ -79,7 +79,7 @@ building_colony_shelter = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
+			owner = { has_active_tradition = tr_synthetics_prefabricated_components }
 		}
 		job_roboticist_add = 1
 		job_colonist_add = -1
@@ -106,7 +106,7 @@ building_colony_shelter = {
 			owner = {
 				NAND = {
 					has_valid_civic = civic_dystopian_society
-					has_active_tradition = tr_synthetics_finish
+					has_active_tradition = tr_synthetics_prefabricated_components
 				}
 			}
 		}
@@ -118,7 +118,7 @@ building_colony_shelter = {
 			exists = owner
 			owner = {
 				OR = {
-					has_active_tradition = tr_synthetics_finish
+					has_active_tradition = tr_synthetics_prefabricated_components
 					is_individual_machine = yes
 				}
 			}
@@ -881,6 +881,7 @@ building_hab_capital = {
 		planet_housing_add = 3
 		planet_amenities_add = 3
 		planet_max_buildings_add = @buildings_t1
+		defense_armies_add = @tier_2_capital_defense_armies
 	}
 
 	inline_script = {
@@ -911,7 +912,7 @@ building_hab_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
+			owner = { has_active_tradition = tr_synthetics_prefabricated_components }
 		}
 		modifier = { job_roboticist_add = 1 }
 	}
@@ -998,7 +999,7 @@ building_hab_capital = {
 			exists = owner
 			owner = {
 				is_machine_empire = yes
-				has_active_tradition = tr_synthetics_finish_machine
+				has_active_tradition = tr_synthetics_prefabricated_components_machine
 			}
 		}
 		modifier = {
@@ -1030,7 +1031,7 @@ building_hab_capital = {
 					is_individual_machine = yes
 					AND = {
 						is_regular_empire = yes
-						has_active_tradition = tr_synthetics_finish
+						has_active_tradition = tr_synthetics_prefabricated_components
 					}
 				}
 			}
@@ -1230,7 +1231,7 @@ building_hab_major_capital = {
 			exists = owner
 			owner = {
 				is_machine_empire = yes
-				has_active_tradition = tr_synthetics_finish_machine
+				has_active_tradition = tr_synthetics_prefabricated_components_machine
 			}
 		}
 		modifier = {
@@ -1241,7 +1242,7 @@ building_hab_major_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
+			owner = { has_active_tradition = tr_synthetics_prefabricated_components }
 		}
 		job_roboticist_add = 1
 	}
@@ -1652,7 +1653,7 @@ building_hab_major_capital = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
+			owner = { has_active_tradition = tr_synthetics_prefabricated_components }
 		}
 		text = job_roboticist_effect_desc
 	}
@@ -1885,7 +1886,7 @@ building_hab_system_capital = {
 			exists = owner
 			owner = {
 				is_machine_empire = yes
-				has_active_tradition = tr_synthetics_finish_machine
+				has_active_tradition = tr_synthetics_prefabricated_components_machine
 			}
 		}
 		modifier = {
@@ -1896,7 +1897,7 @@ building_hab_system_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
+			owner = { has_active_tradition = tr_synthetics_prefabricated_components }
 		}
 		job_roboticist_add = 1
 	}
@@ -2278,7 +2279,7 @@ building_hab_system_capital = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
+			owner = { has_active_tradition = tr_synthetics_prefabricated_components }
 		}
 		text = job_roboticist_effect_desc
 	}
@@ -2721,7 +2722,7 @@ building_resort_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
+			owner = { has_active_tradition = tr_synthetics_prefabricated_components }
 		}
 		job_roboticist_add = 1
 	}
@@ -2778,7 +2779,7 @@ building_resort_capital = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
+			owner = { has_active_tradition = tr_synthetics_prefabricated_components }
 		}
 		text = job_roboticist_effect_desc
 	}
@@ -2893,7 +2894,7 @@ building_resort_major_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
+			owner = { has_active_tradition = tr_synthetics_prefabricated_components }
 		}
 		job_roboticist_add = 1
 	}
@@ -2961,7 +2962,7 @@ building_resort_major_capital = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
+			owner = { has_active_tradition = tr_synthetics_prefabricated_components }
 		}
 		text = job_roboticist_effect_desc
 	}
@@ -3310,6 +3311,12 @@ building_imperial_capital = {
 		script = buildings/on_all_capital_buildings
 	}
 
+	inline_script = {
+		script = buildings/regular_empire_capital_jobs
+		PRIMARY_JOB = 3
+		SECONDARY_JOB = 3
+	}
+
 	triggered_desc = {
 		trigger = { has_planet_flag = habitat }
 		text = building_hab_system_capital_tooltip
@@ -3360,7 +3367,7 @@ building_imperial_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
+			owner = { has_active_tradition = tr_synthetics_prefabricated_components }
 		}
 		job_roboticist_add = 1
 	}
@@ -3615,7 +3622,7 @@ building_imperial_capital = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
+			owner = { has_active_tradition = tr_synthetics_prefabricated_components }
 		}
 		text = job_roboticist_effect_desc
 	}
@@ -3653,6 +3660,16 @@ building_imperial_capital = {
 		}
 		text = job_healthcare_effect_desc
 	}
+
+	triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_pleasure_seeker = yes
+            }
+        }
+        text = job_entertainer_effect_desc
+    }
 }
 
 # Imperial Center

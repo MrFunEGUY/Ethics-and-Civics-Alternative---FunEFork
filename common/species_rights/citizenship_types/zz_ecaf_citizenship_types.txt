@@ -6,7 +6,7 @@ citizenship_full = {
 
 	potential = {
 		exists = from
-		NOT = { from = { has_authority = auth_machine_intelligence } }
+		NOT = { from = { is_machine_empire = yes } }
 	}
 
 	triggered_pop_modifier = {
@@ -46,7 +46,7 @@ citizenship_full = {
 		custom_tooltip = {
 			fail_text = "HIVE_MIND_SPECIES_CITIZENS_ONLY"
 			OR = {
-				NOT = { from = { has_authority = auth_hive_mind } }
+				NOT = { from = { is_hive_empire = yes } }
 				has_trait = trait_hive_mind
 			}
 		}
@@ -62,27 +62,23 @@ citizenship_full = {
 		}
 		custom_tooltip = {
 			fail_text = too_alien
-			if = {
-				limit = {
-					from = {
-						NOT = { has_origin = origin_synthetic_fertility }
+			OR = {
+				is_same_species = from
+				from = {
+					AND = {
+						has_valid_civic = civic_selective_kinship
+						is_same_species_class = root
 					}
+				}
+				from = {
+					is_xenophobe = no
+				}
+				AND = { # Ariphaos syntax change
+					from = { has_origin = origin_synthetic_fertility }
 					has_trait = trait_mechanical
 				}
-				OR = {
-					is_same_species = from
-					from = {
-						AND = {
-							has_valid_civic = civic_selective_kinship
-							is_same_species_class = root
-						}
-					}
-					from = {
-						is_xenophobe = no
-					}
-					from.owner_species = { # Extra Origins
-						is_symbiote_of_prev = yes
-					}
+				from.owner_species = { # Extra Origins
+					is_symbiote_of_prev = yes
 				}
 			}
 		}
@@ -104,10 +100,33 @@ citizenship_full = {
 				has_military_service_type = { type = military_service_full country = from }
 			}
 		}
+		custom_tooltip = {
+            fail_text = "ROBOTS_NO_RIGHTS"
+            if = {
+                limit = {
+                    OR = {
+                        has_trait = trait_mechanical
+                        has_trait = trait_machine_unit
+                    }
+                }
+                from = {
+                    has_policy_flag = ai_full_rights
+                }
+            }
+        }
 	}
 	ai_will_do = {
-		factor = 1
-	}
+        factor = 1
+        modifier = {
+            factor = 35
+            root = {
+                is_robotic_species = yes
+            }
+            from = {
+                is_individual_machine = yes
+            }
+        }
+    }
 }
 
 citizenship_limited = {

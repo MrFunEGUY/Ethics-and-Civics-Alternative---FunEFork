@@ -26,10 +26,13 @@ country_event = {
 			}
 			# Or you're Imperial and the Chosen One is your current ruler or heir.
 			AND = {
-				has_authority = auth_imperial
+				is_imperial_authority = yes
 				any_owned_leader = {
 					has_chosen_one_leader_trait = yes
-					has_trait = trait_imperial_heir
+					OR = {
+						has_trait = trait_imperial_heir
+						is_ruler = yes # Ariphaos
+					}
 				}
 				NOT = { # Ariphaos
                     any_owned_leader = {
@@ -68,7 +71,10 @@ country_event = {
 			random_owned_leader = {
 				limit = {
 					has_chosen_one_leader_trait = yes
-					has_trait = trait_imperial_heir
+					OR = {
+						has_trait = trait_imperial_heir
+						is_ruler = yes # Ariphaos
+					}
 				}
 				save_event_target_as = chosen_one
 				species = { save_event_target_as = chosen_one_species }

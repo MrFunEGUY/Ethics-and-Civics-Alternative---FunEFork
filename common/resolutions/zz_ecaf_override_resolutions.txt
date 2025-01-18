@@ -2278,6 +2278,12 @@ resolution_industry_repeal_5 = {
 			has_valid_civic = civic_agrarian_idyll
 			desc = civic_agrarian_idyll
 		}
+
+		modifier = {
+            factor = 2
+            is_environmental_architects_empire = yes
+            desc = civic_environmental_architects
+        }
 	}
 }
 

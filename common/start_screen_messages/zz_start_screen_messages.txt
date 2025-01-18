@@ -29,8 +29,8 @@ part = {
 		has_origin = origin_payback
 		is_megacorp = no
 		NOR = {
-			has_authority = auth_hive_mind
-			has_authority = auth_machine_intelligence
+			is_hive_empire = yes
+			is_machine_empire = yes
 		}
 	}
 }

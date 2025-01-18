@@ -42,6 +42,7 @@ building_noble_estates = {
 				}
 			}
 		}
+		is_occupied_flag = no
 	}
 
 	destroy_trigger = {

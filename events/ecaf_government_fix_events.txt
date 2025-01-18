@@ -14,8 +14,8 @@ event = {
 				has_government = yes
 				OR = {
 					is_fallen_empire = yes
-					has_authority = auth_imperial
-					has_authority = auth_corporate
+					is_imperial_authority = yes
+					is_corporate_authority = yes
 				}
 			}
 			if = {
@@ -30,7 +30,7 @@ event = {
 				limit = {
 					is_fallen_empire = yes
 					is_gestalt = no
-					NOT = { has_authority = auth_imperial }
+					is_imperial_authority = no
 				}
 				change_government = {
 					authority = auth_imperial
@@ -43,7 +43,7 @@ event = {
 					is_fallen_empire = yes
 					OR = {
 						is_gestalt = yes
-						has_authority = auth_machine_intelligence
+						is_machine_empire = yes
 					}
 					has_ethic = ethic_focused
 				}
@@ -52,7 +52,7 @@ event = {
 			if = {
 				limit = {
 					is_fallen_empire = no
-					has_authority = auth_imperial
+					is_imperial_authority = yes
 					is_authoritarian = no
 				}
 				shift_ethic = ethic_authoritarian

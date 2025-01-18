@@ -47,9 +47,7 @@ district_crashed_slaver_ship = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				NOT = { has_country_flag = origin_broken_shackles_crashed_slaver_ship_depleted }
-			}
+			owner = { NOT = { has_country_flag = origin_broken_shackles_crashed_slaver_ship_depleted } }
 		}
 		job_broken_shackles_scavenger_add = 1
 	}
@@ -210,7 +208,11 @@ district_city = {
 	}
 
 	allow = {
-		NOT = { has_modifier = slave_colony }
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = penal_colony
+			has_modifier = slave_colony
+		}
 	}
 
 	conversion_ratio = 1
@@ -225,9 +227,23 @@ district_city = {
 		category = planet_districts_cities
 		cost = {
 			minerals = @city_cost
+			trigger = {
+				NOT = { has_modifier = wooden_planet }
+			}
+		}
+		cost = {
+			food = @city_cost
+			trigger = {
+				has_modifier = wooden_planet
+			}
 		}
 		upkeep = {
 			energy = 2
+			trigger = { NOT = { has_modifier = wooden_planet } }
+		}
+		upkeep = {
+			food = 2
+			trigger = { has_modifier = wooden_planet }
 		}
 	}
 

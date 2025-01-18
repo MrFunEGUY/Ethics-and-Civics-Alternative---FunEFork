@@ -1669,6 +1669,21 @@ trade_policy = {
 		}
 	}
 
+	option = {
+        name = "trade_policy_mutual_aid"
+        potential = {
+            is_worker_coop_empire = yes
+        }
+        policy_flags = {
+            trade_conversion_mutual_aid
+        }
+        modifier = {
+        }
+        AI_weight = {
+            factor = 1000
+        }
+    }
+
 	option = { # Venture Politics
 		name = "trade_policy_science"
 		potential = {
@@ -2759,13 +2774,36 @@ artificial_intelligence_policy = {
 
 		AI_weight = {
 			modifier = {
-				factor = 0
-				is_materialist = yes
-			}
-			modifier = {
-				factor = 5
-				is_spiritualist = yes
-			}
+                factor = 0
+                OR = {
+                    is_robot_empire = yes
+                    AND = {
+                        is_materialist = yes
+                        NOT = {
+                            has_country_flag = lost_robot_policy_war
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 10
+                is_robot_empire = no
+                OR = {
+                    has_country_flag = lost_robot_policy_war
+                    is_valid_organic_zealots = yes
+                    AND = {
+                        is_subject = yes
+                        overlord = {
+                            is_valid_organic_zealots = yes
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 5
+                is_robot_empire = no
+                is_spiritualist = yes
+            }
 			modifier = {
 				factor = 0.1
 				has_valid_ai_personality = yes
@@ -2790,6 +2828,7 @@ artificial_intelligence_policy = {
 		valid = {
 			if = {
 				limit = { is_robot_empire = no }
+				is_not_restricted_by_organic_zealots_fail = yes
 				NOT = { has_valid_civic = civic_machine_cult }
 				NOT = {	has_origin = origin_synthetic_fertility }
 				custom_tooltip = {
@@ -2798,23 +2837,12 @@ artificial_intelligence_policy = {
 				}
 				if = {
 					limit = { has_civic_organic_zealots_active = yes }
-					custom_tooltip = {
-						fail_text = civic_tooltip_not_organic_zealots_fail
-						is_valid_organic_zealots = no
-					}
-					custom_tooltip = {
-						fail_text = civic_tooltip_overlord_not_organic_zealots_fail
-						NAND = {
-							is_subject = yes
-							exists = overlord
-							overlord = { is_valid_organic_zealots = yes }
-						}
-					}
+					is_not_restricted_by_organic_zealots_fail = yes
 				}
 			}
 			custom_tooltip = {
 				fail_text = is_a_synthetic_empire_fail
-				NOT = { has_country_flag = synthetic_empire }
+				is_robot_empire = no
 			}
 		}
 
@@ -2856,6 +2884,18 @@ artificial_intelligence_policy = {
 				factor = 0.1
 				is_individual_machine = yes
 			}
+			modifier = {
+                factor = 0
+                OR = {
+                    is_robot_empire = yes
+                    has_country_flag = lost_robot_policy_war
+                    is_valid_organic_zealots = yes
+                    AND = {
+                        is_subject = yes
+                        overlord = { is_valid_organic_zealots = yes }
+                    }
+                }
+            }
 		}
 	}
 
@@ -2879,18 +2919,7 @@ artificial_intelligence_policy = {
 				}
 				if = {
 					limit = { has_civic_organic_zealots_active = yes }
-					custom_tooltip = {
-						fail_text = civic_tooltip_not_organic_zealots_fail
-						is_valid_organic_zealots = no
-					}
-					custom_tooltip = {
-						fail_text = civic_tooltip_overlord_not_organic_zealots_fail
-						NAND = {
-							is_subject = yes
-							exists = overlord
-							overlord = { is_valid_organic_zealots = yes }
-						}
-					}
+					is_not_restricted_by_organic_zealots_fail = yes
 				}
 				NOT = { has_policy_flag = robots_outlawed }
 			}
@@ -2924,6 +2953,7 @@ artificial_intelligence_policy = {
 			}
 			modifier = {
 				factor = 0
+				is_robot_empire = no
 				is_spiritualist = yes
 			}
 			modifier = {
@@ -2970,16 +3000,15 @@ robot_pop_policy = {
 					}
 					if = {
 						limit = { has_civic_organic_zealots_active = yes }
-						OR = {
-							custom_tooltip = {
-								text = civic_tooltip_not_organic_zealots_fail
+						custom_tooltip = {
+							text = civic_tooltip_not_organic_zealots
+							is_valid_organic_zealots = yes
+						}
+						custom_tooltip = {
+							text = civic_tooltip_overlord_not_organic_zealots
+							is_subject = yes
+							overlord = {
 								is_valid_organic_zealots = yes
-							}
-							custom_tooltip = {
-								text = civic_tooltip_overlord_not_organic_zealots
-								is_subject = yes
-								exists = overlord
-								overlord = { is_valid_organic_zealots = yes }
 							}
 						}
 					}
@@ -3056,18 +3085,7 @@ robot_pop_policy = {
 				}
 				if = {
 					limit = { has_civic_organic_zealots_active = yes }
-					custom_tooltip = {
-						fail_text = "civic_tooltip_not_organic_zealots_fail"
-						is_valid_organic_zealots = no
-					}
-					custom_tooltip = {
-						fail_text = "civic_tooltip_overlord_not_organic_zealots_fail"
-						NAND = {
-							is_subject = yes
-							exists = overlord
-							overlord = { is_valid_organic_zealots = yes }
-						}
-					}
+					is_not_restricted_by_organic_zealots_fail = yes
 				}
 			}
 		}
@@ -3088,9 +3106,12 @@ robot_pop_policy = {
 			factor = 2
 			modifier = {
 				factor = 0
-				has_civic_organic_zealots_active = yes
+				
 				OR = {
-					is_valid_organic_zealots = yes
+					AND = {
+						has_civic_organic_zealots_active = yes
+						is_valid_organic_zealots = yes
+					}
 					AND = {
 						has_country_flag = lost_robot_policy_war
 						is_robot_empire = no

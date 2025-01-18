@@ -23,6 +23,7 @@ pd_is_planet_class_gaia = { is_planet_class = pc_gaia }
 ##########
 
 has_civic_organic_zealots_active = { always = no }
+is_not_restricted_by_organic_zealots_fail = { always = no }
 
 has_planetary_diversity_arcologies = { always = no }
 
@@ -33,3 +34,10 @@ has_megacorp_mod_active = { always = no }
 lrsk_gvp_is_active = { always = no }
 
 is_symbiote_of_prev = { always = no }
+
+mem_has_shield_building_lite = {
+	OR = {
+		has_building_construction = building_planetary_shield_generator
+		has_building = building_planetary_shield_generator
+	}
+}

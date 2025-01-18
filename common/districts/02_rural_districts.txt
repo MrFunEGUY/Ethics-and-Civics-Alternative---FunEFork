@@ -15,6 +15,8 @@ district_generator = {
 
 	potential = {
 		uses_district_set = standard
+		## Megacorp_mod
+		NOT = { has_modifier = urban_idyll_colony }
 	}
 
 	allow = {
@@ -27,7 +29,11 @@ district_generator = {
 				}
 			}
 		}
-		NOT = { has_modifier = resort_colony }
+		NOR = {
+			has_modifier = resort_colony
+			## Megacorp_mod
+			has_modifier = urban_idyll_colony
+		}
 	}
 
 	destroy_trigger = {
@@ -410,6 +416,15 @@ district_farming = {
 		category = planet_districts_farming
 		cost = {
 			minerals = @base_cost
+			trigger = {
+				NOT = { has_modifier = wooden_planet }
+			}
+		}
+		cost = {
+			food = @base_cost
+			trigger = {
+				has_modifier = wooden_planet
+			}
 		}
 		# Anglers Civic cost effect
 		cost = {
@@ -713,6 +728,7 @@ district_generator_uncapped = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			NOT = { uses_district_set = shattered_ring_world }
 			owner = { 
 				is_machine_empire = yes 
 				has_ascension_perk = ap_machine_worlds

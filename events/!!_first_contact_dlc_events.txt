@@ -105,7 +105,7 @@ ship_event = {
 									ethic = ethic_pacifist
 								}
 								flag = random
-								origin = "origin_life_seeded"
+								origin = "origin_life_seeded_ai_only"
 								type = primitive
 								effect = {
 									random_list = {

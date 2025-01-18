@@ -372,6 +372,8 @@ d_dense_jungle = {
 		planet_max_districts_add = -1
 	}
 
+	inline_script = deposits/environmental_architects_natural_blocker_modifier
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
