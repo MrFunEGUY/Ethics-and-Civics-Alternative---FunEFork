@@ -60,32 +60,7 @@ is_theocracy = {
 	exists = owner
 	owner = {
 		has_ethic = ethic_fanatic_spiritualist
-		OR = {
-			has_government = gov_theocratic_monarchy
-			has_government = gov_theocratic_dictatorship
-			has_government = gov_theocratic_oligarchy
-			has_government = gov_theocratic_republic
-			has_government = gov_divine_empire
-			has_government = gov_holy_tribunal
-			has_government = gov_megachurch
-			has_government = gov_sacrificial_megachurch
-			has_government = gov_dimensional_covenant
-			has_government = gov_mortal_empire
-			has_government = gov_grim_council
-			# ECAF
-			has_government = gov_megachurch_fam
-			has_government = gov_subversive_cult_fam
-			has_government = gov_sacrificial_megachurch_fam
-			has_government = lrsk_gov_var_gov_crusading_company_fam
-			# Government Variety Pack
-			has_government = lrsk_gov_var_gov_crusader_kingdom
-			has_government = lrsk_gov_var_gov_crusader_order
-			has_government = lrsk_gov_var_gov_saintly_assembly
-			has_government = lrsk_gov_var_gov_cosmic_choir
-			has_government = lrsk_gov_var_gov_cosmic_choir_olig
-			has_government = lrsk_gov_var_gov_crusading_company
-			has_government = lrsk_gov_var_gov_citizen_crusade
-		}
+		is_spiritualist_gov = yes
 	}
 }
 
@@ -94,28 +69,7 @@ is_technocracy = {
 	exists = owner
 	owner = {
 		has_ethic = ethic_fanatic_materialist
-		OR = {
-			has_government = gov_despotic_hegemony
-			has_government = gov_totalitarian_regime
-			has_government = gov_executive_committee
-			has_government = gov_direct_democracy
-			has_government = gov_illuminated_autocracy
-			has_government = gov_technocratic_dictatorship
-			has_government = gov_science_directorate
-			has_government = gov_rational_consensus
-			# ECAF
-			has_government = gov_optimized_venture_fam
-			has_government = lrsk_gov_var_gov_innovation_initiative_fam
-			has_government = lrsk_gov_var_gov_rationalist_managerial_firm
-			has_government = lrsk_gov_var_gov_rationalist_managerial_firm_fam
-			# Government Variety Pack
-			has_government = lrsk_gov_var_gov_innovation_initiative
-			has_government = lrsk_gov_var_gov_academy_state
-			has_government = lrsk_gov_var_gov_scholastic_commonwealth
-			has_government = lrsk_gov_var_gov_automated_worldcommune
-			# Venture Politics
-			has_government = gov_optimized_venture
-		}
+		is_materialist_gov = yes
 	}
 }
 
@@ -124,46 +78,9 @@ is_stratocracy = {
 	exists = owner
 	owner = {
 		has_ethic = ethic_fanatic_militarist
-		OR = {
-			has_government = gov_star_empire
-			has_government = gov_military_dictatorship
-			has_government = gov_military_junta
-			has_government = gov_military_commissariat
-			has_government = gov_martial_empire
-			has_government = gov_martial_dictatorship
-			has_government = gov_war_council
-			has_government = gov_assembly_of_clans
-			has_government = gov_citizen_stratocracy
-			has_government = gov_citizen_republic
-			has_government = gov_bandit_kingdom
-			has_government = gov_bandit_commune
-			has_government = gov_band_blood
-			has_government = gov_blood_court
-			has_government = gov_purity_order
-			has_government = gov_purification_committee
-			has_government = gov_purity_assembly
-			has_government = gov_successor_khanate
-			has_government = gov_defensive_union
-			# ECAF
-			has_government = gov_jingoism
-			has_government = gov_military_corp
-			has_government = lrsk_gov_var_gov_private_military_contractor_fam
-			# Government Variety Pack
-			has_government = lrsk_gov_var_gov_folkish_commonwealth
-			has_government = lrsk_gov_var_gov_folkish_league
-			has_government = lrsk_gov_var_gov_folkish_regime
-			has_government = lrsk_gov_var_gov_folkish_realm
-			has_government = lrsk_gov_var_gov_private_military_contractor
-			has_government = lrsk_gov_var_gov_doom_horde
-			has_government = lrsk_gov_var_gov_doom_horde_imp
-			has_government = lrsk_gov_var_gov_death_cult
-			has_government = lrsk_gov_var_gov_death_cult_imp
-			has_government = lrsk_gov_var_gov_citizen_legion
-			has_government = lrsk_gov_var_gov_enterprise_society
-			has_government = lrsk_gov_var_gov_enterprise_junta
-			has_government = lrsk_gov_var_gov_enterprise_authority
-			has_government = lrsk_gov_var_gov_revolutionary_republic
-			has_government = lrsk_gov_var_gov_republican_protectorate
+		is_militarist_gov = yes
+		NOT = {
+			has_government = lrsk_gov_var_gov_galactic_imperium ## Aristocratic Only, but in mil trigger
 		}
 	}
 }
@@ -173,21 +90,7 @@ is_bureaucracy = {
 	exists = owner
 	owner = {
 		has_ethic = ethic_fanatic_pacifist
-		OR = {
-			has_government = gov_irenic_monarchy
-			has_government = gov_irenic_dictatorship
-			has_government = gov_irenic_bureaucracy
-			has_government = gov_moral_democracy
-			has_government = gov_enlightened_monarchy
-			# Government Variety Pack
-			has_government = lrsk_gov_var_gov_republic_of_virtue
-			has_government = lrsk_gov_var_gov_utopian_despotism_dic
-			has_government = lrsk_gov_var_gov_rustic_republic
-			has_government = lrsk_gov_var_gov_peasant_commune_collective
-			has_government = lrsk_gov_var_gov_agrarian_monarchy
-			has_government = lrsk_gov_var_gov_agrarian_social_state
-			has_government = lrsk_gov_var_gov_social_bureaucracy
-		}
+		is_pacifist_gov = yes
 	}
 }
 
@@ -196,42 +99,7 @@ is_plutocracy = {
 	exists = owner
 	owner = {
 		has_ethic = ethic_fanatic_capitalism
-		OR = {
-			has_government = gov_trade_league
-			has_government = gov_minarchy
-			has_government = gov_timocracy
-			has_government = gov_criminal_syndicate
-			has_government = gov_pirate_haven # Desc is equal to crim syndicate desc, so not needed in mod
-			has_government = gov_imperial_domain_megacorp
-			# ECAF
-			has_government = gov_trade_league_fam
-			has_government = gov_criminal_syndicate_fam
-			has_government = gov_stellar_bancorp_fam
-			has_government = lrsk_gov_var_gov_galactic_cartel_fam
-			has_government = gov_anarch_capitalism
-			has_government = gov_cor_dictatorship
-			has_government = gov_timocracy
-			# Government Variety Pack
-			has_government = lrsk_gov_var_gov_merchant_principality_d
-			has_government = lrsk_gov_var_gov_merchant_principality_i
-			has_government = lrsk_gov_var_gov_stakeholder_polity
-			has_government = lrsk_gov_var_gov_shareholder_commonwealth
-			has_government = lrsk_gov_var_gov_entrepreneurial_council
-			has_government = lrsk_gov_var_gov_crime_family
-			has_government = lrsk_gov_var_gov_rogue_freehold
-			has_government = lrsk_gov_var_gov_corporate_banditry
-			has_government = lrsk_gov_var_gov_market_socialism
-			has_government = lrsk_gov_var_gov_coop_enterprise
-			has_government = lrsk_gov_var_gov_libertarian_freehold
-			has_government = lrsk_gov_var_gov_anarcho_capitalism
-			has_government = lrsk_gov_var_gov_corporate_neofuedalism
-			has_government = lrsk_gov_var_gov_proprietary_franchise
-			has_government = lrsk_gov_var_gov_merchant_republic
-			has_government = lrsk_gov_var_gov_constitutional_plutocracy
-			has_government = lrsk_gov_var_gov_galactic_cartel
-			# Venture Politics
-			has_government = gov_stellar_bancorp
-		}
+		is_capitalist_gov = yes
 	}
 }
 
@@ -240,33 +108,7 @@ is_isocracy = {
 	exists = owner
 	owner = {
 		has_ethic = ethic_fanatic_socialism
-		OR = {
-			has_government = gov_communal_parity
-			# ECAF
-			has_government = gov_enlighted_socialism
-			has_government = gov_strasserism
-			has_government = gov_soviet_republic
-			has_government = gov_imperial_socialism
-			has_government = gov_anarchy_communism
-			has_government = gov_bur_collectivism
-			has_government = gov_communist_dictatorship
-			has_government = gov_peoples_commissariat
-			has_government = gov_peoples_republic
-			has_government = gov_strasserism
-			# Government Variety Pack
-			has_government = lrsk_gov_var_gov_onestate_socialism
-			has_government = lrsk_gov_var_gov_utopian_socialism
-			has_government = lrsk_gov_var_gov_communal_democracy
-			has_government = lrsk_gov_var_gov_socialist_plenary
-			has_government = lrsk_gov_var_gov_social_imperialism
-			has_government = lrsk_gov_var_gov_pure_social_republic
-			has_government = lrsk_gov_var_gov_workers_republic
-			has_government = lrsk_gov_var_gov_peasant_dictatorship
-			has_government = lrsk_gov_var_gov_reactionary_socialism
-			has_government = lrsk_gov_var_gov_feudal_socialism
-			has_government = lrsk_gov_var_gov_utopian_despotism_imp
-			has_government = lrsk_gov_var_gov_utopian_despotism_dic
-		}
+		is_socialist_gov = yes
 	}
 }
 
@@ -275,16 +117,7 @@ is_diplocracy = {
 	exists = owner
 	owner = {
 		has_ethic = ethic_fanatic_xenophile
-		OR = {
-			# ECAF
-			has_government = gov_xenophile_democracy
-			has_government = gov_liberal_democracy
-			has_government = gov_par_monarchy
-			has_government = gov_social_democracy
-			# Government Variety Pack
-			has_government = lrsk_gov_var_gov_constitutional_monarchy
-			has_government = lrsk_gov_var_gov_federal_republic
-		}
+		is_xenophilic_gov = yes
 	}
 }
 
@@ -294,30 +127,7 @@ is_diplocracy = {
 # Aristocratic
 is_aristocracy = {
 	exists = owner
-	owner = {
-		OR = {
-			has_government = gov_imperial_domain
-			has_government = gov_elective_monarchy
-			has_government = gov_aristocratic_republic
-			has_government = gov_aristocratic_monarchy
-			has_government = gov_feudal_empire
-			has_government = gov_absolute_monarchy
-			# ECAF
-			has_government = gov_great_houses
-			has_government = gov_noble_aristocracy
-			has_government = gov_benevolent_aristocracy
-			has_government = gov_oligarchic_republic
-			has_government = gov_genuine_aristocracy
-			# Government Variety Pack
-			has_government = lrsk_gov_var_gov_noble_empire
-			has_government = lrsk_gov_var_gov_noble_republic
-			has_government = lrsk_gov_var_gov_empire_of_rapine
-			has_government = lrsk_gov_var_gov_populist_monarchy
-			has_government = lrsk_gov_var_gov_insurrectionary_lineage
-			has_government = lrsk_gov_var_gov_solar_monarchy
-			has_government = lrsk_gov_var_gov_galactic_imperium
-		}
-	}
+	owner = { is_aristocratic_gov = yes }
 }
 
 #############
@@ -353,5 +163,189 @@ ecaf_can_support_branch_offices_trigger = {
 			is_megacorp = yes
 			is_subject = no
 		}
+	}
+}
+
+#############
+
+# Spiritualist - High Priest
+is_spiritualist_gov =  {
+	OR = {
+		has_government = gov_theocratic_monarchy
+		has_government = gov_theocratic_dictatorship
+		has_government = gov_theocratic_oligarchy
+		has_government = gov_theocratic_republic
+		has_government = gov_divine_empire
+		has_government = gov_holy_tribunal
+		has_government = gov_megachurch
+		has_government = gov_sacrificial_megachurch
+		has_government = gov_dimensional_covenant
+		has_government = gov_mortal_empire
+		has_government = gov_grim_council
+		# ECAF
+		has_government = gov_megachurch_fam
+		has_government = gov_subversive_cult_fam
+		has_government = gov_sacrificial_megachurch_fam
+		has_government = lrsk_gov_var_gov_crusading_company_fam
+		# Government Variety Pack
+		lrsk_has_gvp_spi_gov = yes
+
+	}
+}
+
+# Materialist - Science Director
+is_materialist_gov =  {
+	OR = {
+		has_government = gov_despotic_hegemony
+		has_government = gov_totalitarian_regime
+		has_government = gov_executive_committee
+		has_government = gov_direct_democracy
+		has_government = gov_illuminated_autocracy
+		has_government = gov_technocratic_dictatorship
+		has_government = gov_science_directorate
+		has_government = gov_rational_consensus
+		# ECAF
+		has_government = gov_optimized_venture_fam
+		has_government = lrsk_gov_var_gov_innovation_initiative_fam
+		has_government = lrsk_gov_var_gov_rationalist_managerial_firm
+		has_government = lrsk_gov_var_gov_rationalist_managerial_firm_fam
+		# Government Variety Pack
+		lrsk_has_gvp_mat_gov = yes
+		# Venture Politics
+		has_government = gov_optimized_venture
+	}
+}
+
+# Militarist - Commandant
+is_militarist_gov =  {
+	OR = {
+		has_government = gov_star_empire
+		has_government = gov_military_dictatorship
+		has_government = gov_military_junta
+		has_government = gov_military_commissariat
+		has_government = gov_martial_empire
+		has_government = gov_martial_dictatorship
+		has_government = gov_war_council
+		has_government = gov_assembly_of_clans
+		has_government = gov_citizen_stratocracy
+		has_government = gov_citizen_republic
+		has_government = gov_bandit_kingdom
+		has_government = gov_bandit_commune
+		has_government = gov_band_blood
+		has_government = gov_blood_court
+		has_government = gov_purity_order
+		has_government = gov_purification_committee
+		has_government = gov_purity_assembly
+		has_government = gov_successor_khanate
+		has_government = gov_defensive_union
+		# ECAF
+		has_government = gov_jingoism
+		has_government = gov_military_corp
+		has_government = lrsk_gov_var_gov_private_military_contractor_fam
+		# Government Variety Pack
+		lrsk_has_gvp_mil_gov = yes
+	}
+}
+
+# Pacifist - Philosopher
+is_pacifist_gov =  {
+	OR = {
+		has_government = gov_irenic_monarchy
+		has_government = gov_irenic_dictatorship
+		has_government = gov_irenic_bureaucracy
+		has_government = gov_moral_democracy
+		has_government = gov_enlightened_monarchy
+		# Government Variety Pack
+		lrsk_has_gvp_pac_gov = yes
+	}
+}
+
+# Capitalist - Merchant
+is_capitalist_gov =  {
+	OR = {
+		has_government = gov_trade_league
+		has_government = gov_minarchy
+		has_government = gov_timocracy
+		has_government = gov_criminal_syndicate
+		has_government = gov_pirate_haven # Desc is equal to crim syndicate desc, so not needed in mod
+		has_government = gov_imperial_domain_megacorp
+		# ECAF
+		has_government = gov_trade_league_fam
+		has_government = gov_criminal_syndicate_fam
+		has_government = gov_stellar_bancorp_fam
+		has_government = lrsk_gov_var_gov_galactic_cartel_fam
+		has_government = gov_anarch_capitalism
+		has_government = gov_cor_dictatorship
+		has_government = gov_timocracy
+		# Government Variety Pack
+		lrsk_has_gvp_cap_gov = yes
+		# Venture Politics
+		has_government = gov_stellar_bancorp
+	}
+}
+
+# Socialist - Commissars
+is_socialist_gov =  {
+	OR = {
+		has_government = gov_communal_parity
+		# ECAF
+		has_government = gov_enlighted_socialism
+		has_government = gov_strasserism
+		has_government = gov_soviet_republic
+		has_government = gov_imperial_socialism
+		has_government = gov_anarchy_communism
+		has_government = gov_bur_collectivism
+		has_government = gov_communist_dictatorship
+		has_government = gov_peoples_commissariat
+		has_government = gov_peoples_republic
+		has_government = gov_strasserism
+		# Government Variety Pack
+		lrsk_has_gvp_soc_gov = yes
+		lrsk_has_gvp_hive_gov = yes
+	}
+}
+
+# Xenophile - Diplomats
+is_xenophilic_gov =  {
+	OR = {
+		# ECAF
+		has_government = gov_xenophile_democracy
+		has_government = gov_liberal_democracy
+		has_government = gov_par_monarchy
+		has_government = gov_social_democracy
+		# Government Variety Pack
+		lrsk_has_gvp_phile_gov = yes
+		has_government = lrsk_gov_var_gov_constitutional_monarchy
+		has_government = lrsk_gov_var_gov_federal_republic
+	}
+}
+
+###
+### Non-ethic
+
+# Aristocratic
+is_aristocratic_gov =  {
+	OR = {
+		has_government = gov_imperial_domain
+		has_government = gov_elective_monarchy
+		has_government = gov_aristocratic_republic
+		has_government = gov_aristocratic_monarchy
+		has_government = gov_feudal_empire
+		has_government = gov_absolute_monarchy
+		has_government = gov_celestial_empire
+		# ECAF
+		has_government = gov_great_houses
+		has_government = gov_noble_aristocracy
+		has_government = gov_benevolent_aristocracy
+		has_government = gov_oligarchic_republic
+		has_government = gov_genuine_aristocracy
+		# Government Variety Pack
+		has_government = lrsk_gov_var_gov_noble_empire
+		has_government = lrsk_gov_var_gov_noble_republic
+		has_government = lrsk_gov_var_gov_empire_of_rapine
+		has_government = lrsk_gov_var_gov_populist_monarchy
+		has_government = lrsk_gov_var_gov_insurrectionary_lineage
+		has_government = lrsk_gov_var_gov_solar_monarchy
+		has_government = lrsk_gov_var_gov_galactic_imperium
 	}
 }

@@ -10,10 +10,11 @@ empire_name_format = {
 			OR = {
 				has_government = "gov_despotic_empire"
 				has_government = "gov_feudal_empire"
-				####
+				#### ECAF
+				has_government = "gov_par_monarchy"
+				has_government = "gov_jingoism"
 				has_government = "gov_peoples_commissariat"
 				has_government = "gov_national_socialism"
-				has_government = "gov_par_monarchy"
 				has_government = "gov_absolute_monarchy"
 				has_government = "gov_enlighted_socialism"
 				has_government = "gov_aristocratic_monarchy"
@@ -41,7 +42,7 @@ empire_name_format = {
 			OR = {
 				has_government = "gov_despotic_empire"
 				has_government = "gov_feudal_empire"
-				####
+				#### ECAF
 				has_government = "gov_par_monarchy"
 				has_government = "gov_jingoism"
 				has_government = "gov_peoples_commissariat"
@@ -106,8 +107,10 @@ empire_name_format = {
 				has_government = "gov_despotic_empire"
 				has_government = "gov_feudal_empire"
 				###
-				has_government = "gov_peoples_commissariat"
 				has_government = "gov_par_monarchy"
+				has_government = "gov_jingoism"
+				has_government = "gov_peoples_commissariat"
+				has_government = "gov_national_socialism"
 				has_government = "gov_absolute_monarchy"
 				has_government = "gov_enlighted_socialism"
 				has_government = "gov_aristocratic_monarchy"
@@ -136,7 +139,13 @@ empire_name_format = {
 				has_government = "gov_despotic_empire"
 				has_government = "gov_feudal_empire"
 				###
+				has_government = "gov_par_monarchy"
+				has_government = "gov_jingoism"
 				has_government = "gov_peoples_commissariat"
+				has_government = "gov_national_socialism"
+				has_government = "gov_absolute_monarchy"
+				has_government = "gov_enlighted_socialism"
+				has_government = "gov_aristocratic_monarchy"
 				has_government = "gov_strasserism"
 				has_government = "gov_imperial_socialism"
 			}
@@ -263,7 +272,7 @@ empire_name_format = {
 			add = 1
 			OR = {
 				has_government = "gov_constitutional_dictatorship"
-				####
+				#### ECAF
 				# has_government = "gov_enlightened_dictatorship"
 				# has_government = "gov_social_nationalism"
 				has_government = "gov_peoples_republic"
@@ -289,7 +298,7 @@ empire_name_format = {
 			add = 1
 			OR = {
 				has_government = "gov_constitutional_dictatorship"
-				####
+				#### ECAF
 				# has_government = "gov_enlightened_dictatorship"
 				has_government = "gov_peoples_republic"
 				has_government = "gov_national_socialism"
@@ -314,7 +323,7 @@ empire_name_format = {
 			add = 5
 			OR = {
 				has_government = "gov_constitutional_dictatorship"
-				####
+				#### ECAF
 				# has_government = "gov_enlightened_dictatorship"
 				has_government = "gov_peoples_republic"
 				has_government = "gov_national_socialism"
@@ -339,7 +348,7 @@ empire_name_format = {
 			add = 2
 			OR = {
 				has_government = "gov_constitutional_dictatorship"
-				####
+				#### ECAF
 				# has_government = "gov_enlightened_dictatorship"
 				has_government = "gov_peoples_republic"
 			}
@@ -363,7 +372,7 @@ empire_name_format = {
 			add = 1
 			OR = {
 				has_government = "gov_plutocratic_oligarchy"
-				####
+				#### ECAF
 				# has_government = "gov_capitalist_oligarchy"
 				# has_government = "gov_corporate_nationalism"
 				# has_government = "gov_social_nationalism"
@@ -399,7 +408,7 @@ empire_name_format = {
 			add = 1
 			OR = {
 				has_government = "gov_plutocratic_oligarchy"
-				####
+				#### ECAF
 				# has_government = "gov_capitalist_oligarchy"
 				# has_government = "gov_corporate_nationalism"
 				has_government = "gov_jingoism"
@@ -434,7 +443,7 @@ empire_name_format = {
 			add = 5
 			OR = {
 				has_government = "gov_plutocratic_oligarchy"
-				####
+				#### ECAF
 				# has_government = "gov_capitalist_oligarchy"
 				has_government = "gov_jingoism"
 				has_government = "gov_timocracy"
@@ -468,7 +477,7 @@ empire_name_format = {
 			add = 2
 			OR = {
 				has_government = "gov_plutocratic_oligarchy"
-				####
+				#### ECAF
 				# has_government = "gov_capitalist_oligarchy"
 				has_government = "gov_timocracy"
 				has_government = "gov_genuine_aristocracy"
@@ -503,7 +512,7 @@ empire_name_format = {
 			add = 1
 			OR = {
 				has_government = "gov_military_commissariat"
-				####
+				#### ECAF
 				has_government = "gov_assembly_of_clans"
 				has_government = "gov_anarch_capitalism"
 				has_government = "gov_military_corp"
@@ -528,7 +537,7 @@ empire_name_format = {
 			add = 1
 			OR = {
 				has_government = "gov_military_commissariat"
-				####
+				#### ECAF
 				has_government = "gov_assembly_of_clans"
 				has_government = "gov_anarch_capitalism"
 				has_government = "gov_military_corp"
@@ -553,7 +562,7 @@ empire_name_format = {
 			add = 5
 			OR = {
 				has_government = "gov_military_commissariat"
-				####
+				#### ECAF
 				has_government = "gov_assembly_of_clans"
 				has_government = "gov_anarch_capitalism"
 				has_government = "gov_military_corp"
@@ -580,7 +589,7 @@ empire_name_format = {
 			add = 1
 			OR = {
 				has_government = "gov_moral_democracy"
-				####
+				#### ECAF
 				has_government = "gov_social_democracy"
 				# has_government = "gov_anarch_pacifism"
 				has_government = "gov_anarch_capitalism"
@@ -605,7 +614,7 @@ empire_name_format = {
 			add = 1
 			OR = {
 				has_government = "gov_moral_democracy"
-				####
+				#### ECAF
 				has_government = "gov_social_democracy"
 				# has_government = "gov_anarch_pacifism"
 				has_government = "gov_anarch_capitalism"
@@ -630,7 +639,7 @@ empire_name_format = {
 			add = 5
 			OR = {
 				has_government = "gov_moral_democracy"
-				####
+				#### ECAF
 				# has_government = "gov_anarch_pacifism"
 				has_government = "gov_anarch_capitalism"
 			}
@@ -654,7 +663,7 @@ empire_name_format = {
 			add = 1
 			OR = {
 				has_government = "gov_representative_democracy"
-				####
+				#### ECAF
 				has_government = "gov_anarchy_communism"
 				has_government = "gov_congress_republic"
 				has_government = "gov_aristocratic_republic"
@@ -683,7 +692,7 @@ empire_name_format = {
 			add = 5
 			OR = {
 				has_government = "gov_representative_democracy"
-				####
+				#### ECAF
 				has_government = "gov_anarchy_communism"
 				has_government = "gov_congress_republic"
 				has_government = "gov_aristocratic_republic"
@@ -712,7 +721,7 @@ empire_name_format = {
 			add = 2
 			OR = {
 				has_government = "gov_representative_democracy"
-				####
+				#### ECAF
 				has_government = "gov_anarchy_communism"
 				has_government = "gov_congress_republic"
 				has_government = "gov_aristocratic_republic"
@@ -741,7 +750,7 @@ empire_name_format = {
 			add = 2
 			OR = {
 				has_government = "gov_representative_democracy"
-				####
+				#### ECAF
 				has_government = "gov_anarchy_communism"
 				has_government = "gov_congress_republic"
 				has_government = "gov_aristocratic_republic"
@@ -776,7 +785,7 @@ empire_name_format = {
 				has_government = "gov_despotic_hegemony"
 				has_government = "gov_irenic_monarchy"
 				has_government = "gov_despotic_empire"
-				####
+				#### ECAF
 				has_government = "gov_communist_dictatorship"
 				# has_government = "gov_social_nationalism"
 				has_government = "gov_strasserism"
@@ -805,7 +814,7 @@ empire_name_format = {
 				has_government = "gov_despotic_hegemony"
 				has_government = "gov_irenic_monarchy"
 				has_government = "gov_despotic_empire"
-				####
+				#### ECAF
 				has_government = "gov_communist_dictatorship"
 				# has_government = "gov_social_nationalism"
 				has_government = "gov_strasserism"
@@ -834,7 +843,7 @@ empire_name_format = {
 				has_government = "gov_executive_committee"
 				has_government = "gov_irenic_bureaucracy"
 				has_government = "gov_plutocratic_oligarchy"
-				####
+				#### ECAF
 				has_government = "gov_strasserism"
 			}
 			is_pirate = no
@@ -861,7 +870,7 @@ empire_name_format = {
 				has_government = "gov_executive_committee"
 				has_government = "gov_irenic_bureaucracy"
 				has_government = "gov_plutocratic_oligarchy"
-				####
+				#### ECAF
 				has_government = "gov_strasserism"
 			}
 			is_pirate = no
@@ -888,7 +897,7 @@ empire_name_format = {
 				has_government = "gov_direct_democracy"
 				has_government = "gov_moral_democracy"
 				has_government = "gov_representative_democracy"
-				####
+				#### ECAF
 				has_government = "gov_demos_cratos"
 				has_government = "gov_anarchy_state"
 				has_government = "gov_anarchy_communism"
@@ -921,7 +930,7 @@ empire_name_format = {
 				has_government = "gov_direct_democracy"
 				has_government = "gov_moral_democracy"
 				has_government = "gov_representative_democracy"
-				####
+				#### ECAF
 				has_government = "gov_demos_cratos"
 				has_government = "gov_anarchy_state"
 				has_government = "gov_anarchy_communism"

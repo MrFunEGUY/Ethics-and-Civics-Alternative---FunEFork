@@ -1,0 +1,45 @@
+# Government Variety Pack
+# Governments - Other
+# Author: littleraskol
+
+# Pretender Hive
+lrsk_gov_var_gov_pretender_hive = {
+	ruler_title = LRSK_GOV_VAR_RT_OVERMIND
+
+	possible = {
+		has_valid_civic = lrsk_gov_var_civic_ascetic_virtues
+		has_valid_civic = lrsk_gov_var_civic_utilitarian_planning
+    	has_ethic = ethic_fanatic_authoritarian
+		has_ethic = ethic_xenophobe
+		has_auth_dictatorial = yes
+		### ECAF
+		lrsk_gvp_is_active = yes
+		is_socialist = yes
+	}
+
+	weight = {
+		base = @lrsk_gov_civic_weight_low_L1
+	}
+}
+
+# Pretender Hive - Imperialist Variant
+lrsk_gov_var_gov_pretender_hive_imp = {
+	ruler_title = LRSK_GOV_VAR_RT_OVERMIND
+	heir_title = LRSK_GOV_VAR_HT_BACKUP
+
+	possible = {
+		has_valid_civic = lrsk_gov_var_civic_ascetic_virtues
+		has_valid_civic = lrsk_gov_var_civic_utilitarian_planning
+   		has_ethic = ethic_fanatic_authoritarian
+		has_ethic = ethic_xenophobe
+		is_socialist = yes
+		has_auth_imperial = yes
+		### ECAF
+		lrsk_gvp_is_active = yes
+		is_socialist = yes
+	}
+
+	weight = {
+		base = @lrsk_gov_civic_weight_low_L1
+	}
+}

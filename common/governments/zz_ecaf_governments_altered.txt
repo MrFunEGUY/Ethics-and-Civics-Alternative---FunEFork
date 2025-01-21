@@ -17,41 +17,18 @@
 ### Spiritualist Governments ###
 ################################
 
-
-# Theocratic Dictatorship
-gov_theocratic_dictatorship = {
-	ruler_title = RT_PATRIARCH
-	ruler_title_female = RT_MATRIARCH
-
-	possible = {
-		OR = {
-			has_authority = auth_dictatorial
-			has_authority = auth_dict_democratic
-		}
-		is_spiritualist = yes
-	}
-
-	weight = {
-		base = 5
-	}
-}
-
 # Theocratic Republic
 gov_theocratic_republic = {
 	ruler_title = RT_REVERED_ELDER
 	ruler_title_female = RT_REVERED_ELDER_FEMALE
 
 	possible = {
-		OR = {
-			has_authority = auth_democratic
-			has_authority = auth_strict_democratic
-			has_authority = auth_dict_democratic
-		}
+		is_democratic_authority = yes
 		is_spiritualist = yes
 	}
 
 	weight = {
-		base = 100
+		base = @gov_ethic_weight
 		modifier = {
 			factor = 10
 			has_valid_civic = civic_spiritual_democracy
@@ -80,7 +57,7 @@ gov_holy_tribunal = {
 	}
 
 	weight = {
-		base = 1000
+		base = 500
 	}
 }
 
@@ -94,15 +71,12 @@ gov_military_dictatorship = {
 	ruler_title_female = RT_GRAND_MARSHAL_FEMALE
 
 	possible = {
-		OR = {
-			has_authority = auth_dictatorial
-			has_authority = auth_dict_democratic
-		}
+		is_dictatorial_authority = yes
 		is_militarist = yes
 	}
 
 	weight = {
-		base = 50
+		base = @gov_ethic_weight
 		modifier = {
 			factor = 2
 			has_ethic = ethic_fanatic_militarist
@@ -115,7 +89,7 @@ gov_military_dictatorship = {
 			}
 		}
 		modifier = {
-			factor = 100
+			factor = 15
 			has_valid_civic = civic_military_dictatorship
 		}
 	}
@@ -127,22 +101,18 @@ gov_military_commissariat = {
 	ruler_title_female = RT_COMMISSARY_GENERAL_FEMALE
 
 	possible = {
-		OR = {
-			has_authority = auth_democratic
-			has_authority = auth_strict_democratic
-			has_authority = auth_dict_democratic
-		}
+		is_democratic_authority = yes
 		is_militarist = yes
 	}
 
 	weight = {
-		base = 5
+		base = @gov_ethic_weight
 		modifier = {
-			factor = 2
+			factor = 5
 			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
-			factor = 1.10
+			factor = 5
 			OR = {
 				has_valid_civic = civic_distinguished_admiralty
 				has_valid_civic = civic_nationalistic_zeal
@@ -159,10 +129,7 @@ gov_martial_dictatorship = {
 	should_force_rename = yes
 
 	possible = {
-		OR = {
-			has_authority = auth_dictatorial
-			has_authority = auth_dict_democratic
-		}
+		is_dictatorial_authority = yes
 		has_valid_civic = civic_warrior_culture
 	}
 
@@ -179,11 +146,7 @@ gov_assembly_of_clans = {
 	should_force_rename = yes
 
 	possible = {
-		OR = {
-			has_authority = auth_democratic
-			has_authority = auth_strict_democratic
-			has_authority = auth_dict_democratic
-		}
+		is_democratic_authority = yes
 		has_valid_civic = civic_warrior_culture
 	}
 
@@ -221,11 +184,7 @@ gov_citizen_republic = {
 	should_force_rename = yes
 
 	possible = {
-		OR = {
-			has_authority = auth_democratic
-			has_authority = auth_strict_democratic
-			has_authority = auth_dict_democratic
-		}
+		is_democratic_authority = yes
 		has_valid_civic = civic_citizen_service
 	}
 
@@ -242,17 +201,14 @@ gov_irenic_dictatorship = {
 	ruler_title_female = RT_SERENE_PROTECTOR_FEMALE
 
 	possible = {
-		OR = {
-			has_authority = auth_dictatorial
-			has_authority = auth_dict_democratic
-		}
+		is_dictatorial_authority = yes
 		is_pacifist = yes
 	}
 
 	weight = {
-		base = 5
+		base = @gov_ethic_weight
 		modifier = {
-			factor = 2
+			factor = 10
 			has_ethic = ethic_fanatic_pacifist
 		}
 		modifier = {
@@ -276,7 +232,7 @@ gov_moral_democracy = {
 	}
 
 	weight = {
-		base = 5
+		base = @gov_ethic_weight
 		modifier = {
 			factor = 2
 			has_ethic = ethic_fanatic_pacifist
@@ -298,15 +254,12 @@ gov_totalitarian_regime = {
 	ruler_title_female = RT_PRIMARCH_FEMALE
 
 	possible = {
-		OR = {
-			has_authority = auth_dictatorial
-			has_authority = auth_dict_democratic
-		}
+		is_dictatorial_authority = yes
 		is_materialist = yes
 	}
 
 	weight = {
-		base = 5
+		base = @gov_ethic_weight
 		modifier = {
 			factor = 2
 			has_ethic = ethic_fanatic_materialist
@@ -348,10 +301,7 @@ gov_technocratic_dictatorship = {
 	should_force_rename = yes
 
 	possible = {
-		OR = {
-			has_authority = auth_dictatorial
-			has_authority = auth_dict_democratic
-		}
+		is_dictatorial_authority = yes
 		has_valid_civic = civic_cyber_dictatorship
 	}
 
@@ -384,11 +334,7 @@ gov_rational_consensus = {
 	should_force_rename = yes
 
 	possible = {
-		OR = {
-			has_authority = auth_democratic
-			has_authority = auth_strict_democratic
-			has_authority = auth_dict_democratic
-		}
+		is_democratic_authority = yes
 		is_materialist = yes
 	}
 
@@ -409,10 +355,7 @@ gov_purity_order = {
 	should_force_rename = yes
 
 	possible = {
-		OR = {
-			has_authority = auth_dictatorial
-			has_authority = auth_dict_democratic
-		}
+		is_dictatorial_authority = yes
 		has_valid_civic = civic_fanatic_purifiers
 	}
 
@@ -454,8 +397,10 @@ gov_megacorporation = {
 
 	possible = {
 		OR = {
+			is_megacorp = yes
 			AND = {
 				is_oligarchic_authority = yes
+				has_valid_civic = civic_merchant_guilds
 				OR = {
 					is_authoritarian = yes
 					NOR = {
@@ -463,14 +408,16 @@ gov_megacorporation = {
 						is_pacifist = yes
 					}
 				}
-				has_valid_civic = civic_merchant_guilds
 			}
-			has_authority = auth_corporate
+			AND = { # Pre-MegaCorp DLC
+				is_oligarchic_authority = yes
+				has_valid_civic = civic_corporate_dominion
+			}
 		}
 	}
 
 	weight = {
-		base = 700
+		base = @gov_authority_weight
 	}
 }
 
@@ -504,10 +451,7 @@ gov_elective_monarchy = {
 	should_force_rename = yes
 
 	possible = {
-		OR = {
-			has_authority = auth_dictatorial
-			has_authority = auth_dict_democratic
-		}
+		is_dictatorial_authority = yes
 		OR = {
 			has_valid_civic = civic_philosopher_king
 			has_valid_civic = civic_aristocratic_elite
@@ -527,11 +471,7 @@ gov_communal_parity = {
 
 	possible = {
 		has_valid_civic = civic_shared_burden
-		OR = {
-			has_authority = auth_democratic
-			has_authority = auth_strict_democratic
-			has_authority = auth_dict_democratic
-		}
+		is_democratic_authority = yes
 	}
 
 	weight = {
@@ -548,8 +488,7 @@ gov_bandit_kingdom = {
 	possible = {
 		OR = {
 			has_authority = auth_imperial
-			has_authority = auth_dictatorial
-			has_authority = auth_dict_democratic
+			is_dictatorial_authority = yes
 		}
 		has_valid_civic = civic_barbaric_despoilers
 	}

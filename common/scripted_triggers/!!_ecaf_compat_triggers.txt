@@ -22,6 +22,17 @@ pd_is_planet_class_gaia = { is_planet_class = pc_gaia }
 
 ##########
 
+lrsk_gvp_is_active = { always = no }
+lrsk_has_gvp_mil_gov = { always = no }
+lrsk_has_gvp_pac_gov = { always = no }
+lrsk_has_gvp_spi_gov = { always = no }
+lrsk_has_gvp_mat_gov = { always = no }
+lrsk_has_gvp_phile_gov = { always = no }
+lrsk_has_gvp_soc_gov = { always = no }
+lrsk_has_gvp_cap_gov = { always = no }
+
+##########
+
 has_civic_organic_zealots_active = { always = no }
 is_not_restricted_by_organic_zealots_fail = { always = no }
 
@@ -30,8 +41,6 @@ has_planetary_diversity_arcologies = { always = no }
 am_civics_is_active = { always = no }
 
 has_megacorp_mod_active = { always = no }
-
-lrsk_gvp_is_active = { always = no }
 
 is_symbiote_of_prev = { always = no }
 
