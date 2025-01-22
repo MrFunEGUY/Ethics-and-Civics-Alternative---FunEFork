@@ -846,7 +846,7 @@ councilor_in_perfect = { #Elder
 			leader_class = official
 		}
 	}
-	civic = civic_in_perfect
+	civic = civic_tribalism
 	modifier = { #Improves unity production and buffs ethics adherance
 		planet_jobs_unity_produces_mult = 0.01
 		pop_government_ethic_attraction = 0.02

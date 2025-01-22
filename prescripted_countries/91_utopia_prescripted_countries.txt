@@ -52,7 +52,7 @@ xanid = {
 
 	civics = {
 		"civic_corvee_system"
-		"civic_in_perfect"
+		"civic_tribalism"
 		"civic_warrior_culture"
 	}
 

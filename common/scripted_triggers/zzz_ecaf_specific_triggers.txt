@@ -349,3 +349,10 @@ is_aristocratic_gov =  {
 		has_government = lrsk_gov_var_gov_galactic_imperium
 	}
 }
+
+##############
+
+is_oligarchic_authority_no_merc = {
+	is_oligarchic_authority = yes
+	NOT = { is_country_type = enclave_mercenary }
+}

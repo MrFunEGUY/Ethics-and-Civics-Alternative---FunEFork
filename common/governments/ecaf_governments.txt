@@ -76,7 +76,7 @@ gov_great_houses = {
 
 	possible = {
 		is_primitive = no
-		is_oligarchic_authority = yes
+		is_oligarchic_authority_no_merc = yes
 		OR = {
 			has_valid_civic = civic_harmonious_hierarchy
 			has_valid_civic = civic_aristocratic_elite
@@ -102,7 +102,7 @@ gov_noble_aristocracy = {
 			has_ethic = ethic_egalitarian
 		}
 		has_valid_civic = civic_aristocratic_elite
-		is_oligarchic_authority = yes
+		is_oligarchic_authority_no_merc = yes
 	}
 	weight = {
 		base = 500
@@ -119,8 +119,8 @@ gov_anarchy_communism = {
 	possible = {
 		OR = {
 			has_authority = auth_dictatorial
-			is_oligarchic_authority = yes
 			has_authority = auth_dict_democratic
+			is_oligarchic_authority_no_merc = yes
 		}
 		has_ethic = ethic_fanatic_socialism
 		is_authoritarian = yes
@@ -146,7 +146,7 @@ gov_jingoism = {
 		OR = {
 			has_authority = auth_dictatorial
 			has_authority = auth_dict_democratic
-			is_oligarchic_authority = yes
+			is_oligarchic_authority_no_merc = yes
 		}
 		is_xenophobe = yes
 		is_militarist = yes
@@ -219,9 +219,9 @@ gov_cor_dictatorship = {
 			has_valid_civic = civic_state_monopoly
 		}
 		OR = {
-			is_oligarchic_authority = yes
 			has_authority = auth_dictatorial
 			has_authority = auth_imperial
+			is_oligarchic_authority_no_merc = yes
 		}
 	}
 	weight = {
@@ -409,7 +409,7 @@ gov_bur_collectivism = {
 	ruler_title_female = RT_CHAIRWOMAN
 	should_force_rename = yes
 	possible = {
-		is_oligarchic_authority = yes
+		is_oligarchic_authority_no_merc = yes
 		has_valid_civic = civic_byzantine_bureaucracy
 		NOT = {
 			has_ethic = ethic_egalitarian
@@ -430,7 +430,7 @@ gov_genuine_aristocracy = {
 			has_valid_civic = civic_meritocracy
 			has_valid_civic = civic_harmonious_hierarchy
 		}
-		is_oligarchic_authority = yes
+		is_oligarchic_authority_no_merc = yes
 		is_capitalism = no
 	}
 	weight = {
@@ -444,7 +444,7 @@ gov_oligarchic_republic = {
 	should_force_rename = yes
 	possible = {
 		has_ethic = ethic_egalitarian
-		is_oligarchic_authority = yes
+		is_oligarchic_authority_no_merc = yes
 	}
 	weight = {
 		base = 100
@@ -461,7 +461,7 @@ gov_peoples_commissariat = {
 	should_force_rename = yes
 	possible = {
 		has_ethic = ethic_fanatic_socialism
-		is_oligarchic_authority = yes
+		is_oligarchic_authority_no_merc = yes
 	}
 	weight = {
 		base = 1000
@@ -482,7 +482,7 @@ gov_benevolent_aristocracy = {
 			has_ethic = ethic_egalitarian
 		}
 		has_valid_civic = civic_aristocratic_elite
-		is_oligarchic_authority = yes
+		is_oligarchic_authority_no_merc = yes
 	}
 	weight = {
 		base = 1000
@@ -660,14 +660,14 @@ gov_strasserism = {
 	ruler_title = RT_GENSEK
 	ruler_title_female = RT_GENSEK
 	possible = {
-		has_valid_civic = civic_in_perfect
+		has_valid_civic = civic_tribalism
 		is_xenophobe = yes
 		is_authoritarian = yes
 		is_socialist = yes
 		OR = {
 			has_authority = auth_dictatorial
-			is_oligarchic_authority = yes
 			has_authority = auth_dict_democratic
+			is_oligarchic_authority_no_merc = yes
 		}
 	}
 	should_force_rename = yes
