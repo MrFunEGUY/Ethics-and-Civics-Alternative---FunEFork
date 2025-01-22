@@ -7,52 +7,6 @@
 # From = Country
 # This = Species
 
-
-# This = country
-can_build_branch_offices = {
-	custom_tooltip = {
-		fail_text = BRANCH_OFFICE_NOT_MEGACORP
-		is_exile_country = no
-		OR = {
-		    is_megacorp = yes
-		    has_civic = civic_galactic_sovereign_megacorp
-        }
-	}
-}
-
-# This = country
-can_support_branch_offices = {
-	custom_tooltip = {
-		fail_text = BRANCH_OFFICE_NOT_FALLEN_EMPIRES
-		is_fallen_empire = no
-	}
-	custom_tooltip = {
-		fail_text = BRANCH_OFFICE_NOT_ON_MEGACORP_PLANET
-		NOR = {
-			is_megacorp = yes
-			has_civic = civic_galactic_sovereign_megacorp
-		}
-	}
-	custom_tooltip = {
-		fail_text = BRANCH_OFFICE_NOT_REGULAR_EMPIRE
-		is_gestalt = no
-	}
-	custom_tooltip = {
-		fail_text = BRANCH_OFFICE_NOT_ADVANCED_PRE_FTL
-		if = {
-			limit = {
-				is_primitive = yes
-				is_gestalt = no
-			}
-			OR = {
-				has_pre_ftl_age = atomic_age
-				has_pre_ftl_age = early_space_age
-			}
-		}
-	}
-	ecaf_can_support_branch_offices_trigger = yes
-}
-
 # This = planet
 # Root = country
 can_build_branch_office_on_planet = {
@@ -86,6 +40,12 @@ can_build_branch_office_on_planet = {
 			root = { is_criminal_syndicate = yes }
 			owner = { has_commercial_pact = root }
 			owner = { is_in_federation_with = root }
+			AND = {
+				has_observation_outpost = yes
+				observation_outpost = {
+					has_modifier = preftl_action_trade_pact
+				}
+			}
 
 			# allow branch offices in subsidiaries and vice versa (and fellow subjects)
 			root = {
@@ -148,7 +108,6 @@ can_build_branch_office_on_planet = {
 								has_civic = civic_galactic_sovereign_megacorp
 							}
 						}
-						
 					}
 				}
 			}

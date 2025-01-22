@@ -1,12 +1,3 @@
-# My mods that use these triggers, ie this file.
-################################################
-# Civil Wars
-# Fatherland: Colonial Empires
-# Ethics and Civics Alternative: FunEFork
-# Useful Heirs
-# Vassals Expanded and Reworked
-# Viable Feudalism
-
 has_ecaf_triggers = { always = yes }
 
 is_socialist = { is_socialism = yes }
@@ -29,14 +20,6 @@ is_megacorp = {
 	OR = {
 		has_authority = auth_corporate
 		has_authority = auth_corporate_imperial
-		# Other Mods
-		has_authority = auth_corporate_democratic
-		has_authority = auth_bugged_corporate_democratic
-		has_authority = auth_cooperative
-		has_authority = auth_corporate_fiefdom
-		has_authority = auth_tec_patrocorporate
-		has_authority = auth_tec_ai_corporate
-		has_authority = auth_private
 	}
 }
 
@@ -48,12 +31,6 @@ is_democratic_authority = {
 			has_authority = auth_dict_democratic
 			is_egalitarian = yes
 		}
-		# Other Mods
-		has_authority = auth_direct_democratic
-		has_authority = auth_bugged_direct_democratic
-		has_authority = auth_bugged_corporate_democratic
-		has_authority = auth_corporate_democratic
-		has_authority = auth_cooperative
 	}
 	
 }
@@ -62,11 +39,6 @@ is_imperial_authority = {
 	OR = {
 		has_authority = auth_imperial
 		has_authority = auth_corporate_imperial
-		# Other Mods
-		has_authority = auth_corporate_fiefdom
-		has_authority = auth_tec_patrocorporate
-		has_authority = auth_bugged_corporate_imperial
-		has_authority = auth_private
 	}
 }
 

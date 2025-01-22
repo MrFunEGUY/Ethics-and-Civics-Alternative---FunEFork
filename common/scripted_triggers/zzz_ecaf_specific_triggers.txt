@@ -156,16 +156,6 @@ ecaf_can_build_branch_office_on_planet_trigger = {
 	}
 }
 
-ecaf_can_support_branch_offices_trigger = {
-	custom_tooltip = {
-		fail_text = ACTION_RECIPIENT_NOT_YOUR_CORP
-		NAND = {
-			is_megacorp = yes
-			is_subject = no
-		}
-	}
-}
-
 #############
 
 # Spiritualist - High Priest
