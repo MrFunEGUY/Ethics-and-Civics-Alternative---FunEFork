@@ -346,3 +346,37 @@ is_oligarchic_authority_no_merc = {
 	is_oligarchic_authority = yes
 	NOT = { is_country_type = enclave_mercenary }
 }
+
+is_imperial_authority_no_corp = {
+	is_imperial_authority = yes
+	NOT = { has_authority = auth_corporate_imperial }
+}
+
+is_democratic_authority_term_limited = {
+	is_democratic_authority = yes
+	NOT = { has_authority = auth_dict_democratic }
+}
+
+is_dictatorial_no_dem = {
+	is_dictatorial_authority = yes
+	NOT = { has_authority = auth_dict_democratic }
+}
+
+is_imperial_corp = { has_authority = auth_corporate_imperial }
+is_dictatorial_dem = { has_authority = auth_dict_democratic }
+is_strict_dem = { has_authority = auth_strict_democratic }
+
+is_any_democratic_authority = {
+	OR = {
+		has_authority = auth_democratic
+		has_authority = auth_strict_democratic
+		has_authority = auth_dict_democratic
+	}
+}
+
+is_any_dictatorial_authority = {
+	OR = {
+		has_authority = auth_dictatorial
+		has_authority = auth_dict_democratic
+	}
+}

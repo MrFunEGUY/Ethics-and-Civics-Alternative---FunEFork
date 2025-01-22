@@ -2603,7 +2603,7 @@ l_japanese:
 
  gov_imperial_domain_megacorp_desc: "§LThis government rules the Galactic Imperium's central crown territory, which is under the direct control of the Imperial Sovereign.§!$plutocracy_gov_loc$"
 
- gov_cor_dictatorship_desc: "An extremely capitalistic form of government, where powerful Corporations completely took over political and economical life of the society.$plutocracy_gov_loc$"
+ gov_cor_dictatorship_desc: "An extremely capitalistic form of government, where powerful corporations have completely taken over the political aspects of society.$plutocracy_gov_loc$"
 
  gov_anarch_capitalism_desc: "A form of society where the size and authority of state apparatus is reduced to a bare minimum, and a completely free market provides all public goods and services, including law and order.$plutocracy_gov_loc$"
 

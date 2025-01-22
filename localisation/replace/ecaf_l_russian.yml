@@ -735,7 +735,6 @@ l_russian:
  gov_congress_republic: "Congressional Republic"
  gov_congress_republic_desc: "A form of representative democracy, in which power belongs to democratically elected members of parliament who select the head of government. Every free citizen is allowed to vote and be elected."
  gov_cor_dictatorship: "Corporate Dictatorship"
- gov_demos_cratos: "Direct Democracy"
  gov_direct_democracy: "Cyber Democracy"
  gov_dread_brotherhood: "Dreadful Brotherhood"
  gov_enlighted_socialism: "Enlightened Despotism"
@@ -2603,7 +2602,7 @@ l_russian:
 
  gov_imperial_domain_megacorp_desc: "§LThis government rules the Galactic Imperium's central crown territory, which is under the direct control of the Imperial Sovereign.§!$plutocracy_gov_loc$"
 
- gov_cor_dictatorship_desc: "An extremely capitalistic form of government, where powerful Corporations completely took over political and economical life of the society.$plutocracy_gov_loc$"
+ gov_cor_dictatorship_desc: "An extremely capitalistic form of government, where powerful corporations have completely taken over the political aspects of society.$plutocracy_gov_loc$"
 
  gov_anarch_capitalism_desc: "A form of society where the size and authority of state apparatus is reduced to a bare minimum, and a completely free market provides all public goods and services, including law and order.$plutocracy_gov_loc$"
 

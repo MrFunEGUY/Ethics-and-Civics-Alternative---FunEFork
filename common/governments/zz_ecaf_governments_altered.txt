@@ -224,10 +224,7 @@ gov_moral_democracy = {
 	ruler_title_female = RT_PRIME_MINISTER_FEMALE
 
 	possible = {
-		OR = {
-			has_authority = auth_democratic
-			has_authority = auth_strict_democratic
-		}
+		is_democratic_authority_term_limited = yes
 		is_pacifist = yes
 	}
 
@@ -372,10 +369,7 @@ gov_purity_assembly = {
 	should_force_rename = yes
 
 	possible = {
-		OR = {
-			has_authority = auth_democratic
-			has_authority = auth_strict_democratic
-		}
+		is_democratic_authority_term_limited = yes
 		has_valid_civic = civic_fanatic_purifiers
 	}
 
@@ -421,28 +415,6 @@ gov_megacorporation = {
 	}
 }
 
-# Enlightened Monarchy
-gov_enlightened_monarchy = {
-	ruler_title = RT_HIGH_KING
-	ruler_title_female = RT_HIGH_QUEEN
-	heir_title = HT_CROWN_PRINCE
-	heir_title_female = HT_CROWN_PRINCESS
-
-	use_regnal_names = yes
-	dynastic_last_names = yes
-
-	should_force_rename = yes
-
-	possible = {
-		has_authority = auth_imperial
-		is_pacifist = yes
-	}
-
-	weight = {
-		base = 800
-	}
-}
-
 # Elective Monarchy
 gov_elective_monarchy = {
 	ruler_title = RT_HIGH_KING
@@ -479,6 +451,273 @@ gov_communal_parity = {
 	}
 }
 
+# Bandit Commune
+gov_bandit_commune = {
+	ruler_title = RT_WARLORD
+
+	should_force_rename = yes
+
+	possible = {
+		OR = {
+			is_oligarchic_authority = yes
+			is_democratic_authority_term_limited = yes
+		}
+		has_valid_civic = civic_barbaric_despoilers
+	}
+
+	weight = {
+		base = 10000
+	}
+}
+
+############################
+### Imperial Governments ###
+############################
+### Can't be Corporate
+
+###### 02_ethic_governments
+
+# Theocratic Monarchy
+gov_theocratic_monarchy = {
+	ruler_title = RT_ARCHPROPHET
+	ruler_title_female = RT_ARCHPROPHETESS
+	heir_title = HT_PRIEST
+	heir_title_female = HT_PRIESTESS
+
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	possible = {
+		is_imperial_authority_no_corp = yes
+		is_spiritualist = yes
+	}
+
+	weight = {
+		base = @gov_ethic_weight
+	}
+}
+
+# Despotic Hegemony
+gov_despotic_hegemony = {
+	ruler_title = RT_OVERLORD
+	ruler_title_female = RT_OVERLORD_FEMALE
+	heir_title = HT_DEPUTY_OVERLORD
+	heir_title_female = HT_DEPUTY_OVERLORD_FEMALE
+
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	possible = {
+		is_imperial_authority_no_corp = yes
+		is_materialist = yes
+	}
+
+	weight = {
+		base = @gov_ethic_weight
+	}
+}
+
+# Star Empire
+gov_star_empire = {
+	ruler_title = RT_EMPEROR
+	ruler_title_female = RT_EMPRESS
+	heir_title = HT_CROWN_PRINCE
+	heir_title_female = HT_CROWN_PRINCESS
+
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	possible = {
+		is_imperial_authority_no_corp = yes
+		is_militarist = yes
+	}
+
+	weight = {
+		base = @gov_ethic_weight
+		modifier = {
+			factor = 2
+			OR = {
+				has_valid_civic = civic_distinguished_admiralty
+				has_valid_civic = civic_nationalistic_zeal
+			}
+		}
+	}
+}
+
+gov_irenic_monarchy = {
+	ruler_title = RT_KING
+	ruler_title_female = RT_QUEEN
+	heir_title = HT_CROWN_PRINCE
+	heir_title_female = HT_CROWN_PRINCESS
+
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	possible = {
+		is_imperial_authority_no_corp = yes
+		is_pacifist = yes
+	}
+
+	weight = {
+		base = @gov_ethic_weight
+	}
+}
+
+
+###### 03_civic_governments
+
+# Divine Empire
+gov_divine_empire = {
+	ruler_title = RT_GOD_EMPEROR
+	ruler_title_female = RT_GOD_EMPRESS
+	heir_title = HT_SAINT
+	heir_title_female = HT_SAINT_FEMALE
+
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	should_force_rename = yes
+
+	possible = {
+		is_imperial_authority_no_corp = yes
+		has_valid_civic = civic_imperial_cult
+	}
+
+	weight = {
+		base = @gov_civic_weight
+	}
+}
+
+# Despotic Empire
+gov_despotic_empire = {
+	ruler_title = RT_EMPEROR
+	ruler_title_female = RT_EMPRESS
+	heir_title = HT_CROWN_PRINCE
+	heir_title_female = HT_CROWN_PRINCESS
+
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	possible = {
+		is_imperial_authority_no_corp = yes
+	}
+
+	weight = {
+		base = @gov_authority_weight
+	}
+}
+
+# Martial Empire
+gov_martial_empire = {
+	ruler_title = RT_EMPEROR
+	ruler_title_female = RT_EMPRESS
+	heir_title = HT_CROWN_PRINCE
+	heir_title_female = HT_CROWN_PRINCESS
+
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	should_force_rename = yes
+
+	possible = {
+		is_imperial_authority_no_corp = yes
+		has_valid_civic = civic_warrior_culture
+	}
+
+	weight = {
+		base = @gov_civic_weight
+	}
+}
+
+# Celestial Empire
+gov_celestial_empire = {
+	ruler_title = RT_CELESTIAL_EMPEROR
+	ruler_title_female = RT_CELESTIAL_EMPRESS
+	heir_title = HT_CROWN_PRINCE
+	heir_title_female = HT_CROWN_PRINCESS
+
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	should_force_rename = yes
+
+	possible = {
+		is_imperial_authority_no_corp = yes
+		is_pacifist = yes
+		has_valid_civic = civic_inwards_perfection
+	}
+
+	weight = {
+		base = @gov_civic_weight
+	}
+}
+
+# Illuminated Autocracy
+gov_illuminated_autocracy = {
+	ruler_title = RT_PRIMUS
+	ruler_title_female = RT_PRIMUS_FEMALE
+	heir_title = HT_SECUNDUS
+	heir_title_female = HT_SECUNDUS_FEMALE
+
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	should_force_rename = yes
+
+	possible = {
+		is_imperial_authority_no_corp = yes
+		has_valid_civic = civic_technocracy
+	}
+
+	weight = {
+		base = @gov_civic_weight
+	}
+}
+
+# Feudal Empire
+gov_feudal_empire = {
+	ruler_title = RT_EMPEROR
+	ruler_title_female = RT_EMPRESS
+	heir_title = HT_CROWN_PRINCE
+	heir_title_female = HT_CROWN_PRINCESS
+
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	should_force_rename = yes
+
+	possible = {
+		is_imperial_authority_no_corp = yes
+		has_valid_civic = civic_feudal_realm
+	}
+
+	weight = {
+		base = @gov_civic_weight
+	}
+}
+
+# Enlightened Monarchy
+gov_enlightened_monarchy = {
+	ruler_title = RT_HIGH_KING
+	ruler_title_female = RT_HIGH_QUEEN
+	heir_title = HT_CROWN_PRINCE
+	heir_title_female = HT_CROWN_PRINCESS
+
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	should_force_rename = yes
+
+	possible = {
+		is_imperial_authority_no_corp = yes
+		has_valid_civic = civic_philosopher_king
+	}
+
+	weight = {
+		base = @gov_civic_weight
+	}
+}
+
 # Bandit Kingdom
 gov_bandit_kingdom = {
 	ruler_title = RT_WARLORD
@@ -487,7 +726,7 @@ gov_bandit_kingdom = {
 
 	possible = {
 		OR = {
-			has_authority = auth_imperial
+			is_imperial_authority_no_corp = yes
 			is_dictatorial_authority = yes
 		}
 		has_valid_civic = civic_barbaric_despoilers
@@ -498,22 +737,43 @@ gov_bandit_kingdom = {
 	}
 }
 
-# Bandit Commune
-gov_bandit_commune = {
-	ruler_title = RT_WARLORD
+# Mortal Empire
+gov_mortal_empire = {
+	ruler_title = RT_DEATH_MONARCH
+	ruler_title_female = RT_DEATH_MONARCH_FEMALE
+	heir_title = HT_DEATH_PRINCE
+	heir_title_female = HT_DEATH_PRINCESS
 
 	should_force_rename = yes
 
 	possible = {
-		OR = {
-			is_oligarchic_authority = yes
-			has_authority = auth_democratic
-			has_authority = auth_strict_democratic
-		}
-		has_valid_civic = civic_barbaric_despoilers
+		is_imperial_authority_no_corp = yes
+		has_valid_civic = civic_death_cult
 	}
 
 	weight = {
-		base = 10000
+		base = @gov_civic_prio_weight
+	}
+}
+
+# Blood Court
+gov_blood_court = {
+	ruler_title = RT_HIGH_EXECUTIONER
+	ruler_title_female = RT_HIGH_EXECUTIONER_FEMALE
+	heir_title = HT_SENIOR_EXECUTIONER
+	heir_title_female = HT_SENIOR_EXECUTIONER_FEMALE
+
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	should_force_rename = yes
+
+	possible = {
+		is_imperial_authority_no_corp = yes
+		has_valid_civic = civic_fanatic_purifiers
+	}
+
+	weight = {
+		base = @gov_civic_override_weight
 	}
 }

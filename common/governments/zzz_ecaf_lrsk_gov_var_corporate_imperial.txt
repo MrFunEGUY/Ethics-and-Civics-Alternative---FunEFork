@@ -24,7 +24,7 @@ lrsk_gov_var_gov_galactic_cartel_fam = {
 				}
 			}
 			AND = {
-				has_authority = auth_corporate_imperial
+				is_imperial_corp = yes
 				has_valid_civic = civic_ruthless_competition
 				has_valid_civic = civic_brand_loyalty
 			}
@@ -56,7 +56,7 @@ lrsk_gov_var_gov_rationalist_managerial_firm_fam = {
 				has_valid_civic = civic_technocracy
 			}
 			AND = {
-				has_authority = auth_corporate_imperial
+				is_imperial_corp = yes
 				has_valid_civic = lrsk_gov_var_civic_mc_sci_mgnt
 			}
 		}		
@@ -85,7 +85,7 @@ lrsk_gov_var_gov_private_intel_agency_fam = {
 
 	possible = {
 		lrsk_gvp_is_active = yes		
-		has_authority = auth_corporate_imperial
+		is_imperial_corp = yes
 		has_valid_civic = lrsk_gov_var_civic_mc_police_state
 	}
 
@@ -111,7 +111,7 @@ lrsk_gov_var_gov_protection_racket_fam = {
 
 	possible = {
 		lrsk_gvp_is_active = yes		
-		has_authority = auth_corporate_imperial
+		is_imperial_corp = yes
 		has_valid_civic = lrsk_gov_var_civic_mc_police_state
 		has_valid_civic = civic_criminal_heritage
 	}
@@ -151,7 +151,7 @@ lrsk_gov_var_gov_crusading_company_fam = {
 				has_valid_civic = civic_citizen_service
 			}
 			AND = {
-				has_authority = auth_corporate_imperial
+				is_imperial_corp = yes
 				has_valid_civic = civic_gospel_of_the_masses
 				OR = {
 					has_valid_civic = civic_naval_contractors
@@ -178,7 +178,7 @@ lrsk_gov_var_gov_colonial_viceroyalty_cmp_fam = {
 
 	possible = {
 		lrsk_gvp_is_active = yes
-		has_authority = auth_corporate_imperial
+		is_imperial_corp = yes
 		has_origin = lrsk_gov_var_origin_colonial_venture
 	}
 
@@ -210,7 +210,7 @@ lrsk_gov_var_gov_evangelical_franchise_fam = {
 				has_valid_civic = civic_exalted_priesthood
 			}
 			AND = {
-				has_authority = auth_corporate_imperial
+				is_imperial_corp = yes
 				has_valid_civic = civic_gospel_of_the_masses
 			}
 		}
@@ -242,7 +242,7 @@ lrsk_gov_var_gov_occult_franchise_fam = {
 				has_valid_civic = civic_exalted_priesthood
 			}
 			AND = {
-				has_authority = auth_corporate_imperial
+				is_imperial_corp = yes
 				has_valid_civic = civic_gospel_of_the_masses
 			}
 		}
@@ -278,7 +278,7 @@ lrsk_gov_var_gov_innovation_initiative_fam = {
 				has_valid_civic = lrsk_gov_var_civic_enlightened_liberalism
 			}
 			AND = {
-				has_authority = auth_corporate_imperial
+				is_imperial_corp = yes
 				has_valid_civic = lrsk_gov_var_civic_mc_edu_corp
 				has_valid_civic = lrsk_gov_var_civic_mc_sci_mgnt
 			}
@@ -322,7 +322,7 @@ lrsk_gov_var_gov_private_military_contractor_fam = {
 				has_valid_civic = civic_citizen_service
 			}
 			AND = {
-				has_authority = auth_corporate_imperial
+				is_imperial_corp = yes
 				AND = {
 					has_valid_civic = civic_private_military_companies
 					has_valid_civic = civic_naval_contractors

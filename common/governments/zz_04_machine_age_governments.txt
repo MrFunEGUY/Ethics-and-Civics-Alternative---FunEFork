@@ -27,14 +27,7 @@ gov_cyber_democracy_individualist = {
 	ruler_title_female = RT_PRESIDENT_FEMALE
 
 	possible = {
-		OR = {
-			has_authority = auth_democratic
-			has_authority = auth_strict_democratic
-			AND = {
-				is_egalitarian = yes
-				has_authority = auth_dict_democratic			
-			}
-		}
+		is_democratic_authority = yes
 		has_country_flag = cyber_individualist
 	}
 
@@ -49,14 +42,7 @@ gov_cyber_democracy_collectivist = {
 	ruler_title_female = RT_PRESIDENT_FEMALE
 
 	possible = {
-		OR = {
-			has_authority = auth_democratic
-			has_authority = auth_strict_democratic
-			AND = {
-				is_egalitarian = yes
-				has_authority = auth_dict_democratic			
-			}
-		}
+		is_democratic_authority = yes
 		has_country_flag = cyber_collectivist
 	}
 
@@ -101,13 +87,7 @@ gov_cyber_dictatorial_individualist = {
 	ruler_title_female = RT_EXECUTOR_FEMALE
 
 	possible = {
-		OR = {
-			has_authority = auth_dictatorial
-			AND = {
-				is_egalitarian = no
-				has_authority = auth_dict_democratic			
-			}
-		}
+		is_dictatorial_authority = yes
 		has_country_flag = cyber_individualist
 	}
 
@@ -122,13 +102,7 @@ gov_cyber_dictatorial_collectivist = {
 	ruler_title_female = RT_EXECUTOR_FEMALE
 
 	possible = {
-		OR = {
-			has_authority = auth_dictatorial
-			AND = {
-				is_egalitarian = no
-				has_authority = auth_dict_democratic			
-			}
-		}
+		is_dictatorial_authority = yes
 		has_country_flag = cyber_collectivist
 	}
 
@@ -143,7 +117,7 @@ gov_cyber_corporate_individualist = {
 	ruler_title_female = RT_EXECUTOR_FEMALE
 
 	possible = {
-		has_authority = auth_corporate
+		is_megacorp = yes
 		has_country_flag = cyber_individualist
 	}
 
@@ -158,7 +132,7 @@ gov_cyber_corporate_collectivist = {
 	ruler_title_female = RT_EXECUTOR_FEMALE
 
 	possible = {
-		has_authority = auth_corporate
+		is_megacorp = yes
 		has_country_flag = cyber_collectivist
 	}
 
@@ -177,13 +151,7 @@ gov_cyber_creed_dictatorship = {
 
 	possible = {
 		is_cyber_creed_advanced_government = yes
-		OR = {
-			has_authority = auth_dictatorial
-			AND = {
-				is_egalitarian = no
-				has_authority = auth_dict_democratic			
-			}
-		}
+		is_dictatorial_authority = yes
 		is_spiritualist = yes
 	}
 
@@ -199,14 +167,7 @@ gov_cyber_creed_democracy = {
 
 	possible = {
 		is_cyber_creed_advanced_government = yes
-		OR = {
-			has_authority = auth_democratic
-			has_authority = auth_strict_democratic
-			AND = {
-				is_egalitarian = yes
-				has_authority = auth_dict_democratic			
-			}
-		}
+		is_democratic_authority = yes
 		is_spiritualist = yes
 	}
 
@@ -230,7 +191,7 @@ gov_cyber_creed_megachurch = {
 				has_valid_civic = civic_exalted_priesthood
 			}
 			AND = {
-				has_authority = auth_corporate
+				is_megacorp = yes
 				has_valid_civic = civic_gospel_of_the_masses
 			}
 		}
@@ -258,7 +219,7 @@ gov_cyber_creed_subversive_cult = {
 
 	possible = {
 		is_cyber_creed_advanced_government = yes
-		has_authority = auth_corporate
+		is_megacorp = yes
 		has_valid_civic = civic_criminal_heritage
 		has_valid_civic = civic_gospel_of_the_masses
 	}
@@ -286,14 +247,7 @@ gov_synth_democracy_physical = {
 	ruler_title_female = RT_PRESIDENT_FEMALE
 
 	possible = {
-		OR = {
-			has_authority = auth_democratic
-			has_authority = auth_strict_democratic
-			AND = {
-				is_egalitarian = yes
-				has_authority = auth_dict_democratic			
-			}
-		}
+		is_democratic_authority = yes
 		has_country_flag = synth_physical
 	}
 
@@ -308,14 +262,7 @@ gov_synth_democracy_virtual = {
 	ruler_title_female = RT_PRESIDENT_FEMALE
 
 	possible = {
-		OR = {
-			has_authority = auth_democratic
-			has_authority = auth_strict_democratic
-			AND = {
-				is_egalitarian = yes
-				has_authority = auth_dict_democratic			
-			}
-		}
+		is_democratic_authority = yes
 		has_country_flag = synth_virtual
 	}
 
@@ -330,13 +277,7 @@ gov_synth_dictatorship_physical = {
 	ruler_title_female = RT_EXECUTOR_FEMALE
 
 	possible = {
-		OR = {
-			has_authority = auth_dictatorial
-			AND = {
-				is_egalitarian = no
-				has_authority = auth_dict_democratic			
-			}
-		}
+		is_dictatorial_authority = yes
 		has_country_flag = synth_physical
 	}
 
@@ -351,13 +292,7 @@ gov_synth_dictatorship_virtual = {
 	ruler_title_female = RT_EXECUTOR_FEMALE
 
 	possible = {
-		OR = {
-			has_authority = auth_dictatorial
-			AND = {
-				is_egalitarian = no
-				has_authority = auth_dict_democratic			
-			}
-		}
+		is_dictatorial_authority = yes
 		has_country_flag = synth_virtual
 	}
 
@@ -372,7 +307,7 @@ gov_synth_corporate_physical = {
 	ruler_title_female = RT_EXECUTOR_FEMALE
 
 	possible = {
-		has_authority = auth_corporate
+		is_megacorp = yes
 		has_country_flag = synth_physical
 	}
 
@@ -387,7 +322,135 @@ gov_synth_corporate_virtual = {
 	ruler_title_female = RT_EXECUTOR_FEMALE
 
 	possible = {
-		has_authority = auth_corporate
+		is_megacorp = yes
+		has_country_flag = synth_virtual
+	}
+
+	weight = {
+		base = @gov_authority_swap_weight
+	}
+}
+
+# Cyber Imperial Individualist
+gov_cyber_imperial_individualist = {
+	ruler_title = RT_EMPEROR
+	ruler_title_female = RT_EMPRESS
+	heir_title = HT_CROWN_PRINCE
+	heir_title_female = HT_CROWN_PRINCESS
+
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	possible = {
+		is_imperial_authority_no_corp = yes
+		has_country_flag = cyber_individualist
+	}
+
+	weight = {
+		base = @gov_authority_swap_weight
+	}
+}
+
+# Cyber Imperial Collectivist
+gov_cyber_imperial_collectivist = {
+	ruler_title = RT_EMPEROR
+	ruler_title_female = RT_EMPRESS
+	heir_title = HT_CROWN_PRINCE
+	heir_title_female = HT_CROWN_PRINCESS
+
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	possible = {
+		is_imperial_authority_no_corp = yes
+		has_country_flag = cyber_collectivist
+	}
+
+	weight = {
+		base = @gov_authority_swap_weight
+	}
+}
+
+# Advanced Cybernetic Creed Monarchy
+gov_cyber_creed_monarchy = {
+	ruler_title = RT_ARCHPROPHET
+	ruler_title_female = RT_ARCHPROPHETESS
+	heir_title = HT_PRIEST
+	heir_title_female = HT_PRIESTESS
+
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	possible = {
+		is_cyber_creed_advanced_government = yes
+		is_imperial_authority_no_corp = yes
+		is_spiritualist = yes
+	}
+
+	weight = {
+		base = @gov_authority_swap_weight
+	}
+}
+
+# Advanced Cybernetic Creed Divine Empire
+gov_cyber_creed_divine_empire = {
+	ruler_title = RT_GOD_EMPEROR
+	ruler_title_female = RT_GOD_EMPRESS
+	heir_title = HT_SAINT
+	heir_title_female = HT_SAINT_FEMALE
+
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	should_force_rename = yes
+
+	possible = {
+		is_cyber_creed_advanced_government = yes
+		is_imperial_authority_no_corp = yes
+		has_valid_civic = civic_imperial_cult
+	}
+
+	weight = {
+		base = @gov_authority_swap_weight
+		modifier = {
+			factor = 2
+			has_valid_civic = civic_imperial_cult
+		}
+	}
+}
+
+# Synth Imperial Physical
+gov_synth_imperial_physical = {
+	ruler_title = RT_EMPEROR
+	ruler_title_female = RT_EMPRESS
+	heir_title = HT_CROWN_PRINCE
+	heir_title_female = HT_CROWN_PRINCESS
+
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	possible = {
+		is_imperial_authority_no_corp = yes
+		has_country_flag = synth_physical
+	}
+
+	weight = {
+		base = @gov_authority_swap_weight
+	}
+}
+
+# Synth Imperial Virtual
+gov_synth_imperial_virtual = {
+	ruler_title = RT_EMPEROR
+	ruler_title_female = RT_EMPRESS
+	heir_title = HT_CROWN_PRINCE
+	heir_title_female = HT_CROWN_PRINCESS
+
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	possible = {
+		is_imperial_authority_no_corp = yes
 		has_country_flag = synth_virtual
 	}
 

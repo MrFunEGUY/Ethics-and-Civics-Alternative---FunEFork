@@ -898,8 +898,6 @@ empire_name_format = {
 				has_government = "gov_moral_democracy"
 				has_government = "gov_representative_democracy"
 				#### ECAF
-				has_government = "gov_demos_cratos"
-				has_government = "gov_anarchy_state"
 				has_government = "gov_anarchy_communism"
 				has_government = "gov_liberal_democracy"
 				has_government = "gov_soviet_republic"
@@ -931,8 +929,6 @@ empire_name_format = {
 				has_government = "gov_moral_democracy"
 				has_government = "gov_representative_democracy"
 				#### ECAF
-				has_government = "gov_demos_cratos"
-				has_government = "gov_anarchy_state"
 				has_government = "gov_anarchy_communism"
 				has_government = "gov_liberal_democracy"
 				has_government = "gov_soviet_republic"

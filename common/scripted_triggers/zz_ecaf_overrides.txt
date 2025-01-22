@@ -4,6 +4,7 @@ can_think = {
 	NOR = {
 		has_trait = trait_nerve_stapled
 		has_trait = trait_zombie
+		has_trait = trait_robot_suppressed
 		has_trait = trait_slave_gene
 	}
 }
@@ -30,6 +31,8 @@ is_fanatic = {
 		has_ethic = ethic_fanatic_socialism
 	}
 }
+
+is_fanatical = { is_fanatic = yes }
 
 is_faction_allowed = {
 	days_passed > 30
@@ -117,10 +120,8 @@ has_encountered_other_species = {
 		has_valid_civic = civic_slave_race
 		num_communications > 0
 		any_owned_species = {
-			NOR = {
-				has_trait = "trait_mechanical"
-				is_same_species = prev
-			}
+			NOT = { has_trait = "trait_mechanical" }
+			NOT = { is_same_species = prev }
 		}
 	}
 }

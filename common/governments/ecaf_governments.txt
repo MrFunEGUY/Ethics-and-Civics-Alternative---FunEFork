@@ -31,7 +31,7 @@ gov_aristocratic_monarchy = {
 	dynastic_last_names = yes
 	should_force_rename = yes
 	possible = {
-		has_authority = auth_imperial
+		is_imperial_authority_no_corp = yes
 		OR = {
 			has_valid_civic = civic_aristocratic_elite
 			has_valid_civic = civic_genetic_aristocracy
@@ -48,11 +48,7 @@ gov_aristocratic_republic = {
 	ruler_title_female = RT_PRESIDENT
 	should_force_rename = yes
 	possible = {
-		OR = {
-			has_authority = auth_democratic
-			has_authority = auth_strict_democratic
-			has_authority = auth_dict_democratic
-		}
+		is_any_democratic_authority = yes
 		OR = {
 			has_valid_civic = civic_aristocratic_elite
 			has_valid_civic = civic_genetic_aristocracy
@@ -118,8 +114,7 @@ gov_anarchy_communism = {
 	ruler_title_female = RT_GENERALISSIMO
 	possible = {
 		OR = {
-			has_authority = auth_dictatorial
-			has_authority = auth_dict_democratic
+			is_any_dictatorial_authority = yes
 			is_oligarchic_authority_no_merc = yes
 		}
 		has_ethic = ethic_fanatic_socialism
@@ -144,8 +139,7 @@ gov_jingoism = {
 	ruler_title_female = RT_DICTATOR
 	possible = {
 		OR = {
-			has_authority = auth_dictatorial
-			has_authority = auth_dict_democratic
+			is_any_dictatorial_authority = yes
 			is_oligarchic_authority_no_merc = yes
 		}
 		is_xenophobe = yes
@@ -219,8 +213,8 @@ gov_cor_dictatorship = {
 			has_valid_civic = civic_state_monopoly
 		}
 		OR = {
-			has_authority = auth_dictatorial
-			has_authority = auth_imperial
+			is_dictatorial_no_dem = yes
+			is_imperial_authority_no_corp = yes
 			is_oligarchic_authority_no_merc = yes
 		}
 	}
@@ -259,11 +253,7 @@ gov_timocracy = {
 		NOT = {
 			has_ethic = ethic_fanatic_egalitarian
 		}
-		OR = {
-			has_authority = auth_democratic
-			has_authority = auth_strict_democratic
-			has_authority = auth_dict_democratic
-		}
+		is_any_democratic_authority = yes
 	}
 	should_force_rename = yes
 	weight = {
@@ -284,7 +274,7 @@ gov_absolute_monarchy = {
 	should_force_rename = yes
 	possible = {
 		lrsk_gvp_is_active = no # GVP has its own version
-		has_authority = auth_imperial
+		is_imperial_authority_no_corp = yes
 		has_ethic = ethic_fanatic_authoritarian
 		NOR = {
 			has_valid_civic = civic_feudal_realm
@@ -304,7 +294,7 @@ gov_par_monarchy = {
 	dynastic_last_names = yes
 	should_force_rename = yes
 	possible = {
-		has_authority = auth_imperial
+		is_imperial_authority_no_corp = yes
 		has_valid_civic = civic_political_pluralism
 	}
 	weight = {
@@ -319,10 +309,7 @@ gov_communist_dictatorship = {
 	ruler_title = RT_CHAIRMAN
 	ruler_title_female = RT_CHAIRWOMAN
 	possible = {
-		OR = {
-			has_authority = auth_dictatorial
-			has_authority = auth_dict_democratic
-		}
+		is_any_dictatorial_authority = yes
 		has_ethic = ethic_fanatic_socialism
 		is_authoritarian = yes
 		is_xenophobe = no
@@ -344,10 +331,7 @@ gov_enlighted_socialism = {
 	heir_title_female = HT_PROSELYTE
 	should_force_rename = yes
 	possible = {
-		OR = {
-			has_authority = auth_dictatorial
-			has_authority = auth_dict_democratic
-		}
+		is_any_dictatorial_authority = yes
 		has_ethic = ethic_fanatic_socialism
 		is_authoritarian = no
 	}
@@ -366,7 +350,7 @@ gov_national_socialism = {
 	possible = {
 		has_ethic = ethic_fanatic_authoritarian
 		has_ethic = ethic_capitalism
-		has_authority = auth_dictatorial
+		is_dictatorial_no_dem = yesority = auth_dictatorial
 		has_valid_civic = civic_police_state
 		is_xenophile = no
 		is_pacifist = no
@@ -382,10 +366,7 @@ gov_peoples_republic = {
 	ruler_title_female = RT_CHAIRWOMAN
 	should_force_rename = yes
 	possible = {
-		OR = {
-			has_authority = auth_dictatorial
-			has_authority = auth_dict_democratic
-		}
+		is_any_dictatorial_authority = yes
 		is_socialist = yes
 	}
 	weight = {
@@ -492,22 +473,6 @@ gov_benevolent_aristocracy = {
 ##############################
 ### Democratic Governments ###
 ##############################
-# gov_anarchy_state = {
-# 	ruler_title = RT_DEMOS_CRATOS
-# 	should_force_rename = yes
-# 	possible = {
-# 		has_authority = auth_direct_democratic
-# 		has_ethic = ethic_fanatic_socialism
-# 		has_valid_civic = civic_labour_unions
-# 	}
-# 	weight = {
-# 		base = 500
-# 		modifier = {
-# 			factor = 100
-# 			has_valid_civic = civic_shared_burden
-# 		}
-# 	}
-# }
 
 gov_congress_republic = {
 	ruler_title = RT_PRIME_MINISTER
@@ -515,40 +480,18 @@ gov_congress_republic = {
 	should_force_rename = yes
 	possible = {
 		has_valid_civic = civic_political_pluralism
-		OR = {
-			has_authority = auth_democratic
-			has_authority = auth_strict_democratic
-			has_authority = auth_dict_democratic
-		}
+		is_any_democratic_authority = yes
 	}
 	weight = {
 		base = 400
 	}
 }
 
-# gov_demos_cratos = {
-# 	ruler_title = RT_DEMOS_CRATOS
-# 	should_force_rename = yes
-# 	possible = {
-# 		has_authority = auth_direct_democratic
-# 	}
-# 	weight = {
-# 		base = 10
-# 		modifier = {
-# 			factor = 100
-# 			has_valid_civic = civic_political_pluralism
-# 		}
-# 	}
-# }
-
 gov_liberal_democracy = {
 	ruler_title = RT_PRESIDENT
 	ruler_title_female = RT_PRESIDENT_FEMALE
 	possible = {
-		OR = {
-			has_authority = auth_democratic
-			has_authority = auth_strict_democratic
-		}
+		is_democratic_authority_term_limited = yes
 		is_capitalism = yes
 		is_egalitarian = yes
 	}
@@ -564,11 +507,7 @@ gov_slaver_republic = {
 	should_force_rename = yes
 	possible = {
 		has_valid_civic = civic_slaver_guilds
-		OR = {
-			has_authority = auth_democratic
-			has_authority = auth_strict_democratic
-			has_authority = auth_dict_democratic
-		}
+		is_any_democratic_authority = yes
 	}
 	weight = {
 		base = 10000
@@ -586,10 +525,7 @@ gov_social_democracy = {
 			has_valid_civic = civic_welfare_state
 			has_valid_civic = lrsk_gov_var_civic_institutionalized_collectivism
 		}
-		OR = {
-			has_authority = auth_strict_democratic
-			has_authority = auth_democratic
-		}
+		is_democratic_authority_term_limited = yes
 	}
 	should_force_rename = yes
 	weight = {
@@ -624,7 +560,7 @@ gov_imperial_socialism = {
 	should_force_rename = yes
 	possible = {
 		is_socialist = yes
-		inline_script = governments/conditions/auth_imperial
+		is_imperial_authority_no_corp = yes
 	}
 	weight = {
 		base = 250
@@ -640,11 +576,7 @@ gov_xenophile_democracy = {
 	ruler_title_female = RT_CHAIRMAN
 	possible = {
 		has_valid_civic = civic_symbiotic_race
-		OR = {
-			has_authority = auth_democratic
-			has_authority = auth_strict_democratic
-			has_authority = auth_dict_democratic
-		}
+		is_any_democratic_authority = yes
 	}
 	should_force_rename = yes
 	weight = {
@@ -665,8 +597,7 @@ gov_strasserism = {
 		is_authoritarian = yes
 		is_socialist = yes
 		OR = {
-			has_authority = auth_dictatorial
-			has_authority = auth_dict_democratic
+			is_any_dictatorial_authority = yes
 			is_oligarchic_authority_no_merc = yes
 		}
 	}
@@ -691,7 +622,7 @@ gov_democratic_dictatorship = {
 	ruler_title_female = RT_EXECUTOR
 	
 	possible = {
-		has_authority = auth_dict_democratic
+		is_dictatorial_dem = yes
 	}
 
 	weight = {
@@ -705,7 +636,7 @@ gov_strict_democracy = {
 	ruler_title_female = RT_PRESIDENT
 
 	possible = {
-		has_authority = auth_strict_democratic
+		is_strict_dem = yes
 	}
 	
 	weight = {
@@ -725,7 +656,7 @@ gov_megacorporation_fam = {
 	dynastic_last_names = yes
 
 	possible = {
-		has_authority = auth_corporate_imperial
+		is_imperial_corp = yes
 	}
 	weight = {
 		base = 2
@@ -748,7 +679,7 @@ gov_megachurch_fam = {
 	dynastic_last_names = yes
 
 	possible = {
-		has_authority = auth_corporate_imperial
+		is_imperial_corp = yes
 		has_valid_civic = civic_gospel_of_the_masses
 	}
 
@@ -766,7 +697,7 @@ gov_sacrificial_megachurch_fam = {
 	should_force_rename = yes
 
 	possible = {
-		has_authority = auth_corporate_imperial
+		is_imperial_corp = yes
 		has_valid_civic = civic_death_cult_corporate
 		has_valid_civic = civic_gospel_of_the_masses
 	}
@@ -788,14 +719,10 @@ gov_trade_league_fam = {
 	dynastic_last_names = yes
 
 	possible = {
+		is_imperial_corp = yes
 		OR = {
-			AND = {
-				has_authority = auth_corporate_imperial
-				OR = {
-					has_valid_civic = civic_free_traders
-					has_valid_civic = civic_trading_posts
-				}
-			}
+			has_valid_civic = civic_free_traders
+			has_valid_civic = civic_trading_posts
 		}
 	}
 
@@ -816,7 +743,7 @@ gov_criminal_syndicate_fam = {
 	dynastic_last_names = yes
 
 	possible = {
-		has_authority = auth_corporate_imperial
+		is_imperial_corp = yes
 		has_valid_civic = civic_criminal_heritage
 	}
 
@@ -834,7 +761,7 @@ gov_pirate_haven = {
 	should_force_rename = yes
 
 	possible = {
-		has_authority = auth_corporate_imperial
+		is_imperial_corp = yes
 		AND = {
 			has_valid_civic = civic_crusader_spirit_corporate
 			has_valid_civic = civic_criminal_heritage
@@ -858,14 +785,10 @@ gov_trade_league_crime_fam = {
 	dynastic_last_names = yes
 
 	possible = {
+		is_imperial_corp = yes
 		OR = {
-			AND = {
-				has_authority = auth_corporate_imperial
-				OR = {
-					has_valid_civic = civic_free_traders
-					has_valid_civic = civic_trading_posts
-				}
-			}
+			has_valid_civic = civic_free_traders
+			has_valid_civic = civic_trading_posts
 		}
 		has_valid_civic = civic_criminal_heritage
 	}
@@ -886,7 +809,7 @@ gov_subversive_cult_fam = {
 	dynastic_last_names = yes
 
 	possible = {
-		has_authority = auth_corporate_imperial
+		is_imperial_corp = yes
 		has_valid_civic = civic_criminal_heritage
 		has_valid_civic = civic_gospel_of_the_masses
 	}
@@ -913,7 +836,7 @@ gov_military_corp_fam = {
 			has_valid_civic = civic_private_militaries
 			has_valid_civic = civic_naval_contractors
 		}
-		has_authority = auth_corporate_imperial
+		is_imperial_corp = yes
 	}
 	
 	should_force_rename = yes
@@ -940,13 +863,11 @@ gov_optimized_venture_fam = {
 	dynastic_last_names = yes
 	
 	possible = {
-		AND = {
-			has_authority = auth_corporate_imperial
-			OR = {
-				has_valid_civic = civic_automated_workforce
-				has_valid_civic = civic_science_syndicate
-				has_valid_civic = civic_efficiency_expert
-			}
+		is_imperial_corp = yes
+		OR = {
+			has_valid_civic = civic_automated_workforce
+			has_valid_civic = civic_science_syndicate
+			has_valid_civic = civic_efficiency_expert
 		}
 	}
 
@@ -968,13 +889,10 @@ gov_industrial_consortium_fam = {
 	dynastic_last_names = yes
 
 	possible = {
-		AND = {
-			has_authority = auth_corporate_imperial
-			
-			OR = {
-				has_valid_civic = civic_refining_consortium
-				has_valid_civic = civic_manufactory
-			}
+		is_imperial_corp = yes	
+		OR = {
+			has_valid_civic = civic_refining_consortium
+			has_valid_civic = civic_manufactory
 		}
 	}
 
@@ -996,13 +914,8 @@ gov_stellar_bancorp_fam = {
 	dynastic_last_names = yes
 
 	possible = {
-		AND = {
-			has_authority = auth_corporate_imperial
-			
-			OR = {
-				has_valid_civic = civic_bancorp
-			}
-		}
+		is_imperial_corp = yes
+		has_valid_civic = civic_bancorp
 	}
 
 	weight = {
@@ -1023,14 +936,11 @@ gov_industrial_monopoly_fam = {
 	dynastic_last_names = yes
 	
 	possible = {
-		AND = {
-			has_authority = auth_corporate_imperial
-			
-			OR = {
-				has_valid_civic = civic_refining_consortium
-				has_valid_civic = civic_manufactory
-			}
-			has_valid_civic = civic_maniac_monopoly
+		is_imperial_corp = yes
+		has_valid_civic = civic_maniac_monopoly
+		OR = {
+			has_valid_civic = civic_refining_consortium
+			has_valid_civic = civic_manufactory
 		}
 	}
 	
@@ -1055,14 +965,12 @@ gov_optimized_monopoly_fam = {
 	}
 	
 	possible = {
-		AND = {
-			has_authority = auth_corporate_imperial
-			OR = {
-				has_valid_civic = civic_automated_workforce
-				has_valid_civic = civic_science_syndicate
-				has_valid_civic = civic_efficiency_expert
-			}
-			has_valid_civic = civic_maniac_monopoly
+		is_imperial_corp = yes
+		has_valid_civic = civic_maniac_monopoly
+		OR = {
+			has_valid_civic = civic_automated_workforce
+			has_valid_civic = civic_science_syndicate
+			has_valid_civic = civic_efficiency_expert
 		}
 	}
 }
@@ -1092,7 +1000,7 @@ lrsk_gov_var_gov_galactic_cartel_fam = {
 				}
 			}
 			AND = {
-				has_authority = auth_corporate_imperial
+				is_imperial_corp = yes
 				has_valid_civic = civic_ruthless_competition
 				has_valid_civic = civic_brand_loyalty
 			}
@@ -1123,7 +1031,7 @@ lrsk_gov_var_gov_rationalist_managerial_firm_fam = {
 				has_valid_civic = civic_technocracy
 			}
 			AND = {
-				has_authority = auth_corporate_imperial
+				is_imperial_corp = yes
 				has_valid_civic = lrsk_gov_var_civic_mc_sci_mgnt
 			}
 		}		
@@ -1150,7 +1058,7 @@ lrsk_gov_var_gov_private_intel_agency_fam = {
 	dynastic_last_names = yes
 
 	possible = {		
-		has_authority = auth_corporate_imperial
+		is_imperial_corp = yes
 		has_valid_civic = lrsk_gov_var_civic_mc_police_state
 	}
 
@@ -1175,7 +1083,7 @@ lrsk_gov_var_gov_protection_racket_fam = {
 	dynastic_last_names = yes
 
 	possible = {		
-		has_authority = auth_corporate_imperial
+		is_imperial_corp = yes
 		has_valid_civic = lrsk_gov_var_civic_mc_police_state
 		has_valid_civic = civic_criminal_heritage
 	}
@@ -1216,7 +1124,7 @@ lrsk_gov_var_gov_crusading_company_fam = {
 				has_valid_civic = civic_citizen_service
 			}
 			AND = {
-				has_authority = auth_corporate_imperial
+				is_imperial_corp = yes
 				has_valid_civic = civic_gospel_of_the_masses
 				OR = {
 					has_valid_civic = civic_naval_contractors
@@ -1244,7 +1152,7 @@ lrsk_gov_var_gov_colonial_charter_board_fam = {
 	dynastic_last_names = yes
 
 	possible = {
-		has_authority = auth_corporate_imperial
+		is_imperial_corp = yes
 		has_valid_civic = lrsk_gov_var_civic_mc_chart_corp_board
 	}
 
@@ -1271,7 +1179,7 @@ lrsk_gov_var_gov_evangelical_franchise_fam = {
 				has_valid_civic = civic_exalted_priesthood
 			}
 			AND = {
-				has_authority = auth_corporate_imperial
+				is_imperial_corp = yes
 				has_valid_civic = civic_gospel_of_the_masses
 			}
 		}
@@ -1302,7 +1210,7 @@ lrsk_gov_var_gov_occult_franchise_fam = {
 				has_valid_civic = civic_exalted_priesthood
 			}
 			AND = {
-				has_authority = auth_corporate_imperial
+				is_imperial_corp = yes
 				has_valid_civic = civic_gospel_of_the_masses
 			}
 		}
@@ -1333,7 +1241,7 @@ lrsk_gov_var_gov_innovation_initiative_fam = {
 				has_valid_civic = lrsk_gov_var_civic_enlightened_liberalism
 			}
 			AND = {
-				has_authority = auth_corporate_imperial
+				is_imperial_corp = yes
 				has_valid_civic = lrsk_gov_var_civic_mc_edu_corp
 				has_valid_civic = lrsk_gov_var_civic_mc_sci_mgnt
 			}
@@ -1372,7 +1280,7 @@ lrsk_gov_var_gov_private_military_contractor_fam = {
 				has_valid_civic = civic_citizen_service
 			}
 			AND = {
-				has_authority = auth_corporate_imperial
+				is_imperial_corp = yes
 				AND = {
 					has_valid_civic = civic_private_military_companies
 					has_valid_civic = civic_naval_contractors

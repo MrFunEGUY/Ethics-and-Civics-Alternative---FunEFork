@@ -11,7 +11,7 @@ lrsk_gov_var_gov_pretender_hive = {
 		has_valid_civic = lrsk_gov_var_civic_utilitarian_planning
     	has_ethic = ethic_fanatic_authoritarian
 		has_ethic = ethic_xenophobe
-		has_auth_dictatorial = yes
+		is_dictatorial_authority = yes
 		### ECAF
 		lrsk_gvp_is_active = yes
 		is_socialist = yes
@@ -33,7 +33,7 @@ lrsk_gov_var_gov_pretender_hive_imp = {
    		has_ethic = ethic_fanatic_authoritarian
 		has_ethic = ethic_xenophobe
 		is_socialist = yes
-		has_auth_imperial = yes
+		is_imperial_authority_no_corp = yes
 		### ECAF
 		lrsk_gvp_is_active = yes
 		is_socialist = yes
