@@ -1,0 +1,31 @@
+name = "NAME_Prikkiki-Ti"
+adjective = "NAME_Prikki"
+civics = {
+	civic = civic_fanatic_purifiers
+	civic = civic_cutthroat_politics
+	civic = civic_nationalistic_zeal
+}
+origin = origin_prison_escapees
+species = last_created_species
+ethos = {
+	ethic = ethic_fanatic_xenophobe
+	ethic = ethic_fanatic_militarist
+	ethic = ethic_spiritualist
+}
+flag = {
+	icon = {
+		category = "domination"
+		file = "domination_1.dds"
+	}
+	background = {
+		category = backgrounds
+		file = "v.dds"
+	}
+	colors = {
+		"teal"
+		"orange"
+		"null"
+		"null"
+	}
+}
+type = default
