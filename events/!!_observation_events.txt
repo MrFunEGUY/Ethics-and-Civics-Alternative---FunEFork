@@ -1,0 +1,159 @@
+namespace = observation
+
+# Ethical Changes Gatekeeper
+
+# FUNE todo
+# country_event = {
+# 	id = observation.2029
+# 	hide_window = yes
+# 	is_triggered_only = yes
+
+# 	trigger = {
+# 		any_observed_pre_ftl_within_border = {
+# 			OR = {
+# 				is_under_societal_enlightenment = root
+# 				has_country_flag = espionage_operation_targeted_by@root
+# 			}
+# 		}
+# 	}
+
+# 	immediate = {
+# 		random_observed_pre_ftl_within_border = {
+# 			limit = {
+# 				OR = {
+# 					is_under_societal_enlightenment = root
+# 					has_country_flag = espionage_operation_targeted_by@root
+# 				}
+# 			}
+# 			save_event_target_as = pre_ftl_country
+# 		}
+# 		random_list = {
+# 			1 = {
+# 				modifier = {
+# 					factor = 0.5
+# 					event_target:pre_ftl_country = {
+# 						has_ethic = ethic_fanatic_xenophobe
+# 					}
+# 				}
+# 				country_event = { id = observation.2030 } # Xenophobe to Xenophile
+# 			}
+# 			1 = {
+# 				modifier = {
+# 					factor = 0.5
+# 					event_target:pre_ftl_country = {
+# 						is_xenophobe = yes
+# 					}
+# 				}
+# 				country_event = { id = observation.2031 } # Blossoming Xenophilia
+# 			}
+# 			1 = {
+# 				modifier = {
+# 					factor = 0.5
+# 					event_target:pre_ftl_country = {
+# 						is_militarist = yes
+# 					}
+# 				}
+# 				country_event = { id = observation.2032 } # Blossoming Pacifism
+# 			}
+# 			1 = {
+# 				modifier = {
+# 					factor = 0.5
+# 					event_target:pre_ftl_country = {
+# 						is_pacifist = yes
+# 					}
+# 				}
+# 				country_event = { id = observation.2033 } # Blossoming Militarism
+# 			}
+# 			1 = {
+# 				modifier = {
+# 					factor = 0.5
+# 					event_target:pre_ftl_country = {
+# 						is_egalitarian = yes
+# 					}
+# 				}
+# 				country_event = { id = observation.2034 } # Blossoming Authoritarianism
+# 			}
+# 			1 = {
+# 				modifier = {
+# 					factor = 0.5
+# 					event_target:pre_ftl_country = {
+# 						is_authoritarian = yes
+# 					}
+# 				}
+# 				country_event = { id = observation.2035 } # Blossoming Egalitarianism
+# 			}
+# 			1 = {
+# 				modifier = {
+# 					factor = 0.5
+# 					event_target:pre_ftl_country = {
+# 						is_spiritualist = yes
+# 					}
+# 				}
+# 				country_event = { id = observation.2036 } # Blossoming Materialists
+# 			}
+# 			1 = {
+# 				modifier = {
+# 					factor = 0.5
+# 					event_target:pre_ftl_country = {
+# 						is_materialist = yes
+# 					}
+# 				}
+# 				country_event = { id = observation.2037 } # Blossoming Spiritualist
+# 			}
+# 			1 = {
+# 				modifier = {
+# 					factor = 0.5
+# 					event_target:pre_ftl_country = {
+# 						has_ethic = ethic_fanatic_militarist
+# 					}
+# 				}
+# 				country_event = { id = observation.2038 } # Pacifists Enlighten Militarists
+# 			}
+# 			1 = {
+# 				modifier = {
+# 					factor = 0.5
+# 					event_target:pre_ftl_country = {
+# 						has_ethic = ethic_fanatic_pacifist
+# 					}
+# 				}
+# 				country_event = { id = observation.2039 } # Militarists Enlightening Pacifists
+# 			}
+# 			1 = {
+# 				modifier = {
+# 					factor = 0.5
+# 					event_target:pre_ftl_country = {
+# 						has_ethic = ethic_fanatic_spiritualist
+# 					}
+# 				}
+# 				country_event = { id = observation.2040 } # Materialists Enlightening Spiritualists
+# 			}
+# 			1 = {
+# 				modifier = {
+# 					factor = 0.5
+# 					event_target:pre_ftl_country = {
+# 						has_ethic = ethic_fanatic_materialist
+# 					}
+# 				}
+# 				country_event = { id = observation.2041 } # Spiritualists Enlightening Materialists
+# 			}
+# 			1 = {
+# 				modifier = {
+# 					factor = 0.5
+# 					event_target:pre_ftl_country = {
+# 						has_ethic = ethic_fanatic_authoritarian
+# 					}
+# 				}
+# 				country_event = { id = observation.2042 } # Egalitarians Enlightening Authoritarians
+# 			}
+# 			1 = {
+# 				modifier = {
+# 					factor = 0.5
+# 					event_target:pre_ftl_country = {
+# 						has_ethic = ethic_fanatic_egalitarian
+# 					}
+# 				}
+# 				country_event = { id = observation.2043 } # Authoritarians Enlightening Egalitarians
+# 			}
+# 		}
+# 	}
+# }

@@ -1,0 +1,303 @@
+#################################################
+#												#
+# Machine Age DLC Cyberization Situation Events #
+#												#
+#################################################
+
+namespace = cyber
+
+@cyber_approach_mult = 5
+
+# Fired by: on_cyberization_situation_random_events_list
+situation_event = { # Stage 2 Opportunity
+	id = cyber.220
+	title = "cyber.220.name"
+	desc = "cyber.220.desc"
+	picture = GFX_evt_cyberization_2
+	show_sound = event_administrative_work
+	situation = this
+	is_triggered_only = yes
+
+	trigger = {
+		situation_progress > 250
+	}
+
+	weight_multiplier = {
+		factor = 1
+		modifier = {
+			factor = @cyber_approach_mult
+			current_situation_approach = situation_cyberization_cautious
+		}
+		modifier = {
+			factor = 0
+			has_situation_flag = cyber_220_happened
+		}
+	}
+
+	immediate = {
+		set_situation_flag = situation_cyberization_pause
+		set_situation_flag = cyber_220_happened
+	}
+
+	option = {
+		name = "cyber.220.a"
+		owner = {
+			add_modifier = {
+				modifier = helping_hand
+				days = 720
+			}
+		}
+	}
+	option = {
+		name = "cyber.220.b"
+		owner = {
+			add_modifier = {
+				modifier = armed_forces
+				days = 720
+			}
+		}
+	}
+	option = {
+		name = "cyber.220.c"
+		trigger = {
+			owner = {
+				is_egalitarian = yes
+			}
+		}
+		owner = {
+			add_modifier = {
+				modifier = state_handouts
+				days = 720
+			}
+		}
+	}
+	option = {
+		name = "cyber.220.d"
+		trigger = {
+			owner = {
+				OR = {
+					is_megacorp = yes
+					is_capitalism = yes
+				}
+			}
+		}
+		owner = {
+			add_modifier = {
+				modifier = branching_out
+				days = 720
+			}
+		}
+	}
+	option = {
+		name = "cyber.220.e"
+		trigger = {
+			owner = {
+				OR = {
+					is_socialist = yes
+					has_valid_civic = civic_shared_burden
+					has_valid_civic = civic_worker_coop
+				}
+			}
+		}
+		owner = {
+			add_modifier = {
+				modifier = handy_workers
+				days = 720
+			}
+		}
+	}
+	option = {
+		name = "cyber.220.f"
+		trigger = {
+			owner = {
+				OR = {
+					has_valid_civic = civic_dystopian_society
+					has_valid_civic = civic_aristocratic_elite
+				}
+			}
+		}
+		owner = {
+			add_modifier = {
+				modifier = luxury_limbs
+				days = 720
+			}
+		}
+	}
+
+	after = {
+		remove_situation_flag = situation_cyberization_pause
+	}
+}
+
+# Fired by: on_futureshock_chain_work_family_events_list
+country_event = { # Work-Life Divide
+	id = cyber.615
+	title = "cyber.615.name"
+	desc = cyber.615.desc
+	picture = GFX_evt_cyberization_2
+	show_sound = event_cityscape
+	location = from
+	event_chain = futureshock_chain
+	is_triggered_only = yes
+
+	option = { # Individualist
+		name = cyber.615.a
+		custom_tooltip = cyber.social_consequences.tt
+		hidden_effect = {
+			set_country_flag = cyber_event_worklife
+			change_variable = {
+				which = "cyber_individualist_society"
+				value = 1
+			}
+		}
+		add_modifier = {
+			modifier = cyber_event_worklife_own
+			days = 1800
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				is_egalitarian = yes
+			}
+		}
+	}
+	option = { # Neutral
+		name = cyber.615.b
+		hidden_effect = {
+			set_country_flag = cyber_event_worklife
+		}
+		add_modifier = {
+			modifier = cyber_event_worklife_leave
+			days = 1800
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = { # Collectivist
+		name = cyber.615.c
+		custom_tooltip = cyber.social_consequences.tt
+		hidden_effect = {
+			set_country_flag = cyber_event_worklife
+			change_variable = {
+				which = "cyber_collectivist_society"
+				value = 1
+			}
+		}
+		add_modifier = {
+			modifier = cyber_event_worklife_isolate
+			days = 1800
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				is_capitalism = yes
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			country_event = { id = cyber.1000 days = 180 random = 90 }
+		}
+	}
+}
+
+#Making the Grade - Funding Augmented Education
+# Fired by: on_futureshock_chain_work_family_events_list
+country_event = {
+	id = cyber.855
+	title = cyber.855.name
+	desc = {
+		trigger = { has_country_flag = cyber_control_government }
+		text = cyber.855.gov.desc
+	}
+	desc = {
+		trigger = {
+			OR = {
+				has_country_flag = cyber_control_corporate
+				has_country_flag = cyber_control_independent
+			}
+		 }
+		text = cyber.855.corp.desc
+	}
+	picture = GFX_evt_black_market
+	show_sound = event_cityscape
+	location = capital_scope
+	event_chain = futureshock_chain
+	is_triggered_only = yes
+
+	option = {
+		name = cyber.855.a
+		trigger = { has_country_flag = cyber_control_government }
+		hidden_effect = {
+			country_event = { id = cyber.865 days = 180 random = 90 }
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = cyber.855.b
+		trigger = {
+			OR = {
+				has_country_flag = cyber_control_corporate
+				has_country_flag = cyber_control_independent
+			}
+		}
+		add_modifier = {
+			modifier = cyber_education
+			days = -1
+		}
+		custom_tooltip = cyber_education.tt
+		hidden_effect = {
+			country_event = { id = cyber.860 days = 180 random = 90 }
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				is_socialist = yes
+			}
+		}
+	}
+
+	option = {
+		name = cyber.855.b
+		trigger = { has_country_flag = cyber_control_government }
+		add_modifier = {
+			modifier = cyber_education
+			days = -1
+		}
+		custom_tooltip = cyber_education.tt
+		hidden_effect = {
+			country_event = { id = cyber.860 days = 180 random = 90 }
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				is_socialist = yes
+			}
+		}
+	}
+
+	option = {
+		name = cyber.855.a
+		trigger = {
+			OR = {
+				has_country_flag = cyber_control_corporate
+				has_country_flag = cyber_control_independent
+			}
+		}
+		hidden_effect = {
+			country_event = { id = cyber.865 days = 180 random = 90 }
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

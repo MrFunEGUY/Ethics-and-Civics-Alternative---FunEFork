@@ -366,6 +366,12 @@ is_imperial_corp = { has_authority = auth_corporate_imperial }
 is_dictatorial_dem = { has_authority = auth_dict_democratic }
 is_strict_dem = { has_authority = auth_strict_democratic }
 
+### Merger of Rules uses the below 3
+has_corporate_imperial_auth = { is_imperial_corp = yes }
+has_strict_democratic_auth = { is_strict_dem = yes }
+has_dict_democratic_auth = { is_dictatorial_dem = yes }
+
+
 is_any_democratic_authority = {
 	OR = {
 		has_authority = auth_democratic

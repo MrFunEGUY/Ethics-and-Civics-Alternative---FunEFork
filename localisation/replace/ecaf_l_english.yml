@@ -2216,6 +2216,7 @@
  ecaf_crew_deficit: "$ecaf_crew$ Shortage"
  mod_country_ecaf_crew_produces_mult: "Monthly $ecaf_crew$"
  tb_ecaf_crew_group: "$ecaf_crew$"
+ mod_planet_pops_ecaf_crew_produces_mult: "Pop $ecaf_crew$ Output"
 
  auth_dict_democratic: "Democratic Autocracy"
  auth_dict_democratic_desc: "Democratic Autocracies are ruled by a single, democratically-elected, individual that wields absolute control over the state until their death."
@@ -2957,7 +2958,48 @@
  # Declaration of War
  PR_DOW_PROPOSE_01: "This is a declaration of war! The [From.GetSpeciesNamePlural] have for too long engaged in wanton crimes against nature, upsetting the balance of the galaxy. That stops today."
 
- 
+ ######################
+ #### Misc Events: ####
+ ######################
+ envoy_events.17.desc.socialist:0 "$envoy_events.17.desc.base$ However, [dispute_loser_envoy.GetSheHe] [dispute_loser_envoy.GetWasWere] unable to convince those present of the benefits of a more cooperative outlook, as the workers in more individualist societies failed to see the societal improvements that collective action would let them achieve, instead accusing us of being "dangerously communist".\n\n$envoy_events.17.desc.end$"
+
+ envoy_events.17.desc.capitalist:0 "$envoy_events.17.desc.base$ However, [dispute_loser_envoy.GetSheHe] [dispute_loser_envoy.GetWasWere] unable to convince those present of the benefits of a more competitive outlook, with witnesses increasingly convinced at the alleged evil of the concentration of wealth.\n\n$envoy_events.17.desc.end$"
+
+ envoy_events.18.desc.socialist.base:0 "was able to convince many of the benefits of a more cooperative outlook, where the good of the collective is prioritized and safe from the perils of conceited individualism that many [dispute_loser.GetSpeciesNamePlural] suffer under."
+
+ envoy_events.18.desc.capitalist.base:0 "was able to convince many of the benefits of a more competitive outlook, with a focus on individual freedom that would allow us to escape the dangers of the [dispute_loser.GetAdj] idealism of collectivism."
+
+ envoy_events.19.desc.egalitarian:0 "$envoy_events.18.desc.base$ $envoy_events.18.desc.socialist.base$ $envoy_events.19.desc.end$"
+ envoy_events.19.desc.authoritarian:0 "$envoy_events.18.desc.base$ $envoy_events.18.desc.capitalist.base$ $envoy_events.19.desc.end$"
+
+ federation_socialist_ideology:0 "$federation_militarist_ideology$"
+ federation_socialist_ideology_desc:0 "Our membership in the federation is allowing cooperative values to become increasingly widespread in our nation."
+
+ federation_capitalist_ideology:0 "$federation_militarist_ideology$"
+ federation_capitalist_ideology_desc:0 "Our membership in the federation is allowing competitive values to become increasingly widespread in our nation."
+
+ envoy_events.210.desc.socialist:0 "$envoy_events.210.desc.start$ Over the last few months, [event_envoy.GetSheHe] [event_envoy.GetHasHave] often seemed to admire the [envoy_country.GetAdj] governmental system, complaining frequently at the relative bureaucratic nature of our [Root.GetGovernmentName].\n"If lesser state control is the price of an efficient government, then perhaps that is a price worth paying," [event_envoy.GetSheHe] [event_envoy.GetWasWere] recently heard to say.\n\n$envoy_events.210.desc.end$"
+
+ envoy_events.210.desc.capitalist:0 "$envoy_events.210.desc.start$ Over the last few months, [event_envoy.GetSheHe] [event_envoy.GetHasHave] often seemed to admire the [envoy_country.GetAdj] governmental system, favorably contrasting the communal spirit present there with the focus on individualism within the [Root.GetGovernmentName].\n"I can well see the appeal of nationalizing many industries," [event_envoy.GetSheHe] [event_envoy.GetWasWere] recently heard to say. "In fact, I could scarcely imagine a better way to handle inequality myself."\n\n$envoy_events.210.desc.end$"
+
+ ### These are not changed at all from auth/egal. Need to think about good lines
+ thesis_capital1:0 "democratic action as an allegory of municipal parkland management"
+ thesis_capital2:0 "power structures within woodland canopies"
+ thesis_capital3:0 "voting from the perspective of collaborative architecture"
+ thesis_capital4:0 "totalitarianism as a stellar furnace"
+ thesis_capital5:0 "the voting rights of pebbles in an avalanche"
+ thesis_capital6:0 "emission nebulae as a model for political discourse"
+ thesis_capital7:0 "self-endowment in the context of mass transit"
+ thesis_capital8:0 "leadership contests as played out in particle accelerators"
+
+ hegemony_propaganda_socialist:0 "$hegemony_propaganda_militarist$"
+ hegemony_propaganda_socialist_desc:0 "The Hegemon of our Federation is spreading cooperative values in our nation."
+ hegemony_propaganda_capitalist:0 "$hegemony_propaganda_militarist$"
+ hegemony_propaganda_capitalist_desc:0 "The Hegemon of our Federation is spreading competitive values in our nation."
+
+ paragon.3114.socialist:0 "Teach him the value of community." # Cooperative
+ paragon.3114.capitalist:1 "Foster his competitive spirit." # Competitive
+
  # Pre-FTL Events:
  preftl_operation.1016.social: "Our select group of operatives - all highly skilled mediators - mingled with a diverse set of communities, demonstrating the value of [root.GetAdj] §Ycooperation§! as the solution to many [from.target.GetSpeciesAdj] social ills. For these groups, at least, any individual desire must be weighed against the consequence to the collective."
  preftl_operation.1016.capital: "Our two-pronged approach placed  charismatic and entrepreneurial operatives at carefully selection locations around the planet, while other operatives worked to protect these burgeoning industries from political interference and regulation. These operations have spurred the development of many other industries, and there is now a vibrant §Ycompetitive§! spirit among the [from.target.GetSpecies]."
@@ -3000,3 +3042,4 @@
  civic_tooltip_not_xenophobe: "Is not §YXenophobic§!"
  civic_tooltip_not_xenophile: "Is not §YXenophilic§!"
  NAME_Commonwealth_of_Humanity: "Commonwealth of Humanity" #UNE initializer
+ envoy_events.18.desc.egalitarian.base:0 "was able to convince many of the benefits of a more egalitarian outlook, where all are considered free and equal, safe from the predations of authoritarianism that many [dispute_loser.GetSpeciesNamePlural] suffer under."

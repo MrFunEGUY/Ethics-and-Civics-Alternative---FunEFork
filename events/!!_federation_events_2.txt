@@ -1,0 +1,560 @@
+################################
+#
+# Federations Events
+# Written by Stephen Muray
+#
+###############################
+
+namespace = federations
+
+#Starting event
+country_event = {
+	id = federations2.50
+	title = federations2.50.name
+	desc = federations2.50.desc
+	picture = GFX_evt_diplomatic_visit
+	show_sound = event_default
+
+	is_triggered_only = yes
+
+	trigger = {
+		years_passed > 60
+		exists = federation
+		has_federation = yes
+		is_federation_leader = yes
+		NOT = { has_country_flag = hegemony_joint_operation_monument }
+		federation = {
+			has_federation_type = hegemony_federation
+			federation_level >= 2
+			NOT = { has_federation_flag = had_successful_hegemony_joint_operation }
+			count_member = {
+				count >= 2
+				limit = {
+					NOT = { is_same_value = root }
+					exists = capital_scope.solar_system #just in case...
+					if = {
+						limit = {
+							any_controlled_fleet = {
+								is_ship_class = shipclass_constructor
+							}
+						}
+						any_controlled_fleet = {
+							is_ship_class = shipclass_constructor
+							can_access_system = root.capital_scope.solar_system #never overuse this trigger
+						}
+					}
+					else = {
+						any_controlled_fleet = {
+							NOT = { is_ship_class = shipclass_military_station }
+							NOT = { is_ship_class = shipclass_mining_station }
+							NOT = { is_ship_class = shipclass_research_station }
+							NOT = { is_ship_class = shipclass_observation_station }
+							is_inside_border = owner
+							can_access_system = root.capital_scope.solar_system
+						}
+					}
+				}
+			}
+			NOT = { has_federation_flag = federation_recent_hegemony_joint_operation }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			remove_country_flag = hegemony_ethos_militarist
+			remove_country_flag = hegemony_ethos_pacifist
+			remove_country_flag = hegemony_ethos_xenophobe
+			remove_country_flag = hegemony_ethos_xenophile
+			remove_country_flag = hegemony_ethos_materialist
+			remove_country_flag = hegemony_ethos_spiritualist
+			remove_country_flag = hegemony_ethos_egalitarian
+			remove_country_flag = hegemony_ethos_authoritarian
+			remove_country_flag = hegemony_ethos_socialist
+			remove_country_flag = hegemony_ethos_capitalist
+			federation = {
+				every_member = {
+					remove_country_flag = hegemony_joint_operation_yes
+					remove_country_flag = hegemony_joint_operation_no
+					remove_country_flag = hegemony_joint_operation_invalid_participant
+				}
+				remove_federation_flag = hegemony_joint_operation_complete_success
+				remove_federation_flag = hegemony_joint_operation_complete_failure
+				remove_federation_flag = hegemony_joint_operation_partial_success
+				remove_federation_flag = hegemony_joint_operation_partial_failure
+				set_variable = {
+					which = hegemony_joint_operation_succeed
+					value = 0
+				}
+				set_variable = {
+					which = hegemony_joint_operation_fail
+					value = 0
+				}
+				set_variable = {
+					which = hegemony_joint_operation_yes
+					value = 0
+				}
+				set_variable = {
+					which = hegemony_joint_operation_no
+					value = 0
+				}
+			}
+			#And set them again :D
+			
+			if = {
+				limit = { has_ethic = ethic_fanatic_militarist }
+				set_country_flag = hegemony_ethos_militarist
+			}
+			else_if = {
+				limit = { has_ethic = ethic_fanatic_pacifist }
+				set_country_flag = hegemony_ethos_pacifist
+			}
+			else_if = {
+				limit = { has_ethic = ethic_fanatic_socialism }
+				set_country_flag = hegemony_ethos_socialism
+			}
+			else_if = {
+				limit = { has_ethic = ethic_fanatic_capitalism }
+				set_country_flag = hegemony_ethos_capitalism
+			}
+			else_if = {
+				limit = { has_ethic = ethic_fanatic_xenophobe }
+				set_country_flag = hegemony_ethos_xenophobe
+			}
+			else_if = {
+				limit = { has_ethic = ethic_fanatic_xenophile }
+				set_country_flag = hegemony_ethos_xenophile
+			}
+			else_if = {
+				limit = { has_ethic = ethic_fanatic_materialist }
+				set_country_flag = hegemony_ethos_materialist
+			}
+			else_if = {
+				limit = { has_ethic = ethic_fanatic_spiritualist }
+				set_country_flag = hegemony_ethos_spiritualist
+			}
+			else_if = { #hopefully never
+				limit = { has_ethic = ethic_fanatic_egalitarian }
+				set_country_flag = hegemony_ethos_egalitarian
+			}
+			else = {
+				set_country_flag = hegemony_ethos_authoritarian
+			}
+		}
+		federation = {
+			set_timed_federation_flag = {
+				flag = federation_recent_hegemony_joint_operation
+				days = 18000 #50 years cooldown
+			}
+		}
+	}
+
+	option = {
+		name = federations2.50.A #sounds like a spiffing idea
+		custom_tooltip = federations2.50.A.tooltip
+
+		hidden_effect = {
+			every_federation_ally = {
+				if = {
+					limit = {
+						exists = capital_scope.solar_system
+						if = {
+							limit = {
+								any_controlled_fleet = {
+									is_ship_class = shipclass_constructor
+								}
+							}
+							any_controlled_fleet = {
+								is_ship_class = shipclass_constructor
+								can_access_system = root.capital_scope.solar_system
+							}
+						}
+						else = {
+							any_controlled_fleet = {
+								NOT = { is_ship_class = shipclass_military_station }
+								NOT = { is_ship_class = shipclass_mining_station }
+								NOT = { is_ship_class = shipclass_research_station }
+								NOT = { is_ship_class = shipclass_observation_station }
+								is_inside_border = owner
+								can_access_system = root.capital_scope.solar_system
+							}
+						}
+					}
+					country_event = { id = federations2.51 }
+				}
+				else = {
+					set_country_flag = hegemony_joint_operation_invalid_participant
+				}
+			}
+		}
+
+		hidden_effect = {
+			country_event = { id = federations2.52 days = 90 }
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_flag = hegemony_ethos_authoritarian
+				is_authoritarian = no
+			}
+		}
+	}
+	option = {
+		name = federations2.50.B #actually, let's not
+
+		hidden_effect = {
+			remove_country_flag = hegemony_ethos_militarist
+			remove_country_flag = hegemony_ethos_pacifist
+			remove_country_flag = hegemony_ethos_xenophobe
+			remove_country_flag = hegemony_ethos_xenophile
+			remove_country_flag = hegemony_ethos_materialist
+			remove_country_flag = hegemony_ethos_spiritualist
+			remove_country_flag = hegemony_ethos_egalitarian
+			remove_country_flag = hegemony_ethos_authoritarian
+			remove_country_flag = hegemony_ethos_socialist
+			remove_country_flag = hegemony_ethos_capitalist
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				federation = { federation_cohesion >= 0 }
+				NAND = {
+					has_country_flag = hegemony_ethos_authoritarian
+					is_authoritarian = no
+				}
+			}
+		}
+	}
+}
+
+#The Hegemon has completed the special project on a member (member scope)
+country_event = {
+	id = federations2.58
+	title = federations2.58.name
+	desc = {
+		text = federations2.58.desc
+		trigger = {
+			NOT = {
+				from.owner = {
+					switch = {
+						trigger = has_country_flag
+						hegemony_ethos_militarist = {
+							root = { is_militarist = yes }
+						}
+						hegemony_ethos_pacifist = {
+							root = { is_pacifist = yes }
+						}
+						hegemony_ethos_xenophobe = {
+							root = { is_xenophobe = yes }
+						}
+						hegemony_ethos_xenophile = {
+							root = { is_xenophile = yes }
+						}
+						hegemony_ethos_materialist = {
+							root = { is_materialist = yes }
+						}
+						hegemony_ethos_spiritualist = {
+							root = { is_spiritualist = yes }
+						}
+						hegemony_ethos_egalitarian = {
+							root = { is_egalitarian = yes }
+						}
+						hegemony_ethos_authoritarian = {
+							root = { is_authoritarian = yes }
+						}
+						hegemony_ethos_socialist = {
+							root = { is_socialist = yes }
+						}
+						hegemony_ethos_capitalist = {
+							root = { is_capitalism = yes }
+						}
+					}
+				}
+			}
+		}
+	}
+	desc = {
+		text = federations2.58.desc.good
+		trigger = {
+			from.owner = {
+				switch = {
+					trigger = has_country_flag
+					hegemony_ethos_militarist = {
+						root = { is_militarist = yes }
+					}
+					hegemony_ethos_pacifist = {
+						root = { is_pacifist = yes }
+					}
+					hegemony_ethos_xenophobe = {
+						root = { is_xenophobe = yes }
+					}
+					hegemony_ethos_xenophile = {
+						root = { is_xenophile = yes }
+					}
+					hegemony_ethos_materialist = {
+						root = { is_materialist = yes }
+					}
+					hegemony_ethos_spiritualist = {
+						root = { is_spiritualist = yes }
+					}
+					hegemony_ethos_egalitarian = {
+						root = { is_egalitarian = yes }
+					}
+					hegemony_ethos_authoritarian = {
+						root = { is_authoritarian = yes }
+					}
+					hegemony_ethos_socialist = {
+						root = { is_socialist = yes }
+					}
+					hegemony_ethos_capitalist = {
+						root = { is_capitalism = yes }
+					}
+				}
+			}
+		}
+	}
+	picture = GFX_evt_diplomatic_visit
+	show_sound = event_announcement
+	is_triggered_only = yes
+	location = fromfrom
+
+	option = {
+		name = {
+			text = federations2.58.A.good
+			trigger = {
+				from.owner = {
+					switch = {
+						trigger = has_country_flag
+						hegemony_ethos_militarist = {
+							root = { is_militarist = yes }
+						}
+						hegemony_ethos_pacifist = {
+							root = { is_pacifist = yes }
+						}
+						hegemony_ethos_xenophobe = {
+							root = { is_xenophobe = yes }
+						}
+						hegemony_ethos_xenophile = {
+							root = { is_xenophile = yes }
+						}
+						hegemony_ethos_materialist = {
+							root = { is_materialist = yes }
+						}
+						hegemony_ethos_spiritualist = {
+							root = { is_spiritualist = yes }
+						}
+						hegemony_ethos_egalitarian = {
+							root = { is_egalitarian = yes }
+						}
+						hegemony_ethos_authoritarian = {
+							root = { is_authoritarian = yes }
+						}
+						hegemony_ethos_socialist = {
+							root = { is_socialist = yes }
+						}
+						hegemony_ethos_capitalist = {
+							root = { is_capitalism = yes }
+						}
+					}
+				}
+			}
+		}
+		name = {
+			text = WORRYING
+			trigger = {
+				from.owner = {
+					switch = {
+						trigger = has_country_flag
+						hegemony_ethos_militarist = {
+							root = { is_pacifist = yes }
+						}
+						hegemony_ethos_pacifist = {
+							root = { is_militarist = yes }
+						}
+						hegemony_ethos_xenophobe = {
+							root = { is_xenophile = yes }
+						}
+						hegemony_ethos_xenophile = {
+							root = { is_xenophobe = yes }
+						}
+						hegemony_ethos_materialist = {
+							root = { is_spiritualist = yes }
+						}
+						hegemony_ethos_spiritualist = {
+							root = { is_materialist = yes }
+						}
+						hegemony_ethos_egalitarian = {
+							root = { is_authoritarian = yes }
+						}
+						hegemony_ethos_authoritarian = {
+							root = { is_egalitarian = yes }
+						}
+						hegemony_ethos_socialist = {
+							root = { is_socialist = yes }
+						}
+						hegemony_ethos_capitalist = {
+							root = { is_capitalism = yes }
+						}
+					}
+				}
+			}
+		}
+		name = {
+			text = federations2.58.A.neutral
+			trigger = {
+				from.owner = {
+					switch = {
+						trigger = has_country_flag
+						hegemony_ethos_militarist = {
+							root = {
+								is_pacifist = no
+								is_militarist = no
+							}
+						}
+						hegemony_ethos_pacifist = {
+							root = {
+								is_pacifist = no
+								is_militarist = no
+							}
+						}
+						hegemony_ethos_xenophobe = {
+							root = {
+								is_xenophile = no
+								is_xenophobe = no
+							}
+						}
+						hegemony_ethos_xenophile = {
+							root = {
+								is_xenophile = no
+								is_xenophobe = no
+							}
+						}
+						hegemony_ethos_materialist = {
+							root = {
+								is_spiritualist = no
+								is_materialist = no
+							}
+						}
+						hegemony_ethos_spiritualist = {
+							root = {
+								is_spiritualist = no
+								is_materialist = no
+							}
+						}
+						hegemony_ethos_egalitarian = {
+							root = {
+								is_authoritarian = no
+								is_egalitarian = no
+							}
+						}
+						hegemony_ethos_authoritarian = {
+							root = {
+								is_authoritarian = no
+								is_egalitarian = no
+							}
+						}
+						hegemony_ethos_socialist = {
+							root = {
+								is_socialist = no
+								is_capitalism = no
+							}
+						}
+						hegemony_ethos_capitalist = {
+							root = {
+								is_socialist = no
+								is_capitalism = no
+							}
+						}
+					}
+				}
+			}
+		}
+		from.owner = {
+			switch = {
+				trigger = has_country_flag
+				hegemony_ethos_militarist = {
+					root = {
+						add_modifier = {
+							modifier = hegemony_propaganda_militarist
+							days = 7200
+						}
+					}
+				}
+				hegemony_ethos_pacifist = {
+					root = {
+						add_modifier = {
+							modifier = hegemony_propaganda_pacifist
+							days = 7200
+						}
+					}
+				}
+				hegemony_ethos_xenophobe = {
+					root = {
+						add_modifier = {
+							modifier = hegemony_propaganda_xenophobe
+							days = 7200
+						}
+					}
+				}
+				hegemony_ethos_xenophile = {
+					root = {
+						add_modifier = {
+							modifier = hegemony_propaganda_xenophile
+							days = 7200
+						}
+					}
+				}
+				hegemony_ethos_materialist = {
+					root = {
+						add_modifier = {
+							modifier = hegemony_propaganda_materialist
+							days = 7200
+						}
+					}
+				}
+				hegemony_ethos_spiritualist = {
+					root = {
+						add_modifier = {
+							modifier = hegemony_propaganda_spiritualist
+							days = 7200
+						}
+					}
+				}
+				hegemony_ethos_egalitarian = {
+					root = {
+						add_modifier = {
+							modifier = hegemony_propaganda_egalitarian
+							days = 7200
+						}
+					}
+				}
+				hegemony_ethos_authoritarian = {
+					root = {
+						add_modifier = {
+							modifier = hegemony_propaganda_authoritarian
+							days = 7200
+						}
+					}
+				}
+				hegemony_ethos_socialist = {
+					root = {
+						add_modifier = {
+							modifier = hegemony_propaganda_socialist
+							days = 7200
+						}
+					}
+				}
+				hegemony_ethos_capitalism = {
+					root = {
+						add_modifier = {
+							modifier = hegemony_propaganda_capitalism
+							days = 7200
+						}
+					}
+				}
+			}
+		}
+	}
+}

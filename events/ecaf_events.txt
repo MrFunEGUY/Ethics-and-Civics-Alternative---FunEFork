@@ -108,7 +108,7 @@ country_event = {
 
 	trigger = {
 		exists = ruler
-		has_authority = auth_strict_democratic
+		is_strict_dem = yes
 	}
 
 	immediate = {

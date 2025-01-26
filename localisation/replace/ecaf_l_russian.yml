@@ -2216,6 +2216,7 @@ l_russian:
  ecaf_crew_deficit: "$ecaf_crew$ Shortage"
  mod_country_ecaf_crew_produces_mult: "Monthly $ecaf_crew$"
  tb_ecaf_crew_group: "$ecaf_crew$"
+ mod_planet_pops_ecaf_crew_produces_mult: "Pop $ecaf_crew$ Output"
 
  auth_dict_democratic: "Democratic Autocracy"
  auth_dict_democratic_desc: "Democratic Autocracies are ruled by a single, democratically-elected, individual that wields absolute control over the state until their death."

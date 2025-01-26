@@ -483,10 +483,10 @@ civic_citizen_service = {
 	}
 	modifier = {
 		country_commander_cap_add = 2
-		country_naval_cap_mult = 0.1
+		country_naval_cap_mult = 0.05
 		country_war_exhaustion_mult = -0.15
 		planet_soldiers_unity_produces_add = 2
-		armies_upkeep_mult = 0.1
+		armies_upkeep_mult = 0.25
 	}
 	description = "civic_tooltip_citizen_service_effects"
 }

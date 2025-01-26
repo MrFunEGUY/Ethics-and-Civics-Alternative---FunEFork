@@ -99,3 +99,10 @@ ecaf_crew_deficit = {
   ship_hull_mult = -0.1
   ship_military_energy_upkeep_mult = 0.75
 }
+
+federation_socialist_ideology = {
+	pop_ethic_socialism_attraction_mult = 0.35
+}
+federation_capitalist_ideology = {
+	pop_ethic_capitalism_attraction_mult = 0.35
+}

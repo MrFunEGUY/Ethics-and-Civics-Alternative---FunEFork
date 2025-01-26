@@ -1,0 +1,95 @@
+#################################################
+#												#
+# Machine Age DLC Cyberization Situation Events #
+#												#
+#################################################
+
+namespace = cyber
+
+# DIGITIZATION STAGE 4
+# Fired by: situation stage on_first_enter
+situation_event = { # Stage 4 - Start event
+	id = synth.400
+	title = "synth.400.name"
+	desc = "synth.400.desc"
+	picture = GFX_evt_physics_research
+	show_sound = event_administrative_work
+	situation = this
+	is_triggered_only = yes
+
+	immediate = {
+		set_situation_flag = situation_digitization_pause
+	}
+
+	option = {
+		name = "synth.400.a"
+		trigger = {
+			owner = {
+				is_socialist = yes
+			}
+		}
+		custom_tooltip = "synth.400.pop.tt"
+		owner = {
+			remove_country_flag = synth_assembly_stopped
+			remove_country_flag = identity_designer_converter
+			give_technology = { tech = tech_identity_copy }
+			set_country_flag = edict_optimized_identity_creation
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier2unityreward
+				min = @tier2unitymin
+				max = @tier2unitymax
+			}
+		}
+		hidden_effect = {
+			situation_event = { id = synth.405 days = 180 random = 30 }
+		}
+	}
+	option = {
+		name = "synth.400.b"
+		trigger = {
+			owner = {
+				is_capitalism = yes
+			}
+		}
+		custom_tooltip = "synth.400.pop.tt"
+		owner = {
+			remove_country_flag = synth_assembly_stopped
+			remove_country_flag = identity_designer_converter
+			give_technology = { tech = tech_identity_copy }
+			set_country_flag = edict_optimized_identity_creation
+			add_monthly_resource_mult = {
+				resource = energy
+				value = @tier2materialreward
+				min = @tier2materialmin
+				max = @tier2materialmax
+			}
+		}
+		hidden_effect = {
+			situation_event = { id = synth.405 days = 180 random = 30 }
+		}
+	}
+	option = {
+		name = UNDERSTOOD
+		trigger = {
+			owner = {
+				is_egalitarian = no
+				is_megacorp = no
+			}
+		}
+		custom_tooltip = "synth.400.pop.tt"
+		owner = {
+			remove_country_flag = synth_assembly_stopped
+			remove_country_flag = identity_designer_converter
+			give_technology = { tech = tech_identity_copy }
+			set_country_flag = edict_optimized_identity_creation
+		}
+		hidden_effect = {
+			situation_event = { id = synth.405 days = 180 random = 30 }
+		}
+	}
+
+	after = {
+		remove_situation_flag = situation_digitization_pause
+	}
+}

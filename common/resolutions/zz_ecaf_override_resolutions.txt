@@ -4224,7 +4224,7 @@ resolution_greatergood_universal_prosperity_mandate = {
 		}
 
 		modifier = {
-			factor = 0.5
+			factor = 0.1
 			is_capitalism = yes # ECAF
 			desc = ethic_capitalism
 		}
