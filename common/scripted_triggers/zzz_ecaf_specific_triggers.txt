@@ -292,6 +292,8 @@ is_socialist_gov =  {
 		# Government Variety Pack
 		lrsk_has_gvp_soc_gov = yes
 		lrsk_has_gvp_hive_gov = yes
+		has_government = lrsk_gov_var_gov_syndicalist_congress
+		has_government = lrsk_gov_var_gov_syndicalist_conference
 	}
 }
 

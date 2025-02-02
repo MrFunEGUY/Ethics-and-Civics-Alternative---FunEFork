@@ -3217,6 +3217,7 @@ slavery = {
 			OR = {
 				is_authoritarian = yes
 				is_xenophobe = yes
+				has_ethic = ethic_fanatic_capitalism
 			}
 		}
 

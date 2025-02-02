@@ -250,9 +250,7 @@ gov_timocracy = {
 	ruler_title_female = RT_ARCHON
 	possible = {
 		has_ethic = ethic_fanatic_capitalism
-		NOT = {
-			has_ethic = ethic_fanatic_egalitarian
-		}
+		NOT = { has_ethic = ethic_fanatic_egalitarian }
 		is_any_democratic_authority = yes
 	}
 	should_force_rename = yes
@@ -327,8 +325,6 @@ gov_communist_dictatorship = {
 gov_enlighted_socialism = {
 	ruler_title = RT_SAGE
 	ruler_title_female = RT_SAGE
-	heir_title = HT_PROSELYTE
-	heir_title_female = HT_PROSELYTE
 	should_force_rename = yes
 	possible = {
 		is_any_dictatorial_authority = yes
@@ -350,7 +346,7 @@ gov_national_socialism = {
 	possible = {
 		has_ethic = ethic_fanatic_authoritarian
 		has_ethic = ethic_capitalism
-		is_dictatorial_no_dem = yesority = auth_dictatorial
+		is_dictatorial_no_dem = yes
 		has_valid_civic = civic_police_state
 		is_xenophile = no
 		is_pacifist = no
@@ -392,9 +388,7 @@ gov_bur_collectivism = {
 	possible = {
 		is_oligarchic_authority_no_merc = yes
 		has_valid_civic = civic_byzantine_bureaucracy
-		NOT = {
-			has_ethic = ethic_egalitarian
-		}
+		is_egalitarian = no
 		is_socialist = yes
 	}
 	weight = {

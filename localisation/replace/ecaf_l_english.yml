@@ -2687,6 +2687,11 @@
 
  lrsk_gov_var_gov_pretender_hive_imp_desc:0 "$lrsk_gov_var_gov_pretender_hive_desc$$isocracy_gov_loc$"
 
+ lrsk_gov_var_gov_syndicalist_conference_desc:0 "This government is theoretically no government at all, as all the functions of the state have been subsumed into a consortium of decentralized worker cooperatives and labor unions. Each such syndicate elects an officer to a steering committee that executes policy for the common good.$isocracy_gov_loc$"
+
+ lrsk_gov_var_gov_syndicalist_congress_desc:0 "This government is theoretically no government at all, as all the functions of the state have been subsumed into a consortium of decentralized worker cooperatives and labor unions. Elected delegates of all these syndicates meet regularly to make collective decisions.$isocracy_gov_loc$"
+
+
  ############################
  ### Diplomat Governments ###
  ############################
