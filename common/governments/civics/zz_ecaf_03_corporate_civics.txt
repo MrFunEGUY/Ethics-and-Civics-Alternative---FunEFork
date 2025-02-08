@@ -1371,6 +1371,7 @@ civic_worker_coop = {
 		}
 	}
 	modifier = {
+		election_term_years_mult = -0.50
 		pop_demotion_time_mult = -0.66
 		pop_ethic_egalitarian_attraction_mult = 0.5
 	}

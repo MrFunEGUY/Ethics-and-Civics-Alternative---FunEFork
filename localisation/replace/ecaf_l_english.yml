@@ -56,6 +56,13 @@
  enlistment_draft: "Wartime Draft"
  enlistment_draft_desc: "The existential threat posed by the ongoing war necessitates a vast expansion of our armed forces.\n"
 
+ policy_election_term_length: "Term Length"
+ policy_election_term_length_desc: "Determines how often we hold elections.\n"
+
+
+ policy_election_term_limits: "Term Limits"
+ policy_election_term_limits_desc: "Determines how many terms our [root.owner.GetRulerTitle] is allowed to serve.\n"
+
  01_INSULT_PROPOSE_IND_COL: "Your brutal, tyrannical regime will eventually fall, and there will be a reckoning."
  02_INSULT_PROPOSE_COL_IND: "So who is it that rules your amusing little star nation today? What a quaint notion, to 'vote' someone into power! It will inevitably lead to your collapse, of course."
  02_INSULT_PROPOSE_IND_COL: "Have you even considered the notion of letting your citizens think for themselves? If you are frightened that it would lead to the end of the [Root.GetName]... you are right."

@@ -168,3 +168,118 @@ leader_trait_expertise_good_trading_3 = {
 	leader_class = { scientist }
 	ai_weight = 100
 }
+
+leader_trait_term = {
+	# This is needed due to the technocracy effects
+	force_councilor_trait = yes
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon_society
+		CLASS = scientist
+		ICON = "GFX_leader_trait_expertise_good_trading"
+		RARITY = common
+		COUNCIL = yes
+		TIER = 1
+	}
+	councilor_modifier = {
+		category_good_trading_research_speed_mult = 0.15
+		category_good_trading_draw_chance_mult = 0.25
+	}
+	leader_potential_add = {
+		check_variable = { which = num_terms value = 1 }
+	}
+	leader_class = { scientist }
+	ai_weight = 100
+	selectable_weight = {
+		inline_script = paragon/subclass_free_trait_weight
+		inline_script = paragon/council_weight_mult
+	}
+}
+
+leader_trait_term_2 = {
+	replace_traits = { "leader_trait_term" }
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon_society
+		CLASS = scientist
+		ICON = "GFX_leader_trait_expertise_good_trading"
+		RARITY = common
+		COUNCIL = yes
+		TIER = 2
+	}
+	councilor_modifier = {
+		category_good_trading_research_speed_mult = 0.2
+		category_good_trading_draw_chance_mult = 0.35
+	}
+	leader_potential_add = {
+		check_variable = { which = num_terms value = 2 }
+	}
+	leader_class = { scientist }
+	ai_weight = 100
+}
+
+leader_trait_term_3 = {
+	replace_traits = { "leader_trait_term_2" }
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon_society
+		CLASS = scientist
+		ICON = "GFX_leader_trait_expertise_good_trading"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 3
+	}
+	councilor_modifier = {
+		category_good_trading_research_speed_mult = 0.35
+		category_good_trading_draw_chance_mult = 0.75
+	}
+	leader_potential_add = {
+		check_variable = { which = num_terms value = 3 }
+	}
+	leader_class = { scientist }
+	ai_weight = 100
+}
+
+leader_trait_term_4 = {
+	replace_traits = { "leader_trait_term_3" }
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon_society
+		CLASS = scientist
+		ICON = "GFX_leader_trait_expertise_good_trading"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 3
+	}
+	councilor_modifier = {
+		category_good_trading_research_speed_mult = 0.35
+		category_good_trading_draw_chance_mult = 0.75
+	}
+	leader_potential_add = {
+		check_variable = { which = num_terms value = 4 }
+	}
+	leader_class = { scientist }
+	ai_weight = 100
+}
+
+leader_trait_term_5 = {
+	replace_traits = { "leader_trait_term_4" }
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon_society
+		CLASS = scientist
+		ICON = "GFX_leader_trait_expertise_good_trading"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 3
+	}
+	councilor_modifier = {
+		category_good_trading_research_speed_mult = 0.35
+		category_good_trading_draw_chance_mult = 0.75
+	}
+	leader_potential_add = {
+		check_variable = { which = num_terms value > 4 }
+	}
+	leader_class = { scientist }
+	ai_weight = 100
+}

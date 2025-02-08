@@ -54,7 +54,7 @@ auth_democratic = {
 	re_election_allowed = yes
 	election_type = democratic
 
-	uses_mandates = yes
+	# uses_mandates = yes
 
 	color = { 81 140 44 255 }
 	
@@ -778,7 +778,7 @@ auth_strict_democratic = {
 	
 	can_reform = yes
 
-	uses_mandates = yes
+	# uses_mandates = yes
 
 	ruler_council_position = councilor_ruler_strict_democratic
 
@@ -912,7 +912,7 @@ auth_strict_democratic = {
 auth_dict_democratic = {
 	election_type = democratic
 	can_have_emergency_elections = yes
-	uses_mandates = yes
+	# uses_mandates = no
 	has_agendas = yes
 
 	ruler_council_position = councilor_ruler_dict_democratic

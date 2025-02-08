@@ -14,10 +14,6 @@ holding_garrison = {
 		upkeep = {
 			energy = @b1_upkeep
 		}
-	}
-
-	overlord_resources = {
-		category = planet_holdings
 		produces = {
 			trigger = { overlord_has_num_armies_on_planet = { NUM = 1 } }
 			ecaf_crew = @base_fortress_building_crew_production

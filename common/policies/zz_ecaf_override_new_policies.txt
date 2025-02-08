@@ -1832,6 +1832,146 @@ trade_policy = {
 }
 
 ### ECAF
+election_term_length = {
+	potential = {
+		OR = {
+			is_worker_coop_empire = yes
+			AND = {
+				is_dict_dem = no
+				is_democratic_authority = yes
+			}
+		}
+	}
+	option = {
+		name = "Default Terms"
+		valid = {
+		}
+		policy_flags = {
+			default_term
+			ten_year_term
+		}
+		modifier = {
+		}
+	}
+	option = {
+		name = "Shortened Terms"
+		valid = {
+			NOT = { has_valid_civic = civic_shadow_council }
+		}
+		policy_flags = {
+			five_year_term
+		}
+		modifier = {
+			election_term_years_add = -5
+		}
+	}
+	option = {
+		name = "Extended Terms"
+		valid = {
+		}
+		policy_flags = {
+			fifteen_year_term
+		}
+		modifier = {
+			election_term_years_add = 5
+		}
+	}
+	option = {
+		name = "Doubled Terms"
+		valid = {
+		}
+		policy_flags = {
+			twenty_year_term
+		}
+		modifier = {
+			election_term_years_add = 10
+		}
+	}
+}
+
+election_term_limits = {
+	potential = {
+		OR = {
+			is_worker_coop_empire = yes
+			AND = {
+				is_dict_dem = no
+				is_democratic_authority = yes
+			}
+		}
+	}
+	option = {
+		name = "No Term Limits"
+		valid = {
+		}
+		policy_flags = {
+			default_term_limit
+			no_term_limit
+		}
+		modifier = {
+		}
+		on_enabled = { hidden_effect = { set_variable = { which = max_term_limit value = 1000 } } }
+	}
+	option = {
+		name = "1 Term"
+		valid = { NOT = { has_valid_civic = civic_shadow_council } }
+		policy_flags = {
+			one_term_limit
+		}
+		modifier = {
+			planet_stability_add = 3
+		}
+		on_enabled = { hidden_effect = { set_variable = { which = max_term_limit value = 1 } } }
+	}
+	option = {
+		name = "2 Terms"
+		valid = { NOT = { has_valid_civic = civic_shadow_council } }
+		policy_flags = {
+			two_term_limit
+		}
+		modifier = {
+			planet_stability_add = 2.5
+		}
+		on_enabled = { hidden_effect = { set_variable = { which = max_term_limit value = 2 } } }
+	}
+	option = {
+		name = "3 Terms"
+		valid = {
+		}
+		policy_flags = {
+			three_term_limit
+		}
+		modifier = {
+			planet_stability_add = 2
+		}
+		on_enabled = { hidden_effect = { set_variable = { which = max_term_limit value = 3 } } }
+	}
+	option = {
+		name = "4 Terms"
+		valid = {
+		}
+		policy_flags = {
+			four_term_limit
+		}
+		modifier = {
+			planet_stability_add = 1.5
+		}
+		on_enabled = { hidden_effect = { set_variable = { which = max_term_limit value = 4 } } }
+	}
+	option = {
+		name = "5 Terms"
+		valid = {
+		}
+		policy_flags = {
+			five_term_limit
+		}
+		modifier = {
+			planet_stability_add = 1
+		}
+		on_enabled = { hidden_effect = { set_variable = { which = max_term_limit value = 5 } } }
+	}
+}
+
+
 enlistment_policy = {
 	potential = {
 		is_country_type = default

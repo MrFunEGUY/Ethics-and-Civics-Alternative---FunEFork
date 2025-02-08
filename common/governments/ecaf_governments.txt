@@ -616,7 +616,7 @@ gov_democratic_dictatorship = {
 	ruler_title_female = RT_EXECUTOR
 	
 	possible = {
-		is_dictatorial_dem = yes
+		is_dict_dem = yes
 	}
 
 	weight = {

@@ -223,3 +223,169 @@ can_fill_ruler_job = {
 		}
 	}
 }
+
+# this = leader
+# from = country scope
+can_leader_be_ruler = {
+	NOT = { leader_class = envoy }
+	## Term Limits
+	NOT = { has_leader_flag = term_limited }
+	if = {
+		limit = {
+			from = {
+				OR = {
+					is_dict_dem = yes
+					is_worker_coop_empire = yes
+					is_democratic_authority = yes
+				}
+			}
+		}
+		OR = {
+			NOT = { is_variable_set = num_terms }
+			check_variable = { which = num_terms value < from.max_term_limit }
+		}
+	}
+	## Battle thralls can't be rulers
+	NOT = { has_slavery_type = { country = from type = slavery_military } }
+}
+
+# this = leader scope
+leader_election_weight = {
+	base = 0
+
+	# Multiply by Faction support.
+	modifier = {
+		custom_tooltip = {
+			success_text = election_weight.faction_support
+			owner = { has_country_flag = first_faction }
+		}
+		add = value:leader_faction_support_election_bonus
+	}
+
+	# If no Factions formed, fake faction support based on if it's an Empire ethic or not.
+	modifier = {
+		custom_tooltip = {
+			success_text = election_weight.no_faction_empire_ethic
+			NOT = { owner = { has_country_flag = first_faction } }
+			leader_has_empire_ethic = yes
+		}
+		add = 50
+	}
+	modifier = {
+		custom_tooltip = {
+			success_text = election_weight.no_faction_not_empire_ethic
+			NOT = { owner = { has_country_flag = first_faction } }
+			leader_has_empire_ethic = no
+		}
+		add = 25
+	}
+
+	# Not changing Ruler should be slightly preferred.
+	modifier = {
+		is_ruler = yes
+		mult = 1.1
+	}
+
+	# Bonus if Leader was Councilor when election started. Or if no Election, is a Councilor now.
+	modifier = {
+		custom_tooltip = {
+			success_text = election_weight.iswas_councilor
+			if = {
+				limit = {
+					owner = { has_country_flag = election_under_way }
+				}
+				has_leader_flag = councilor_at_election_start
+			}
+			else = {
+				is_councilor = yes
+				is_ruler = no
+			}
+		}
+		mult = 1.05
+	}
+
+	# Governments (based on Ethics and Civics) might prefer certain Leader classes. Hide if +/- 0%.
+	modifier = {
+		custom_tooltip = {
+			success_text = election_weight.leader_class_government_approves
+			check_variable_arithmetic = {
+				which = value:leader_class_government_match_bonus_mult
+				value != 1
+			}
+		}
+		mult = value:leader_class_government_match_bonus_mult
+	}
+
+	# Extra bonus for Councilor Subclass (which is a Trait).
+	modifier = {
+		custom_tooltip = {
+			success_text = election_weight.leader_councilor_subclass
+			has_council_subclass = yes
+		}
+		mult = 1.2
+	}
+
+	# Penalty for Non-Councilor Subclass (which is a Trait).
+	modifier = {
+		custom_tooltip = {
+			success_text = election_weight.leader_councilor_subclass
+			has_non_council_subclass = yes
+		}
+		mult = 0.8
+	}
+
+	# Bonus/penalty from Traits.
+	modifier = {
+		custom_tooltip = {
+			success_text = election_weight.leader_traits
+			check_variable_arithmetic = {
+				which = value:leader_traits_election_bonus_mult
+				value != 1
+			}
+		}
+		mult = value:leader_traits_election_bonus_mult
+	}
+
+	# Bonus from Skill level.
+	modifier = {
+		custom_tooltip = {
+			success_text = election_weight.leader_skill
+			check_variable_arithmetic = {
+				which = value:leader_skill_election_bonus_mult
+				value != 1
+			}
+		}
+		mult = value:leader_skill_election_bonus_mult
+	}
+
+	# Penalty from old Age, unless already ruler or immortal.
+	modifier = {
+		custom_tooltip = {
+			success_text = election_weight.leader_age
+			is_immortal = no
+			is_ruler = no
+			check_variable_arithmetic = {
+				which = value:leader_age_percentage_of_lifespan
+				value > 0.9
+			}
+		}
+		mult = 0.5
+	}
+
+	# Penalty from Term limit
+	modifier = {
+		custom_tooltip = {
+			success_text = "Term Limited"
+			owner = {
+				OR = {
+					is_dict_dem = yes
+					is_worker_coop_empire = yes
+					is_democratic_authority = yes
+				}
+			}
+			is_variable_set = num_terms
+			check_variable = { which = num_terms value >= from.max_term_limit }
+		}
+		mult = 0
+	}
+}
