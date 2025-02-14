@@ -533,14 +533,10 @@ gov_soviet_republic = {
 	should_force_rename = yes
 	possible = {
 		has_valid_civic = civic_shared_burden
-		inline_script = governments/conditions/auth_democratic
+		is_any_democratic_authority = yes
 	}
 	weight = {
-		base = 1000
-		modifier = {
-			factor = 100
-			has_valid_civic = civic_shared_burden
-		}
+		base = 10000
 	}
 }
 
@@ -554,12 +550,12 @@ gov_imperial_socialism = {
 	should_force_rename = yes
 	possible = {
 		is_socialist = yes
-		is_imperial_authority_no_corp = yes
+		is_imperial_authority = yes
 	}
 	weight = {
 		base = 250
 		modifier = {
-			factor = 10
+			factor = 2
 			has_ethic = ethic_fanatic_socialism
 		}
 	}

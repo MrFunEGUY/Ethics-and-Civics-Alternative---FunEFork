@@ -91,6 +91,7 @@ is_bureaucracy = {
 	owner = {
 		has_ethic = ethic_fanatic_pacifist
 		is_pacifist_gov = yes
+		is_cosmic_choir = no
 	}
 }
 
@@ -118,6 +119,8 @@ is_diplocracy = {
 	owner = {
 		has_ethic = ethic_fanatic_xenophile
 		is_xenophilic_gov = yes
+		is_cosmic_choir = no
+
 	}
 }
 
@@ -339,6 +342,16 @@ is_aristocratic_gov =  {
 		has_government = lrsk_gov_var_gov_insurrectionary_lineage
 		has_government = lrsk_gov_var_gov_solar_monarchy
 		has_government = lrsk_gov_var_gov_galactic_imperium
+	}
+}
+
+
+##############
+
+is_cosmic_choir = {
+	OR = {
+		has_government = lrsk_gov_var_gov_cosmic_choir
+		has_government = lrsk_gov_var_gov_cosmic_choir_olig
 	}
 }
 

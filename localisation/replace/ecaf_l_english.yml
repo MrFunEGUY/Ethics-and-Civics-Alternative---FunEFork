@@ -846,7 +846,7 @@
  ISOLATIONIST_WAR_TRADITION_DESC: "Active §YIsolationist§! government civic will please the [Root.GetName]."
  ISOLATIONIST_WAR_TRADITION: "Developed Isolationism"
  job_commandant_desc: "An experienced military chief, either active or honorably discharged."
- job_commandant_effect_desc: "£job_commandant£ $job_commandant_plural$ increase an Empire's £navy_size£ §YNaval Capacity§!, spawn £army_power£ §YDefense Armies§!, train £ecaf_crew£ §Y$ecaf_crew$§!, increase planetary £stability£ §YStability§!, and reduce damage from £mod_planet_orbital_bombardment_damage£ §YBombardment§!"
+ job_commandant_effect_desc: "£job_commandant£ $job_commandant_plural$ increase an Empire's £navy_size£ §YNaval Capacity§!, spawn £army_power£ §YDefense Armies§!, train £ecaf_crew£ §Y$ecaf_crew$§!, slightly increase planetary £stability£ §YStability§!, and reduce damage from £mod_planet_orbital_bombardment_damage£ §YBombardment§!"
  job_commandant_plural: "Commandants"
  job_commandant: "Commandant"
 
@@ -2639,7 +2639,7 @@
  ### Commissar Governments ###
  ############################
 
- gov_strasserism_desc: "A form of government ideology, based on strong nationalistic ideals in culture and politics, and egalitarian ideals in the sphere of economy.$isocracy_gov_loc$"
+ gov_strasserism_desc: "An ideological government based on strong nationalistic ideals in culture and politics, with egalitarian ideals in the sphere of economy.$isocracy_gov_loc$"
 
  gov_soviet_republic_desc: "A type of republic ruled by directly elected 'Soviets' - workers councils, which are directly responsible to their electors. There is no separation of powers, and elected delegates wield executive, legislative, and judicial power.$isocracy_gov_loc$"
 
@@ -2760,7 +2760,7 @@
 
  lrsk_gov_var_gov_crusading_company_desc: "An odd amalgamation of mercenary company and megachurch, this corporation believes in God, gold, and glory, not necessarily in that order. To them, nothing pleases the Divine more than enlightening others to their gospel of prosperity... and if some potential customer-congregants prove stubborn, then their missionaries may simply use some paradigm-breaking aggressive marketing tactics.$stratocracy_theocracy_plutocracy_gov_loc$"
 
- lrsk_gov_var_gov_cosmic_choir_desc: "This government is devoted to the tranquil contemplation of the mysteries of the universe, exploration of altered states of mind, contact with otherworldly beings, and amateur pharmacology.$bureaucracy_theocracy_diplocracy_gov_loc$"
+ lrsk_gov_var_gov_cosmic_choir_desc: "This government is devoted to the tranquil contemplation of the mysteries of the universe, exploration of altered states of mind, contact with otherworldly beings, and amateur pharmacology.$theocracy_gov_loc$"
 
  lrsk_gov_var_gov_galactic_cartel_desc: "This government is a staggeringly ambitious business with designs on total galactic monopoly. Its selection is unbelievably diverse, its stock value soaring, its employees productive and courteous. Any who are not yet loyal customers feel an emptiness they don't yet know how to fill, or so the stockholders believe.$theocracy_stratocracy_gov_loc$"
 

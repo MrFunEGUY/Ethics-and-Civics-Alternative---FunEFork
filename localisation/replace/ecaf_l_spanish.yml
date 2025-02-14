@@ -846,7 +846,7 @@ l_spanish:
  ISOLATIONIST_WAR_TRADITION_DESC: "Active §YIsolationist§! government civic will please the [Root.GetName]."
  ISOLATIONIST_WAR_TRADITION: "Developed Isolationism"
  job_commandant_desc: "An experienced military chief, either active or honorably discharged."
- job_commandant_effect_desc: "£job_commandant£ $job_commandant_plural$ increase an Empire's £navy_size£ §YNaval Capacity§!, spawn £army_power£ §YDefense Armies§!, train £ecaf_crew£ §Y$ecaf_crew$§!, increase planetary £stability£ §YStability§!, and reduce damage from £mod_planet_orbital_bombardment_damage£ §YBombardment§!"
+ job_commandant_effect_desc: "£job_commandant£ $job_commandant_plural$ increase an Empire's £navy_size£ §YNaval Capacity§!, spawn £army_power£ §YDefense Armies§!, train £ecaf_crew£ §Y$ecaf_crew$§!, slightly increase planetary £stability£ §YStability§!, and reduce damage from £mod_planet_orbital_bombardment_damage£ §YBombardment§!"
  job_commandant_plural: "Commandants"
  job_commandant: "Commandant"
 
@@ -2639,7 +2639,7 @@ l_spanish:
  ### Commissar Governments ###
  ############################
 
- gov_strasserism_desc: "A form of government ideology, based on strong nationalistic ideals in culture and politics, and egalitarian ideals in the sphere of economy.$isocracy_gov_loc$"
+ gov_strasserism_desc: "An ideological government based on strong nationalistic ideals in culture and politics, with egalitarian ideals in the sphere of economy.$isocracy_gov_loc$"
 
  gov_soviet_republic_desc: "A type of republic ruled by directly elected 'Soviets' - workers councils, which are directly responsible to their electors. There is no separation of powers, and elected delegates wield executive, legislative, and judicial power.$isocracy_gov_loc$"
 

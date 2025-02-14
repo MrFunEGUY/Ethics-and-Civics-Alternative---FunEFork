@@ -243,14 +243,6 @@ gladiator = {
 	country_modifier = {
 		country_naval_cap_add = 1
 	}
-	triggered_planet_modifier = {
-		potential = {
-			has_trait = trait_repugnant
-		}
-		modifier = {
-			planet_amenities_add = -2
-		}
-	}
 	weight = {
 		weight = @worker_job_weight
 		modifier = {
@@ -350,14 +342,6 @@ templar = {
 		}
 		modifier = {
 			planet_amenities_add = 1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			has_trait = trait_repugnant
-		}
-		modifier = {
-			planet_amenities_add = -1
 		}
 	}
 	weight = {
@@ -975,14 +959,6 @@ druid = {
 			planet_amenities_add = 1
 		}
 	}
-	triggered_planet_modifier = {
-		potential = {
-			has_trait = trait_repugnant
-		}
-		modifier = {
-			planet_amenities_add = -1
-		}
-	}
 	weight = {
 		weight = @worker_job_weight
 		modifier = {
@@ -1257,14 +1233,6 @@ techno_priest = {
 			planet_amenities_add = 1
 		}
 	}
-	triggered_planet_modifier = {
-		potential = {
-			has_trait = trait_repugnant
-		}
-		modifier = {
-			planet_amenities_add = -1
-		}
-	}
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
@@ -1342,19 +1310,11 @@ commandant = {
 		category = planet_politicians
 	}
 	planet_modifier = {
-		planet_orbital_bombardment_damage = -0.15
-		planet_stability_add = 1
+		planet_orbital_bombardment_damage = -0.05
+		planet_stability_add = 0.1
 	}
 	pop_modifier = {
-		pop_defense_armies_add = 2
-	}
-	triggered_planet_modifier = {
-		potential = {
-			has_trait = trait_repugnant
-		}
-		modifier = {
-			planet_amenities_add = -1
-		}
+		pop_defense_armies_add = 1
 	}
 	weight = {
 		weight = @ruler_job_weight
@@ -1598,14 +1558,6 @@ commissar = {
 		pop_government_ethic_attraction = 0.05
 		pop_ethics_shift_speed_mult = 0.1
 	}
-	triggered_planet_modifier = {
-		potential = {
-			has_trait = trait_repugnant
-		}
-		modifier = {
-			planet_amenities_add = -1
-		}
-	}
 	weight = {
 		weight = @ruler_job_weight
 		modifier = {
@@ -1651,7 +1603,7 @@ ambassador = {
 	}
 	possible_precalc = can_fill_ruler_job
 	country_modifier = {
-		country_trust_cap_add = 5
+		country_trust_cap_add = 2.5
 		diplo_weight_pops_mult = 0.0025
 	}
 	resources = {
