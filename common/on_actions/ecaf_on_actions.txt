@@ -38,20 +38,6 @@ on_election_started = {
 	}
 }
 
-on_game_start_country = {
-	events = {
-		ecaf_main_event.2010			# To get ride of mandate for Dem Autocracies.
-	}
-}
-
-# Called when an election ends
-# scope: country
-on_election_ended = {
-	events = {
-		ecaf_main_event.2010            # Clear Mandate
-	}
-}
-
 on_uplift_completion = {
 	events = {
 		unity_patrons.1
