@@ -2643,7 +2643,7 @@ l_russian:
 
  gov_soviet_republic_desc: "A type of republic ruled by directly elected 'Soviets' - workers councils, which are directly responsible to their electors. There is no separation of powers, and elected delegates wield executive, legislative, and judicial power.$isocracy_gov_loc$"
 
- gov_imperial_socialism_desc: "A political system where the monarchy has nationalized the vast majority of industries. The elimination of private industry has allowed for a unique wealth redistribution scheme, whereby the wealth is relatively evenly distributed between the workers, the monarchy, and the state.$isocracy_gov_loc$"
+ gov_imperial_socialism_desc: "A political system where the monarchy has nationalized the vast majority of industries. The elimination of private industry has allowed for a unique wealth redistribution scheme, whereby the wealth is relatively evenly distributed between the workers, the royal dynasty, and the state.$isocracy_gov_loc$"
 
  gov_anarchy_communism_desc: "An extreme form of communist dictatorship, characterized with nationalization of all industries and the introduction of strict centralized management, state control of foreign trade, strict discipline for workers, with strikes forbidden and obligatory labor duty by non-working classes.$isocracy_gov_loc$"
 
