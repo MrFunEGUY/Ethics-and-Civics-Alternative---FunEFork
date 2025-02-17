@@ -1365,7 +1365,7 @@ civic_divine_council = {
 	}
 	description = "civic_tooltip_divine_council_effects"
 	modifier = {
-		planet_stability_add = 7.5
+		planet_stability_add = 5
 		job_high_priest_per_pop = 0.03
 		country_physics_tech_research_speed = -0.05
 	}

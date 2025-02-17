@@ -2135,39 +2135,33 @@ slavery_percent = {
 		}
 	}
 	option = {
-		name = policy_slavery_60
+		name = policy_slavery_10
 		valid = {
-			has_valid_civic = civic_slaving_despots
+			OR = {
+				has_valid_civic = civic_slaver_guilds
+				has_valid_civic = civic_indentured_assets
+			}
 		}
 		modifier = {
-			country_pop_enslaved_mult = 0.6
+			country_pop_enslaved_mult = 0.1
 		}
 		ai_weight = {
-			factor = 300
+			factor = 10
 		}
 	}
 	option = {
-		name = policy_slavery_50
+		name = policy_slavery_20
 		valid = {
-			has_valid_civic = civic_slaving_despots
+			OR = {
+				has_valid_civic = civic_slaver_guilds
+				has_valid_civic = civic_indentured_assets
+			}
 		}
 		modifier = {
-			country_pop_enslaved_mult = 0.5
+			country_pop_enslaved_mult = 0.2
 		}
 		ai_weight = {
-			factor = 350
-		}
-	}
-	option = {
-		name = policy_slavery_40
-		valid = {
-			has_valid_civic = civic_slaving_despots
-		}
-		modifier = {
-			country_pop_enslaved_mult = 0.4
-		}
-		ai_weight = {
-			factor = 400
+			factor = 10
 		}
 	}
 	option = {
@@ -2183,39 +2177,56 @@ slavery_percent = {
 			country_pop_enslaved_mult = 0.3
 		}
 		ai_weight = {
-			factor = 200
+			factor = 10
+			modifier = {
+				factor = 1.25
+				OR = {
+					has_ethic = ethic_fanatic_capitalism
+					has_ethic = ethic_fanatic_authoritarian
+				}
+			}
 		}
 	}
 	option = {
-		name = policy_slavery_20
+		name = policy_slavery_40
 		valid = {
-			OR = {
-				has_valid_civic = civic_slaver_guilds
-				has_valid_civic = civic_indentured_assets
-			}
+			has_valid_civic = civic_slaving_despots
 		}
 		modifier = {
-			country_pop_enslaved_mult = 0.2
+			country_pop_enslaved_mult = 0.4
 		}
 		ai_weight = {
-			factor = 200
+			factor = 15
 		}
 	}
 	option = {
-		name = policy_slavery_10
+		name = policy_slavery_50
 		valid = {
-			OR = {
-				has_valid_civic = civic_slaver_guilds
-				has_valid_civic = civic_indentured_assets
-			}
+			has_valid_civic = civic_slaving_despots
 		}
 		modifier = {
-			country_pop_enslaved_mult = 0.1
+			country_pop_enslaved_mult = 0.5
 		}
 		ai_weight = {
-			factor = 100
+			factor = 15
+		}
+	}	
+	option = {
+		name = policy_slavery_60
+		valid = {
+			has_valid_civic = civic_slaving_despots
+		}
+		modifier = {
+			country_pop_enslaved_mult = 0.6
+		}
+		ai_weight = {
+			factor = 15
 		}
 	}
+	
+	
+	
+	
 }
 
 bureaucracy = {

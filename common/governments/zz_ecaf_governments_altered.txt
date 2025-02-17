@@ -30,8 +30,47 @@ gov_theocratic_republic = {
 	weight = {
 		base = @gov_ethic_weight
 		modifier = {
+			factor = 5
+			OR = {
+				has_valid_civic = civic_chosen_people
+				has_valid_civic = civic_exalted_priesthood
+			}
+		}
+		modifier = {
+			factor = 5
+			has_valid_civic = civic_chosen_people
+			has_valid_civic = civic_exalted_priesthood
+		}
+		modifier = {
 			factor = 10
 			has_valid_civic = civic_spiritual_democracy
+		}
+	}
+}
+
+# Theocratic Dictatorship
+gov_theocratic_dictatorship = {
+	ruler_title = RT_PATRIARCH
+	ruler_title_female = RT_MATRIARCH
+
+	possible = {
+		is_dictatorial_authority = yes
+		is_spiritualist = yes
+	}
+
+	weight = {
+		base = @gov_ethic_weight
+		modifier = {
+			factor = 5
+			OR = {
+				has_valid_civic = civic_chosen_people
+				has_valid_civic = civic_exalted_priesthood
+			}
+		}
+		modifier = {
+			factor = 5
+			has_valid_civic = civic_chosen_people
+			has_valid_civic = civic_exalted_priesthood
 		}
 	}
 }
@@ -57,7 +96,7 @@ gov_holy_tribunal = {
 	}
 
 	weight = {
-		base = 500
+		base = @gov_civic_weight
 	}
 }
 

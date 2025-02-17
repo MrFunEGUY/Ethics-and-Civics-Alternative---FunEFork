@@ -20,6 +20,16 @@ can_build_branch_office_on_planet = {
 			}
 		}
 	}
+	custom_tooltip = { ## Organic Zealots
+		fail_text = requires_recipient_not_organic_zealots
+		exists = owner
+		owner = {
+			OR = {
+				is_organic_zealots = no
+				root = { is_robot_empire = no }
+			}
+		}
+	}
 	custom_tooltip = {
 		fail_text = BRANCH_OFFICE_NO_OBSERVATION_OUTPOST
 		if = {

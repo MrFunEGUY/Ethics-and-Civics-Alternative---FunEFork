@@ -1,3 +1,4 @@
+has_ecaf_mod = { always = yes }
 has_ecaf_triggers = { always = yes }
 
 is_socialist = { is_socialism = yes }

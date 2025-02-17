@@ -1,10 +1,10 @@
-is_domineering_federation_type = {
-	has_federation_type = hegemony_federation
-}
+is_domineering_federation_type = { has_federation_type = hegemony_federation }
 
 is_exile_country = { always = no }
 
 is_rogue_colony = { always = no }
+
+is_organic_zealots = { always = no }
 
 ##########
 has_planetary_diversity = { always = no }
