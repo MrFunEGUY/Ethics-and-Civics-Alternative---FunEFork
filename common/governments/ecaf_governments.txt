@@ -553,9 +553,9 @@ gov_imperial_socialism = {
 		is_imperial_authority = yes
 	}
 	weight = {
-		base = 250
+		base = 150
 		modifier = {
-			factor = 2
+			factor = 5
 			has_ethic = ethic_fanatic_socialism
 		}
 	}
