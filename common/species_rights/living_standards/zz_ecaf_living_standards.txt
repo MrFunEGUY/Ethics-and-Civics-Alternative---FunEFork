@@ -273,11 +273,10 @@ living_standard_academic_privilege = {
 		from = {
 			is_gestalt = no
 			NOR = {
-				has_valid_civic = civic_shared_burden
 				is_worker_coop_empire = yes
 				has_valid_civic = civic_dystopian_society
 				has_valid_civic = civic_slaving_despots
-				has_valid_civic = civic_welfare_state
+				is_welfare_or_burden = yes
 			}
 		}
 		NOR = {

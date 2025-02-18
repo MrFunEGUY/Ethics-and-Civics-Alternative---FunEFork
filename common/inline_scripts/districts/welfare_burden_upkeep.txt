@@ -1,0 +1,10 @@
+upkeep = {
+	trigger = {
+		owner = { is_welfare_or_burden = yes }
+	}
+	energy = $ENERGY$
+	alloys = $ALLOYS$
+	food = $FOOD$
+	volatile_motes = $MOTES$
+	multiplier = 0.15
+}

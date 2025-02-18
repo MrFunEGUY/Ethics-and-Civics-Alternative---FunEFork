@@ -122,12 +122,7 @@ district_crashed_slaver_ship = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_welfare_state
-					has_valid_civic = civic_shared_burden
-				}
-			}
+			owner = { is_welfare_or_burden = yes }
 		}
 		modifier = {
 			planet_housing_add = 1
@@ -327,12 +322,7 @@ district_city = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_welfare_state
-					has_valid_civic = civic_shared_burden
-				}
-			}
+			owner = { is_welfare_or_burden = yes }
 		}
 		modifier = {
 			planet_housing_add = 1

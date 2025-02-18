@@ -41,3 +41,7 @@ concept_diplocracy_government = {
 concept_aristocracy_government = {
 	icon =  "gfx/interface/icons/jobs/job_noble.dds"
 }
+
+concept_basic_resource = {
+	icon =  "gfx/interface/icons/text_icons/icon_text_basic_resources.dds"
+}

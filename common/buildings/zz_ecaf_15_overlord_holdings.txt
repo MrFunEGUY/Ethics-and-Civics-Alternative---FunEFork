@@ -14,25 +14,28 @@ holding_garrison = {
 		upkeep = {
 			energy = @b1_upkeep
 		}
+		produces = {
+			ecaf_crew = @base_fortress_building_crew_production
+		}
 	}
 
-	overlord_resources = {
-		category = planet_holdings
-		produces = {
-			trigger = { overlord_has_num_armies_on_planet = { NUM = 1 } }
-			ecaf_crew = @base_fortress_building_crew_production
-		}
-		produces = {
-			trigger = { overlord_has_num_armies_on_planet = { NUM = 2 } }
-			ecaf_crew = @base_fortress_building_crew_production
-			multiplier = 2
-		}
-		produces = {
-			trigger = { overlord_has_more_than_num_armies_on_planet = { NUM = 2 } }
-			ecaf_crew = @base_fortress_building_crew_production
-			multiplier = 3
-		}
-	}
+	# overlord_resources = {
+	# 	category = planet_holdings
+	# 	produces = {
+	# 		trigger = { overlord_has_num_armies_on_planet = { NUM = 1 } }
+	# 		ecaf_crew = @base_fortress_building_crew_production
+	# 	}
+	# 	produces = {
+	# 		trigger = { overlord_has_num_armies_on_planet = { NUM = 2 } }
+	# 		ecaf_crew = @base_fortress_building_crew_production
+	# 		multiplier = 2
+	# 	}
+	# 	produces = {
+	# 		trigger = { overlord_has_more_than_num_armies_on_planet = { NUM = 2 } }
+	# 		ecaf_crew = @base_fortress_building_crew_production
+	# 		multiplier = 3
+	# 	}
+	# }
 
 	planet_modifier = {
 		planet_crime_add = -10

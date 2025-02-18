@@ -1,0 +1,29 @@
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_welfare_or_burden = yes }
+	}
+	modifier = {
+		planet_housing_add = 1
+
+		job_miner_add = $DISTRICT_MINING$
+		job_technician_add = $DISTRICT_GENERATOR$
+		job_farmer_add = $DISTRICT_FARMING$
+
+		job_e_fusion_technician_add = $DISTRICT_FUSION$
+		job_e_fossil_fuel_technician_add = $DISTRICT_FOSSIL$
+		job_e_geothermal_technician_add = $DISTRICT_GEO$
+		job_e_biomass_technician_add = $DISTRICT_BIOMASS$
+		job_e_wind_turbine_technician_add = $DISTRICT_WIND$
+		job_e_solar_technician_add = $DISTRICT_SOLAR$
+		job_e_tidal_technician_add = $DISTRICT_TIDAL$
+
+		job_m_deep_miner_add = $DISTRICT_DEEP_MINE$
+
+		job_f_nature_farmer_add = $DISTRICT_NATURE$
+		job_f_aquatic_farmer_add = $DISTRICT_OCEAN$
+		job_f_cave_farmer_add = $DISTRICT_CAVE$
+		job_f_fungi_farmer_add = $DISTRICT_EXOTIC$
+		job_f_industrial_farmer_add = $DISTRICT_INDUSTRIAL$
+	}
+}
