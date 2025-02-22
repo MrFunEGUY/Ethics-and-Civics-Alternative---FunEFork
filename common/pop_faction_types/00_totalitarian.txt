@@ -193,6 +193,7 @@ totalitarian = {
 						}
 					}
 					has_civic = civic_slaver_guilds
+					has_civic = civic_slaving_despots
 				}
 			}
 		}

@@ -252,30 +252,12 @@ bankers = {
 					NOT = {
 						any_owned_species = {
 							NOR = {
-								has_living_standard = {
-									type = living_standard_stratified
-									country = prev
-								}
-								has_living_standard = {
-									type = living_standard_academic_privilege
-									country = prev
-								}
-								has_living_standard = {
-									type = living_standard_none
-									country = prev
-								}
-								has_living_standard = {
-									type = living_standard_psi_assimilation
-									country = prev
-								}
-								has_living_standard = {
-									type = living_standard_tech_assimilation
-									country = prev
-								}
-								has_living_standard = {
-									type = living_standard_deassimilation
-									country = prev
-								}
+								has_living_standard = { type = living_standard_stratified country = prev }
+								has_living_standard = { type = living_standard_academic_privilege country = prev }
+								has_living_standard = { type = living_standard_none country = prev }
+								has_living_standard = { type = living_standard_psi_assimilation country = prev }
+								has_living_standard = { type = living_standard_tech_assimilation country = prev }
+								has_living_standard = { type = living_standard_deassimilation country = prev }
 								NAND = {
 									OR = {
 										has_trait = trait_presapient_starborn
@@ -288,28 +270,21 @@ bankers = {
 									}
 									has_trait = trait_uplifted
 								}
-								species = {
-									is_archetype = PRESAPIENT
-								}
+								species = { is_archetype = PRESAPIENT }
 							}
 						}
 					}
 					any_owned_species = {
 						OR = {
-							has_citizenship_type = {
-								type = citizenship_slavery
-								country = prev
-							}
-							has_citizenship_type = {
-								type = citizenship_purge
-								country = prev
-							}
-							has_citizenship_type = {
-								type = citizenship_robot_servitude
-								country = prev
+							OR = {
+								has_citizenship_type = { type = citizenship_slavery country = prev }
+								has_citizenship_type = { type = citizenship_purge country = prev }
+								has_citizenship_type = { type = citizenship_robot_servitude country = prev }
 							}
 						}
 					}
+					has_civic = civic_slaver_guilds
+					has_civic = civic_slaving_despots
 				}
 			}
 		}
@@ -328,17 +303,10 @@ bankers = {
 			owner = {
 				any_owned_species = {
 					NOR = {
-						has_living_standard = {
-							type = living_standard_good
-							country = prev
-						}
-						has_living_standard = {
-							type = living_standard_shared_burden
-							country = prev
-						}
-						has_living_standard = {
-							type = living_standard_utopian
-							country = prev
+						NOR = {
+							has_living_standard = { type = living_standard_good country = prev }
+							has_living_standard = { type = living_standard_shared_burden country = prev }
+							has_living_standard = { type = living_standard_utopian country = prev }
 						}
 					}
 				}
