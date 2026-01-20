@@ -10,6 +10,7 @@ generate_start_pops = {
 					has_origin = origin_necrophage
 					has_valid_civic = civic_machine_servitor
 					has_valid_civic = civic_machine_assimilator
+					has_valid_civic = civic_hive_bodysnatcher
 					has_valid_civic = civic_slave_race # ECAF
 					has_valid_civic = civic_symbiotic_race # ECAF
 					has_valid_civic = civic_hostile_occupation # Distant Origin
@@ -70,12 +71,9 @@ generate_start_pops = {
 						}
 					}
 				}
-				while = {
-					count = 6
-					create_pop = {
-						species = last_created_species
-						ethos = random
-					}
+				create_pop_group = {
+					size = 600
+					species = last_created_species
 				}
 			}
 			else_if = {
@@ -85,26 +83,21 @@ generate_start_pops = {
 						is_gestalt = yes
 					}
 				}
-				while = {
-					count = 9
-					create_pop = {
-						species = last_created_species
-						ethos = random
-					}
+				create_pop_group = {
+					size = 900
+					species = last_created_species
 				}
 			}
 			else = {
-				while = {
-					count = 12
-					create_pop = {
-						species = last_created_species
-						ethos = random
-					}
+				create_pop_group = {
+					size = 1200
+					species = last_created_species
 				}
 			}
 		}
 
-		generate_servitor_assmiliator_secondary_pops = yes
+		generate_civic_secondary_pops = yes
+		make_nascent_starting_pops = yes
 	}
 
 	if = { # ECAF
@@ -114,17 +107,17 @@ generate_start_pops = {
 		owner = {
 			create_built_robot_species = yes
 		}
-		while = {
-			count = 4
-			create_pop = { species = last_created_species }
+		create_pop_group = {
+			size = 400
+			species = last_created_species
 		}
 		add_building = building_mecha_monastery
 		add_building = building_robot_assembly_plant
 		while = {
-			limit = { num_pops < 30 }
-			create_pop = {
+			limit = { pop_amount < 3000 }
+			create_pop_group = {
+				size = 100
 				species = owner_main_species
-				ethos = random
 			}
 		}
 	}
@@ -139,21 +132,15 @@ generate_start_pops = {
 				add_trait = trait_auto_mod_robotic
 			}
 		}
-		while = {
-			count = 8
-			create_pop = {
-				species = last_created_species
-			}
-		}
-		add_building = building_robot_assembly_plant
-		add_district_and_planet_size_if_needed_effect = {
-			district = district_generator
+		create_pop_group = {
+			size = 800
+			species = owner_main_species
 		}
 		while = {
-			limit = { num_pops < 27 }
-			create_pop = {
+			limit = { pop_amount < 2700 }
+			create_pop_group = {
+				size = 100
 				species = owner_main_species
-				ethos = random
 			}
 		}
 	}
@@ -177,51 +164,6 @@ generate_start_pops = {
 		}
 
 		add_building = building_necrophage_elevation_chamber
-	}
-
-	# (Non-Purging) Necrophage: add Buildings & Districts
-	if = {
-		limit = {
-			owner = {
-				has_origin = origin_necrophage
-				NOR = { #purges them instead
-					has_civic = civic_fanatic_purifiers
-					has_civic = civic_hive_devouring_swarm
-				}
-			}
-		}
-		if = {
-			limit = {
-				owner = { has_valid_civic = civic_agrarian_idyll } # Needs an extra building slot
-			}
-			add_district_and_planet_size_if_needed_effect = {
-				district = district_city
-			}
-		}
-
-		add_building = building_necrophage_elevation_chamber
-	}
-
-	# Necrophage + Devouring Swarm: spawn Buildings
-	if = {
-		limit = {
-			owner = {
-				has_origin = origin_necrophage
-				has_valid_civic = civic_hive_devouring_swarm #purges them instead
-				is_lithoid_empire = no
-			}
-		}
-		add_building = building_spawning_pool
-	}
-	if = {
-		limit = {
-			owner = {
-				has_origin = origin_necrophage
-				has_valid_civic = civic_hive_devouring_swarm
-				is_lithoid_empire = yes
-			}
-		}
-		add_district_and_planet_size_if_needed_effect = { district = district_mining }
 	}
 
 	# Clone Army: spawn Buildings
@@ -231,39 +173,39 @@ generate_start_pops = {
 				has_origin = origin_clone_army
 			}
 		}
-		add_building = building_clone_army_clone_vat
-		add_building = building_clone_army_clone_vat
 		planet_event = { id = clones.10 days = 1095 random = 720 }
 	}
 
 	# MISC: spawn Pops
 	if = {
-		limit = { owner = { is_hive_empire = yes } }
+		limit = {
+			owner = {
+				is_hive_empire = yes
+				is_wilderness_empire = no
+			}
+		}
 		while = {
-			limit = { num_pops < 33 }
-			create_pop = {
+			limit = { pop_amount < 3300 }
+			create_pop_group = {
 				species = owner_main_species
-				ethos = random
 			}
 		}
 	}
 	if = {
 		limit = { owner = { has_valid_civic = civic_machine_servitor } }
 		while = {
-			limit = { num_pops < 33 }
-			create_pop = {
+			limit = { pop_amount < 3300 }
+			create_pop_group = {
 				species = owner_main_species
-				ethos = random
 			}
 		}
 	}
 	if = {
 		limit = { owner = { is_machine_empire = yes } }
 		while = {
-			limit = { num_pops < 29 }
-			create_pop = {
+			limit = { pop_amount < 2900 }
+			create_pop_group = {
 				species = owner_main_species
-				ethos = random
 			}
 		}
 	}
@@ -275,24 +217,22 @@ generate_start_pops = {
 			}
 		}
 		while = {
-			limit = { num_pops < 28 }
-			create_pop = {
+			limit = { pop_amount < 2800 }
+			create_pop_group = {
 				species = owner_main_species
-				ethos = random
 			}
 		}
 	}
 	if = {
 		limit = {
 			owner = { has_origin = origin_broken_shackles }
-			num_pops < 6
+			pop_amount < 600
 		}
 
 		while = {
-			limit = { num_pops < 6 }
-			create_pop = {
+			limit = { pop_amount < 600 }
+			create_pop_group = {
 				species = owner_main_species
-				ethos = random
 			}
 		}
 	}
@@ -304,35 +244,30 @@ generate_start_pops = {
 			}
 		}
 		while = {
-			limit = { num_pops < 28 }
-			create_pop = {
+			limit = { pop_amount < 2800 }
+			create_pop_group = {
 				species = owner_main_species
-				ethos = random
 			}
 		}
 	}
 	if = {
 		limit = {
 			owner = { has_origin = origin_payback }
-			num_pops < 18
+			pop_amount < 1800
 		}
 		while = {
-			limit = { num_pops < 18 }
-			create_pop = {
+			limit = { pop_amount < 1800 }
+			create_pop_group = {
 				species = owner_main_species
-				ethos = random
 			}
 		}
 	}
 	if = {
-		limit = {
-			owner = { has_origin = origin_fear_of_the_dark }
-		}
+		limit = { owner = { has_origin = origin_fear_of_the_dark } }
 		while = {
-			count = 20
-			create_pop = {
+			limit = { pop_amount < 2000 }
+			create_pop_group = {
 				species = owner_main_species
-				ethos = random
 			}
 		}
 	}
@@ -343,24 +278,18 @@ generate_start_pops = {
 				is_homicidal = yes
 			}
 		}
-		while = {
-			count = 2
-			create_pop = {
-				species = owner_main_species
-				ethos = random
-			}
+		create_pop_group = {
+			size = 200
+			species = owner_main_species
 		}
 	}
 	if = {
 		limit = {
 			owner = { has_origin = origin_default }
 		}
-		while = {
-			count = 4
-			create_pop = {
-				species = owner_main_species
-				ethos = random
-			}
+		create_pop_group = {
+			size = 400
+			species = owner_main_species
 		}
 	}
 	if = {
@@ -371,14 +300,31 @@ generate_start_pops = {
 		}
 		while = {
 			count = 10
-			random_owned_pop = {
+			random_owned_pop_group = {
 				limit = {
 					is_same_species = root.owner.species
 				}
-				kill_pop = yes
+				kill_single_pop = yes
 			}
 		}
 	}
+	if = {
+		limit = {
+			exists = owner
+			owner = {
+				has_origin = origin_toxic_knights
+			}
+		}
+		while = { #they get the habitat
+			count = 11
+			random_owned_pop_group = { kill_single_pop = yes }
+		}
+	}
+
+	# Nascent Stage pops being generated
+	make_nascent_starting_pops = yes
+
+	# Permanent Employment: add Zombie Trait
 	if = {
 		limit = {
 			owner = {
@@ -387,14 +333,9 @@ generate_start_pops = {
 		}
 		while = {
 			count = 4
-			random_owned_pop = {
+			weighted_random_owned_pop_group = {
 				limit = {
-					OR = {
-						has_job = clerk
-						has_job = technician
-						has_job = miner
-						has_job = farmer
-					}
+					is_pop_category = worker
 					is_robotic_species = no
 				}
 				modify_species = {
@@ -415,6 +356,35 @@ generate_start_pops = {
 		}
 	}
 
+		# Civilians
+		if = {
+			limit = {
+				owner =  {
+					NOR = {
+						has_origin = origin_broken_shackles
+						is_wilderness_empire = yes
+					}
+				}
+			}
+			create_pop_group = {
+				size = @civilians_gamestart
+				species = owner_main_species
+			}
+		}
+	
+		# Wilderness
+		if = {
+			limit = {
+				owner = { is_wilderness_empire = yes }
+			}
+			while = {
+				limit = { pop_amount < 2000 }
+				create_pop_group = {
+					species = owner_main_species
+				}
+			}
+		}
+
 	# Cybernetic Creed: add Unique Traits
 	if = {
 		limit = {
@@ -424,13 +394,13 @@ generate_start_pops = {
 		}
 		while = {
 			limit = {
-				any_owned_pop = {
+				any_owned_pop_group = {
 					is_robotic_species = no
 					has_ethic = ethic_spiritualist
 					has_cybernetic_creed_trait = no
 				}
 			}
-			random_owned_pop = {
+			weighted_random_owned_pop_group = {
 				limit = {
 					is_robotic_species = no
 					has_ethic = ethic_spiritualist
@@ -441,23 +411,6 @@ generate_start_pops = {
 					add_trait = trait_cyborg_ritualistic_implants
 					add_traits_at_start_of_list = yes
 				}
-			}
-		}
-		while = {
-			limit = {
-				any_owned_pop = {
-					has_cybernetic_creed_trait = no
-					OR = {
-						is_pop_category = ruler
-						is_pop_category = specialist
-					}
-				}
-			}
-			random_owned_pop = {
-				limit = {
-					has_cybernetic_creed_trait = no
-				}
-				clear_pop_category = yes
 			}
 		}
 		owner = {
@@ -474,11 +427,9 @@ generate_start_pops = {
 		limit = {
 			owner = { has_origin = origin_synthetic_fertility }
 		}
-		while = {
-			count = 9
-			create_pop = {
-				species = owner
-			}
+		create_pop_group = {
+			size = 900
+			species = owner_main_species
 		}
 	}
 }

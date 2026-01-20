@@ -86,6 +86,8 @@ colossus = {
 		upkeep = {
 			energy = @colossus_upkeep_energy
 			alloys = @colossus_upkeep_alloys
+		}
+		logistics = {
 			ecaf_crew = @colossus_crew_upkeep
 		}
 	}
@@ -98,4 +100,6 @@ colossus = {
 		min = 1
 		max = 1
 	}
+
+	available_to_everyone = yes
 }

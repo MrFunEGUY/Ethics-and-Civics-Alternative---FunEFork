@@ -1,0 +1,4 @@
+produces = { ## ECAF
+	ecaf_crew = 1
+	multiplier = value:pop_ecaf_crew_production
+}

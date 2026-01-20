@@ -15,7 +15,7 @@ country_event = {
 		capital_scope = {
 			has_observation_outpost = yes
 			observation_outpost_owner = { is_capitalism = yes }
-			any_owned_pop = { has_ethic = ethic_capitalism }
+			any_owned_pop_group = { has_ethic = ethic_capitalism }
 		}
 	}
 
@@ -23,7 +23,7 @@ country_event = {
 		factor = 1
 		modifier = {
 			factor = value:percent_species_ethic|ETHIC|capitalism|
-			any_owned_pop = { is_capitalism = yes }
+			any_owned_pop_group = { is_capitalism = yes }
 		}
 	}
 
@@ -64,7 +64,7 @@ country_event = {
 		capital_scope = {
 			has_observation_outpost = yes
 			observation_outpost_owner = { is_socialist = yes }
-			any_owned_pop = { has_ethic = ethic_socialism }
+			any_owned_pop_group = { has_ethic = ethic_socialism }
 		}
 	}
 
@@ -72,7 +72,7 @@ country_event = {
 		factor = 1
 		modifier = {
 			factor = value:percent_species_ethic|ETHIC|socialism|
-			any_owned_pop = { is_socialist = yes }
+			any_owned_pop_group = { is_socialist = yes }
 		}
 	}
 

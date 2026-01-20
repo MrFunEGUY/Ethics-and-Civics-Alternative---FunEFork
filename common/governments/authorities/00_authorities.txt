@@ -720,7 +720,7 @@ auth_hive_mind = {
 	}
 
 	country_modifier = {
-		pop_growth_speed = 0.25
+		logistic_growth_mult = 0.25
 		empire_size_penalty_mult = -0.25
 	}
 
@@ -1286,14 +1286,14 @@ auth_corporate_imperial = {
 		ethics = {
 			NOT = { value = ethic_gestalt_consciousness }
 			OR = {
-				text = civic_tooltip_authoritarian
-				value = ethic_authoritarian
-				value = ethic_fanatic_authoritarian
-			}
-			OR = {
 				text = civic_tooltip_capitalism
 				value = ethic_capitalism
 				value = ethic_fanatic_capitalism
+			}
+			OR = {
+				text = civic_tooltip_authoritarian
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
 			}
 			NOR = {
 				text = civic_tooltip_not_xenophobe

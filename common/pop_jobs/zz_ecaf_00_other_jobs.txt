@@ -37,9 +37,8 @@ slave_overseer = {
 		}
 	}
 
-	pop_modifier = {
-		pop_happiness = 0.25
-		pop_defense_armies_add = 2
+	planet_modifier = {
+		planet_defense_armies_add = 2
 	}
 
 	planet_modifier = {

@@ -1,0 +1,15 @@
+# Base AI economic plans
+
+basic_economy_plan = {
+	ai_weight = { weight = 1000 }
+	
+	### ECAF
+	subplan = {
+        scaling = yes
+		set_name = "ECAF Crew Scaling"
+        potential = { always = yes }
+		income = {
+			ecaf_crew = @crew_scaling_plan
+		}
+	}
+}

@@ -312,7 +312,7 @@ councilor_slaving_despots = { #Director of Slavery
 	civic = civic_slaving_despots
 	modifier = { #Reduces slave costs and enslaves more pops!
 		slave_market_cost_mult = -0.03
-		planet_jobs_slave_produces_mult = 0.01
+		pop_slave_bonus_workforce_mult = 0.01
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -511,7 +511,7 @@ councilor_welfare_state = { #Minister of Health and Welfare
 	}
 	civic = civic_welfare_state
 	modifier = { #Improves population growth speed
-		pop_growth_speed = 0.02
+		logistic_growth_mult = 0.02
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights

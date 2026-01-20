@@ -3,7 +3,7 @@
 ######################
 
 ecaf_crew = {
-	category = other
+	category = rare
 	tradable = no
 	allow_deficit = yes
 	max = @ecaf_crew_max_amount

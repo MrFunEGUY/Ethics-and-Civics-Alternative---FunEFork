@@ -1,11 +1,11 @@
-name = "NAME_Prikkiki-Ti"
+name = "NAME_Prikkiki_Ti"
 adjective = "NAME_Prikki"
 civics = {
 	civic = civic_fanatic_purifiers
 	civic = civic_cutthroat_politics
 	civic = civic_nationalistic_zeal
 }
-origin = origin_prison_escapees
+# origin = origin_prison_escapees
 species = last_created_species
 ethos = {
 	ethic = ethic_fanatic_xenophobe

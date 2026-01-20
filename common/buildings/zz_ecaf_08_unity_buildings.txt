@@ -509,7 +509,7 @@ building_citadel_of_faith = {
 		}
 		planet_administrators_unity_produces_add = 1
 		planet_managers_unity_produces_add = 1
-		planet_priests_unity_produces_add = 1
+		planet_bureaucrats_unity_produces_add = 1
 		planet_telepaths_unity_produces_add = 1
 	}
 

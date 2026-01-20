@@ -1,0 +1,4 @@
+produces = {
+	ecaf_crew = 0.5
+	mult = @hedonist_job_crew_mult
+}

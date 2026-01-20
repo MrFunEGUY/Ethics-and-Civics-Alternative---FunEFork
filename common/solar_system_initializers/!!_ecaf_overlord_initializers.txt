@@ -240,13 +240,13 @@ overlord_system_init = { # Aix - Empire Capital
 
 			while = {
 				count = 45
-				create_pop = {
+				create_pop_group = {
 					species = owner_main_species
 				}
 			}
 			while = {
 				count = 25
-				create_pop = {
+				create_pop_group = {
 					species = event_target:origin_imperial_species_robot
 				}
 			}
@@ -594,7 +594,7 @@ overlord_system_4_init = { # First vassal
 
 			while = {
 				count = 25
-				create_pop = {
+				create_pop_group = {
 					species = owner_main_species
 				}
 			}
@@ -1018,7 +1018,7 @@ overlord_system_5_init = { # Second vassal
 
 			while = {
 				count = 25
-				create_pop = {
+				create_pop_group = {
 					species = owner_main_species
 				}
 			}
@@ -1414,7 +1414,7 @@ overlord_system_6_init = { # Third vassal
 
 			while = {
 				count = 25
-				create_pop = {
+				create_pop_group = {
 					species = owner_main_species
 				}
 			}
@@ -1739,7 +1739,7 @@ overlord_system_7_init = { # Fourth vassal
 
 			while = {
 				count = 25
-				create_pop = {
+				create_pop_group = {
 					species = owner_main_species
 				}
 			}

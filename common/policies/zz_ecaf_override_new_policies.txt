@@ -2095,7 +2095,7 @@ economic_stance = {
 		}
 		modifier = {
 			planet_jobs_energy_produces_mult = 0.15
-			pop_growth_speed = 0.05
+			logistic_growth_mult = 0.05
 			planet_building_build_speed_mult = 0.1
 			starbase_shipyard_build_speed_mult = 0.1
 			planet_colony_development_speed_mult = 0.1

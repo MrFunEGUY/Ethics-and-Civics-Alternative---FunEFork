@@ -33,7 +33,7 @@ triggered_planet_modifier = {
 # Megacorps
 ################
 triggered_planet_modifier = {
-	potential = { has_executives = yes }
+	potential = { politician_is_executive = yes }
 	modifier = { job_executive_add = $AMOUNT$ }
 }
 

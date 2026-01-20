@@ -5,22 +5,21 @@
 building_noble_estates = {
 	base_buildtime = @b2_time
 	icon = building_palace
-	base_cap_amount = 1
+	planet_limit = 1
 
 	category = government
 
+	building_sets = {
+		government
+		urban
+	}
+
 	potential = {
 		exists = owner
-		planet = {
-			OR = {
-				has_building = building_noble_estates
-				owner = { is_ai = no }
-			}
-		}
 		owner = {
 			OR = {
 				has_valid_civic = civic_aristocratic_elite
-				has_valid_civic = civic_harmonious_hierarchy
+				has_valid_civic = civic_harmonious_hierarchy ## ECAF
 			}
 		}
 		NOT = { has_modifier = slave_colony }
@@ -42,24 +41,23 @@ building_noble_estates = {
 				}
 			}
 		}
-		is_occupied_flag = no
 	}
 
 	destroy_trigger = {
 		exists = owner
-		NOT = {
-			owner = {
-				OR = {
-					has_civic = civic_aristocratic_elite
-					has_civic = civic_harmonious_hierarchy
-				}
-			}
+		NOR = {
+			owner = { has_civic = civic_aristocratic_elite }
+			owner = { has_civic = civic_harmonious_hierarchy } ## ECAF
 		}
 	}
 
 	planet_modifier = {
-		job_noble_add = 1
-		planet_housing_add = 1
+		planet_housing_add = 100
+	}
+
+	inline_script = {
+		script = "jobs/politician_add"
+		AMOUNT = @building_static_jobs_low
 	}
 
 	resources = {
@@ -75,137 +73,93 @@ building_noble_estates = {
 	triggered_desc = {
 		text = job_noble_effect_desc
 	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_civic = civic_harmonious_hierarchy }
-		}
-		modifier = {
-			job_noble_per_pop = 0.03
-			planet_housing_add = 2
-			pop_government_ethic_attraction = 0.2
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				AND = {
-					has_civic = civic_aristocratic_elite
-					is_anglers_empire = no
-				}
-			}
-		}
-		modifier = {
-			planet_housing_add = 1
-			job_entertainer_add = 1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				AND = {
-					has_civic = civic_aristocratic_elite
-					is_anglers_empire = yes
-				}
-			}
-		}
-		modifier = {
-			planet_housing_add = 1
-			job_angler_add = 1
-		}
-	}
 }
 
-building_precinct_house = {
-	base_buildtime = @b1_time
+# building_precinct_house = {
+# 	base_buildtime = @b1_time
 
-	category = government
+# 	category = government
 
-	potential = {
-		owner = { is_regular_empire = yes }
-		NOT = { has_modifier = slave_colony }
-	}
+# 	potential = {
+# 		owner = { is_regular_empire = yes }
+# 		NOT = { has_modifier = slave_colony }
+# 	}
 
-	allow = {
-		hidden_trigger = {
-			OR = {
-				owner = { is_ai = no }
-				AND = {
-					NOT = { has_forbidden_jobs = enforcer }
-					NOT = { has_available_jobs = enforcer }
-				}
-			}
-		}
-		is_occupied_flag = no # Ariphaos
-	}
+# 	allow = {
+# 		hidden_trigger = {
+# 			OR = {
+# 				owner = { is_ai = no }
+# 				AND = {
+# 					NOT = { has_forbidden_jobs = enforcer }
+# 					NOT = { has_available_jobs = enforcer }
+# 				}
+# 			}
+# 		}
+# 		is_occupied_flag = no # Ariphaos
+# 	}
 
-	destroy_trigger = {
-		exists = owner
-		OR = {
-			AND = {
-				exists = owner
-				owner = { is_regular_empire = no }
-			}
-			has_modifier = slave_colony
-			AND = {
-				exists = owner
-				owner = { is_ai = yes } #Players dont like random buildings blowing up
-				OR = {
-					planet = { #ECAF
-						planet_crime < 15
-						free_jobs_of_type = {
-							job = enforcer
-							include_deprioritized_jobs = yes
-							value >= 2
-						}
-					}
-					planet = { has_building = building_hall_judgment } #This way the AI gets to reclaim its building slots that it sunk into this expense
-				}
-			}#This way the AI gets to reclaim its building slots that it sunk into this expense
-		}
-	}
+# 	destroy_trigger = {
+# 		exists = owner
+# 		OR = {
+# 			AND = {
+# 				exists = owner
+# 				owner = { is_regular_empire = no }
+# 			}
+# 			has_modifier = slave_colony
+# 			AND = {
+# 				exists = owner
+# 				owner = { is_ai = yes } #Players dont like random buildings blowing up
+# 				OR = {
+# 					planet = { #ECAF
+# 						planet_crime < 15
+# 						free_jobs_of_type = {
+# 							job = enforcer
+# 							include_deprioritized_jobs = yes
+# 							value >= 2
+# 						}
+# 					}
+# 					planet = { has_building = building_hall_judgment } #This way the AI gets to reclaim its building slots that it sunk into this expense
+# 				}
+# 			}#This way the AI gets to reclaim its building slots that it sunk into this expense
+# 		}
+# 	}
 
-	planet_modifier = {
-		job_enforcer_add = 2
-	}
+# 	planet_modifier = {
+# 		job_enforcer_add = 2
+# 	}
 
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b1_minerals
-		}
-		upkeep = {
-			energy = 2
-		}
-		upkeep = {
-			trigger = {
-				owner = { has_valid_civic = civic_police_state }
-			}
-			energy = 1
-		}
-	}
+# 	resources = {
+# 		category = planet_buildings
+# 		cost = {
+# 			minerals = @b1_minerals
+# 		}
+# 		upkeep = {
+# 			energy = 2
+# 		}
+# 		upkeep = {
+# 			trigger = {
+# 				owner = { has_valid_civic = civic_police_state }
+# 			}
+# 			energy = 1
+# 		}
+# 	}
 
-	prerequisites = {
-		"tech_planetary_government"
-	}
+# 	prerequisites = {
+# 		"tech_planetary_government"
+# 	}
 
-	triggered_desc = {
-		text = job_enforcer_effect_desc
-	}
+# 	triggered_desc = {
+# 		text = job_enforcer_effect_desc
+# 	}
 
-	show_tech_unlock_if = {
-		is_regular_empire = yes
-	}
+# 	show_tech_unlock_if = {
+# 		is_regular_empire = yes
+# 	}
 
-	upgrades = {
-		building_hall_judgment
-	}
-}
+# 	upgrades = {
+# 		building_hall_judgment
+# 	}
+# }
 
 building_hall_judgment = {
 	base_buildtime = @b2_time
@@ -213,8 +167,16 @@ building_hall_judgment = {
 	category = government
 	can_build = no
 
+	building_sets = {
+		government
+		urban
+	}
+
 	potential = {
-		owner = { is_regular_empire = yes }
+		owner = {
+			is_regular_empire = yes
+			NOT = { has_valid_civic = civic_civil_education }
+		}
 		NOT = { has_modifier = slave_colony }
 		if = {
 			limit = {
@@ -225,17 +187,22 @@ building_hall_judgment = {
 		}
 	}
 
-	allow = {
-		is_occupied_flag = no # Ariphaos
-	}
-
 	destroy_trigger = {
 		exists = owner
-		owner = { is_regular_empire = no }
+		owner = {
+			OR = {
+				is_regular_empire = no
+				has_valid_civic = civic_civil_education
+			}
+		}
+	}
+
+	convert_to = {
+		building_center_of_guidance
 	}
 
 	planet_modifier = {
-		job_enforcer_add = 5
+		job_enforcer_add = 500
 	}
 
 	resources = {
@@ -248,7 +215,7 @@ building_hall_judgment = {
 			energy = @b1_upkeep
 			volatile_motes = @b2_rare_upkeep
 		}
-		upkeep = {
+		upkeep = { ## ECAF
 			trigger = {
 				owner = { has_valid_civic = civic_police_state }
 			}
@@ -266,15 +233,22 @@ building_hall_judgment = {
 
 	show_tech_unlock_if = {
 		is_regular_empire = yes
+		NOT = { has_valid_civic = civic_civil_education }
 	}
 }
 
+#Psionic path
 building_psi_corps = {
 	base_buildtime = @b2_time
 
 	category = government
 
-	base_cap_amount = 1
+	building_sets = {
+		government
+		urban
+	}
+
+	planet_limit = 1
 
 	potential = {
 		host_has_dlc = "Utopia"
@@ -309,12 +283,18 @@ building_psi_corps = {
 	}
 
 	planet_modifier = {
-		job_telepath_add = 2
+		job_telepath_add = 200
 		planet_stability_add = 5
 	}
 
 	country_modifier = { # ECAF
 		country_resource_max_ecaf_crew_add = @small_military_building_crew_max_add
+	}
+
+	triggered_planet_modifier = {
+		psionic_pop_bonus_workforce_mult = 1
+		mult = value:psionic_workforce_from_telepaths
+		# This is on the building instead of the jobs to prevent an infinite workforce loop
 	}
 
 	resources = {
@@ -325,12 +305,13 @@ building_psi_corps = {
 		upkeep = {
 			energy = @b2_upkeep
 		}
-		produces = {
-			ecaf_crew = @psi_academy_crew_production
-		}
 	}
 
 	triggered_desc = {
 		text = job_telepath_effect_desc
+	}
+
+	triggered_desc = {
+		text = psionic_bonus_workforce_from_telepaths_tt
 	}
 }

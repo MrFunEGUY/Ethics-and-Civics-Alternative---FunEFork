@@ -82,7 +82,7 @@ country_event = {
 							value > 0.75
 						}
 					}
-					create_pop = { 
+					create_pop_group = { 
 						species = event_target:mem_sleepers_country
 						ethos = event_target:mem_sleepers_country
 					}
@@ -104,7 +104,7 @@ country_event = {
 							value > 0.5
 						}
 					}
-					create_pop = { 
+					create_pop_group = { 
 						species = event_target:mem_sleepers_country
 						ethos = event_target:mem_sleepers_country
 					}
@@ -112,7 +112,7 @@ country_event = {
 			}
 			else = {
 				random_owned_planet = {
-					create_pop = { 
+					create_pop_group = { 
 						species = event_target:mem_sleepers_country
 						ethos = event_target:mem_sleepers_country
 					}
@@ -193,12 +193,15 @@ country_event = {
 				save_event_target_as = mem_sleepers_country
 				owner_species = { save_event_target_as = mem_sleepers_species }
 			}
-			create_pop = { 
+			create_pop_group = { 
 				species = event_target:mem_sleepers_country
 				ethos = event_target:mem_sleepers_country
+				effect = {
+					save_event_target_as = last_created_pop_group
+				}
 			}
-			last_created_pop = {
-				set_pop_flag = mem_sleepers_ozari
+			event_target:last_created_pop_group = {
+				set_pop_group_flag = mem_sleepers_ozari
 			}
 		}
 		country_event = { id = mem_sleepers.101 days = 60 }

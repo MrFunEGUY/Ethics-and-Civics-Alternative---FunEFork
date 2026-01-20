@@ -1,0 +1,5 @@
+produces = {
+	trigger = { planet = { is_occupied_flag = no } }
+	ecaf_crew = @other_military_job_crew_production
+	mult = value:job_ecaf_crew_production
+}

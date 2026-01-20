@@ -54,7 +54,9 @@ This mod should go below any of the mods listed below.
 [hr][/hr]
 [h1]Credits:[/h1]
 
-- Obviously [url=https://steamcommunity.com/profiles/76561198053407812]petruxa[/url] for most of the code.
+- Foremost, [url=https://steamcommunity.com/profiles/76561198053407812]petruxa[/url] for most of the code.
+
+- To [url=https://steamcommunity.com/id/lordofla]LordofLa[/url] for the fork this fork is based off of.
 
 - To [url=https://steamcommunity.com/profiles/76561198030577785]joakim.westergaard[/url] and any other caretakers for updating the code.
 

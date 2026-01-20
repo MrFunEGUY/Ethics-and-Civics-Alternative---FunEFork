@@ -1,0 +1,7 @@
+cost = {
+	ecaf_crew = @starbase_$SIZE$_crew_cost
+}
+
+upkeep = {
+	ecaf_crew = @starbase_$SIZE$_crew_upkeep
+}

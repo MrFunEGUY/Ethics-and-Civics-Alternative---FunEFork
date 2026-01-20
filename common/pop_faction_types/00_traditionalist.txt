@@ -631,7 +631,7 @@ traditionalist = {
 		trigger = {
 			exists = owner
 			owner = {
-				count_owned_pop = {
+				count_owned_pop_amount = {
 					limit = {
 						pop_has_ethic = ethic_materialist
 					}
@@ -651,7 +651,7 @@ traditionalist = {
 	}
 
 	on_create = {
-		pop_faction_event = { id = factions.1 }
+		pop_faction_event = { id = factions.0 }
 	}
 
 	on_destroy = {

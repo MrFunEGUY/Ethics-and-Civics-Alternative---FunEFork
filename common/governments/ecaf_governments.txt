@@ -300,6 +300,53 @@ gov_par_monarchy = {
 	}
 }
 
+gov_imperial_socialism = {
+	ruler_title = RT_FCITIZEN
+	ruler_title_female = RT_FCITIZEN
+	heir_title = HT_LEGATEE
+	heir_title_female = HT_LEGATEE
+	use_regnal_names = yes
+	dynastic_last_names = yes
+	should_force_rename = yes
+	possible = {
+		is_socialist = yes
+		is_imperial_authority = yes
+	}
+	weight = {
+		base = 150
+		modifier = {
+			factor = 5
+			has_ethic = ethic_fanatic_socialism
+		}
+	}
+}
+
+gov_jingoism_imp = {
+	ruler_title = RT_LORD_COM
+	ruler_title_female = RT_LORD_COM
+	heir_title = HT_CHCOMAN
+	heir_title_female = HT_CHCOMAN
+	possible = {
+		is_imperial_authority_no_corp = yes
+		is_xenophobe = yes
+		is_militarist = yes
+		is_egalitarian = no
+		is_socialist = no
+	}
+	should_force_rename = yes
+	weight = {
+		base = 400
+		modifier = {
+			factor = 100
+			OR = {
+				has_valid_civic = civic_military_dictatorship
+				has_valid_civic = civic_military_junta
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+}
+
 ###############################
 ### Dictatorial Governments ###
 ###############################
@@ -537,27 +584,6 @@ gov_soviet_republic = {
 	}
 	weight = {
 		base = 10000
-	}
-}
-
-gov_imperial_socialism = {
-	ruler_title = RT_FCITIZEN
-	ruler_title_female = RT_FCITIZEN
-	heir_title = HT_LEGATEE
-	heir_title_female = HT_LEGATEE
-	use_regnal_names = yes
-	dynastic_last_names = yes
-	should_force_rename = yes
-	possible = {
-		is_socialist = yes
-		is_imperial_authority = yes
-	}
-	weight = {
-		base = 150
-		modifier = {
-			factor = 5
-			has_ethic = ethic_fanatic_socialism
-		}
 	}
 }
 

@@ -1,11 +1,6 @@
 ecaf_crew_max = {
 	base = @ecaf_crew_max_amount
 	add = modifier:country_resource_max_ecaf_crew_add
-
-	modifier = {
-		has_global_flag = ecaf_crew_cheat_enabled
-		add = 500000
-	}
 }
 
 ecaf_crew_att_exhaustion_mult = {
@@ -29,9 +24,9 @@ ecaf_crew_devastation_mult = {
 }
 
 ecaf_crew_bonus_mult = {
-	base = 60
-	subtract = trigger:num_pops
-	divide = 10
+	base = 6000
+	subtract = trigger:pop_amount
+	divide = 1000
 }
 
 pop_ecaf_crew_production = {
@@ -39,8 +34,9 @@ pop_ecaf_crew_production = {
 
 	# Pop Category
 	modifier = { is_pop_category = bio_trophy add = @bio_trophy_pop_crew_production }
-	modifier = { is_pop_category = slave add = @slave_pop_crew_production }
-	modifier = { is_pop_category = robot_servant add = @slave_pop_crew_production }
+	modifier = { is_pop_category = slave add = @worker_pop_crew_production }
+	modifier = { is_pop_category = robot_servant add = @worker_pop_crew_production }
+	modifier = { is_pop_category = civilian add = @worker_pop_crew_production }
 	modifier = { is_pop_category = worker add = @worker_pop_crew_production }
 	modifier = { is_pop_category = simple_drone add = @worker_pop_crew_production }
 	modifier = { is_pop_category = precursor add = @precursor_pop_crew_production }
@@ -58,34 +54,6 @@ pop_ecaf_crew_production = {
 	# Pop Military Service
 	modifier = { has_military_service_type = { type = military_service_limited } factor = @limited_military_service_crew_mult } # -25%
 	modifier = { has_slavery_type = { type = slavery_military } factor = @battle_thrall_military_service_crew_mult } # 200%
-
-	# Pop Jobs
-	modifier = { has_job = soldier add = @soldier_job_crew_production }
-	modifier = { has_job = knight add = @soldier_job_crew_production }
-	modifier = { has_job = overlord_knight add = @soldier_job_crew_production }
-	modifier = { has_job = overlord_knight_drone add = @soldier_job_crew_production }
-	modifier = { has_job = mercenary add = @soldier_job_crew_production }
-	modifier = { has_job = warrior_drone add = @soldier_job_crew_production }
-	modifier = { has_job = gpm_bunker_army add = @soldier_job_crew_production }
-
-	modifier = { has_job = telepath add = @other_military_job_crew_production }
-	modifier = { has_job = gladiator add = @other_military_job_crew_production }
-	modifier = { has_job = templar add = @other_military_job_crew_production }
-	modifier = { has_job = overlord_recruiter add = @other_military_job_crew_production }
-	modifier = { has_job = overlord_recruiter_drone add = @other_military_job_crew_production }
-	modifier = { has_job = overlord_beholder add = @other_military_job_crew_production }
-	modifier = { has_job = overlord_beholder_drone add = @other_military_job_crew_production }
-
-	modifier = { has_job = ranger add = @incidental_job_crew_production }
-	modifier = { has_job = enforcer add = @incidental_job_crew_production }
-	modifier = { has_job = duelist add = @incidental_job_crew_production }
-	modifier = { has_job = patrol_drone add = @incidental_job_crew_production }
-	modifier = { has_job = overlord_ranger add = @incidental_job_crew_production }
-	modifier = { has_job = overlord_ranger_drone add = @incidental_job_crew_production }
-
-	modifier = { has_job = fe_hedonist factor = @hedonist_job_crew_mult }
-
-	modifier = { has_job = commandant add = @ruler_military_job_crew_production }
 
 	## War Values
 	modifier = {
@@ -112,7 +80,10 @@ pop_ecaf_crew_production = {
 	modifier = {
 		owner = {
 			is_at_war = yes
-			any_war = { any_attacker = {  is_same_value = prevprev  } }
+			any_war = {
+				is_total_war = no
+				any_attacker = { is_same_value = prevprev }
+			}
 		}
 		factor = owner.value:ecaf_crew_att_exhaustion_mult
 	}
@@ -120,19 +91,12 @@ pop_ecaf_crew_production = {
 	modifier = {
 		owner = {
 			is_at_war = yes
-			any_war = { any_defender = {  is_same_value = prevprev  } }
+			any_war = {
+				is_total_war = no
+				any_defender = { is_same_value = prevprev }
+			}
 		}
 		factor = owner.value:ecaf_crew_def_exhaustion_mult
-	}
-
-	# Civic Modifiers
-	modifier = {
-		has_job = commandant
-		OR = {
-			owner = { has_valid_civic = civic_military_junta }
-			owner = { has_valid_civic = civic_military_dictatorship }
-		}
-		add = @incidental_job_crew_production
 	}
 
 	modifier = {
@@ -151,7 +115,7 @@ pop_ecaf_crew_production = {
 
 	modifier = {
 		owner = {
-			num_pops < 50
+			pop_amount < 5000
 			OR = {
 				is_rogue_colony = yes
 				has_civstrife_origin = yes
@@ -159,9 +123,85 @@ pop_ecaf_crew_production = {
 		}
 		factor = owner.value:ecaf_crew_bonus_mult
 	}
+}
+
+job_ecaf_crew_production = {
+	# # Pop Jobs
+	# modifier = { has_job_type = soldier add = @soldier_job_crew_production }
+	# modifier = { has_job_type = knight add = @soldier_job_crew_production }
+	# modifier = { has_job_type = skywatcher add = @soldier_job_crew_production }
+
+	# modifier = { has_job_type = battle_thrall add = @soldier_job_crew_production }
+	# modifier = { has_job_type = warrior_drone add = @soldier_job_crew_production }
+	# modifier = { has_job_type = skywatcher_drone add = @soldier_job_crew_production }
+	# modifier = { has_job_type = patrol_drone add = @incidental_job_crew_production }
+
+	# modifier = { has_job_type = overlord_beholder add = @other_military_job_crew_production }
+	# modifier = { has_job_type = overlord_beholder_drone add = @other_military_job_crew_production }
+	# modifier = { has_job_type = overlord_knight add = @soldier_job_crew_production }
+	# modifier = { has_job_type = overlord_knight_drone add = @soldier_job_crew_production }
+	# modifier = { has_job_type = overlord_recruiter add = @other_military_job_crew_production }
+	# modifier = { has_job_type = overlord_recruiter_drone add = @other_military_job_crew_production }
+	
+	# modifier = { has_job_type = telepath add = @other_military_job_crew_production }
+	# modifier = { has_job_type = enforcer add = @incidental_job_crew_production }
+
+	# modifier = { has_job_type = fe_hedonist factor = @hedonist_job_crew_mult }
+
+	# modifier = { has_job_type = commandant add = @ruler_military_job_crew_production }
+
+	## War Values
+	modifier = {
+		owner.capital_scope = { is_occupied_flag = yes }
+		factor = @capital_occupation_crew_mult
+	}
 
 	modifier = {
-		has_global_flag = ecaf_crew_cheat_enabled
-		add = 500000
+		planet = { is_occupied_flag = yes }
+		factor = @planet_occupation_crew_mult
+	}
+
+	modifier = {
+		exists = planet.starbase
+		NOT = { planet.starbase.controller = { is_same_value = prev.planet.starbase.owner } }
+		factor = @system_occupation_crew_mult
+	}
+
+	modifier = {
+		planet = { planet_devastation > 0 }
+		factor = planet.value:ecaf_crew_devastation_mult
+	}
+
+	modifier = {
+		owner = {
+			is_at_war = yes
+			any_war = {
+				is_total_war = no
+				any_attacker = { is_same_value = prevprev }
+			}
+		}
+		factor = owner.value:ecaf_crew_att_exhaustion_mult
+	}
+
+	modifier = {
+		owner = {
+			is_at_war = yes
+			any_war = {
+				is_total_war = no
+				any_defender = { is_same_value = prevprev }
+			}
+		}
+		factor = owner.value:ecaf_crew_def_exhaustion_mult
+	}
+
+	modifier = {
+		owner = {
+			pop_amount < 5000
+			OR = {
+				is_rogue_colony = yes
+				has_civstrife_origin = yes
+			}
+		}
+		factor = owner.value:ecaf_crew_bonus_mult
 	}
 }

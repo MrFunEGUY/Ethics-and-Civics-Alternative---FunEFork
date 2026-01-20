@@ -33,9 +33,9 @@ megacorp_caravaneer_init = {
 	}
 	max_instances = 1
 	spawn_chance = 9999
-	flags = {
-		caravaneer_home
-	}
+	
+	flags = { caravaneer_home }
+	
 	asteroid_belt = {
 		type = rocky_asteroid_belt
 		radius = 40

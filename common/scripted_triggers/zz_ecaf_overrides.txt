@@ -43,11 +43,21 @@ is_faction_allowed = {
 	# 	}
 	# 	AND = {
 	# 		days_passed > 30
-	# 		has_valid_civic = civic_parliamentary_system
+	# 		OR = {
+	# 			has_valid_civic = civic_parliamentary_system
+	# 			has_valid_civic = civic_crowdsourcing
+	# 			has_valid_civic = civic_corporate_crowdsourcing
+	# 		}
 	# 	}
 	# 	AND = {
 	# 		days_passed > 350
-	# 		has_origin = origin_broken_shackles
+	# 		OR = {
+	# 			has_origin = origin_broken_shackles
+	# 			AND = {
+	# 				has_origin = origin_unplugged
+	# 				has_country_flag = unplugged_faction_allowed
+	# 			}
+	# 		}
 	# 	}
 	# }
 	NOT = { has_ethic = ethic_gestalt_consciousness }
@@ -124,41 +134,6 @@ has_encountered_other_species = {
 			NOT = { is_same_species = prev }
 		}
 	}
-}
-
-ai_should_build_habitats = {
-	is_country_type = default
-	OR = {
-		is_at_war = no
-		mid_game_years_passed > 0
-	}
-	has_technology = tech_habitat_1
-	if = {  #VDs should build habitats even if there are other planets available
-		limit = { is_void_dweller_empire = no }
-		ai_colonize_plans <= 0
-		OR = {
-			NOR = {
-				has_trait = trait_aquatic
-				has_trait = trait_robot_aquatic
-			}
-			has_ascension_perk = ap_hydrocentric
-		}
-	}
-	OR = { # FUNE
-		has_origin = origin_void_dwellers
-		has_ascension_perk = ap_voidborn
-		count_owned_planet = {
-			count < 3
-			limit = { habitable_structure = yes }
-		}
-	}
-	NOT = {
-		any_planet_within_border = {
-			is_planet_class = pc_habitat
-			is_colony = no
-		}
-	}
-	NOT = { any_neighbor_country = { is_crisis_faction = yes } }
 }
 
 is_specialist_researcher_society = {

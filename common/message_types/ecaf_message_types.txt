@@ -1,0 +1,27 @@
+message_type = {
+	key = "MESSAGE_FACTION_BANKER"
+	icon = "GFX_message_factions"
+	icon_frame = 1
+
+	name = "MESSAGE_BANKER_FACTION_FORMED_TITLE"
+	sound = "notification"
+	ping = "ping_notification_green"
+
+	default_toast = yes
+
+	category = other
+}
+
+message_type = {
+	key = "MESSAGE_FACTION_SOCIALIST"
+	icon = "GFX_message_factions"
+	icon_frame = 1
+
+	name = "MESSAGE_SOCIALIST_FACTION_FORMED_TITLE"
+	sound = "notification"
+	ping = "ping_notification_green"
+
+	default_toast = yes
+
+	category = other
+}

@@ -1253,7 +1253,7 @@ holding_knight_commandery = {
 		exists = planet
 		planet = {
 			is_capital = yes
-			num_pops >= 50
+			pop_amount >= 5000
 		}
 	}
 

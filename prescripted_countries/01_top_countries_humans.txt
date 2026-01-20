@@ -36,7 +36,7 @@ humans1_1 = {
 
 	origin = "origin_default"
 
-	flags = { human_1 custom_start_screen }
+	flag = empire_human_1
 	
 	playable = has_humanoids # scripted_triggers
 	

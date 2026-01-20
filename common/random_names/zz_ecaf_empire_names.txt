@@ -12,7 +12,7 @@ empire_name_format = {
 				has_government = "gov_feudal_empire"
 				#### ECAF
 				has_government = "gov_par_monarchy"
-				has_government = "gov_jingoism"
+				has_government = "gov_jingoism_imp"
 				has_government = "gov_peoples_commissariat"
 				has_government = "gov_national_socialism"
 				has_government = "gov_absolute_monarchy"
@@ -44,7 +44,7 @@ empire_name_format = {
 				has_government = "gov_feudal_empire"
 				#### ECAF
 				has_government = "gov_par_monarchy"
-				has_government = "gov_jingoism"
+				has_government = "gov_jingoism_imp"
 				has_government = "gov_peoples_commissariat"
 				has_government = "gov_national_socialism"
 				has_government = "gov_absolute_monarchy"
@@ -76,7 +76,7 @@ empire_name_format = {
 				has_government = "gov_feudal_empire"
 				###
 				has_government = "gov_par_monarchy"
-				has_government = "gov_jingoism"
+				has_government = "gov_jingoism_imp"
 				has_government = "gov_peoples_commissariat"
 				has_government = "gov_national_socialism"
 				has_government = "gov_absolute_monarchy"
@@ -108,7 +108,7 @@ empire_name_format = {
 				has_government = "gov_feudal_empire"
 				###
 				has_government = "gov_par_monarchy"
-				has_government = "gov_jingoism"
+				has_government = "gov_jingoism_imp"
 				has_government = "gov_peoples_commissariat"
 				has_government = "gov_national_socialism"
 				has_government = "gov_absolute_monarchy"
@@ -140,7 +140,7 @@ empire_name_format = {
 				has_government = "gov_feudal_empire"
 				###
 				has_government = "gov_par_monarchy"
-				has_government = "gov_jingoism"
+				has_government = "gov_jingoism_imp"
 				has_government = "gov_peoples_commissariat"
 				has_government = "gov_national_socialism"
 				has_government = "gov_absolute_monarchy"
@@ -172,6 +172,7 @@ empire_name_format = {
 			OR = {
 				has_government = "gov_military_dictatorship"
 				has_government = "gov_martial_dictatorship"
+				has_government = "gov_jingoism"
 				###
 				has_government = "gov_national_socialism"
 			}
@@ -196,6 +197,7 @@ empire_name_format = {
 			OR = {
 				has_government = "gov_military_dictatorship"
 				has_government = "gov_martial_dictatorship"
+				has_government = "gov_jingoism"
 				###
 				has_government = "gov_national_socialism"
 				has_government = "gov_military_corp"
@@ -221,6 +223,7 @@ empire_name_format = {
 			OR = {
 				has_government = "gov_military_dictatorship"
 				has_government = "gov_martial_dictatorship"
+				has_government = "gov_jingoism"
 				###
 				has_government = "gov_national_socialism"
 				has_government = "gov_military_corp"
@@ -246,6 +249,7 @@ empire_name_format = {
 			OR = {
 				has_government = "gov_military_dictatorship"
 				has_government = "gov_martial_dictatorship"
+				has_government = "gov_jingoism"
 				###
 				has_government = "gov_national_socialism"
 				has_government = "gov_military_corp"
@@ -376,7 +380,7 @@ empire_name_format = {
 				# has_government = "gov_capitalist_oligarchy"
 				# has_government = "gov_corporate_nationalism"
 				# has_government = "gov_social_nationalism"
-				has_government = "gov_jingoism"
+				has_government = "gov_jingoism_imp"
 				has_government = "gov_timocracy"
 				has_government = "gov_slaver_republic"
 				has_government = "gov_genuine_aristocracy"
@@ -411,7 +415,7 @@ empire_name_format = {
 				#### ECAF
 				# has_government = "gov_capitalist_oligarchy"
 				# has_government = "gov_corporate_nationalism"
-				has_government = "gov_jingoism"
+				has_government = "gov_jingoism_imp"
 				has_government = "gov_timocracy"
 				has_government = "gov_genuine_aristocracy"
 				has_government = "gov_slaver_republic"
@@ -445,7 +449,7 @@ empire_name_format = {
 				has_government = "gov_plutocratic_oligarchy"
 				#### ECAF
 				# has_government = "gov_capitalist_oligarchy"
-				has_government = "gov_jingoism"
+				has_government = "gov_jingoism_imp"
 				has_government = "gov_timocracy"
 				has_government = "gov_genuine_aristocracy"
 				has_government = "gov_slaver_republic"

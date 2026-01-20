@@ -23,11 +23,12 @@ starbase_outpost = {
 	max_hitpoints = 5000
 	base_buildtime = 360
 	resources = {
-		category = starbase_stations
+		category = starbases
 		cost = {
 			trigger = {
 				from = {
 					is_machine_empire = no
+					country_uses_bio_ships = no
 				}
 			}
 			alloys = 100
@@ -35,18 +36,56 @@ starbase_outpost = {
 		cost = {
 			trigger = {
 				from = {
+					is_machine_empire = no
+					country_uses_bio_ships = yes
+				}
+			}
+			alloys = 100
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					is_machine_empire = no
+					country_uses_bio_ships = yes
+				}
+			}
+			food = 100
+			mult = @halved_alloy_to_food_cost_ratio
+		}
+		cost = {
+			trigger = {
+				from = {
 					is_machine_empire = yes
+					country_uses_bio_ships = no
 				}
 			}
 			alloys = 150
 		}
 		cost = {
-			ecaf_crew = @starbase_outpost_crew_cost
+			trigger = {
+				from = {
+					is_machine_empire = yes
+					country_uses_bio_ships = yes
+				}
+			}
+			alloys = 150
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					is_machine_empire = yes
+					country_uses_bio_ships = yes
+				}
+			}
+			food = 150
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 		upkeep = {
 			energy = 1
-			ecaf_crew = @starbase_outpost_crew_upkeep
 		}
+		inline_script = { script = ships/starbase_costs SIZE = outpost }
 	}
 
 	potential_construction = {
@@ -76,6 +115,7 @@ starbase_outpost = {
 	components_add_to_cost = no
 	can_disable = yes
 	flip_control_on_disable = yes
+	available_to_everyone = yes
 
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
 	prerequisites = { "tech_starbase_1" }
@@ -101,10 +141,6 @@ starbase_starport = {
 		starbase_module_capacity_add = 2
 		starbase_building_capacity_add = 1
 		starbase_defense_platform_capacity_add = 6
-		#trade system
-		starbase_trade_collection_range_add = 1
-		starbase_trade_protection_range_add = 1
-		starbase_trade_protection_add = 8
 		ship_sensor_range_add = 1
 	}
 	ship_modifier = {
@@ -114,16 +150,39 @@ starbase_starport = {
 	max_hitpoints = 10000
 	base_buildtime = 360
 	resources = {
-		category = starbase_stations
+		category = starbases
 		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
 			alloys = 200
-			ecaf_crew = @starbase_starport_crew_cost
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			alloys = 200
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = 200
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 
 		upkeep = {
 			energy = 2
-			ecaf_crew = @starbase_starport_crew_upkeep
 		}
+		
+		inline_script = { script = ships/starbase_costs SIZE = starport }
 	}
 
 	combat_size_multiplier = 20
@@ -142,6 +201,7 @@ starbase_starport = {
 	components_add_to_cost = no
 	can_disable = yes
 	flip_control_on_disable = yes
+	available_to_everyone = yes
 
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
 	prerequisites = { "tech_starbase_2" }
@@ -176,10 +236,6 @@ starbase_starhold = {
 		starbase_module_capacity_add = 4
 		starbase_building_capacity_add = 2
 		starbase_defense_platform_capacity_add = 9
-		#trade system
-		starbase_trade_collection_range_add = 1
-		starbase_trade_protection_range_add = 1
-		starbase_trade_protection_add = 16
 		ship_sensor_range_add = 1
 	}
 	ship_modifier = {
@@ -189,16 +245,39 @@ starbase_starhold = {
 	max_hitpoints = 20000
 	base_buildtime = 720
 	resources = {
-		category = starbase_stations
+		category = starbases
 		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
 			alloys = 500
-			ecaf_crew = @starbase_starhold_crew_cost
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			alloys = 500
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = 500
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 
 		upkeep = {
 			energy = 3
-			ecaf_crew = @starbase_starhold_crew_upkeep
 		}
+
+		inline_script = { script = ships/starbase_costs SIZE = starhold }
 	}
 
 	combat_size_multiplier = 30
@@ -219,6 +298,7 @@ starbase_starhold = {
 	components_add_to_cost = no
 	can_disable = yes
 	flip_control_on_disable = yes
+	available_to_everyone = yes
 
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
 	prerequisites = { "tech_starbase_3" }
@@ -252,10 +332,6 @@ starbase_starfortress = {
 		starbase_module_capacity_add = 6
 		starbase_building_capacity_add = 3
 		starbase_defense_platform_capacity_add = 12
-		#trade system
-		starbase_trade_collection_range_add = 1
-		starbase_trade_protection_range_add = 1
-		starbase_trade_protection_add = 24
 		ship_sensor_range_add = 1
 	}
 	ship_modifier = {
@@ -265,16 +341,39 @@ starbase_starfortress = {
 	max_hitpoints = 40000
 	base_buildtime = 1080
 	resources = {
-		category = starbase_stations
+		category = starbases
 		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
 			alloys = 1250
-			ecaf_crew = @starbase_starfortress_crew_cost
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			alloys = 1250
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = 1250
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 
 		upkeep = {
 			energy = 4
-			ecaf_crew = @starbase_starfortress_crew_upkeep
 		}
+
+		inline_script = { script = ships/starbase_costs SIZE = starfortress }
 	}
 
 	combat_size_multiplier = 40
@@ -297,6 +396,7 @@ starbase_starfortress = {
 	components_add_to_cost = no
 	can_disable = yes
 	flip_control_on_disable = yes
+	available_to_everyone = yes
 
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
 	prerequisites = { "tech_starbase_4" }
@@ -330,10 +430,6 @@ starbase_citadel = {
 		starbase_module_capacity_add = 6
 		starbase_building_capacity_add = 4
 		starbase_defense_platform_capacity_add = 15
-		#trade system
-		starbase_trade_collection_range_add = 1
-		starbase_trade_protection_range_add = 1
-		starbase_trade_protection_add = 32
 		ship_sensor_range_add = 1
 	}
 	ship_modifier = {
@@ -343,16 +439,40 @@ starbase_citadel = {
 	max_hitpoints = 80000
 	base_buildtime = 1440
 	resources = {
-		category = starbase_stations
+		category = starbases
 		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
 			alloys = 3500
-			ecaf_crew = @starbase_citadel_crew_cost
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			alloys = 3500
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = 3500
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 
 		upkeep = {
 			energy = 5
-			ecaf_crew = @starbase_citadel_crew_upkeep
 		}
+
+		inline_script = { script = ships/starbase_costs SIZE = citadel }
+
 	}
 
 	combat_size_multiplier = 50
@@ -375,6 +495,7 @@ starbase_citadel = {
 	components_add_to_cost = no
 	can_disable = yes
 	flip_control_on_disable = yes
+	available_to_everyone = yes
 
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
 	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser

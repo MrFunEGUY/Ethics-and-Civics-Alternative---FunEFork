@@ -115,7 +115,7 @@ building_symbol_purity = {
 
 	planet_modifier = {
 		planet_jobs_unity_produces_mult = 0.15
-		pop_growth_speed = 0.15
+		logistic_growth_mult = 0.15
 		pop_ethic_xenophobe_attraction_mult	= 0.15
 	}
 

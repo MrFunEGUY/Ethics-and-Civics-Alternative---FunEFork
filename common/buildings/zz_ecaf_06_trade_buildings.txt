@@ -46,7 +46,7 @@ building_commercial_zone = {
 			owner = { NOT = { has_valid_civic = civic_consumerism } }
 		}
 		modifier = {
-			job_clerk_add = 1
+			job_clerk_add = 100
 		}
 	}
 
@@ -56,7 +56,7 @@ building_commercial_zone = {
 			owner = { has_valid_civic = civic_consumerism }
 		}
 		modifier = {
-			job_trader_add = 1
+			job_trader_add = 100
 		}
 	}
 
@@ -68,7 +68,7 @@ building_commercial_zone = {
 			}
 		}
 		modifier = {
-			job_trader_add = 1
+			job_trader_add = 100
 		}
 	}
 

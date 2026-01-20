@@ -7,7 +7,7 @@ corvette = {
 	max_hitpoints = @corvette_hp
 	modifier = {
 		ship_evasion_add = @corvette_evasion
-		ship_piracy_suppression_add = 10
+		#ship_piracy_suppression_add = 10
 	}
 	size_multiplier = 1
 	fleet_slot_size = 1
@@ -20,7 +20,7 @@ corvette = {
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
 	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
 
-	default_behavior = swarm
+	role_background = "GFX_role_selection_corvette"
 	ship_roles = { screen gunship artillery brawler }
 	triggered_ship_roles = {
 		{
@@ -28,6 +28,8 @@ corvette = {
 			trigger = { has_technology = tech_cloaking_1 }
 		}
 	}
+
+	default_behavior = swarm
 
 	prerequisites = { "tech_corvettes" }
 
@@ -46,11 +48,8 @@ corvette = {
 		upkeep = {
 			energy = @corvette_upkeep_energy
 			alloys = @corvette_upkeep_alloys
-			ecaf_crew = @corvette_crew_upkeep
 		}
-		cost = { # ECAF
-			ecaf_crew = @corvette_crew_cost
-		}
+		inline_script = { script = ships/ship_costs SIZE = corvette }
 	}
 
 	min_upgrade_cost = {
@@ -69,13 +68,8 @@ corvette = {
 				is_hive_empire = yes
 			}
 			modifier = {
-				factor = 1.25
-				NOT = { is_preferred_weapons = weapon_type_explosive }
-			}
-			modifier = {
-				factor = 0.75
-				is_preferred_weapons = weapon_type_strike_craft
-				has_technology = tech_destroyers
+				factor = 0.5
+				has_technology = tech_cruisers 
 			}
 			modifier = {
 				factor = 1.5
@@ -99,7 +93,7 @@ frigate = {
 	max_hitpoints = @frigate_hp
 	modifier = {
 		ship_evasion_add = @frigate_evasion
-		ship_piracy_suppression_add = 10
+		#ship_piracy_suppression_add = 10
 	}
 	size_multiplier = 1
 	hull_scale = 1.25
@@ -115,6 +109,8 @@ frigate = {
 	use_shipnames_from = corvette
 
 	default_behavior = torpedo
+
+	role_background = "GFX_role_selection_frigate"
 	ship_roles = { explosive }
 	triggered_ship_roles = {
 		{
@@ -143,11 +139,9 @@ frigate = {
 		upkeep = {
 			energy = @corvette_upkeep_energy
 			alloys = @corvette_upkeep_alloys
-			ecaf_crew = @frigate_crew_upkeep
 		}
-		cost = { # ECAF
-			ecaf_crew = @frigate_crew_cost
-		}
+
+		inline_script = { script = ships/ship_costs SIZE = frigate }
 	}
 
 	min_upgrade_cost = {
@@ -166,7 +160,7 @@ frigate = {
 				is_preferred_weapons = weapon_type_explosive
 			}
 			modifier = {
-				factor = 1.5
+				factor = 1.25
 				has_technology = tech_battleships
 			}
 		}
@@ -182,7 +176,7 @@ destroyer = {
 	max_hitpoints = @destroyer_hp
 	modifier = {
 		ship_evasion_add = @destroyer_evasion
-		ship_piracy_suppression_add = 8
+		#ship_piracy_suppression_add = 8
 	}
 	size_multiplier = 2
 	fleet_slot_size = 2
@@ -196,6 +190,8 @@ destroyer = {
 	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
 
 	default_behavior = picket
+
+	role_background = "GFX_role_selection_destroyer"
 	ship_roles = { screen gunship artillery brawler }
 	triggered_ship_roles = {
 		{
@@ -220,11 +216,8 @@ destroyer = {
 		upkeep = {
 			energy = @destroyer_upkeep_energy
 			alloys = @destroyer_upkeep_alloys
-			ecaf_crew = @destroyer_crew_upkeep
 		}
-		cost = { # ECAF
-			ecaf_crew = @destroyer_crew_cost
-		}
+		inline_script = { script = ships/ship_costs SIZE = destroyer }
 	}
 	min_upgrade_cost = {
 		alloys = 2
@@ -234,7 +227,7 @@ destroyer = {
 		fraction = {
 			base = 0
 			modifier = {
-				add = 15
+				add = 10
 				uses_standard_ship_sizes = yes
 			}
 			modifier = {
@@ -249,11 +242,11 @@ destroyer = {
 			modifier = {
 				factor = 1.5
 				has_valid_civic = civic_hive_devouring_swarm
+				NOT = { has_technology = tech_cruisers }
 			}
 			modifier = {
-				factor = 1.5
-				has_valid_civic = civic_hive_devouring_swarm
-				NOT = { has_technology = tech_battleships }
+				factor = 0.5
+				has_technology = tech_battleships
 			}
 		}
 	}
@@ -268,7 +261,7 @@ cruiser = {
 	max_hitpoints = @cruiser_hp
 	modifier = {
 		ship_evasion_add = @cruiser_evasion
-		ship_piracy_suppression_add = 6
+		#ship_piracy_suppression_add = 6
 	}
 	size_multiplier = 4
 	fleet_slot_size = 3
@@ -282,6 +275,8 @@ cruiser = {
 	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
 
 	default_behavior = line
+
+	role_background = "GFX_role_selection_cruiser"
 	ship_roles = { gunship artillery carrier }
 	triggered_ship_roles = {
 		{
@@ -327,11 +322,8 @@ cruiser = {
 		upkeep = {
 			energy = @cruiser_upkeep_energy
 			alloys = @cruiser_upkeep_alloys
-			ecaf_crew = @cruiser_crew_upkeep
 		}
-		cost = { # ECAF
-			ecaf_crew = @cruiser_crew_cost
-		}
+		inline_script = { script = ships/ship_costs SIZE = cruiser }
 	}
 
 	min_upgrade_cost = {
@@ -342,7 +334,7 @@ cruiser = {
 		fraction = {
 			base = 0
 			modifier = {
-				add = 25
+				add = 50
 				uses_standard_ship_sizes = yes
 			}
 			modifier = {
@@ -371,7 +363,7 @@ battleship = {
 	max_hitpoints = @battleship_hp
 	modifier = {
 		ship_evasion_add = @battleship_evasion
-		ship_piracy_suppression_add = 4
+		#ship_piracy_suppression_add = 4
 	}
 	size_multiplier = 8
 	fleet_slot_size = 4
@@ -385,6 +377,8 @@ battleship = {
 	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
 
 	default_behavior = artillery
+
+	role_background = "GFX_role_selection_battleship"
 	ship_roles = { artillery carrier gunship }
 
 	prerequisites = { "tech_battleships" }
@@ -404,11 +398,8 @@ battleship = {
 		upkeep = {
 			energy = @battleship_upkeep_energy
 			alloys = @battleship_upkeep_alloys
-			ecaf_crew = @battleship_crew_upkeep
 		}
-		cost = { # ECAF
-			ecaf_crew = @battleship_crew_cost
-		}
+		inline_script = { script = ships/ship_costs SIZE = battleship }
 	}
 
 	min_upgrade_cost = {
@@ -471,6 +462,8 @@ titan = {
 	selectable = { host_has_dlc = "Apocalypse" }
 
 	default_behavior = artillery
+
+	role_background = "GFX_role_selection_titan"
 	ship_roles = { artillery gunship }
 
 	prerequisites = { "tech_titans" }
@@ -514,7 +507,6 @@ titan = {
 					is_scope_type = starbase
 					has_starbase_size >= starbase_citadel
 				}
-				# is_ship_size = enclave_mercenary_station
 			}
 		}
 		custom_tooltip = {
@@ -531,7 +523,6 @@ titan = {
 					is_scope_type = starbase
 					has_starbase_building = titan_yards
 				}
-				# is_ship_size = enclave_mercenary_station
 			}
 		}
 	}
@@ -541,11 +532,8 @@ titan = {
 		upkeep = {
 			energy = @titan_upkeep_energy
 			alloys = @titan_upkeep_alloys
-			ecaf_crew = @titan_crew_upkeep
 		}
-		cost = { # ECAF
-			ecaf_crew = @titan_crew_cost
-		}
+		inline_script = { script = ships/ship_costs SIZE = titan }
 	}
 
 	min_upgrade_cost = {
@@ -554,7 +542,7 @@ titan = {
 
 	ai_ship_data = {
 		min = 1
-		max = 3
+		max = 15
 		planet_mult = 0.1
 	}
 }
@@ -570,7 +558,7 @@ juggernaut = {
 	max_hitpoints = @juggernaut_hp
 	modifier = {
 		ship_evasion_add = @juggernaut_evasion
-		starbase_shipyard_capacity_add = 2
+		starbase_shipyard_capacity_add = 6
 	}
 
 	base_buildtime = @juggernaut_build_time
@@ -579,11 +567,8 @@ juggernaut = {
 		upkeep = {
 			energy = @juggernaut_upkeep_energy
 			alloys = @juggernaut_upkeep_alloys
-			ecaf_crew = @juggernaut_crew_upkeep
 		}
-		cost = { # ECAF
-			ecaf_crew = @juggernaut_crew_cost
-		}
+		inline_script = { script = ships/ship_costs SIZE = juggernaut }
 	}
 
 	combat_size_multiplier = 5
@@ -647,7 +632,7 @@ juggernaut = {
 	}
 
 	num_target_locators = 0
-	can_have_federation_design = yes
+	can_have_federation_design = no
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
 	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
 	can_disable = no
@@ -678,4 +663,6 @@ juggernaut = {
 		min = 1
 		max = 1
 	}
+
+	available_to_everyone = yes
 }

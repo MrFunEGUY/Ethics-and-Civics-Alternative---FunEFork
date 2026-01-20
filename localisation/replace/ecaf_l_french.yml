@@ -398,10 +398,6 @@ l_french:
  economic_stance_planned_desc: "Nationalization of £energy£ §YEnergy§! generating industry allows for more predictable and sustainable economic development, not relied on uncertain market fluctuations. Only §YSocial Development§! and §YGrowth & Construction§! trade policies are available."
  economic_stance_planned_name: "Planned"
  economic_stance_planned: "Planned"
- edict_zz_disable_crew: "Effectively Disable £ecaf_crew£ §Y$ecaf_crew$§! Mechanic"
- edict_zz_disable_crew_desc: "The maximum §Y$ecaf_crew$§! limit will be increased by 1M and pops will produce around 100K §Y$ecaf_crew$§! each."
- edict_zz_enable_crew: "Enable £ecaf_crew£ §Y$ecaf_crew$§! Mechanic"
- edict_zz_enable_crew_desc: "The £ecaf_crew£ §Y$ecaf_crew$§! mechanic will be reenabled."
  edict_ancestor_call_desc: " "
  edict_ancestor_call: "Sacred Harvest Festival"
  edict_clean_air_desc: " "
@@ -645,6 +641,7 @@ l_french:
  exploration_name: "Galactic Survey"
  exploration: "Galactic Survey"
  factions.1.desc.bankers: "Their members lobby for a national focus on financial growth and developing of free market.\n\n"
+ factions.1.desc.unplugged_bankers: "$factions.1.desc.bankers$"
  factions.1.desc.conservatives: "Their members work for a more rewarding personal account of each individual's perceived merits and accomplishments.\n\n"
  factions.1.desc.environmentalists: "Their members work hard, lobbying for protection of the Environment.\n\n"
  factions.1.desc.labourites: "Their members lobby for anti-elitism and equal social opportunities for everyone."
@@ -652,6 +649,7 @@ l_french:
  factions.1.desc.progressive: "Their members work for freedom and justice for all denizens of our empire.\n\n"
  factions.1.desc.prosperity: "Their members lobby for a national focus on social and economic prosperity, and stability through peaceful means."
  factions.1.desc.socialists: "Their members work for economic equality for all denizens of our empire.\n\n"
+ factions.1.desc.unplugged_socialists: "$factions.1.desc.socialists$"
  factions.2000.desc.bankers: "As a result of bringing this faction into their government, they have become more outwardly §HIndividualistic§!.\n\n"
  factions.2000.desc.conservatives: "As a result of bringing this faction into their government, they have become more outwardly §HElitarian§!.\n\n"
  factions.2000.desc.environmentalists: "As a result of bringing this faction into their government, they have become more outwardly §HEcologistic§!.\n\n"
@@ -741,6 +739,7 @@ l_french:
  gov_genuine_aristocracy: "Genuine Aristocracy"
  gov_great_houses: "Great Houses"
  gov_jingoism: "Jingoistic Regime"
+ gov_jingoism_imp: "Jingoistic Monarchism"
  gov_liberal_democracy: "Liberal Democracy"
  gov_military_corp: "Private Military Corporation"
  gov_minarchy: "Minarchy"
@@ -1097,7 +1096,7 @@ l_french:
  mod_planet_pops_minerals_upkeep_mult: "Pop Minerals Upkeep"
  mod_planet_priests_produces_mult: "£job_priest£ $job_priest_plural$ Output"
  mod_planet_researchers_upkeep_mult: "£job_researcher£ $job_researcher_plural$ Upkeep"
- MOD_POP_CONSUMER_GOODS_MULT: "Consumer Goods"
+ MOD_POP_CONSUMER_GOODS_MULT: "$consumer_goods$"
  mod_pop_ethic_capitalism_attraction_mult: "Competitive Ethics Attraction"
  mod_pop_ethic_egalitarian_attraction_mult: "Libertarian Ethics Attraction"
  mod_pop_ethic_elitist_attraction_mult: "Elitist Ethics Attraction"
@@ -1405,8 +1404,8 @@ l_french:
  personality_spiritual_seekers_machine: "Spiritual Seekers"
  personality_utopia_builders_desc: "Utopia Builders value the economical and social prosperity of their species above everything else. The government, no matter of it's size, exist to make sure that nobody suffers from ant kind of need, sickness or poverty."
  personality_utopia_builders: "Utopia Builders"
- pft_bankers_desc: "Entrepreneurs Factions represent the interests of private entrepreneurs and corporations, who are mainly concerned with the development of market economy in the frame of fair and just competition.\n\n§LCompetitive ethos§!"
- pft_bankers: "Entrepreneurs Faction"
+ pft_bankers_desc: "Capitalist Factions represent the interests of private industry and corporations, who are mainly concerned with markets and deregulation.\n\n§LCompetitive ethos§!"
+ pft_bankers: "Capitalist Faction"
  pft_conservatives_desc: " "
  pft_conservatives: "Aristocratic Faction"
  pft_environmentalists_desc: " "
@@ -1416,8 +1415,8 @@ l_french:
  pft_manufacturers_desc: " "
  pft_manufacturers: "Manufacturers Faction"
  pft_progressive_desc: "Progressive Factions favor personal political freedoms, reduction of central government authority and dislike non-democratic forms of government in general.\n\n§LLibertarian ethos§!"
- pft_socialists_desc: "Socialists Factions represent the interests of working class people and desire a complete non-discrimination within existing social structures.\n\n§LCooperative ethos§!"
- pft_socialists: "Socialists Faction"
+ pft_socialists_desc: "Socialist Factions represent the interests of working class people and desire a complete non-discrimination within existing social structures.\n\n§LCooperative ethos§!"
+ pft_socialists: "Socialist Faction"
  planet_blood_sacrifice: "Blood Sacrifice"
  planned_1_economy_desc: " "
  planned_1_economy_name: "Utopian Welfare"
@@ -1734,6 +1733,7 @@ l_french:
  RT_HTHANE: "Chief-Thane"
  RT_IRON_LORD: "Arch-Mechanician"
  RT_KEEPER: "Lord-Emperor"
+ RT_LORD_COM: "Lord Commander"
  RT_LABOUR: "Labour Committee Chairman"
  RT_MOD: "The Mediator"
  RT_NAZLEADER: "Leader of Nation"
@@ -2507,7 +2507,9 @@ l_french:
 
  gov_citizen_republic_desc: "This government is a militaristic form of democracy, where full citizenship can only be gained through military service. The voting franchise is limited to full citizens, and they are the only ones allowed to hold public offices.$stratocracy_gov_loc$"
 
- gov_jingoism_desc: "This form of authoritarian governance is headed by a xenophobic demagogue and notions of national supremacy and manifest destiny dominate the politics.$stratocracy_gov_loc$"
+ gov_jingoism_desc: "This form of authoritarian governance is headed by a xenophobic demagogue. Notions of national supremacy and manifest destiny dominate the politics.$stratocracy_gov_loc$"
+
+ gov_jingoism_imp_desc: "The royal line of this government maintains their power via xenophobic demagoguery. Notions of national supremacy and manifest destiny dominate the politics.$stratocracy_gov_loc$"
 
  gov_military_corp_desc: "Government is represented by a massive military-industrial holding, with board of directors consisting solely of active war-chiefs.$stratocracy_gov_loc$"
 
@@ -2985,7 +2987,7 @@ l_french:
  espionage_pre_ftl_indoctrination_capitalism: "$espionage_pre_ftl_indoctrination$"
  espionage_pre_ftl_indoctrination_capitalism_desc: "$espionage_pre_ftl_indoctrination_desc$"
 
- # Faction Visuals
+ # Faction Stuff
  socialists_visual_ethic: "£socialism£"
  bankers_visual_ethic: "£capitalism£"
 

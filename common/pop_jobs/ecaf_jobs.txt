@@ -27,7 +27,7 @@ slave_master = {
 
 	planet_modifier = {
 		planet_stability_add = 5
-		planet_jobs_slave_produces_mult = 0.05
+		pop_slave_bonus_workforce_mult = 0.05
 	}
 
 	weight = {
@@ -58,10 +58,6 @@ slave_master = {
 		modifier = {
 			factor = 0.75
 			has_trait = trait_quarrelsome
-		}
-		modifier = {
-			factor = 5
-			has_job = slave_master
 		}
 		modifier = {
 			factor = 1.25
@@ -187,10 +183,6 @@ deep_miner = {
 			can_take_servant_job = yes
 		}
 		modifier = {
-			factor = 1.5
-			has_job = deep_miner
-		}
-		modifier = {
 			factor = 1.2
 			has_trait = trait_very_strong
 		}
@@ -234,11 +226,9 @@ gladiator = {
 			alloys = 0.25
 		}
 	}
-	pop_modifier = {
-		pop_defense_armies_add = 1
-	}
 	planet_modifier = {
 		planet_amenities_add = 10
+		planet_defense_armies_add = 1
 	}
 	country_modifier = {
 		country_naval_cap_add = 1
@@ -283,10 +273,6 @@ gladiator = {
 			factor = 1.2
 			has_ethic = ethic_militarist
 		}
-		modifier = {
-			factor = 1.5
-			has_job = gladiator
-		}
 	}
 }
 
@@ -318,11 +304,9 @@ templar = {
 	country_modifier = {
 		country_naval_cap_add = 1
 	}
-	pop_modifier = {
-		pop_defense_armies_add = 1
-	}
 	planet_modifier = {
 		planet_stability_add = 1
+		planet_defense_armies_add = 1
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -399,17 +383,6 @@ templar = {
 		modifier = {
 			factor = 0.1
 			has_ethic = ethic_materialist
-			NOT = {
-				has_job = templar
-			}
-		}
-		modifier = {
-			factor = 1.5
-			has_job = templar
-		}
-		modifier = {
-			factor = 1.3
-			has_job = priest
 		}
 		modifier = {
 			factor = 1.5
@@ -609,10 +582,6 @@ labour_hero = {
 			has_trait = trait_nerve_stapled
 		}
 		modifier = {
-			factor = 1.5
-			has_job = labour_hero
-		}
-		modifier = {
 			factor = 1.2
 			exists = owner
 			owner = {
@@ -673,10 +642,8 @@ mercenary = {
 	country_modifier = {
 		country_naval_cap_add = 4
 	}
-	pop_modifier = {
-		pop_defense_armies_add = 3
-	}
 	planet_modifier = {
+		planet_defense_armies_add = 3
 		trade_value_add = 1
 	}
 	triggered_planet_modifier = {
@@ -749,10 +716,6 @@ mercenary = {
 		modifier = {
 			factor = 1.1
 			has_trait = trait_cybernetic
-		}
-		modifier = {
-			factor = 1.5
-			has_job = mercenary
 		}
 		modifier = {
 			factor = 2
@@ -878,10 +841,6 @@ transcend = {
 		}
 		modifier = {
 			factor = 1.5
-			has_job = transcend
-		}
-		modifier = {
-			factor = 1.5
 			OR = {
 				has_trait = trait_robot_propaganda_machines
 				has_trait = trait_traditional
@@ -946,7 +905,7 @@ druid = {
 	}
 	planet_modifier = {
 		planet_crime_add = -10
-		pop_growth_speed = 0.05
+		logistic_growth_mult = 0.05
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -1003,13 +962,6 @@ druid = {
 		modifier = {
 			factor = 0.1
 			has_ethic = ethic_materialist
-			NOT = {
-				has_job = druid
-			}
-		}
-		modifier = {
-			factor = 1.5
-			has_job = druid
 		}
 	}
 }
@@ -1094,10 +1046,6 @@ geoengineer = {
 			}
 		}
 		modifier = {
-			factor = 1.5
-			has_job = geoengineer
-		}
-		modifier = {
 			factor = 1.2
 			is_unemployed = yes
 			is_pop_category = specialist
@@ -1171,10 +1119,6 @@ xenobiologist = {
 			OR = {
 				has_trait = trait_presapient_proles
 			}
-		}
-		modifier = {
-			factor = 1.5
-			has_job = xenobiologist
 		}
 		modifier = {
 			factor = 1.2
@@ -1275,10 +1219,6 @@ techno_priest = {
 			has_trait = trait_natural_engineers
 		}
 		modifier = {
-			factor = 1.5
-			has_job = techno_priest
-		}
-		modifier = {
 			factor = 1.2
 			is_unemployed = yes
 			is_pop_category = specialist
@@ -1313,8 +1253,8 @@ commandant = {
 		planet_orbital_bombardment_damage = -0.05
 		planet_stability_add = 0.1
 	}
-	pop_modifier = {
-		pop_defense_armies_add = 1
+	planet_modifier = {
+		planet_defense_armies_add = 1
 	}
 	weight = {
 		weight = @ruler_job_weight
@@ -1333,10 +1273,6 @@ commandant = {
 		modifier = {
 			factor = 0.5
 			has_trait = trait_repugnant
-		}
-		modifier = {
-			factor = 5
-			has_job = commandant
 		}
 		modifier = {
 			factor = 1.2
@@ -1400,10 +1336,6 @@ supervisor = {
 			has_trait = trait_repugnant
 		}
 		modifier = {
-			factor = 5
-			has_job = supervisor
-		}
-		modifier = {
 			factor = 1.2
 			is_unemployed = yes
 			is_pop_category = ruler
@@ -1433,12 +1365,11 @@ mogul = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			always = yes
+	resources = {
+		category = planet_merchants
+		produces = {
+			trade = 5
 		}
-		trade_value_add = 7
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
 	}
 
 	triggered_planet_modifier = {
@@ -1521,10 +1452,6 @@ mogul = {
 			has_trait = trait_repugnant
 		}
 		modifier = {
-			factor = 5
-			has_job = mogul
-		}
-		modifier = {
 			factor = 1.5
 			is_capitalism = yes
 		}
@@ -1575,10 +1502,6 @@ commissar = {
 		modifier = {
 			factor = 0.5
 			has_trait = trait_repugnant
-		}
-		modifier = {
-			factor = 5
-			has_job = supervisor
 		}
 		modifier = {
 			factor = 1.2
@@ -1641,10 +1564,6 @@ ambassador = {
 		modifier = {
 			factor = 0.5
 			has_trait = trait_repugnant
-		}
-		modifier = {
-			factor = 5
-			has_job = supervisor
 		}
 		modifier = {
 			factor = 1.2

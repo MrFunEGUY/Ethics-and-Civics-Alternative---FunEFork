@@ -183,7 +183,7 @@ decision_market_nomination = {
 	}
 
 	allow = {
-		num_pops > 20
+		pop_amount > 2000
 		custom_tooltip = {
 			fail_text = already_market_nominated
 			from = {
@@ -300,7 +300,7 @@ decision_market_nomination = {
 		weight = 10
 		modifier = {
 			factor = 0
-			num_pops < 20
+			pop_amount < 2000
 		}
 		modifier = {
 			factor = 1.5
@@ -440,7 +440,7 @@ decision_boost_market_nomination = {
 		weight = 10
 		modifier = {
 			factor = 0
-			num_pops < 20
+			pop_amount < 2000
 		}
 		modifier = {
 			factor = 1.5

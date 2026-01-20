@@ -1,0 +1,6 @@
+cost = {
+	ecaf_crew = @$SIZE$_crew_cost
+}
+logistics = {
+	ecaf_crew = @$SIZE$_crew_upkeep
+}

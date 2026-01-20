@@ -29,7 +29,7 @@
 @mil_academy_crew_production = 6
 @mil_academy_civic_crew_production = 3
 
-@psi_academy_crew_production = 3
+@psi_academy_crew_production = 2.5
 
 ## Starbase Buildings
 @recruitment_office_crew_mult = 0.1
@@ -39,25 +39,28 @@
 @mercenary_garrison_crew_max_add = 15
 
 ## Pop Crew Generation
-@base_pop_crew_production = 0.15
-@holding_base_pop_crew_production = 0
-@slave_pop_crew_production = 0.1275
-@worker_pop_crew_production = 0.1275
-@specialist_pop_crew_production = 0.0975
-@ruler_pop_crew_production = 0.0525
+@base_pop_crew_production = 0.1
+@worker_pop_crew_production = 0.1
+@specialist_pop_crew_production = 0.05
+@ruler_pop_crew_production = 0.025
 
-@bio_trophy_pop_crew_production = -0.09
-@precursor_pop_crew_production = 0.0375
+# @base_pop_crew_production = 0.15
+# @worker_pop_crew_production = 0.1
+# @specialist_pop_crew_production = 0.075
+# @ruler_pop_crew_production = 0.05
 
-@pacifist_pop_crew_production = -0.2625
+@bio_trophy_pop_crew_production = -0.1
+@precursor_pop_crew_production = 0.035
+
+@pacifist_pop_crew_production = -0.25
 @militarist_pop_crew_production = 0.15
 
-@battle_thrall_military_service_crew_mult = 2
+@battle_thrall_military_service_crew_mult = 3
 @limited_military_service_crew_mult = 0.75
 
 @planet_occupation_crew_mult = 0
 @system_occupation_crew_mult = 0.02
-@capital_occupation_crew_mult = 0.5
+@capital_occupation_crew_mult = 0.33
 
 ## Job Crew Generation
 @criminal_job_crew_mult = -1.75
@@ -65,6 +68,7 @@
 @hedonist_job_crew_mult = 0.01
 
 @ruler_military_job_crew_production = 0.45
+@commandant_job_crew_production = 2
 @soldier_job_crew_production = 1.5
 @other_military_job_crew_production = 0.75
 @incidental_job_crew_production = 0.5
@@ -109,6 +113,47 @@
 
 @colossus_crew_cost = 2000
 @colossus_crew_upkeep = 50
+
+## Bioship Crew Cost
+@mauler_stage_1_crew_cost = 15
+@mauler_stage_1_crew_upkeep = 0.15
+
+@mauler_stage_2_crew_cost = 20
+@mauler_stage_2_crew_upkeep = 0.25
+
+@mauler_stage_3_crew_cost = 30
+@mauler_stage_3_crew_upkeep = 0.5
+
+@weaver_stage_1_crew_cost = 35
+@weaver_stage_1_crew_upkeep = 0.2
+
+@weaver_stage_2_crew_cost = 40
+@weaver_stage_2_crew_upkeep = 0.3
+
+@weaver_stage_3_crew_cost = 45
+@weaver_stage_3_crew_upkeep = 0.6
+
+@harbinger_stage_1_crew_cost = 50
+@harbinger_stage_1_crew_upkeep = 0.25
+
+@harbinger_stage_2_crew_cost = 55
+@harbinger_stage_2_crew_upkeep = 0.35
+
+@harbinger_stage_3_crew_cost = 60
+@harbinger_stage_3_crew_upkeep = 0.7
+
+@stinger_stage_1_crew_cost = 65
+@stinger_stage_1_crew_upkeep = 0.3
+
+@stinger_stage_2_crew_cost = 70
+@stinger_stage_2_crew_upkeep = 0.45
+
+@stinger_stage_3_crew_cost = 80
+@stinger_stage_3_crew_upkeep = 0.9
+
+@bio_titan_crew_cost = 300
+@bio_titan_crew_upkeep = 3
+
 
 ### Army Crew Cost
 @assault_army_crew_cost = 3

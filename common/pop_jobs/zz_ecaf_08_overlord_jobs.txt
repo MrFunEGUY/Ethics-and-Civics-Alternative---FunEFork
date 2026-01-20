@@ -1,10 +1,16 @@
 overlord_recruiter = {
 	category = specialist
-	icon = soldier
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = holding_recruitment_office
-	clothes_texture_index = 1
+
+	swappable_data = {
+		default = {
+			building_icon = holding_recruitment_office
+			icon = soldier
+		}
+	}
+
+	tags = { soldier }
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -25,22 +31,30 @@ overlord_recruiter = {
 			energy = 5
 			unity = 2
 		}
+		inline_script = "output/soldier_output" ## ECAF
 	}
 
 	overlord_resources = {
 		category = planet_overlord_recruiters
-		produces = {
-			trigger = { planet = { is_occupied_flag = no } }
-			ecaf_crew = @other_military_job_crew_production
-		}
+		inline_script = "output/other_mil_job_output" ## ECAF
 	}
 
-	pop_modifier = {
-		pop_defense_armies_add = 3
+	planet_modifier = {
+		planet_defense_armies_add = 3
 	}
 
 	weight = {
 		weight = @overlord_job_weight
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
 	}
 }
 
@@ -49,9 +63,15 @@ overlord_recruiter_drone = {
 
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = holding_recruitment_office
-	clothes_texture_index = 1
-	icon = overlord_beholder
+
+	swappable_data = {
+		default = {
+			building_icon = holding_recruitment_office
+			icon = overlord_beholder
+		}
+	}
+
+	tags = { soldier }
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -72,22 +92,30 @@ overlord_recruiter_drone = {
 			energy = 5
 			unity = 2
 		}
+		inline_script = "output/soldier_output" ## ECAF
 	}
 
 	overlord_resources = {
 		category = planet_overlord_recruiters
-		produces = {
-			trigger = { planet = { is_occupied_flag = no } }
-			ecaf_crew = @other_military_job_crew_production
-		}
+		inline_script = "output/other_mil_job_output" ## ECAF
 	}
 
-	pop_modifier = {
-		pop_defense_armies_add = 3
+	planet_modifier = {
+		planet_defense_armies_add = 3
 	}
 
 	weight = {
 		weight = @overlord_job_weight
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
 	}
 }
 
@@ -96,8 +124,14 @@ overlord_beholder = {
 
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = holding_overlord_vigil_command
-	clothes_texture_index = 1
+
+	swappable_data = {
+		default = {
+			building_icon = holding_overlord_vigil_command
+		}
+	}
+
+	tags = { }
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -114,6 +148,7 @@ overlord_beholder = {
 
 	resources = {
 		category = planet_overlord_beholders
+		inline_script = "output/other_mil_job_output" ## ECAF
 		upkeep = {
 			trigger = {
 				exists = owner
@@ -154,14 +189,21 @@ overlord_beholder = {
 
 	overlord_resources = {
 		category = planet_overlord_beholders
-		produces = {
-			trigger = { planet = { is_occupied_flag = no } }
-			ecaf_crew = @other_military_job_crew_production
-		}
+		inline_script = "output/other_mil_job_output" ## ECAF
 	}
 
 	weight = {
 		weight = @overlord_job_weight
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
 	}
 }
 
@@ -170,9 +212,15 @@ overlord_beholder_drone = {
 
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = holding_overlord_vigil_command
-	clothes_texture_index = 1
-	icon = overlord_beholder
+
+	swappable_data = {
+		default = {
+			building_icon = holding_overlord_vigil_command
+			icon = overlord_beholder
+		}
+	}
+
+	tags = { }
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -189,6 +237,7 @@ overlord_beholder_drone = {
 
 	resources = {
 		category = planet_overlord_beholders
+		inline_script = "output/other_mil_job_output" ## ECAF
 		upkeep = {
 			trigger = {
 				exists = owner
@@ -229,13 +278,192 @@ overlord_beholder_drone = {
 
 	overlord_resources = {
 		category = planet_overlord_beholders
-		produces = {
-			trigger = { planet = { is_occupied_flag = no } }
-			ecaf_crew = @other_military_job_crew_production
-		}
+		inline_script = "output/other_mil_job_output" ## ECAF
 	}
 
 	weight = {
 		weight = @overlord_job_weight
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_knight = {
+	category = specialist
+	can_set_priority = no
+
+	swappable_data = {
+		default = {
+			building_icon = building_order_keep
+			icon = knight
+		}
+	}
+
+	tags = { unity research soldier }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = no
+		}
+	}
+
+	overlord_resources = {
+		category = planet_knights
+		produces = {
+			unity = 2
+			mult = value:knights_unity_output_modifier
+		}
+		produces = {
+			physics_research = 2
+			engineering_research = 2
+			society_research = 2
+			mult = value:knights_research_output_modifier
+		}
+		inline_script = "output/other_mil_job_output" ## ECAF
+	}
+
+	resources = {
+		category = planet_knights
+		inline_script = "output/knight_output" ## ECAF Soldier Output values
+		upkeep = {
+			alloys = 1
+			trigger = {
+				exists = owner.overlord
+				owner.overlord = {
+					NOT = {
+						has_modifier = luminous_blades
+					}
+				}
+			}
+		}
+	}
+
+	planet_modifier = {
+		planet_stability_add = 3
+		planet_defense_armies_add = 2
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+		mult = value:job_weights_modifier|JOB|overlord_knight|RESOURCE|unity|
+		mult = value:job_weights_research_modifier|JOB|overlord_knight|
+		modifier = {
+			factor = 0
+			is_enslaved = yes
+		}
+	}
+
+	inline_script = "jobs/automodding_priority_unity"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_knight_drone = {
+	category = complex_drone
+	can_set_priority = no
+
+	swappable_data = {
+		default = {
+			building_icon = building_order_keep
+			icon = knight
+		}
+	}
+
+	tags = { unity research soldier }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = yes
+		}
+	}
+
+	overlord_resources = {
+		category = planet_knights
+		inline_script = "output/other_mil_job_output" ## ECAF
+		produces = {
+			unity = 2
+			mult = value:knights_unity_output_modifier
+		}
+		produces = {
+			physics_research = 2
+			engineering_research = 2
+			society_research = 2
+			mult = value:knights_research_output_modifier
+		}
+	}
+
+	resources = {
+		category = planet_knights
+		inline_script = "output/knight_output" ## ECAF Soldier Output values
+		upkeep = {
+			alloys = 1
+			trigger = {
+				exists = owner.overlord
+				owner.overlord = {
+					NOT = {
+						has_modifier = luminous_blades
+					}
+				}
+			}
+		}
+	}
+
+	planet_modifier = {
+		planet_stability_add = 3
+		planet_defense_armies_add = 2
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+		modifier = {
+			factor = 0
+			is_enslaved = yes
+		}
+		mult = value:job_weights_modifier|JOB|overlord_knight_drone|RESOURCE|unity|
+		mult = value:job_weights_research_modifier|JOB|overlord_knight_drone|
+	}
+
+	inline_script = "jobs/automodding_priority_unity"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
 	}
 }

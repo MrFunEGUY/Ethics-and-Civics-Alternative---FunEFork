@@ -1,0 +1,56 @@
+# Backup jobs
+fe_hedonist = {
+	category = precursor
+	is_capped_by_modifier = no
+
+	swappable_data = {
+		default = {
+			building_icon = building_hyper_entertainment_forum
+		}
+	}
+
+	tags = { unity }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_precursor_job
+
+	possible = {
+		owner = {
+			NOR = {
+				is_machine_empire = yes
+				is_hive_empire = yes
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		is_same_species = owner
+	}
+
+	resources = {
+		category = planet_jobs
+		inline_script = "output/fe_output" ## ECAF
+		produces = {
+			unity = 2
+		}
+	}
+
+	weight = {
+		weight = @worker_job_weight
+
+		# crisis purge
+		modifier = {
+			factor = 0.01
+			exists = planet
+			exists = planet.controller
+			planet.controller = {
+				OR = {
+					is_country_type = swarm
+					is_country_type = ai_empire
+				}
+			}
+		}
+	}
+}

@@ -19,16 +19,8 @@ has_regular_administrators = {
 }
 
 # Megacorps
-has_executives = {
-	exists = owner
-	owner = {
-		is_megacorp = yes
-		is_worker_coop_empire = no
-	}
-}
-
 has_regular_executives = {
-	has_executives = yes
+	politician_is_executive = yes
 	is_theocracy = no
 	is_aristocracy = no
 	is_technocracy = no
@@ -63,6 +55,12 @@ is_theocracy = {
 		is_spiritualist_gov = yes
 	}
 }
+politician_is_ecaf_high_priest = {
+	OR = {
+		is_theocracy = yes
+		politician_is_high_priest = yes
+	}
+}
 
 # Materialist - Science Director
 is_technocracy = {
@@ -70,6 +68,12 @@ is_technocracy = {
 	owner = {
 		has_ethic = ethic_fanatic_materialist
 		is_materialist_gov = yes
+	}
+}
+politician_is_ecaf_science_director = {
+	OR = {
+		is_technocracy = yes
+		politician_is_science_director = yes
 	}
 }
 
@@ -84,7 +88,7 @@ is_stratocracy = {
 		}
 	}
 }
-
+politician_is_ecaf_commandant = { is_stratocracy = yes }
 # Pacifist - Philosopher
 is_bureaucracy = {
 	exists = owner
@@ -94,6 +98,7 @@ is_bureaucracy = {
 		is_cosmic_choir = no
 	}
 }
+politician_is_ecaf_philosopher = { is_bureaucracy = yes }
 
 # Capitalist - Merchant
 is_plutocracy = {
@@ -101,6 +106,12 @@ is_plutocracy = {
 	owner = {
 		has_ethic = ethic_fanatic_capitalism
 		is_capitalist_gov = yes
+	}
+}
+politician_is_ecaf_merchant = {
+	OR = {
+		is_plutocracy = yes
+		politician_is_merchant = yes
 	}
 }
 
@@ -112,6 +123,7 @@ is_isocracy = {
 		is_socialist_gov = yes
 	}
 }
+politician_is_ecaf_commissar = { is_isocracy = yes }
 
 # Xenophile - Diplomats
 is_diplocracy = {
@@ -123,6 +135,7 @@ is_diplocracy = {
 
 	}
 }
+politician_is_ecaf_ambassador = { is_diplocracy = yes }
 
 ###
 ### Non-ethic
@@ -132,6 +145,7 @@ is_aristocracy = {
 	exists = owner
 	owner = { is_aristocratic_gov = yes }
 }
+politician_is_ecaf_noble = { is_aristocracy = yes }
 
 #############
 #############
@@ -233,6 +247,7 @@ is_militarist_gov =  {
 		has_government = gov_defensive_union
 		# ECAF
 		has_government = gov_jingoism
+		has_government = gov_jingoism_imp
 		has_government = gov_military_corp
 		has_government = lrsk_gov_var_gov_private_military_contractor_fam
 		# Government Variety Pack
@@ -386,9 +401,17 @@ is_dictatorial_no_dem = {
 	NOT = { has_authority = auth_dict_democratic }
 }
 
-is_imperial_corp = { has_authority = auth_corporate_imperial }
-is_dictatorial_dem = { has_authority = auth_dict_democratic }
 is_strict_dem = { has_authority = auth_strict_democratic }
+is_dictatorial_dem = { has_authority = auth_dict_democratic }
+is_imperial_corp = { has_authority = auth_corporate_imperial }
+
+has_long_reign_auth = {
+	OR = {
+		is_dictatorial_dem = yes
+		is_imperial_authority = yes
+		is_dictatorial_authority = yes
+	}
+}
 
 ### Merger of Rules uses the below 3
 has_corporate_imperial_auth = { is_imperial_corp = yes }
