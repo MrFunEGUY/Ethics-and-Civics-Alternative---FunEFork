@@ -33,8 +33,8 @@ is_democratic_authority = {
 		has_authority = auth_democratic
 		has_authority = auth_strict_democratic
 		AND = {
-			has_authority = auth_dict_democratic
 			is_egalitarian = yes
+			has_authority = auth_dict_democratic
 		}
 	}
 	
@@ -51,8 +51,8 @@ is_dictatorial_authority = {
 	OR = {
 		has_authority = auth_dictatorial
 		AND = {
-			has_authority = auth_dict_democratic
 			is_egalitarian = no
+			has_authority = auth_dict_democratic
 		}
 	}
 }
