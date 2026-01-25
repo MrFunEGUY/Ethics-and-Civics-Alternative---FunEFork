@@ -7,6 +7,7 @@ create_MSI_effect = {
 		portrait = random
 		traits = {
 			trait = "trait_pc_nuked_preference"
+			trait = "trait_organic"
 			trait = "trait_charismatic"
 			trait = "trait_intelligent"
 			trait = "trait_decadent"

@@ -170,7 +170,10 @@ evangelising_zealots = {
 	}
 
 	allow = {
-		is_country_type = default
+		OR = {
+			is_country_type = default
+			is_country_type = exiled
+		}
 		is_pacifist = no
 		OR = {
 			is_authoritarian = yes

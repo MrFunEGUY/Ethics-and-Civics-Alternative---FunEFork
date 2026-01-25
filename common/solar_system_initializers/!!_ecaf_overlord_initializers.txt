@@ -410,7 +410,6 @@ overlord_system_init = { # Aix - Empire Capital
 	}
 }
 
-
 overlord_system_4_init = { # First vassal
 	class = "rl_standard_stars"
 

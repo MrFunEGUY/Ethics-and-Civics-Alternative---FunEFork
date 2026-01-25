@@ -66,7 +66,7 @@ district_generator = {
 			energy = 1
 		}
 		## ECAF
-		inline_script = { script = districts/welfare_burden_upkeep_init ENERGY = @do3f_base_upkeep }
+		inline_script = { script = districts/ecaf_welfare_burden_upkeep_init ENERGY = @do3f_base_upkeep }
 	}
 
 	inline_script = {
@@ -79,7 +79,7 @@ district_generator = {
 	}
 
 	## ECAF
-	inline_script = { script = districts/civic_welfare_burden_init DISTRICT_GENERATOR = 1 }
+	inline_script = { script = districts/ecaf_civic_welfare_burden_init DISTRICT_GENERATOR = 1 }
 
 	triggered_planet_modifier = {
 		potential = {
@@ -206,7 +206,7 @@ district_mining = {
 			energy = 1
 		}
 		## ECAF
-		inline_script = { script = districts/welfare_burden_upkeep_init ENERGY = @do3f_base_upkeep }
+		inline_script = { script = districts/ecaf_welfare_burden_upkeep_init ENERGY = @do3f_base_upkeep }
 		upkeep = {
 			trigger = {
 				owner = {
@@ -229,7 +229,7 @@ district_mining = {
 	}
 
 	## ECAF
-	inline_script = { script = districts/civic_welfare_burden_init DISTRICT_MINING = 1 }
+	inline_script = { script = districts/ecaf_civic_welfare_burden_init DISTRICT_MINING = 1 }
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -388,7 +388,7 @@ district_farming = {
 			energy = 1
 		}
 		### ECAF
-		inline_script = { script = districts/welfare_burden_upkeep_init ENERGY = @do3f_base_upkeep }
+		inline_script = { script = districts/ecaf_welfare_burden_upkeep_init ENERGY = @do3f_base_upkeep }
 	}
 
 	inline_script = {
@@ -407,7 +407,7 @@ district_farming = {
 	}
 
 	### ECAF
-	inline_script = { script = districts/civic_welfare_burden_init DISTRICT_FARMING = 1 }
+	inline_script = { script = districts/ecaf_civic_welfare_burden_init DISTRICT_FARMING = 1 }
 
 	triggered_planet_modifier = {
 		potential = {

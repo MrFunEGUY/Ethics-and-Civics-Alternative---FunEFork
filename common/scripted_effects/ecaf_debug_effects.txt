@@ -1,0 +1,35 @@
+
+#####################################
+### More Authorities by MrFunEGUY ###
+#####################################
+
+# More Authorities
+get_ecaf_countries = {
+	if = {
+		limit = { any_playable_country = { is_strict_dem = yes } }
+		log = "Strict Democratic:"
+		every_playable_country = {
+			limit = { is_strict_dem = yes }
+			log = "//[this.GetName]"
+		}
+		log = "-------------------------"
+	}
+	if = {
+		limit = { any_playable_country = { is_dictatorial_dem = yes } }
+		log = "Democratic Dictatorship:"
+		every_playable_country = {
+			limit = { is_dictatorial_dem = yes }
+			log = "//[this.GetName]"
+		}
+		log = "-------------------------"
+	}
+	if = {
+		limit = { any_playable_country = { is_imperial_corp = yes } }
+		log = "Private Corporate:"
+		every_playable_country = {
+			limit = { is_imperial_corp = yes }
+			log = "//[this.GetName]"
+		}
+		log = "-------------------------"
+	}
+}

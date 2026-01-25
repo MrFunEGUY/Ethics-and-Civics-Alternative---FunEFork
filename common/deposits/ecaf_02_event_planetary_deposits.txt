@@ -31,7 +31,7 @@ d_migrating_forests = {
 		}
 		modifier = {
 			planet_housing_add = 1
-			job_druid_add = 1
+			job_druid_add = 100
 			biological_pop_happiness = 0.1
 		}
 	}
@@ -43,7 +43,7 @@ d_migrating_forests = {
 		}
 		modifier = {
 			planet_housing_add = 2
-			job_xenobiologist_add = 2
+			job_xenobiologist_add = 200
 		}
 	}
 
@@ -99,7 +99,7 @@ d_migrating_forest_reserve = {
 		}
 		modifier = {
 			biological_pop_happiness = 0.05
-			job_druid_add = 1
+			job_druid_add = 100
 		}
 	}
 
@@ -109,7 +109,7 @@ d_migrating_forest_reserve = {
 			owner = { has_valid_civic = civic_terraforming }
 		}
 		modifier = {
-			job_xenobiologist_add = 2
+			job_xenobiologist_add = 200
 		}
 	}
 

@@ -30,7 +30,7 @@ education_campaign = {
 	potential = {
 		is_gestalt = no
 		has_technology = tech_planetary_unification
-		NOT = { has_ethic = ethic_fanatic_capitalism }
+		is_fanatic_capitalist = no
 	}
 	ai_weight = {
 		weight = 0

@@ -20,6 +20,7 @@ diplomatic_stance = {
 			is_primitive = yes
 			is_country_type = awakened_marauders
 			is_country_type = mirrored_country
+			is_country_type = exiled
 		}
 	}
 
@@ -65,7 +66,7 @@ diplomatic_stance = {
 			# Pacifists
 			modifier = { # Fanatic Pacifists will *only* go belligerent if there's a rival neighbor...
 				factor = 0
-				has_ethic = ethic_fanatic_pacifist
+				is_fanatic_pacifist = yes
 				NOT = {
 					any_neighbor_country = {
 						is_rival = root
@@ -89,7 +90,7 @@ diplomatic_stance = {
 			# Angry people like to be belligerent
 			modifier = {
 				factor = 2.0
-				has_ethic = ethic_fanatic_militarist
+				is_fanatic_militarist = yes
 			}
 			modifier = {
 				factor = 1.5
@@ -97,7 +98,7 @@ diplomatic_stance = {
 			}
 			modifier = {
 				factor = 1.5
-				has_ethic = ethic_fanatic_authoritarian
+				is_fanatic_authoritarian = yes
 			}
 			modifier = {
 				factor = 1.25
@@ -188,7 +189,7 @@ diplomatic_stance = {
 			# Cranky people:
 			modifier = {
 				factor = 0
-				has_ethic = ethic_fanatic_xenophobe
+				is_fanatic_xenophobe = yes
 			}
 			modifier = {
 				factor = 0.1
@@ -196,7 +197,7 @@ diplomatic_stance = {
 			}
 			modifier = {
 				factor = 0.5
-				has_ethic = ethic_fanatic_authoritarian
+				is_fanatic_authoritarian = yes
 			}
 			modifier = {
 				factor = 0.75
@@ -206,7 +207,7 @@ diplomatic_stance = {
 			# Nice people:
 			modifier = {
 				factor = 2.0
-				has_ethic = ethic_fanatic_xenophile
+				is_fanatic_xenophile = yes
 			}
 			modifier = {
 				factor = 1.5
@@ -218,7 +219,7 @@ diplomatic_stance = {
 			}
 			modifier = {
 				factor = 1.3
-				has_ethic = ethic_fanatic_pacifist
+				is_fanatic_pacifist = yes
 			}
 			modifier = {
 				factor = 1.15
@@ -226,7 +227,7 @@ diplomatic_stance = {
 			}
 			modifier = {
 				factor = 1.3
-				has_ethic = ethic_fanatic_egalitarian
+				is_fanatic_egalitarian = yes
 			}
 			modifier = {
 				factor = 1.15
@@ -234,7 +235,7 @@ diplomatic_stance = {
 			}
 			modifier = {
 				factor = 1.1
-				has_ethic = ethic_fanatic_materialist
+				is_fanatic_materialist = yes
 			}
 			modifier = {
 				factor = 1.05
@@ -258,7 +259,10 @@ diplomatic_stance = {
 		icon = "GFX_diplomatic_stance_isolationist"
 
 		potential = {
-			is_country_type_with_subjects = yes
+			OR = {
+				is_country_type = exiled
+				is_country_type_with_subjects = yes
+			}
 		}
 
 		valid = {
@@ -504,7 +508,7 @@ diplomatic_stance = {
 			# Angry people want to be Supreme
 			modifier = {
 				factor = 2.0
-				has_ethic = ethic_fanatic_militarist
+				is_fanatic_militarist = yes
 			}
 			modifier = {
 				factor = 1.5
@@ -512,7 +516,7 @@ diplomatic_stance = {
 			}
 			modifier = {
 				factor = 1.5
-				has_ethic = ethic_fanatic_authoritarian
+				is_fanatic_authoritarian = yes
 			}
 			modifier = {
 				factor = 1.25
@@ -615,7 +619,7 @@ diplomatic_stance = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_ethic = ethic_fanatic_xenophile
+					is_fanatic_xenophile = yes
 					has_valid_civic = civic_hive_empath
 				}
 			}
@@ -916,6 +920,36 @@ diplomatic_stance = {
 			weight = 100
 		}
 	}
+
+	option = {
+		name = "diplo_stance_devastators"
+		icon = "GFX_diplomatic_stance_devastators"
+
+		potential = {
+			OR = {
+				has_valid_civic = civic_scorched_earth
+				has_valid_civic = civic_hive_scorched_earth
+			}
+		}
+
+		valid = {
+			OR = {
+				has_valid_civic = civic_scorched_earth
+				has_valid_civic = civic_hive_scorched_earth
+			}
+		}
+
+		policy_flags = {
+			diplo_stance_purification # TODO: Replace this later with a new one.
+		}
+
+		modifier = {
+		}
+
+		ai_weight = {
+			weight = 100
+		}
+	}
 }
 
 subjugation_war_terms = {
@@ -956,7 +990,7 @@ subjugation_war_terms = {
 			# Nice people who would never pick this.
 			modifier = {
 				factor = 0.1
-				has_ethic = ethic_fanatic_xenophile
+				is_fanatic_xenophile = yes
 			}
 			modifier = {
 				factor = 0.5
@@ -964,7 +998,7 @@ subjugation_war_terms = {
 			}
 			modifier = {
 				factor = 0.1
-				has_ethic = ethic_fanatic_pacifist
+				is_fanatic_pacifist = yes
 			}
 			modifier = {
 				factor = 0.5
@@ -974,7 +1008,7 @@ subjugation_war_terms = {
 			# Bad people who likely would.
 			modifier = {
 				factor = 1.3
-				has_ethic = ethic_fanatic_xenophobe
+				is_fanatic_xenophobe = yes
 			}
 			modifier = {
 				factor = 1.15
@@ -982,7 +1016,7 @@ subjugation_war_terms = {
 			}
 			modifier = {
 				factor = 1.3
-				has_ethic = ethic_fanatic_authoritarian
+				is_fanatic_authoritarian = yes
 			}
 			modifier = {
 				factor = 1.15
@@ -1023,7 +1057,7 @@ subjugation_war_terms = {
 			# Rational people who would like this.
 			modifier = {
 				factor = 1.3
-				has_ethic = ethic_fanatic_egalitarian
+				is_fanatic_egalitarian = yes
 			}
 			modifier = {
 				factor = 1.15
@@ -1031,7 +1065,7 @@ subjugation_war_terms = {
 			}
 			modifier = {
 				factor = 1.3
-				has_ethic = ethic_fanatic_materialist
+				is_fanatic_materialist = yes
 			}
 			modifier = {
 				factor = 1.15
@@ -1072,7 +1106,7 @@ subjugation_war_terms = {
 			# Bad people who probably not pick this.
 			modifier = {
 				factor = 0.1
-				has_ethic = ethic_fanatic_xenophobe
+				is_fanatic_xenophobe = yes
 			}
 			modifier = {
 				factor = 0.5
@@ -1080,7 +1114,7 @@ subjugation_war_terms = {
 			}
 			modifier = {
 				factor = 0.1
-				has_ethic = ethic_fanatic_authoritarian
+				is_fanatic_authoritarian = yes
 			}
 			modifier = {
 				factor = 0.5
@@ -1090,7 +1124,7 @@ subjugation_war_terms = {
 			# Nice people who probably would.
 			modifier = {
 				factor = 1.3
-				has_ethic = ethic_fanatic_xenophile
+				is_fanatic_xenophile = yes
 			}
 			modifier = {
 				factor = 1.15
@@ -1098,7 +1132,7 @@ subjugation_war_terms = {
 			}
 			modifier = {
 				factor = 1.3
-				has_ethic = ethic_fanatic_pacifist
+				is_fanatic_pacifist = yes
 			}
 			modifier = {
 				factor = 1.15
@@ -1139,7 +1173,7 @@ subjugation_war_terms = {
 			# Nice people who would never pick this.
 			modifier = {
 				factor = 0.1
-				has_ethic = ethic_fanatic_xenophile
+				is_fanatic_xenophile = yes
 			}
 			modifier = {
 				factor = 0.5
@@ -1147,7 +1181,7 @@ subjugation_war_terms = {
 			}
 			modifier = {
 				factor = 0.1
-				has_ethic = ethic_fanatic_pacifist
+				is_fanatic_pacifist = yes
 			}
 			modifier = {
 				factor = 0.5
@@ -1157,7 +1191,7 @@ subjugation_war_terms = {
 			# Bad people who likely would.
 			modifier = {
 				factor = 1.3
-				has_ethic = ethic_fanatic_xenophobe
+				is_fanatic_xenophobe = yes
 			}
 			modifier = {
 				factor = 1.15
@@ -1165,7 +1199,7 @@ subjugation_war_terms = {
 			}
 			modifier = {
 				factor = 1.3
-				has_ethic = ethic_fanatic_authoritarian
+				is_fanatic_authoritarian = yes
 			}
 			modifier = {
 				factor = 1.15
@@ -1206,7 +1240,7 @@ subjugation_war_terms = {
 			# Rational people who would like this.
 			modifier = {
 				factor = 1.3
-				has_ethic = ethic_fanatic_egalitarian
+				is_fanatic_egalitarian = yes
 			}
 			modifier = {
 				factor = 1.15
@@ -1214,7 +1248,7 @@ subjugation_war_terms = {
 			}
 			modifier = {
 				factor = 1.3
-				has_ethic = ethic_fanatic_materialist
+				is_fanatic_materialist = yes
 			}
 			modifier = {
 				factor = 1.15
@@ -1255,7 +1289,7 @@ subjugation_war_terms = {
 			# Bad people who probably not pick this.
 			modifier = {
 				factor = 0.1
-				has_ethic = ethic_fanatic_xenophobe
+				is_fanatic_xenophobe = yes
 			}
 			modifier = {
 				factor = 0.5
@@ -1263,7 +1297,7 @@ subjugation_war_terms = {
 			}
 			modifier = {
 				factor = 0.1
-				has_ethic = ethic_fanatic_authoritarian
+				is_fanatic_authoritarian = yes
 			}
 			modifier = {
 				factor = 0.5
@@ -1273,7 +1307,7 @@ subjugation_war_terms = {
 			# Nice people who probably would.
 			modifier = {
 				factor = 1.3
-				has_ethic = ethic_fanatic_xenophile
+				is_fanatic_xenophile = yes
 			}
 			modifier = {
 				factor = 1.15
@@ -1281,7 +1315,7 @@ subjugation_war_terms = {
 			}
 			modifier = {
 				factor = 1.3
-				has_ethic = ethic_fanatic_pacifist
+				is_fanatic_pacifist = yes
 			}
 			modifier = {
 				factor = 1.15
@@ -1401,6 +1435,49 @@ orbital_bombardment = {
 			modifier = {
 				factor = 10
 				has_ascension_perk = ap_become_the_crisis
+			}
+		}
+	}
+
+	option = {
+		name = "orbital_bombardment_devastation"
+
+		in_breach_of = {
+			{
+				key = resolution_rulesofwar_independent_tribunals
+			}
+			{
+				key = resolution_rulesofwar_last_resort_doctrine
+			}
+			{
+				key = resolution_rulesofwar_demobilization_initiative
+			}
+		}
+
+		potential = {
+			OR = {
+				has_valid_civic = civic_scorched_earth
+				has_valid_civic = civic_hive_scorched_earth
+			}
+		}
+
+		policy_flags = {
+			orbital_bombardment_devastation
+		}
+		modifier = {}
+
+		AI_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+					has_valid_civic = civic_scorched_earth
+					has_valid_civic = civic_hive_scorched_earth
+				}
+			}
+			modifier = {
+				factor = 10
+				has_ascension_perk = ap_become_the_crisis
+				# TODO: Add Infernals crisis path with OR={} or remove THIS line later.
 			}
 		}
 	}
@@ -1571,7 +1648,7 @@ trade_policy = {
             is_worker_coop_empire = no
 			NOR = {
 				has_policy_flag = "economic_stance_planned"
-				has_ethic = "ethic_fanatic_socialism"
+				is_fanatic_socialist = yes
 			}
 		}
 
@@ -1601,7 +1678,7 @@ trade_policy = {
 			is_worker_coop_empire = no
 			NOR = {
 				has_policy_flag = "economic_stance_planned"
-				has_ethic = "ethic_fanatic_socialism"
+				is_fanatic_socialist = yes
 			}
 		}
 
@@ -1748,7 +1825,7 @@ trade_policy = {
 		valid = {
 			NOR = {
 				has_policy_flag = "economic_stance_market"
-				has_ethic = "ethic_fanatic_capitalism"
+				is_fanatic_capitalist = yes
 			}
 		}
 		modifier = {
@@ -1771,7 +1848,7 @@ trade_policy = {
 		valid = {
 			NOR = {
 				has_policy_flag = "economic_stance_market"
-				has_ethic = "ethic_fanatic_capitalism"
+				is_fanatic_capitalist = yes
 			}
 		}
 		AI_weight = {
@@ -1867,7 +1944,7 @@ enlistment_policy = {
 			}
 			modifier = {
 				factor = 3
-				has_ethic = ethic_fanatic_egalitarian
+				is_fanatic_egalitarian = yes
 			}
 			modifier = {
 				factor = 2
@@ -1875,7 +1952,7 @@ enlistment_policy = {
 			}
 			modifier = {
 				factor = 4
-				has_ethic = ethic_fanatic_pacifist
+				is_fanatic_pacifist = yes
 			}
 		}
 	}
@@ -1912,7 +1989,7 @@ enlistment_policy = {
 			}
 			modifier = {
 				factor = 3
-				has_ethic = ethic_fanatic_militarist
+				is_fanatic_militarist = yes
 			}
 			modifier = {
 				factor = 2
@@ -1952,7 +2029,7 @@ enlistment_policy = {
 			weight = 1.5
 			modifier = {
 				factor = 5
-				has_ethic = ethic_fanatic_militarist
+				is_fanatic_militarist = yes
 			}
 			modifier = {
 				factor = 2
@@ -1981,7 +2058,7 @@ enlistment_policy = {
 
 			OR = {
 				any_war = { is_total_war = yes }
-				NOT = { has_ethic = ethic_fanatic_pacifist }
+				NOT = { is_fanatic_pacifist = yes }
 			}
 		}
 
@@ -2051,10 +2128,8 @@ economic_stance = {
 				has_valid_civic = civic_distributism
 				has_valid_civic = civic_state_monopoly
 				and = {
-					has_ethic = ethic_fanatic_authoritarian
-					not = {
-						has_ethic = ethic_fanatic_capitalism
-					}
+					is_fanatic_authoritarian = yes
+					is_fanatic_capitalist = no
 				}
 				any_owned_species = {
 					has_living_standard = {
@@ -2116,8 +2191,8 @@ economic_stance = {
 				is_capitalism = yes
 				has_valid_civic = civic_beacon_of_liberty
 				AND = {
-					has_ethic = ethic_fanatic_egalitarian
-					NOT = { has_ethic = ethic_fanatic_socialism }
+					is_fanatic_egalitarian = yes
+					is_fanatic_socialist = no
 				}
 			}
 		}
@@ -2181,8 +2256,8 @@ slavery_percent = {
 			modifier = {
 				factor = 1.25
 				OR = {
-					has_ethic = ethic_fanatic_capitalism
-					has_ethic = ethic_fanatic_authoritarian
+					is_fanatic_capitalist = yes
+					is_fanatic_authoritarian = yes
 				}
 			}
 		}
@@ -2247,7 +2322,7 @@ bureaucracy = {
 			has_technology = tech_centralized_state
 			NOR = {
 				has_valid_civic = civic_beacon_of_liberty
-				has_ethic = "ethic_fanatic_egalitarian"
+				is_fanatic_egalitarian = yes
 			}
 		}
 		policy_flags = {
@@ -2261,7 +2336,7 @@ bureaucracy = {
 		AI_weight = {
 			modifier = {
 				factor = 10
-				has_ethic = "ethic_fanatic_authoritarian"
+				is_fanatic_authoritarian = yes
 			}
 		}
 	}
@@ -2275,7 +2350,7 @@ bureaucracy = {
 			has_technology = tech_federal_state
 			NOR = {
 				has_valid_civic = civic_harmonious_hierarchy
-				has_ethic = "ethic_fanatic_authoritarian"
+				is_fanatic_authoritarian = yes
 			}
 		}
 		modifier = {
@@ -2286,7 +2361,7 @@ bureaucracy = {
 		AI_weight = {
 			modifier = {
 				factor = 10
-				has_ethic = "ethic_fanatic_egalitarian"
+				is_fanatic_egalitarian = yes
 			}
 		}
 	}
@@ -2311,7 +2386,7 @@ healthcare = {
 		name = "private_healthcare"
 		valid = {
 			NOR = {
-				has_ethic = "ethic_fanatic_socialism"
+				is_fanatic_socialist = yes
 				has_valid_civic = civic_welfare_state
 			}
 		}
@@ -2326,7 +2401,7 @@ healthcare = {
 		AI_weight = {
 			modifier = {
 				factor = 10
-				has_ethic = "ethic_fanatic_capitalism"
+				is_fanatic_capitalist = yes
 			}
 		}
 	}
@@ -2334,7 +2409,7 @@ healthcare = {
 		name = "public_healthcare"
 		valid = {
 			NOR = {
-				has_ethic = "ethic_fanatic_capitalism"
+				is_fanatic_capitalist = yes
 				has_valid_civic = civic_merchant_guilds
 			}
 		}
@@ -2350,7 +2425,7 @@ healthcare = {
 		AI_weight = {
 			modifier = {
 				factor = 10
-				has_ethic = "ethic_fanatic_socialism"
+				is_fanatic_socialist = yes
 			}
 		}
 	}
@@ -2376,7 +2451,7 @@ education = {
 		valid = {
 			NOR = {
 				has_valid_civic = civic_welfare_state
-				has_ethic = "ethic_fanatic_socialism"
+				is_fanatic_socialist = yes
 			}
 		}
 		policy_flags = {
@@ -2390,7 +2465,7 @@ education = {
 		AI_weight = {
 			modifier = {
 				factor = 10
-				has_ethic = "ethic_fanatic_capitalism"
+				is_fanatic_capitalist = yes
 			}
 		}
 	}
@@ -2398,7 +2473,7 @@ education = {
 		name = "public_education"
 		valid = {
 			NOR = {
-				has_ethic = "ethic_fanatic_capitalism"
+				is_fanatic_capitalist = yes
 				has_valid_civic = civic_merchant_guilds
 			}
 		}
@@ -2415,7 +2490,7 @@ education = {
 		AI_weight = {
 			modifier = {
 				factor = 10
-				has_ethic = "ethic_fanatic_socialism"
+				is_fanatic_socialist = yes
 			}
 		}
 	}
@@ -2507,7 +2582,7 @@ transportation_logistics = {
 			civilian_transport
 		}
 		valid = {
-			NOT = { has_ethic = ethic_fanatic_militarist }
+			NOT = { is_fanatic_militarist = yes }
 			is_country_type_with_subjects = yes
 		}
 		modifier = {
@@ -2528,7 +2603,7 @@ transportation_logistics = {
 		}
 		valid = {
 			NOR = {
-				has_ethic = ethic_fanatic_pacifist
+				is_fanatic_pacifist = yes
 				has_valid_civic = civic_corporate_dominion
 			}
 			is_country_type_with_subjects = yes
@@ -2562,7 +2637,7 @@ interstellar_telecom = {
 			civilian_telecom
 		}
 		valid = {
-			NOT = { has_ethic = ethic_fanatic_militarist }
+			NOT = { is_fanatic_militarist = yes }
 			is_country_type_with_subjects = yes
 		}
 		modifier = {
@@ -2581,7 +2656,7 @@ interstellar_telecom = {
 		}
 		valid = {
 			NOR = {
-				has_ethic = ethic_fanatic_pacifist
+				is_fanatic_pacifist = yes
 				has_valid_civic = civic_exploration
 			}
 			is_country_type_with_subjects = yes
@@ -2617,7 +2692,7 @@ interstellar_media = {
 		valid = {
 			is_country_type_with_subjects = yes
 			NOR = {
-				has_ethic = ethic_fanatic_authoritarian
+				is_fanatic_authoritarian = yes
 				has_valid_civic = civic_divine_order
 				has_valid_civic = civic_harmonious_hierarchy
 			}
@@ -2631,7 +2706,7 @@ interstellar_media = {
 		AI_weight = {
 			modifier = {
 				factor = 10
-				has_ethic = "ethic_fanatic_egalitarian"
+				is_fanatic_egalitarian = yes
 			}
 		}
 	}
@@ -2643,7 +2718,7 @@ interstellar_media = {
 		valid = {
 			is_country_type_with_subjects = yes
 			NOR = {
-				has_ethic = ethic_fanatic_egalitarian
+				is_fanatic_egalitarian = yes
 				has_valid_civic = civic_beacon_of_liberty
 				has_valid_civic = civic_political_pluralism
 			}
@@ -2657,7 +2732,7 @@ interstellar_media = {
 		AI_weight = {
 			modifier = {
 				factor = 10
-				has_ethic = "ethic_fanatic_authoritarian"
+				is_fanatic_authoritarian = yes
 			}
 		}
 	}
@@ -3228,7 +3303,7 @@ slavery = {
 			OR = {
 				is_authoritarian = yes
 				is_xenophobe = yes
-				has_ethic = ethic_fanatic_capitalism
+				is_fanatic_capitalist = yes
 			}
 		}
 
@@ -3250,6 +3325,7 @@ slavery = {
 				NOR = {
 					is_authoritarian = yes
 					is_xenophobe = yes
+					is_fanatic_capitalist = yes
 				}
 			}
 			# special case for harmonious collectives

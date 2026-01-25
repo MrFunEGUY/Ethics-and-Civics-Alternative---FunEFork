@@ -106,6 +106,7 @@ overlord_recruiter_drone = {
 
 	weight = {
 		weight = @overlord_job_weight
+		mult = value:scripted_job_weight_shroud_forged_mult
 	}
 
 	promotion = {

@@ -2800,7 +2800,7 @@ resolution_greatergood_repeal_1 = {
 
 		modifier = { # ECAF
 			factor = 2
-			has_ethic = ethic_fanatic_capitalism
+			is_fanatic_capitalist = yes
 			desc = ethic_fanatic_capitalism
 		}
 	}
@@ -2942,7 +2942,7 @@ resolution_greatergood_repeal_2 = {
 
 		modifier = { # ECAF
 			factor = 2
-			has_ethic = ethic_fanatic_capitalism
+			is_fanatic_capitalist = yes
 			desc = ethic_fanatic_capitalism
 		}
 	}
@@ -3093,7 +3093,7 @@ resolution_greatergood_repeal_3 = {
 
 		modifier = { # ECAF
 			factor = 2
-			has_ethic = ethic_fanatic_capitalism
+			is_fanatic_capitalist = yes
 			desc = ethic_fanatic_capitalism
 		}
 	}
@@ -3237,7 +3237,7 @@ resolution_greatergood_repeal_4 = {
 
 		modifier = { # ECAF
 			factor = 2
-			has_ethic = ethic_fanatic_capitalism
+			is_fanatic_capitalist = yes
 			desc = ethic_fanatic_capitalism
 		}
 	}
@@ -3375,7 +3375,7 @@ resolution_greatergood_repeal_5 = {
 
 		modifier = { # ECAF
 			factor = 2
-			has_ethic = ethic_fanatic_capitalism
+			is_fanatic_capitalist = yes
 			desc = ethic_fanatic_capitalism
 		}
 	}
@@ -3827,7 +3827,7 @@ resolution_greatergood_greater_than_ourselves = {
 
 		modifier = { # Ariphaos
             factor = 0.6
-            has_ethic = ethic_fanatic_authoritarian
+            is_fanatic_authoritarian = yes
             desc = ethic_fanatic_authoritarian
         }
 
@@ -4040,7 +4040,7 @@ resolution_greatergood_balance_in_the_middle = {
 
 		modifier = { # Ariphaos
             factor = 0.6
-            has_ethic = ethic_fanatic_authoritarian
+            is_fanatic_authoritarian = yes
             desc = ethic_fanatic_authoritarian
         }
 

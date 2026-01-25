@@ -249,7 +249,7 @@ ethic_authoritarian = {
 			exists = capital_scope
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost_owner = { has_ethic = ethic_fanatic_authoritarian }
+				observation_outpost_owner = { is_fanatic_authoritarian = yes }
 			}
 		}
 		modifier = {
@@ -279,7 +279,7 @@ ethic_authoritarian = {
 		}
 		modifier = {
 			factor = 3
-			has_ethic = ethic_fanatic_authoritarian
+			is_fanatic_authoritarian = yes
 		}
 		modifier = {
 			factor = 1.25
@@ -608,7 +608,7 @@ ethic_egalitarian = {
 			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost_owner = { has_ethic = ethic_fanatic_egalitarian }
+				observation_outpost_owner = { is_fanatic_egalitarian = yes }
 			}
 		}
 		modifier = {
@@ -632,7 +632,7 @@ ethic_egalitarian = {
 		}
 		modifier = {
 			factor = 3
-			has_ethic = ethic_fanatic_egalitarian
+			is_fanatic_egalitarian = yes
 		}
 		modifier = {
 			exists = overlord
@@ -1022,7 +1022,7 @@ ethic_xenophobe = {
 		}
 		modifier = {
 			factor = 3
-			has_ethic = ethic_fanatic_xenophobe
+			is_fanatic_xenophobe = yes
 		}
 		modifier = {
 			exists = overlord
@@ -1089,7 +1089,7 @@ ethic_xenophobe = {
 			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost_owner = { has_ethic = ethic_fanatic_xenophobe }
+				observation_outpost_owner = { is_fanatic_xenophobe = yes }
 			}
 		}
 		modifier = {
@@ -1445,7 +1445,7 @@ ethic_xenophile = {
 		}
 		modifier = {
 			factor = 3
-			has_ethic = ethic_fanatic_xenophile
+			is_fanatic_xenophile = yes
 		}
 		modifier = {
 			exists = overlord
@@ -1503,7 +1503,7 @@ ethic_xenophile = {
 			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost_owner = { has_ethic = ethic_fanatic_xenophile }
+				observation_outpost_owner = { is_fanatic_xenophile = yes }
 			}
 		}
 		modifier = {
@@ -1876,7 +1876,7 @@ ethic_militarist = {
 		}
 		modifier = {
 			factor = 3
-			has_ethic = ethic_fanatic_militarist
+			is_fanatic_militarist = yes
 		}
 		modifier = {
 			exists = overlord
@@ -1973,7 +1973,7 @@ ethic_militarist = {
 			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost_owner = { has_ethic = ethic_fanatic_militarist }
+				observation_outpost_owner = { is_fanatic_militarist = yes }
 			}
 		}
 		modifier = {
@@ -2260,7 +2260,7 @@ ethic_pacifist = {
 		}
 		modifier = {
 			factor = 3
-			has_ethic = ethic_fanatic_pacifist
+			is_fanatic_pacifist = yes
 		}
 		modifier = {
 			exists = overlord
@@ -2314,7 +2314,7 @@ ethic_pacifist = {
 			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost_owner = { has_ethic = ethic_fanatic_pacifist }
+				observation_outpost_owner = { is_fanatic_pacifist = yes }
 			}
 		}
 		modifier = {
@@ -2618,7 +2618,7 @@ ethic_spiritualist = {
 			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost_owner = { has_ethic = ethic_fanatic_spiritualist }
+				observation_outpost_owner = { is_fanatic_spiritualist = yes }
 			}
 		}
 		modifier = {
@@ -2656,7 +2656,7 @@ ethic_spiritualist = {
 		}
 		modifier = {
 			factor = 3
-			has_ethic = ethic_fanatic_spiritualist
+			is_fanatic_spiritualist = yes
 		}
 		modifier = {
 			factor = 1.25
@@ -2981,7 +2981,7 @@ ethic_materialist = {
 			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost_owner = { has_ethic = ethic_fanatic_materialist }
+				observation_outpost_owner = { is_fanatic_materialist = yes }
 			}
 		}
 		modifier = {
@@ -3011,7 +3011,7 @@ ethic_materialist = {
 		}
 		modifier = {
 			factor = 3
-			has_ethic = ethic_fanatic_materialist
+			is_fanatic_materialist = yes
 		}
 		modifier = {
 			factor = 1.25
@@ -3313,7 +3313,7 @@ ethic_socialism = {
 			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost_owner = { has_ethic = ethic_fanatic_socialism }
+				observation_outpost_owner = { is_fanatic_socialist = yes }
 			}
 		}
 
@@ -3338,7 +3338,7 @@ ethic_socialism = {
 		}
 		modifier = {
 			factor = 3
-			has_ethic = ethic_fanatic_socialism
+			is_fanatic_socialist = yes
 		}
 
 		# Check for any leader on the Council with Faction's Ethic.
@@ -3641,7 +3641,7 @@ ethic_capitalism = {
 			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost_owner = { has_ethic = ethic_fanatic_capitalism }
+				observation_outpost_owner = { is_fanatic_capitalist = yes }
 			}
 		}
 		modifier = {
@@ -3665,7 +3665,7 @@ ethic_capitalism = {
 		}
 		modifier = {
 			factor = 3
-			has_ethic = ethic_fanatic_capitalism
+			is_fanatic_capitalist = yes
 		}
 
 		# Check for any leader on the Council with Faction's Ethic.

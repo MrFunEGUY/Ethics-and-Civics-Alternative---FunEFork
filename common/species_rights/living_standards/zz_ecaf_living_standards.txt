@@ -389,7 +389,7 @@ living_standard_good = {
 				is_worker_coop_empire = yes
 				has_valid_civic = civic_dystopian_society
 				has_valid_civic = civic_beacon_of_liberty
-				has_ethic = ethic_fanatic_capitalism
+				is_fanatic_capitalist = yes
 			}
 		}
 		NOT = { has_trait = trait_hive_mind }
@@ -544,7 +544,7 @@ living_standard_normal = {
 				has_valid_civic = civic_dystopian_society
 				has_valid_civic = civic_slaving_despots
 				has_valid_civic = civic_welfare_state
-				has_ethic = ethic_fanatic_socialism
+				is_fanatic_socialist = yes
 			}
 		}
 		NOR = {
@@ -671,7 +671,7 @@ living_standard_stratified = {
 			fail_text = empire_not_capitalist_authoritarian
 			from = {
 				OR = {
-					has_ethic = ethic_fanatic_capitalism
+					is_fanatic_capitalist = yes
 					AND = {
 						is_authoritarian = yes
 						is_socialist = no

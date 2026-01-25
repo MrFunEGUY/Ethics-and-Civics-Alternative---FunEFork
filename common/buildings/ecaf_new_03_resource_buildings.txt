@@ -23,7 +23,7 @@ building_thermal_borehole = {
 	}
 
 	planet_modifier = {
-		job_deep_miner_add = 3
+		job_deep_miner_add = 300
 		planet_stability_add = -5
 	}
 

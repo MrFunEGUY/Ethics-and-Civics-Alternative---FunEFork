@@ -117,7 +117,7 @@ gov_anarchy_communism = {
 			is_any_dictatorial_authority = yes
 			is_oligarchic_authority_no_merc = yes
 		}
-		has_ethic = ethic_fanatic_socialism
+		is_fanatic_socialist = yes
 		is_authoritarian = yes
 		is_militarist = yes
 	}
@@ -186,7 +186,7 @@ gov_anarch_capitalism = {
 	ruler_title = RT_CEO
 	ruler_title_female = RT_CEO_FEMALE
 	possible = {
-		# has_ethic = ethic_fanatic_capitalism
+		# is_fanatic_capitalist = yes
 		# is_megacorp = yes
 		# is_egalitarian = yes
 		always = no
@@ -227,7 +227,7 @@ gov_minarchy = {
 	ruler_title = RT_PRIME_MINISTER
 	ruler_title_female = RT_PRIME_MINISTER
 	possible = {
-		has_ethic = ethic_fanatic_capitalism
+		is_fanatic_capitalist = yes
 		is_egalitarian = yes
 		NOT = {
 			is_megacorp = yes
@@ -249,7 +249,7 @@ gov_timocracy = {
 	ruler_title = RT_ARCHON
 	ruler_title_female = RT_ARCHON
 	possible = {
-		has_ethic = ethic_fanatic_capitalism
+		is_fanatic_capitalist = yes
 		NOT = { has_ethic = ethic_fanatic_egalitarian }
 		is_any_democratic_authority = yes
 	}
@@ -316,7 +316,7 @@ gov_imperial_socialism = {
 		base = 150
 		modifier = {
 			factor = 5
-			has_ethic = ethic_fanatic_socialism
+			is_fanatic_socialist = yes
 		}
 	}
 }
@@ -355,7 +355,7 @@ gov_communist_dictatorship = {
 	ruler_title_female = RT_CHAIRWOMAN
 	possible = {
 		is_any_dictatorial_authority = yes
-		has_ethic = ethic_fanatic_socialism
+		is_fanatic_socialist = yes
 		is_authoritarian = yes
 		is_xenophobe = no
 	}
@@ -375,7 +375,7 @@ gov_enlighted_socialism = {
 	should_force_rename = yes
 	possible = {
 		is_any_dictatorial_authority = yes
-		has_ethic = ethic_fanatic_socialism
+		is_fanatic_socialist = yes
 		is_authoritarian = no
 	}
 	weight = {
@@ -482,7 +482,7 @@ gov_peoples_commissariat = {
 	ruler_title_female = RT_DEPUTY
 	should_force_rename = yes
 	possible = {
-		has_ethic = ethic_fanatic_socialism
+		is_fanatic_socialist = yes
 		is_oligarchic_authority_no_merc = yes
 	}
 	weight = {
@@ -560,7 +560,7 @@ gov_social_democracy = {
 	ruler_title_female = RT_PRESIDENT
 	possible = {
 		NOT = {
-			has_ethic = ethic_fanatic_socialism
+			is_fanatic_socialist = yes
 		}
 		OR = {
 			has_valid_civic = civic_welfare_state

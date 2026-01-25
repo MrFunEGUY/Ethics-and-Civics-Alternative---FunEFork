@@ -12,35 +12,19 @@ triggered_planet_modifier = {
 	}
 	job_politician_add = $AMOUNT$
 }
+
 triggered_desc = {
 	trigger = {
-		politician_is_technophant = no
-		## ECAF
-		is_stratocracy = no
-		is_bureaucracy = no
-		is_theocracy = no
-		is_aristocracy = no
-		is_technocracy = no
-		is_plutocracy = no
-		## // ECAF
-		exists = owner
-		owner = {
-			is_worker_coop_empire = no
-			is_gestalt = no
-		}
-		OR = {
-			NOT = { has_planet_flag = toxic_knights_habitat }
-			NOT = { owner = { has_origin = origin_toxic_knights } }
-		}
+		politician_is_superstitious_beliefs_high_priest = yes
 	}
-	text = job_politician_effect_desc
+	text = job_superstitious_beliefs_high_priest_effect_desc
 }
 
 triggered_desc = {
 	trigger = {
-		politician_is_technophant = yes
+		politician_is_superstitious_beliefs_high_priest_corporate = yes
 	}
-	text = job_technophant_effect_desc
+	text = job_superstitious_beliefs_high_priest_corporate_effect_desc
 }
 
 triggered_planet_modifier = {
@@ -53,54 +37,45 @@ triggered_planet_modifier = {
 	job_bureaucrat_add = $AMOUNT$
 	mult = 1.5
 }
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = {
-			is_worker_coop_empire = yes
-		}
-	}
-	text = job_bureaucrat_effect_desc
-}
 
-### ECAF
+# ### ECAF
 
-triggered_desc = {
-	trigger = { is_stratocracy = yes }
-	text = job_commandant_effect_desc
-}
+# triggered_desc = {
+# 	trigger = { is_stratocracy = yes }
+# 	text = job_commandant_effect_desc
+# }
 
-triggered_desc = {
-	trigger = { is_bureaucracy = yes }
-	text = job_supervisor_effect_desc
-}
+# triggered_desc = {
+# 	trigger = { is_bureaucracy = yes }
+# 	text = job_supervisor_effect_desc
+# }
 
-triggered_desc = {
-	trigger = { is_theocracy = yes }
-	text = job_high_priest_effect_desc
-}
+# triggered_desc = {
+# 	trigger = { is_theocracy = yes }
+# 	text = job_high_priest_effect_desc
+# }
 
-triggered_desc = {
-	trigger = { is_aristocracy = yes }
-	text = job_noble_effect_desc
-}
+# triggered_desc = {
+# 	trigger = { is_aristocracy = yes }
+# 	text = job_noble_effect_desc
+# }
 
-triggered_desc = {
-	trigger = { is_technocracy = yes }
-	text = job_head_researcher_effect_desc
-}
+# triggered_desc = {
+# 	trigger = { is_technocracy = yes }
+# 	text = job_head_researcher_effect_desc
+# }
 
-triggered_desc = {
-	trigger = { is_plutocracy = yes }
-	text = job_merchant_effect_desc
-}
+# triggered_desc = {
+# 	trigger = { is_plutocracy = yes }
+# 	text = job_merchant_effect_desc
+# }
 
-triggered_desc = {
-	trigger = { has_moguls = yes }
-	text = job_mogul_effect_desc
-}
+# triggered_desc = {
+# 	trigger = { has_moguls = yes }
+# 	text = job_mogul_effect_desc
+# }
 
-triggered_desc = {
-	trigger = { has_administrators = yes }
-	text = job_politician_effect_desc
-}
+# triggered_desc = {
+# 	trigger = { has_administrators = yes }
+# 	text = job_politician_effect_desc
+# }

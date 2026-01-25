@@ -33,7 +33,7 @@ nutritional_plenitude = {
 	potential = {
 		is_gestalt = no
 		NOT = {
-			has_ethic = ethic_fanatic_capitalism
+			is_fanatic_capitalist = yes
 		}
 	}
 	prerequisites = {

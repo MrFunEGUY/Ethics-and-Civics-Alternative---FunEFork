@@ -78,10 +78,7 @@ civilian = {
 
 		produces = {
 			trigger = {
-				OR = {
-					has_ethic = ethic_fanatic_spiritualist
-					has_ethic = ethic_spiritualist
-				}
+				is_spiritualist = yes
 				owner = { has_valid_civic = civic_gospel_of_the_masses }
 			}
 			trade = @trade_value_prosperity_gospel
@@ -151,13 +148,10 @@ robot_servant = {
 		energy = 100
 	}
 
+	inline_script = "pop_categories/social_classes_triggered_modifiers_no_happiness"
+
 	resources = {
 		category = pop_category_robot
-
-		upkeep = {
-			energy = @living_standard_energy_normal
-		}
-
 		inline_script = "output/base_pop_crew" ## ECAF
 	}
 }
@@ -340,6 +334,10 @@ criminal = {
 	resources = {
 		category = pop_category_workers
 		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_twisted_experimenters_empire = yes }
+			}
 			trade = 5
 		}
 		inline_script = "output/base_pop_crew" ## ECAF

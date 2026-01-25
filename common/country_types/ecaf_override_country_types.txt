@@ -3,10 +3,11 @@ enclave_mercenary = {
 	show_in_contacts_list = yes
 	can_have_their_comms_shared = yes
 	government = yes
-	randomize_ethos = yes
+	randomize_ethos = yes ## ECAF
 	is_enclave = yes
-	is_mercenary = yes
-	observable = yes # no
+	prevent_automatic_genocidal_hostilities = yes
+	# observable = yes # no
+	observable = no ## ECAF
 	playable = no
 	needs_survey = no
 	ship_disengagement = yes
@@ -111,11 +112,11 @@ enclave_mercenary = {
 	resources = {
 		category = country_base
 		produces = {
-			energy = 500
-			minerals = 250
-			food = 100
-			alloys = 250
 			ecaf_crew = 250 ## ECAF
+			energy = 500
+			minerals = 500
+			food = 500
+			alloys = 250
 			consumer_goods = 100
 			rare_crystals = 1
 			exotic_gases = 1
@@ -135,9 +136,11 @@ enclave_mercenary = {
 			trigger = {
 				mid_game_years_passed > 0
 			}
-			energy = 250
-			alloys = 250
 			ecaf_crew = 250 ## ECAF
+			energy = 500
+			minerals = 500
+			food = 500
+			alloys = 250
 			rare_crystals = 10
 			exotic_gases = 10
 			volatile_motes = 10
@@ -151,12 +154,14 @@ enclave_mercenary = {
 			trigger = {
 				end_game_years_passed > 0
 			}
-			energy = 250
-			alloys = 250
 			ecaf_crew = 250 ## ECAF
-			sr_dark_matter = 2
-			sr_living_metal = 2
-			sr_zro = 2
+			energy = 500
+			minerals = 500
+			food = 500
+			alloys = 250
+			sr_dark_matter = 5
+			sr_living_metal = 5
+			sr_zro = 5
 
 			physics_research = 400
 			engineering_research = 400
@@ -167,42 +172,42 @@ enclave_mercenary = {
 			trigger = {
 				has_technology = tech_rare_crystals
 			}
-			rare_crystals = 2
+			rare_crystals = 10
 		}
 
 		produces = {
 			trigger = {
 				has_technology = tech_exotic_gases
 			}
-			exotic_gases = 2
+			exotic_gases = 10
 		}
 
 		produces = {
 			trigger = {
 				has_technology = tech_volatile_motes
 			}
-			volatile_motes = 2
+			volatile_motes = 10
 		}
 
 		produces = {
 			trigger = {
 				has_technology = tech_mine_dark_matter
 			}
-			sr_dark_matter = 1
+			sr_dark_matter = 5
 		}
 
 		produces = {
 			trigger = {
 				has_technology = tech_mine_living_metal
 			}
-			sr_living_metal = 1
+			sr_living_metal = 5
 		}
 
 		produces = {
 			trigger = {
 				has_technology = tech_mine_zro
 			}
-			sr_zro = 1
+			sr_zro = 5
 		}
 	}
 }

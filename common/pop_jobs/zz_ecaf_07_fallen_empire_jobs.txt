@@ -23,7 +23,7 @@ fe_hedonist = {
 			NOR = {
 				is_machine_empire = yes
 				is_hive_empire = yes
-				has_ethic = ethic_fanatic_spiritualist
+				is_fanatic_spiritualist = yes
 			}
 		}
 		is_same_species = owner

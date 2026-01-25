@@ -5,10 +5,12 @@
 ##################
 building_temple = {
 	base_buildtime = @b1_time
-
 	exempt_from_ai_planet_specialization = no
-
 	category = unity
+
+	building_sets = {
+		unity
+	}
 
 	potential = {
 		exists = owner
@@ -22,10 +24,6 @@ building_temple = {
 			}
 		}
 		NOT = { has_modifier = slave_colony }
-	}
-
-	allow = {
-		is_occupied_flag = no # Ariphaos
 	}
 
 	destroy_trigger = {
@@ -43,6 +41,12 @@ building_temple = {
 			has_modifier = slave_colony
 		}
 	}
+
+	allow = {
+		is_occupied_flag = no # Ariphaos
+	}
+
+	ai_weight_coefficient = 0
 
 	convert_to = {
 		building_bureaucratic_1
@@ -66,12 +70,8 @@ building_temple = {
 
 	inline_script = {
 		script = jobs/priests_add
-		AMOUNT = @b1_jobs
+		AMOUNT = @building_static_jobs
 	}
-
-	# triggered_desc = {
-	# 	text = job_priest_effect_desc
-	# }
 	
 	triggered_planet_modifier = {
 		potential = {
@@ -79,7 +79,7 @@ building_temple = {
 			owner = { has_valid_civic = civic_defenders_faith }
 		}
 		modifier = {
-			job_templar_add = 1
+			job_templar_add = 100
 		}
 	}
 
@@ -91,12 +91,8 @@ building_temple = {
 		text = job_templar_effect_desc
 	}
 
-	upgrades = {
-		building_holotemple
-	}
-
 	prerequisites = {
-		"tech_cultural_heritage"
+		"tech_planetary_government"
 	}
 
 	show_tech_unlock_if = {
@@ -112,9 +108,12 @@ building_temple = {
 
 building_holotemple = {
 	base_buildtime = @b2_time
-	can_build = no
-
+	planet_limit = 1
 	category = unity
+
+	building_sets = {
+		unity
+	}
 
 	potential = {
 		exists = owner
@@ -128,11 +127,6 @@ building_holotemple = {
 			}
 		}
 		NOT = { has_modifier = slave_colony }
-	}
-
-	allow = {
-		has_upgraded_capital = yes
-		is_occupied_flag = no # Ariphaos
 	}
 
 	destroy_trigger = {
@@ -149,6 +143,10 @@ building_holotemple = {
 			}
 			has_modifier = slave_colony
 		}
+	}
+
+	allow = {
+		is_occupied_flag = no # Ariphaos
 	}
 
 	convert_to = {
@@ -170,17 +168,9 @@ building_holotemple = {
 	}
 	planet_modifier = {
 		pop_ethic_spiritualist_attraction_mult = 0.1
-	}
-	
-	inline_script = {
-		script = jobs/priests_add
-		AMOUNT = @b2_jobs
+		planet_bureaucrats_upkeep_mult = -0.20
 	}
 
-	# triggered_desc = {
-	# 	text = job_priest_effect_desc
-	# }
-	
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -190,7 +180,7 @@ building_holotemple = {
 			}
 		}
 		modifier = {
-			job_templar_add = 2
+			job_templar_add = 200
 		}
 	}
 
@@ -200,10 +190,6 @@ building_holotemple = {
 			owner = { has_valid_civic = civic_defenders_faith }
 		}
 		text = job_templar_effect_desc
-	}
-
-	upgrades = {
-		building_sacred_nexus
 	}
 
 	prerequisites = {
@@ -223,9 +209,12 @@ building_holotemple = {
 
 building_sacred_nexus = {
 	base_buildtime = @b3_time
-	can_build = no
-
+	planet_limit = 1
 	category = unity
+
+	building_sets = {
+		unity
+	}
 
 	potential = {
 		exists = owner
@@ -239,11 +228,6 @@ building_sacred_nexus = {
 			}
 		}
 		NOT = { has_modifier = slave_colony }
-	}
-
-	allow = {
-		has_major_upgraded_capital = yes
-		is_occupied_flag = no # Ariphaos
 	}
 
 	destroy_trigger = {
@@ -262,11 +246,16 @@ building_sacred_nexus = {
 		}
 	}
 
+	allow = {
+		is_occupied_flag = no # Ariphaos
+	}
+
 	convert_to = {
 		building_bureaucratic_3
 		building_hive_confluence
 		building_system_conflux
 	}
+
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -280,16 +269,8 @@ building_sacred_nexus = {
 	}
 	planet_modifier = {
 		pop_ethic_spiritualist_attraction_mult = 0.15
+		pop_bureaucrat_bonus_workforce_mult = 0.15
 	}
-
-	# Add Priest & High Priest Jobs
-	inline_script = {
-		script = jobs/priests_add
-		AMOUNT = @b3_jobs
-	}
-
-	inline_script = buildings/job_high_priest_variants_add_saintly_hierarchy
-	
 
 	## ECAF 
 	triggered_planet_modifier = {
@@ -298,8 +279,7 @@ building_sacred_nexus = {
 			owner = { has_valid_civic = civic_defenders_faith }
 		}
 		modifier = {
-			job_priest_add = 1
-			job_templar_add = 3
+			job_templar_add = 300
 		}
 	}
 
@@ -309,24 +289,6 @@ building_sacred_nexus = {
 			owner = { has_valid_civic = civic_defenders_faith }
 		}
 		text = job_templar_effect_desc
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_theocracy = yes }
-		}
-		modifier = {
-			job_high_priest_add = 2
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_theocracy = yes }
-		}
-		text = job_high_priest_effect_desc
 	}
 
 	### //ECAF 
@@ -352,9 +314,12 @@ building_sacred_nexus = {
 ##################
 building_citadel_of_faith = {
 	base_buildtime = @b2_time
-	base_cap_amount = 1
-
+	planet_limit = 1
 	category = unity
+
+	building_sets = {
+		unity
+	}
 
 	potential = {
 		exists = owner
@@ -367,12 +332,10 @@ building_citadel_of_faith = {
 				}
 			}
 		}
-		NOT = { has_modifier = slave_colony }
-	}
-
-	allow = {
-		has_major_upgraded_capital = yes
-		is_occupied_flag = no # Ariphaos
+		NOR = {
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
 	}
 
 	destroy_trigger = {
@@ -388,7 +351,12 @@ building_citadel_of_faith = {
 				}
 			}
 			has_modifier = slave_colony
+			has_modifier = penal_colony
 		}
+	}
+
+	allow = {
+		is_occupied_flag = no # Ariphaos
 	}
 
 	convert_to = {
@@ -427,21 +395,17 @@ building_citadel_of_faith = {
 			energy = 8
 			rare_crystals = 3
 		}
-		produces = {
+		produces = { ## ECAF
 			unity = 10
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { NOT = { has_valid_civic = civic_defenders_faith } }
-		}
-		modifier = {
-			job_priest_add = @b2_jobs
-		}
+	planet_modifier = {
+		planet_bureaucrats_unity_produces_add = 3
 	}
-	
+
+	## ECAF
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -458,7 +422,7 @@ building_citadel_of_faith = {
 			owner = { has_valid_civic = civic_spiritual_seekers }
 		}
 		modifier = {
-			job_transcend_add = 1
+			job_transcend_add = 100
 		}
 	}
 
@@ -466,74 +430,10 @@ building_citadel_of_faith = {
 		potential = {
 			exists = owner
 			owner = { is_theocracy = yes }
-			owner = { NOT = { has_origin = origin_cybernetic_creed } }
 		}
 		modifier = {
-			job_high_priest_add = 1
+			job_politician_add = 100
 		}
-	}
-
-	# Add bonus High Priest OR Tech Hierophant Jobs
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { NOT = { has_origin = origin_cybernetic_creed } }
-		}
-		job_high_priest_add = 1
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { NOT = { has_origin = origin_cybernetic_creed } }
-		}
-		text = job_high_priest_effect_desc
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_origin = origin_cybernetic_creed }
-		}
-		job_technophant_add = 2
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { has_origin = origin_cybernetic_creed }
-		}
-		text = job_technophant_effect_desc
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			has_ringworld_output_boost = yes
-		}
-		planet_administrators_unity_produces_add = 1
-		planet_managers_unity_produces_add = 1
-		planet_bureaucrats_unity_produces_add = 1
-		planet_telepaths_unity_produces_add = 1
-	}
-
-	country_modifier = {
-		country_official_cap_add = 1
-		country_unity_produces_mult = 0.05
-	}
-
-	planet_modifier = {
-		pop_ethic_spiritualist_attraction_mult = 0.20
-	}
-
-	prerequisites = {
-		"tech_transcendent_faith"
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				NOT = { has_valid_civic = civic_defenders_faith }
-			}
-		}
-		text = job_priest_effect_desc
 	}
 
 	triggered_desc = {
@@ -550,5 +450,85 @@ building_citadel_of_faith = {
 			owner = { has_valid_civic = civic_defenders_faith }
 		}
 		text = job_templar_effect_desc
+	}
+
+	## \\ECAF
+
+	triggered_planet_modifier = {
+		potential = {
+			has_ringworld_output_boost = yes
+		}
+		planet_bureaucrats_unity_produces_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+		}
+		planet_bureaucrats_consumer_goods_upkeep_add = 3
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		planet_bureaucrats_energy_upkeep_add = 6
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_lithoid_empire = no
+				is_infernal_empire = no
+			}
+		}
+		planet_bureaucrats_food_upkeep_add = 3
+		planet_bureaucrats_energy_upkeep_add = 3
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_lithoid_empire = yes
+			}
+		}
+		planet_bureaucrats_minerals_upkeep_add = 3
+		planet_bureaucrats_energy_upkeep_add = 3
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_infernal_empire = yes
+			}
+		}
+		planet_bureaucrats_alloys_upkeep_add = 0.75
+		planet_bureaucrats_energy_upkeep_add = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_ringworld_output_boost = yes
+		}
+		planet_administrators_unity_produces_add = 1
+		planet_managers_unity_produces_add = 1
+		planet_bureaucrats_unity_produces_add = 1
+		planet_telepaths_unity_produces_add = 1
+	}
+
+	country_modifier = {
+		country_unity_produces_mult = 0.02
+	}
+
+	prerequisites = {
+		"tech_transcendent_faith"
 	}
 }

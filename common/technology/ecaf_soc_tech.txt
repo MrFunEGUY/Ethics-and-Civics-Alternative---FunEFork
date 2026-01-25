@@ -235,7 +235,7 @@ tech_centralized_state = {
 		modifier = {
 			factor = 0
 			OR = {
-				has_ethic = ethic_fanatic_egalitarian
+				is_fanatic_egalitarian = yes
 				has_valid_civic = civic_beacon_of_liberty
 			}
 		}
@@ -273,7 +273,7 @@ tech_federal_state = {
 		modifier = {
 			factor = 0
 			OR = {
-				has_ethic = ethic_fanatic_authoritarian
+				is_fanatic_authoritarian = yes
 				has_valid_civic = civic_harmonious_hierarchy
 			}
 		}

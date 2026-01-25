@@ -32,8 +32,8 @@ building_colliseum = {
 	}
 
 	planet_modifier = {
-		job_gladiator_add = 2
-		trade_value_add = 4
+		job_gladiator_add = 200
+		# trade_value_add = 4
 		planet_housing_add = 1
 	}
 
@@ -53,7 +53,7 @@ building_colliseum = {
 			}
 		}
 		modifier = {
-			job_gladiator_add = 1
+			job_gladiator_add = 100
 		}
 	}
 

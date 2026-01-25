@@ -112,7 +112,7 @@ opinion_socialism_pos_1 = {
 opinion_socialism_pos_2 = {
 	trigger = {
 		has_ethic = ethic_socialism
-		from = { has_ethic = ethic_fanatic_socialism }
+		from = { is_fanatic_socialist = yes }
 	}
 	opinion = {
 		base = 10
@@ -121,7 +121,7 @@ opinion_socialism_pos_2 = {
 
 opinion_socialism_pos_3 = {
 	trigger = {
-		has_ethic = ethic_fanatic_socialism
+		is_fanatic_socialist = yes
 		from = { has_ethic = ethic_socialism }
 	}
 	opinion = {
@@ -131,8 +131,8 @@ opinion_socialism_pos_3 = {
 
 opinion_socialism_pos_4 = {
 	trigger = {
-		has_ethic = ethic_fanatic_socialism
-		from = { has_ethic = ethic_fanatic_socialism }
+		is_fanatic_socialist = yes
+		from = { is_fanatic_socialist = yes }
 	}
 	opinion = {
 		base = 25
@@ -152,7 +152,7 @@ opinion_socialism_neg_1 = {
 opinion_socialism_neg_2 = {
 	trigger = {
 		has_ethic = ethic_capitalism
-		from = { has_ethic = ethic_fanatic_socialism }
+		from = { is_fanatic_socialist = yes }
 	}
 	opinion = {
 		base = -35
@@ -161,7 +161,7 @@ opinion_socialism_neg_2 = {
 
 opinion_socialism_neg_3 = {
 	trigger = {
-		has_ethic = ethic_fanatic_capitalism
+		is_fanatic_capitalist = yes
 		from = { has_ethic = ethic_socialism }
 	}
 	opinion = {
@@ -171,8 +171,8 @@ opinion_socialism_neg_3 = {
 
 opinion_socialism_neg_4 = {
 	trigger = {
-		has_ethic = ethic_fanatic_capitalism
-		from = { has_ethic = ethic_fanatic_socialism }
+		is_fanatic_capitalist = yes
+		from = { is_fanatic_socialist = yes }
 	}
 	opinion = {
 		base = -50
@@ -192,7 +192,7 @@ opinion_capitalism_pos_1 = {
 opinion_capitalism_pos_2 = {
 	trigger = {
 		has_ethic = ethic_capitalism
-		from = { has_ethic = ethic_fanatic_capitalism }
+		from = { is_fanatic_capitalist = yes }
 	}
 	opinion = {
 		base = 10
@@ -201,7 +201,7 @@ opinion_capitalism_pos_2 = {
 
 opinion_capitalism_pos_3 = {
 	trigger = {
-		has_ethic = ethic_fanatic_capitalism
+		is_fanatic_capitalist = yes
 		from = { has_ethic = ethic_capitalism }
 	}
 	opinion = {
@@ -211,8 +211,8 @@ opinion_capitalism_pos_3 = {
 
 opinion_capitalism_pos_4 = {
 	trigger = {
-		has_ethic = ethic_fanatic_capitalism
-		from = { has_ethic = ethic_fanatic_capitalism }
+		is_fanatic_capitalist = yes
+		from = { is_fanatic_capitalist = yes }
 	}
 	opinion = {
 		base = 25
@@ -232,7 +232,7 @@ opinion_capitalism_neg_1 = {
 opinion_capitalism_neg_2 = {
 	trigger = {
 		has_ethic = ethic_socialism
-		from = { has_ethic = ethic_fanatic_capitalism }
+		from = { is_fanatic_capitalist = yes }
 	}
 	opinion = {
 		base = -35
@@ -241,7 +241,7 @@ opinion_capitalism_neg_2 = {
 
 opinion_capitalism_neg_3 = {
 	trigger = {
-		has_ethic = ethic_fanatic_socialism
+		is_fanatic_socialist = yes
 		from = { has_ethic = ethic_capitalism }
 	}
 	opinion = {
@@ -251,8 +251,8 @@ opinion_capitalism_neg_3 = {
 
 opinion_capitalism_neg_4 = {
 	trigger = {
-		has_ethic = ethic_fanatic_socialism
-		from = { has_ethic = ethic_fanatic_capitalism }
+		is_fanatic_socialist = yes
+		from = { is_fanatic_capitalist = yes }
 	}
 	opinion = {
 		base = -50

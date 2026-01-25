@@ -3,7 +3,6 @@
 
 district_city = {
 	base_buildtime = 480
-
 	exempt_from_ai_planet_specialization = yes
 	default_starting_district = yes
 	overlay_icon = GFX_district_government

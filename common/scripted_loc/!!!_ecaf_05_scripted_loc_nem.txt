@@ -9,7 +9,7 @@ defined_text = {
 			weight = 1
 			modifier = {
 				factor = 2
-				has_ethic = ethic_fanatic_xenophile
+				is_fanatic_xenophile = yes
 			}
 		}
 		localization_key = galcom_movement_xenophobe
@@ -22,7 +22,7 @@ defined_text = {
 			weight = 1
 			modifier = {
 				factor = 2
-				has_ethic = ethic_fanatic_xenophobe
+				is_fanatic_xenophobe = yes
 			}
 		}
 		localization_key = galcom_movement_xenophile
@@ -35,7 +35,7 @@ defined_text = {
 			weight = 1
 			modifier = {
 				factor = 2
-				has_ethic = ethic_fanatic_pacifist
+				is_fanatic_pacifist = yes
 			}
 		}
 		localization_key = galcom_movement_militarist
@@ -48,7 +48,7 @@ defined_text = {
 			weight = 1
 			modifier = {
 				factor = 2
-				has_ethic = ethic_fanatic_militarist
+				is_fanatic_militarist = yes
 			}
 		}
 		localization_key = galcom_movement_pacifist
@@ -61,7 +61,7 @@ defined_text = {
 			weight = 1
 			modifier = {
 				factor = 2
-				has_ethic = ethic_fanatic_authoritarian
+				is_fanatic_authoritarian = yes
 			}
 		}
 		localization_key = galcom_movement_egalitarian
@@ -74,7 +74,7 @@ defined_text = {
 			weight = 1
 			modifier = {
 				factor = 2
-				has_ethic = ethic_fanatic_egalitarian
+				is_fanatic_egalitarian = yes
 			}
 		}
 		localization_key = galcom_movement_authoritarian
@@ -87,7 +87,7 @@ defined_text = {
 			weight = 1
 			modifier = {
 				factor = 2
-				has_ethic = ethic_fanatic_materialist
+				is_fanatic_materialist = yes
 			}
 		}
 		localization_key = galcom_movement_spiritualist
@@ -100,7 +100,7 @@ defined_text = {
 			weight = 1
 			modifier = {
 				factor = 2
-				has_ethic = ethic_fanatic_spiritualist
+				is_fanatic_spiritualist = yes
 			}
 		}
 		localization_key = galcom_movement_materialist
@@ -113,7 +113,7 @@ defined_text = {
 			weight = 1
 			modifier = {
 				factor = 2
-				has_ethic = ethic_fanatic_socialism
+				is_fanatic_socialist = yes
 			}
 		}
 		localization_key = galcom_movement_socialism
@@ -127,7 +127,7 @@ defined_text = {
 			weight = 1
 			modifier = {
 				factor = 2
-				has_ethic = ethic_fanatic_capitalism
+				is_fanatic_capitalist = yes
 			}
 		}
 		localization_key = galcom_movement_capitalism

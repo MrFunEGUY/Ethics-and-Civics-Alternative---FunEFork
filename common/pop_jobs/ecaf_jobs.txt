@@ -4,9 +4,13 @@
 
 slave_master = {
 	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	building_icon = building_slave_processing
-	clothes_texture_index = 1
+	
+	swappable_data = {
+		default = {	
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_slave_processing
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -87,9 +91,14 @@ slave_master = {
 # Deep Core Miner
 deep_miner = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_crystal_mines
-	clothes_texture_index = 3
+
+	swappable_data = {
+		default = {	
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_crystal_mines
+		}
+	}
+
 	possible_pre_triggers = {
 		has_owner = yes
 		is_enslaved = no
@@ -204,9 +213,14 @@ deep_miner = {
 
 gladiator = {
 	category = worker
-	condition_string = WORKER_JOB_TRIGGER
-	building_icon = building_colliseum
-	clothes_texture_index = 3
+	
+	swappable_data = {
+		default = {	
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_colliseum
+		}
+	}
+
 	possible_pre_triggers = {
 		has_owner = yes
 		is_enslaved = yes
@@ -222,6 +236,9 @@ gladiator = {
 	}
 	resources = {
 		category = planet_entertainers
+		produces = {
+			trade = 0.2
+		}
 		upkeep = {
 			alloys = 0.25
 		}
@@ -278,9 +295,14 @@ gladiator = {
 
 templar = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_temple
-	clothes_texture_index = 3
+	
+	swappable_data = {
+		default = {	
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_temple
+		}
+	}
+
 	possible_pre_triggers = {
 		has_owner = yes
 		is_enslaved = no
@@ -320,8 +342,10 @@ templar = {
 	triggered_planet_modifier = {
 		potential = {
 			OR = {
-				has_trait = trait_robot_domestic_protocols
-				has_trait = trait_charismatic
+				root = {
+					has_trait = trait_robot_domestic_protocols
+					has_trait = trait_charismatic
+				}
 			}
 		}
 		modifier = {
@@ -439,9 +463,14 @@ templar = {
 
 labour_hero = {
 	category = worker
-	condition_string = WORKER_JOB_TRIGGER
-	building_icon = building_power_plant
-	clothes_texture_index = 2
+	
+	swappable_data = {
+		default = {	
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_power_plant
+		}
+	}
+
 	possible_pre_triggers = {
 		has_owner = yes
 		is_being_purged = no
@@ -619,9 +648,14 @@ labour_hero = {
 
 mercenary = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_stronghold
-	clothes_texture_index = 4
+	
+	swappable_data = {
+		default = {	
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_stronghold
+		}
+	}
+
 	possible_pre_triggers = {
 		has_owner = yes
 		is_enslaved = no
@@ -783,9 +817,14 @@ mercenary = {
 
 transcend = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_psi_corps
-	clothes_texture_index = 5
+	
+	swappable_data = {
+		default = {	
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_psi_corps
+		}
+	}
+
 	possible_pre_triggers = {
 		has_owner = yes
 		is_being_purged = no
@@ -875,9 +914,14 @@ transcend = {
 
 druid = {
 	category = worker
-	condition_string = WORKER_JOB_TRIGGER
-	building_icon = building_executive_retreat
-	clothes_texture_index = 3
+	
+	swappable_data = {
+		default = {	
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_executive_retreat
+		}
+	}
+
 	possible_pre_triggers = {
 		has_owner = yes
 		is_being_purged = no
@@ -968,9 +1012,14 @@ druid = {
 
 geoengineer = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_research_lab_1
-	clothes_texture_index = 3
+	
+	swappable_data = {
+		default = {	
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_research_lab_1
+		}
+	}
+
 	possible_pre_triggers = {
 		has_owner = yes
 		is_enslaved = no
@@ -1055,9 +1104,14 @@ geoengineer = {
 
 xenobiologist = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_research_lab_1
-	clothes_texture_index = 3
+	
+	swappable_data = {
+		default = {	
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_research_lab_1
+		}
+	}
+
 	possible_pre_triggers = {
 		has_owner = yes
 		is_enslaved = no
@@ -1130,9 +1184,14 @@ xenobiologist = {
 
 techno_priest = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_robot_assembly_plant
-	clothes_texture_index = 3
+	
+	swappable_data = {
+		default = {	
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_robot_assembly_plant
+		}
+	}
+
 	possible_pre_triggers = {
 		has_owner = yes
 		is_enslaved = no
@@ -1229,12 +1288,19 @@ techno_priest = {
 #### Ruler Jobs
 ###################
 
+## Moved to politicians
+
 # commandant - Militarist
 commandant = {
 	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	building_icon = building_stronghold
-	clothes_texture_index = 1
+	
+	swappable_data = {
+		default = {	
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_stronghold
+		}
+	}
+
 	possible_pre_triggers = {
 		has_owner = yes
 		is_enslaved = no
@@ -1285,9 +1351,14 @@ commandant = {
 # Philosopher - Pacifist
 supervisor = {
 	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	building_icon = building_capital
-	clothes_texture_index = 1
+	
+	swappable_data = {
+		default = {	
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_capital
+		}
+	}
+
 	possible_pre_triggers = {
 		has_owner = yes
 		is_enslaved = no
@@ -1343,127 +1414,137 @@ supervisor = {
 	}
 }
 
-# Mogul - Capitalist
-mogul = {
-	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	building_icon = building_galactic_stock_exchange
-	clothes_texture_index = 1
-	possible_pre_triggers = {
-		has_owner = yes
-		is_enslaved = no
-		is_being_purged = no
-		is_being_assimilated = no
-		is_sapient = yes
-	}
-	possible_precalc = can_fill_ruler_job
-	possible = {
-		NOT = {
-			owner = {
-				has_valid_civic = civic_distributism
-			}
-		}
-	}
-
-	resources = {
-		category = planet_merchants
-		produces = {
-			trade = 5
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			always = yes
-		}
-		planet_amenities_add = 6
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
-	}
-
-	# planet_jobs_energy_produces_mult
-	triggered_planet_modifier = {
-		potential = {
-			has_trait = trait_thrifty
-		}
-		modifier = {
-			trade_value_add = 2
-		}
-	}
+# # Mogul - Capitalist
+# mogul = {
+# 	category = ruler
 	
-	triggered_planet_modifier = {
-		potential = {
-			has_trait = trait_nuumismatic_administration
-		}
-		modifier = {
-			trade_value_add = 2
-		}
-	}
+# 	swappable_data = {
+# 		default = {	
+# 			condition_string = RULER_JOB_TRIGGER
+# 			building_icon = building_galactic_stock_exchange
+# 		}
+# 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			owner = { has_valid_civic = civic_merchant_guilds }
-		}
-		modifier = {
-			planet_technician_produces_mult = 0.04
-		}
-	}
+# 	possible_pre_triggers = {
+# 		has_owner = yes
+# 		is_enslaved = no
+# 		is_being_purged = no
+# 		is_being_assimilated = no
+# 		is_sapient = yes
+# 	}
+# 	possible_precalc = can_fill_ruler_job
+# 	possible = {
+# 		NOT = {
+# 			owner = {
+# 				has_valid_civic = civic_distributism
+# 			}
+# 		}
+# 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			OR = {
-				owner = {
-					has_valid_civic = civic_state_monopoly
-				}
-			}
-		}
-		modifier = {
-			planet_technician_produces_mult = 0.05
-			planet_miners_produces_mult = 0.05
-		}
-	}
+# 	resources = {
+# 		category = planet_merchants
+# 		produces = {
+# 			trade = 5
+# 		}
+# 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			has_trait = trait_repugnant
-		}
-		modifier = {
-			planet_amenities_add = -1
-		}
-	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			always = yes
+# 		}
+# 		planet_amenities_add = 6
+# 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+# 	}
 
-	weight = {
-		weight = @ruler_job_weight
-		modifier = {
-			factor = 2
-			OR = {
-				has_trait = trait_thrifty
-				has_trait = trait_nuumismatic_administration
-			}
-		}
-		modifier = {
-			factor = 1.5
-			OR = {
-				has_trait = trait_robot_domestic_protocols
-				has_trait = trait_charismatic
-			}
-		}
-		modifier = {
-			factor = 0.5
-			has_trait = trait_repugnant
-		}
-		modifier = {
-			factor = 1.5
-			is_capitalism = yes
-		}
-	}
-}
+# 	# planet_jobs_energy_produces_mult
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			has_trait = trait_thrifty
+# 		}
+# 		modifier = {
+# 			trade_value_add = 2
+# 		}
+# 	}
+	
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			has_trait = trait_nuumismatic_administration
+# 		}
+# 		modifier = {
+# 			trade_value_add = 2
+# 		}
+# 	}
+
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			owner = { has_valid_civic = civic_merchant_guilds }
+# 		}
+# 		modifier = {
+# 			planet_technician_produces_mult = 0.04
+# 		}
+# 	}
+
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			OR = {
+# 				owner = {
+# 					has_valid_civic = civic_state_monopoly
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			planet_technician_produces_mult = 0.05
+# 			planet_miners_produces_mult = 0.05
+# 		}
+# 	}
+
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			has_trait = trait_repugnant
+# 		}
+# 		modifier = {
+# 			planet_amenities_add = -1
+# 		}
+# 	}
+
+# 	weight = {
+# 		weight = @ruler_job_weight
+# 		modifier = {
+# 			factor = 2
+# 			OR = {
+# 				has_trait = trait_thrifty
+# 				has_trait = trait_nuumismatic_administration
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 1.5
+# 			OR = {
+# 				has_trait = trait_robot_domestic_protocols
+# 				has_trait = trait_charismatic
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0.5
+# 			has_trait = trait_repugnant
+# 		}
+# 		modifier = {
+# 			factor = 1.5
+# 			is_capitalism = yes
+# 		}
+# 	}
+# }
 
 # commissar - Socialist
 commissar = {
 	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	building_icon = building_stronghold
-	clothes_texture_index = 1
+	
+	swappable_data = {
+		default = {	
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_stronghold
+		}
+	}
+
 	possible_pre_triggers = {
 		has_owner = yes
 		is_enslaved = no
@@ -1514,9 +1595,14 @@ commissar = {
 # Ambassador - Xenophile
 ambassador = {
 	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	building_icon = building_stronghold
-	clothes_texture_index = 1
+	
+	swappable_data = {
+		default = {	
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_stronghold
+		}
+	}
+
 	possible_pre_triggers = {
 		has_owner = yes
 		is_enslaved = no

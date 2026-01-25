@@ -166,13 +166,26 @@ politician = {
 				exists = planet
 				planet = {
 					OR = {
-						politician_is_ecaf_merchant = yes
+						politician_is_ecaf_merchant = yes ## ECAF
 						politician_is_augmentation_merchant = yes
 					}
 				}
 			}
 			unity = -2
 			trade = 6
+		}
+		produces = { ## ECAF
+			trigger = {
+				exists = planet
+				planet = {
+					OR = {
+						politician_is_ecaf_merchant = yes
+						politician_is_augmentation_merchant = yes
+					}
+				}
+				owner = { has_valid_civic = civic_consumerism }
+			}
+			consumer_goods = 1
 		}
 		##Science Director
 		produces = {
@@ -197,6 +210,16 @@ politician = {
 			}
 			unity = 2
 		}
+		produces = {
+			trigger = {
+				exists = planet
+				planet = {
+					politician_is_ecaf_high_priest = yes
+				}
+				owner = { has_valid_civic = civic_spiritual_democracy }
+			}
+			society_research = 2
+		}
 		##Technophant
 		produces = {
 			trigger = {
@@ -215,6 +238,17 @@ politician = {
 				planet = { politician_is_ecaf_commandant = yes }
 			}
 			ecaf_crew = @commandant_job_crew_production
+		}
+		### Noble
+		produces = {
+			trigger = {
+				exists = planet
+				planet = {
+					politician_is_ecaf_noble = yes
+				}
+				owner = { has_valid_civic = civic_harmonious_hierarchy }
+			}
+			unity = 1
 		}
 		# Civic Modifiers
 		produces = { 
@@ -265,147 +299,4 @@ politician = {
 	}
 
 	inline_script = "jobs/automodding_priority_unity"
-}
-
-high_priest = {
-	category = ruler
-
-	swappable_data = {
-		default = {
-			condition_string = RULER_JOB_TRIGGER
-			building_icon = building_citadel_of_faith
-		}
-	}
-
-	resources = {
-		category = planet_priests
-		produces = {
-			unity = 8
-		}
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_valid_civic = civic_spiritual_democracy }
-			}
-			society_research = 2
-		}
-		produces = { # Planetary Diversity
-			trigger = {
-				exists = owner
-				owner = { has_country_flag = whisperers_covenant_confirmed }
-				planet = { has_deposit = d_pd_shroud_arc }
-			}
-			physics_research = 1
-			engineering_research = 1
-			society_research = 1
-		}
-		upkeep = {
-			consumer_goods = 2
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_valid_civic = civic_spiritual_democracy
-			}
-		}
-		modifier = {
-			planet_amenities_add = 3
-		}
-	}
-
-	possible = {
-		always = no
-	}
-}
-
-noble = {
-	category = ruler
-
-	swappable_data = {
-		default = {
-			condition_string = RULER_JOB_TRIGGER
-			building_icon = building_palace
-		}
-	}
-
-	resources = {
-		category = planet_nobles
-		produces = {
-			unity = 6
-		}
-		upkeep = {
-			consumer_goods = 2
-		}
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_valid_civic = civic_harmonious_hierarchy }
-			}
-			unity = 1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { OR = { has_valid_civic = civic_harmonious_hierarchy } }
-		}
-		planet_stability_add = 1
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { OR = { has_valid_civic = civic_harmonious_hierarchy } }
-		}
-		planet_amenities_add = 5
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
-	}
-
-	triggered_country_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_valid_civic = civic_harmonious_hierarchy }
-		}
-		empire_size_pops_mult = -0.001
-	}
-
-	possible = {
-		always = no
-	}
-}
-
-merchant = {
-	category = ruler
-
-	swappable_data = {
-		default = {
-			condition_string = RULER_JOB_TRIGGER
-			building_icon = building_galactic_stock_exchange
-		}
-	}
-
-	resources = {
-		category = planet_merchants
-		upkeep = {
-			consumer_goods = 2
-		}
-		produces = { ## ECAF
-			trigger = {
-				exists = owner
-				owner = { has_valid_civic = civic_consumerism }
-			}
-			consumer_goods = 1
-		}
-		produces = {
-			trade = 10
-		}
-	}
-
-	possible = {
-		always = no
-	}
 }

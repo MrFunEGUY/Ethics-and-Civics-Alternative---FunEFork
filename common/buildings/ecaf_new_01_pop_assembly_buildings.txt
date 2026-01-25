@@ -75,7 +75,7 @@ building_mecha_monastery = {
 		}
 	}
 	planet_modifier = {
-		job_techno_priest_add = 3
+		job_techno_priest_add = 300
 	}
 	resources = {
 		category = planet_buildings

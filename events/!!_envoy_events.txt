@@ -723,9 +723,9 @@ country_event = {
 				modifier = {
 					factor = 3
 					OR = {
-						has_ethic = ethic_fanatic_materialist
+						is_fanatic_materialist = yes
 						event_target:envoy_country = {
-							has_ethic = ethic_fanatic_spiritualist
+							is_fanatic_spiritualist = yes
 						}
 					}
 				}
@@ -748,9 +748,9 @@ country_event = {
 				modifier = {
 					factor = 3
 					OR = {
-						has_ethic = ethic_fanatic_spiritualist
+						is_fanatic_spiritualist = yes
 						event_target:envoy_country = {
-							has_ethic = ethic_fanatic_materialist
+							is_fanatic_materialist = yes
 						}
 					}
 				}
@@ -773,9 +773,9 @@ country_event = {
 				modifier = {
 					factor = 3
 					OR = {
-						has_ethic = ethic_fanatic_authoritarian
+						is_fanatic_authoritarian = yes
 						event_target:envoy_country = {
-							has_ethic = ethic_fanatic_egalitarian
+							is_fanatic_egalitarian = yes
 						}
 					}
 				}
@@ -798,9 +798,9 @@ country_event = {
 				modifier = {
 					factor = 3
 					OR = {
-						has_ethic = ethic_fanatic_egalitarian
+						is_fanatic_egalitarian = yes
 						event_target:envoy_country = {
-							has_ethic = ethic_fanatic_authoritarian
+							is_fanatic_authoritarian = yes
 						}
 					}
 				}
@@ -823,9 +823,9 @@ country_event = {
 				modifier = {
 					factor = 3
 					OR = {
-						has_ethic = ethic_fanatic_xenophile
+						is_fanatic_xenophile = yes
 						event_target:envoy_country = {
-							has_ethic = ethic_fanatic_xenophobe
+							is_fanatic_xenophobe = yes
 						}
 					}
 				}
@@ -855,9 +855,9 @@ country_event = {
 				modifier = {
 					factor = 3
 					OR = {
-						has_ethic = ethic_fanatic_xenophobe
+						is_fanatic_xenophobe = yes
 						event_target:envoy_country = {
-							has_ethic = ethic_fanatic_xenophile
+							is_fanatic_xenophile = yes
 						}
 					}
 				}
@@ -880,9 +880,9 @@ country_event = {
 				modifier = {
 					factor = 3
 					OR = {
-						has_ethic = ethic_fanatic_militarist
+						is_fanatic_militarist = yes
 						event_target:envoy_country = {
-							has_ethic = ethic_fanatic_pacifist
+							is_fanatic_pacifist = yes
 						}
 					}
 				}
@@ -905,9 +905,9 @@ country_event = {
 				modifier = {
 					factor = 3
 					OR = {
-						has_ethic = ethic_fanatic_pacifist
+						is_fanatic_pacifist = yes
 						event_target:envoy_country = {
-							has_ethic = ethic_fanatic_militarist
+							is_fanatic_militarist = yes
 						}
 					}
 				}
@@ -930,9 +930,9 @@ country_event = {
 				modifier = {
 					factor = 3
 					OR = {
-						has_ethic = ethic_fanatic_socialism
+						is_fanatic_socialist = yes
 						event_target:envoy_country = {
-							has_ethic = ethic_fanatic_capitalism
+							is_fanatic_capitalist = yes
 						}
 					}
 				}
@@ -955,9 +955,9 @@ country_event = {
 				modifier = {
 					factor = 3
 					OR = {
-						has_ethic = ethic_fanatic_capitalism
+						is_fanatic_capitalist = yes
 						event_target:envoy_country = {
-							has_ethic = ethic_fanatic_socialism
+							is_fanatic_socialist = yes
 						}
 					}
 				}

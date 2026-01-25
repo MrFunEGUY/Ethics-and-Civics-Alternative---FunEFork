@@ -51,7 +51,7 @@ has_moguls = {
 is_theocracy = {
 	exists = owner
 	owner = {
-		has_ethic = ethic_fanatic_spiritualist
+		is_fanatic_spiritualist = yes
 		is_spiritualist_gov = yes
 	}
 }
@@ -66,7 +66,7 @@ politician_is_ecaf_high_priest = {
 is_technocracy = {
 	exists = owner
 	owner = {
-		has_ethic = ethic_fanatic_materialist
+		is_fanatic_materialist = yes
 		is_materialist_gov = yes
 	}
 }
@@ -81,7 +81,7 @@ politician_is_ecaf_science_director = {
 is_stratocracy = {
 	exists = owner
 	owner = {
-		has_ethic = ethic_fanatic_militarist
+		is_fanatic_militarist = yes
 		is_militarist_gov = yes
 		NOT = {
 			has_government = lrsk_gov_var_gov_galactic_imperium ## Aristocratic Only, but in mil trigger
@@ -93,7 +93,7 @@ politician_is_ecaf_commandant = { is_stratocracy = yes }
 is_bureaucracy = {
 	exists = owner
 	owner = {
-		has_ethic = ethic_fanatic_pacifist
+		is_fanatic_pacifist = yes
 		is_pacifist_gov = yes
 		is_cosmic_choir = no
 	}
@@ -104,7 +104,7 @@ politician_is_ecaf_philosopher = { is_bureaucracy = yes }
 is_plutocracy = {
 	exists = owner
 	owner = {
-		has_ethic = ethic_fanatic_capitalism
+		is_fanatic_capitalist = yes
 		is_capitalist_gov = yes
 	}
 }
@@ -119,7 +119,7 @@ politician_is_ecaf_merchant = {
 is_isocracy = {
 	exists = owner
 	owner = {
-		has_ethic = ethic_fanatic_socialism
+		is_fanatic_socialist = yes
 		is_socialist_gov = yes
 	}
 }
@@ -129,7 +129,7 @@ politician_is_ecaf_commissar = { is_isocracy = yes }
 is_diplocracy = {
 	exists = owner
 	owner = {
-		has_ethic = ethic_fanatic_xenophile
+		is_fanatic_xenophile = yes
 		is_xenophilic_gov = yes
 		is_cosmic_choir = no
 
@@ -173,6 +173,8 @@ ecaf_can_build_branch_office_on_planet_trigger = {
 	}
 }
 
+#############
+###### Government Triggers
 #############
 
 # Spiritualist - High Priest
@@ -357,6 +359,26 @@ is_aristocratic_gov =  {
 		has_government = lrsk_gov_var_gov_insurrectionary_lineage
 		has_government = lrsk_gov_var_gov_solar_monarchy
 		has_government = lrsk_gov_var_gov_galactic_imperium
+	}
+}
+
+is_purifier_gov = { has_valid_civic = civic_fanatic_purifiers }
+
+has_special_megacorp_name = {
+	OR = {
+		has_government = "gov_worker_coop"
+		has_government = "gov_megachurch"
+		has_government = "gov_sacrificial_megachurch"
+		has_government = "gov_trade_league"
+		has_government = "gov_megachurch"
+		has_government = "gov_criminal_syndicate"
+		has_government = "gov_subversive_cult"
+		# ECAF
+		has_government = "gov_megachurch_fam"
+		has_government = "gov_criminal_syndicate_fam"
+		has_government = "gov_pirate_haven_fam"
+		has_government = "gov_trade_league_fam"
+		has_government = "gov_trade_league_crime_fam"
 	}
 }
 

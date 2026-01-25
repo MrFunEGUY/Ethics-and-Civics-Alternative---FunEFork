@@ -1,5 +1,5 @@
 inline_script = {
-    script = districts/welfare_burden_upkeep
+    script = districts/ecaf_welfare_burden_upkeep
 
     ENERGY = "$ENERGY$"
     ENERGY = 0

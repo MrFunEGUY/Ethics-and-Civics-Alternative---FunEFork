@@ -60,10 +60,7 @@ ruler = {
 
 		produces = {
 			trigger = {
-				OR = {
-					has_ethic = ethic_fanatic_spiritualist
-					has_ethic = ethic_spiritualist
-				}
+				is_spiritualist = yes
 				owner = { has_valid_civic = civic_gospel_of_the_masses }
 			}
 			trade = @trade_value_prosperity_gospel
@@ -158,10 +155,7 @@ specialist = {
 
 		produces = {
 			trigger = {
-				OR = {
-					has_ethic = ethic_fanatic_spiritualist
-					has_ethic = ethic_spiritualist
-				}
+				is_spiritualist = yes
 				owner = { has_valid_civic = civic_gospel_of_the_masses }
 			}
 			trade = @trade_value_prosperity_gospel
@@ -221,9 +215,6 @@ worker = {
 	}
 
 	triggered_pop_group_modifier = {
-		potential = {
-			always = yes
-		}
 		pop_housing_usage_base = 1
 		pop_amenities_usage_base = 1
 	}
@@ -257,10 +248,7 @@ worker = {
 
 		produces = {
 			trigger = {
-				OR = {
-					has_ethic = ethic_fanatic_spiritualist
-					has_ethic = ethic_spiritualist
-				}
+				is_spiritualist = yes
 				owner = { has_valid_civic = civic_gospel_of_the_masses }
 			}
 			trade = @trade_value_prosperity_gospel
@@ -386,10 +374,7 @@ dystopian_specialist = {
 
 		produces = {
 			trigger = {
-				OR = {
-					has_ethic = ethic_fanatic_spiritualist
-					has_ethic = ethic_spiritualist
-				}
+				is_spiritualist = yes
 				owner = { has_valid_civic = civic_gospel_of_the_masses }
 			}
 			trade = @trade_value_prosperity_gospel

@@ -38,7 +38,7 @@ tech_galactic_markets = {
 		}
 		modifier = {
 			factor = 0
-			has_ethic = ethic_fanatic_socialism
+			is_fanatic_socialist = yes
 		}
 		modifier = {
 			factor = 0
@@ -148,10 +148,15 @@ tech_volcano = {
 			has_ascension_perk = ap_mastery_of_nature
 		}
 		modifier = {
-			factor = 0
+			factor = 0 # if we have no Volcanic worlds and no volcanic blockers, this tech option doesn't appear
 			NOT = {
 				any_owned_planet = {
 					has_deposit = "d_active_volcano"
+				}
+				any_system_within_border = {
+					any_system_planet = {
+						is_planet_class = pc_volcanic
+					}
 				}
 			}
 		}
@@ -160,6 +165,14 @@ tech_volcano = {
 			num_owned_planets < 2
 		}
 	}
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "TECH_UNLOCK_VOLCANO_TERRAFORM_TITLE"
+			desc = "TECH_UNLOCK_VOLCANO_TERRAFORM_DESC"
+		}
+	}
+	
 	ai_weight = {
 		modifier = {
 			factor = 0
@@ -648,7 +661,7 @@ tech_selected_lineages = {
 		}
 		modifier = {
 			factor = 0
-			has_ethic = ethic_fanatic_socialism
+			is_fanatic_socialist = yes
 		}
 		modifier = {
 			factor = 0.25
@@ -677,7 +690,15 @@ tech_selected_lineages = {
 	ai_weight = {
 		modifier = {
 			factor = 0
-			has_ethic = ethic_fanatic_socialism
+			is_fanatic_socialist = yes
+		}
+		modifier = {
+			factor = 0.25
+			is_socialist = yes
+		}
+		modifier = {
+			factor = 2
+			is_capitalism = yes
 		}
 	}
 }
@@ -736,6 +757,14 @@ tech_capacity_boosters = {
 		}
 	}
 	ai_weight = {
+		modifier = {
+			factor = 0.25
+			is_socialist = yes
+		}
+		modifier = {
+			factor = 2
+			is_capitalism = yes
+		}
 	}
 }
 
@@ -755,12 +784,13 @@ tech_psionic_theory = {
 	is_reverse_engineerable = no
 	gateway = psionics
 	potential = {
-		OR = {
-			# The OR is so that Gestalts can get Zro Distillation with that Resolution.
-			is_gestalt = no
+		OR = { #The OR is so that Gestalts can get Zro Distillation with that Resolution
+			has_shroud_dlc = yes # Shroud allows everyone to become psionic
+			NOT = { has_ethic = ethic_gestalt_consciousness }
 			is_active_resolution = resolution_galacticstudies_extradimensional_experimentation
 			has_relic = r_zro_crystal
 		}
+		NOT = { has_origin = origin_mindwardens } # Except Mindwardens since they can't psionically ascend
 	}
 	modifier = {
 		empire_size_pops_mult = -0.1
@@ -769,6 +799,7 @@ tech_psionic_theory = {
 		factor = 0.5
 		modifier = {
 			factor = 0
+			has_shroud_dlc = no
 			is_gestalt = yes
 		}
 		modifier = {
@@ -777,7 +808,14 @@ tech_psionic_theory = {
 		}
 		modifier = {
 			factor = 2
-			has_ethic = "ethic_fanatic_spiritualist"
+			is_fanatic_spiritualist = yes
+		}
+		modifier = {
+			factor = 2
+			any_country = {
+				has_origin = origin_mindwardens
+				NOT = { is_same_value = prev }
+			}
 		}
 		modifier = {
 			factor = 2
@@ -802,22 +840,22 @@ tech_psionic_theory = {
 			TECHNOLOGY = tech_psionic_theory
 		}
 		modifier = {
-            factor = 2
-            any_owned_pop_group = {
-                pop_group_has_trait = trait_psionic
-            }
-        }
-        modifier = {
-            factor = 1.25
-            any_owned_pop_group = {
-                pop_group_has_trait = trait_latent_psionic
-            }
-            NOT = {
-                any_owned_pop_group = {
-                    pop_group_has_trait = trait_psionic
-                }
-            }
-        }
+			factor = 2
+			any_owned_pop_group = {
+				is_psionic_species = yes
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_owned_pop_group = {
+				is_latent_psionic_species = yes
+			}
+			NOT = {
+				any_owned_pop_group = {
+					is_psionic_species = yes
+				}
+			}
+		}
         modifier = {
             factor = 2
             has_paragon_dlc = no
@@ -833,13 +871,14 @@ tech_psionic_theory = {
 					has_trait_tier1or2or3_in_council = { TRAIT = leader_trait_expertise_psionics }
 					has_councilor = { COUNCILOR = "councilor_shroudwalker_teacher" }
 					any_owned_pop_group = {
-						OR = {
-							pop_group_has_trait = trait_psionic
-							pop_group_has_trait = trait_latent_psionic
-						}
+						has_psionic_species_trait = yes
 					}
 				}
 			}
+		}
+		modifier = {
+			factor = 0
+			has_origin = origin_endbringers
 		}
 		modifier = { # Extra Origins
             factor = 8
@@ -854,6 +893,12 @@ tech_psionic_theory = {
 		modifier = {
 			factor = 2
 			is_ai = no # auto-research
+		}
+		modifier = {
+			factor = 10
+			any_country = {
+				has_origin = origin_mindwardens
+			}
 		}
 	}
 }

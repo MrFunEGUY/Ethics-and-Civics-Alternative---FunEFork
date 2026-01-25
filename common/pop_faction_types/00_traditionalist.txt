@@ -36,23 +36,64 @@ traditionalist = {
 		category = pop_factions
 		produces = {
 			trigger = {
-				is_lithoid_empire = no
+				owner = {
+					NOR = {
+						has_civic = civic_crowdsourcing
+						has_civic = civic_corporate_crowdsourcing
+					}
+				}
+				is_lithoid_or_infernal_empire = no
 			}
 			food = @faction_base_output
 			mult = @faction_extortion_food_ratio
 		}
 		produces = {
 			trigger = {
+				owner = {
+					NOR = {
+						has_civic = civic_crowdsourcing
+						has_civic = civic_corporate_crowdsourcing
+					}
+				}
 				is_lithoid_empire = yes
 			}
 			minerals = @faction_base_output
 			mult = @faction_extortion_minerals_ratio
 		}
+		produces = {
+			trigger = {
+				owner = {
+					NOR = {
+						has_civic = civic_crowdsourcing
+						has_civic = civic_corporate_crowdsourcing
+					}
+				}
+				is_infernal_empire = yes
+			}
+			alloys = @faction_base_output
+			mult = @faction_extortion_alloys_ratio
+		}
+		produces = {
+			trigger = {
+				owner = {
+					OR = {
+						has_civic = civic_crowdsourcing
+						has_civic = civic_corporate_crowdsourcing
+					}
+				}
+			}
+			physics_research = @faction_major_output
+			society_research = @faction_minor_output
+			mult = @faction_extortion_crowdsourcing_ratio
+		}
 	}
 
 	is_potential = {
 		is_faction_allowed = yes
-		NOT = { has_origin = origin_cybernetic_creed }
+		NOR = {
+			has_origin = origin_cybernetic_creed
+			has_civic = civic_pyrolatry
+		}
 	}
 
 	parameters = {
@@ -366,12 +407,17 @@ traditionalist = {
 		unfulfilled_effect = -0.001
 
 		potential = {
-			host_has_dlc = "Utopia"
+			OR = {
+				has_utopia = yes
+				has_shroud_dlc = yes
+			}
 			exists = owner
 			owner = {
 				NOR = {
                     has_origin = origin_shroudwalker_apprentice
 					has_origin = origin_cybernetic_creed
+					has_origin = origin_mindwardens
+					### PD
                     has_origin = origin_pd_shroud
                 }
 				OR = {
@@ -384,7 +430,7 @@ traditionalist = {
 
 		trigger = {
 			owner = {
-				has_ascension_perk = ap_mind_over_matter
+				has_psionic_ascension = yes
 			}
 		}
 	}

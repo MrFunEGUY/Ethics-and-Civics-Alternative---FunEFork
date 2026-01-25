@@ -29,7 +29,7 @@ resolution_defenseprivatization_defense_contracts = {
 			}
 			every_country = {
 				limit = {
-					is_country_type = enclave_mercenary
+					is_mercenary = yes
 				}
 				add_modifier = {
 					modifier = resolution_defenseprivatization_defense_contracts_merc_naval_cap
@@ -150,7 +150,7 @@ resolution_defenseprivatization_private_support_troops = {
 			}
 			every_country = {
 				limit = {
-					is_country_type = enclave_mercenary
+					is_mercenary = yes
 				}
 				add_modifier = {
 					modifier = resolution_defenseprivatization_private_support_troops_merc_naval_cap

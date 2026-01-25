@@ -6,15 +6,30 @@ building_commercial_zone = {
 	exempt_from_ai_planet_specialization = no
 	category = trade
 
+	building_sets = {
+		urban
+		trade
+	}
+
 	potential = {
 		exists = owner
 		owner = { is_regular_empire = yes }
-		NOT = { has_modifier = slave_colony }
+		NOR = {
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
 		NOT = { has_building = building_low_tech_capital }
-	}
-
-	allow = {
-		is_occupied_flag = no # Ariphaos
+		OR = {
+			has_planet_flag = ignore_ai_building_limitations
+			owner = { is_ai = no }
+			# AI is allowed to build one of these unless they're a megacorp or this is a trade planet
+			owner = { is_megacorp = yes }
+			has_any_trade_zone = yes
+			NOR = {
+				has_building = building_commercial_zone
+				has_building = building_commercial_megaplex
+			}
+		}
 	}
 
 	destroy_trigger = {
@@ -22,7 +37,16 @@ building_commercial_zone = {
 		OR = {
 			owner = { is_regular_empire = no }
 			has_modifier = slave_colony
+			has_modifier = penal_colony
 		}
+	}
+
+	allow = {
+		is_occupied_flag = no # Ariphaos
+	}
+
+	convert_to = {
+		building_maintenance_depot
 	}
 
 	resources = {
@@ -72,12 +96,17 @@ building_commercial_zone = {
 		}
 	}
 
-	triggered_desc = {
-		text = job_clerk_effect_desc
+	inline_script = {
+		script = jobs/trader_add
+		AMOUNT = @building_static_jobs
 	}
 
 	triggered_desc = {
-		text = job_trader_effect_desc
+		potential = {
+			exists = owner
+			owner = { NOT = { has_valid_civic = civic_consumerism } }
+		}
+		text = job_clerk_effect_desc
 	}
 
 	prerequisites = {
@@ -87,27 +116,26 @@ building_commercial_zone = {
 	show_tech_unlock_if = {
 		is_regular_empire = yes
 	}
-
-	upgrades = {
-		"building_commercial_megaplex"
-	}
 }
 
 building_commercial_megaplex = {
 	base_buildtime = @b2_time
-	can_build = no
-
+	planet_limit = 1
 	category = trade
+
+	building_sets = {
+		trade
+	}
 
 	potential = {
 		exists = owner
-		owner = { is_regular_empire = yes }
-		NOT = { has_modifier = slave_colony }
-		has_building = building_commercial_zone
-	}
-
-	allow = {
-		is_occupied_flag = no # Ariphaos
+		owner = {
+			is_regular_empire = yes
+		}
+		NOR = {
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
 	}
 
 	destroy_trigger = {
@@ -115,7 +143,17 @@ building_commercial_megaplex = {
 		OR = {
 			owner = { is_regular_empire = no }
 			has_modifier = slave_colony
+			has_modifier = penal_colony
 		}
+	}
+
+	allow = {
+		is_occupied_flag = no # Ariphaos
+	}
+
+	inline_script = {
+		script = jobs/trader_add
+		AMOUNT = @building_static_jobs
 	}
 
 	resources = {
@@ -131,8 +169,8 @@ building_commercial_megaplex = {
 	}
 
 	planet_modifier = {
-		job_clerk_add = 2
-		job_trader_add = 2
+		planet_traders_upkeep_mult = -0.20
+		job_trader_add = 200
 	}
 
 	triggered_planet_modifier = {
@@ -141,7 +179,7 @@ building_commercial_megaplex = {
 			owner = { NOT = { has_valid_civic = civic_consumerism } }
 		}
 		modifier = {
-			job_clerk_add = 2
+			job_clerk_add = 200
 		}
 	}
 
@@ -151,28 +189,26 @@ building_commercial_megaplex = {
 			owner = { has_valid_civic = civic_consumerism }
 		}
 		modifier = {
-			job_trader_add = 2
+			job_trader_add = 200
 		}
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				has_active_tradition = tr_mercantile_commercial_enterprise
-			}
+			owner = { has_active_tradition = tr_mercantile_commercial_enterprise }
 		}
 		modifier = {
-			job_trader_add = 2
+			job_trader_add = 200
 		}
 	}
 
 	triggered_desc = {
+		potential = {
+			exists = owner
+			owner = { NOT = { has_valid_civic = civic_consumerism } }
+		}
 		text = job_clerk_effect_desc
-	}
-
-	triggered_desc = {
-		text = job_trader_effect_desc
 	}
 
 	prerequisites = {
@@ -194,10 +230,10 @@ building_commercial_megaplex = {
 		energy = 6
 		trigger = {
 			OR = {
-				num_unemployed >= 10
+				num_unemployed >= 1000
 				num_assigned_jobs = {
 					job = servant
-					value >= 10
+					value >= 1000
 				}
 			}
 		}
@@ -242,12 +278,21 @@ building_galactic_stock_exchange = {
 			owner = { is_regular_empire = no }
 			has_modifier = slave_colony
 			has_modifier = resort_colony
+			has_modifier = penal_colony
 		}
 	}
 
 	planet_modifier = {
-		job_merchant_add = 1
-		trade_value_mult = 0.2
+		pop_trader_bonus_workforce_mult = 0.15
+	}
+
+	country_modifier = {
+		country_trade_fee = -0.05
+	}
+
+	inline_script = {
+		script = jobs/trader_add
+		AMOUNT = @building_static_jobs
 	}
 
 	resources = {
@@ -262,7 +307,7 @@ building_galactic_stock_exchange = {
 		}
 	}
 
-	triggered_planet_modifier = {
+	triggered_planet_modifier = { ## ECAF
 		potential = {
 			exists = owner
 			owner = {
@@ -273,8 +318,7 @@ building_galactic_stock_exchange = {
 			}
 		}
 		modifier = {
-			job_merchant_add = 1
-			trade_value_mult = 0.05
+			job_merchant_add = 50
 		}
 	}
 
@@ -287,20 +331,6 @@ building_galactic_stock_exchange = {
 	}
 
 	ai_resource_production = {
-		energy = 5
-		trigger = {
-			solar_system = {
-				has_system_trade_value >= 50
-			}
-		}
-	}
-	
-	ai_resource_production = {
-		energy = 3
-		trigger = {
-			solar_system = {
-				has_system_trade_value >= 80
-			}
-		}
+		trade = 10
 	}
 }

@@ -41,7 +41,7 @@ gpm_building_stronghold = {
 			}
 		}
 		modifier = {
-			job_mercenary_add = 2
+			job_mercenary_add = 200
 		}
 	}
 

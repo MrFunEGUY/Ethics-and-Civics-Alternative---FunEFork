@@ -38,7 +38,7 @@ patrol_drone = {
 
 	resources = {
 		category = planet_jobs
-		inline_script = "output/enforcer_output" ## ECAF
+		inline_script = "output/incidental_output" ## ECAF
 		produces = {
 			unity = 1
 		}
@@ -52,6 +52,7 @@ patrol_drone = {
 	weight = {
 		weight = @complex_drone_job_weight
 		mult = value:job_weights_modifier|JOB|patrol_drone|RESOURCE|unity|FACTOR|0.25|
+		mult = value:scripted_job_weight_shroud_forged_mult
 		modifier = {
 			factor = 50
 		}

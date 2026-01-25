@@ -810,19 +810,19 @@ country_event = {
 				2 = {
 					create_country = {
 						authority = auth_dictatorial
-						inline_script = { script = prikki/prikki_create_country }
+						inline_script = { script = prikki/ecaf_prikki_create_country }
 					}
 				}
 				1 = {
 					create_country = {
 						authority = auth_dict_democratic
-						inline_script = { script = prikki/prikki_create_country }
+						inline_script = { script = prikki/ecaf_prikki_create_country }
 					}
 				}
 				1 = {
 					create_country = {
 						authority = auth_democratic
-						inline_script = { script = prikki/prikki_create_country }
+						inline_script = { script = prikki/ecaf_prikki_create_country }
 					}
 				}
 				1 = {

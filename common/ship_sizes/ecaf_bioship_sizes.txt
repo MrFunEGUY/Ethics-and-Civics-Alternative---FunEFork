@@ -66,7 +66,7 @@ mauler_stage_1 = {
 			alloys = @mauler_stage_1_upkeep_alloys
 			food = @mauler_stage_1_upkeep_food
 		}
-		inline_script = { script = ships/ship_costs SIZE = mauler_stage_1 }
+		inline_script = { script = ships/ecaf_ship_costs SIZE = mauler_stage_1 }
 	}
 
 	min_upgrade_cost = {
@@ -159,7 +159,7 @@ mauler_stage_2 = {
 			alloys = @mauler_stage_2_upkeep_alloys
 			food = @mauler_stage_2_upkeep_food
 		}
-		inline_script = { script = ships/ship_costs SIZE = mauler_stage_2 }
+		inline_script = { script = ships/ecaf_ship_costs SIZE = mauler_stage_2 }
 	}
 
 	min_upgrade_cost = {
@@ -250,7 +250,7 @@ mauler_stage_3 = {
 			alloys = @mauler_stage_3_upkeep_alloys
 			food = @mauler_stage_3_upkeep_food
 		}
-		inline_script = { script = ships/ship_costs SIZE = mauler_stage_3 }
+		inline_script = { script = ships/ecaf_ship_costs SIZE = mauler_stage_3 }
 	}
 
 	min_upgrade_cost = {
@@ -338,7 +338,7 @@ weaver_stage_1 = {
 			alloys = @weaver_stage_1_upkeep_alloys
 			food = @weaver_stage_1_upkeep_food
 		}
-		inline_script = { script = ships/ship_costs SIZE = weaver_stage_1 }
+		inline_script = { script = ships/ecaf_ship_costs SIZE = weaver_stage_1 }
 	}
 
 	min_upgrade_cost = {
@@ -443,7 +443,7 @@ weaver_stage_2 = {
 			alloys = @weaver_stage_2_upkeep_alloys
 			food = @weaver_stage_2_upkeep_food
 		}
-		inline_script = { script = ships/ship_costs SIZE = weaver_stage_2 }
+		inline_script = { script = ships/ecaf_ship_costs SIZE = weaver_stage_2 }
 	}
 
 	min_upgrade_cost = {
@@ -546,7 +546,7 @@ weaver_stage_3 = {
 			alloys = @weaver_stage_3_upkeep_alloys
 			food = @weaver_stage_3_upkeep_food
 		}
-		inline_script = { script = ships/ship_costs SIZE = weaver_stage_3 }
+		inline_script = { script = ships/ecaf_ship_costs SIZE = weaver_stage_3 }
 	}
 
 	min_upgrade_cost = {
@@ -669,7 +669,7 @@ harbinger_stage_1 = {
 			alloys = @harbinger_stage_1_upkeep_alloys
 			food = @harbinger_stage_1_upkeep_food
 		}
-		inline_script = { script = ships/ship_costs SIZE = harbinger_stage_1 }
+		inline_script = { script = ships/ecaf_ship_costs SIZE = harbinger_stage_1 }
 	}
 
 	min_upgrade_cost = {
@@ -799,7 +799,7 @@ harbinger_stage_2 = {
 			alloys = @harbinger_stage_2_upkeep_alloys
 			food = @harbinger_stage_2_upkeep_food
 		}
-		inline_script = { script = ships/ship_costs SIZE = harbinger_stage_2 }
+		inline_script = { script = ships/ecaf_ship_costs SIZE = harbinger_stage_2 }
 	}
 
 	min_upgrade_cost = {
@@ -927,7 +927,7 @@ harbinger_stage_3 = {
 			alloys = @harbinger_stage_3_upkeep_alloys
 			food = @harbinger_stage_3_upkeep_food
 		}
-		inline_script = { script = ships/ship_costs SIZE = harbinger_stage_3 }
+		inline_script = { script = ships/ecaf_ship_costs SIZE = harbinger_stage_3 }
 	}
 
 	min_upgrade_cost = {
@@ -1032,7 +1032,7 @@ stinger_stage_1 = {
 			alloys = @stinger_stage_1_upkeep_alloys
 			food = @stinger_stage_1_upkeep_food
 		}
-		inline_script = { script = ships/ship_costs SIZE = stinger_stage_1 }
+		inline_script = { script = ships/ecaf_ship_costs SIZE = stinger_stage_1 }
 	}
 
 	min_upgrade_cost = {
@@ -1150,7 +1150,7 @@ stinger_stage_2 = {
 			alloys = @stinger_stage_2_upkeep_alloys
 			food = @stinger_stage_2_upkeep_food
 		}
-		inline_script = { script = ships/ship_costs SIZE = stinger_stage_2 }
+		inline_script = { script = ships/ecaf_ship_costs SIZE = stinger_stage_2 }
 	}
 
 	min_upgrade_cost = {
@@ -1266,7 +1266,7 @@ stinger_stage_3 = {
 			alloys = @stinger_stage_3_upkeep_alloys
 			food = @stinger_stage_3_upkeep_food
 		}
-		inline_script = { script = ships/ship_costs SIZE = stinger_stage_3 }
+		inline_script = { script = ships/ecaf_ship_costs SIZE = stinger_stage_3 }
 	}
 
 	min_upgrade_cost = {
@@ -1411,7 +1411,7 @@ bio_titan = {
 			food = @titan_upkeep_energy
 			alloys = @titan_upkeep_alloys
 		}
-		inline_script = { script = ships/ship_costs SIZE = bio_titan }
+		inline_script = { script = ships/ecaf_ship_costs SIZE = bio_titan }
 	}
 
 	min_upgrade_cost = {

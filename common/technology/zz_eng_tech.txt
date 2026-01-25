@@ -168,10 +168,8 @@ tech_synthetic_leaders = {
 	## unlocks robot-leaders
 
 	potential = {
-		NOR = {
-			has_ethic = "ethic_gestalt_consciousness"
-			is_individual_machine = yes
-		}
+		is_gestalt = no
+		is_individual_machine = no
 	}
 
 	weight_modifier = {

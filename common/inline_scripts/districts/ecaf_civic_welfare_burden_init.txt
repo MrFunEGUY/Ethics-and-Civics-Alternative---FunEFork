@@ -1,5 +1,5 @@
 inline_script = {
-    script = districts/civic_welfare_burden
+    script = districts/ecaf_civic_welfare_burden
 
 	## Basic
     DISTRICT_MINING = "$DISTRICT_MINING$"

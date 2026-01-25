@@ -60,10 +60,7 @@ assault_army = {
 				has_technology = tech_telepathy
 				has_technology = tech_gene_seed_purification
 				AND = {
-					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
-					}
+					is_militarist = yes
 					has_technology = tech_gene_banks
 				}
 			}
@@ -160,10 +157,7 @@ slave_army = {
 				has_technology = tech_telepathy
 				has_technology = tech_gene_seed_purification
 				AND = {
-					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
-					}
+					is_militarist = yes
 					has_technology = tech_gene_banks
 				}
 				AND = {
@@ -234,10 +228,7 @@ clone_army = {
 				has_technology = tech_telepathy
 				has_technology = tech_gene_seed_purification
 				NAND = {
-					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
-					}
+					is_militarist = yes
 					has_technology = tech_gene_banks
 				}
 			}
@@ -303,7 +294,7 @@ robotic_army = {
 		modifier = {
 			set = 0
 			is_fallen_empire = yes
-			NOT = { has_ethic = ethic_fanatic_materialist }
+			is_fanatic_materialist = no
 		}
 	}
 }
@@ -366,7 +357,7 @@ psionic_army = {
 		modifier = {
 			set = 0
 			is_fallen_empire = yes
-			NOT = { has_ethic = ethic_fanatic_spiritualist }
+			is_fanatic_spiritualist = no
 		}
 	}
 }
@@ -405,7 +396,7 @@ xenomorph_army = {
 		modifier = {
 			factor = 10
 			is_fallen_empire = yes
-			has_ethic = ethic_fanatic_xenophobe
+			is_fanatic_xenophobe = yes
 		}
 		modifier = {
 			set = 0
@@ -461,7 +452,7 @@ gene_warrior_army = {
 		modifier = {
 			set = 0
 			is_fallen_empire = yes
-			NOT = { has_ethic = ethic_fanatic_xenophile }
+			is_fanatic_xenophile = no
 		}
 	}
 }

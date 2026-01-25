@@ -192,11 +192,34 @@ generate_start_pops = {
 		}
 	}
 	if = {
-		limit = { owner = { has_valid_civic = civic_machine_servitor } }
+		limit = {
+			owner = { has_valid_civic = civic_machine_servitor }
+		}
 		while = {
-			limit = { pop_amount < 3300 }
+			limit = { pop_amount < 4800 }	# Includes the 2,000 Bio-Trophies that were already created.
 			create_pop_group = {
 				species = owner_main_species
+			}
+		}
+	}
+	if = {
+		limit = { owner = { has_origin = origin_shroud_forged } }
+		while = {
+			limit = { pop_amount < 1900 }
+			create_pop_group = {
+				species = owner_main_species
+				ethos = random
+			}
+		}
+		owner_main_species = {
+			drone_conversion_new_species_effect = yes
+			set_species_flag = original_main_species # After conversion effect, so it's the only species with the flag
+		}
+		while = {
+			limit = { pop_amount < 2900 }
+			create_pop_group = {
+				species = event_target:secondary_main_species
+				category = complex_drone
 			}
 		}
 	}
@@ -363,6 +386,8 @@ generate_start_pops = {
 					NOR = {
 						has_origin = origin_broken_shackles
 						is_wilderness_empire = yes
+						is_tankbound_empire = yes
+						has_valid_civic = civic_machine_servitor
 					}
 				}
 			}

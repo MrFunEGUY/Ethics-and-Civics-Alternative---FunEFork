@@ -49,7 +49,7 @@ corvette = {
 			energy = @corvette_upkeep_energy
 			alloys = @corvette_upkeep_alloys
 		}
-		inline_script = { script = ships/ship_costs SIZE = corvette }
+		inline_script = { script = ships/ecaf_ship_costs SIZE = corvette }
 	}
 
 	min_upgrade_cost = {
@@ -141,7 +141,7 @@ frigate = {
 			alloys = @corvette_upkeep_alloys
 		}
 
-		inline_script = { script = ships/ship_costs SIZE = frigate }
+		inline_script = { script = ships/ecaf_ship_costs SIZE = frigate }
 	}
 
 	min_upgrade_cost = {
@@ -217,7 +217,7 @@ destroyer = {
 			energy = @destroyer_upkeep_energy
 			alloys = @destroyer_upkeep_alloys
 		}
-		inline_script = { script = ships/ship_costs SIZE = destroyer }
+		inline_script = { script = ships/ecaf_ship_costs SIZE = destroyer }
 	}
 	min_upgrade_cost = {
 		alloys = 2
@@ -323,7 +323,7 @@ cruiser = {
 			energy = @cruiser_upkeep_energy
 			alloys = @cruiser_upkeep_alloys
 		}
-		inline_script = { script = ships/ship_costs SIZE = cruiser }
+		inline_script = { script = ships/ecaf_ship_costs SIZE = cruiser }
 	}
 
 	min_upgrade_cost = {
@@ -399,7 +399,7 @@ battleship = {
 			energy = @battleship_upkeep_energy
 			alloys = @battleship_upkeep_alloys
 		}
-		inline_script = { script = ships/ship_costs SIZE = battleship }
+		inline_script = { script = ships/ecaf_ship_costs SIZE = battleship }
 	}
 
 	min_upgrade_cost = {
@@ -533,7 +533,7 @@ titan = {
 			energy = @titan_upkeep_energy
 			alloys = @titan_upkeep_alloys
 		}
-		inline_script = { script = ships/ship_costs SIZE = titan }
+		inline_script = { script = ships/ecaf_ship_costs SIZE = titan }
 	}
 
 	min_upgrade_cost = {
@@ -568,7 +568,7 @@ juggernaut = {
 			energy = @juggernaut_upkeep_energy
 			alloys = @juggernaut_upkeep_alloys
 		}
-		inline_script = { script = ships/ship_costs SIZE = juggernaut }
+		inline_script = { script = ships/ecaf_ship_costs SIZE = juggernaut }
 	}
 
 	combat_size_multiplier = 5

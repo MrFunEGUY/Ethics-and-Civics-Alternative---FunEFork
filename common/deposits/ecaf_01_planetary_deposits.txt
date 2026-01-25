@@ -22,12 +22,21 @@
 
 @planet_type_bonus = 1.5
 
+
 d_alien_pets_deposit = {
 	is_for_colonizable = yes
 	category = deposit_cat_rare
 
 	potential = {
 		can_have_habitable_deposits = yes
+		NOT = {
+			is_planet_class = pc_volcanic
+		}
+	}
+
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_volcanic_ore_veins
 	}
 
 	triggered_planet_modifier = {
@@ -39,7 +48,7 @@ d_alien_pets_deposit = {
 		}
 		modifier = {
 			planet_jobs_unity_produces_mult = 0.10
-			planet_amenities_add = 10
+			planet_amenities_add = 1000
 		}
 	}
 
@@ -47,7 +56,7 @@ d_alien_pets_deposit = {
 		weight = @mid_rare
 		modifier = {
 			factor = 2
-			pd_is_planet_class_gaia = yes
+			pd_is_planet_class_gaia = yes ## ECAF
 		}
 		modifier = {
 			factor = 0
@@ -61,17 +70,14 @@ d_alien_pets_deposit = {
 		}
 	}
 
-	planet_modifier = {
-		building_xeno_zoo_max = 1
-	}
-
+	## ECAF
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = { has_valid_civic = civic_keepers_harmony }
 		}
 		modifier = {
-			job_druid_add = 1
+			job_druid_add = 100
 			biological_pop_happiness = 0.05
 		}
 	}
@@ -81,7 +87,7 @@ d_alien_pets_deposit = {
 			owner = { has_valid_civic = civic_terraforming }
 		}
 		modifier = {
-			job_xenobiologist_add = 2
+			job_xenobiologist_add = 200
 		}
 	}
 }

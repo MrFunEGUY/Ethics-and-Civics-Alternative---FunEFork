@@ -85,7 +85,7 @@ starbase_outpost = {
 		upkeep = {
 			energy = 1
 		}
-		inline_script = { script = ships/starbase_costs SIZE = outpost }
+		inline_script = { script = ships/ecaf_starbase_costs SIZE = outpost }
 	}
 
 	potential_construction = {
@@ -182,7 +182,7 @@ starbase_starport = {
 			energy = 2
 		}
 		
-		inline_script = { script = ships/starbase_costs SIZE = starport }
+		inline_script = { script = ships/ecaf_starbase_costs SIZE = starport }
 	}
 
 	combat_size_multiplier = 20
@@ -277,7 +277,7 @@ starbase_starhold = {
 			energy = 3
 		}
 
-		inline_script = { script = ships/starbase_costs SIZE = starhold }
+		inline_script = { script = ships/ecaf_starbase_costs SIZE = starhold }
 	}
 
 	combat_size_multiplier = 30
@@ -373,7 +373,7 @@ starbase_starfortress = {
 			energy = 4
 		}
 
-		inline_script = { script = ships/starbase_costs SIZE = starfortress }
+		inline_script = { script = ships/ecaf_starbase_costs SIZE = starfortress }
 	}
 
 	combat_size_multiplier = 40

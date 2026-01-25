@@ -122,8 +122,8 @@ ship_event = {
 										limit = {
 											NOR = {
 												has_ethic = ethic_fanatic_spiritualist
-												has_ethic = ethic_fanatic_socialism
-												has_ethic = ethic_fanatic_capitalism
+												is_fanatic_socialist = yes
+												is_fanatic_capitalist = yes
 												has_ethic = ethic_fanatic_xenophobe
 											}
 										}
@@ -297,9 +297,9 @@ country_event = {
 		event_target:pre_ftl_country = {
 			shift_ethic = ethic_fanatic_authoritarian
 			if = {
-				limit = { NOT = { has_ethic = ethic_fanatic_socialism } }
+				limit = { is_fanatic_socialist = no }
 				while = {
-					limit = { NOT = { has_ethic = ethic_fanatic_socialism } }
+					limit = { is_fanatic_socialist = no }
 					shift_ethic = ethic_socialism
 				}
 			}
@@ -316,9 +316,9 @@ country_event = {
 		event_target:pre_ftl_country = {
 			shift_ethic = ethic_fanatic_authoritarian
 			if = {
-				limit = { NOT = { has_ethic = ethic_fanatic_socialism } }
+				limit = { is_fanatic_socialist = no }
 				while = {
-					limit = { NOT = { has_ethic = ethic_fanatic_socialism } }
+					limit = { is_fanatic_socialist = no }
 					shift_ethic = ethic_socialism
 				}
 			}

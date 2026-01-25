@@ -716,7 +716,7 @@ imperialist = {
 				}
 				support > 0.20
 				parameter:empire = {
-					NOT = { has_ethic = "ethic_fanatic_militarist" }
+					is_fanatic_militarist = no
 				}
 			}
 
