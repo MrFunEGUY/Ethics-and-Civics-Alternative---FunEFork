@@ -44,8 +44,10 @@ slave_master = {
 		modifier = {
 			factor = 1.5
 			OR = {
-				has_trait = trait_robot_domestic_protocols
-				has_trait = trait_charismatic
+				owner.species = {
+					has_trait = trait_robot_domestic_protocols
+					has_trait = trait_charismatic
+				}
 			}
 		}
 		modifier = {
@@ -342,7 +344,7 @@ templar = {
 	triggered_planet_modifier = {
 		potential = {
 			OR = {
-				root = {
+				owner.species = {
 					has_trait = trait_robot_domestic_protocols
 					has_trait = trait_charismatic
 				}
@@ -369,8 +371,10 @@ templar = {
 		modifier = {
 			factor = 1.5
 			OR = {
-				has_trait = trait_robot_domestic_protocols
-				has_trait = trait_charismatic
+				owner.species = {
+					has_trait = trait_robot_domestic_protocols
+					has_trait = trait_charismatic
+				}
 			}
 		}
 		modifier = {
@@ -954,8 +958,10 @@ druid = {
 	triggered_planet_modifier = {
 		potential = {
 			OR = {
-				has_trait = trait_robot_domestic_protocols
-				has_trait = trait_charismatic
+				owner.species = {
+					has_trait = trait_robot_domestic_protocols
+					has_trait = trait_charismatic
+				}
 			}
 		}
 		modifier = {
@@ -979,8 +985,10 @@ druid = {
 		modifier = {
 			factor = 1.5
 			OR = {
-				has_trait = trait_robot_domestic_protocols
-				has_trait = trait_charismatic
+				owner.species = {
+					has_trait = trait_robot_domestic_protocols
+					has_trait = trait_charismatic
+				}
 			}
 		}
 		modifier = {
@@ -1228,8 +1236,10 @@ techno_priest = {
 	triggered_planet_modifier = {
 		potential = {
 			OR = {
-				has_trait = trait_robot_domestic_protocols
-				has_trait = trait_charismatic
+				owner.species = {
+					has_trait = trait_robot_domestic_protocols
+					has_trait = trait_charismatic
+				}
 			}
 		}
 		modifier = {
