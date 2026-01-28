@@ -1,3 +1,7 @@
+@base_cost = 300
+@city_cost = 500
+@rural_district_ai_coefficient = 0.75
+
 district_generator = {
 	expansion_planner = yes
 	base_buildtime = 240

@@ -126,6 +126,7 @@ pop_ecaf_crew_production = {
 }
 
 job_ecaf_crew_production = {
+	base = @base_pop_crew_production
 	# # Pop Jobs
 	# modifier = { has_job_type = soldier add = @soldier_job_crew_production }
 	# modifier = { has_job_type = knight add = @soldier_job_crew_production }

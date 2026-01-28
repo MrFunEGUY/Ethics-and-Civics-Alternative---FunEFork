@@ -296,7 +296,7 @@ lrsk_gov_var_civic_mc_vertical_integration = {
 	modifier = {
 		country_energy_produces_mult = 0.05
 		country_minerals_produces_mult = 0.05
-		trade_value_mult = 0.05
+		country_trade_produces_mult = 0.05
 	}
 }
 

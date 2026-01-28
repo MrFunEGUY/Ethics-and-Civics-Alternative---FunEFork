@@ -1,34 +1,8 @@
-planet_enforcers = {
-	parent = planet_jobs
-	generate_add_modifiers = {
-		produces
-	}
-	generate_mult_modifiers = {
-        upkeep
-    }
-	modifier_category = pop
-}
-
 planet_districts_cities = {
 	parent = planet_districts
 	generate_mult_modifiers = {
 		upkeep
 	}
-}
-
-stations = {
-	use_for_ai_budget = yes
-	ai_use_parent_for_resources_upkeep = {
-		energy
-	}
-
-	generate_mult_modifiers = {
-		produces
-		upkeep
-		cost
-	}
-
-	parent = country
 }
 
 station_researchers = {
@@ -71,4 +45,24 @@ leader_commanders = {
 		produces
 		upkeep
 	}
+}
+
+planet_politicians = {
+	parent = planet_jobs_ruler
+	generate_add_modifiers = {
+		produces
+	}
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_rangers = {
+	icon = "job_ranger"
+	parent = planet_researchers
+	generate_add_modifiers = {
+		produces
+	}
+	modifier_category = pop_job
 }

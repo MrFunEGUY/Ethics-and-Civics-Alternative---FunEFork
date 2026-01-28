@@ -17,7 +17,6 @@
 ####################
 trait_symbiotic = {
 	cost = 1
-	potential_crossbreeding_chance = 0.33
 	initial = no
 	randomized = no
 	opposites = {
@@ -51,7 +50,6 @@ trait_symbiotic = {
 
 trait_slave_gene = {
 	cost = 1
-	potential_crossbreeding_chance = 0.33
 	opposites = {
 		"trait_intelligent"
 		"trait_erudite"

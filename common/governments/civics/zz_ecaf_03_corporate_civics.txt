@@ -97,10 +97,9 @@ civic_trading_posts = {
 	}
 	modifier = {
 		country_starbase_capacity_add = 4
+		starbase_buildings_trade_produces_add = 2
 		station_gatherers_produces_mult = 0.1
 		station_researchers_produces_mult = 0.1
-		starbase_trade_collection_range_add = 1
-		starbase_trade_protection_add = 8
 		add_attunement_the_cradle_of_souls = @civic_attunement1
 	}
 	description = "civic_tooltip_trading_posts_effects"
@@ -328,7 +327,7 @@ civic_gospel_of_the_masses = {
 		}
 	}
 	modifier = {
-		job_preacher_trade_value_add = 1.25
+		planet_bureaucrats_trade_produces_add = 1
 		pop_ethic_spiritualist_attraction_mult = 0.5
 		add_attunement_the_composer_of_strands = @civic_attunement1
 	}

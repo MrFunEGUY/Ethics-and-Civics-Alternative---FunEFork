@@ -87,7 +87,7 @@ civic_corvee_system = {
 		}	
 	}
 	modifier = {
-		pop_growth_from_immigration = 0.15
+		planet_resettlement_unemployed_mult = 0.15
 		planet_jobs_worker_produces_mult = 0.05
 		pop_cat_worker_political_power = -3
 		pop_cat_specialist_political_power = -3
@@ -218,10 +218,10 @@ civic_beacon_of_liberty = {
 	}
 	description = "civic_tooltip_beacon_of_liberty_effects"
 	modifier = {
-		trade_value_mult = 0.15
+		country_trade_produces_mult = 0.1
 		empire_size_pops_mult = -0.15
 		country_starbase_influence_cost_mult = -0.25
-		pop_growth_from_immigration = 0.15
+		planet_resettlement_unemployed_mult = 0.15
 		country_ethic_influence_produces_add = -0.5
 		add_attunement_the_cradle_of_souls = @civic_attunement1
 	}
@@ -620,7 +620,7 @@ civic_feudal_realm = {
 	description = "civic_tooltip_feudal_realm_effects"
 	modifier = {
 		leaders_cost_mult = -0.5
-		# job_noble_per_pop = 0.05
+		job_politician_per_pop = 0.05
 		empire_size_penalty_mult = -0.2
 		country_produces_mult = -0.05
 		add_attunement_the_eater_of_worlds = @civic_attunement1
@@ -1160,8 +1160,7 @@ civic_free_haven = {
 	}
 	description = "civic_tooltip_free_haven_effects"
 	modifier = {
-		pop_growth_from_immigration = 0.15
-		planet_immigration_pull_mult = 0.50
+		planet_resettlement_unemployed_destination_mult = 0.15
 		pop_ethic_xenophobe_attraction_mult = -0.2
 		add_attunement_the_cradle_of_souls = @civic_attunement1
 	}
@@ -1289,7 +1288,7 @@ civic_corporate_dominion = {
 		external_leader_pool_add = 1
 		country_starbase_capacity_add = 5
 		country_resource_max_add = 10000
-		job_mogul_per_pop = 0.03
+		job_merchant_per_pop = 0.03
 		army_morale = -0.15
 	}
 
@@ -1594,7 +1593,7 @@ civic_efficient_bureaucracy = {
 	# The edict fund production is deliberately only limited to  Bureaucrats, Priests, Managers and Death Priests.
 	description = "civic_tooltip_efficient_bureaucracy_effects"
 	modifier = {
-		planet_administrators_upkeep_mult = -0.15
+		planet_politicians_upkeep_mult = -0.15
 		empire_size_penalty_mult = -0.1
 		starbases_upkeep_mult = -0.1
 		decisions_cost_mult = -0.1
@@ -2095,7 +2094,7 @@ civic_byzantine_bureaucracy = {
 		}
 	}
 	modifier = {
-		planet_administrators_unity_produces_add = 1
+		planet_politicians_unity_produces_add = 1
 	}
 	description = "civic_tooltip_byzantine_bureaucracy_effects"
 }
@@ -2138,7 +2137,7 @@ civic_merchant_guilds = {
 		}
 	}
 	modifier = {
-		job_mogul_per_pop = 0.02
+		job_merchant_per_pop = 0.02
 		pop_cat_ruler_political_power = 1
 	}
 	random_weight = {

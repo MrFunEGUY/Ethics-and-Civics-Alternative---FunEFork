@@ -2416,8 +2416,6 @@ ethic_spiritualist = {
 	}
 	leader_background_job_weight = {
 		high_priest = 25
-		priest = 25
-		death_priest = 25
 		telepath = 25
 		death_chronicler = 25
 		necro_apprentice = 25
@@ -2425,6 +2423,7 @@ ethic_spiritualist = {
 		mortal_initiate = 25
 		haruspex = 25
 		technophant = 25
+		bureaucrat = 25
 	}
 	country_modifier = {
 		country_unity_produces_mult = 0.1
@@ -2512,23 +2511,10 @@ ethic_spiritualist = {
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_PRIESTS_POS
 		trigger = {
-			OR = {
-				num_assigned_jobs = {
-					job = priest
-					value > 0
-				}
-				num_assigned_jobs = {
-					job = high_priest
-					value > 0
-				}
-				num_assigned_jobs = {
-					job = death_priest
-					value > 0
-				}
-				num_assigned_jobs = {
-					job = preacher
-					value > 0
-				}
+			is_spiritualist = yes
+			num_assigned_jobs = {
+				job = bureaucrat
+				value > 0
 			}
 		}
 	}
@@ -3111,7 +3097,7 @@ ethic_fanatic_socialism = {
 		species_leader_exp_gain = 0.1
 		country_society_tech_research_speed = 0.1
 		pop_cat_worker_political_power = 2
-		trade_value_mult = -0.15
+		country_trade_produces_mult = -0.15
 	}
 	random_weight = {
 		base = 85
@@ -3142,7 +3128,7 @@ ethic_socialism = {
 		pop_amenities_usage_mult = -0.1
 		country_society_tech_research_speed = 0.05
 		pop_cat_worker_political_power = 1
-		trade_value_mult = -0.05
+		country_trade_produces_mult = -0.05
 	}
 	random_weight = {
 		base = 100
@@ -3423,7 +3409,7 @@ ethic_fanatic_capitalism = {
 		NO_CAMPAIGNS
 	}
 	country_modifier = {
-		trade_value_mult = 0.2
+		country_trade_produces_mult = 0.2
 		country_trade_fee = -0.1
 		country_trade_attractiveness = 0.5
 		pop_cat_worker_political_power = -1
@@ -3453,7 +3439,7 @@ ethic_capitalism = {
 		ALLOWS_MARKET_ECONOMY
 	}
 	country_modifier = {
-		trade_value_mult = 0.1
+		country_trade_produces_mult = 0.1
 		country_trade_attractiveness = 0.25
 		country_trade_fee = -0.05
 		pop_cat_worker_political_power = -0.5

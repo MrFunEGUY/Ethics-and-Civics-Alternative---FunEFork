@@ -5,6 +5,7 @@ is_exile_country = { always = no }
 is_rogue_colony = { always = no }
 
 is_organic_zealots = { always = no }
+is_valid_organic_zealots = { always = no }
 
 ##########
 has_planetary_diversity = { always = no }
@@ -17,6 +18,10 @@ pd_is_planet_class_gaia = { is_planet_class = pc_gaia }
 
 ##########
 
+has_civstrife_origin = { always = no }
+
+##########
+
 lrsk_gvp_is_active = { always = no }
 lrsk_has_gvp_mil_gov = { always = no }
 lrsk_has_gvp_pac_gov = { always = no }
@@ -24,6 +29,7 @@ lrsk_has_gvp_spi_gov = { always = no }
 lrsk_has_gvp_mat_gov = { always = no }
 lrsk_has_gvp_phile_gov = { always = no }
 lrsk_has_gvp_soc_gov = { always = no }
+lrsk_has_gvp_hive_gov = { always = no }
 lrsk_has_gvp_cap_gov = { always = no }
 
 ##########

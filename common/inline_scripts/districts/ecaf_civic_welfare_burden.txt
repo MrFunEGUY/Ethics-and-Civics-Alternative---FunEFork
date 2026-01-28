@@ -4,7 +4,7 @@ triggered_planet_modifier = {
 		owner = { is_welfare_or_burden = yes }
 	}
 	modifier = {
-		planet_housing_add = 1
+		planet_housing_add = 100
 
 		job_miner_add = $DISTRICT_MINING$
 		job_technician_add = $DISTRICT_GENERATOR$

@@ -5,7 +5,7 @@
 
 uncivil_defence_contractor_mod_1 = {
 	
-	trade_value_mult = 0.05
+	country_trade_produces_mult = 0.05
 	pop_ethic_militarist_attraction_mult = 0.05
 	
 	ships_upkeep_mult = -0.05
@@ -16,7 +16,7 @@ uncivil_defence_contractor_mod_1 = {
 
 uncivil_defence_contractor_mod_2 = {
 	
-	trade_value_mult = 0.10
+	country_trade_produces_mult = 0.10
 	pop_ethic_militarist_attraction_mult = 0.10
 	
 	ships_upkeep_mult = -0.10
@@ -27,7 +27,7 @@ uncivil_defence_contractor_mod_2 = {
 
 uncivil_defence_contractor_mod_3 = {
 	
-	trade_value_mult = 0.15
+	country_trade_produces_mult = 0.15
 	pop_ethic_militarist_attraction_mult = 0.15
 	
 	ships_upkeep_mult = -0.15
@@ -38,7 +38,7 @@ uncivil_defence_contractor_mod_3 = {
 
 uncivil_defence_contractor_mod_4 = {
 	
-	trade_value_mult = 0.20
+	country_trade_produces_mult = 0.20
 	pop_ethic_militarist_attraction_mult = 0.20
 	
 	ships_upkeep_mult = -0.20
@@ -49,7 +49,7 @@ uncivil_defence_contractor_mod_4 = {
 
 uncivil_defence_contractor_mod_5 = {
 	
-	trade_value_mult = 0.25
+	country_trade_produces_mult = 0.25
 	pop_ethic_militarist_attraction_mult = 0.25
 	
 	ships_upkeep_mult = -0.25
@@ -60,7 +60,7 @@ uncivil_defence_contractor_mod_5 = {
 
 uncivil_defence_contractor_mod_6 = {
 	
-	trade_value_mult = 0.05
+	country_trade_produces_mult = 0.05
 	pop_ethic_militarist_attraction_mult = 0.05
 	
 	ships_upkeep_mult = -0.05
@@ -71,7 +71,7 @@ uncivil_defence_contractor_mod_6 = {
 
 uncivil_defence_contractor_mod_7 = {
 	
-	trade_value_mult = 0.10
+	country_trade_produces_mult = 0.10
 	pop_ethic_militarist_attraction_mult = 0.10
 	
 	ships_upkeep_mult = -0.10
@@ -82,7 +82,7 @@ uncivil_defence_contractor_mod_7 = {
 
 uncivil_mercenary_company_mod_1 = {
 	
-	trade_value_mult = 0.10
+	country_trade_produces_mult = 0.10
 	pop_ethic_militarist_attraction_mult = 0.10
 	
 	ships_upkeep_mult = -0.10
@@ -93,7 +93,7 @@ uncivil_mercenary_company_mod_1 = {
 
 uncivil_mercenary_company_mod_2 = {
 	
-	trade_value_mult = 0.20
+	country_trade_produces_mult = 0.20
 	pop_ethic_militarist_attraction_mult = 0.20
 	
 	ships_upkeep_mult = -0.20
@@ -104,7 +104,7 @@ uncivil_mercenary_company_mod_2 = {
 
 uncivil_mercenary_company_mod_3 = {
 	
-	trade_value_mult = 0.30
+	country_trade_produces_mult = 0.30
 	pop_ethic_militarist_attraction_mult = 0.30
 	
 	ships_upkeep_mult = -0.30
@@ -115,7 +115,7 @@ uncivil_mercenary_company_mod_3 = {
 
 uncivil_mercenary_company_mod_4 = {
 	
-	trade_value_mult = 0.40
+	country_trade_produces_mult = 0.40
 	pop_ethic_militarist_attraction_mult = 0.40
 	
 	ships_upkeep_mult = -0.40
@@ -126,7 +126,7 @@ uncivil_mercenary_company_mod_4 = {
 
 uncivil_mercenary_company_mod_5 = {
 	
-	trade_value_mult = 0.50
+	country_trade_produces_mult = 0.50
 	pop_ethic_militarist_attraction_mult = 0.50
 	
 	ships_upkeep_mult = -0.50

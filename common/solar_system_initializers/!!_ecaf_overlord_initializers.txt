@@ -15,7 +15,6 @@ overlord_system_init = { # Aix - Empire Capital
 		base = 0 # Spawned via imperial_origin_start_effect in 01_start_of_game_effects.txt
 	}
 	max_instances = 1
-	spawn_chance = 100
 
 	flags = { overlord_empire_flag overlord_system_1_flag }
 
@@ -157,17 +156,40 @@ overlord_system_init = { # Aix - Empire Capital
 
 					while = {
 						count = 4
-						create_fleet = {
-							effect = {
-								set_owner = event_target:origin_imperial_homeland_country
-								while = {
-									count = 10
-									create_ship = {
-										name = random
-										design = NAME_Ravager
-									}
+						if = {
+							limit = {
+								event_target:origin_imperial_homeland_country = {
+									country_uses_bio_ships = yes
 								}
-								set_location = event_target:origin_imperial_homeland_country.capital_star
+							}
+							create_fleet = {
+								effect = {
+									set_owner = event_target:origin_imperial_homeland_country
+									while = {
+										count = 20
+										create_ship = {
+											name = random
+											design = NAME_CHARGER_1
+											growth_stage = 2
+										}
+									}
+									set_location = event_target:origin_imperial_homeland_co
+								}
+							}
+						}
+						else = {
+							create_fleet = {
+								effect = {
+									set_owner = event_target:origin_imperial_homeland_country
+									while = {
+										count = 10
+										create_ship = {
+											name = random
+											design = NAME_Ravager
+										}
+									}
+									set_location = event_target:origin_imperial_homeland_country.capital_star
+								}
 							}
 						}
 					}
@@ -265,21 +287,18 @@ overlord_system_init = { # Aix - Empire Capital
 				add_district_and_planet_size_if_needed_effect = {
 					district = district_generator
 				}
-				add_district_and_planet_size_if_needed_effect = {
-					district = district_industrial
-				}
 			}
 			remove_all_buildings = yes
 			add_building = building_major_capital
 			add_building = building_robot_assembly_plant
-			add_building = building_bureaucratic_2
-			add_building = building_research_lab_2
-			add_building = building_paradise_dome
-			add_building = building_commercial_zone
-			add_building = building_factory_1
-			add_building = building_foundry_2
-			add_building = building_energy_grid
-			add_building = building_holo_theatres
+			# add_building = building_bureaucratic_2
+			# add_building = building_research_lab_2
+			# add_building = building_paradise_dome
+			# add_building = building_commercial_zone
+			# add_building = building_factory_1
+			# add_building = building_foundry_2
+			# add_building = building_energy_grid
+			# add_building = building_holo_theatres
 
 			validate_planet_buildings_and_districts = yes
 		}

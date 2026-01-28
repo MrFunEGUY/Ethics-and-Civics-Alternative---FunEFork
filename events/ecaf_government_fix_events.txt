@@ -15,7 +15,7 @@ event = {
 				OR = {
 					is_fallen_empire = yes
 					is_imperial_authority = yes
-					is_corporate_authority = yes
+					is_megacorp = yes
 				}
 			}
 			if = {

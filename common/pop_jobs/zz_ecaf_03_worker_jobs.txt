@@ -43,14 +43,14 @@ clerk = {
 		planet_jobs_trade_produces_mult = 0.01
 	}
 
-	triggered_planet_modifier = { ########################################## megacorp_mod
-		potential = {
-			has_councilor = { COUNCILOR = "councilor_consumer_culture" }
-		}
+	# triggered_planet_modifier = { ########################################## megacorp_mod
+	# 	potential = {
+	# 		has_councilor = { COUNCILOR = "councilor_consumer_culture" }
+	# 	}
 
-		trade_value_add = 0.4
-		mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_trade_mult|TYPE|councilor_consumer_culture|
-	}
+	# 	trade_value_add = 0.4
+	# 	mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_trade_mult|TYPE|councilor_consumer_culture|
+	# }
 
 	triggered_planet_modifier = {
 		potential = { always = yes }

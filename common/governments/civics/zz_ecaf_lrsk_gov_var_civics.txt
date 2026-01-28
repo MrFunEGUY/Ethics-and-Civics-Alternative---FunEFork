@@ -1246,7 +1246,7 @@ lrsk_gov_var_civic_automated_indolence = {
 	}
 
 	modifier = {
-		planet_jobs_robotic_produces_mult = 0.2
+		robotic_pop_bonus_workforce_mult = 0.2
 		planet_stability_add = 2.5
 	}
 }

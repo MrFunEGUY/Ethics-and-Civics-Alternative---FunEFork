@@ -2,7 +2,7 @@ name = "NAME_Prikkiki_Ti"
 adjective = "NAME_Prikki"
 civics = {
 	civic = civic_fanatic_purifiers
-	civic = civic_cutthroat_politics
+	civic = civic_chosen_people
 	civic = civic_nationalistic_zeal
 }
 # origin = origin_prison_escapees

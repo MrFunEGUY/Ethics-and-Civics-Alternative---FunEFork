@@ -33,8 +33,8 @@ building_colliseum = {
 
 	planet_modifier = {
 		job_gladiator_add = 200
-		# trade_value_add = 4
-		planet_housing_add = 1
+		country_trade_produces_mult = 0.05
+		planet_housing_add = 100
 	}
 
 	country_modifier = { # ECAF

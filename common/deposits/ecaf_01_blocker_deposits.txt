@@ -54,7 +54,7 @@ d_mountain_range = {
 		}
 		modifier = {
 			planet_amenities_add = 5
-			planet_housing_add = 2
+			planet_housing_add = 200
 			job_druid_add = 100
 		}
 	}
@@ -65,7 +65,7 @@ d_mountain_range = {
 			owner = { has_valid_civic = civic_terraforming }
 		}
 		modifier = {
-			planet_housing_add = 2
+			planet_housing_add = 200
 			job_geoengineer_add = 200
 		}
 	}
@@ -76,7 +76,7 @@ d_mountain_range = {
 			owner = { has_valid_civic = civic_environmentalist }
 		}
 		modifier = {
-			planet_housing_add = 2
+			planet_housing_add = 200
 			job_miner_add = 2
 		}
 	}
@@ -164,7 +164,7 @@ d_active_volcano = {
 		}
 		modifier = {
 			planet_amenities_add = 5
-			planet_housing_add = 2
+			planet_housing_add = 200
 			job_druid_add = 100
 		}
 	}
@@ -175,7 +175,7 @@ d_active_volcano = {
 			owner = { has_valid_civic = civic_terraforming }
 		}
 		modifier = {
-			planet_housing_add = 2
+			planet_housing_add = 200
 			job_geoengineer_add = 200
 		}
 	}
@@ -186,7 +186,7 @@ d_active_volcano = {
 			owner = { has_valid_civic = civic_environmentalist }
 		}
 		modifier = {
-			planet_housing_add = 2
+			planet_housing_add = 200
 			job_miner_add = 1
 			job_technician_add = 1
 		}
@@ -289,7 +289,7 @@ d_dangerous_wildlife_blocker = {
 			owner = { has_valid_civic = civic_keepers_harmony }
 		}
 		modifier = {
-			planet_housing_add = 3
+			planet_housing_add = 300
 			planet_amenities_add = 5
 			job_druid_add = 100
 		}
@@ -301,7 +301,7 @@ d_dangerous_wildlife_blocker = {
 			owner = { has_valid_civic = civic_terraforming }
 		}
 		modifier = {
-			planet_housing_add = 4
+			planet_housing_add = 400
 			job_xenobiologist_add = 200
 		}
 	}
@@ -326,7 +326,6 @@ d_dangerous_wildlife_blocker = {
 			}
 			give_bio_repurposing_reward_on_organic_deposit_cleared = yes
 		}
-		planetscaper_pop_effect = yes
 	}
 
 	inline_script = deposits/ai_weight_natural_blocker
@@ -396,7 +395,7 @@ d_dense_jungle = {
 		}
 		modifier = {
 			planet_amenities_add = 5
-			planet_housing_add = 1
+			planet_housing_add = 100
 			job_druid_add = 100
 		}
 	}
@@ -407,7 +406,7 @@ d_dense_jungle = {
 			owner = { has_valid_civic = civic_terraforming }
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 100
 			job_xenobiologist_add = 100
 		}
 	}
@@ -418,7 +417,7 @@ d_dense_jungle = {
 			owner = { has_valid_civic = civic_environmentalist }
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 100
 			job_farmer_add = 2
 		}
 	}
@@ -427,7 +426,6 @@ d_dense_jungle = {
 		hidden_effect = {
 			give_bio_repurposing_reward_on_organic_deposit_cleared = yes
 		}
-		planetscaper_pop_effect = yes
 		if = {
 			limit = {
 				exists = owner
@@ -506,7 +504,7 @@ d_toxic_kelp = {
 			owner = { has_valid_civic = civic_terraforming }
 		}
 		modifier = {
-			planet_housing_add = 2
+			planet_housing_add = 200
 			job_xenobiologist_add = 100
 		}
 	}
@@ -517,7 +515,7 @@ d_toxic_kelp = {
 			owner = { has_valid_civic = civic_environmentalist }
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 100
 			job_farmer_add = 1
 		}
 	}
@@ -528,7 +526,6 @@ d_toxic_kelp = {
 		hidden_effect = {
 			give_bio_repurposing_reward_on_organic_deposit_cleared = yes
 		}
-		planetscaper_pop_effect = yes
 		if = {
 			limit = {
 				exists = owner
@@ -605,7 +602,7 @@ d_deep_sinkhole = {
 		}
 		modifier = {
 			planet_amenities_add = 2
-			planet_housing_add = 1
+			planet_housing_add = 100
 			job_druid_add = 100
 		}
 	}
@@ -616,7 +613,7 @@ d_deep_sinkhole = {
 			owner = { has_valid_civic = civic_terraforming }
 		}
 		modifier = {
-			planet_housing_add = 2
+			planet_housing_add = 200
 			job_geoengineer_add = 100
 		}
 	}
@@ -627,7 +624,7 @@ d_deep_sinkhole = {
 			owner = { has_valid_civic = civic_environmentalist }
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 100
 			job_miner_add = 1
 		}
 	}
@@ -716,7 +713,7 @@ d_quicksand_basin = {
 		}
 		modifier = {
 			planet_amenities_add = 2
-			planet_housing_add = 1
+			planet_housing_add = 100
 			job_druid_add = 100
 		}
 	}
@@ -727,7 +724,7 @@ d_quicksand_basin = {
 			owner = { has_valid_civic = civic_terraforming }
 		}
 		modifier = {
-			planet_housing_add = 2
+			planet_housing_add = 200
 			job_geoengineer_add = 100
 		}
 	}
@@ -738,7 +735,7 @@ d_quicksand_basin = {
 			owner = { has_valid_civic = civic_environmentalist }
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 100
 			job_miner_add = 1
 		}
 	}
@@ -824,7 +821,7 @@ d_noxious_swamp = {
 		}
 		modifier = {
 			planet_amenities_add = 2
-			planet_housing_add = 1
+			planet_housing_add = 100
 			job_druid_add = 100
 		}
 	}
@@ -835,7 +832,7 @@ d_noxious_swamp = {
 			owner = { has_valid_civic = civic_terraforming }
 		}
 		modifier = {
-			planet_housing_add = 2
+			planet_housing_add = 200
 			job_xenobiologist_add = 100
 		}
 	}
@@ -846,7 +843,7 @@ d_noxious_swamp = {
 			owner = { has_valid_civic = civic_environmentalist }
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 100
 			job_farmer_add = 1
 		}
 	}
@@ -857,7 +854,6 @@ d_noxious_swamp = {
 		hidden_effect = {
 			give_bio_repurposing_reward_on_organic_deposit_cleared = yes
 		}
-		planetscaper_pop_effect = yes
 		if = {
 			limit = {
 				exists = owner
@@ -936,7 +932,7 @@ d_massive_glacier = {
 		}
 		modifier = {
 			planet_amenities_add = 3
-			planet_housing_add = 1
+			planet_housing_add = 100
 			job_druid_add = 100
 		}
 	}
@@ -947,7 +943,7 @@ d_massive_glacier = {
 			owner = { has_valid_civic = civic_terraforming }
 		}
 		modifier = {
-			planet_housing_add = 2
+			planet_housing_add = 200
 			job_geoengineer_add = 100
 		}
 	}
@@ -958,7 +954,7 @@ d_massive_glacier = {
 			owner = { has_valid_civic = civic_environmentalist }
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 100
 			job_miner_add = 1
 		}
 	}
@@ -1023,7 +1019,7 @@ d_wandering_forests = {
 			owner = { has_valid_civic = civic_keepers_harmony }
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 100
 			job_druid_add = 100
 			biological_pop_happiness = 0.1
 		}
@@ -1034,7 +1030,7 @@ d_wandering_forests = {
 			owner = { has_valid_civic = civic_terraforming }
 		}
 		modifier = {
-			planet_housing_add = 2
+			planet_housing_add = 200
 			job_xenobiologist_add = 200
 		}
 	}
@@ -1063,7 +1059,7 @@ d_titanic_life_blocker = {	#Added via event
 			owner = { has_valid_civic = civic_keepers_harmony }
 		}
 		modifier = {
-			planet_housing_add = 2
+			planet_housing_add = 200
 			job_druid_add = 200
 			biological_pop_happiness = 0.15
 		}
@@ -1074,7 +1070,7 @@ d_titanic_life_blocker = {	#Added via event
 			owner = { has_valid_civic = civic_terraforming }
 		}
 		modifier = {
-			planet_housing_add = 2
+			planet_housing_add = 200
 			job_xenobiologist_add = 300
 			planet_amenities_add = 15
 		}

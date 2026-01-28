@@ -965,8 +965,8 @@ auth_oligarchic = {
 		modifier = {
 			custom_tooltip = auth_cyber_oligarch_ruler_enforcers_tt
 			pop_category_rulers_upkeep_mult = 0.15
-			planet_administrators_unity_produces_mult = 0.25
-			planet_administrators_upkeep_mult = -0.10
+			planet_politicians_unity_produces_mult = 0.25
+			planet_politicians_upkeep_mult = -0.10
 			show_only_custom_tooltip = no
 		}
 	}
@@ -1160,7 +1160,7 @@ auth_hive_mind = {
 			has_country_flag = cyber_hive_volitional
 		}
 		modifier = {
-			planet_pop_assembly_organic_mult = 0.15
+			bonus_pop_growth_mult = 0.15
 			country_leader_cap_add = 1
 			num_tech_alternatives_add = 1
 			planet_crime_no_happiness_add = 1
@@ -1178,7 +1178,7 @@ auth_hive_mind = {
 			has_country_flag = cyber_hive_integrated
 		}
 		modifier = {
-			planet_pop_assembly_organic_mult = 0.15
+			bonus_pop_growth_mult = 0.15
 			custom_tooltip = auth_cyber_hive_integrated_tt
 			empire_size_penalty_mult = -0.5
 			leaders_upkeep_mult = 0.05
@@ -2118,7 +2118,7 @@ auth_corporate_imperial = {
 		}
 		modifier = {
 			custom_tooltip = auth_cyber_corporate_individualist_tt
-			starbase_trade_protection_add = 15
+			country_trade_produces_mult = 0.1
 			planet_crime_add = 20
 			pop_lifestyle_trade_value_add = 1
 			pop_cyborg_happiness = 0.1
@@ -2137,7 +2137,7 @@ auth_corporate_imperial = {
 		}
 		modifier = {
 			custom_tooltip = auth_cyber_corporate_collectivist_tt
-			starbase_trade_protection_add = 15
+			country_trade_produces_mult = 0.1
 			planet_crime_add = 20
 			council_agenda_progress_speed = 0.15
 			show_only_custom_tooltip = no
@@ -2379,7 +2379,7 @@ auth_corporate = {
 		}
 		modifier = {
 			custom_tooltip = auth_cyber_corporate_individualist_tt
-			starbase_trade_protection_add = 15
+			country_trade_produces_mult = 0.1
 			planet_crime_add = 20
 			pop_lifestyle_trade_value_add = 1
 			pop_cyborg_happiness = 0.1
@@ -2398,7 +2398,7 @@ auth_corporate = {
 		}
 		modifier = {
 			custom_tooltip = auth_cyber_corporate_collectivist_tt
-			starbase_trade_protection_add = 15
+			country_trade_produces_mult = 0.1
 			planet_crime_add = 20
 			council_agenda_progress_speed = 0.15
 			show_only_custom_tooltip = no
@@ -2560,7 +2560,6 @@ auth_corporate = {
 }
 
 auth_machine_intelligence = {
-	machine_empire = yes
 	has_heir = no
 	election_type = none
 	has_factions = no
@@ -2612,12 +2611,10 @@ auth_machine_intelligence = {
 	}
 
 	country_modifier = {
-		colony_start_num_pops_add = 1
+		colony_start_urban_districts_add = 1
+		planet_colony_development_speed_mult = 0.25
 		planet_pop_assembly_add = 1
 		station_gatherers_produces_mult = 0.1
-		empire_size_pops_mult = -0.15
-		empire_size_colonies_mult = 0.5
-		pop_growth_speed_reduction = 0.5
 	}
 
 	#Memory Aggregator
@@ -2633,10 +2630,9 @@ auth_machine_intelligence = {
 		modifier = {
 			custom_tooltip = auth_memory_aggregator_tt
 			show_only_custom_tooltip = no
-			colony_start_num_pops_add = 1
-
+			colony_start_urban_districts_add = 1
+			planet_colony_development_speed_mult = 0.25
 			planet_pop_assembly_add = 1
-			pop_growth_speed_reduction = 0.25
 			empire_size_pops_mult = -0.1
 			MACHINE_species_trait_picks_add = 1
 		}
@@ -2664,7 +2660,9 @@ auth_machine_intelligence = {
 		modifier = {
 			custom_tooltip = auth_driven_neural_chorus_tt
 			show_only_custom_tooltip = no
-			colony_start_num_pops_add = 1
+			colony_start_urban_districts_add = 1
+			planet_colony_development_speed_mult = 0.25
+			logistic_growth_mult = 0.25
 			planet_pops_cyborgs_upkeep_mult = 0.1
 		}
 		tags = {

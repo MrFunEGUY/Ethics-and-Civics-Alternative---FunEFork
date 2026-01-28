@@ -518,8 +518,7 @@ building_citadel_of_faith = {
 		potential = {
 			has_ringworld_output_boost = yes
 		}
-		planet_administrators_unity_produces_add = 1
-		planet_managers_unity_produces_add = 1
+		planet_politicians_unity_produces_add = 1
 		planet_bureaucrats_unity_produces_add = 1
 		planet_telepaths_unity_produces_add = 1
 	}

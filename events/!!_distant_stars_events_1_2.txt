@@ -828,7 +828,7 @@ country_event = {
 				1 = {
 					create_country = {
 						authority = auth_oligarchic
-						inline_script = { script = prikki/prikki_create_country }
+						inline_script = { script = prikki/ecaf_prikki_create_country }
 					}
 				}
 			}

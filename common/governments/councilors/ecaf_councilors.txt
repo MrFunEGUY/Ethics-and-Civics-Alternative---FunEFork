@@ -525,7 +525,7 @@ councilor_machine_cult = { #Mechpope
 	}
 	civic = civic_machine_cult
 	modifier = { #Drifts toward spiritual ethic
-		planet_jobs_robotic_produces_mult = 0.02
+		robotic_pop_bonus_workforce_mult = 0.02
 		planet_pops_robotics_upkeep_mult = -0.02
 		pop_cat_robot_servant_happiness = 0.02
 		pop_ethic_spiritualist_attraction_mult = 0.05
