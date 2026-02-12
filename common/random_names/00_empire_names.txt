@@ -111,7 +111,7 @@ empire_name_parts_list = {
 		Principality = 2
 		GrandDuchy = 1
 		Order = 3
-		Foundation = 3
+		Foundation = 1
 
 		# Imp Mat
 		State = 1
@@ -139,7 +139,7 @@ empire_name_parts_list = {
 
 		# Dic Spi
 		Order = 4
-		Foundation = 4
+		Foundation = 1
 		Mandate = 4
 		# Covenant = 4
 		# Theocracy = 4
@@ -196,7 +196,7 @@ empire_name_parts_list = {
 		Regime = 5
 
 		# Oligarchic Spiritualist
-		Foundation = 4
+		Foundation = 2
 		Assembly = 3
 		Sovereignty = 2
 
@@ -735,9 +735,11 @@ empire_name_parts_list = {
 		Principality = 2
 		GrandDuchy = 1
 		Order = 3
-		Foundation = 3
+		Foundation = 1
 		#### - TSNO
 		"Caliphate" = 1
+		"Sultanate" = 1
+		"Emirate" = 1
 	}
 }
 
@@ -745,11 +747,11 @@ empire_name_parts_list = {
 empire_name_parts_list = {
 	key = "dictatorial_spi"
 	parts = {
-		Order = 4
-		Foundation = 4
+		Order = 3
+		Foundation = 1
 		Mandate = 4
 		Covenant = 4
-		Theocracy = 4
+		Theocracy = 2
 		Commonality = 1
 		State = 1
 		Nation = 1
@@ -758,6 +760,8 @@ empire_name_parts_list = {
 		Polity = 1
 		#### - TSNO
 		"Caliphate" = 1
+		"Sultanate" = 1
+		"Emirate" = 1
 		"Ecclesiarchy" = 1
 	}
 }
@@ -773,7 +777,7 @@ empire_name_parts_list = {
 		Confederacy = 2
 		Union = 3
 		League = 3
-		Theocracy = 4
+		Theocracy = 2
 		Foundation = 4
 		Mandate = 4
 		Assembly = 3
@@ -1080,7 +1084,7 @@ empire_name_parts_list = {
 		Union = 3
 		League = 3
 		Technocracy = 6
-		Foundation = 5
+		Foundation = 3
 		Directorate = 5
 		Mandate = 3
 		Coalition = 3
@@ -1265,7 +1269,7 @@ empire_name_parts_list = {
 		Confederacy = 3
 		Union = 3
 		League = 3
-		Foundation = 4
+		Foundation = 2
 		Mandate = 3
 		Compact = 3
 		Commonality = 2

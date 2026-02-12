@@ -3206,6 +3206,13 @@ guiTypes = {
 				clicksound = interface
 			}
 
+			buttonType = {
+				name = "ethic_gestalt_consciousness"
+				spriteType = "GFX_ethics_gestalt_consciousness"
+				position = { x = 125 y = 170 }
+				clicksound = interface
+			}
+
 			### SELECTED ETHICS ###
 
 			iconType = {
@@ -3225,6 +3232,11 @@ guiTypes = {
 
 			iconType = {
 				name = "ethic_spi_selected"
+				spriteType = "GFX_ethic_selected"
+			}
+
+			iconType = {
+				name = "ethic_soc_selected"
 				spriteType = "GFX_ethic_selected"
 			}
 
